@@ -11,6 +11,8 @@
 @interface EPSCycleLengthCalculatorViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) NSString *resultUnits;
+@property (strong, nonatomic) NSString *resultPrefix;
 
 - (IBAction)calculateButton:(id)sender;
 - (IBAction)clearButton:(id)sender;

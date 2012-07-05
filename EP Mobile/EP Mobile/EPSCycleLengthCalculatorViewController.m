@@ -16,6 +16,8 @@
 @implementation EPSCycleLengthCalculatorViewController
 @synthesize inputField;
 @synthesize resultLabel;
+@synthesize resultUnits;
+@synthesize resultPrefix;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.resultPrefix = @"HR = ";
+    self.resultUnits = @"bpm";
 }
 
 - (void)viewDidUnload
@@ -53,7 +57,10 @@
         return;
     }
     int result = 60000 / n;
-    resultLabel.text = [NSString stringWithFormat:@"%d", result];    					
+    NSString *resultString = resultPrefix;
+    resultString = [resultString stringByAppendingString:[NSString stringWithFormat:@"%d ", result]];
+    resultString = [resultString stringByAppendingString:self.resultUnits];
+    resultLabel.text = resultString;					
 }
 
 
@@ -75,6 +82,17 @@
 - (IBAction)toggleSwitch:(id)sender {
     inputField.text = nil;
     resultLabel.text = nil;
+    // 0 == CL
+    if ([sender selectedSegmentIndex] == 0) {
+        inputField.placeholder = @"CL (msec)";
+        resultPrefix = @"HR = ";
+        resultUnits = @"bpm";
+    }
+    else {
+        inputField.placeholder = @"HR (bpm)";
+        resultPrefix = @"CL = ";
+        resultUnits = @"msec";
+    }
 }
 
 @end
