@@ -18,6 +18,7 @@
 @synthesize resultLabel;
 @synthesize resultUnits;
 @synthesize resultPrefix;
+@synthesize inputLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,41 +33,41 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.resultPrefix = @"HR = ";
-    self.resultUnits = @"bpm";
+    [self setupCL];
 }
 
 - (void)viewDidUnload
 {
     [self setInputField:nil];
     [self setResultLabel:nil];
+    [self setInputLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 - (IBAction)calculateButton:(id)sender {
-    NSString *s = inputField.text;
+    NSString *s = self.inputField.text;
     int n = [s intValue];
     if (n == 0) {
-        resultLabel.text = @"Invalid Entry";
+        self.resultLabel.text = @"INVALID ENTRY";
         return;
     }
     int result = 60000 / n;
     NSString *resultString = resultPrefix;
     resultString = [resultString stringByAppendingString:[NSString stringWithFormat:@"%d ", result]];
     resultString = [resultString stringByAppendingString:self.resultUnits];
-    resultLabel.text = resultString;					
+    self.resultLabel.text = resultString;					
 }
 
 
 - (IBAction)clearButton:(id)sender {
-    inputField.text = nil;
-    resultLabel.text = nil;
+    self.inputField.text = nil;
+    self.resultLabel.text = nil;
 }
 
 
@@ -76,23 +77,34 @@
 }
 
 - (IBAction)backgroundTap:(id)sender {
-    [inputField resignFirstResponder];
+    [self.inputField resignFirstResponder];
 }
 
 - (IBAction)toggleSwitch:(id)sender {
-    inputField.text = nil;
-    resultLabel.text = nil;
+    self.inputField.text = nil;
+    self.resultLabel.text = nil;
     // 0 == CL
     if ([sender selectedSegmentIndex] == 0) {
-        inputField.placeholder = @"CL (msec)";
-        resultPrefix = @"HR = ";
-        resultUnits = @"bpm";
+        [self setupCL];
     }
     else {
-        inputField.placeholder = @"HR (bpm)";
-        resultPrefix = @"CL = ";
-        resultUnits = @"msec";
+        [self setupHR];
     }
+}
+
+- (void)setupHR {
+    [self setResultPrefix:@"Cycle Length is " andUnits:@"msec" andPlaceholder:@"HR (bpm)" andInputLabel:@"Enter Heart Rate in bpm:"];   
+}
+
+- (void)setupCL {
+    [self setResultPrefix:@"Heart Rate is " andUnits:@"bpm" andPlaceholder:@"CL (msec)"andInputLabel:@"Enter Cycle Length in msec:"];    
+}
+
+- (void)setResultPrefix:(NSString *)prefix andUnits:(NSString *)units andPlaceholder:(NSString *)placeholder andInputLabel:(NSString *)inputText {
+    self.inputField.placeholder = placeholder;
+    self.resultPrefix = prefix;
+    self.resultUnits = units;
+    self.inputLabel.text = inputText;
 }
 
 @end

@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSCycleLengthCalculatorViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *inputField;
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) IBOutlet UITextField *inputField;
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 @property (strong, nonatomic) NSString *resultUnits;
 @property (strong, nonatomic) NSString *resultPrefix;
 
+@property (weak, nonatomic) IBOutlet UILabel *inputLabel;
 - (IBAction)calculateButton:(id)sender;
 - (IBAction)clearButton:(id)sender;
 - (IBAction)toggleSwitch:(id)sender;
