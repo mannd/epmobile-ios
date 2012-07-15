@@ -24,6 +24,7 @@
 		8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */; };
 		8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */; };
 		8EC19C6C15B241DD00975E2B /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6B15B241DD00975E2B /* EPSMainTableViewController.m */; };
+		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C6A15B241DD00975E2B /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EPSMainTableViewController.h; path = ../EPSMainTableViewController.h; sourceTree = "<group>"; };
 		8EC19C6B15B241DD00975E2B /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EPSMainTableViewController.m; path = ../EPSMainTableViewController.m; sourceTree = "<group>"; };
+		8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseTableViewController.h; sourceTree = "<group>"; };
+		8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				8EC19C32159FE0FA00975E2B /* Supporting Files */,
 				8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */,
 				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
+				8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */,
+				8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */,
 				8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */,
 				8EC19C6C15B241DD00975E2B /* EPSMainTableViewController.m in Sources */,
+				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

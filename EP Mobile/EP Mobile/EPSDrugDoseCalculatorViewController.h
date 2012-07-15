@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSDrugDoseCalculatorViewController : UIViewController
-    <UIPickerViewDelegate, UIPickerViewDataSource>
+@property (strong, nonatomic) IBOutlet UISegmentedControl *sexSegmentedControl;
+@property (strong, nonatomic) IBOutlet UITextField *ageField;
+@property (strong, nonatomic) IBOutlet UITextField *weightField;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *weightUnitsSegmentedControl;
+@property (strong, nonatomic) IBOutlet UITextField *creatinineField;
+@property (strong, nonatomic) IBOutlet UILabel *resultField;
+@property (strong, nonatomic) NSString *drug;
 
-@property (strong, nonatomic) IBOutlet UIPickerView *drugPicker;
-@property (strong, nonatomic) NSArray *drugPickerData;
+- (IBAction)calculate:(id)sender;
+- (IBAction)clear:(id)sender;
+- (IBAction)textFieldDoneEditing:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
 
 @end

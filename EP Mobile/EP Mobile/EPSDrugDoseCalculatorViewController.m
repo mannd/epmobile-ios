@@ -13,8 +13,13 @@
 @end
 
 @implementation EPSDrugDoseCalculatorViewController
-@synthesize drugPicker;
-@synthesize drugPickerData;
+@synthesize sexSegmentedControl;
+@synthesize ageField;
+@synthesize weightField;
+@synthesize weightUnitsSegmentedControl;
+@synthesize creatinineField;
+@synthesize resultField;
+@synthesize drug;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,34 +34,42 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSArray *array = [[NSArray alloc] initWithObjects:@"Dabigatran", @"Dofetilide", @"Rivaroxaban", @"Sotalol", nil];
-    self.drugPickerData = array;
+    self.navigationItem.title = drug;
 }
 
 - (void)viewDidUnload
 {
-    [self setDrugPicker:nil];
+
+    [self setSexSegmentedControl:nil];
+    [self setAgeField:nil];
+    [self setWeightField:nil];
+    [self setWeightUnitsSegmentedControl:nil];
+    [self setCreatinineField:nil];
+    [self setResultField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    self.drugPicker = nil;
-    self.drugPickerData = nil;
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
+- (IBAction)calculate:(id)sender {
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return [drugPickerData count];
+- (IBAction)clear:(id)sender {
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [drugPickerData objectAtIndex:row];
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [ageField resignFirstResponder];
+    [weightField resignFirstResponder];
+    [creatinineField resignFirstResponder];
 }
 
 @end

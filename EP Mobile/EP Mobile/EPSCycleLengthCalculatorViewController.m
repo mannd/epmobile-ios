@@ -53,6 +53,7 @@
 - (IBAction)calculateButton:(id)sender {
     NSString *s = self.inputField.text;
     int n = [s intValue];
+    NSLog(@"The value of n is %i", n);
     if (n == 0) {
         self.resultLabel.text = @"INVALID ENTRY";
         return;
