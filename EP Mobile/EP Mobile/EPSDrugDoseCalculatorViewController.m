@@ -13,13 +13,18 @@
 @end
 
 @implementation EPSDrugDoseCalculatorViewController
+{
+    BOOL weightIsPounds;
+}
 @synthesize sexSegmentedControl;
 @synthesize ageField;
 @synthesize weightField;
 @synthesize weightUnitsSegmentedControl;
 @synthesize creatinineField;
-@synthesize resultField;
+@synthesize resultLabel;
 @synthesize drug;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +40,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title = drug;
+    weightIsPounds = YES;
+    
 }
 
 - (void)viewDidUnload
@@ -45,7 +52,7 @@
     [self setWeightField:nil];
     [self setWeightUnitsSegmentedControl:nil];
     [self setCreatinineField:nil];
-    [self setResultField:nil];
+    [self setResultLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 
@@ -56,11 +63,94 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (IBAction)calculate:(id)sender {
+- (IBAction)toggleWeightUnits:(id)sender {
+    self.weightField.text  = nil;
+    self.resultLabel.text = nil;
+    if ((weightIsPounds = [sender selectedSegmentIndex] == 0)) 
+        self.weightField.placeholder = @"Weight (lb)";
+        
+    else 
+        self.weightField.placeholder = @"Weight (kg)";
 }
 
-- (IBAction)clear:(id)sender {
+- (IBAction)toggleSex:(id)sender {
+    self.resultLabel.text = nil;
 }
+
+
+- (IBAction)calculate:(id)sender {
+    NSString *weightText = self.weightField.text;
+    double weight = [weightText doubleValue];
+    NSLog(@"Weight is %f", weight);
+    NSString *ageText = self.ageField.text;
+    double age = [ageText doubleValue];
+    NSLog(@"Age is %f", age);
+    NSString *creatinineText = self.creatinineField.text;
+    double creatinine = [creatinineText doubleValue];
+    NSLog(@"Creatinine is %f", creatinine);
+    // make sure all entries ok
+    if (weight == 0.0 || age == 0.0 || creatinine == 0.0) {
+        self.resultLabel.text = @"INVALID ENTRY";
+        return;
+    }
+    if (weightIsPounds) {
+        NSLog(@"Weight is in pounds (%f lb)", weight);
+        weight = [self lbsToKgs:weight];
+        NSLog(@"Converted weight in kgs is %f", weight);
+    }
+    BOOL isMale = ([sexSegmentedControl selectedSegmentIndex] == 0);
+    int cc = [self creatinineClearanceForAge:age isMale:isMale forWeightInKgs:weight forCreatinine:creatinine]; 
+    NSString *result = @"CrCl = ";
+    result = [result stringByAppendingString:[NSString stringWithFormat:@"%i. ", cc]];
+    result = [result stringByAppendingString:[self getDose:cc]];
+    
+    self.resultLabel.text = result;
+}
+
+
+- (IBAction)clear:(id)sender {
+    self.ageField.text = nil;
+    self.weightField.text = nil;
+    self.creatinineField.text = nil;
+    self.resultLabel.text = nil;
+}
+
+- (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine {
+    double crClr = 0.0;
+    crClr = (140 - age) * weight;
+    crClr = crClr / (72 * creatinine);
+    if (!isMale)
+        crClr = crClr * 0.85;
+    int result = (int) (crClr + 0.5);
+    NSLog(@"Unrounded crClr = %f, Rounded = %i", crClr, result);
+    return result;
+}
+
+
+- (double)lbsToKgs:(double)weight{
+    double CONVERSION_FACTOR = 0.45359237;
+    return weight * CONVERSION_FACTOR;
+}
+              
+- (NSString *)getDose:(int)crCl {
+    int dose;
+    NSString *message = [[NSString alloc] init];
+    if ([drug isEqualToString:@"Dabigatran"]) {
+        if (crCl >= 30)
+            dose = 150;
+        else if (crCl >= 15)
+            dose = 75;
+        else {
+            dose = 0;
+        }
+        return [message stringByAppendingString:[NSString stringWithFormat:@"%i mg BID", dose]];
+        
+    }
+    else {
+        return @"Test";
+    }
+}
+
 
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
@@ -71,5 +161,7 @@
     [weightField resignFirstResponder];
     [creatinineField resignFirstResponder];
 }
+
+
 
 @end
