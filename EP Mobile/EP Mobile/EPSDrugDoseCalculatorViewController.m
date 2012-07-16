@@ -8,6 +8,15 @@
 
 #import "EPSDrugDoseCalculatorViewController.h"
 
+#define DABIGATRAN @"Dabigatran"
+#define DOFETILIDE @"Dofetilide"
+#define RIVAROXABAN @"Rivaroxaban"
+#define SOTALOL @"Sotalol"
+// for the future
+#define APIXABAN @"Apixaban"
+
+#define DO_NOT_USE @"DO NOT USE! "
+
 @interface EPSDrugDoseCalculatorViewController ()
 
 @end
@@ -100,11 +109,19 @@
     }
     BOOL isMale = ([sexSegmentedControl selectedSegmentIndex] == 0);
     int cc = [self creatinineClearanceForAge:age isMale:isMale forWeightInKgs:weight forCreatinine:creatinine]; 
-    NSString *result = @"CrCl = ";
-    result = [result stringByAppendingString:[NSString stringWithFormat:@"%i. ", cc]];
+
+    NSString *result = [[NSString alloc] init];
     result = [result stringByAppendingString:[self getDose:cc]];
+    result = [result stringByAppendingString:[NSString stringWithFormat:@"CrCl %i ml/min.", cc]];
     
     self.resultLabel.text = result;
+    if ([self hasWarning:cc]) {
+        NSString *warning = result;
+        warning = [warning stringByAppendingString:@"\n"];
+        warning = [warning stringByAppendingString:[self getWarning:cc]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Details and Warnings" message:warning delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+     }
 }
 
 
@@ -135,20 +152,105 @@
 - (NSString *)getDose:(int)crCl {
     int dose;
     NSString *message = [[NSString alloc] init];
-    if ([drug isEqualToString:@"Dabigatran"]) {
-        if (crCl >= 30)
+    if ([drug isEqualToString:DABIGATRAN]) {
+        if (crCl > 30)
             dose = 150;
         else if (crCl >= 15)
             dose = 75;
         else {
             dose = 0;
         }
-        return [message stringByAppendingString:[NSString stringWithFormat:@"%i mg BID", dose]];
+        if (dose == 0)
+            return [message stringByAppendingString:DO_NOT_USE];
+        return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg BID. ", dose]];
         
     }
-    else {
-        return @"Test";
+    if ([drug isEqualToString:DOFETILIDE]) {
+ 		if (crCl > 60)
+			dose = 500;
+		else if (crCl > 40)
+			dose = 250;
+		else if (crCl > 20)
+			dose = 125;
+		else 
+            dose = 0;
+        if (dose == 0)
+            return [message stringByAppendingString:DO_NOT_USE];
+        return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mcg BID. ", dose]];
     }
+    if ([drug isEqualToString:RIVAROXABAN]) {
+        if (crCl > 50)
+            dose = 20;
+        else if (crCl >= 15)
+            dose = 15;
+        else
+            dose = 0;
+        if (dose == 0)
+            return [message stringByAppendingString:DO_NOT_USE];
+        return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg daily. ", dose]];        
+        }
+    if ([drug isEqualToString:SOTALOL]) {
+        if (crCl >= 40)
+            dose = 80;
+        else 
+            dose = 0;
+        if (dose == 0)
+            return [message stringByAppendingString:DO_NOT_USE];
+        if (crCl > 60)
+            return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg BID. ", dose]];
+        if (crCl >= 40)
+            return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg daily. ", dose]];  
+    }
+    return @"Unknown Drug";
+}
+
+- (BOOL)hasWarning:(int)crCl {
+    if ([drug isEqualToString:DABIGATRAN])
+        return crCl <= 50;
+    if ([drug isEqualToString:DOFETILIDE])
+        return crCl < 20;
+    if ([drug isEqualToString:RIVAROXABAN])
+        return YES;
+    if ([drug isEqualToString:SOTALOL])
+        return YES;
+    return NO;
+}
+
+- (NSString *)getWarning:(int)crCl {
+    if ([drug isEqualToString:DABIGATRAN]) {
+        if (crCl < 15)
+            return @"";
+        else if (crCl <= 30)
+            return @"Avoid concomitant use of P-gp inhibitors (e.g. dronedarone).";
+        else if (crCl <= 50)
+            return @"Consider reducing dose of dabigatran to 75 mg twice a day " 
+                "when dronedarone or systemic ketoconazole is administered with dabigatran.";
+    }
+    if ([drug isEqualToString:DOFETILIDE]) {
+        if (crCl <= 20)
+            return @"";
+    }
+    if ([drug isEqualToString:RIVAROXABAN]) {
+        if (crCl < 15)
+            return @"";
+        else 
+            return @"Take dose with evening meal.";
+    }
+    if ([drug isEqualToString:SOTALOL]) {
+        if (crCl < 40)
+            return @"";
+        else {
+            NSString * msg = @"This is the recommended starting dose for treatment of atrial fibrillation. "
+                "Initial QT should be < 450 msec (package insert specifies QT, not QTc). "
+                "If QT remains < 500 msec dose can be increased to 120 mg or 160 mg ";
+            if (crCl > 60)
+                return [msg stringByAppendingString:@"BID."];
+            else 
+                return [msg stringByAppendingString:@"daily."];
+        }
+    }
+        
+    return @"Unknown Warning";
 }
 
 
