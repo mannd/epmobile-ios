@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSQTcCalculatorViewController : UITableViewController
+@interface EPSQTcCalculatorViewController : UIViewController
+    <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UIPickerView *formulaPicker;
+@property (strong, nonatomic) NSArray *formulaData;
+@property (strong, nonatomic) IBOutlet UITextField *inputField;
+@property (strong, nonatomic) IBOutlet UITextField *qtField;
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+
+- (IBAction)calculateButtonPressed:(id)sender;
+- (IBAction)clearButtonPressed:(id)sender;
+- (IBAction)toggleInputType:(id)sender;
+
+- (IBAction)textFieldDoneEditing:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
 
 @end

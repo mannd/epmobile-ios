@@ -13,8 +13,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 @property (strong, nonatomic) NSString *resultUnits;
 @property (strong, nonatomic) NSString *resultPrefix;
+@property (strong, nonatomic) IBOutlet UILabel *inputLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *inputLabel;
 - (IBAction)calculateButton:(id)sender;
 - (IBAction)clearButton:(id)sender;
 - (IBAction)toggleSwitch:(id)sender;
