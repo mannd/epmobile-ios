@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
+		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -20,10 +22,8 @@
 		8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */; };
 		8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5A159FE11900975E2B /* epmobile_icon.png */; };
 		8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */; };
-		8EC19C5F159FE18600975E2B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5E159FE18600975E2B /* MainStoryboard.storyboard */; };
 		8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */; };
 		8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */; };
-		8EC19C6C15B241DD00975E2B /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6B15B241DD00975E2B /* EPSMainTableViewController.m */; };
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
+		8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMainTableViewController.m; sourceTree = "<group>"; };
+		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,13 +59,10 @@
 		8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EP_MobileTests.m; sourceTree = "<group>"; };
 		8EC19C5A159FE11900975E2B /* epmobile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon.png; sourceTree = "<group>"; };
 		8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon2.png; sourceTree = "<group>"; };
-		8EC19C5E159FE18600975E2B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCycleLengthCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCycleLengthCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseCalculatorViewController.m; sourceTree = "<group>"; };
-		8EC19C6A15B241DD00975E2B /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EPSMainTableViewController.h; path = ../EPSMainTableViewController.h; sourceTree = "<group>"; };
-		8EC19C6B15B241DD00975E2B /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EPSMainTableViewController.m; path = ../EPSMainTableViewController.m; sourceTree = "<group>"; };
 		8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseTableViewController.h; sourceTree = "<group>"; };
 		8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,18 +126,18 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				8EC19C6A15B241DD00975E2B /* EPSMainTableViewController.h */,
-				8EC19C6B15B241DD00975E2B /* EPSMainTableViewController.m */,
-				8EC19C5E159FE18600975E2B /* MainStoryboard.storyboard */,
+				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
+				8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */,
+				8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */,
 				8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */,
 				8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */,
 				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
 				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
-				8EC19C32159FE0FA00975E2B /* Supporting Files */,
 				8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */,
 				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
 				8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */,
 				8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */,
+				8EC19C32159FE0FA00975E2B /* Supporting Files */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
-				8EC19C5F159FE18600975E2B /* MainStoryboard.storyboard in Resources */,
+				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +286,8 @@
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
 				8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */,
 				8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */,
-				8EC19C6C15B241DD00975E2B /* EPSMainTableViewController.m in Sources */,
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
+				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +449,7 @@
 				8EC19C56159FE0FA00975E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EC19C57159FE0FA00975E2B /* Build configuration list for PBXNativeTarget "EP MobileTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +458,7 @@
 				8EC19C59159FE0FA00975E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
