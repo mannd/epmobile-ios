@@ -73,7 +73,7 @@
 }
 
 - (IBAction)toggleWeightUnits:(id)sender {
-    self.weightField.text  = nil;
+    //self.weightField.text  = nil;  this is bad if people enter weight first and then units, so it's gone.
     self.resultLabel.text = nil;
     if ((weightIsPounds = [sender selectedSegmentIndex] == 0)) 
         self.weightField.placeholder = @"Weight (lb)";
@@ -115,13 +115,14 @@
     result = [result stringByAppendingString:[NSString stringWithFormat:@"CrCl %i ml/min.", cc]];
     
     self.resultLabel.text = result;
-    if ([self hasWarning:cc]) {
-        NSString *warning = result;
-        warning = [warning stringByAppendingString:@"\n"];
-        warning = [warning stringByAppendingString:[self getWarning:cc]];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Details and Warnings" message:warning delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-     }
+    NSString *alertTitle = @"Recommended Dosage";
+    if ([self hasWarning:cc])
+        alertTitle = @"Warning";
+    NSString *details = result;
+    details = [details stringByAppendingString:@"\n"];
+    details = [details stringByAppendingString:[self getDetails:cc]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 
@@ -201,7 +202,7 @@
         if (crCl >= 40)
             return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg daily. ", dose]];  
     }
-    return @"Unknown Drug";
+    return @"Unknown Dose";
 }
 
 - (BOOL)hasWarning:(int)crCl {
@@ -210,13 +211,13 @@
     if ([drug isEqualToString:DOFETILIDE])
         return crCl < 20;
     if ([drug isEqualToString:RIVAROXABAN])
-        return YES;
+        return crCl < 15;
     if ([drug isEqualToString:SOTALOL])
-        return YES;
+        return crCl < 40;
     return NO;
 }
 
-- (NSString *)getWarning:(int)crCl {
+- (NSString *)getDetails:(int)crCl {
     if ([drug isEqualToString:DABIGATRAN]) {
         if (crCl < 15)
             return @"";
@@ -250,7 +251,7 @@
         }
     }
         
-    return @"Unknown Warning";
+    return @"";
 }
 
 
