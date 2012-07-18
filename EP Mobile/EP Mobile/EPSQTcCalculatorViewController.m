@@ -18,6 +18,9 @@
 @end
 
 @implementation EPSQTcCalculatorViewController
+{
+    BOOL inputIsRate;
+}
 @synthesize formulaPicker;
 @synthesize formulaData;
 @synthesize inputField;
@@ -38,6 +41,7 @@
     [super viewDidLoad];
     NSArray *array = [[NSArray alloc] initWithObjects:@"Bazett", @"Fridericia", @"Sagie", @"Hodges", nil];
     self.formulaData = array;
+    inputIsRate = YES;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -73,6 +77,36 @@
 }
 
 - (IBAction)calculateButtonPressed:(id)sender {
+    NSString *input = self.inputField.text;
+    double inputNumber = [input doubleValue];
+    NSLog(@"The value of inputNumber is %f", inputNumber);
+    NSString *qt = self.qtField.text;
+    double qtNumber = [qt doubleValue];
+    NSLog(@"The value of qtNumber is %f", qtNumber);
+    if (inputNumber == 0 || qtNumber == 0) {
+        self.resultLabel.text = @"INVALID ENTRY";
+        return;
+    }
+    if (inputIsRate) {
+        inputNumber = 60000.0 / inputNumber;
+        NSLog(@"Converted to RR interval in msec is %f", inputNumber);
+    }
+    double intervalSec = inputNumber / 1000.0;
+    double qtSec = qtNumber / 1000.0;
+    NSInteger row = [formulaPicker selectedRowInComponent:0];
+    NSString *formula = [formulaData objectAtIndex:row];
+    NSLog(@"Formula is %@", formula);
+    NSLog(@"Row is %d", row);
+    double qtc = [self qtcFromQt:qtSec AndInterval:intervalSec UsingFormula:row];
+    NSLog(@"QTc = %f", qtc);
+    if (qtc == 0.0)
+        self.resultLabel.text = @"INVALID ENTRY";
+    else {
+        // convert back to msec, no decimals
+        int qtcMsec = (int) round(qtc * 1000);
+        self.resultLabel.text = [[NSString alloc] initWithFormat:@"QTc is %i msec (%@ formula)", qtcMsec, formula];
+    }
+    //self.resultLabel.text = resultString;
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
@@ -80,11 +114,37 @@
     self.qtField.text = nil;
 }
 
+- (double)qtcFromQt:(double)qt AndInterval:(double)interval UsingFormula:(NSInteger)formula {
+    if (interval == 0)
+        return 0;   // no divide by zero
+    double result;
+    switch (formula) {
+        case BAZETT:
+            result = qt / sqrt(interval);
+            break;
+        case FRIDERICIA:
+            result = qt / cbrt(interval);
+            break;
+        case SAGIE:
+            result = qt + 0.154 * (1.0 - interval);
+            break;
+        case HODGES:
+            // change interval back into secs
+            interval = (60000 / (interval * 1000));
+            result = qt + ((1.75 * (interval - 60) / 1000));
+            break;
+        default:
+            result = 0;
+            break;
+    }
+    return result;
+}
+
 - (IBAction)toggleInputType:(id)sender {
     self.inputField.text = nil;
     self.resultLabel.text = nil;
     // 0 == Rate
-    if ([sender selectedSegmentIndex] == 0) {
+    if ((inputIsRate = [sender selectedSegmentIndex] == 0)) {
         self.inputField.placeholder = @"Heart Rate (bpm)";
     }
     else {
