@@ -7,6 +7,7 @@
 //
 
 #import "EP_MobileTests.h"
+#import "EPSCycleLengthCalculatorViewController.h"
 
 @implementation EP_MobileTests
 
@@ -24,9 +25,15 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in EP MobileTests");
+- (void)testCycleLengthCalculator {
+    EPSCycleLengthCalculatorViewController *c = [[EPSCycleLengthCalculatorViewController alloc] init];
+    int result = [c convertInterval:60];
+    STAssertTrue(result == 1000, @"Test failed");
+    result = [c convertInterval:1000];
+    STAssertTrue(result == 60, @"Test failed");
+    result = [c convertInterval:733];
+    STAssertTrue(result == 82, @"Test failed.  Result was %i", result);
 }
+
 
 @end

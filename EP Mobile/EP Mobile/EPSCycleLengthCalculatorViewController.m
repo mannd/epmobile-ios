@@ -50,6 +50,11 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (int)convertInterval:(int)n {
+    // make sure result rounded up to nearest msec
+    return (int)round(60000.0 / n);
+}
+
 - (IBAction)calculateButton:(id)sender {
     NSString *s = self.inputField.text;
     int n = [s intValue];
@@ -58,7 +63,8 @@
         self.resultLabel.text = @"INVALID ENTRY";
         return;
     }
-    int result = 60000 / n;
+    int result;
+    result = [self convertInterval:n];
     NSString *resultString = resultPrefix;
     resultString = [resultString stringByAppendingString:[NSString stringWithFormat:@"%d ", result]];
     resultString = [resultString stringByAppendingString:self.resultUnits];

@@ -112,6 +112,7 @@
 - (IBAction)clearButtonPressed:(id)sender {
     self.inputField.text = nil;
     self.qtField.text = nil;
+    self.resultLabel.text = nil;
 }
 
 - (double)qtcFromQt:(double)qt AndInterval:(double)interval UsingFormula:(NSInteger)formula {

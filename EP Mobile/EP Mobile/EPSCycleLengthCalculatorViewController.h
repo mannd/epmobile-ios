@@ -22,4 +22,6 @@
 - (IBAction)textFieldDoneEditing:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
 
+- (int)convertInterval:(int)n;
+
 @end
