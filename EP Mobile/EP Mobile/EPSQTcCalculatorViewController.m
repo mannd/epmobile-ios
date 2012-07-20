@@ -13,6 +13,8 @@
 #define SAGIE 2
 #define HODGES 3
 
+#define INVALID_ENTRY @"INVALID ENTRY"
+
 @interface EPSQTcCalculatorViewController ()
 
 @end
@@ -78,33 +80,31 @@
 
 - (IBAction)calculateButtonPressed:(id)sender {
     NSString *input = self.inputField.text;
-    double inputNumber = [input doubleValue];
-    NSLog(@"The value of inputNumber is %f", inputNumber);
+    NSInteger inputNumber = [input intValue];
+    NSLog(@"The value of inputNumber is %d", inputNumber);
     NSString *qt = self.qtField.text;
-    double qtNumber = [qt doubleValue];
-    NSLog(@"The value of qtNumber is %f", qtNumber);
+    NSInteger qtNumber = [qt intValue];
+    NSLog(@"The value of qtNumber is %d", qtNumber);
     if (inputNumber == 0 || qtNumber == 0) {
-        self.resultLabel.text = @"INVALID ENTRY";
+        self.resultLabel.text = INVALID_ENTRY;
         return;
     }
     if (inputIsRate) {
-        inputNumber = 60000.0 / inputNumber;
-        NSLog(@"Converted to RR interval in msec is %f", inputNumber);
+        inputNumber = round(60000.0 / inputNumber);
+        NSLog(@"Converted to RR interval in msec is %d", inputNumber);
     }
-    double intervalSec = inputNumber / 1000.0;
-    double qtSec = qtNumber / 1000.0;
+//    double intervalSec = inputNumber / 1000.0;
+//    double qtSec = qtNumber / 1000.0;
     NSInteger row = [formulaPicker selectedRowInComponent:0];
     NSString *formula = [formulaData objectAtIndex:row];
     NSLog(@"Formula is %@", formula);
     NSLog(@"Row is %d", row);
-    double qtc = [self qtcFromQt:qtSec AndInterval:intervalSec UsingFormula:row];
-    NSLog(@"QTc = %f", qtc);
+    NSInteger qtc = [self qtcFromQtInMsec:qtNumber AndIntervalInMsec:inputNumber UsingFormula:row];
+    NSLog(@"QTc = %d", qtc);
     if (qtc == 0.0)
-        self.resultLabel.text = @"INVALID ENTRY";
+        self.resultLabel.text = INVALID_ENTRY;
     else {
-        // convert back to msec, no decimals
-        int qtcMsec = (int) round(qtc * 1000);
-        self.resultLabel.text = [[NSString alloc] initWithFormat:@"QTc is %i msec (%@ formula)", qtcMsec, formula];
+        self.resultLabel.text = [[NSString alloc] initWithFormat:@"QTc is %i msec (%@ formula)", qtc, formula];
     }
     //self.resultLabel.text = resultString;
 }
@@ -115,30 +115,34 @@
     self.resultLabel.text = nil;
 }
 
-- (double)qtcFromQt:(double)qt AndInterval:(double)interval UsingFormula:(NSInteger)formula {
+- (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(NSInteger)formula {
     if (interval == 0)
         return 0;   // no divide by zero
+    // convert to Seconds
+    double intervalInSec = interval / 1000.0;
+    double qtInSec = qt / 1000.0;
+    double heartRate = 60000.0 / interval;
     double result;
     switch (formula) {
         case BAZETT:
-            result = qt / sqrt(interval);
+            result = qtInSec / sqrt(intervalInSec);
             break;
         case FRIDERICIA:
-            result = qt / cbrt(interval);
+            result = qtInSec / cbrt(intervalInSec);
             break;
         case SAGIE:
-            result = qt + 0.154 * (1.0 - interval);
+            result = qtInSec + 0.154 * (1.0 - intervalInSec);
             break;
         case HODGES:
-            // change interval back into secs
-            interval = (60000 / (interval * 1000));
-            result = qt + ((1.75 * (interval - 60) / 1000));
+            result = qtInSec + ((1.75 * (heartRate - 60) / 1000));
             break;
         default:
             result = 0;
             break;
     }
-    return result;
+    // convert result back to msec, no decimals
+    result = round(result * 1000);
+    return (NSInteger)result;
 }
 
 - (IBAction)toggleInputType:(id)sender {
