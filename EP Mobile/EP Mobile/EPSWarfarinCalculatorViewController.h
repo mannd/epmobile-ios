@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@interface EPSDoseChange : NSObject
+{
+    enum Direction { DECREASE, INCREASE };
+}
+@property (assign, nonatomic) NSInteger lowEnd;
+@property (assign, nonatomic) NSInteger highEnd;
+@property (strong, nonatomic) NSString *message;
+@property (assign, nonatomic) enum Direction direction;
+
+@end
+
 @interface EPSWarfarinCalculatorViewController : UIViewController
+    <UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *weeklyDoseField;
 @property (strong, nonatomic) IBOutlet UITextField *inrField;
 
@@ -19,3 +31,4 @@
 
 
 @end
+

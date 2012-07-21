@@ -69,7 +69,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
 - (IBAction)toggleWeightUnits:(id)sender {
@@ -112,17 +112,16 @@
 
     NSString *result = [[NSString alloc] init];
     result = [result stringByAppendingString:[self getDose:cc]];
-    result = [result stringByAppendingString:[NSString stringWithFormat:@"CrCl %i ml/min.", cc]];
-    
+    result = [result stringByAppendingString:[NSString stringWithFormat:@"\nCreatinine Clearance = %i ml/min.", cc]];
     self.resultLabel.text = result;
-    NSString *alertTitle = @"Recommended Dosage";
-    if ([self hasWarning:cc])
-        alertTitle = @"Warning";
-    NSString *details = result;
-    details = [details stringByAppendingString:@"\n"];
-    details = [details stringByAppendingString:[self getDetails:cc]];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
+    if ([self hasWarning:cc]) {
+        NSString *alertTitle = @"Warning";
+        NSString *details = result;
+        details = [details stringByAppendingString:@"\n"];
+        details = [details stringByAppendingString:[self getDetails:cc]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 

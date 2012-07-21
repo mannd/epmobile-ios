@@ -47,8 +47,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);}
 
 - (int)convertInterval:(int)n {
     // make sure result rounded up to nearest msec
@@ -100,11 +99,11 @@
 }
 
 - (void)setupHR {
-    [self setResultPrefix:@"Cycle Length is " andUnits:@"msec" andPlaceholder:@"HR (bpm)" andInputLabel:@"Enter Heart Rate in bpm:"];   
+    [self setResultPrefix:@"Cycle Length is " andUnits:@"msec" andPlaceholder:@"HR (bpm)" andInputLabel:@"Heart Rate (bpm)"];   
 }
 
 - (void)setupCL {
-    [self setResultPrefix:@"Heart Rate is " andUnits:@"bpm" andPlaceholder:@"CL (msec)"andInputLabel:@"Enter Cycle Length in msec:"];    
+    [self setResultPrefix:@"Heart Rate is " andUnits:@"bpm" andPlaceholder:@"CL (msec)"andInputLabel:@"Cycle Length (msec)"];    
 }
 
 - (void)setResultPrefix:(NSString *)prefix andUnits:(NSString *)units andPlaceholder:(NSString *)placeholder andInputLabel:(NSString *)inputText {
