@@ -10,6 +10,7 @@
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */; };
+		8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -44,6 +45,8 @@
 		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8E31CEBC15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcCalculatorViewController.h; sourceTree = "<group>"; };
 		8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcCalculatorViewController.m; sourceTree = "<group>"; };
+		8E44005815BA4571009169DC /* EPSWarfarinCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinCalculatorViewController.h; sourceTree = "<group>"; };
+		8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +132,8 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8E44005815BA4571009169DC /* EPSWarfarinCalculatorViewController.h */,
+				8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */,
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
 				8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */,
 				8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */,
@@ -294,6 +299,7 @@
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */,
+				8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
