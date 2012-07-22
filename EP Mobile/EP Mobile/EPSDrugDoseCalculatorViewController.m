@@ -113,12 +113,16 @@
     NSString *result = [[NSString alloc] init];
     result = [result stringByAppendingString:[self getDose:cc]];
     result = [result stringByAppendingString:[NSString stringWithFormat:@"\nCreatinine Clearance = %i ml/min.", cc]];
-    self.resultLabel.text = result;
+    NSString *details = result;
+    
+    details = [details stringByAppendingString:@"\n"];
+    details = [details stringByAppendingString:[self getDetails:cc]];
+    self.resultLabel.text = details;
+
+    
     if ([self hasWarning:cc]) {
         NSString *alertTitle = @"Warning";
-        NSString *details = result;
-        details = [details stringByAppendingString:@"\n"];
-        details = [details stringByAppendingString:[self getDetails:cc]];
+
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
@@ -240,8 +244,8 @@
         if (crCl < 40)
             return @"";
         else {
-            NSString * msg = @"This is the recommended starting dose for treatment of atrial fibrillation. "
-                "Initial QT should be < 450 msec (package insert specifies QT, not QTc). "
+            NSString * msg = @"Recommended starting dose for treatment of atrial fibrillation. "
+                "Initial QT should be < 450 msec. "
                 "If QT remains < 500 msec dose can be increased to 120 mg or 160 mg ";
             if (crCl > 60)
                 return [msg stringByAppendingString:@"BID."];
