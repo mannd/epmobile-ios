@@ -17,12 +17,16 @@
 @property (strong, nonatomic) NSString *message;
 @property (assign, nonatomic) enum Direction direction;
 
+
 @end
 
 @interface EPSWarfarinCalculatorViewController : UIViewController
-    <UIAlertViewDelegate>
+    <UIActionSheetDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *weeklyDoseField;
 @property (strong, nonatomic) IBOutlet UITextField *inrField;
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+
+@property (strong, nonatomic) EPSDoseChange *doseChange;
 
 - (IBAction)toggleTabletSize:(id)sender;
 - (IBAction)toggleTargetRange:(id)sender;

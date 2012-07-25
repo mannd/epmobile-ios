@@ -7,6 +7,7 @@
 //
 
 #import "EPSWarfarinCalculatorViewController.h"
+#import "EPSDosingTableViewController.h"
 
 @interface EPSWarfarinCalculatorViewController ()
 
@@ -24,10 +25,13 @@
     float tabletSize;
     float minINR;
     float maxINR;
+    float weeklyDose;
 }
     
 @synthesize weeklyDoseField;
 @synthesize inrField;
+@synthesize resultLabel;
+@synthesize doseChange;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,21 +47,25 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     // set defaults
-    [self toggleTargetRange:nil];
-    [self toggleTabletSize:nil];
+    tabletSize = 5.0;
+    minINR = 2.0;
+    maxINR = 3.0;
 }
 
 - (void)viewDidUnload
 {
     [self setWeeklyDoseField:nil];
     [self setInrField:nil];
+    [self setResultLabel:nil];
+    [self setDoseChange:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation ==UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || 
+            interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
@@ -103,6 +111,7 @@
             tabletSize = 5.0;
             break;
     }
+    NSLog(@"Tablet size = %f", tabletSize);
 }
 
 - (IBAction)calculateButtonPressed:(id)sender {
@@ -112,7 +121,7 @@
     NSString *inrText = [self.inrField text];
     float inr = [inrText floatValue];
     NSString *weeklyDoseText = [self.weeklyDoseField text];
-    float weeklyDose = [weeklyDoseText floatValue];
+    weeklyDose = [weeklyDoseText floatValue];
     if (inr == 0 || weeklyDose == 0) {
         hasError = YES;
         message = @"Invalid Entries!";
@@ -122,7 +131,7 @@
     else if ([self inrTherapeutic:inr])
         message = @"INR is therapeutic. No change in warfarin dose.";
     else {
-        EPSDoseChange *doseChange = [self percentDoseChange:inr];
+        doseChange = [self percentDoseChange:inr];
         if (doseChange.lowEnd == 0 || doseChange.highEnd == 0)
             message = @"Invalid Entries!";
         else {
@@ -138,11 +147,12 @@
             
         }
     }
-    if (hasError) {
-        [self displayError:message];
-        return;
+    self.resultLabel.text = message;
+    if (showDoses) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle:@"Warfarin Dosing" delegate:self cancelButtonTitle:@"Dosing Summary Only" destructiveButtonTitle:@"Suggested Daily Doses" otherButtonTitles: nil];
+        [actionSheet showInView:self.view];
     }
-    [self displayResult:message showDosingTable:showDoses];
 }
              
 - (BOOL)inrTherapeutic:(float)inr {
@@ -156,31 +166,24 @@
     && dose + 0.2 * dose <= 7 * 1.5 * tabletSize;
 }
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    NSLog(@"Button index = %d", buttonIndex);
-    if (buttonIndex == 1)   // Reset
-        [self clearButtonPressed:nil];
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != [actionSheet cancelButtonIndex]) {
+        NSLog(@"Flip view");
+        [self performSegueWithIdentifier:@"DosingSegue" sender:nil];
+    }
+        
 }
 
-- (void)displayError:(NSString *)message {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" 
-                                                message:message 
-                                                delegate:nil cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
-    [alert show];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSDosingTableViewController *dc = (EPSDosingTableViewController *)[segue destinationViewController]; 
+    dc.tabletSize = tabletSize;
+    dc.lowEnd = doseChange.lowEnd;
+    dc.highEnd = doseChange.highEnd;
+    dc.increase = (doseChange.direction == INCREASE);
+    dc.weeklyDose = weeklyDose;
 }
 
-- (void)displayResult:(NSString *)message showDosingTable:(BOOL)show {
-    NSString *showButtonTitle = nil;
-    if (show)
-        showButtonTitle = @"Dosing";
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suggested Dosing Changes" 
-                                            message:message 
-                                            delegate:self cancelButtonTitle:@"Don't Reset"
-                                            otherButtonTitles:@"Reset", showButtonTitle, nil];
-    [alert show];
-    
-}
+
 
 - (EPSDoseChange *)percentDoseChange:(float)inr {
     if (minINR == 2.0)
@@ -190,68 +193,69 @@
 }
 
 - (EPSDoseChange *)percentDoseChangeLowRange:(float)inr {
-    EPSDoseChange *doseChange = [[EPSDoseChange alloc] init];
-    doseChange.highEnd = 0;
-    doseChange.lowEnd = 0;
-    doseChange.message = @"";
-    doseChange.direction = INCREASE;
+    EPSDoseChange *dc = [[EPSDoseChange alloc] init];
+    dc.highEnd = 0;
+    dc.lowEnd = 0;
+    dc.message = @"";
+    dc.direction = INCREASE;
     if (inr < 2.0) {
-        doseChange.lowEnd = 5;
-        doseChange.highEnd = 20;
+        dc.lowEnd = 5;
+        dc.highEnd = 20;
     } else if (inr >= 3.0 && inr < 3.6) {
-        doseChange.lowEnd = 5;
-        doseChange.highEnd = 15;
-        doseChange.direction = DECREASE;
+        dc.lowEnd = 5;
+        dc.highEnd = 15;
+        dc.direction = DECREASE;
     } else if (inr >= 3.6 && inr <= 4) {
-        doseChange.lowEnd = 10;
-        doseChange.highEnd = 15;
-        doseChange.message = @"Withhold no dose or one dose.";
-        doseChange.direction = DECREASE;
+        dc.lowEnd = 10;
+        dc.highEnd = 15;
+        dc.message = @"Withhold no dose or one dose.";
+        dc.direction = DECREASE;
     } else if (inr > 4) {
-        doseChange.lowEnd = 10;
-        doseChange.highEnd = 20;
-        doseChange.message = @"Withhold no dose or one dose.";
-        doseChange.direction = DECREASE;
+        dc.lowEnd = 10;
+        dc.highEnd = 20;
+        dc.message = @"Withhold no dose or one dose.";
+        dc.direction = DECREASE;
     }
-    return doseChange;
+    return dc;
 
 }
 
 - (EPSDoseChange *)percentDoseChangeHighRange:(float)inr {
-    EPSDoseChange *doseChange = [[EPSDoseChange alloc] init];
-    doseChange.highEnd = 0;
-    doseChange.lowEnd = 0;
-    doseChange.message = @"";
-    doseChange.direction = INCREASE;
+    EPSDoseChange *dc = [[EPSDoseChange alloc] init];
+    dc.highEnd = 0;
+    dc.lowEnd = 0;
+    dc.message = @"";
+    dc.direction = INCREASE;
     if (inr < 2.0) {
-        doseChange.lowEnd = 10;
-        doseChange.highEnd = 20;
-        doseChange.message = @"Give additional dose.";
+        dc.lowEnd = 10;
+        dc.highEnd = 20;
+        dc.message = @"Give additional dose.";
     } else if (inr >= 2.0 && inr < 2.5) {
-        doseChange.lowEnd = 5;
-        doseChange.highEnd = 15;
-        doseChange.direction = INCREASE;
+        dc.lowEnd = 5;
+        dc.highEnd = 15;
+        dc.direction = INCREASE;
     } else if (inr > 3.5 && inr < 4.6) {
-        doseChange.lowEnd = 5;
-        doseChange.highEnd = 15;
-        doseChange.direction = DECREASE;
+        dc.lowEnd = 5;
+        dc.highEnd = 15;
+        dc.direction = DECREASE;
     } else if (inr >= 4.6 && inr < 5.2) {
-        doseChange.lowEnd = 10;
-        doseChange.highEnd = 20;
-        doseChange.message = @"Withhold no dose or one dose.";
-        doseChange.direction = DECREASE;
+        dc.lowEnd = 10;
+        dc.highEnd = 20;
+        dc.message = @"Withhold no dose or one dose.";
+        dc.direction = DECREASE;
     } else if (inr > 5.2) {
-        doseChange.lowEnd = 10;
-        doseChange.highEnd = 20;
-        doseChange.message = @"Withhold no dose to two doses.";
-        doseChange.direction = DECREASE;
+        dc.lowEnd = 10;
+        dc.highEnd = 20;
+        dc.message = @"Withhold no dose to two doses.";
+        dc.direction = DECREASE;
     }
-    return doseChange;
+    return dc;
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
     self.weeklyDoseField.text = nil;
     self.inrField.text = nil;
+    self.resultLabel.text = nil;
 }
 
 
