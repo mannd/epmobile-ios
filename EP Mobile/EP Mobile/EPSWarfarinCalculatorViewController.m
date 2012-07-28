@@ -157,7 +157,7 @@
     self.resultLabel.text = message;
     if (showDoses) {
         UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                      initWithTitle:@"Warfarin Dosing" delegate:self cancelButtonTitle:@"Dosing Summary Only" destructiveButtonTitle:@"Suggested Daily Doses" otherButtonTitles: nil];
+                                      initWithTitle:message delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Show Suggested Daily Doses" otherButtonTitles: nil];
         [actionSheet showInView:self.view];
     }
 }
@@ -203,6 +203,8 @@
     dc.highEnd = 0;
     dc.lowEnd = 0;
     dc.message = @"";
+    if (inr >= 3.6)
+        dc.message = @"Consider holding one dose.";
     dc.direction = INCREASE;
     if (inr < 2.0) {
         dc.lowEnd = 5;
@@ -214,12 +216,10 @@
     } else if (inr >= 3.6 && inr <= 4) {
         dc.lowEnd = 10;
         dc.highEnd = 15;
-        dc.message = @"Withhold no dose or one dose.";
         dc.direction = DECREASE;
     } else if (inr > 4) {
         dc.lowEnd = 10;
         dc.highEnd = 20;
-        dc.message = @"Withhold no dose or one dose.";
         dc.direction = DECREASE;
     }
     return dc;
@@ -231,6 +231,8 @@
     dc.highEnd = 0;
     dc.lowEnd = 0;
     dc.message = @"";
+    if (inr >= 4.6)
+        dc.message = @"Consider holding one dose.";
     dc.direction = INCREASE;
     if (inr < 2.0) {
         dc.lowEnd = 10;
@@ -247,12 +249,10 @@
     } else if (inr >= 4.6 && inr < 5.2) {
         dc.lowEnd = 10;
         dc.highEnd = 20;
-        dc.message = @"Withhold no dose or one dose.";
         dc.direction = DECREASE;
     } else if (inr > 5.2) {
         dc.lowEnd = 10;
         dc.highEnd = 20;
-        dc.message = @"Withhold no dose to two doses.";
         dc.direction = DECREASE;
     }
     return dc;
