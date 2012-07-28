@@ -79,7 +79,7 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
                 return;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
-            if (value > 0.0)    // ok to allow zero tabs
+            if (value > 0.5)    // leaving at 0.5 instead of 0.0 works better (2 days with 0.5 vs 1 with 1.0 and 1 with 0.0)
                 [doses insertObject:[NSNumber numberWithFloat:(value - 0.5)] atIndex:orderedDays[nextDay]];
             NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
             NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
