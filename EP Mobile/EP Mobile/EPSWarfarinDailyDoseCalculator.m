@@ -68,20 +68,23 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
     return result;
 }
     
-- (NSMutableArray *)tryDoses:(NSMutableArray *)doses withOrder:(enum Order)order nextDay:(int)nextDay {
+- (void)tryDoses:(NSMutableArray *)doses withOrder:(enum Order)order nextDay:(int)nextDay {
     // recursive algorithm, finds closest dose (1st >= target)
     if (order == DECREASE_DOSE) {
         while ([self actualWeeklyDose:doses] > self.weeklyDose) {
             // check for all half tablets, we're done
             if ([self allHalfTablets:doses]) {
-                [self zeroDoses:doses];
-                return doses;
+                NSLog(@"All Half Doses!");
+                //[self zeroDoses:doses];
+                return;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
-            if (value > 0.5)
+            if (value > 0.0)    // ok to allow zero tabs
                 [doses insertObject:[NSNumber numberWithFloat:(value - 0.5)] atIndex:orderedDays[nextDay]];
+            NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
+            NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
             ++nextDay;
-            if (nextDay >= NUM_DAYS - 1)
+            if (nextDay > NUM_DAYS - 1)
                 nextDay = 0;
             [self tryDoses:doses withOrder:order nextDay:nextDay];
         }
@@ -91,19 +94,19 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
         while ([self actualWeeklyDose:doses] < self.weeklyDose) {
             // check for all half tablets, we're done
             if ([self allDoubleTablets:doses]) {
-                [self zeroDoses:doses];
-                return doses;
+                //[self zeroDoses:doses];
+                return;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
             if (value < 2.0)
                 [doses insertObject:[NSNumber numberWithFloat:(value + 0.5)] atIndex:orderedDays[nextDay]];
             ++nextDay;
-            if (nextDay >= NUM_DAYS - 1)
+            if (nextDay > NUM_DAYS - 1)
                 nextDay = 0;
             [self tryDoses:doses withOrder:order nextDay:nextDay];
         }
     }
-    return doses;
+    return;
         
 }
 

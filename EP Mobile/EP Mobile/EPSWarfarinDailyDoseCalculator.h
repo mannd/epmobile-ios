@@ -18,7 +18,7 @@
 
 - (id)initWithTabletDose:(float)tabletDose andWeeklyDose:(float)weeklyDose;
 - (NSMutableArray *)weeklyDoses;
-- (NSMutableArray *)tryDoses:(NSArray *)doses withOrder:(enum Order)order nextDay:(int)next;
+- (void)tryDoses:(NSArray *)doses withOrder:(enum Order)order nextDay:(int)next;
 - (float)actualWeeklyDose:(NSArray *)doses;
 
 @end
