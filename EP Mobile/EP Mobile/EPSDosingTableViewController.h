@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *satDose1;
 @property (weak, nonatomic) IBOutlet UILabel *satDose2;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
+@property (weak, nonatomic) IBOutlet UILabel *totalWeeklyLowDose;
+@property (weak, nonatomic) IBOutlet UILabel *totalWeeklyHighDose;
 
 @property (assign, nonatomic) float tabletSize;
 @property (assign, nonatomic) int lowEnd;

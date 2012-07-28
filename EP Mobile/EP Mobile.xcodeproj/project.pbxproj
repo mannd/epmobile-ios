@@ -14,6 +14,7 @@
 		8E44006215BC4B22009169DC /* EPSDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSDosingTableViewController.m */; };
 		8E511E5B15BC527300CF83B5 /* EPSChads2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSChads2TableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
+		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -56,6 +57,8 @@
 		8E511E5A15BC527300CF83B5 /* EPSChads2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSChads2TableViewController.m; sourceTree = "<group>"; };
 		8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskFactor.h; sourceTree = "<group>"; };
 		8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskFactor.m; sourceTree = "<group>"; };
+		8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDailyDoseCalculator.h; sourceTree = "<group>"; };
+		8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDailyDoseCalculator.m; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +166,8 @@
 				8E511E5A15BC527300CF83B5 /* EPSChads2TableViewController.m */,
 				8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */,
 				8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */,
+				8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */,
+				8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				8E44006215BC4B22009169DC /* EPSDosingTableViewController.m in Sources */,
 				8E511E5B15BC527300CF83B5 /* EPSChads2TableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
+				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

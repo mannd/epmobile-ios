@@ -8,6 +8,8 @@
 
 #import "EPSWarfarinCalculatorViewController.h"
 #import "EPSDosingTableViewController.h"
+#import "EPSWarfarinDailyDoseCalculator.h"
+
 
 @interface EPSWarfarinCalculatorViewController ()
 
@@ -41,6 +43,8 @@
     }
     return self;
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -137,12 +141,15 @@
         else {
             if (doseChange.message != nil)
                 message = [doseChange.message stringByAppendingString:@"\n"];
-            if (doseChange.direction == INCREASE)
+            BOOL increaseDose = (doseChange.direction == INCREASE);
+            if (increaseDose)
                 message = [message stringByAppendingString:@"Increase "];
             else 
                 message = [message stringByAppendingString:@"Decrease "];
+            float lowEndDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(doseChange.lowEnd / 100.0) fromOldDose:weeklyDose isIncrease:(increaseDose)];
+            float highEndDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(doseChange.highEnd / 100.0) fromOldDose:weeklyDose isIncrease:(increaseDose)];
             message = [message stringByAppendingString:@"weekly dose by "];
-            message = [message stringByAppendingFormat:@"%d%% to %d%%.", doseChange.lowEnd, doseChange.highEnd];
+            message = [message stringByAppendingFormat:@"%d%% (%1.1f mg/wk) to %d%% (%1.1f mg/wk).", doseChange.lowEnd, lowEndDose, doseChange.highEnd, highEndDose];
             showDoses = [self weeklyDoseIsSane:weeklyDose forTabletSize:tabletSize];
             
         }
@@ -162,8 +169,7 @@
 - (BOOL)weeklyDoseIsSane:(float)dose forTabletSize:(float)size {
     // need to make sure not only dose is sane, but max change to dose is
     // sane
-    return dose - 0.2 * dose >= 7 * 0.5 * tabletSize
-    && dose + 0.2 * dose <= 7 * 1.5 * tabletSize;
+    return dose - 0.2 * dose >= 7 * 0.5 * tabletSize && dose + 0.2 * dose <= 7 * 1.5 * tabletSize;
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {

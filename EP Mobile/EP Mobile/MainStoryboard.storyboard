@@ -415,7 +415,7 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1105" y="57"/>
+            <point key="canvasLocation" x="-1391" y="89"/>
         </scene>
         <!--Tc Calculator View Controller - QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
@@ -906,6 +906,8 @@
                         <outlet property="thuDose1" destination="mSe-a8-A6t" id="wIe-eS-INu"/>
                         <outlet property="thuDose2" destination="vdD-7z-0YR" id="CPC-8h-bDl"/>
                         <outlet property="titleBar" destination="U9G-Gl-fyl" id="UnH-7c-ePa"/>
+                        <outlet property="totalWeeklyHighDose" destination="Rbn-m2-xe3" id="QQe-n5-hbh"/>
+                        <outlet property="totalWeeklyLowDose" destination="Eu5-71-sDw" id="7nZ-KO-yHb"/>
                         <outlet property="tueDose1" destination="U8v-uV-pY0" id="VcE-q1-rXR"/>
                         <outlet property="tueDose2" destination="c7Z-fa-b44" id="TsA-N8-SMz"/>
                         <outlet property="wedDose1" destination="ehH-tD-OB6" id="IFi-9r-XoZ"/>
@@ -1207,7 +1209,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-832" y="222"/>
+            <point key="canvasLocation" x="-1081" y="227"/>
         </scene>
         <!--Drug Dose Table View Controller - Drug Calculators-->
         <scene sceneID="8SY-3g-55b">
@@ -1321,97 +1323,6 @@
             <point key="canvasLocation" x="-786" y="608"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="EPSChads2TableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSChads2TableViewController.h"/>
-        </class>
-        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButton:"/>
-                <relationship kind="action" name="clearButton:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleSwitch:"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSDosingTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDosingTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculate:"/>
-                <relationship kind="action" name="clear:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleSex:"/>
-                <relationship kind="action" name="toggleWeightUnits:"/>
-                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
-        </class>
-        <class className="EPSMainTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
-        </class>
-        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleInputType:"/>
-                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="toggleTabletSize:"/>
-                <relationship kind="action" name="toggleTargetRange:"/>
-                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
