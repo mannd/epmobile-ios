@@ -10,7 +10,11 @@
 
 @interface EPSRiskFactor : NSObject
 @property (strong, nonatomic) NSString *name;
+@property (assign, nonatomic) NSInteger points;
 @property (strong, nonatomic) NSString *details;
-@property (assign, nonatomic) NSInteger value;
+@property (assign, nonatomic) BOOL selected;
+
+- (id)initWith:(NSString *)name withValue:(int)value;
+- (id)initWithDetails:(NSString *)name withValue:(int)value withDetails:(NSString *)details;
 
 @end

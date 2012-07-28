@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSChads2TableViewController : UITableViewController
-@property (strong, nonatomic) NSArray *risks;
+@property (strong, nonatomic) NSMutableArray *risks;
 
 
 @end
