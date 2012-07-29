@@ -33,7 +33,7 @@
 - (IBAction)calculateButtonPressed:(id)sender;
 - (IBAction)clearButtonPressed:(id)sender;
 
-
+- (BOOL)weeklyDoseIsSane:(float)dose forTabletSize:(float)size;
 
 @end
 

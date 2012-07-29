@@ -10,6 +10,7 @@
 #import "EPSCycleLengthCalculatorViewController.h"
 #import "EPSQTcCalculatorViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
+#import "EPSWarfarinCalculatorViewController.h"
 
 @implementation EP_MobileTests
 
@@ -71,6 +72,20 @@
     STAssertTrue(newDose == 150.0, @"Actual was %f", newDose);
     newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:50 isIncrease:NO];
     STAssertTrue(newDose == 25.0, @"Actual was %f", newDose);
+}
+
+- (void)testTryDoses {
+    EPSWarfarinDailyDoseCalculator *calculator = [[EPSWarfarinDailyDoseCalculator alloc] initWithTabletDose:7.5 andWeeklyDose:80];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    STAssertNoThrow(array = [calculator weeklyDoses], @"It threw!");
+    
+}
+
+- (void)testIsDoseSane {
+    EPSWarfarinCalculatorViewController *vc = [[EPSWarfarinCalculatorViewController alloc] init];
+    STAssertTrue([vc weeklyDoseIsSane:40 forTabletSize:5], nil);
+    STAssertTrue([vc weeklyDoseIsSane:50 forTabletSize:5], nil);
+    STAssertTrue([vc weeklyDoseIsSane:30 forTabletSize:5], nil);
 }
 
 

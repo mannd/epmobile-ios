@@ -7,7 +7,7 @@
 //
 
 #import "EPSWarfarinCalculatorViewController.h"
-#import "EPSDosingTableViewController.h"
+#import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 
 
@@ -119,7 +119,6 @@
 }
 
 - (IBAction)calculateButtonPressed:(id)sender {
-    BOOL hasError = NO;
     NSString *message = @"";
     BOOL showDoses = NO;
     NSString *inrText = [self.inrField text];
@@ -127,7 +126,6 @@
     NSString *weeklyDoseText = [self.weeklyDoseField text];
     weeklyDose = [weeklyDoseText floatValue];
     if (inr == 0 || weeklyDose == 0) {
-        hasError = YES;
         message = @"Invalid Entries!";
     }
     else if (inr >= 6.0)
@@ -167,9 +165,9 @@
 }
 
 - (BOOL)weeklyDoseIsSane:(float)dose forTabletSize:(float)size {
-    // need to make sure not only dose is sane, but max change to dose is
-    // sane
-    return dose - 0.2 * dose >= 7 * 0.5 * tabletSize && dose + 0.2 * dose <= 7 * 1.5 * tabletSize;
+    //return dose - 0.2 * dose >= 7 * 0.5 * tabletSize && dose + 0.2 * dose <= 7 * 2.0 * tabletSize;
+    // dose calculator algorithm should handle from about 3 half tabs a week to 2 tabs daily
+    return dose > (4 * 0.5 * size) && dose < (2 * tabletSize * 7);
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -181,7 +179,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSDosingTableViewController *dc = (EPSDosingTableViewController *)[segue destinationViewController]; 
+    EPSWarfarinDosingTableViewController *dc = (EPSWarfarinDosingTableViewController *)[segue destinationViewController]; 
     dc.tabletSize = tabletSize;
     dc.lowEnd = doseChange.lowEnd;
     dc.highEnd = doseChange.highEnd;

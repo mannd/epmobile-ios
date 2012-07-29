@@ -32,7 +32,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     if ([scoreType isEqualToString:@"Chads2"]) {
         self.title = @"CHADS\u2082";
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Congestive heart Failure" withValue:1]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Congestive heart failure" withValue:1]];
         [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"BP ≥ 140/90 or treated HTN"]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 75 years" withValue:1]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Diabetes mellitus" withValue:1]];

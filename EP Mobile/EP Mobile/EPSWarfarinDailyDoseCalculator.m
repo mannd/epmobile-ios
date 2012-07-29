@@ -38,49 +38,32 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
 
 - (NSMutableArray *)weeklyDoses {
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    [self zeroDoses:result];    
-    // zeros are bad
-    if (self.tabletDose == 0 || self.weeklyDose == 0)
-        return result;
-    // half a tab daily more than weekly dose - bad!
-    if (self.tabletDose * 0.5 * NUM_DAYS > self.weeklyDose)
-        return result;
-    if (self.tabletDose * 2 * NUM_DAYS < self.weeklyDose) // should use bigger tablets
-        return result;
-    if (self.weeklyDose == self.tabletDose * NUM_DAYS) // just a tablet a day
-        for (int i = 0; i < NUM_DAYS; ++i) {
-            //result[i] = 1.0;
-            [result insertObject:[NSNumber numberWithFloat:1.0] atIndex:i];
-        }
-    else {
-        for (int i = 0; i < NUM_DAYS; ++i) {
-            //result[i] = 1.0; // start with a tab a day, no skipping days
-            [result insertObject:[NSNumber numberWithFloat:1.0] atIndex:i];
-        }
-        if (self.tabletDose * NUM_DAYS > self.weeklyDose)
-            [self tryDoses:result withOrder:DECREASE_DOSE nextDay:0];
-        else if (self.tabletDose * NUM_DAYS < self.weeklyDose)
-            [self tryDoses:result withOrder:INCREASE_DOSE nextDay:0];
-        else
-            // shouldn't happen that they are equal
-            return result;
+    for (int i = 0; i < NUM_DAYS; ++i) {
+        //result[i] = 1.0;
+        [result insertObject:[NSNumber numberWithFloat:1.0] atIndex:i];
     }
+    if (self.weeklyDose == self.tabletDose * NUM_DAYS) // just a tablet a day
+        return result;  // done!
+    if (self.tabletDose * NUM_DAYS > self.weeklyDose)
+        [self tryDoses:result withOrder:DECREASE_DOSE nextDay:0];
+    else // must be less than week dose
+        [self tryDoses:result withOrder:INCREASE_DOSE nextDay:0];
     return result;
 }
     
 - (void)tryDoses:(NSMutableArray *)doses withOrder:(enum Order)order nextDay:(int)nextDay {
     // recursive algorithm, finds closest dose (1st >= target)
+    BOOL allowZeroDoses = NO;
     if (order == DECREASE_DOSE) {
         while ([self actualWeeklyDose:doses] > self.weeklyDose) {
             // check for all half tablets, we're done
             if ([self allHalfTablets:doses]) {
                 NSLog(@"All Half Doses!");
-                //[self zeroDoses:doses];
-                return;
+                // don't allow zero dose days unless already at all half doses
+                allowZeroDoses = YES;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
-            if (value > 0.5)    // leaving at 0.5 instead of 0.0 works better (2 days with 0.5 vs 1 with 1.0 and 1 with 0.0)
-                [doses insertObject:[NSNumber numberWithFloat:(value - 0.5)] atIndex:orderedDays[nextDay]];
+            if ((allowZeroDoses && value > 0.0) || value > 0.5)                    [doses insertObject:[NSNumber numberWithFloat:(value - 0.5)] atIndex:orderedDays[nextDay]];
             NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
             NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
             ++nextDay;
@@ -111,9 +94,10 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
 }
 
 - (BOOL)allHalfTablets:(NSMutableArray *)doses {
+    // actually now checks for all half tabs or zero tabs
     BOOL allHalfTabs = YES;
     for (int i = 0; i < NUM_DAYS; ++i)
-        if ([[doses objectAtIndex:i] floatValue] != 0.5)
+        if ([[doses objectAtIndex:i] floatValue] > 0.5)
             allHalfTabs = NO;
     return allHalfTabs;
 }

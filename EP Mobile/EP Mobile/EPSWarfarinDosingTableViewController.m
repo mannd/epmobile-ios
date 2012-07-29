@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 EP Studios. All rights reserved.
 //
 
-#import "EPSDosingTableViewController.h"
+#import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 
 #define NUM_DAYS 7
@@ -18,11 +18,11 @@
 #define FRI 5
 #define SAT 6
 
-@interface EPSDosingTableViewController ()
+@interface EPSWarfarinDosingTableViewController ()
 
 @end
 
-@implementation EPSDosingTableViewController
+@implementation EPSWarfarinDosingTableViewController
 @synthesize tueDose1;
 @synthesize tueDose2;
 @synthesize wedDose1;

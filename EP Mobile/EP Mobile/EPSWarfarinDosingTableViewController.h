@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSDosingTableViewController : UIViewController
+@interface EPSWarfarinDosingTableViewController : UIViewController
 - (IBAction)doneButtonPressed:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
