@@ -99,18 +99,19 @@
 }
 
 - (void)setupHR {
-    [self setResultPrefix:@"Cycle Length is " andUnits:@"msec" andPlaceholder:@"HR (bpm)" andInputLabel:@"Heart Rate (bpm)"];   
+    [self setResultPrefix:@"Interval is " andUnits:@"msec" andPlaceholder:@"Rate (bpm)" andInputLabel:@"Rate (bpm)" andTitle:@"Rate ➜ Interval"];   
 }
 
 - (void)setupCL {
-    [self setResultPrefix:@"Heart Rate is " andUnits:@"bpm" andPlaceholder:@"CL (msec)"andInputLabel:@"Cycle Length (msec)"];    
+    [self setResultPrefix:@"Rate is " andUnits:@"bpm" andPlaceholder:@"Interval (msec)"andInputLabel:@"Interval (msec)" andTitle:@"Interval ➜ Rate"];    
 }
 
-- (void)setResultPrefix:(NSString *)prefix andUnits:(NSString *)units andPlaceholder:(NSString *)placeholder andInputLabel:(NSString *)inputText {
+- (void)setResultPrefix:(NSString *)prefix andUnits:(NSString *)units andPlaceholder:(NSString *)placeholder andInputLabel:(NSString *)inputText andTitle:(NSString *)title {
     self.inputField.placeholder = placeholder;
     self.resultPrefix = prefix;
     self.resultUnits = units;
     self.inputLabel.text = inputText;
+    self.navigationItem.title = title;
 }
 
 @end

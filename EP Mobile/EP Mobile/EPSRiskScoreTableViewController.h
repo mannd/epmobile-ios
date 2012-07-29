@@ -1,5 +1,5 @@
 //
-//  EPSChads2TableViewController.h
+//  EPSRiskScoreTableViewController.h
 //  EP Mobile
 //
 //  Created by David Mann on 7/22/12.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSChads2TableViewController : UITableViewController
+@interface EPSRiskScoreTableViewController : UITableViewController
 @property (strong, nonatomic) NSMutableArray *risks;
+@property (strong, nonatomic) NSString *scoreType;
 
 
 @end
