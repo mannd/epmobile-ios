@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAboutViewController.h; sourceTree = "<group>"; };
+		8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAboutViewController.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
 		8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMainTableViewController.m; sourceTree = "<group>"; };
 		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -144,6 +147,10 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */,
+				8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */,
+				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
+				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
 				8E44005815BA4571009169DC /* EPSWarfarinCalculatorViewController.h */,
 				8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */,
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
@@ -151,8 +158,6 @@
 				8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */,
 				8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */,
 				8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */,
-				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
-				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
 				8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */,
 				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
 				8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */,
@@ -324,6 +329,7 @@
 				8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
 				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
+				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

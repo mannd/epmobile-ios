@@ -9,6 +9,7 @@
 #import "EP_MobileTests.h"
 #import "EPSCycleLengthCalculatorViewController.h"
 #import "EPSQTcCalculatorViewController.h"
+#import "EPSWarfarinDailyDoseCalculator.h"
 
 @implementation EP_MobileTests
 
@@ -61,6 +62,15 @@
     result = [c qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:BAZETT];
     STAssertTrue(result == 0, @"Actual result was %d", result);
     
+}
+
+- (void)testActualWeeklyDose {
+    float newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:100 isIncrease:NO];
+    STAssertTrue(newDose == 50.0, @"Actual was %f", newDose);
+    newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:100 isIncrease:YES];
+    STAssertTrue(newDose == 150.0, @"Actual was %f", newDose);
+    newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:50 isIncrease:NO];
+    STAssertTrue(newDose == 25.0, @"Actual was %f", newDose);
 }
 
 

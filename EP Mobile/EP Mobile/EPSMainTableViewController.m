@@ -33,6 +33,13 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)showAbout {
+    [self performSegueWithIdentifier:@"AboutSegue" sender:nil];
 }
 
 - (void)viewDidUnload
