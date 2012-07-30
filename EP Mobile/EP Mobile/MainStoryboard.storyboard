@@ -379,7 +379,7 @@
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="HEMORRHAGES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jsu-qK-3o9">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="HEMORR₂HAGES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jsu-qK-3o9">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -400,7 +400,7 @@
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="HCM SCD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nak-Eu-smJ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Hypertrophic Cardiomyopathy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nak-Eu-smJ">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -981,7 +981,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChadsCell" editingAccessoryType="checkmark" textLabel="VHg-sq-Jrs" detailTextLabel="CfA-hR-QXc" style="IBUITableViewCellStyleSubtitle" id="8Rp-V1-sst">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChadsCell" textLabel="VHg-sq-Jrs" detailTextLabel="CfA-hR-QXc" style="IBUITableViewCellStyleSubtitle" id="8Rp-V1-sst">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1015,7 +1015,7 @@
                     <navigationItem key="navigationItem" title="Title" id="5A5-0R-44A"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1147" y="181"/>
+            <point key="canvasLocation" x="-1327" y="408"/>
         </scene>
         <!--Cycle Length Calculator View Controller - Interval/Rate Converter-->
         <scene sceneID="s0B-z1-cNk">
@@ -1377,106 +1377,6 @@
             <point key="canvasLocation" x="-786" y="608"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="EPSAboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="aboutLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButton:"/>
-                <relationship kind="action" name="clearButton:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleSwitch:"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculate:"/>
-                <relationship kind="action" name="clear:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleSex:"/>
-                <relationship kind="action" name="toggleWeightUnits:"/>
-                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
-        </class>
-        <class className="EPSMainTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
-        </class>
-        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleInputType:"/>
-                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
-        </class>
-        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="toggleTabletSize:"/>
-                <relationship kind="action" name="toggleTargetRange:"/>
-                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="EPSWarfarinDosingTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinDosingTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalWeeklyHighDose" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalWeeklyLowDose" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

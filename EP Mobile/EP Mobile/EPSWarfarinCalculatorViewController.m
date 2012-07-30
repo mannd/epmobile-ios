@@ -229,8 +229,7 @@
     dc.highEnd = 0;
     dc.lowEnd = 0;
     dc.message = @"";
-    if (inr >= 4.6)
-        dc.message = @"Consider holding one dose.";
+
     dc.direction = INCREASE;
     if (inr < 2.0) {
         dc.lowEnd = 10;
@@ -247,10 +246,12 @@
     } else if (inr >= 4.6 && inr < 5.2) {
         dc.lowEnd = 10;
         dc.highEnd = 20;
+        dc.message = @"Consider holding one dose.";
         dc.direction = DECREASE;
     } else if (inr > 5.2) {
         dc.lowEnd = 10;
         dc.highEnd = 20;
+        dc.message = @"Consider holding up to two doses.";
         dc.direction = DECREASE;
     }
     return dc;
