@@ -9,6 +9,9 @@
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSRiskFactor.h"
 
+// used to distinguish specially handled risk factor in HCM
+#define HIGHEST_RISK_SCORE 100
+
 @interface EPSRiskScoreTableViewController ()
 
 @end
@@ -83,14 +86,15 @@
     else if ([scoreType isEqualToString:@"HCM"]) {
         self.title = @"Hypertrophic CM";
         // Major criteria
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Cardiac arrest" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Spontaneous sustained VT" withValue:1 ]];
+        // will be able to tease out major and minor because major 1 order of magnitude higher
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Cardiac arrest" withValue:10]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Spontaneous sustained VT" withValue:10 ]];
         [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Family history" withValue:1 withDetails:@"of premature sudden death"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"LV thickness ≥ 3 cm" withValue:1]];  
-       [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:1]];          
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:1 withDetails:@"drop in BP with exercise"]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"LV thickness ≥ 3 cm" withValue:10]];  
+       [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:10]];          
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:10 withDetails:@"drop in BP with exercise"]];
         
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Nonsustained VT" withValue:1]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Nonsustained VT" withValue:10]];
         // Minor criteria
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Atrial fibrillation" withValue:1]];  
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Myocardial ischemia" withValue:1]];
@@ -135,6 +139,9 @@
 - (NSString *)getResultsMessage:(int)result {
     NSString *message = [[NSString alloc] init];
     float risk = 0;
+    // used for HCM
+    int minorScore = 0;
+    int majorScore = 0;
     // some risk scores require a string, e.g. HAS-BLED
     NSString *riskString = [[NSString alloc] init];
     NSString *scoreName = [[NSString alloc] init];
@@ -231,6 +238,41 @@
         }
         message = [[NSString alloc] initWithFormat:@"HAS-BLED score = %d\n%@\nBleeding risk is %@ bleeds per 100 patient-years", result, message, riskString];
         
+    }
+    else if ([scoreType isEqualToString:@"Hemorrhages"]) {
+        if (result < 2)
+            message = @"Low bleeding risk";
+        else if (result < 4)
+            message = @"Intermediate bleeding risk";
+        else 
+            message = @"High bleeding risk";
+		switch (result) {
+            case 0:
+                risk = 1.9;
+                break;
+            case 1:
+                risk = 2.5;
+                break;
+            case 2:
+                risk = 5.3;
+                break;
+            case 3:
+                risk = 8.4;
+                break;
+            case 4:
+                risk = 10.4;
+                break;
+		}
+		if (result >= 5)
+			risk = 12.3;        
+        message = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", result, message, risk];        
+    }
+    else if ([scoreType isEqualToString:@"HCM"]) {
+         // cardiac arrest and VT treated specially 
+//        if ([[self.risks objectAtIndex:0] isSelected] || [[self.risks objectAtIndex:1] isSelected])  {
+//            risk = HIGHEST_RISK_SCORE;
+//        }
+        message = @"HCM test";
     }
 
     if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) { 
