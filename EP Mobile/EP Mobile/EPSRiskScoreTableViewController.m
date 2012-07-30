@@ -11,6 +11,9 @@
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
+// the 2 mutually exclusive CHADS-VASc risk that must be dealt with specially
+#define CHADS_VASC_AGE_75 2
+#define CHADS_VASC_AGE_65 6
 
 @interface EPSRiskScoreTableViewController ()
 
@@ -89,10 +92,10 @@
         // will be able to tease out major and minor because major 1 order of magnitude higher
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Cardiac arrest" withValue:10]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Spontaneous sustained VT" withValue:10 ]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Family history" withValue:1 withDetails:@"of premature sudden death"]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Family history" withValue:10 withDetails:@"of premature sudden death"]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:10]];          
         [array addObject:[[EPSRiskFactor alloc] initWith:@"LV thickness ≥ 3 cm" withValue:10]];  
-       [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:10]];          
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:10 withDetails:@"drop in BP with exercise"]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:10 withDetails:@"failure of BP to rise with exercise"]];
         
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Nonsustained VT" withValue:10]];
         // Minor criteria
@@ -129,6 +132,11 @@
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
             score += [[self.risks objectAtIndex:i] points];
+    // adjust for duplicate age entry in ChadsVasc
+    if ([scoreType isEqualToString:@"ChadsVasc"]) {
+        if ([[self.risks objectAtIndex:CHADS_VASC_AGE_65] selected] && [[self.risks objectAtIndex:CHADS_VASC_AGE_75] selected])
+            --score;
+    }
     NSString *message = [self getResultsMessage:score];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     // left justify message
@@ -139,9 +147,6 @@
 - (NSString *)getResultsMessage:(int)result {
     NSString *message = [[NSString alloc] init];
     float risk = 0;
-    // used for HCM
-    int minorScore = 0;
-    int majorScore = 0;
     // some risk scores require a string, e.g. HAS-BLED
     NSString *riskString = [[NSString alloc] init];
     NSString *scoreName = [[NSString alloc] init];
@@ -268,11 +273,29 @@
         message = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", result, message, risk];        
     }
     else if ([scoreType isEqualToString:@"HCM"]) {
+        int minorScore = 0;
+        int majorScore = 0;
          // cardiac arrest and VT treated specially 
-//        if ([[self.risks objectAtIndex:0] isSelected] || [[self.risks objectAtIndex:1] isSelected])  {
-//            risk = HIGHEST_RISK_SCORE;
-//        }
-        message = @"HCM test";
+        if ([[self.risks objectAtIndex:0] selected] || [[self.risks objectAtIndex:1] selected])  
+            result = HIGHEST_RISK_SCORE;
+        else {
+            // extract major and minor risks
+            majorScore = result / 10;
+            minorScore = result % 10;
+            NSLog(@"Major score = %i", majorScore);
+            NSLog(@"Minor score = %i", minorScore);
+        }
+        if (result == HIGHEST_RISK_SCORE)
+            message = @"Survivors of cardiac arrest and patients with spontaneous sustained VT are considered at very high risk for SD and are ICD candidates.";
+        else {
+            message = [[NSString alloc] initWithFormat:@"Major risks = %i\nMinor risks = %i\n", majorScore, minorScore];
+            if (majorScore >= 2)
+                message = [message stringByAppendingString:@"Patients with 2 or more major risk factors are considered at high risk and should be considered for ICD implantation."];
+            else if (majorScore == 1)
+                message = [message stringByAppendingString:@"Patients with 1 major risk factor have increased risk for SD and recommendations should be individualized. Factors such as the nature of the risk factor (e.g. SD in an immediate family member), young age (which confers greater risk) and presence of minor risk factors should be considered.  ICD implantation can be considered depending on these factors."];
+            else // result == 0
+                message = [message stringByAppendingString:@"Patients without any major risk factors (even if minor risk factors are present) are considered to be at low risk for SD. ICD implantation is not recommended."];
+        }
     }
 
     if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) { 
@@ -320,8 +343,12 @@
 {
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChadsCell"];
-    NSString *risk = [[self.risks objectAtIndex:indexPath.row] name];
-    NSString *details = [[self.risks objectAtIndex:indexPath.row] details];
+    // deal with the 2 sectioned HCM risk
+    int offset = 0; // use with more than one section
+    if ([scoreType isEqualToString:@"HCM"] && (indexPath.section == 1))
+            offset = 7;
+    NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
+    NSString *details = [[self.risks objectAtIndex:indexPath.row + offset] details];
     cell.textLabel.text = risk;
     cell.detailTextLabel.text = details;
     return cell;
@@ -380,19 +407,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    int offset = 0; // for HCM
+    if ([scoreType isEqualToString:@"HCM"] && indexPath.section == 1)
+        offset = 7;
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark; 
-        [[self.risks objectAtIndex:indexPath.row] setSelected:YES];
-        // ugly correction for lame overlapping risk factors
-        if ([scoreType isEqualToString:@"ChadsVasc"])
-            if (indexPath.row == 2) // age >= 75, unselect age >= 65
-                [[self.risks objectAtIndex:6] setSelected:NO];  // row 6 is age >= 65
-                
+        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
