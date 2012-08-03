@@ -9,6 +9,18 @@
 #import "EPSQTViewController.h"
 #import "EPSRiskFactor.h"
 
+// defines for SQTS indexes
+#define SQTS_SHORT_JT 0
+#define SQTS_ARREST 1
+#define SQTS_VT 2
+#define SQTS_SYNCOPE 3
+#define SQTS_AFB 4
+#define SQTS_FH_SQTS 5
+#define SQTS_FH_SCD 6
+#define SQTS_SIDS 7
+#define SQTS_GENOTYPE 8
+#define SQTS_MUTATION 9
+
 @interface EPSQTViewController ()
 
 @end
@@ -73,11 +85,42 @@
 
 - (void)calculateScore {
     int score = 0;
-    if (qtcSegmentedControl.selectedSegmentIndex == 0 && ![[risks objectAtIndex:0] selected]) {
+    // ECG criteria
+    // one of the short QT intervals must be selected to get other points
+    if (qtcSegmentedControl.selectedSegmentIndex == 0 && ![[risks objectAtIndex:SQTS_SHORT_JT] selected]) {
         [self displayResult:score];
         return;
     }
-
+    if (qtcSegmentedControl.selectedSegmentIndex == 1) // QTc < 370
+        ++score;
+    else if (qtcSegmentedControl.selectedSegmentIndex == 2) // QTc < 350
+        score += 2;
+    else if (qtcSegmentedControl.selectedSegmentIndex ==3) // QTc < 330
+        score += 3;
+    // short JT very specific for SQTS
+    if ([[risks objectAtIndex:SQTS_SHORT_JT] selected ])
+        ++score;
+    // Clinical history points can only be received for one of next 3 selections
+    if ([[risks objectAtIndex:SQTS_ARREST] selected] ||[[risks objectAtIndex:SQTS_VT] selected])
+        score += 2;
+    else if ([[risks objectAtIndex:SQTS_SYNCOPE] selected])
+        ++score;
+    if ([[risks objectAtIndex:SQTS_AFB] selected])
+        ++score;
+    // Family history
+    // points can only be received once in this section
+    if ([[risks objectAtIndex:SQTS_FH_SQTS] selected])
+        score += 2;
+    else if ([[risks objectAtIndex:SQTS_FH_SCD] selected] || 
+             [[risks objectAtIndex:SQTS_SIDS] selected])
+        ++score;
+    // Genotype
+    if ([[risks objectAtIndex:SQTS_GENOTYPE] selected])
+        score += 2;
+    if ([[risks objectAtIndex:SQTS_MUTATION] selected])
+        ++score;
+    
+    [self displayResult:score];
 }
 
 - (void)displayResult:(int)score {
@@ -123,18 +166,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"QTCell"];
     }
     cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
-    int offset = 0;
-    if (indexPath.section == 1)
-        offset = 1;
-    else if (indexPath.section == 2)
-        offset = 5;
-    else if (indexPath.section == 3)
-        offset = 8;
+    int offset = [self calculateOffset:indexPath.section];
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
     //cell.detailTextLabel.text = details;
     return cell;
+}
+
+- (int)calculateOffset:(int)section {
+    int offset = 0;
+    if (section == 1)
+        offset = 1;
+    else if (section == 2)
+        offset = 5;
+    else if (section == 3)
+        offset = 8;
+    return offset;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -153,14 +201,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    int offset = [self calculateOffset:indexPath.section];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark; 
-        [[self.risks objectAtIndex:indexPath.row] setSelected:YES];
+        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

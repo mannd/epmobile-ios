@@ -345,13 +345,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChadsCell"];
     // deal with the 2 sectioned HCM risk
     int offset = 0; // use with more than one section
-    if ([scoreType isEqualToString:@"HCM"] && (indexPath.section == 1))
-            offset = 7;
+    if ([scoreType isEqualToString:@"HCM"])
+        offset = [self calculateOffset:indexPath.section];
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     NSString *details = [[self.risks objectAtIndex:indexPath.row + offset] details];
     cell.textLabel.text = risk;
     cell.detailTextLabel.text = details;
     return cell;
+}
+
+- (int)calculateOffset:(int)section {
+    int offset = 0;
+    if (section == 1)
+        offset = 7;
+    return offset;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -408,8 +415,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int offset = 0; // for HCM
-    if ([scoreType isEqualToString:@"HCM"] && indexPath.section == 1)
-        offset = 7;
+    if ([scoreType isEqualToString:@"HCM"])
+        offset = [self calculateOffset:indexPath.section];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
