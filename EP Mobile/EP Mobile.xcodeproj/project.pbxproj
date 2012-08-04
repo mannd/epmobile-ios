@@ -20,6 +20,7 @@
 		8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93C815C7580C00ACBA4F /* brugadaecg.png */; };
 		8E5D93CC15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m */; };
 		8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */; };
+		8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -73,6 +74,8 @@
 		8E5D93CB15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaNotesViewController.m; sourceTree = "<group>"; };
 		8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTViewController.h; sourceTree = "<group>"; };
 		8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTViewController.m; sourceTree = "<group>"; };
+		8E5D93D315CCABF500ACBA4F /* EPSARVC2010TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVC2010TableViewController.h; sourceTree = "<group>"; };
+		8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVC2010TableViewController.m; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,8 @@
 				8EC19C32159FE0FA00975E2B /* Supporting Files */,
 				8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */,
 				8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */,
+				8E5D93D315CCABF500ACBA4F /* EPSARVC2010TableViewController.h */,
+				8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
+				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
