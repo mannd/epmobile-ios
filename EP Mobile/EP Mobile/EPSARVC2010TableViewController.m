@@ -101,9 +101,12 @@
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSString *text = [self.list objectAtIndex:row];
-    cell.textLabel.text = text;
+    cell.detailTextLabel.text = text;
     
-    
+    cell.detailTextLabel.numberOfLines = 0;
+    cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
+    cell.textLabel.text = @"MAJOR";    
     return cell;
 }
 
