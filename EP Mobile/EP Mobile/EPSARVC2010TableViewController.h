@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSARVC2010TableViewController : UITableViewController
-
+@property (strong, nonatomic) NSArray *list;
 @end

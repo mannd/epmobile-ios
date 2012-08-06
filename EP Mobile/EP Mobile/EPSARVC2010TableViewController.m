@@ -20,6 +20,7 @@
 @end
 
 @implementation EPSARVC2010TableViewController
+@synthesize list;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,14 +34,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-    // TODO Must init from plist, both ARVC/D items.!!!!
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSDictionary *rootDictionary = [dictionary objectForKey:@"Root"];
+    NSArray *array = [[NSArray alloc] initWithArray:[rootDictionary objectForKey:@"ARVC2010"]];
+    
+    self.list = array;
     
     
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
@@ -51,6 +50,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.list = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -90,7 +90,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [self.list count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,7 +99,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    
+    NSUInteger row = [indexPath row];
+    NSString *text = [self.list objectAtIndex:row];
+    cell.textLabel.text = text;
     
     
     return cell;

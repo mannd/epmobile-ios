@@ -21,6 +21,7 @@
 		8E5D93CC15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m */; };
 		8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */; };
 		8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */; };
+		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -76,6 +77,7 @@
 		8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTViewController.m; sourceTree = "<group>"; };
 		8E5D93D315CCABF500ACBA4F /* EPSARVC2010TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVC2010TableViewController.h; sourceTree = "<group>"; };
 		8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVC2010TableViewController.m; sourceTree = "<group>"; };
+		8E5D93E815CF5B1A00ACBA4F /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,8 +94,8 @@
 		8EC19C4D159FE0FA00975E2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8EC19C4F159FE0FA00975E2B /* EP_MobileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EP_MobileTests.h; sourceTree = "<group>"; };
 		8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EP_MobileTests.m; sourceTree = "<group>"; };
-		8EC19C5A159FE11900975E2B /* epmobile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon.png; sourceTree = "<group>"; };
-		8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon2.png; sourceTree = "<group>"; };
+		8EC19C5A159FE11900975E2B /* epmobile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epmobile_icon.png; path = ../epmobile_icon.png; sourceTree = "<group>"; };
+		8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epmobile_icon2.png; path = ../epmobile_icon2.png; sourceTree = "<group>"; };
 		8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCycleLengthCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCycleLengthCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseCalculatorViewController.h; sourceTree = "<group>"; };
@@ -129,8 +131,7 @@
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
-				8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */,
-				8EC19C5A159FE11900975E2B /* epmobile_icon.png */,
+				8E5D93E815CF5B1A00ACBA4F /* Data.plist */,
 				8EC19C31159FE0FA00975E2B /* EP Mobile */,
 				8EC19C49159FE0FA00975E2B /* EP MobileTests */,
 				8EC19C2A159FE0FA00975E2B /* Frameworks */,
@@ -202,6 +203,8 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EC19C5A159FE11900975E2B /* epmobile_icon.png */,
+				8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */,
 				8E5D93C815C7580C00ACBA4F /* brugadaecg.png */,
 				8EC19C33159FE0FA00975E2B /* EP Mobile-Info.plist */,
 				8EC19C34159FE0FA00975E2B /* InfoPlist.strings */,
@@ -307,6 +310,7 @@
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 				8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */,
+				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
