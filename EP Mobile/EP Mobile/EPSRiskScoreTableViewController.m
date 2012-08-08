@@ -331,11 +331,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ([scoreType isEqualToString:@"HCM"])
+    if ([scoreType isEqualToString:@"HCM"]) {
         if (section == 0)
             return 7;   // 7 major criteria for HCM
         else 
             return 4;   // 7 minor criteria for HCM
+    }
     return [risks count];
 }
 
@@ -362,11 +363,12 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if ([scoreType isEqualToString:@"HCM"])
+    if ([scoreType isEqualToString:@"HCM"]) {
         if (section == 0)
             return @"MAJOR";
         else 
             return @"MINOR";
+    }
     return nil;
 
 }
