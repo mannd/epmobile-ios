@@ -450,7 +450,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1299" y="-459"/>
+            <point key="canvasLocation" x="-1073" y="-341"/>
         </scene>
         <!--Table View Controller - LVH-->
         <scene sceneID="s8B-nf-m3V">
@@ -517,7 +517,7 @@
                     <navigationItem key="navigationItem" title="LVH" id="hop-BV-0dw"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1473" y="77"/>
+            <point key="canvasLocation" x="-1897" y="-257"/>
         </scene>
         <!--Table View Controller - LVH Voltage Criteria-->
         <scene sceneID="5J4-b1-xfe">
@@ -725,7 +725,7 @@
                     <navigationItem key="navigationItem" title="LVH Voltage Criteria" id="Yh2-Fu-qGS"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1439" y="350"/>
+            <point key="canvasLocation" x="-1507" y="433"/>
         </scene>
         <!--Table View Controller - WCT-->
         <scene sceneID="LKt-TZ-t6U">
@@ -739,15 +739,15 @@
                         <sections>
                             <tableViewSection id="rUM-fj-z2Y">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PSJ-qR-SlW" style="IBUITableViewCellStyleDefault" id="5YM-nr-MiC">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PSJ-qR-SlW" style="IBUITableViewCellStyleDefault" id="5YM-nr-MiC">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Brugada Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PSJ-qR-SlW">
-                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -775,7 +775,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="pVw-QD-lnU" kind="push" id="Yie-RY-jB8"/>
+                                            <segue destination="ntH-d0-hOl" kind="push" id="Sx0-WJ-m8b"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kHj-xD-wa0" style="IBUITableViewCellStyleDefault" id="ApO-D9-739">
@@ -810,57 +810,69 @@
                     <navigationItem key="navigationItem" title="WCT" id="ROR-Bw-5Yc"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1971" y="-496"/>
-        </scene>
-        <!--View Controller - LBBB in V1-->
-        <scene sceneID="Slx-tf-UaI">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sh3-vD-bJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="O1g-jw-K4D" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5HO-57-zR7">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="LBBB in V1" id="HT6-ph-1dw"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1618" y="-769"/>
+            <point key="canvasLocation" x="-2596" y="-2292"/>
         </scene>
         <!--View Controller - RBBB in V1-->
-        <scene sceneID="ey1-lY-8AL">
+        <scene sceneID="wD2-q2-jc9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s24-SL-g4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Ksj-wj-XOc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="16y-NH-aLK">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="eSD-vw-Urv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology.png" id="QFC-cs-lDR">
+                                <rect key="frame" x="0.0" y="20" width="320" height="327"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="RBBB in V1" id="0pa-9V-LD4"/>
+                    <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1461" y="-1286"/>
+            <point key="canvasLocation" x="-1963" y="-2142"/>
+        </scene>
+        <!--View Controller - LBBB in V1-->
+        <scene sceneID="OFo-xx-IkS">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn4-e9-KqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="DJv-41-R7G" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology.png" id="0bo-DH-ke2">
+                                <rect key="frame" x="0.0" y="20" width="320" height="327"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1916" y="-2340"/>
         </scene>
         <!--Tab Bar Controller - Morphology Criteria-->
-        <scene sceneID="PeD-pX-44p">
+        <scene sceneID="koM-V1-bil">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ys-1S-rBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="pVw-QD-lnU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Morphology Criteria" id="RKB-sl-Igp"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="ntH-d0-hOl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Morphology Criteria" id="CXP-a6-5sq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="DKt-0b-KAP">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fCf-Nm-bYL">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Ksj-wj-XOc" kind="relationship" relationship="viewControllers" id="3F8-lX-k1V"/>
-                        <segue destination="O1g-jw-K4D" kind="relationship" relationship="viewControllers" id="bEY-E4-RPj"/>
+                        <segue destination="DJv-41-R7G" kind="relationship" relationship="viewControllers" id="mfU-G3-8bi"/>
+                        <segue destination="eSD-vw-Urv" kind="relationship" relationship="viewControllers" id="qSA-9t-DoH"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-1618" y="-392"/>
+            <point key="canvasLocation" x="-2279" y="-2320"/>
         </scene>
         <!--View Controller - R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
@@ -1247,7 +1259,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1694" y="-762"/>
+            <point key="canvasLocation" x="-1860" y="-596"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -2529,9 +2541,136 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
     </scenes>
     <resources>
         <image name="brugadaecg.png" width="400" height="255"/>
+        <image name="lbbbicon.png" width="25" height="24"/>
+        <image name="lbbbmorphology.png" width="800" height="651"/>
         <image name="modgrayavannulus.png" width="452" height="400"/>
+        <image name="rbbbicon.png" width="25" height="24"/>
+        <image name="rbbbmorphology.png" width="800" height="600"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
+    <classes>
+        <class className="EPSARVC2010TableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVC2010TableViewController.h"/>
+        </class>
+        <class className="EPSAVAnnulusViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAVAnnulusViewController.h"/>
+        </class>
+        <class className="EPSAboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="aboutLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSBrugadaECGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaECGViewController.h"/>
+        </class>
+        <class className="EPSBrugadaNotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaNotesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculateButton:"/>
+                <relationship kind="action" name="clearButton:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleSwitch:"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleSex:"/>
+                <relationship kind="action" name="toggleWeightUnits:"/>
+                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
+        </class>
+        <class className="EPSMainTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
+        </class>
+        <class className="EPSQTViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculateButtonPressed:"/>
+                <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleInputType:"/>
+                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
+        </class>
+        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateButtonPressed:"/>
+                <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="toggleTabletSize:"/>
+                <relationship kind="action" name="toggleTargetRange:"/>
+                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EPSWarfarinDosingTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinDosingTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalWeeklyHighDose" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalWeeklyLowDose" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
