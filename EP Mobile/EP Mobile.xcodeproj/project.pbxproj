@@ -15,6 +15,8 @@
 		8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011C15DB39C200BB7550 /* rbbbicon.png */; };
 		8E06011F15DB39CF00BB7550 /* lbbbmorphology.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */; };
 		8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06012015DB39D800BB7550 /* rbbbmorphology.png */; };
+		8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E09D05F15DC69E600756EA1 /* longqtecg.png */; };
+		8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */; };
 		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
@@ -69,6 +71,9 @@
 		8E06011C15DB39C200BB7550 /* rbbbicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rbbbicon.png; sourceTree = "<group>"; };
 		8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lbbbmorphology.png; sourceTree = "<group>"; };
 		8E06012015DB39D800BB7550 /* rbbbmorphology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rbbbmorphology.png; sourceTree = "<group>"; };
+		8E09D05F15DC69E600756EA1 /* longqtecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longqtecg.png; sourceTree = "<group>"; };
+		8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLongQTECGViewController.h; sourceTree = "<group>"; };
+		8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLongQTECGViewController.m; sourceTree = "<group>"; };
 		8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAboutViewController.h; sourceTree = "<group>"; };
 		8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAboutViewController.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
@@ -217,6 +222,8 @@
 				8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */,
 				8E0600E115D32BBF00BB7550 /* EPSLVHTableViewController.h */,
 				8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */,
+				8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */,
+				8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -224,6 +231,7 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E09D05F15DC69E600756EA1 /* longqtecg.png */,
 				8E06012015DB39D800BB7550 /* rbbbmorphology.png */,
 				8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */,
 				8E06011C15DB39C200BB7550 /* rbbbicon.png */,
@@ -345,6 +353,7 @@
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
 				8E06011F15DB39CF00BB7550 /* lbbbmorphology.png in Resources */,
 				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
+				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +407,7 @@
 				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
+				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

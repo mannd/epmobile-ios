@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="kBV-s3-VWz">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
@@ -183,15 +182,15 @@
                                             <segue destination="BNS-oY-3ea" kind="push" id="yuJ-cP-hRs"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="p9o-6k-5Nz" style="IBUITableViewCellStyleDefault" id="Df4-ee-RSD">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="p9o-6k-5Nz" style="IBUITableViewCellStyleDefault" id="Df4-ee-RSD">
                                         <rect key="frame" x="0.0" y="403" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Long QT Syndrome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p9o-6k-5Nz">
-                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -200,6 +199,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="nEp-iW-oAh" kind="push" id="fpe-BN-1z5"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DyE-Mf-oeD" style="IBUITableViewCellStyleDefault" id="HEE-Gk-3qG">
                                         <rect key="frame" x="0.0" y="447" width="320" height="44"/>
@@ -450,7 +452,112 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1073" y="-341"/>
+            <point key="canvasLocation" x="-1614" y="-506"/>
+        </scene>
+        <!--Table View Controller - Long QT Syndrome-->
+        <scene sceneID="Sog-O3-tzt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-r8-eVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="nEp-iW-oAh" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="4dO-JT-5cj">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wYa-Vr-qO9" style="IBUITableViewCellStyleDefault" id="Seq-pL-fhT">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Long QT ECG Patterns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wYa-Vr-qO9">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="Xwt-iy-wz5" kind="push" id="8cu-Hb-IL0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c8j-AN-Crx" style="IBUITableViewCellStyleDefault" id="QBn-5V-bGw">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Long QT Syndrome Diagnosis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c8j-AN-Crx">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dQV-un-dCN" style="IBUITableViewCellStyleDefault" id="s0o-Uw-roo">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Long QT Syndrome Subtypes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQV-un-dCN">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="nEp-iW-oAh" id="Orc-cL-5In"/>
+                            <outlet property="delegate" destination="nEp-iW-oAh" id="T2A-SH-yxu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Long QT Syndrome" id="L4O-7t-m39">
+                        <barButtonItem key="backBarButtonItem" title="LQTS" id="XZA-og-gKT"/>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-1455" y="-554"/>
+        </scene>
+        <!--LongQTECG View Controller - LQTS ECG Patterns-->
+        <scene sceneID="I94-Wk-eUW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Xwt-iy-wz5" customClass="EPSLongQTECGViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="longqtecg.png" id="He5-kK-9Z1">
+                                <rect key="frame" x="20" y="155" width="280" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1126" y="-596"/>
         </scene>
         <!--Table View Controller - LVH-->
         <scene sceneID="s8B-nf-m3V">
@@ -564,7 +671,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="R in aVL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fh6-0f-cui">
-                                                    <rect key="frame" x="10" y="11" width="69" height="21"/>
+                                                    <rect key="frame" x="10" y="12" width="65" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -810,7 +917,7 @@
                     <navigationItem key="navigationItem" title="WCT" id="ROR-Bw-5Yc"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2596" y="-2292"/>
+            <point key="canvasLocation" x="-2145" y="-2153"/>
         </scene>
         <!--View Controller - RBBB in V1-->
         <scene sceneID="wD2-q2-jc9">
@@ -860,7 +967,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="ntH-d0-hOl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Morphology Criteria" id="CXP-a6-5sq"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="fCf-Nm-bYL">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -966,7 +1073,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="ARVC/D" id="FeP-zV-ogk"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2342" y="-950"/>
+            <point key="canvasLocation" x="-2410" y="-824"/>
         </scene>
         <!--Table View Controller - ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
@@ -2543,6 +2650,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <image name="brugadaecg.png" width="400" height="255"/>
         <image name="lbbbicon.png" width="25" height="24"/>
         <image name="lbbbmorphology.png" width="800" height="651"/>
+        <image name="longqtecg.png" width="470" height="179"/>
         <image name="modgrayavannulus.png" width="452" height="400"/>
         <image name="rbbbicon.png" width="25" height="24"/>
         <image name="rbbbmorphology.png" width="800" height="600"/>
@@ -2605,6 +2713,9 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
         </class>
+        <class className="EPSLongQTECGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLongQTECGViewController.h"/>
+        </class>
         <class className="EPSMainTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
         </class>
@@ -2635,8 +2746,10 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="calculateButtonPressed:"/>
                 <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="action" name="toggleTabletSize:"/>
                 <relationship kind="action" name="toggleTargetRange:"/>
                 <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
@@ -2677,7 +2790,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="pGj-ye-BDw"/>
         <segue reference="LxC-Ko-A9I"/>
-        <segue reference="imI-um-Z1t"/>
     </inferredMetricsTieBreakers>
 </document>
