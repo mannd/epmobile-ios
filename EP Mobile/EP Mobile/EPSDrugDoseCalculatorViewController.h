@@ -24,7 +24,8 @@
 - (IBAction)textFieldDoneEditing:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)toggleSex:(id)sender;
+- (IBAction)toggleCrUnits:(id)sender;
 
-- (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine;
+- (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine usingMicroMolUnits:(BOOL)usingMicroMolUnits;
 - (double)lbsToKgs:(double)weight;
 @end

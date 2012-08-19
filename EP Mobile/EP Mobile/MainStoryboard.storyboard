@@ -2824,7 +2824,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age (yr)" minimumFontSize="17" id="R4Z-5m-lcW">
-                                <rect key="frame" x="103" y="71" width="103" height="31"/>
+                                <rect key="frame" x="64" y="78" width="89" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -2832,15 +2832,8 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                     <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEndOnExit" id="oBI-dj-iOc"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aET-rK-dlX">
-                                <rect key="frame" x="20" y="76" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Jv5-49-c9s">
-                                <rect key="frame" x="214" y="105" width="86" height="44"/>
+                                <rect key="frame" x="161" y="116" width="139" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
@@ -2850,15 +2843,8 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                     <action selector="toggleWeightUnits:" destination="gDm-AP-yUd" eventType="valueChanged" id="CBY-kp-GDw"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NYC-BS-4vU">
-                                <rect key="frame" x="20" y="116" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (lb)" minimumFontSize="17" id="11h-mp-an5">
-                                <rect key="frame" x="103" y="110" width="103" height="31"/>
+                                <rect key="frame" x="64" y="122" width="89" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -2867,7 +2853,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cr (mg/dL)" minimumFontSize="17" id="TFQ-6k-nzO">
-                                <rect key="frame" x="103" y="149" width="103" height="31"/>
+                                <rect key="frame" x="64" y="172" width="89" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -2875,37 +2861,23 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                     <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEndOnExit" id="kAW-CS-qyH"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Creatinine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="407-hl-FnJ">
-                                <rect key="frame" x="20" y="156" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vSy-wR-tqp">
-                                <rect key="frame" x="214" y="76" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mg/dL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ss3-Cx-nrW">
-                                <rect key="frame" x="214" y="156" width="50" height="21"/>
+                                <rect key="frame" x="163" y="81" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" id="SvF-Ho-s7V">
-                                <rect key="frame" x="20" y="230" width="280" height="166"/>
+                                <rect key="frame" x="20" y="265" width="280" height="131"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Idq-NA-HB9">
-                                <rect key="frame" x="20" y="185" width="133" height="37"/>
+                                <rect key="frame" x="20" y="220" width="133" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Calculate!">
@@ -2920,7 +2892,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LHO-7N-Tzv">
-                                <rect key="frame" x="161" y="185" width="139" height="37"/>
+                                <rect key="frame" x="161" y="220" width="139" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Clear">
@@ -2934,6 +2906,38 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                     <action selector="clear:" destination="gDm-AP-yUd" eventType="touchUpInside" id="NOt-Sh-led"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="OYK-i5-cZ2">
+                                <rect key="frame" x="163" y="164" width="137" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="mg/dL"/>
+                                    <segment title="µmol/L"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleCrUnits:" destination="gDm-AP-yUd" eventType="valueChanged" id="AOw-Tv-Nvp"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7Z0-le-dmm">
+                                <rect key="frame" x="20" y="83" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="sdQ-3t-zne">
+                                <rect key="frame" x="20" y="127" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BVl-Bf-Vys">
+                                <rect key="frame" x="20" y="175" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -3452,6 +3456,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 <relationship kind="action" name="calculate:"/>
                 <relationship kind="action" name="clear:"/>
                 <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleCrUnits:"/>
                 <relationship kind="action" name="toggleSex:"/>
                 <relationship kind="action" name="toggleWeightUnits:"/>
                 <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>

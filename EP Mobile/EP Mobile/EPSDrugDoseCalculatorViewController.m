@@ -24,6 +24,7 @@
 @implementation EPSDrugDoseCalculatorViewController
 {
     BOOL weightIsPounds;
+    BOOL unitsAreMgPerDl;
 }
 @synthesize sexSegmentedControl;
 @synthesize ageField;
@@ -50,6 +51,7 @@
 	// Do any additional setup after loading the view.
     self.navigationItem.title = drug;
     weightIsPounds = YES;
+    unitsAreMgPerDl = YES;
     
 }
 
@@ -82,10 +84,18 @@
         self.weightField.placeholder = @"Weight (kg)";
 }
 
+- (IBAction)toggleCrUnits:(id)sender {
+    self.resultLabel.text = nil;
+    if ((unitsAreMgPerDl = [sender selectedSegmentIndex] == 0))
+        self.creatinineField.placeholder = @"Cr (mg/dL)";
+    else
+        self.creatinineField.placeholder = @"Cr (µmol/L)";
+}
+
+
 - (IBAction)toggleSex:(id)sender {
     self.resultLabel.text = nil;
 }
-
 
 - (IBAction)calculate:(id)sender {
     NSString *weightText = self.weightField.text;
@@ -108,7 +118,7 @@
         NSLog(@"Converted weight in kgs is %f", weight);
     }
     BOOL isMale = ([sexSegmentedControl selectedSegmentIndex] == 0);
-    int cc = [self creatinineClearanceForAge:age isMale:isMale forWeightInKgs:weight forCreatinine:creatinine]; 
+    int cc = [self creatinineClearanceForAge:age isMale:isMale forWeightInKgs:weight forCreatinine:creatinine usingMicroMolUnits:!unitsAreMgPerDl];
 
     NSString *result = [[NSString alloc] init];
     result = [result stringByAppendingString:[self getDose:cc]];
@@ -136,13 +146,26 @@
     self.resultLabel.text = nil;
 }
 
-- (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine {
+- (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine usingMicroMolUnits:(BOOL)usingMicroMolUnits {
+    int result = 0;
     double crClr = 0.0;
     crClr = (140 - age) * weight;
-    crClr = crClr / (72 * creatinine);
-    if (!isMale)
-        crClr = crClr * 0.85;
-    int result = (int) (crClr + 0.5);
+
+    if (!usingMicroMolUnits) {
+        crClr = crClr / (72 * creatinine);
+        if (!isMale)
+            crClr = crClr * 0.85;
+        result = (int) (crClr + 0.5);
+    }
+    else {
+        if (isMale)
+            crClr = crClr * 1.23;
+        else
+            crClr = crClr * 1.04;
+        crClr = crClr / creatinine;
+        result = (int) (crClr + 0.5);
+        
+    }
     NSLog(@"Unrounded crClr = %f, Rounded = %i", crClr, result);
     return result;
 }
