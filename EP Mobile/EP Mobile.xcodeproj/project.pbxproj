@@ -17,6 +17,7 @@
 		8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06012015DB39D800BB7550 /* rbbbmorphology.png */; };
 		8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E09D05F15DC69E600756EA1 /* longqtecg.png */; };
 		8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */; };
+		8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D06D15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m */; };
 		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
@@ -74,6 +75,8 @@
 		8E09D05F15DC69E600756EA1 /* longqtecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longqtecg.png; sourceTree = "<group>"; };
 		8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLongQTECGViewController.h; sourceTree = "<group>"; };
 		8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLongQTECGViewController.m; sourceTree = "<group>"; };
+		8E09D06C15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLQTSDetailsTableViewController.h; sourceTree = "<group>"; };
+		8E09D06D15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLQTSDetailsTableViewController.m; sourceTree = "<group>"; };
 		8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAboutViewController.h; sourceTree = "<group>"; };
 		8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAboutViewController.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */,
 				8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */,
 				8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */,
+				8E09D06C15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.h */,
+				8E09D06D15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
 				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
+				8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
