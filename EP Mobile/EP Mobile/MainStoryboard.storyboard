@@ -18,7 +18,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-2055" y="-563"/>
+            <point key="canvasLocation" x="-3284" y="-1195"/>
         </scene>
         <!--Main Table View Controller - EP Mobile-->
         <scene sceneID="k1X-XA-AxI">
@@ -453,13 +453,13 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1626" y="153"/>
+            <point key="canvasLocation" x="-3256" y="-1265"/>
         </scene>
-        <!--Details Table View Controller - Long QT Syndrome-->
+        <!--Table View Controller - Long QT Syndrome-->
         <scene sceneID="Sog-O3-tzt">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-r8-eVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="nEp-iW-oAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="nEp-iW-oAh" customClass="EPSLQTSTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -488,15 +488,15 @@
                                             <segue destination="Xwt-iy-wz5" kind="push" id="8cu-Hb-IL0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c8j-AN-Crx" style="IBUITableViewCellStyleDefault" id="QBn-5V-bGw">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c8j-AN-Crx" style="IBUITableViewCellStyleDefault" id="QBn-5V-bGw">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="LQTS Diagnosis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c8j-AN-Crx">
-                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -505,6 +505,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="yXh-DH-lMg" kind="push" id="wFY-UI-DZO"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dQV-un-dCN" style="IBUITableViewCellStyleDefault" id="s0o-Uw-roo">
                                         <rect key="frame" x="0.0" y="88" width="320" height="44"/>
@@ -540,7 +543,63 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1640" y="-824"/>
+            <point key="canvasLocation" x="-2298" y="-1305"/>
+        </scene>
+        <!--View Controller - LQTS-->
+        <scene sceneID="W8c-lv-CGf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBs-yc-JAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="yXh-DH-lMg" customClass="EPSLQTSViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Zq-Fn-EkL">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Gyt-Vl-6qm">
+                                <rect key="frame" x="20" y="50" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QTc Interval (msec)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JcZ-D6-p5P">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="pWE-wA-ke3">
+                                <rect key="frame" x="20" y="101" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Id6-RR-HzT">
+                                <rect key="frame" x="20" y="160" width="280" height="236"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lqo-iy-icD" id="bKi-vE-XmM"/>
+                                    <outlet property="delegate" destination="lqo-iy-icD" id="yYA-De-uI7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LQTS" id="qEI-UM-QVe"/>
+                    <connections>
+                        <outlet property="qtcSegmentedControl" destination="Gyt-Vl-6qm" id="f4K-AJ-dPA"/>
+                        <outlet property="riskTableView" destination="Id6-RR-HzT" id="mjJ-R3-LoE"/>
+                        <outlet property="sexSegmentedControl" destination="pWE-wA-ke3" id="IUG-O4-3KE"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2514" y="-1374"/>
         </scene>
         <!--Details Table View Controller - LQT 1-->
         <scene sceneID="hEf-rr-Rr2">
@@ -715,7 +774,7 @@
                     <tabBarItem key="tabBarItem" title="LQT 1" id="vTW-3w-0sQ"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1222" y="-396"/>
+            <point key="canvasLocation" x="-2682" y="-1130"/>
         </scene>
         <!--Table View Controller - LQT 2-->
         <scene sceneID="Mgx-ZU-nDB">
@@ -890,7 +949,7 @@
                     <tabBarItem key="tabBarItem" title="LQT 2" id="G4A-6U-PrN"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1592" y="-540"/>
+            <point key="canvasLocation" x="-2689" y="-954"/>
         </scene>
         <!--Tab Bar Controller - LQTS Subtypes-->
         <scene sceneID="pmf-U3-p8F">
@@ -913,7 +972,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-1565" y="-1154"/>
+            <point key="canvasLocation" x="-2669" y="-1210"/>
         </scene>
         <!--View Controller - LQT 5-11-->
         <scene sceneID="9ko-Jl-hmG">
@@ -938,7 +997,7 @@
                     <tabBarItem key="tabBarItem" title="LQT 5-11" id="IFA-tI-TRG"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1279" y="-1337"/>
+            <point key="canvasLocation" x="-2649" y="-1265"/>
         </scene>
         <!--Table View Controller - LQT 4-->
         <scene sceneID="IpH-dg-zvm">
@@ -1113,7 +1172,7 @@
                     <tabBarItem key="tabBarItem" title="LQT 4" id="dkJ-ZZ-QZX"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1565" y="-649"/>
+            <point key="canvasLocation" x="-2697" y="-851"/>
         </scene>
         <!--Table View Controller - LQT 3-->
         <scene sceneID="NkL-gw-vQK">
@@ -1288,7 +1347,7 @@
                     <tabBarItem key="tabBarItem" title="LQT 3" id="8bV-qI-Q8a"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1585" y="-627"/>
+            <point key="canvasLocation" x="-2689" y="-1059"/>
         </scene>
         <!--LongQTECG View Controller - LQTS ECG Patterns-->
         <scene sceneID="I94-Wk-eUW">
@@ -1309,7 +1368,7 @@
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1822" y="-310"/>
+            <point key="canvasLocation" x="-2990" y="-460"/>
         </scene>
         <!--Table View Controller - LVH-->
         <scene sceneID="s8B-nf-m3V">
@@ -1376,7 +1435,7 @@
                     <navigationItem key="navigationItem" title="LVH" id="hop-BV-0dw"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1897" y="-257"/>
+            <point key="canvasLocation" x="-2235" y="-353"/>
         </scene>
         <!--Table View Controller - LVH Voltage Criteria-->
         <scene sceneID="5J4-b1-xfe">
@@ -1584,7 +1643,7 @@
                     <navigationItem key="navigationItem" title="LVH Voltage Criteria" id="Yh2-Fu-qGS"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1507" y="433"/>
+            <point key="canvasLocation" x="-2885" y="273"/>
         </scene>
         <!--Table View Controller - WCT-->
         <scene sceneID="LKt-TZ-t6U">
@@ -1669,7 +1728,7 @@
                     <navigationItem key="navigationItem" title="WCT" id="ROR-Bw-5Yc"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2145" y="-2153"/>
+            <point key="canvasLocation" x="-2544" y="-1599"/>
         </scene>
         <!--View Controller - RBBB in V1-->
         <scene sceneID="wD2-q2-jc9">
@@ -1690,7 +1749,7 @@
                     <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1963" y="-2142"/>
+            <point key="canvasLocation" x="-3235" y="-2256"/>
         </scene>
         <!--View Controller - LBBB in V1-->
         <scene sceneID="OFo-xx-IkS">
@@ -1711,7 +1770,7 @@
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1916" y="-2340"/>
+            <point key="canvasLocation" x="-3198" y="-2294"/>
         </scene>
         <!--Tab Bar Controller - Morphology Criteria-->
         <scene sceneID="koM-V1-bil">
@@ -1731,7 +1790,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-2279" y="-2320"/>
+            <point key="canvasLocation" x="-3235" y="-1858"/>
         </scene>
         <!--View Controller - R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
@@ -1761,7 +1820,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1963" y="-526"/>
+            <point key="canvasLocation" x="-2871" y="-1782"/>
         </scene>
         <!--Table View Controller - ARVC/D-->
         <scene sceneID="L5H-Ax-xj6">
@@ -1825,7 +1884,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="ARVC/D" id="FeP-zV-ogk"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2410" y="-824"/>
+            <point key="canvasLocation" x="-2200" y="-387"/>
         </scene>
         <!--Table View Controller - ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
@@ -1871,7 +1930,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="ARVC/D 2010" id="XQK-BV-gqf"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2227" y="-858"/>
+            <point key="canvasLocation" x="-1791" y="-207"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
@@ -1971,9 +2030,9 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="WPW" id="w9O-uo-1O7"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2207" y="-608"/>
+            <point key="canvasLocation" x="-2235" y="236"/>
         </scene>
-        <!--View Controller - Short QT-->
+        <!--View Controller - SQTS-->
         <scene sceneID="ptk-VO-6fT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqu-Zd-ecp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2011,14 +2070,14 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Short QT" id="aex-Od-Phy"/>
+                    <navigationItem key="navigationItem" title="SQTS" id="aex-Od-Phy"/>
                     <connections>
                         <outlet property="qtcSegmentedControl" destination="c13-bY-26V" id="xx0-40-xiN"/>
                         <outlet property="riskTableView" destination="R03-ng-L6Q" id="uVz-NZ-F79"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1948" y="-824"/>
+            <point key="canvasLocation" x="-2830" y="-1336"/>
         </scene>
         <!--Annulus View Controller - AV Annulus-->
         <scene sceneID="LXY-4s-Z6Q">
@@ -2039,7 +2098,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="AV Annulus" id="sPs-U4-Zla"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2114" y="-805"/>
+            <point key="canvasLocation" x="-1802" y="325"/>
         </scene>
         <!--BrugadaECG View Controller - Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
@@ -2063,7 +2122,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1963" y="-824"/>
+            <point key="canvasLocation" x="-2836" y="-2051"/>
         </scene>
         <!--Brugada Notes View Controller-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -2118,7 +2177,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1860" y="-596"/>
+            <point key="canvasLocation" x="-2842" y="-1877"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -2157,7 +2216,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1876" y="-310"/>
+            <point key="canvasLocation" x="-3387" y="-766"/>
         </scene>
         <!--Tc Calculator View Controller - QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
@@ -2265,7 +2324,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2101" y="384"/>
+            <point key="canvasLocation" x="-3325" y="-324"/>
         </scene>
         <!--Warfarin Calculator View Controller - Warfarin Clinic-->
         <scene sceneID="LZR-Ds-iJD">
@@ -2399,7 +2458,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1995" y="134"/>
+            <point key="canvasLocation" x="-3275" y="-678"/>
         </scene>
         <!--Warfarin Dosing Table View Controller-->
         <scene sceneID="652-RR-u7n">
@@ -2657,7 +2716,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1538" y="524"/>
+            <point key="canvasLocation" x="-3198" y="-568"/>
         </scene>
         <!--Risk Score Table View Controller - Title-->
         <scene sceneID="kti-NI-1xN">
@@ -2703,7 +2762,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="Title" id="5A5-0R-44A"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1060" y="44"/>
+            <point key="canvasLocation" x="-2980" y="196"/>
         </scene>
         <!--Cycle Length Calculator View Controller - Interval/Rate Converter-->
         <scene sceneID="s0B-z1-cNk">
@@ -2801,7 +2860,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1957" y="71"/>
+            <point key="canvasLocation" x="-3341" y="-531"/>
         </scene>
         <!--Drug Dose Calculator View Controller-->
         <scene sceneID="Yag-7n-5UD">
@@ -2955,7 +3014,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2073" y="384"/>
+            <point key="canvasLocation" x="-3303" y="236"/>
         </scene>
         <!--Table View Controller - Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -3288,7 +3347,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="Normal EP Values" id="09V-8t-ZVq"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1822" y="10"/>
+            <point key="canvasLocation" x="-2916" y="-280"/>
         </scene>
         <!--Drug Dose Table View Controller - Drug Calculators-->
         <scene sceneID="8SY-3g-55b">
@@ -3399,7 +3458,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1984" y="10"/>
+            <point key="canvasLocation" x="-3336" y="-12"/>
         </scene>
     </scenes>
     <resources>
@@ -3473,6 +3532,17 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSLQTSDetailsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSDetailsTableViewController.h"/>
         </class>
+        <class className="EPSLQTSTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSTableViewController.h"/>
+        </class>
+        <class className="EPSLQTSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
         <class className="EPSLongQTECGViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLongQTECGViewController.h"/>
         </class>
@@ -3506,10 +3576,8 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="calculateButtonPressed:"/>
                 <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="action" name="toggleTabletSize:"/>
                 <relationship kind="action" name="toggleTargetRange:"/>
                 <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
@@ -3550,7 +3618,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pGj-ye-BDw"/>
         <segue reference="LxC-Ko-A9I"/>
+        <segue reference="imI-um-Z1t"/>
     </inferredMetricsTieBreakers>
 </document>

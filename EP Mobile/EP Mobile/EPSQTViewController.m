@@ -31,6 +31,7 @@
 
 @synthesize risks;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,6 +49,7 @@
     [qtcSegmentedControl setTitle:@"< 370" forSegmentAtIndex:1];
     [qtcSegmentedControl setTitle:@"< 350" forSegmentAtIndex:2];
     [qtcSegmentedControl setTitle:@"< 330" forSegmentAtIndex:3];
+    
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"< 120 msec" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sudden cardiac arrest" withValue:1]];
@@ -59,6 +61,7 @@
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sudden Infant Death Syndrome" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Genotype positive" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Mutation in culprit gene" withValue:1]];
+    
 
 
     self.risks = array;
