@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSLQTSViewController : UIViewController
+    <UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *qtcSegmentedControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *riskTableView;
