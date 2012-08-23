@@ -37,15 +37,15 @@
     [qtcSegmentedControl setTitle:@"≥ 480" forSegmentAtIndex:3];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Torsade de pointes" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"T wave alternans" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Notched T wave in 3 leads" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Low heart rate for age" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Syncope with stress" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Syncope without stress" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Congenital deafness" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Family member with definite LQTS" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained SCD immediate family < 30 y/o" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Torsade de pointes" withValue:20]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"T wave alternans" withValue:10]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Notched T wave in 3 leads" withValue:10]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Low heart rate for age" withValue:5]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Syncope with stress" withValue:20]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Syncope without stress" withValue:10]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Congenital deafness" withValue:5]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Family member with definite LQTS" withValue:10]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained SCD immediate family < 30 y/o" withValue:5]];
  
     self.risks = array;
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
@@ -68,6 +68,67 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (void) calculateScore {
+    // since this score uses 0.5, we will multiply points by 10, e.g.
+    // 1 = 10, to avoid using non-integer arithmetic
+    const int MALE = 0;
+    // const int FEMALE = 1;
+
+    // const int NORMAL_QTC = 0;
+    const int MILD_QTC_PROLONGATION = 1;
+    const int MOD_QTC_PROLONGATION = 2;
+    const int MARKED_QTC_PROLONGATION = 3;
+    
+    const int HAS_TORSADE_INDEX = 0;
+    const int HAS_SYNCOPE_WITH_STRESS_INDEX = 4;
+    const int HAS_SYNCOPE_WITHOUT_STRESS_INDEX = 5;
+    
+    int score = 0;
+    
+    if ([qtcSegmentedControl selectedSegmentIndex] == MILD_QTC_PROLONGATION
+         && [sexSegmentedControl selectedSegmentIndex] == MALE)
+        score += 10;
+    else if ([qtcSegmentedControl selectedSegmentIndex] == MOD_QTC_PROLONGATION)
+        score += 20;
+    else if ([qtcSegmentedControl selectedSegmentIndex] == MARKED_QTC_PROLONGATION)
+        score += 30;
+    for (int i = 0; i < [self.risks count]; ++i)
+        if ([[self.risks objectAtIndex:i] selected] == YES)
+            score += [[self.risks objectAtIndex:i] points];
+    // Torsade and syncope are mutually exclusive, so don't count syncope
+    // if has torsade.
+
+	if ([[self.risks objectAtIndex:HAS_TORSADE_INDEX] selected] && ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] || [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])) {
+        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected])
+            score -= 20;
+        else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+            score -= 10;
+    }
+        
+    NSString *message = [self getResultsMessage:score];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    // left justify message
+    //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
+    [alertView show];
+}
+    
+- (NSString *)getResultsMessage:(int)score {
+    double displayScore = score / 10.0;
+    NSString *message = [[NSString alloc] initWithFormat:@"Risk Score = %1.1f\n", displayScore];
+    if (score >= 40)
+        message = [[NSString alloc] initWithFormat:@"%@Definite ", message];
+    else if (score >= 20)
+        message = [[NSString alloc] initWithFormat:@"%@Intermediate probability of ", message];
+    else
+        message = [[NSString alloc] initWithFormat:@"%@Low probability of ", message];
+    message = [[NSString alloc] initWithFormat:@"%@Long QT Syndrome", message];
+
+
+    return message;
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -128,6 +189,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int offset = [self calculateOffset:indexPath.section];
+    NSLog(@"Offset = %d section = %d row = %d", offset, indexPath.section, indexPath.row);
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
