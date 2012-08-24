@@ -171,6 +171,11 @@
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
+    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
     //cell.detailTextLabel.text = details;
     return cell;
 }
