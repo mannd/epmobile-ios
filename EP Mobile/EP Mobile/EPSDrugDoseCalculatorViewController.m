@@ -159,15 +159,16 @@
     }
     else {
         if (isMale)
-            crClr = crClr * 1.23;
+            crClr = crClr * 1.2291;
         else
-            crClr = crClr * 1.04;
+            crClr = crClr * 1.0447;
         crClr = crClr / creatinine;
         result = (int) (crClr + 0.5);
         
     }
     NSLog(@"Unrounded crClr = %f, Rounded = %i", crClr, result);
-    return result;
+    // don't return negative creatinine clearance
+    return result < 0 ? 0 : result;
 }
 
 

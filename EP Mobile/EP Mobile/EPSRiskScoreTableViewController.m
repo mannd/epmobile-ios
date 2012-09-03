@@ -328,7 +328,7 @@
         return 2;
     return 1;
 }
-
+ 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([scoreType isEqualToString:@"HCM"]) {
