@@ -36,8 +36,7 @@
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSDictionary *rootDictionary = [dictionary objectForKey:@"Root"];
-    NSArray *array = [[NSArray alloc] initWithArray:[rootDictionary objectForKey:@"ARVC2010"]];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[dictionary objectForKey:@"ARVC2010"]] ;
     
     self.list = array;
     
@@ -65,7 +64,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 6;
+    return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -100,13 +99,16 @@
     
     // Configure the cell...
     NSUInteger row = [indexPath row];
-    NSString *text = [self.list objectAtIndex:row];
+    NSUInteger section = [indexPath section];
+    NSString *text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:0];
     cell.detailTextLabel.text = text;
     
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
-    cell.textLabel.text = @"MAJOR";    
+    cell.textLabel.text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:1];
+    BOOL selected = [[[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:2] boolValue];
+    cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
 }
 
@@ -114,44 +116,6 @@
     return 100;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -160,13 +124,16 @@
 
 
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSUInteger row = indexPath.row;
+    NSUInteger section = indexPath.section;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        //[[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
-    }
+        [(NSMutableArray *)[[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:[NSNumber numberWithBool:NO]];    }
     else {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark; 
-       // [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        NSNumber *value = [NSNumber numberWithBool:YES];
+        [(NSMutableArray *)[[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:value];
+
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

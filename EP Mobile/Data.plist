@@ -2,13 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Root</key>
-	<dict>
-		<key>ARVC2010</key>
+	<key>ARVC2010</key>
+	<array>
 		<array>
-			<string>2D echo: regional RV akinesia, or dyssynchrony with PLAX RVOT &gt;= 32 mm (PLAX/BSA &gt;= 19 mm/m2)</string>
-			<string>test2</string>
+			<array>
+				<string>2D Echo: Regional RV akinesia or dyssynchronous RV contraction an PLAX RVOT &gt;= 32 mm (&gt;= 21 mm/m2)</string>
+				<string>MAJOR</string>
+				<integer>0</integer>
+			</array>
 		</array>
-	</dict>
+	</array>
 </dict>
 </plist>
