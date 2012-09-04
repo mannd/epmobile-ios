@@ -7,6 +7,7 @@
 //
 
 #import "EPSARVC2010TableViewController.h"
+#import "EPSRiskFactor.h"
 
 #define SECTION_0_HEADER @"I. Global/Regional Dysfunction and Structural Alterations"
 #define SECTION_1_HEADER @"II. Tissue Characterizations of Wall"
@@ -36,9 +37,23 @@
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[dictionary objectForKey:@"ARVC2010"]] ;
+    NSMutableArray *sectionArray = [[NSMutableArray alloc] initWithArray:[dictionary objectForKey:@"ARVC2010"]] ;
     
-    self.list = array;
+//    // this doesn't work, the members of the array are immutable
+//   // self.list = sectionArray;
+//    // add the selectable field to each member
+//    NSMutableArray *array = [[NSMutableArray alloc] init];
+//    NSMutableArray *riskFactorsInSection = [[NSMutableArray alloc] init];
+//    for (int i = 0; i < [sectionArray count]; ++i) {
+//        [riskFactorsInSection removeAllObjects];    // reset the temp array
+//        NSUInteger numRowsInSection = [[sectionArray objectAtIndex:i] count];
+//        for (int j = 0; j < numRowsInSection; ++j) {
+//            [riskFactorsInSection addObject:[[EPSRiskFactor alloc] initWithDetails:[[[sectionArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:1 withDetails:[[[sectionArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1]]];
+//        }
+//        [array addObject:riskFactorsInSection ];
+//    }
+    // need to create a mutable array for each row, section and the entire array.
+    self.list = [sectionArray mutableCopy];
     
     
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
@@ -64,7 +79,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [self.list count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -89,7 +104,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.list count];
+    return [[self.list objectAtIndex:section ] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,13 +115,13 @@
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
-    NSString *text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:0];
+    NSString *text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:1];
     cell.detailTextLabel.text = text;
     
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
-    cell.textLabel.text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:1];
+    cell.textLabel.text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:0];
     BOOL selected = [[[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:2] boolValue];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
@@ -128,11 +143,11 @@
     NSUInteger section = indexPath.section;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [(NSMutableArray *)[[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:[NSNumber numberWithBool:NO]];    }
+        [[(NSMutableArray *)[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:[NSNumber numberWithBool:NO]];
+    }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        NSNumber *value = [NSNumber numberWithBool:YES];
-        [(NSMutableArray *)[[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:value];
+        [[(NSMutableArray *)[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:[NSNumber numberWithBool:YES]];
 
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

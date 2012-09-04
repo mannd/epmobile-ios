@@ -16,5 +16,6 @@
 
 - (id)initWith:(NSString *)name withValue:(int)value;
 - (id)initWithDetails:(NSString *)name withValue:(int)value withDetails:(NSString *)details;
+- (void)setName:(NSString *)name withValue:(int)value withDetails:(NSString *)details;
 
 @end

@@ -32,4 +32,11 @@
     return self;
 }
 
+- (void)setName:(NSString *)name withValue:(int)value withDetails:(NSString *)details {
+    self.name = name;
+    self.points = value;
+    self.details = details;
+
+}
+
 @end
