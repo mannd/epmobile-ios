@@ -5,23 +5,14 @@
 	<key>ARVC2010</key>
 	<array>
 		<array>
-			<array>
-				<string>2D Echo: Regional RV akinesia or dyssynchronous RV contraction an PLAX RVOT &gt;= 32 mm (&gt;= 21 mm/m2)</string>
-				<string>MAJOR</string>
-				<integer>0</integer>
-			</array>
-			<array>
-				<string>test</string>
-				<string>MINOR</string>
-				<integer>0</integer>
-			</array>
+			<string>2D Echo: Regional RV akinesia or dyssynchronous RV contraction an PLAX RVOT &gt;= 32 mm (&gt;= 21 mm/m2)</string>
+			<true/>
+			<string>0</string>
 		</array>
 		<array>
-			<array>
-				<string>2nd section test</string>
-				<string>MAJOR</string>
-				<integer>0</integer>
-			</array>
+			<string>Test</string>
+			<false/>
+			<integer>0</integer>
 		</array>
 	</array>
 </dict>

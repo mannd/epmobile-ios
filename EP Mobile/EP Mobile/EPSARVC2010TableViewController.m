@@ -37,24 +37,15 @@
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSMutableArray *sectionArray = [[NSMutableArray alloc] initWithArray:[dictionary objectForKey:@"ARVC2010"]] ;
+    NSArray *array = [[NSArray alloc] initWithArray:[dictionary objectForKey:@"ARVC2010"]] ;
     
-//    // this doesn't work, the members of the array are immutable
-//   // self.list = sectionArray;
-//    // add the selectable field to each member
-//    NSMutableArray *array = [[NSMutableArray alloc] init];
-//    NSMutableArray *riskFactorsInSection = [[NSMutableArray alloc] init];
-//    for (int i = 0; i < [sectionArray count]; ++i) {
-//        [riskFactorsInSection removeAllObjects];    // reset the temp array
-//        NSUInteger numRowsInSection = [[sectionArray objectAtIndex:i] count];
-//        for (int j = 0; j < numRowsInSection; ++j) {
-//            [riskFactorsInSection addObject:[[EPSRiskFactor alloc] initWithDetails:[[[sectionArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:1 withDetails:[[[sectionArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1]]];
-//        }
-//        [array addObject:riskFactorsInSection ];
-//    }
-    // need to create a mutable array for each row, section and the entire array.
-    self.list = [sectionArray mutableCopy];
+    NSMutableArray *risks = [[NSMutableArray alloc] initWithCapacity:[array count]];
+    for (int i = 0; i < [array count]; ++i) {
+        [risks addObject:[[EPSRiskFactor alloc] initWithAllFields:nil withValue:1  withDetails:[[array objectAtIndex:1] objectAtIndex:0] withIsMajor:(BOOL)[[array objectAtIndex:i] objectAtIndex:1] withSectionNumber:(NSUInteger)[[array objectAtIndex:i] objectAtIndex:2]]];
+        //NSLog(@"test, %@", [[risks objectAtIndex:0] objectAtIndex:0]);
+    }
     
+    self.list = risks;
     
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStyleBordered target:self action:@selector(calculateScore)];
@@ -79,7 +70,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.list count];
+    //return [self.list count];
+    return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -104,7 +96,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[self.list objectAtIndex:section ] count];
+    //return [[self.list objectAtIndex:section ] count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,14 +108,17 @@
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
-    NSString *text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:1];
+    NSString *text = [[self.list objectAtIndex:row] name];
     cell.detailTextLabel.text = text;
     
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
-    cell.textLabel.text = [[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:0];
-    BOOL selected = [[[[self.list objectAtIndex:section] objectAtIndex:row] objectAtIndex:2] boolValue];
+    if ([[self.list objectAtIndex:row] isMajor])
+        cell.textLabel.text = @"MAJOR";
+    else
+        cell.textLabel.text = @"MINOR";
+    BOOL selected = [[self.list objectAtIndex:row] selected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
 }
