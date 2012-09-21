@@ -63,6 +63,7 @@
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStyleBordered target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
+    
 }
 
 - (void)viewDidUnload
@@ -85,9 +86,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    //return [self.list count];
-    //return [headers count];
-    return 1;
+    return [self.list count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

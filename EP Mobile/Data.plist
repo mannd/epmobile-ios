@@ -18,28 +18,102 @@
 	<array>
 		<array>
 			<array>
-				<string>Echo: Regional RV akinesia, dyskinesia, or aneurysm with PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²)</string>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²) OR WITH PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²) OR fractional area change ≤ 33%</string>
 				<integer>100</integer>
 			</array>
 			<array>
-				<string>Echo: Regional RV akinesia, dyskinesia, or aneurysm with PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²)</string>
-				<integer>100</integer>
-			</array>
-			<array>
-				<string>Echo: Regional RV akinesia, dyskinesia, or aneurysm with fractional area change ≤ 33%</string>
-				<integer>100</integer>
-			</array>
-			<array>
-				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥110 		mL/m² 		(male) or ≥ 100 mL/m² (female) OR RV EF &lt;= 40%</string>
-				<integer>100</integer>
-			</array>
-			<array>
-				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with RV ejections fraction ≤ 40%</string>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm WITH ratio of RV EDV/BSA ≥110 mL/m² (male) or ≥ 100 mL/m² (female) OR RV EF ≤ 40%</string>
 				<integer>100</integer>
 			</array>
 			<array>
 				<string>RV Angiography: Regional RV akinesia, dyskinesia, or aneurysm</string>
 				<integer>100</integer>
+			</array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 29 to &lt; 32 mm (PLAX/BSA ≥ 16 to &gt; 19 mm/m²) OR WITH PSAX RVOT ≥ 32 to &lt; 36 mm (PLAX/BSA ≥ 18 to &lt; 21 mm/m²) OR fractional area change &gt; 33% and ≤ 40%</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥100 to &lt; 110 		mL/m² 		(male) or ≥ 90 to &lt; 100 mL/m² (female) OR RV EF &gt; 40% to ≤ 45%</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Residual myocytes &lt; 60% by morphometric analysis (or &lt; 50% if estimated) with fibrous replacement of RV free wall myocardium in ≥ 1 sample, with or without fatty replacement of tissue on endomyocardial biopsy</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Residual myocytes 60% to 70% by morphometric analysis (or 50% to 60% if estimated) with fibrous replacement of RV 		free wall myocardium in ≥ 1 sample, with or without fatty 	replacement of tissue on endomyocardial biopsy</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>T wave inversion (V1, V2, and V3) or beyond in individuals &gt; 14 yrs (in absence of complete RBBB)</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>T wave inversion in V1 and V2 in individuals &gt; 14 yrs (in absence of complete RBBB) or in V4, V5, V6</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>T wave inversion in V1-V4 in individuals &gt; 14 yrs in presence of complete RBBB</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Epsilon wave (reproducible low-amplitude signals between end of QRS complex to onset of T ave) in right precordial leads (V1-V3)</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG (standard ECG QRS &lt;110 msec):  Filtered QRS duration ≥ 114 msec OR duration of terminal QRS &lt; 40 µV (low amplitude signal duration) ≥ 38 msec OR Root-mean-square voltage of terminal 40 msec ≤ 20 µV</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²) OR WITH PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²) OR fractional area change ≤ 33%</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm WITH ratio of RV EDV/BSA ≥110 		mL/m² 		(male) or ≥ 100 mL/m² (female) OR RV EF &lt;= 40%</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>RV Angiography: Regional RV akinesia, dyskinesia, or aneurysm</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 29 to &lt; 32 mm (PLAX/BSA ≥ 16 to &gt; 19 mm/m²) OR WITH PSAX RVOT ≥ 32 to &lt; 36 mm (PLAX/BSA ≥ 18 to &lt; 21 mm/m²) OR fractional area change &gt; 33% and ≤ 40%</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥100 to &lt; 110 		mL/m² 		(male) or ≥ 90 to &lt; 100 mL/m² (female) OR RV EF &gt; 40% to &lt;= 45%</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²) OR WITH PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²) OR fractional area change ≤ 33%</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm WITH ratio of RV EDV/BSA ≥110 		mL/m² 		(male) or ≥ 100 mL/m² (female) OR RV EF &lt;= 40%</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>RV Angiography: Regional RV akinesia, dyskinesia, or aneurysm</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 29 to &lt; 32 mm (PLAX/BSA ≥ 16 to &gt; 19 mm/m²) OR WITH PSAX RVOT ≥ 32 to &lt; 36 mm (PLAX/BSA ≥ 18 to &lt; 21 mm/m²) OR fractional area change &gt; 33% and ≤ 40%</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥100 to &lt; 110 		mL/m² 		(male) or ≥ 90 to &lt; 100 mL/m² (female) OR RV EF &gt; 40% to &lt;= 45%</string>
+				<integer>1</integer>
 			</array>
 		</array>
 	</array>
