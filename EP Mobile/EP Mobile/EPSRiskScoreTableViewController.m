@@ -15,6 +15,10 @@
 #define CHADS_VASC_AGE_75 2
 #define CHADS_VASC_AGE_65 6
 
+// the 2 mutually exclusive ESTES risks
+#define ESTES_STRAIN_WITH_DIG 1
+#define ESTES_STRAIN_WITHOUT_DIG 2
+
 @interface EPSRiskScoreTableViewController ()
 
 @end
@@ -106,6 +110,18 @@
         [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Elevated fall risk" withValue:1 withDetails:@"e.g. Alzheimer, Parkinson, schizophrenia"]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Stroke" withValue:1]];          
     }
+    else if ([scoreType isEqualToString:@"Estes"]) {
+        self.title = @"Estes LVH Score";
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Any limb-lead R or S \u2265 20 mm or S V1 or V2 \u2265 30 mm or R V5 or V6 \u2265 30 mm" withValue:3]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left ventricular strain pattern without digitalis" withValue:3]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left ventricular strain pattern with digitalis" withValue:1]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left atrial enlargement" withValue:3]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left axis deviation \u2265 -30\u00b0" withValue:2]];
+                [array addObject:[[EPSRiskFactor alloc] initWith:@"QRS duration \u2265 90 msec" withValue:1]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Intrinsicoid QRS deflection of \u2265 50 msec in V5 or V6" withValue:1]];
+        
+        
+    }
     self.risks = array;
  
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
@@ -128,6 +144,14 @@
 }
 
 - (void)calculateScore {
+    // handle mutually exclusive Estes scores
+    if ([scoreType isEqualToString:@"Estes"]) {
+        if ([[self.risks objectAtIndex:ESTES_STRAIN_WITH_DIG] selected] && [[self.risks objectAtIndex:ESTES_STRAIN_WITHOUT_DIG] selected]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You have selected strain pattern with and without digitalis.  Please select one or the other, not both." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            return;
+        }
+    }
     int score = 0;
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
@@ -272,6 +296,15 @@
 			risk = 12.3;        
         message = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", result, message, risk];        
     }
+    else if ([scoreType isEqualToString:@"Estes"]) {
+        if (result < 4)
+            message = @"Left Ventricular Hypertrophy not present.";
+        else if (result == 4)
+            message = @"Probable Left Ventricular Hypertrophy.";
+        else // result > 4
+            message = @"Definite Left Ventricular Hypertrophy.";
+        message = [[NSString alloc] initWithFormat:@"Romhilt-Estes score = %d\n%@\n", result, message];          
+    }
     else if ([scoreType isEqualToString:@"HCM"]) {
         int minorScore = 0;
         int majorScore = 0;
@@ -351,6 +384,12 @@
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     NSString *details = [[self.risks objectAtIndex:indexPath.row + offset] details];
     cell.textLabel.text = risk;
+    if ([scoreType isEqualToString:@"Estes"]) {
+        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+    }
+
     cell.detailTextLabel.text = details;
     if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
