@@ -116,17 +116,17 @@
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
-//    if ([[self.list objectAtIndex:row] isMajor])
-//        cell.textLabel.text = @"MAJOR";
-//    else11111111
-//        cell.textLabel.text = @"MINOR";
+    if ([[[self.list objectAtIndex:section] objectAtIndex:row] points] == 100)
+        cell.textLabel.text = @"MAJOR";
+    else
+        cell.textLabel.text = @"MINOR";
     BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] selected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 150;
 }
 
 
