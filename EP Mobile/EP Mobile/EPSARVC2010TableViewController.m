@@ -22,6 +22,8 @@
 
 @implementation EPSARVC2010TableViewController
 @synthesize list;
+@synthesize headers;
+@synthesize criteria;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,14 +39,25 @@
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSArray *array = [[NSArray alloc] initWithArray:[dictionary objectForKey:@"ARVC2010"]] ;
+    NSDictionary *arvcDictionary = [[NSDictionary alloc] initWithDictionary:[dictionary objectForKey:@"ARVC"]];
+    NSArray *headerArray = [[NSArray alloc] initWithArray:[arvcDictionary objectForKey:@"SectionHeaders"]] ;
+    self.headers = headerArray;
     
-    NSMutableArray *risks = [[NSMutableArray alloc] initWithCapacity:[array count]];
-    for (int i = 0; i < [array count]; ++i) {
-        [risks addObject:[[EPSRiskFactor alloc] initWithAllFields:nil withValue:1  withDetails:[[array objectAtIndex:1] objectAtIndex:0] withIsMajor:(BOOL)[[array objectAtIndex:i] objectAtIndex:1] withSectionNumber:(NSUInteger)[[array objectAtIndex:i] objectAtIndex:2]]];
-        //NSLog(@"test, %@", [[risks objectAtIndex:0] objectAtIndex:0]);
+    NSArray *arvcCriteriaArray = [[NSArray alloc] initWithArray:[dictionary objectForKey:self.criteria]];
+    NSMutableArray *risks = [[NSMutableArray alloc] init];
+
+    for (int i = 0; i < [arvcCriteriaArray count]; ++i) {
+        // init each section
+        NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
+        for (int j = 0; j < [[arvcCriteriaArray objectAtIndex:i] count]; ++j) {
+            EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWithDetails:[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:[[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1] integerValue]  withDetails:@""];
+            
+         
+            [tmpArray addObject:risk];
+        }
+        [risks addObject:tmpArray];
     }
-    
+
     self.list = risks;
     
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
@@ -56,6 +69,8 @@
 {
     [super viewDidUnload];
     self.list = nil;
+    self.criteria = nil;
+    self.headers = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -71,33 +86,20 @@
 {
     // Return the number of sections.
     //return [self.list count];
+    //return [headers count];
     return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return SECTION_0_HEADER;
-        case 1:
-            return SECTION_1_HEADER;
-        case 2:
-            return SECTION_2_HEADER;
-        case 3:
-            return SECTION_3_HEADER;
-        case 4:
-            return SECTION_4_HEADER;
-        case 5:
-        default:
-            return SECTION_5_HEADER;
-    }
+    return [headers objectAtIndex:section];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //return [[self.list objectAtIndex:section ] count];
-    return 1;
+    return [[self.list objectAtIndex:section ] count];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,17 +110,17 @@
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
-    NSString *text = [[self.list objectAtIndex:row] name];
+    NSString *text = [[[self.list objectAtIndex:section] objectAtIndex:row ] name];
     cell.detailTextLabel.text = text;
     
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
-    if ([[self.list objectAtIndex:row] isMajor])
-        cell.textLabel.text = @"MAJOR";
-    else
-        cell.textLabel.text = @"MINOR";
-    BOOL selected = [[self.list objectAtIndex:row] selected];
+//    if ([[self.list objectAtIndex:row] isMajor])
+//        cell.textLabel.text = @"MAJOR";
+//    else11111111
+//        cell.textLabel.text = @"MINOR";
+    BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] selected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
 }

@@ -2,17 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ARVC</key>
+	<dict>
+		<key>SectionHeaders</key>
+		<array>
+			<string>I. Global/Regional Dysfunction and Structural Alterations</string>
+			<string>II. Tissue Characterizations of Wall</string>
+			<string>III. Repolarization Abnormalities</string>
+			<string>IV. Depolarization and Conduction Abnormalities</string>
+			<string>V. Arrhythmias</string>
+			<string>VI. Family History</string>
+		</array>
+	</dict>
 	<key>ARVC2010</key>
 	<array>
 		<array>
-			<string>2D Echo: Regional RV akinesia or dyssynchronous RV contraction an PLAX RVOT &gt;= 32 mm (&gt;= 21 mm/m2)</string>
-			<true/>
-			<string>0</string>
-		</array>
-		<array>
-			<string>Test</string>
-			<false/>
-			<integer>0</integer>
+			<array>
+				<string>Echo item 1</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>echo item 2</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>item 3</string>
+				<integer>1</integer>
+			</array>
 		</array>
 	</array>
 </dict>
