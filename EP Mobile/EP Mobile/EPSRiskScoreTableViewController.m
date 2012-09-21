@@ -113,14 +113,12 @@
     else if ([scoreType isEqualToString:@"Estes"]) {
         self.title = @"Estes LVH Score";
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Any limb-lead R or S \u2265 20 mm or S V1 or V2 \u2265 30 mm or R V5 or V6 \u2265 30 mm" withValue:3]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left ventricular strain pattern without digitalis" withValue:3]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left ventricular strain pattern with digitalis" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left atrial enlargement" withValue:3]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Left ventricular strain pattern without digitalis" withValue:3 withDetails:@"ST-J point depression \u2265 1 mm & inverted T in V5"]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Left ventricular strain pattern with digitalis" withValue:1 withDetails:@"ST-J point depression \u2265 1 mm & inverted T in V5"]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Left atrial enlargement" withValue:3 withDetails:@"P terminal force in V1 \u2265 1 mm & \u2265 40 msec"]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Left axis deviation \u2265 -30\u00b0" withValue:2]];
                 [array addObject:[[EPSRiskFactor alloc] initWith:@"QRS duration \u2265 90 msec" withValue:1]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Intrinsicoid QRS deflection of \u2265 50 msec in V5 or V6" withValue:1]];
-        
-        
     }
     self.risks = array;
  
@@ -368,9 +366,15 @@
         if (section == 0)
             return 7;   // 7 major criteria for HCM
         else 
-            return 4;   // 7 minor criteria for HCM
+            return 4;   // 4 minor criteria for HCM
     }
     return [risks count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([scoreType isEqualToString:@"Estes"])
+        return 80;
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -387,7 +391,10 @@
     if ([scoreType isEqualToString:@"Estes"]) {
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+        //cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+        cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.detailTextLabel.numberOfLines = 0;
+
     }
 
     cell.detailTextLabel.text = details;
@@ -417,6 +424,7 @@
     return nil;
 
 }
+
 
 #pragma mark - Table view delegate
 
