@@ -128,6 +128,14 @@
     return 150;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    NSString *result = nil;
+    if ([criteria isEqualToString:@"ARVC2010"] && section == 0) {
+        result = @"BSA = body surface area. PLAX = parasternal long axis view. PSAX = parasternal short axis view. RVOT = RV outflow tract.";
+    }
+    return result;
+}
+
 
 #pragma mark - Table view delegate
 
@@ -140,14 +148,16 @@
     NSUInteger section = indexPath.section;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[(NSMutableArray *)[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:[NSNumber numberWithBool:NO]];
+        [[[self.list objectAtIndex:section] objectAtIndex:row] setSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[(NSMutableArray *)[self.list objectAtIndex:section] objectAtIndex:row] replaceObjectAtIndex:2 withObject:[NSNumber numberWithBool:YES]];
+        [[[self.list objectAtIndex:section] objectAtIndex:row] setSelected:YES];
 
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
 
 @end
