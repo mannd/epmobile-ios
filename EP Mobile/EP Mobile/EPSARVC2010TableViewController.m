@@ -16,11 +16,17 @@
 #define SECTION_4_HEADER @"V. Arrhythmias"
 #define SECTION_5_HEADER @"VI. Family History"
 
+#define ARVC_2010_CELL_HEIGHT 150
+#define ARVC_1994_CELL_HEIGHT 100
+
 @interface EPSARVC2010TableViewController ()
 
 @end
 
 @implementation EPSARVC2010TableViewController
+{
+    int cellHeight;
+}
 @synthesize list;
 @synthesize headers;
 @synthesize criteria;
@@ -60,6 +66,12 @@
 
     self.list = risks;
     
+    if ([self.criteria isEqualToString:@"ARVC1994"]) {
+        cellHeight = ARVC_1994_CELL_HEIGHT;
+        self.navigationItem.title = @"ARVC/D 1994";
+    }
+    else
+        cellHeight = ARVC_2010_CELL_HEIGHT;
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStyleBordered target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
@@ -86,9 +98,16 @@
                 tmp += [[[self.list objectAtIndex:i] objectAtIndex:j] points];
             }
         }
-        // only one major and minor risk factor counted for each section
-        major += (tmp / 100) >= 1 ? 1 : 0;
-        minor += (tmp % 100) >= 1 ? 1 : 0;
+        if ([self.criteria isEqualToString:@"ARVC2010"]) {
+            // only one major and minor risk factor counted for each section
+            major += (tmp / 100) >= 1 ? 1 : 0;
+            minor += (tmp % 100) >= 1 ? 1 : 0;
+        }
+        else {
+            // each major and minor counted with 1994 criteria
+            major += tmp / 100;
+            minor += tmp % 100;
+        }
     }
     NSLog(@"major = %d", major);
     NSLog(@"minor = %d", minor);
@@ -98,7 +117,14 @@
     
 }
 
-- (NSString *)getResultMessage:(int) major :(int)minor {
+- (NSString *)getResultMessage:(int)major :(int)minor {
+    if ([self.criteria isEqualToString:@"ARVC2010"])
+        return [self getArvc2010ResultMessage:major :minor];
+    else
+        return [self getArvc1994ResultMessage:major :minor];
+}
+
+- (NSString *)getArvc2010ResultMessage:(int) major :(int)minor {
     NSString *message;
     NSString *messageStart = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
     if (major >= 2 || (major == 1 && minor >= 2) || minor >= 4)
@@ -108,10 +134,18 @@
     else if (major == 1 || minor == 2)
         message = [messageStart stringByAppendingString:@"Possible diagnosis of ARVC/D"];
     else
-        message = [message stringByAppendingString:@"Not diagnostic of ARVC/D"];
+        message = [messageStart stringByAppendingString:@"Not diagnostic of ARVC/D"];
     return message;
+}
 
-    
+- (NSString *)getArvc1994ResultMessage:(int)major :(int)minor {
+    NSString *message;
+    NSString *messageStart = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
+    if (major > 1 || (major > 0 && minor > 1) || minor > 3)
+        message = [messageStart stringByAppendingString:@"Diagnostic of ARVC/D"];
+    else
+        message = [messageStart stringByAppendingString:@"Not Diagnostic of ARVC/D"];
+    return message;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -163,7 +197,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150;
+    return cellHeight;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
@@ -171,8 +205,12 @@
     if ([criteria isEqualToString:@"ARVC2010"] && section == 0) {
         result = @"BSA = body surface area. PLAX = parasternal long axis view. PSAX = parasternal short axis view. RVOT = RV outflow tract.";
     }
-    if ([criteria isEqualToString:@"ARVC2010"] && section == 5) {
-        result = @"Reference: Marcus FI et al. Circulation 2010;121:1533.";
+    if (section == 5) {
+        if ([criteria isEqualToString:@"ARVC2010"])
+            result = @"Reference: Marcus FI et al. Circulation 2010;121:1533.";
+        else
+            result = @"Reference: McKenna WJ et al. Br Heart J 1994;71:215.";
+            
     }
     
     return result;
