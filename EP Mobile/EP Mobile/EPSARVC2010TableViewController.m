@@ -99,13 +99,14 @@
 }
 
 - (NSString *)getResultMessage:(int) major :(int)minor {
-    NSString *message = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
+    NSString *message;
+    NSString *messageStart = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
     if (major >= 2 || (major == 1 && minor >= 2) || minor >= 4)
-        message = [message stringByAppendingString:@"Definite diagnosis of ARVC/D"];
+        message = [messageStart stringByAppendingString:@"Definite diagnosis of ARVC/D"];
     else if ((major == 1 && minor >= 1) || minor == 3)
-        message = [message stringByAppendingString:@"Borderline diagnosis of ARVC/D"];
+        message = [messageStart stringByAppendingString:@"Borderline diagnosis of ARVC/D"];
     else if (major == 1 || minor == 2)
-        message = [message stringByAppendingString:@"Possible diagnosis of ARVC/D"];
+        message = [messageStart stringByAppendingString:@"Possible diagnosis of ARVC/D"];
     else
         message = [message stringByAppendingString:@"Not diagnostic of ARVC/D"];
     return message;
