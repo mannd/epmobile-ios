@@ -76,6 +76,43 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)calculateScore {
+    int major = 0;
+    int minor = 0;
+    for (int i = 0; i < [self.list count]; ++i) {
+        int tmp = 0;
+        for (int j = 0; j < [[self.list objectAtIndex:i] count]; ++j) {
+            if ([[[self.list objectAtIndex:i] objectAtIndex:j] selected]) {
+                tmp += [[[self.list objectAtIndex:i] objectAtIndex:j] points];
+            }
+        }
+        // only one major and minor risk factor counted for each section
+        major += (tmp / 100) >= 1 ? 1 : 0;
+        minor += (tmp % 100) >= 1 ? 1 : 0;
+    }
+    NSLog(@"major = %d", major);
+    NSLog(@"minor = %d", minor);
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:[self getResultMessage:major :minor] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alertView show];
+    
+}
+
+- (NSString *)getResultMessage:(int) major :(int)minor {
+    NSString *message = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
+    if (major >= 2 || (major == 1 && minor >= 2) || minor >= 4)
+        message = [message stringByAppendingString:@"Definite diagnosis of ARVC/D"];
+    else if ((major == 1 && minor >= 1) || minor == 3)
+        message = [message stringByAppendingString:@"Borderline diagnosis of ARVC/D"];
+    else if (major == 1 || minor == 2)
+        message = [message stringByAppendingString:@"Possible diagnosis of ARVC/D"];
+    else
+        message = [message stringByAppendingString:@"Not diagnostic of ARVC/D"];
+    return message;
+
+    
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -133,6 +170,10 @@
     if ([criteria isEqualToString:@"ARVC2010"] && section == 0) {
         result = @"BSA = body surface area. PLAX = parasternal long axis view. PSAX = parasternal short axis view. RVOT = RV outflow tract.";
     }
+    if ([criteria isEqualToString:@"ARVC2010"] && section == 5) {
+        result = @"Reference: Marcus FI et al. Circulation 2010;121:1533.";
+    }
+    
     return result;
 }
 

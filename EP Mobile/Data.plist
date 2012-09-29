@@ -68,51 +68,59 @@
 				<integer>100</integer>
 			</array>
 			<array>
-				<string>Late potentials on SAECG (standard ECG QRS &lt;110 msec):  Filtered QRS duration ≥ 114 msec OR duration of terminal QRS &lt; 40 µV (low amplitude signal duration) ≥ 38 msec OR Root-mean-square voltage of terminal 40 msec ≤ 20 µV</string>
+				<string>Late potentials on SAECG in absence of QRS duration ≥ 110 msec on standard ECG:  Filtered QRS duration ≥ 114 msec</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG in absence of QRS duration ≥ 110 msec on standard ECG:  Duration of terminal QRS &lt; 40 µV (low amplitude signal duration) ≥ 38 msec</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG in absence of QRS duration ≥ 110 msec on standard ECG:  Root-mean-square voltage of terminal 40 msec ≤ 20 µV</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Terminal activation duration of QRS ≥ 55 msec measured from the nadir of the S wave to the end of the QRS including R&apos;, in V1, V2, or V3, in the absence of complete RBBB</string>
 				<integer>1</integer>
 			</array>
 		</array>
 		<array>
 			<array>
-				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²) OR WITH PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²) OR fractional area change ≤ 33%</string>
+				<string>Nonsustained or sustained VT of LBBB morphology with superior axis (negative or indeterminate QRS in leads II, III, and aVF and positive in lead aVL)</string>
 				<integer>100</integer>
 			</array>
 			<array>
-				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm WITH ratio of RV EDV/BSA ≥110 		mL/m² 		(male) or ≥ 100 mL/m² (female) OR RV EF &lt;= 40%</string>
-				<integer>100</integer>
-			</array>
-			<array>
-				<string>RV Angiography: Regional RV akinesia, dyskinesia, or aneurysm</string>
-				<integer>100</integer>
-			</array>
-			<array>
-				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 29 to &lt; 32 mm (PLAX/BSA ≥ 16 to &gt; 19 mm/m²) OR WITH PSAX RVOT ≥ 32 to &lt; 36 mm (PLAX/BSA ≥ 18 to &lt; 21 mm/m²) OR fractional area change &gt; 33% and ≤ 40%</string>
+				<string>Nonsustained or sustained VT of RV outflow configuration, LBBB morphology with inferior axis (positive QRS in leads II, III, and aVF and negative in lead aVL) or of unknown axis</string>
 				<integer>1</integer>
 			</array>
 			<array>
-				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥100 to &lt; 110 		mL/m² 		(male) or ≥ 90 to &lt; 100 mL/m² (female) OR RV EF &gt; 40% to &lt;= 45%</string>
+				<string>&gt; 500 ventricular extrasystoles per 24 hours (by Holter)</string>
 				<integer>1</integer>
 			</array>
 		</array>
 		<array>
 			<array>
-				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²) OR WITH PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²) OR fractional area change ≤ 33%</string>
+				<string>ARVC/D confirmed in a first-degree relative who meets current Task Force criteria</string>
 				<integer>100</integer>
 			</array>
 			<array>
-				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm WITH ratio of RV EDV/BSA ≥110 		mL/m² 		(male) or ≥ 100 mL/m² (female) OR RV EF &lt;= 40%</string>
+				<string>ARVC/D confirmed apthologically at autopsy or surgery in a first-degree relative</string>
 				<integer>100</integer>
 			</array>
 			<array>
-				<string>RV Angiography: Regional RV akinesia, dyskinesia, or aneurysm</string>
+				<string>Identification of a pathogenic mutation categorized as associated or probably asoociated with ARC/D in the patient under evaluation</string>
 				<integer>100</integer>
 			</array>
 			<array>
-				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 29 to &lt; 32 mm (PLAX/BSA ≥ 16 to &gt; 19 mm/m²) OR WITH PSAX RVOT ≥ 32 to &lt; 36 mm (PLAX/BSA ≥ 18 to &lt; 21 mm/m²) OR fractional area change &gt; 33% and ≤ 40%</string>
+				<string>History of ARVC/D in a first-degree relative in whom it is not possible or practical to determine whether the family member meets current Task Force criteria</string>
 				<integer>1</integer>
 			</array>
 			<array>
-				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥100 to &lt; 110 		mL/m² 		(male) or ≥ 90 to &lt; 100 mL/m² (female) OR RV EF &gt; 40% to &lt;= 45%</string>
+				<string>Premature sudden death (&lt; 35 years of age) due to suspected ARVC/D in a first-degree relative</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>ARVC/D confirmed pathologically or by current Task Force Cirteria in a second-degree relative</string>
 				<integer>1</integer>
 			</array>
 		</array>
