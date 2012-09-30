@@ -10,5 +10,12 @@
 
 @interface EPSSimpleAlgorithmViewController : UIViewController
 @property (strong, nonatomic) NSString *algorithm;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
+@property (strong, nonatomic) IBOutlet UIButton *instructionsButton;
+@property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 
+
+- (IBAction)yesButtonPushed:(id)sender;
+- (IBAction)noButtonPushed:(id)sender;
+- (IBAction)backButtonPushed:(id)sender;
 @end

@@ -10,6 +10,11 @@
 
 @interface EPSBrugadaNotesViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (strong, nonatomic) NSString *key;
+@property (strong, nonatomic) IBOutlet UINavigationBar *titleBar;
+
 - (IBAction)doneButtonPressed:(id)sender;
+
+
 
 @end
