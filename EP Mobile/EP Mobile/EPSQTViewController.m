@@ -49,7 +49,7 @@
     [qtcSegmentedControl setTitle:@"< 370" forSegmentAtIndex:1];
     [qtcSegmentedControl setTitle:@"< 350" forSegmentAtIndex:2];
     [qtcSegmentedControl setTitle:@"< 330" forSegmentAtIndex:3];
-    
+       
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"< 120 msec" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sudden cardiac arrest" withValue:1]];
@@ -174,6 +174,10 @@
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
     //cell.detailTextLabel.text = details;
+    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else
+        cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
 }
 
