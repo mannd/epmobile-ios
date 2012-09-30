@@ -493,11 +493,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
             </objects>
             <point key="canvasLocation" x="-1935" y="-1746"/>
         </scene>
-        <!--Table View Controller - VT-->
+        <!--View Controller - VT-->
         <scene sceneID="bq8-Pb-GWV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lZ-2g-w1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="giy-zl-bNh" sceneMemberID="viewController">
+                <tableViewController id="giy-zl-bNh" customClass="EPSVTViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYS-Pp-zIq">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,15 +526,15 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                                             <segue destination="Pvc-ip-j9i" kind="push" id="uik-ff-fjZ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Lrc-5f-tjK" style="IBUITableViewCellStyleDefault" id="GQW-eW-PG6">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Lrc-5f-tjK" style="IBUITableViewCellStyleDefault" id="GQW-eW-PG6">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Outflow Tract VT Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lrc-5f-tjK">
-                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -543,16 +543,19 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="29p-JF-Eiw" kind="push" identifier="OutflowVTSegue" id="T9m-qH-TX2"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5sn-ig-pBH" style="IBUITableViewCellStyleDefault" id="Hdx-HP-oQm">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5sn-ig-pBH" style="IBUITableViewCellStyleDefault" id="Hdx-HP-oQm">
                                         <rect key="frame" x="0.0" y="88" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Mitral Annular VT Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5sn-ig-pBH">
-                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -561,6 +564,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="29p-JF-Eiw" kind="push" identifier="AnnularVTSegue" id="BXP-mT-oa5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -573,7 +579,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <navigationItem key="navigationItem" title="VT" id="F8i-Ts-SYo"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1561" y="-1734"/>
+            <point key="canvasLocation" x="-1145" y="-1059"/>
         </scene>
         <!--Table View Controller - Long QT Syndrome-->
         <scene sceneID="Sog-O3-tzt">
@@ -663,7 +669,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2601" y="-1174"/>
+            <point key="canvasLocation" x="-2365" y="-730"/>
         </scene>
         <!--View Controller - LQTS-->
         <scene sceneID="W8c-lv-CGf">
@@ -894,7 +900,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <tabBarItem key="tabBarItem" title="LQT 1" id="vTW-3w-0sQ"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2682" y="-1130"/>
+            <point key="canvasLocation" x="-2669" y="-442"/>
         </scene>
         <!--Table View Controller - LQT 2-->
         <scene sceneID="Mgx-ZU-nDB">
@@ -1117,7 +1123,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <tabBarItem key="tabBarItem" title="LQT 5-11" id="IFA-tI-TRG"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2808" y="-1231"/>
+            <point key="canvasLocation" x="-3387" y="-1023"/>
         </scene>
         <!--Table View Controller - LQT 4-->
         <scene sceneID="IpH-dg-zvm">
@@ -1292,7 +1298,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <tabBarItem key="tabBarItem" title="LQT 4" id="dkJ-ZZ-QZX"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2697" y="-851"/>
+            <point key="canvasLocation" x="-2697" y="-791"/>
         </scene>
         <!--Table View Controller - LQT 3-->
         <scene sceneID="NkL-gw-vQK">
@@ -1488,7 +1494,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2990" y="-460"/>
+            <point key="canvasLocation" x="-2706" y="-900"/>
         </scene>
         <!--Table View Controller - LVH-->
         <scene sceneID="s8B-nf-m3V">
@@ -1869,7 +1875,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-3235" y="-2256"/>
+            <point key="canvasLocation" x="-3611" y="-2116"/>
         </scene>
         <!--View Controller - LBBB in V1-->
         <scene sceneID="OFo-xx-IkS">
@@ -1890,7 +1896,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-3198" y="-2294"/>
+            <point key="canvasLocation" x="-3786" y="-2116"/>
         </scene>
         <!--Tab Bar Controller - Morphology Criteria-->
         <scene sceneID="koM-V1-bil">
@@ -1940,7 +1946,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2871" y="-1782"/>
+            <point key="canvasLocation" x="-3811" y="-1734"/>
         </scene>
         <!--Table View Controller - ARVC/D-->
         <scene sceneID="L5H-Ax-xj6">
@@ -2053,7 +2059,79 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <navigationItem key="navigationItem" title="ARVC/D 2010" id="XQK-BV-gqf"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2333" y="-1125"/>
+            <point key="canvasLocation" x="-2269" y="-308"/>
+        </scene>
+        <!--Simple Algorithm View Controller-->
+        <scene sceneID="ZHr-QH-jRc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="29p-JF-Eiw" customClass="EPSSimpleAlgorithmViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UQt-Gg-ohP">
+                                <rect key="frame" x="20" y="26" width="280" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f4B-Ev-5du">
+                                <rect key="frame" x="20" y="211" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wz0-ac-a0F">
+                                <rect key="frame" x="124" y="211" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vd4-Fq-8S7">
+                                <rect key="frame" x="228" y="211" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hZE-LY-4NT">
+                                <rect key="frame" x="20" y="256" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CMV-cz-Wpu"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1642" y="-800"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
@@ -2200,7 +2278,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2830" y="-1336"/>
+            <point key="canvasLocation" x="-2806" y="-1392"/>
         </scene>
         <!--Annulus View Controller - AV Annulus-->
         <scene sceneID="LXY-4s-Z6Q">
@@ -2245,7 +2323,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2836" y="-2051"/>
+            <point key="canvasLocation" x="-3300" y="-2063"/>
         </scene>
         <!--Brugada Notes View Controller-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -2300,7 +2378,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2650" y="-1693"/>
+            <point key="canvasLocation" x="-3094" y="-1441"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -3700,6 +3778,12 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
         </class>
+        <class className="EPSSimpleAlgorithmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSSimpleAlgorithmViewController.h"/>
+        </class>
+        <class className="EPSVTViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSVTViewController.h"/>
+        </class>
         <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
             <relationships>
@@ -3750,5 +3834,6 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <segue reference="pGj-ye-BDw"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="LxC-Ko-A9I"/>
+        <segue reference="BXP-mT-oa5"/>
     </inferredMetricsTieBreakers>
 </document>
