@@ -7,7 +7,7 @@
 //
 
 #import "EPSSimpleAlgorithmViewController.h"
-#import "EPSBrugadaNotesViewController.h"
+#import "EPSNotesViewController.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
@@ -78,7 +78,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSBrugadaNotesViewController *vc = (EPSBrugadaNotesViewController *)[segue destinationViewController];
+    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
     vc.key = self.algorithm;
 }
 

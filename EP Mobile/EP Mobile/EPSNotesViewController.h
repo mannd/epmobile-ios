@@ -1,5 +1,5 @@
 //
-//  EPSBrugadaNotesViewController.h
+//  EPSNotesViewController.h
 //  EP Mobile
 //
 //  Created by David Mann on 7/30/12.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSBrugadaNotesViewController : UIViewController
+@interface EPSNotesViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 @property (strong, nonatomic) NSString *key;
 @property (strong, nonatomic) IBOutlet UINavigationBar *titleBar;
+@property (strong, nonatomic) IBOutlet UILabel *headerLabel;
 
 - (IBAction)doneButtonPressed:(id)sender;
 

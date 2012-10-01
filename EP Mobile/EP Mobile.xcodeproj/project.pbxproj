@@ -30,13 +30,14 @@
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
 		8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */; };
 		8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93C815C7580C00ACBA4F /* brugadaecg.png */; };
-		8E5D93CC15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m */; };
+		8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */; };
 		8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */; };
 		8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */; };
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E97559E1617C79D00EAFD10 /* epivt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E97559D1617C79D00EAFD10 /* epivt.png */; };
 		8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */; };
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
+		8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -104,8 +105,8 @@
 		8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaECGViewController.h; sourceTree = "<group>"; };
 		8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaECGViewController.m; sourceTree = "<group>"; };
 		8E5D93C815C7580C00ACBA4F /* brugadaecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brugadaecg.png; sourceTree = "<group>"; };
-		8E5D93CA15C75E2300ACBA4F /* EPSBrugadaNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaNotesViewController.h; sourceTree = "<group>"; };
-		8E5D93CB15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaNotesViewController.m; sourceTree = "<group>"; };
+		8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNotesViewController.h; sourceTree = "<group>"; };
+		8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSNotesViewController.m; sourceTree = "<group>"; };
 		8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTViewController.h; sourceTree = "<group>"; };
 		8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTViewController.m; sourceTree = "<group>"; };
 		8E5D93D315CCABF500ACBA4F /* EPSARVC2010TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVC2010TableViewController.h; sourceTree = "<group>"; };
@@ -116,6 +117,9 @@
 		8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVTViewController.m; sourceTree = "<group>"; };
 		8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSimpleAlgorithmViewController.h; sourceTree = "<group>"; };
 		8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSimpleAlgorithmViewController.m; sourceTree = "<group>"; };
+		8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNotesProtocol.h; sourceTree = "<group>"; };
+		8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaNotes.h; sourceTree = "<group>"; };
+		8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaNotes.m; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -210,8 +214,8 @@
 				8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */,
 				8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */,
 				8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */,
-				8E5D93CA15C75E2300ACBA4F /* EPSBrugadaNotesViewController.h */,
-				8E5D93CB15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m */,
+				8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */,
+				8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */,
 				8E44005815BA4571009169DC /* EPSWarfarinCalculatorViewController.h */,
 				8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */,
 				8E44006015BC4B22009169DC /* EPSWarfarinDosingTableViewController.h */,
@@ -251,6 +255,9 @@
 				8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */,
 				8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */,
 				8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */,
+				8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */,
+				8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */,
+				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -431,7 +438,7 @@
 				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
-				8E5D93CC15C75E2300ACBA4F /* EPSBrugadaNotesViewController.m in Sources */,
+				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
@@ -442,6 +449,7 @@
 				8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
+				8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
