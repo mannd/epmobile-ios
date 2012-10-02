@@ -38,6 +38,8 @@
 		8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */; };
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
 		8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */; };
+		8E9755AB161A643400EAFD10 /* EPSOutFlowTractVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */; };
+		8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -120,6 +122,10 @@
 		8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNotesProtocol.h; sourceTree = "<group>"; };
 		8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaNotes.h; sourceTree = "<group>"; };
 		8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaNotes.m; sourceTree = "<group>"; };
+		8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOutFlowTractVTNotes.h; sourceTree = "<group>"; };
+		8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOutFlowTractVTNotes.m; sourceTree = "<group>"; };
+		8E9755AC161A66E900EAFD10 /* EPSAnnularVTNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAnnularVTNotes.h; sourceTree = "<group>"; };
+		8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAnnularVTNotes.m; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -258,6 +264,10 @@
 				8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */,
 				8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */,
 				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
+				8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */,
+				8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */,
+				8E9755AC161A66E900EAFD10 /* EPSAnnularVTNotes.h */,
+				8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -450,6 +460,8 @@
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */,
+				8E9755AB161A643400EAFD10 /* EPSOutFlowTractVTNotes.m in Sources */,
+				8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

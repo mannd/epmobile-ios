@@ -54,6 +54,9 @@
     tabletSize = 5.0;
     minINR = 2.0;
     maxINR = 3.0;
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidUnload
@@ -70,6 +73,10 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait || 
             interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)showNotes {
+    
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {

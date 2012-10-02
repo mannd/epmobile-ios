@@ -7,6 +7,7 @@
 //
 
 #import "EPSBrugadaECGViewController.h"
+#import "EPSNotesViewController.h"
 
 @interface EPSBrugadaECGViewController ()
 
@@ -27,9 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Notes" style:UIBarButtonItemStyleBordered target:self action:@selector(showNotes)];
-    self.navigationItem.rightBarButtonItem = editButton;
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
+//                                   initWithTitle:@"Notes" style:UIBarButtonItemStyleBordered target:self action:@selector(showNotes)];
+//    self.navigationItem.rightBarButtonItem = editButton;
 }
 
 - (void)viewDidUnload
@@ -42,6 +46,11 @@
 {
     return YES;
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+    vc.key = @"BrugadaECG";
 }
 
 - (void)showNotes {

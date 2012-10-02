@@ -8,6 +8,8 @@
 
 #import "EPSNotesViewController.h"
 #import "EPSBrugadaNotes.h"
+#import "EPSOutFlowTractVTNotes.h"
+#import "EPSAnnularVTNotes.h"
 
 @interface EPSNotesViewController ()
 
@@ -35,10 +37,10 @@
     NSLog(@"self key = %@", self.key);
     id <EPSNotesProtocol> notes = nil;
     if ([self.key isEqualToString:@"OutflowVT"])
-        self.titleBar.topItem.title = @"Outflow Tract VT";
+        notes = [[EPSOutFlowTractVTNotes alloc] init];
     else if ([self.key isEqualToString:@"AnnularVT"])
-        self.titleBar.topItem.title = @"Mitral Annular VT";
-    else
+        notes = [[EPSAnnularVTNotes alloc] init];
+    else if ([self.key isEqualToString:@"BrugadaECG"])
         notes = [[EPSBrugadaNotes alloc] init];
     [self.notesLabel setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
