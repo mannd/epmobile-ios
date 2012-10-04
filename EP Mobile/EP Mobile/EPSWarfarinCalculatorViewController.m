@@ -9,6 +9,7 @@
 #import "EPSWarfarinCalculatorViewController.h"
 #import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
+#import "EPSNotesViewController.h"
 
 
 @interface EPSWarfarinCalculatorViewController ()
@@ -76,7 +77,7 @@
 }
 
 - (void)showNotes {
-    
+    [self performSegueWithIdentifier:@"WarfarinNotesSegue" sender:nil];
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
@@ -186,12 +187,20 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSWarfarinDosingTableViewController *dc = (EPSWarfarinDosingTableViewController *)[segue destinationViewController]; 
-    dc.tabletSize = tabletSize;
-    dc.lowEnd = doseChange.lowEnd;
-    dc.highEnd = doseChange.highEnd;
-    dc.increase = (doseChange.direction == INCREASE);
-    dc.weeklyDose = weeklyDose;
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"WarfarinNotesSegue"]) {
+        NSLog(@"Warfarin notes");
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = @"WarfarinNotes";
+    }
+    else if ([segueIdentifier isEqualToString:@"DosingSegue"]) {
+        EPSWarfarinDosingTableViewController *dc = (EPSWarfarinDosingTableViewController *)[segue destinationViewController];
+        dc.tabletSize = tabletSize;
+        dc.lowEnd = doseChange.lowEnd;
+        dc.highEnd = doseChange.highEnd;
+        dc.increase = (doseChange.direction == INCREASE);
+        dc.weeklyDose = weeklyDose;
+    }
 }
 
 

@@ -10,6 +10,7 @@
 #import "EPSBrugadaNotes.h"
 #import "EPSOutFlowTractVTNotes.h"
 #import "EPSAnnularVTNotes.h"
+#import "EPSWarfarinNotes.h"
 
 @interface EPSNotesViewController ()
 
@@ -42,6 +43,8 @@
         notes = [[EPSAnnularVTNotes alloc] init];
     else if ([self.key isEqualToString:@"BrugadaECG"])
         notes = [[EPSBrugadaNotes alloc] init];
+    else if ([self.key isEqualToString:@"WarfarinNotes"])
+        notes = [[EPSWarfarinNotes alloc] init];
     [self.notesLabel setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
