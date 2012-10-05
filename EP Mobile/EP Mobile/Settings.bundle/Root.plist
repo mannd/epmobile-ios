@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>QTc Settings</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>Bazett</string>
+				<string>Fridericia</string>
+				<string>Sagie</string>
+				<string>Hodges</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>Bazett</string>
+				<string>Fridericia</string>
+				<string>Sagie</string>
+				<string>Hodges</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Default QTc Formula</string>
+			<key>Key</key>
+			<string>defaultqtcformula</string>
+			<key>DefaultValue</key>
+			<string>Bazett</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Maximum QTc (msec)</string>
+			<key>Key</key>
+			<string>maximumqtc</string>
+			<key>KeyboardType</key>
+			<string>NumberPad</string>
+			<key>DefaultValue</key>
+			<string>440</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>Interval (msec)</string>
+				<string>Heart Rate (bpm)</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>interval</string>
+				<string>rate</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Interval or Rate</string>
+			<key>Key</key>
+			<string>intervalorrate</string>
+			<key>DefaultValue</key>
+			<string>rate</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Warfarin Settings</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>2 mg</string>
+				<string>2.5 mg</string>
+				<string>5 mg</string>
+				<string>7.5 mg</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>2</string>
+				<string>2.5</string>
+				<string>5</string>
+				<string>7.5</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Default Warfarin Tablet</string>
+			<key>Key</key>
+			<string>defaultwarfarintablet</string>
+			<key>DefaultValue</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>2.0 - 3.0</string>
+				<string>2.5 - 3.5</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>2</string>
+				<string>2.5</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Default INR Target</string>
+			<key>Key</key>
+			<string>defaultinrtarget</string>
+			<key>DefaultValue</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Drug Calculator Settings</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>kilograms</string>
+				<string>pounds</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>kg</string>
+				<string>lb</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Default Weight Unit</string>
+			<key>Key</key>
+			<string>defaultweightunit</string>
+			<key>DefaultValue</key>
+			<string>kg</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>mg/dL</string>
+				<string>µmol/L</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>mg</string>
+				<string>micromol</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Default Creatinine Unit</string>
+			<key>Key</key>
+			<string>defaultcreatinineunit</string>
+			<key>DefaultValue</key>
+			<string>mg</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>

@@ -41,6 +41,7 @@
 		8E9755AB161A643400EAFD10 /* EPSOutFlowTractVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */; };
 		8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */; };
 		8E9755B1161D11E600EAFD10 /* EPSWarfarinNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */; };
+		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */; };
@@ -129,6 +130,7 @@
 		8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAnnularVTNotes.m; sourceTree = "<group>"; };
 		8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinNotes.h; sourceTree = "<group>"; };
 		8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinNotes.m; sourceTree = "<group>"; };
+		8E9755B2161F71B900EAFD10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8EC19C27159FE0FA00975E2B /* EP Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EP Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C2B159FE0FA00975E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EC19C2D159FE0FA00975E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -273,6 +275,7 @@
 				8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */,
 				8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */,
 				8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */,
+				8E9755B2161F71B900EAFD10 /* Settings.bundle */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
+				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

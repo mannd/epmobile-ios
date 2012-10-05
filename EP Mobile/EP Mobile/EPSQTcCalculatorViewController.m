@@ -13,6 +13,8 @@
 #define SAGIE 2
 #define HODGES 3
 
+#define MAX_NORMAL_QTC 440
+
 #define INVALID_ENTRY @"INVALID ENTRY"
 
 @interface EPSQTcCalculatorViewController ()
@@ -86,6 +88,7 @@
     NSInteger qtNumber = [qt intValue];
     NSLog(@"The value of qtNumber is %d", qtNumber);
     if (inputNumber == 0 || qtNumber == 0) {
+        self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;
         return;
     }
@@ -101,10 +104,17 @@
     NSLog(@"Row is %d", row);
     NSInteger qtc = [self qtcFromQtInMsec:qtNumber AndIntervalInMsec:inputNumber UsingFormula:row];
     NSLog(@"QTc = %d", qtc);
-    if (qtc == 0.0)
+    if (qtc == 0.0) {
+        self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;
+    }
     else {
+        if (qtc > MAX_NORMAL_QTC)
+            self.resultLabel.textColor = [UIColor redColor];
+        else
+            self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = [[NSString alloc] initWithFormat:@"QTc is %i msec (%@ formula)", qtc, formula];
+        // result text color
     }
     //self.resultLabel.text = resultString;
 }
