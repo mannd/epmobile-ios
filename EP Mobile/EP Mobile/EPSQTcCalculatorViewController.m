@@ -15,6 +15,11 @@
 
 #define MAX_NORMAL_QTC 440
 
+#define DEFAULT_QTC_FORMULA_KEY @"defaultqtcformula"
+#define MAXIMUM_QTC_KEY @"maximumqtc"
+#define INTERVAL_OR_RATE_KEY @"intervalorrate"
+//#define RATE_KEY @"
+
 #define INVALID_ENTRY @"INVALID ENTRY"
 
 @interface EPSQTcCalculatorViewController ()
@@ -30,6 +35,9 @@
 @synthesize inputField;
 @synthesize qtField;
 @synthesize resultLabel;
+@synthesize defaultQTcFormula;
+@synthesize maxQTc;
+@synthesize defaultInputTypeIsInterval;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +60,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self refreshDefaults];
 }
 
 - (void)viewDidUnload
@@ -64,6 +73,17 @@
     // e.g. self.myOutlet = nil;
     self.formulaPicker = nil;
     self.formulaData = nil;
+    self.defaultQTcFormula = nil;
+}
+
+- (void)refreshDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.defaultQTcFormula = [defaults objectForKey:DEFAULT_QTC_FORMULA_KEY];
+    NSString *maxQTcString = [defaults objectForKey:MAXIMUM_QTC_KEY];
+    NSString *defaultIntervalOrRate = [defaults objectForKey:INTERVAL_OR_RATE_KEY];
+    self.defaultInputTypeIsInterval = ([defaultIntervalOrRate isEqualToString:@"interval"]);
+    self.maxQTc = [maxQTcString intValue];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -109,7 +129,7 @@
         self.resultLabel.text = INVALID_ENTRY;
     }
     else {
-        if (qtc > MAX_NORMAL_QTC)
+        if (qtc > self.maxQTc)
             self.resultLabel.textColor = [UIColor redColor];
         else
             self.resultLabel.textColor = [UIColor darkTextColor];
