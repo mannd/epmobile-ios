@@ -74,6 +74,18 @@
         [intervalRateSegmentedControl setSelectedSegmentIndex:RATE_INDEX];
     }
 
+
+}
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([self.defaultQTcFormula isEqualToString:@"Bazett"])
+        [formulaPicker selectRow:0 inComponent:0 animated:NO];
+    if ([self.defaultQTcFormula isEqualToString:@"Fridericia"])
+        [formulaPicker selectRow:1 inComponent:0 animated:YES];
+    if ([self.defaultQTcFormula isEqualToString:@"Sagie"])
+        [formulaPicker selectRow:2 inComponent:0 animated:YES];
+    if ([self.defaultQTcFormula isEqualToString:@"Hodges"])
+        [formulaPicker selectRow:3 inComponent:0 animated:YES];
 }
 
 - (void)viewDidUnload
@@ -96,7 +108,9 @@
     NSString *maxQTcString = [defaults objectForKey:MAXIMUM_QTC_KEY];
     NSString *defaultIntervalOrRate = [defaults objectForKey:INTERVAL_OR_RATE_KEY];
     self.defaultInputTypeIsInterval = ([defaultIntervalOrRate isEqualToString:@"interval"]);
-    self.maxQTc = [maxQTcString intValue];
+    self.maxQTc = [maxQTcString floatValue];
+    NSLog(@"MaxQTcString = %@", maxQTcString);
+    NSLog(@"MaxQTc = %f", self.maxQTc);
     
 }
 
