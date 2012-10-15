@@ -35,6 +35,8 @@
 @synthesize inrField;
 @synthesize resultLabel;
 @synthesize doseChange;
+@synthesize tabletSizeSegmentedControl;
+@synthesize targetSegmentedControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,6 +60,42 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    [self refreshDefaults];
+    if ([self.defaultWarfarinTabletSize isEqualToString:@"2"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:0];
+        tabletSize = 2.0;
+    }
+    else if ([self.defaultWarfarinTabletSize isEqualToString:@"2.5"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:1];
+        tabletSize = 2.5;
+    }
+    else if ([self.defaultWarfarinTabletSize isEqualToString:@"5"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:2];
+        tabletSize = 5.0;
+    }
+    else if ([self.defaultWarfarinTabletSize isEqualToString:@"7.5"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:3];
+        tabletSize = 7.5;
+    }
+    if ([self.defaultINR isEqualToString:@"2"]) {
+        [targetSegmentedControl setSelectedSegmentIndex:0];
+        minINR = 2.0;
+        maxINR = 3.0;
+    }
+    else if ([self.defaultINR isEqualToString:@"2.5"]){
+        [targetSegmentedControl setSelectedSegmentIndex:1];
+        minINR = 2.5;
+        maxINR = 3.5;
+    }
+}
+
+- (void)refreshDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.defaultWarfarinTabletSize = [defaults objectForKey:@"defaultwarfarintablet"];
+    self.defaultINR = [defaults objectForKey:@"defaultinrtarget"];
+    NSLog(@"DefaultWafarinTabletSize = %@", self.defaultWarfarinTabletSize);
+    NSLog(@"DefaultINR = %@", self.defaultINR);
+
 }
 
 - (void)viewDidUnload
@@ -66,6 +104,8 @@
     [self setInrField:nil];
     [self setResultLabel:nil];
     [self setDoseChange:nil];
+    [self setTabletSizeSegmentedControl:nil];
+    [self setTargetSegmentedControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

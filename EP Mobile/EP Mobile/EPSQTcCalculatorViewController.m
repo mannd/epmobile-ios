@@ -80,11 +80,11 @@
     [super viewDidAppear:animated];
     if ([self.defaultQTcFormula isEqualToString:@"Bazett"])
         [formulaPicker selectRow:0 inComponent:0 animated:NO];
-    if ([self.defaultQTcFormula isEqualToString:@"Fridericia"])
+    else if ([self.defaultQTcFormula isEqualToString:@"Fridericia"])
         [formulaPicker selectRow:1 inComponent:0 animated:YES];
-    if ([self.defaultQTcFormula isEqualToString:@"Sagie"])
+    else if ([self.defaultQTcFormula isEqualToString:@"Sagie"])
         [formulaPicker selectRow:2 inComponent:0 animated:YES];
-    if ([self.defaultQTcFormula isEqualToString:@"Hodges"])
+    else if ([self.defaultQTcFormula isEqualToString:@"Hodges"])
         [formulaPicker selectRow:3 inComponent:0 animated:YES];
 }
 
