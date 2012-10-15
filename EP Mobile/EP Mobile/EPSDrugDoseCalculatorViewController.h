@@ -13,10 +13,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *ageField;
 @property (strong, nonatomic) IBOutlet UITextField *weightField;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *weightUnitsSegmentedControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *creatinineUnitsSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITextField *creatinineField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 @property (strong, nonatomic) NSString *drug;
-
+@property (strong, nonatomic) NSString *defaultWeightUnit;
+@property (strong, nonatomic) NSString *defaultCreatinineUnit;
 
 - (IBAction)toggleWeightUnits:(id)sender;
 - (IBAction)calculate:(id)sender;

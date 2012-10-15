@@ -13,7 +13,7 @@
 #define SAGIE 2
 #define HODGES 3
 
-#define MAX_NORMAL_QTC 440
+#define MAX_NORMAL_QTC 440.0
 
 #define RATE_INDEX 0
 #define INTERVAL_INDEX 1
@@ -107,8 +107,13 @@
     self.defaultQTcFormula = [defaults objectForKey:DEFAULT_QTC_FORMULA_KEY];
     NSString *maxQTcString = [defaults objectForKey:MAXIMUM_QTC_KEY];
     NSString *defaultIntervalOrRate = [defaults objectForKey:INTERVAL_OR_RATE_KEY];
+    // If defaults aren't loaded this defaults to a default input type
+    // of RATE which is what we want.
     self.defaultInputTypeIsInterval = ([defaultIntervalOrRate isEqualToString:@"interval"]);
     self.maxQTc = [maxQTcString floatValue];
+    // this ensures maxQTc is sane if defaults aren't loaded
+    if (self.maxQTc == 0.0)
+        self.maxQTc = MAX_NORMAL_QTC;
     NSLog(@"MaxQTcString = %@", maxQTcString);
     NSLog(@"MaxQTc = %f", self.maxQTc);
     
