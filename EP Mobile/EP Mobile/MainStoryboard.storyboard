@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="kBV-s3-VWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="kBV-s3-VWz">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="iCq-6P-Tr5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-cy-u4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="kBV-s3-VWz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Z1G-Ay-YUi">
                         <autoresizingMask key="autoresizingMask"/>
@@ -17,13 +16,13 @@
                         <segue destination="hAV-CN-VfG" kind="relationship" relationship="rootViewController" id="tQ1-uy-olG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-cy-u4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3568" y="-1231"/>
         </scene>
         <!--View Controller - Epi vs Endocardial VT-->
         <scene sceneID="6Vl-xv-P4K">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aAX-Bg-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Pvc-ip-j9i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ww0-Kk-xdd">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -52,13 +51,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </view>
                     <navigationItem key="navigationItem" title="Epi vs Endocardial VT" id="oXB-Rd-rwY"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAX-Bg-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1881" y="-2347"/>
         </scene>
         <!--Main Table View Controller - EP Mobile-->
         <scene sceneID="k1X-XA-AxI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="hAV-CN-VfG" customClass="EPSMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BUr-MO-rbp">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -490,13 +489,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <segue destination="JZA-px-d51" kind="modal" identifier="AboutSegue" modalTransitionStyle="flipHorizontal" id="NJQ-bC-nz4"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1355" y="-1762"/>
         </scene>
         <!--View Controller - VT-->
         <scene sceneID="bq8-Pb-GWV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5lZ-2g-w1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="giy-zl-bNh" customClass="EPSVTViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYS-Pp-zIq">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -578,13 +577,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="VT" id="F8i-Ts-SYo"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lZ-2g-w1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1192" y="-1080"/>
+            <point key="canvasLocation" x="-1754" y="-1682"/>
         </scene>
         <!--Table View Controller - Long QT Syndrome-->
         <scene sceneID="Sog-O3-tzt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-r8-eVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="nEp-iW-oAh" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -668,13 +667,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <barButtonItem key="backBarButtonItem" title="LQTS" id="XZA-og-gKT"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-r8-eVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2365" y="-730"/>
         </scene>
         <!--View Controller - LQTS-->
         <scene sceneID="W8c-lv-CGf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBs-yc-JAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yXh-DH-lMg" customClass="EPSLQTSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Zq-Fn-EkL">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -715,7 +714,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS" id="qEI-UM-QVe"/>
                     <connections>
@@ -724,13 +723,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <outlet property="sexSegmentedControl" destination="pWE-wA-ke3" id="IUG-O4-3KE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBs-yc-JAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2632" y="-1413"/>
+            <point key="canvasLocation" x="-2189" y="-1740"/>
         </scene>
         <!--Details Table View Controller - LQT 1-->
         <scene sceneID="hEf-rr-Rr2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Fl-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="g7a-XK-NAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vpy-Q3-sDV">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -899,13 +898,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="LQT 1" id="vTW-3w-0sQ"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Fl-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2669" y="-442"/>
         </scene>
         <!--Table View Controller - LQT 2-->
         <scene sceneID="Mgx-ZU-nDB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="8yg-ey-fv3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3eT-3Q-Tgb">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1074,13 +1073,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="LQT 2" id="G4A-6U-PrN"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2689" y="-954"/>
         </scene>
         <!--Tab Bar Controller - LQTS Subtypes-->
         <scene sceneID="pmf-U3-p8F">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ufU-3U-yOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="rz7-AJ-Xbv" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="LQTS Subtypes" id="CES-gU-jSf"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -1097,13 +1096,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <segue destination="hqb-9C-9fN" kind="relationship" relationship="viewControllers" id="XEQ-ks-wt5"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufU-3U-yOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2669" y="-1210"/>
         </scene>
         <!--View Controller - LQT 5-11-->
         <scene sceneID="9ko-Jl-hmG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uld-V7-BgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="hqb-9C-9fN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgn-ix-R6J">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1122,13 +1121,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="LQT 5-11" id="IFA-tI-TRG"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uld-V7-BgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3387" y="-1023"/>
         </scene>
         <!--Table View Controller - LQT 4-->
         <scene sceneID="IpH-dg-zvm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Umm-np-Lbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="dbO-Dt-ozE" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mw2-6h-B2m">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1297,13 +1296,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="LQT 4" id="dkJ-ZZ-QZX"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umm-np-Lbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2697" y="-791"/>
         </scene>
         <!--Table View Controller - LQT 3-->
         <scene sceneID="NkL-gw-vQK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Oqu-Qb-RBM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oMS-87-ZKo">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1472,13 +1471,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="LQT 3" id="8bV-qI-Q8a"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2689" y="-1059"/>
         </scene>
         <!--LongQTECG View Controller - LQTS ECG Patterns-->
         <scene sceneID="I94-Wk-eUW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Xwt-iy-wz5" customClass="EPSLongQTECGViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1493,13 +1492,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2706" y="-900"/>
         </scene>
         <!--Table View Controller - LVH-->
         <scene sceneID="s8B-nf-m3V">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zLS-zH-Nev" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BNS-oY-3ea" customClass="EPSLVHTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OfG-uj-FEZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1560,13 +1559,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="LVH" id="hop-BV-0dw"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLS-zH-Nev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-782" y="1621"/>
         </scene>
         <!--Table View Controller - LVH Voltage Criteria-->
         <scene sceneID="5J4-b1-xfe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CIm-GV-y6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="0fl-pN-FCi" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gOI-r5-LEc">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1768,13 +1767,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="LVH Voltage Criteria" id="Yh2-Fu-qGS"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CIm-GV-y6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3129" y="1277"/>
         </scene>
         <!--Table View Controller - WCT-->
         <scene sceneID="LKt-TZ-t6U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r6J-nQ-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="gQS-UR-7vQ" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TxO-6c-JAG">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1853,13 +1852,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="WCT" id="ROR-Bw-5Yc"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6J-nQ-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2544" y="-1599"/>
+            <point key="canvasLocation" x="-1920" y="-1682"/>
         </scene>
         <!--View Controller - RBBB in V1-->
         <scene sceneID="wD2-q2-jc9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="eSD-vw-Urv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1874,13 +1873,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3611" y="-2116"/>
         </scene>
         <!--View Controller - LBBB in V1-->
         <scene sceneID="OFo-xx-IkS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn4-e9-KqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DJv-41-R7G" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1895,13 +1894,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn4-e9-KqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3786" y="-2116"/>
         </scene>
         <!--Tab Bar Controller - Morphology Criteria-->
         <scene sceneID="koM-V1-bil">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="ntH-d0-hOl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Morphology Criteria" id="CXP-a6-5sq"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -1915,13 +1914,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <segue destination="eSD-vw-Urv" kind="relationship" relationship="viewControllers" id="qSA-9t-DoH"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2595" y="-1990"/>
         </scene>
         <!--View Controller - R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="v7F-Ni-Oso" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1945,13 +1944,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </view>
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3811" y="-1734"/>
         </scene>
         <!--Table View Controller - ARVC/D-->
         <scene sceneID="L5H-Ax-xj6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GQD-ug-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="px5-kc-Vhu" customClass="EPSARVCTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sc4-9e-0Q9">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2012,13 +2011,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </tableView>
                     <navigationItem key="navigationItem" title="ARVC/D" id="FeP-zV-ogk"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQD-ug-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2466" y="-968"/>
         </scene>
         <!--Table View Controller - ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NFl-fg-FOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="oHx-TU-Y6s" customClass="EPSARVC2010TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rZm-5w-a1a">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2058,13 +2057,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </tableView>
                     <navigationItem key="navigationItem" title="ARVC/D 2010" id="XQK-BV-gqf"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFl-fg-FOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2269" y="-308"/>
         </scene>
         <!--Simple Algorithm View Controller-->
         <scene sceneID="ZHr-QH-jRc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="29p-JF-Eiw" customClass="EPSSimpleAlgorithmViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2147,13 +2146,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="questionLabel" destination="UQt-Gg-ohP" id="QbH-Vo-aSQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1006" y="-343"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgk-ng-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qaF-mx-6rF" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2247,13 +2246,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </tableView>
                     <navigationItem key="navigationItem" title="WPW" id="w9O-uo-1O7"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgk-ng-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2235" y="236"/>
         </scene>
         <!--View Controller - SQTS-->
         <scene sceneID="ptk-VO-6fT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zqu-Zd-ecp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lqo-iy-icD" customClass="EPSQTViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Afq-pr-79s">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2286,7 +2285,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="SQTS" id="aex-Od-Phy"/>
                     <connections>
@@ -2294,13 +2293,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="riskTableView" destination="R03-ng-L6Q" id="uVz-NZ-F79"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zqu-Zd-ecp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2806" y="-1392"/>
         </scene>
         <!--Annulus View Controller - AV Annulus-->
         <scene sceneID="LXY-4s-Z6Q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="YrN-55-ygA" customClass="EPSAVAnnulusViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2315,13 +2314,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </view>
                     <navigationItem key="navigationItem" title="AV Annulus" id="sPs-U4-Zla"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1802" y="325"/>
         </scene>
         <!--BrugadaECG View Controller - Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="e5o-Mg-pZA" customClass="EPSBrugadaECGViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2339,13 +2338,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <segue destination="PQv-Iu-QYe" kind="modal" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-854" y="-1507"/>
         </scene>
         <!--Notes View Controller - NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="NotesViewController" id="PQv-Iu-QYe" customClass="EPSNotesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -2396,13 +2395,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="titleBar" destination="8rj-Bv-2Q2" id="JrZ-nx-q4i"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-609" y="-785"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="JZA-px-d51" customClass="EPSAboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Fg-up-bWw">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -2435,13 +2434,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="aboutLabel" destination="b1z-Ht-ElS" id="T1S-xd-nN5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3387" y="-766"/>
         </scene>
         <!--Tc Calculator View Controller - QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgu-il-7Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="isk-zH-Tuy" customClass="EPSQTcCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Okz-dr-M1J" customClass="UIControl">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2539,17 +2538,18 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <connections>
                         <outlet property="formulaPicker" destination="wtU-vr-R3h" id="L7d-7L-83Q"/>
                         <outlet property="inputField" destination="G3r-vL-WEo" id="aP1-Ai-Bp0"/>
+                        <outlet property="intervalRateSegmentedControl" destination="fFd-Ms-mnW" id="plY-Om-PSA"/>
                         <outlet property="qtField" destination="fFm-4W-sJW" id="c7o-Om-QYK"/>
                         <outlet property="resultLabel" destination="h8J-Bz-HiA" id="HhN-lg-H7K"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgu-il-7Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3325" y="-324"/>
         </scene>
         <!--Warfarin Calculator View Controller - Warfarin Clinic-->
         <scene sceneID="LZR-Ds-iJD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-T1-3Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sOk-N9-fM0" customClass="EPSWarfarinCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2678,13 +2678,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <segue destination="PQv-Iu-QYe" kind="modal" identifier="WarfarinNotesSegue" modalTransitionStyle="flipHorizontal" id="bT0-Tb-wFg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-T1-3Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1092" y="-705"/>
         </scene>
         <!--Warfarin Dosing Table View Controller-->
         <scene sceneID="652-RR-u7n">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kF0-l1-oVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="hga-UT-wNf" customClass="EPSWarfarinDosingTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="00o-Pi-5Su">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -2936,13 +2936,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="wedDose2" destination="dvz-gf-gj9" id="Uqk-04-F64"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kF0-l1-oVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3198" y="-568"/>
         </scene>
         <!--Risk Score Table View Controller - Title-->
         <scene sceneID="kti-NI-1xN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-G5-ryY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Jt3-by-I3p" customClass="EPSRiskScoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ho-EI-08a">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -2982,13 +2982,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="5A5-0R-44A"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-G5-ryY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2405" y="1246"/>
         </scene>
         <!--Cycle Length Calculator View Controller - Interval/Rate Converter-->
         <scene sceneID="s0B-z1-cNk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="213-4v-dCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="eJm-HL-6uf" customClass="EPSCycleLengthCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qc1-Hs-d2Q" customClass="UIControl">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -3080,13 +3080,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="resultLabel" destination="U7N-7y-LLP" id="s9s-3F-s8v"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="213-4v-dCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3341" y="-531"/>
         </scene>
         <!--Drug Dose Calculator View Controller-->
         <scene sceneID="Yag-7n-5UD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gDm-AP-yUd" customClass="EPSDrugDoseCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfC-EP-iLu" customClass="UIControl">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -3234,13 +3234,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="weightUnitsSegmentedControl" destination="Jv5-49-c9s" id="sPh-SM-PFO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3341" y="618"/>
         </scene>
         <!--Table View Controller - Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-AF-fbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Normal EP Values" id="QEg-8T-H7h" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v9X-oc-aBr">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -3567,13 +3567,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </tableView>
                     <navigationItem key="navigationItem" title="Normal EP Values" id="09V-8t-ZVq"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-AF-fbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2916" y="-280"/>
         </scene>
         <!--Drug Dose Table View Controller - Drug Calculators-->
         <scene sceneID="8SY-3g-55b">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MQn-gj-7lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="eRb-uZ-GP2" customClass="EPSDrugDoseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jnL-qM-irM">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -3678,6 +3678,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <barButtonItem key="backBarButtonItem" title="Drug Calculators" id="PhC-31-se1"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQn-gj-7lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3737" y="498"/>
         </scene>
@@ -3693,6 +3694,167 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <image name="rbbbmorphology.png" width="800" height="600"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
+    <classes>
+        <class className="EPSARVC2010TableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVC2010TableViewController.h"/>
+        </class>
+        <class className="EPSARVCTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVCTableViewController.h"/>
+        </class>
+        <class className="EPSAVAnnulusViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAVAnnulusViewController.h"/>
+        </class>
+        <class className="EPSAboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="aboutLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSBrugadaECGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaECGViewController.h"/>
+        </class>
+        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculateButton:"/>
+                <relationship kind="action" name="clearButton:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleSwitch:"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleCrUnits:"/>
+                <relationship kind="action" name="toggleSex:"/>
+                <relationship kind="action" name="toggleWeightUnits:"/>
+                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
+        </class>
+        <class className="EPSLQTSDetailsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSDetailsTableViewController.h"/>
+        </class>
+        <class className="EPSLQTSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EPSLVHTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLVHTableViewController.h"/>
+        </class>
+        <class className="EPSLongQTECGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLongQTECGViewController.h"/>
+        </class>
+        <class className="EPSMainTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
+        </class>
+        <class className="EPSNotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSNotesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationBar"/>
+            </relationships>
+        </class>
+        <class className="EPSQTViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculateButtonPressed:"/>
+                <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleInputType:"/>
+                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="intervalRateSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
+        </class>
+        <class className="EPSSimpleAlgorithmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSSimpleAlgorithmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backButtonPushed:"/>
+                <relationship kind="action" name="noButtonPushed:"/>
+                <relationship kind="action" name="yesButtonPushed:"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="instructionsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSVTViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSVTViewController.h"/>
+        </class>
+        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateButtonPressed:"/>
+                <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="toggleTabletSize:"/>
+                <relationship kind="action" name="toggleTargetRange:"/>
+                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EPSWarfarinDosingTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinDosingTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalWeeklyHighDose" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalWeeklyLowDose" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -15,6 +15,9 @@
 
 #define MAX_NORMAL_QTC 440
 
+#define RATE_INDEX 0
+#define INTERVAL_INDEX 1
+
 #define DEFAULT_QTC_FORMULA_KEY @"defaultqtcformula"
 #define MAXIMUM_QTC_KEY @"maximumqtc"
 #define INTERVAL_OR_RATE_KEY @"intervalorrate"
@@ -38,6 +41,7 @@
 @synthesize defaultQTcFormula;
 @synthesize maxQTc;
 @synthesize defaultInputTypeIsInterval;
+@synthesize intervalRateSegmentedControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,6 +65,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self refreshDefaults];
+    if (self.defaultInputTypeIsInterval) {
+        [self setInputType:INTERVAL_INDEX];
+        [intervalRateSegmentedControl setSelectedSegmentIndex:INTERVAL_INDEX];
+    }
+    else {
+        [self setInputType:RATE_INDEX];
+        [intervalRateSegmentedControl setSelectedSegmentIndex:RATE_INDEX];
+    }
+
 }
 
 - (void)viewDidUnload
@@ -68,6 +81,7 @@
     [self setInputField:nil];
     [self setQtField:nil];
     [self setResultLabel:nil];
+    [self setIntervalRateSegmentedControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -116,8 +130,6 @@
         inputNumber = round(60000.0 / inputNumber);
         NSLog(@"Converted to RR interval in msec is %d", inputNumber);
     }
-//    double intervalSec = inputNumber / 1000.0;
-//    double qtSec = qtNumber / 1000.0;
     NSInteger row = [formulaPicker selectedRowInComponent:0];
     NSString *formula = [formulaData objectAtIndex:row];
     NSLog(@"Formula is %@", formula);
@@ -179,12 +191,14 @@
     self.inputField.text = nil;
     self.resultLabel.text = nil;
     // 0 == Rate
-    if ((inputIsRate = [sender selectedSegmentIndex] == 0)) {
+    [self setInputType:[sender selectedSegmentIndex]];
+}
+
+- (void)setInputType:(int)index {
+    if ((inputIsRate = index == RATE_INDEX))
         self.inputField.placeholder = @"Heart Rate (bpm)";
-    }
-    else {
+    else
         self.inputField.placeholder = @"RR Interval (msec)";
-    }
 }
 
 
