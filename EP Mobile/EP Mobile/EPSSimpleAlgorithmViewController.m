@@ -127,7 +127,8 @@
 
 - (void)showResults {
     NSString *details = [algorithm outcome:0];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"results" message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    NSString *title = [algorithm resultDialogTitle];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 
   

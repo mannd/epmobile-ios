@@ -10,16 +10,17 @@
 
 @implementation EPSOutflowVTAlgorithm {
     BOOL mitralAnnularVT, isRvot, isLvot, isIndeterminate, isSupraValvular, isRvFreeWall, isAnterior, isCaudal;
+    int priorStep, priorStep1, priorStep2, priorStep3, priorStep4, priorStep5, priorStep6, priorStep7;
 }
 
-int priorStep = 1;
-int priorStep1 = 1;
-int priorStep2 = 1;
-int priorStep3 = 1;
-int priorStep4 = 1;
-int priorStep5 = 1;
-int priorStep6 = 1;
-int priorStep7 = 1;
+- (id)init {
+    self = [super init];
+    if (self) {
+        priorStep = priorStep1 = priorStep2 = priorStep3 = priorStep4 = priorStep5 = priorStep6 = priorStep7 = 1;
+    }
+    return self;
+}
+
 
 const int lateTransitionStep = 1;
 const int freeWallStep = 2;
@@ -33,21 +34,21 @@ const int supraValvularStep = 9;
     [self adjustStepsForward:*step];
     switch (*step) {
 		case lateTransitionStep:
-			isRvot = true;
-			isIndeterminate = false;
-			isLvot = false;
+			isRvot = YES;
+			isIndeterminate = NO;
+			isLvot = NO;
 			*step = freeWallStep;
 			break;
 		case freeWallStep:
-			isRvFreeWall = true;
+			isRvFreeWall = YES;
 			*step = anteriorLocationStep;
 			break;
 		case anteriorLocationStep:
-			isAnterior = true;
+			isAnterior = YES;
 			*step = caudalLocationStep;
 			break;
 		case caudalLocationStep:
-			isCaudal = true;
+			isCaudal = YES;
 			//showResult();
             *step = SUCCESS_STEP;
 			break;
@@ -55,14 +56,14 @@ const int supraValvularStep = 9;
 			*step = indeterminateLocationStep;
 			break;
 		case indeterminateLocationStep:
-			isRvot = true;
-			isLvot = false;
-			isIndeterminate = true;
-			isRvFreeWall = false;
+			isRvot = YES;
+			isLvot = NO;
+			isIndeterminate = YES;
+			isRvFreeWall = NO;
 			*step = anteriorLocationStep;
 			break;
 		case supraValvularStep:
-			isSupraValvular = true;
+			isSupraValvular = YES;
 			//showResult();
             *step = SUCCESS_STEP;
 			break;
@@ -77,32 +78,32 @@ const int supraValvularStep = 9;
 			*step = v3TransitionStep;
 			break;
 		case freeWallStep:
-			isRvFreeWall = false;
+			isRvFreeWall = NO;
 			*step = anteriorLocationStep;
 			break;
 		case anteriorLocationStep:
-			isAnterior = false;
+			isAnterior = NO;
 			*step = caudalLocationStep;
 			break;
 		case caudalLocationStep:
-			isCaudal = false;
+			isCaudal = NO;
 			*step = SUCCESS_STEP;
 			break;
 		case v3TransitionStep:
-			isLvot = true;
-			isRvot = false;
-			isIndeterminate = false;
+			isLvot = YES;
+			isRvot = NO;
+			isIndeterminate = NO;
 			*step = supraValvularStep;
 			break;
 		case indeterminateLocationStep:
-			isLvot = true;
-			isRvot = false;
-			isIndeterminate = true;
+			isLvot = YES;
+			isRvot = NO;
+			isIndeterminate = YES;
 			*step = supraValvularStep;
 			break;
             
 		case supraValvularStep:
-			isSupraValvular = false;
+			isSupraValvular = NO;
 			*step = SUCCESS_STEP;
     }
     return [self getQuestion:*step];
@@ -114,11 +115,30 @@ const int supraValvularStep = 9;
 }
 
 - (NSString *)outcome:(int)step {
-    return @"Outcome";
+    NSString *message = @"";
+    if (isIndeterminate)
+        message = [message stringByAppendingString:@"Note: Location (RV vs LV) is indeterminate.  Results reflect one possible localization.\n"];
+    if (isRvot) {
+        message = [message stringByAppendingString:@"Right Ventricular Outflow Tract"];
+        message = isRvFreeWall ? [message stringByAppendingString:@"\nFree wall"] : [message stringByAppendingString:@"\nSeptal"];
+        message = isAnterior ? [message stringByAppendingString:@"\nAnterior"] : [message stringByAppendingString:@"\nPosterior"];
+        message = isCaudal ? [message stringByAppendingString:@"\nCaudal (>2 cm from pulmonic vavle"] : [message stringByAppendingString:@"\nCranial (<2 cm from pulmonic valve"];
+    } else if (isLvot) {
+        message = [message stringByAppendingString:@"Left Ventricular Outflow Tract"];
+        message = isSupraValvular ? [message stringByAppendingString:@"\nSupravalvular (aortic cusp) Location.\nTransition is in V2 or V3 with origin in the right coronary cusp, and in V1 or V2 in the left coronary cusp.  Left coronary cusp VT is often associated with a W- or M-shaped pattern in V1."] : [message stringByAppendingString:@"\nSubvalvular Location.\nVT from the aorto-mitral                                                                                                                                                                                                                                                                                                                  continuity often has a qR pattern in V1.  VT from the mitral annulus has an R in V1."];
+    } else
+        message = [message stringByAppendingString:@"Location can't be determined."];
+
+    
+    return message;
 }
 
 - (NSString *)name {
     return @"Outflow Tract VT";
+}
+
+- (NSString *)resultDialogTitle {
+    return @"Proposed VT Location";
 }
 
 - (BOOL)showInstructionsButton {
