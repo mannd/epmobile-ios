@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSSimpleAlgorithmViewController : UIViewController
-@property (strong, nonatomic) NSString *algorithm;
+    <UIAlertViewDelegate>
+@property (strong, nonatomic) NSString *algorithmName;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIButton *instructionsButton;
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
+@property (strong, nonatomic) IBOutlet UIButton *yesButton;
+@property (strong, nonatomic) IBOutlet UIButton *noButton;
+
+@property int step;
 
 
 - (IBAction)yesButtonPushed:(id)sender;

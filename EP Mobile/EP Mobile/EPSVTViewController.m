@@ -51,9 +51,9 @@
     EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"OutflowVTSegue"])
-        vc.algorithm = @"OutflowVT";
+        vc.algorithmName = @"OutflowVT";
     else if ([segueIdentifier isEqualToString:@"AnnularVTSegue"])
-        vc.algorithm = @"AnnularVT";
+        vc.algorithmName = @"AnnularVT";
 }
 
 

@@ -25,11 +25,11 @@
             <objects>
                 <viewController id="Pvc-ip-j9i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ww0-Kk-xdd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="epivt.png" id="Bgx-S4-2Ha">
-                                <rect key="frame" x="47" y="0.0" width="226" height="185"/>
+                                <rect key="frame" x="47" y="0.0" width="226" height="273"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LFv-s2-rHW">
@@ -60,7 +60,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="hAV-CN-VfG" customClass="EPSMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BUr-MO-rbp">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -498,7 +498,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="giy-zl-bNh" customClass="EPSVTViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYS-Pp-zIq">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -586,7 +586,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="nEp-iW-oAh" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -676,7 +676,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <viewController id="yXh-DH-lMg" customClass="EPSLQTSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Zq-Fn-EkL">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Gyt-Vl-6qm">
@@ -705,7 +705,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Id6-RR-HzT">
-                                <rect key="frame" x="20" y="160" width="280" height="236"/>
+                                <rect key="frame" x="20" y="160" width="280" height="324"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
@@ -732,7 +732,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="g7a-XK-NAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vpy-Q3-sDV">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -907,7 +907,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="8yg-ey-fv3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3eT-3Q-Tgb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1105,7 +1105,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <viewController id="hqb-9C-9fN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgn-ix-R6J">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mS7-yo-Op1">
@@ -1130,7 +1130,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="dbO-Dt-ozE" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mw2-6h-B2m">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1305,7 +1305,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="Oqu-Qb-RBM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oMS-87-ZKo">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1480,11 +1480,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <viewController id="Xwt-iy-wz5" customClass="EPSLongQTECGViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="longqtecg.png" id="He5-kK-9Z1">
-                                <rect key="frame" x="20" y="155" width="280" height="105"/>
+                                <rect key="frame" x="20" y="198" width="280" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1501,7 +1501,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="BNS-oY-3ea" customClass="EPSLVHTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OfG-uj-FEZ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1568,7 +1568,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="0fl-pN-FCi" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gOI-r5-LEc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1776,7 +1776,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="gQS-UR-7vQ" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TxO-6c-JAG">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1799,6 +1799,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="29p-JF-Eiw" kind="push" id="BtS-Mb-lIg"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Boe-9B-Oh5" style="IBUITableViewCellStyleDefault" id="9bz-rv-rAR">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
@@ -1854,18 +1857,18 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6J-nQ-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1920" y="-1682"/>
+            <point key="canvasLocation" x="-1610" y="-156"/>
         </scene>
         <!--View Controller - RBBB in V1-->
         <scene sceneID="wD2-q2-jc9">
             <objects>
                 <viewController id="eSD-vw-Urv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology.png" id="QFC-cs-lDR">
-                                <rect key="frame" x="0.0" y="20" width="320" height="327"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="415"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -1882,11 +1885,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <viewController id="DJv-41-R7G" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology.png" id="0bo-DH-ke2">
-                                <rect key="frame" x="0.0" y="20" width="320" height="327"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="415"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -1923,7 +1926,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <viewController id="v7F-Ni-Oso" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rwpt.png" id="9Mw-vh-A5V">
@@ -1953,7 +1956,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <tableViewController id="px5-kc-Vhu" customClass="EPSARVCTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sc4-9e-0Q9">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2020,7 +2023,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <tableViewController id="oHx-TU-Y6s" customClass="EPSARVC2010TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rZm-5w-a1a">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2066,13 +2069,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="29p-JF-Eiw" customClass="EPSSimpleAlgorithmViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UQt-Gg-ohP">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UQt-Gg-ohP">
                                 <rect key="frame" x="20" y="26" width="280" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2143,19 +2146,21 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <connections>
                         <outlet property="backButton" destination="vd4-Fq-8S7" id="t9Q-Ba-Rqe"/>
                         <outlet property="instructionsButton" destination="hZE-LY-4NT" id="3aB-eN-S2t"/>
+                        <outlet property="noButton" destination="Wz0-ac-a0F" id="Jz3-tv-Ky6"/>
                         <outlet property="questionLabel" destination="UQt-Gg-ohP" id="QbH-Vo-aSQ"/>
+                        <outlet property="yesButton" destination="f4B-Ev-5du" id="1E3-g4-PcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1006" y="-343"/>
+            <point key="canvasLocation" x="-1214" y="-639"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
             <objects>
                 <tableViewController id="qaF-mx-6rF" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2255,7 +2260,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="lqo-iy-icD" customClass="EPSQTViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Afq-pr-79s">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="c13-bY-26V">
@@ -2269,7 +2274,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="R03-ng-L6Q">
-                                <rect key="frame" x="20" y="102" width="280" height="294"/>
+                                <rect key="frame" x="20" y="102" width="280" height="382"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
@@ -2302,11 +2307,11 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="YrN-55-ygA" customClass="EPSAVAnnulusViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus.png" id="gWp-Vz-OiS">
-                                <rect key="frame" x="0.0" y="63" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="106" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2323,11 +2328,11 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="e5o-Mg-pZA" customClass="EPSBrugadaECGViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brugadaecg.png" id="Xtc-ai-f3e">
-                                <rect key="frame" x="0.0" y="96" width="320" height="224"/>
+                                <rect key="frame" x="0.0" y="140" width="320" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2347,7 +2352,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController title="NotesViewController" id="PQv-Iu-QYe" customClass="EPSNotesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" id="8rj-Bv-2Q2">
@@ -2404,7 +2409,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="JZA-px-d51" customClass="EPSAboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Fg-up-bWw">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" id="WU9-hu-Y5c">
@@ -2443,7 +2448,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="isk-zH-Tuy" customClass="EPSQTcCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Okz-dr-M1J" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" id="G3r-vL-WEo">
@@ -2552,7 +2557,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="sOk-N9-fM0" customClass="EPSWarfarinCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" id="OBS-kR-u8q">
@@ -2689,7 +2694,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="hga-UT-wNf" customClass="EPSWarfarinDosingTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="00o-Pi-5Su">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hZq-4R-EHc">
@@ -2947,7 +2952,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <tableViewController id="Jt3-by-I3p" customClass="EPSRiskScoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ho-EI-08a">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -2993,7 +2998,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="eJm-HL-6uf" customClass="EPSCycleLengthCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qc1-Hs-d2Q" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Jq5-Rp-Gfg">
@@ -3091,7 +3096,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <viewController id="gDm-AP-yUd" customClass="EPSDrugDoseCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfC-EP-iLu" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Ibh-Gg-2so">
@@ -3246,7 +3251,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <tableViewController title="Normal EP Values" id="QEg-8T-H7h" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v9X-oc-aBr">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -3579,7 +3584,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <objects>
                 <tableViewController id="eRb-uZ-GP2" customClass="EPSDrugDoseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jnL-qM-irM">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -3697,180 +3702,16 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <image name="rbbbmorphology.png" width="800" height="600"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
-    <classes>
-        <class className="EPSARVC2010TableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVC2010TableViewController.h"/>
-        </class>
-        <class className="EPSARVCTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVCTableViewController.h"/>
-        </class>
-        <class className="EPSAVAnnulusViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAVAnnulusViewController.h"/>
-        </class>
-        <class className="EPSAboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="aboutLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSBrugadaECGViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaECGViewController.h"/>
-        </class>
-        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButton:"/>
-                <relationship kind="action" name="clearButton:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleSwitch:"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculate:"/>
-                <relationship kind="action" name="clear:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleCrUnits:"/>
-                <relationship kind="action" name="toggleSex:"/>
-                <relationship kind="action" name="toggleWeightUnits:"/>
-                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="creatinineUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
-        </class>
-        <class className="EPSLQTSDetailsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSDetailsTableViewController.h"/>
-        </class>
-        <class className="EPSLQTSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSLVHTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLVHTableViewController.h"/>
-        </class>
-        <class className="EPSLongQTECGViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLongQTECGViewController.h"/>
-        </class>
-        <class className="EPSMainTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
-        </class>
-        <class className="EPSNotesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSNotesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationBar"/>
-            </relationships>
-        </class>
-        <class className="EPSQTViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleInputType:"/>
-                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="intervalRateSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
-        </class>
-        <class className="EPSSimpleAlgorithmViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSSimpleAlgorithmViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButtonPushed:"/>
-                <relationship kind="action" name="noButtonPushed:"/>
-                <relationship kind="action" name="yesButtonPushed:"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="instructionsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSVTViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSVTViewController.h"/>
-        </class>
-        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="toggleTabletSize:"/>
-                <relationship kind="action" name="toggleTargetRange:"/>
-                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tabletSizeSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="targetSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="EPSWarfarinDosingTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinDosingTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalWeeklyHighDose" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalWeeklyLowDose" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="pGj-ye-BDw"/>
-        <segue reference="LxC-Ko-A9I"/>
-        <segue reference="BXP-mT-oa5"/>
-        <segue reference="bT0-Tb-wFg"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="BtS-Mb-lIg"/>
+        <segue reference="oIL-n2-cNM"/>
+        <segue reference="LxC-Ko-A9I"/>
     </inferredMetricsTieBreakers>
 </document>
