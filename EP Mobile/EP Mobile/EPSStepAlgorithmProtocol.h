@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// any step this or higher means algorithm has reached its endpoint
 #define SUCCESS_STEP 1000
 
 @protocol EPSStepAlgorithmProtocol <NSObject>
@@ -16,7 +17,6 @@
 - (NSString *)backResult:(int *)step;
 - (NSString *)outcome:(int)step;
 - (NSString *)name;
-- (BOOL)showInstructionsButton;
 - (NSString *)step1;
 - (void)resetSteps:(int *)step;
 - (NSString *)resultDialogTitle;

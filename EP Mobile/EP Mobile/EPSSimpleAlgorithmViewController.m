@@ -85,7 +85,7 @@
 - (IBAction)yesButtonPushed:(id)sender {
     NSString *question = [algorithm yesResult:&step];
     [self setButtons];
-    if (step != SUCCESS_STEP)
+    if (step < SUCCESS_STEP)
         self.questionLabel.text = question;
     else
         [self showResults];
@@ -94,7 +94,7 @@
 - (IBAction)noButtonPushed:(id)sender {
     NSString *question = [algorithm noResult:&step];
     [self setButtons];
-    if (step != SUCCESS_STEP)
+    if (step < SUCCESS_STEP)
         self.questionLabel.text = question;
     else
         [self showResults];
@@ -130,7 +130,7 @@
 }
 
 - (void)showResults {
-    NSString *details = [algorithm outcome:0];
+    NSString *details = [algorithm outcome:step];
     NSString *title = [algorithm resultDialogTitle];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

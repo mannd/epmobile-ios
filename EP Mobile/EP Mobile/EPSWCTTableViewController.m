@@ -42,6 +42,9 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
-    vc.algorithmName = @"BrugadaWCT";
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"BrugadaAlgorithmSegue"]) {
+        EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
+        vc.algorithmName = @"BrugadaWCT";
+    }
 }@end

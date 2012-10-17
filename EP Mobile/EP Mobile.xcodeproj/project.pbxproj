@@ -257,6 +257,40 @@
 			name = "Table View Controllers";
 			sourceTree = "<group>";
 		};
+		8E815D40162F1A5B001025ED /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */,
+				8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */,
+				8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */,
+				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
+				8E31CEBC15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.h */,
+				8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */,
+				8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */,
+				8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */,
+				8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */,
+				8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */,
+				8E09D07215E1C8D900756EA1 /* EPSLQTSViewController.h */,
+				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
+			);
+			name = Calculators;
+			sourceTree = "<group>";
+		};
+		8E815D41162F1AEE001025ED /* Image Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */,
+				8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */,
+				8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */,
+				8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */,
+				8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */,
+				8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */,
+				8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */,
+				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
+			);
+			name = "Image Views";
+			sourceTree = "<group>";
+		};
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
@@ -291,38 +325,20 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				8E815D3F162EE5CA001025ED /* Table View Controllers */,
-				8E815D3D162EE4F7001025ED /* Algorithms */,
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
 				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
 				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
 				8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */,
 				8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */,
-				8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */,
-				8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */,
 				8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */,
 				8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */,
-				8E815D3E162EE5AF001025ED /* Warfarin */,
-				8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */,
-				8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */,
-				8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */,
-				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
-				8E31CEBC15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.h */,
-				8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */,
-				8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */,
-				8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */,
-				8EC19C32159FE0FA00975E2B /* Supporting Files */,
-				8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */,
-				8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */,
-				8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */,
-				8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */,
-				8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */,
-				8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */,
-				8E09D07215E1C8D900756EA1 /* EPSLQTSViewController.h */,
-				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
 				8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */,
-				8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */,
-				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
+				8E815D41162F1AEE001025ED /* Image Views */,
+				8E815D40162F1A5B001025ED /* Calculators */,
+				8E815D3F162EE5CA001025ED /* Table View Controllers */,
+				8E815D3D162EE4F7001025ED /* Algorithms */,
+				8E815D3E162EE5AF001025ED /* Warfarin */,
+				8EC19C32159FE0FA00975E2B /* Supporting Files */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";

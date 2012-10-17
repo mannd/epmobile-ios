@@ -669,7 +669,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-r8-eVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2365" y="-730"/>
+            <point key="canvasLocation" x="-2413" y="-248"/>
         </scene>
         <!--View Controller - LQTS-->
         <scene sceneID="W8c-lv-CGf">
@@ -1800,7 +1800,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" id="BtS-Mb-lIg"/>
+                                            <segue destination="29p-JF-Eiw" kind="push" identifier="BrugadaAlgorithmSegue" id="BtS-Mb-lIg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Boe-9B-Oh5" style="IBUITableViewCellStyleDefault" id="9bz-rv-rAR">
@@ -1857,7 +1857,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6J-nQ-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1610" y="-156"/>
+            <point key="canvasLocation" x="-1657" y="842"/>
         </scene>
         <!--View Controller - RBBB in V1-->
         <scene sceneID="wD2-q2-jc9">
@@ -2016,7 +2016,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQD-ug-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2466" y="-968"/>
+            <point key="canvasLocation" x="-2514" y="-1038"/>
         </scene>
         <!--Table View Controller - ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
@@ -2153,7 +2153,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1214" y="-639"/>
+            <point key="canvasLocation" x="-1195" y="-300"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
