@@ -13,7 +13,7 @@
 
 
 - (NSString *)name {
-    return @"Brugada Criteria WCT";
+    return @"Brugada Algorithm";
 }
 
 - (BOOL)showInstructionsButton {

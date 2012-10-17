@@ -17,6 +17,7 @@
 - (NSString *)backResult:(int *)step;
 - (NSString *)outcome:(int)step;
 - (NSString *)name;
+- (BOOL)showInstructionsButton;
 - (NSString *)step1;
 - (void)resetSteps:(int *)step;
 - (NSString *)resultDialogTitle;

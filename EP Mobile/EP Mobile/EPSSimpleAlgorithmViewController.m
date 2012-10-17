@@ -31,6 +31,7 @@
 @synthesize step;
 @synthesize yesButton;
 @synthesize noButton;
+@synthesize morphologyCriteriaButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,8 +59,9 @@
     // disabled buttons aren't automatically grayed out in iOS
     [self.backButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     self.instructionsButton.hidden = ![algorithm showInstructionsButton];
-    [self.instructionsButton setTitle:
-         @"Instructions" forState:UIControlStateNormal];
+    if (!self.instructionsButton.hidden)
+        [self.instructionsButton setTitle:@"Instructions" forState:UIControlStateNormal];
+    self.morphologyCriteriaButton.hidden = YES;
     step = 1;
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
@@ -73,6 +75,7 @@
     [self setInstructionsButton:nil];
     [self setYesButton:nil];
     [self setNoButton:nil];
+    [self setMorphologyCriteriaButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -121,12 +124,17 @@
         [self.yesButton setTitle:@"Yes" forState:UIControlStateNormal];
         [self.noButton setTitle:@"No" forState:UIControlStateNormal];
     }
+    // ugly, I know
+    self.morphologyCriteriaButton.hidden = !([self.algorithmName isEqualToString:BRUGADA_WCT] && step == 4);
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
-    vc.key = self.algorithmName;
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"NotesSegue"]) {
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = self.algorithmName;
+    }
 }
 
 - (void)showResults {

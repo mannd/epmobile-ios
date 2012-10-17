@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *yesButton;
 @property (strong, nonatomic) IBOutlet UIButton *noButton;
+@property (strong, nonatomic) IBOutlet UIButton *morphologyCriteriaButton;
 
 @property int step;
 
