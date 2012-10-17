@@ -11,9 +11,11 @@
 #import "EPSStepAlgorithmProtocol.h"
 #import "EPSOutflowVTAlgorithm.h"
 #import "EPSAnnularVTAlgorithm.h"
+#import "EPSBrugadaWCTAlgorithm.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
+#define BRUGADA_WCT @"BrugadaWCT"
 
 @interface EPSSimpleAlgorithmViewController ()
 
@@ -48,6 +50,8 @@
         algorithm = [[EPSOutflowVTAlgorithm alloc] init];
     else if ([self.algorithmName isEqualToString:ANNULAR_VT])
         algorithm = [[EPSAnnularVTAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:BRUGADA_WCT])
+        algorithm = [[EPSBrugadaWCTAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
         
     // ...
