@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EPSStepAlgorithmProtocol.h"
+#import "EPSOutflowVTAlgorithm.h"
 
-@interface EPSAnnularVTAlgorithm : NSObject <EPSStepAlgorithmProtocol>
-
+@interface EPSAnnularVTAlgorithm : EPSOutflowVTAlgorithm
 @end

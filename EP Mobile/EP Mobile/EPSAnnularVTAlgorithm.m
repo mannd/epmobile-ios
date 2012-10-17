@@ -10,15 +10,6 @@
 
 @implementation EPSAnnularVTAlgorithm {
     BOOL isNotMitralAnnular, isAnteroLateral, isAnteroMedial, isPosterior, isPosteroSeptal;
-    int priorStep, priorStep1, priorStep2, priorStep3, priorStep4, priorStep5, priorStep6, priorStep7;
-}
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        priorStep = priorStep1 = priorStep2 = priorStep3 = priorStep4 = priorStep5 = priorStep6 = priorStep7 = 1;
-    }
-    return self;
 }
 
 const int initialStep = 1;
@@ -70,12 +61,21 @@ const int notchingQInferiorLeadsStep = 4;
 
 }
 
-- (NSString *)backResult:(int *)step {
-    [self adjustStepsBackward:step];
-    return [self getQuestion:*step];}
-
 - (NSString *)outcome:(int)step {
-    return @"Outcome";
+    NSString *message = @"";
+    if (isNotMitralAnnular)
+        message = [message stringByAppendingString:@"QRS morphology suggests VT or PVCs are NOT arising from the mitral annulus"];
+    else if (isAnteroLateral)
+        message = [message stringByAppendingString:@"Anterolateral Mitral Annulus"];
+    else if (isAnteroMedial)
+        message = [message stringByAppendingString:@"Anteromedial Mitral Annulus"];
+    else if (isPosterior)
+        message = [message stringByAppendingString:@"Posterior Mitral Annulus"];
+    else if (isPosteroSeptal)
+        message = [message stringByAppendingString:@"Posteroseptal Mitral Annulus"];
+    else
+        message = [message stringByAppendingString:@"Location cannot be determined."];
+    return message;
 }
 
 - (NSString *)name {
@@ -114,33 +114,10 @@ const int notchingQInferiorLeadsStep = 4;
     return question;
 }
 
-
-- (void)adjustStepsForward:(int)step {
-    priorStep7 = priorStep6;
-    priorStep6 = priorStep5;
-    priorStep5 = priorStep4;
-    priorStep4 = priorStep3;
-    priorStep3 = priorStep2;
-    priorStep2 = priorStep1;
-    priorStep1 = priorStep;
-    priorStep = step;
-}
-
-- (void)adjustStepsBackward:(int *)step {
-    *step = priorStep;
-    priorStep = priorStep1;
-    priorStep1 = priorStep2;
-    priorStep2 = priorStep3;
-    priorStep3 = priorStep4;
-    priorStep4 = priorStep5;
-    priorStep5 = priorStep6;
-    priorStep6 = priorStep7;
-}
-
 - (void)resetSteps:(int *)step {
-    priorStep7 = priorStep6 = priorStep5 = priorStep4 = 1;
-    priorStep3 = priorStep2 = priorStep1 = priorStep = *step = 1;
+    [super resetSteps:step];
+    // need to zero out the BOOLs in this algorithm too
+    isAnteroLateral = isAnteroMedial = isNotMitralAnnular = isPosterior = isPosteroSeptal = NO;
 }
-
 
 @end

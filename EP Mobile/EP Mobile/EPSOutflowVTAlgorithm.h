@@ -12,5 +12,7 @@
 #define SPECIAL_STEP_1 777
 
 @interface EPSOutflowVTAlgorithm : NSObject <EPSStepAlgorithmProtocol>
+- (void)adjustStepsForward:(int)step;
+
 
 @end
