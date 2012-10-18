@@ -63,6 +63,7 @@
 		8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */; };
 		8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */; };
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
+		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,8 @@
 		8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseTableViewController.h; sourceTree = "<group>"; };
 		8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseTableViewController.m; sourceTree = "<group>"; };
+		8EC343E31630A188008938F6 /* EPSCMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewController.h; sourceTree = "<group>"; };
+		8EC343E41630A188008938F6 /* EPSCMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewController.m; sourceTree = "<group>"; };
 		8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCTableViewController.h; sourceTree = "<group>"; };
 		8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,6 +280,8 @@
 				8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */,
 				8E09D07215E1C8D900756EA1 /* EPSLQTSViewController.h */,
 				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
+				8EC343E31630A188008938F6 /* EPSCMSViewController.h */,
+				8EC343E41630A188008938F6 /* EPSCMSViewController.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */,
 				8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */,
 				8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */,
+				8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

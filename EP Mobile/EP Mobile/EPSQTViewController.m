@@ -45,10 +45,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [qtcSegmentedControl setTitle:@"\u2265 370" forSegmentAtIndex:0];
-    [qtcSegmentedControl setTitle:@"< 370" forSegmentAtIndex:1];
-    [qtcSegmentedControl setTitle:@"< 350" forSegmentAtIndex:2];
-    [qtcSegmentedControl setTitle:@"< 330" forSegmentAtIndex:3];
+    [self.qtcSegmentedControl setTitle:@"\u2265 370" forSegmentAtIndex:0];
+    [self.qtcSegmentedControl setTitle:@"< 370" forSegmentAtIndex:1];
+    [self.qtcSegmentedControl setTitle:@"< 350" forSegmentAtIndex:2];
+    [self.qtcSegmentedControl setTitle:@"< 330" forSegmentAtIndex:3];
        
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"< 120 msec" withValue:1]];
@@ -90,37 +90,37 @@
     int score = 0;
     // ECG criteria
     // one of the short QT intervals must be selected to get other points
-    if (qtcSegmentedControl.selectedSegmentIndex == 0 && ![[risks objectAtIndex:SQTS_SHORT_JT] selected]) {
+    if (self.qtcSegmentedControl.selectedSegmentIndex == 0 && ![[self.risks objectAtIndex:SQTS_SHORT_JT] selected]) {
         [self displayResult:score];
         return;
     }
-    if (qtcSegmentedControl.selectedSegmentIndex == 1) // QTc < 370
+    if (self.qtcSegmentedControl.selectedSegmentIndex == 1) // QTc < 370
         ++score;
-    else if (qtcSegmentedControl.selectedSegmentIndex == 2) // QTc < 350
+    else if (self.qtcSegmentedControl.selectedSegmentIndex == 2) // QTc < 350
         score += 2;
-    else if (qtcSegmentedControl.selectedSegmentIndex ==3) // QTc < 330
+    else if (self.qtcSegmentedControl.selectedSegmentIndex ==3) // QTc < 330
         score += 3;
     // short JT very specific for SQTS
-    if ([[risks objectAtIndex:SQTS_SHORT_JT] selected ])
+    if ([[self.risks objectAtIndex:SQTS_SHORT_JT] selected ])
         ++score;
     // Clinical history points can only be received for one of next 3 selections
-    if ([[risks objectAtIndex:SQTS_ARREST] selected] ||[[risks objectAtIndex:SQTS_VT] selected])
+    if ([[self.risks objectAtIndex:SQTS_ARREST] selected] ||[[self.risks objectAtIndex:SQTS_VT] selected])
         score += 2;
-    else if ([[risks objectAtIndex:SQTS_SYNCOPE] selected])
+    else if ([[self.risks objectAtIndex:SQTS_SYNCOPE] selected])
         ++score;
-    if ([[risks objectAtIndex:SQTS_AFB] selected])
+    if ([[self.risks objectAtIndex:SQTS_AFB] selected])
         ++score;
     // Family history
     // points can only be received once in this section
-    if ([[risks objectAtIndex:SQTS_FH_SQTS] selected])
+    if ([[self.risks objectAtIndex:SQTS_FH_SQTS] selected])
         score += 2;
-    else if ([[risks objectAtIndex:SQTS_FH_SCD] selected] || 
-             [[risks objectAtIndex:SQTS_SIDS] selected])
+    else if ([[self.risks objectAtIndex:SQTS_FH_SCD] selected] || 
+             [[self.risks objectAtIndex:SQTS_SIDS] selected])
         ++score;
     // Genotype
-    if ([[risks objectAtIndex:SQTS_GENOTYPE] selected])
+    if ([[self.risks objectAtIndex:SQTS_GENOTYPE] selected])
         score += 2;
-    if ([[risks objectAtIndex:SQTS_MUTATION] selected])
+    if ([[self.risks objectAtIndex:SQTS_MUTATION] selected])
         ++score;
     
     [self displayResult:score];

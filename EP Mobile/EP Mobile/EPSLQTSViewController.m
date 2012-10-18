@@ -31,10 +31,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [qtcSegmentedControl setTitle:@"< 450" forSegmentAtIndex:0];
-    [qtcSegmentedControl setTitle:@"450" forSegmentAtIndex:1];
-    [qtcSegmentedControl setTitle:@"≥ 460" forSegmentAtIndex:2];
-    [qtcSegmentedControl setTitle:@"≥ 480" forSegmentAtIndex:3];
+    [self.qtcSegmentedControl setTitle:@"< 450" forSegmentAtIndex:0];
+    [self.qtcSegmentedControl setTitle:@"450" forSegmentAtIndex:1];
+    [self.qtcSegmentedControl setTitle:@"≥ 460" forSegmentAtIndex:2];
+    [self.qtcSegmentedControl setTitle:@"≥ 480" forSegmentAtIndex:3];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Torsade de pointes" withValue:20]];
@@ -86,12 +86,12 @@
     
     int score = 0;
     
-    if ([qtcSegmentedControl selectedSegmentIndex] == MILD_QTC_PROLONGATION
+    if ([self.qtcSegmentedControl selectedSegmentIndex] == MILD_QTC_PROLONGATION
          && [sexSegmentedControl selectedSegmentIndex] == MALE)
         score += 10;
-    else if ([qtcSegmentedControl selectedSegmentIndex] == MOD_QTC_PROLONGATION)
+    else if ([self.qtcSegmentedControl selectedSegmentIndex] == MOD_QTC_PROLONGATION)
         score += 20;
-    else if ([qtcSegmentedControl selectedSegmentIndex] == MARKED_QTC_PROLONGATION)
+    else if ([self.qtcSegmentedControl selectedSegmentIndex] == MARKED_QTC_PROLONGATION)
         score += 30;
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
