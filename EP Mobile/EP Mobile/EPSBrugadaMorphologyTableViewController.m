@@ -12,6 +12,9 @@
 #define LBBB_TAG 0
 #define RBBB_TAG 1
 
+#define IN_V1 1
+#define IN_V6 100
+
 @interface EPSBrugadaMorphologyTableViewController ()
 
 @end
@@ -37,19 +40,20 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    NSArray *lbbbArray = [[NSArray alloc] initWithObjects:@"R > 30 msec in V1 or V2", @"Onset to nadir S > 60 msec in V1 or V2", @"Notched or slurred S in V1 or V2",@"QR or QR in V6", nil];
-    NSArray *rbbbArray = [[NSArray alloc] initWithObjects:@"Monophasic R in V1", @"QR in V1", @"RS in V1", @"R to S ration < 1 in V6", @"Monophasic R in V6", nil];
+    NSMutableArray *lbbbRisks = [[NSMutableArray alloc] initWithObjects:
+                                 [[EPSRiskFactor alloc] initWith:@"R > 30 msec in V1 or V2" withValue:IN_V1],
+                                 [[EPSRiskFactor alloc] initWith:@"Onset to nadir S > 60 msec in V1 or V2" withValue:IN_V1],
+                                 [[EPSRiskFactor alloc] initWith:@"Notched or slurred S in V1 or V2" withValue:IN_V1],
+                                 [[EPSRiskFactor alloc] initWith:@"QR or QR in V6" withValue:IN_V6],
+                                 nil];
+    NSMutableArray *rbbbRisks = [[NSMutableArray alloc] initWithObjects:
+                          [[EPSRiskFactor alloc] initWith:@"Monophasic R in V1" withValue:IN_V1],
+                          [[EPSRiskFactor alloc] initWith:@"QR in V1" withValue:IN_V1],
+                          [[EPSRiskFactor alloc] initWith:@"RS in V1" withValue:IN_V1],
+                          [[EPSRiskFactor alloc] initWith:@"R to S ratio < 1 in V6" withValue:IN_V6],
+                          [[EPSRiskFactor alloc] initWith:@"Monophasic R in V6" withValue:IN_V6],
+                          nil];
     
-    NSMutableArray *lbbbRisks = [[NSMutableArray alloc] init];
-    for (int i = 0; i < [lbbbArray count]; ++i) {
-        EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWith:[lbbbArray objectAtIndex:i] withValue:1];
-        [lbbbRisks addObject:risk];
-    }
-    NSMutableArray *rbbbRisks = [[NSMutableArray alloc] init];
-    for (int i = 0; i < [rbbbArray count]; ++i) {
-        EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWith:[rbbbArray objectAtIndex:i] withValue:1];
-        [rbbbRisks addObject:risk];
-    }
     if (self.view.tag == LBBB_TAG)
         self.list = lbbbRisks;
     else
@@ -78,10 +82,27 @@
 }
 
 - (void)calculateScore {
-    NSLog(@"Calculating score...");
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:@"test" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    int count = 0;
+    for (int i = 0; i < [self.list count]; ++i)
+        if ([[self.list objectAtIndex:i] selected])
+            count += [[self.list objectAtIndex:i] points];
+    BOOL inV1 = count % 100 > 0;
+    BOOL inV6 = count / 100 > 0;
+    BOOL isVT = inV1 && inV6;
+    NSString *message = @"Wide Complex Tachycardia is most likely ";
+    NSString *sens = @".987";
+    NSString *spec = @".965";
+    if (isVT) {
+        message = [message stringByAppendingString:@"Ventricular Tachycardia"];
+    }
+    else
+        message = [message stringByAppendingString:@"Supraventricular Tachycardia"];
+    message = [message stringByAppendingFormat:@" (Sens=%@, Spec=%@) ", sens, spec];
+    
+    NSLog(@"Calculating score...%d", count);
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"WCT Result" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alertView show];
-
+    
 }
 
 #pragma mark - Table view data source
