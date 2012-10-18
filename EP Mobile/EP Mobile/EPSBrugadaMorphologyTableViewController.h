@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSBrugadaMorphologyTableViewController : UITableViewController
+@property (strong, nonatomic) NSMutableArray *list;
 
 @end
