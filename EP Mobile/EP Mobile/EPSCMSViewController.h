@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *efSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *hfClassSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITableView *criteriaTableView;
-@property (strong, nonatomic) NSMutableArray *risks;
+@property (strong, nonatomic) NSMutableArray *list;
+@property (strong, nonatomic) NSArray *headers;
 @end

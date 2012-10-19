@@ -168,7 +168,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"QTCell"];
     }
-    cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0f];
     int offset = [self calculateOffset:indexPath.section];
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];

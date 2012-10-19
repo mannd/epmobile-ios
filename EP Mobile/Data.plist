@@ -200,5 +200,87 @@
 			</array>
 		</array>
 	</array>
+	<key>CMS</key>
+	<dict>
+		<key>SectionHeaders</key>
+		<array>
+			<string>Secondary Prevention</string>
+			<string>Primary Prevention</string>
+			<string>Exclusions</string>
+		</array>
+		<key>Sections</key>
+		<array>
+			<array>
+				<array>
+					<string>Documented cardiac arrest, without transient or reversible cause</string>
+					<integer>0</integer>
+				</array>
+				<array>
+					<string>Documented sustained VT/VF, either spontaneous or induced at EPS, not associated with an acute MI, and without transient or reversible cause</string>
+					<integer>1</integer>
+				</array>
+			</array>
+			<array>
+				<array>
+					<string>Documented familial or inherited condition with a high risk of life-threatening VT, e.g. LQTS or HCM</string>
+					<integer>2</integer>
+				</array>
+				<array>
+					<string>Ischemic cardiomyopathy</string>
+					<integer>3</integer>
+				</array>
+				<array>
+					<string>Nonischemic cardiomyopathy</string>
+					<integer>4</integer>
+				</array>
+				<array>
+					<string>CM duration &gt; 3 months</string>
+					<integer>5</integer>
+				</array>
+				<array>
+					<string>Documented prior MI</string>
+					<integer>6</integer>
+				</array>
+				<array>
+					<string>Inducible sustained VT/VF at EPS</string>
+					<integer>7</integer>
+				</array>
+				<array>
+					<string>QRS duration ≥ 120 msec</string>
+					<integer>8</integer>
+				</array>
+			</array>
+			<array>
+				<array>
+					<string>Cardiogenic shock or symptomatic hypotension</string>
+					<integer>9</integer>
+				</array>
+				<array>
+					<string>CABG or PCI within past 3 months</string>
+					<integer>10</integer>
+				</array>
+				<array>
+					<string>Acute MI within past 40 days</string>
+					<integer>11</integer>
+				</array>
+				<array>
+					<string>EPS performed within 4 weeks post-MI</string>
+					<integer>12</integer>
+				</array>
+				<array>
+					<string>Symptoms or findings that would make patient a candidate for revascularization</string>
+					<integer>13</integer>
+				</array>
+				<array>
+					<string>Non-cardiac disease with likelihood of survival &lt; 1 year</string>
+					<integer>14</integer>
+				</array>
+				<array>
+					<string>Irreversible brain damage from preexisting cerebral disease</string>
+					<integer>15</integer>
+				</array>
+			</array>
+		</array>
+	</dict>
 </dict>
 </plist>
