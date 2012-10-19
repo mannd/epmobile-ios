@@ -13,6 +13,7 @@
 @end
 
 @implementation EPSAVAnnulusViewController
+@synthesize mapImageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +28,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    // all these labels will have to be tweaked with GIMP
+//    UIImage *testView = [UIImage imageNamed:@"asap.png"];
+//    UIImageView *overlayImageView = [[UIImageView alloc] initWithImage:testView];
+//
+//    [self.mapImageView addSubview:overlayImageView];
+    
 }
 
 - (void)viewDidUnload
 {
+    [self setMapImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

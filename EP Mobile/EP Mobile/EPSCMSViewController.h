@@ -15,4 +15,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *criteriaTableView;
 @property (strong, nonatomic) NSMutableArray *list;
 @property (strong, nonatomic) NSArray *headers;
+- (IBAction)calculateResult:(id)sender;
+@property (strong, nonatomic) NSMutableSet *checkedItems;
 @end

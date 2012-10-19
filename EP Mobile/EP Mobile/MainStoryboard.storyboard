@@ -2292,7 +2292,11 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Calculate" id="hEy-dF-l3z"/>
+                                    <barButtonItem title="Calculate" id="hEy-dF-l3z">
+                                        <connections>
+                                            <action selector="calculateResult:" destination="5Lf-aF-glM" id="yCD-Fb-c9J"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -2308,7 +2312,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhe-NH-Dng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="-1365"/>
+            <point key="canvasLocation" x="-98" y="-1361"/>
         </scene>
         <!--Tab Bar Controller - Morphology-->
         <scene sceneID="sG9-FN-jzK">
@@ -2495,10 +2499,13 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="AV Annulus" id="sPs-U4-Zla"/>
+                    <connections>
+                        <outlet property="mapImageView" destination="gWp-Vz-OiS" id="j1K-2r-TuS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1802" y="325"/>
+            <point key="canvasLocation" x="-2198" y="276"/>
         </scene>
         <!--BrugadaECG View Controller - Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
@@ -2553,7 +2560,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="86" width="280" height="313"/>
+                                <rect key="frame" x="20" y="86" width="280" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -2572,7 +2579,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-344" y="-1002"/>
+            <point key="canvasLocation" x="-340" y="-1287"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -3872,187 +3879,6 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <image name="rbbbmorphology.png" width="800" height="600"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
-    <classes>
-        <class className="EPSARVC2010TableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVC2010TableViewController.h"/>
-        </class>
-        <class className="EPSARVCTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVCTableViewController.h"/>
-        </class>
-        <class className="EPSAVAnnulusViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAVAnnulusViewController.h"/>
-        </class>
-        <class className="EPSAboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="aboutLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSBrugadaECGViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaECGViewController.h"/>
-        </class>
-        <class className="EPSBrugadaMorphologyTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaMorphologyTableViewController.h"/>
-        </class>
-        <class className="EPSCMSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCMSViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="criteriaTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="efSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="hfClassSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButton:"/>
-                <relationship kind="action" name="clearButton:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleSwitch:"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculate:"/>
-                <relationship kind="action" name="clear:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleCrUnits:"/>
-                <relationship kind="action" name="toggleSex:"/>
-                <relationship kind="action" name="toggleWeightUnits:"/>
-                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="creatinineUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
-        </class>
-        <class className="EPSLQTSDetailsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSDetailsTableViewController.h"/>
-        </class>
-        <class className="EPSLQTSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="EPSLVHTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLVHTableViewController.h"/>
-        </class>
-        <class className="EPSLongQTECGViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLongQTECGViewController.h"/>
-        </class>
-        <class className="EPSMainTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
-        </class>
-        <class className="EPSNotesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSNotesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="notesTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationBar"/>
-            </relationships>
-        </class>
-        <class className="EPSQTViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
-                <relationship kind="action" name="toggleInputType:"/>
-                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="intervalRateSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
-        </class>
-        <class className="EPSSimpleAlgorithmViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSSimpleAlgorithmViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButtonPushed:"/>
-                <relationship kind="action" name="noButtonPushed:"/>
-                <relationship kind="action" name="yesButtonPushed:"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="instructionsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="morphologyCriteriaButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="noButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yesButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EPSVTViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSVTViewController.h"/>
-        </class>
-        <class className="EPSWCTTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWCTTableViewController.h"/>
-        </class>
-        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="calculateButtonPressed:"/>
-                <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="toggleTabletSize:"/>
-                <relationship kind="action" name="toggleTargetRange:"/>
-                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tabletSizeSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="targetSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="EPSWarfarinDosingTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinDosingTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonPressed:"/>
-                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalWeeklyHighDose" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalWeeklyLowDose" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

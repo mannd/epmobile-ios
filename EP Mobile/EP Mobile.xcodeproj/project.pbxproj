@@ -21,6 +21,7 @@
 		8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */; };
 		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E0DD7881631B50500DDC4CC /* EPSCMSNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */; };
+		8E0DD78B1631E4AD00DDC4CC /* asap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0DD78A1631E4AD00DDC4CC /* asap.png */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */; };
@@ -100,6 +101,7 @@
 		8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAboutViewController.m; sourceTree = "<group>"; };
 		8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSNotes.h; sourceTree = "<group>"; };
 		8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSNotes.m; sourceTree = "<group>"; };
+		8E0DD78A1631E4AD00DDC4CC /* asap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asap.png; path = "../../../../Downloads/mannd-epmobile-6a76b95-1/res/drawable-mdpi/asap.png"; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
 		8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMainTableViewController.m; sourceTree = "<group>"; };
 		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E0DD78A1631E4AD00DDC4CC /* asap.png */,
 				8E9755B2161F71B900EAFD10 /* Settings.bundle */,
 				8E97559D1617C79D00EAFD10 /* epivt.png */,
 				8E09D05F15DC69E600756EA1 /* longqtecg.png */,
@@ -488,6 +491,7 @@
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
+				8E0DD78B1631E4AD00DDC4CC /* asap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

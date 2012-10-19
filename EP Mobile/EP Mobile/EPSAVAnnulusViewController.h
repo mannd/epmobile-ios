@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSAVAnnulusViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *mapImageView;
 
 @end

@@ -31,7 +31,7 @@
 #define ABSOLUTE_EXCLUSION 100
 #define POSSIBLE_INDICATION 200
 
-#define DEFAULT_CELL_HEIGHT 50
+#define DEFAULT_CELL_HEIGHT 60
 #define BIG_CELL_HEIGHT 80
 
 @interface EPSCMSViewController ()
@@ -44,6 +44,7 @@
 @synthesize criteriaTableView;
 @synthesize list;
 @synthesize headers;
+@synthesize checkedItems;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,6 +58,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.checkedItems = [[NSMutableSet alloc] init];
 	// Do any additional setup after loading the view.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
@@ -101,6 +103,7 @@
     [self setCriteriaTableView:nil];
     self.list = nil;
     self.headers = nil;
+    self.checkedItems = nil;
     [super viewDidUnload];
 }
 
@@ -115,6 +118,153 @@
         vc.key = @"CMSNotes";
     }
 }
+
+- (void)calculateCheckedItems {
+    [self.checkedItems removeAllObjects];
+    for (id object in self.list) {
+        for (id criteria in object)
+            if ([criteria selected]) {
+                NSNumber *value = [NSNumber numberWithInt:[criteria points]];
+                [self.checkedItems addObject:value];
+            }
+    }
+}
+
+- (BOOL)itemIsChecked:(int)item {
+    return [self.checkedItems containsObject:[NSNumber numberWithInt:item]];
+}
+
+- (BOOL)absoluteExclusion {
+    return ([self itemIsChecked:CARDIOGENIC_SHOCK] || [self itemIsChecked:REVASCULARIZATION_CANDIDATE] || [self itemIsChecked:BAD_PROGNOSIS]);
+}
+
+
+
+- (IBAction)calculateResult:(id)sender {
+    [self calculateCheckedItems];
+    int result = -1;
+    // according to NCD, brain damage excludes all indications
+    if ([self itemIsChecked:BRAIN_DAMAGE])
+        result = BRAIN_DAMAGE;
+    else if ([self itemIsChecked:CARDIAC_ARREST])
+        result = CARDIAC_ARREST;
+    else if ([self itemIsChecked:SUS_VT])
+        result = SUS_VT;
+    else if ([self absoluteExclusion])
+        result = ABSOLUTE_EXCLUSION;
+    else if ([self itemIsChecked:FAMILIAL_CONDITION])
+        result = FAMILIAL_CONDITION;
+    else
+        result = POSSIBLE_INDICATION;
+    NSLog(@"CMS result = %d", result);
+    [self showResults:[self getResultMessage:result]];
+}
+
+- (void)showResults:(NSString *)message {
+    NSString *details = message;
+    NSString *title = @"CMS ICD Criteria";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    
+    
+}
+
+- (NSString *)getResultMessage:(int)result {
+    NSString *icdApprovedMessage = @"ICD implantation appears to meet CMS guidelines.";
+    NSString *icdNotApprovedMessage = @"ICD implantation does NOT meet CMS guidelines.";
+    NSString *crtApprovedMessage = @"\nUse of a CRT-ICD may be indicated.";
+    NSString *message = @"";
+    if (result == BRAIN_DAMAGE) {
+        message = [message stringByAppendingString:icdNotApprovedMessage];
+        message = [message stringByAppendingString:@"\nIrreversible brain damage is an absolute exclusion for ICD implantation."];
+        return message;
+    }
+    BOOL efLessThan30 = [self.efSegmentedControl selectedSegmentIndex] == 2;
+    BOOL efLessThan35 = efLessThan30 || [self.efSegmentedControl selectedSegmentIndex] == 1;
+    BOOL nyhaIIorIII = [self.hfClassSegmentedControl selectedSegmentIndex] == 1 || [self.hfClassSegmentedControl selectedSegmentIndex] == 2;
+    BOOL nyhaIV = [self.hfClassSegmentedControl selectedSegmentIndex] == 3;
+    BOOL nyhaIIIorIV = nyhaIV || [self.hfClassSegmentedControl selectedSegmentIndex] == 2;
+    BOOL crtCriteriaMet = nyhaIIIorIV && [self itemIsChecked:QRS_DURATION_LONG] && efLessThan35;
+    // no ef or NHYA class needed for secondary prevention
+    if (result == CARDIAC_ARREST || result == SUS_VT) {
+        message = [message stringByAppendingString:@"Secondary Prevention\n"];
+        message = [message stringByAppendingString:icdApprovedMessage];
+        if (crtCriteriaMet)
+            message = [message stringByAppendingString:crtApprovedMessage];
+        return message;
+    }
+    message = [message stringByAppendingString:@"Primary Prevention\n"];
+    // check absolute exclusions since they apply to all other indications
+    if (result == ABSOLUTE_EXCLUSION) {
+        message = [message stringByAppendingString:icdNotApprovedMessage];
+        message = [message stringByAppendingString:@"\nICD implantation has one or more exclusions"];
+        return message;
+    }
+    if (result == FAMILIAL_CONDITION) {
+        message = [message stringByAppendingString:icdApprovedMessage];
+        if (crtCriteriaMet)
+            message = [message stringByAppendingString:crtApprovedMessage];
+        return message;
+    }
+	// primary prevention except for familial condition needs ef and NYHA
+    // class (because NYHA class IV is an exclusion except for CRT)
+    // Since no radio buttons in iOS version, don't need to check to see
+    // if these are selected, like we do in Android version.
+    
+    // Now work out possible indications
+    BOOL indicated = NO;
+    // MADIT II -- note MADIT II explicitly excludes class IV,
+    // but Guideline 8 allows class IV if QRS wide
+    indicated = efLessThan30 && [self itemIsChecked:MI] && (!nyhaIV || crtCriteriaMet);
+	// MADIT
+    BOOL maditIndication = NO;
+    if (!indicated) {
+        indicated = efLessThan35 && [self itemIsChecked:MI] && [self itemIsChecked:INDUCIBLE_VT];
+        if (indicated)
+            maditIndication = true;
+    }
+	// SCD-Heft Ischemic CM
+    if (!indicated)
+        indicated = efLessThan35 && [self itemIsChecked:ISCHEMIC_CM]
+        && [self itemIsChecked:MI]
+        && (nyhaIIorIII || crtCriteriaMet);
+    // SCD-Heft Nonischemic CM
+	if (!indicated)
+        indicated = efLessThan35 && [self itemIsChecked:NONISCHEMIC_CM]
+        && (nyhaIIorIII || crtCriteriaMet)
+        && [self itemIsChecked:LONG_DURATION_CM];
+    
+    if (indicated) {
+        if ([self itemIsChecked:RECENT_MI]) {
+            message = [message stringByAppendingString:icdNotApprovedMessage];
+            message = [message stringByAppendingString:@"\nICD implantation is too soon post MI."];
+            // note that these indicated statements don't do anything anymore ?remove?
+            indicated = false;
+        } else if (maditIndication && [self itemIsChecked:RECENT_MI_EPS]) {
+            message = [message stringByAppendingString:icdNotApprovedMessage];
+            message = [message stringByAppendingString:@"\nEPS performed too soon post MI."];
+            indicated = false;
+        } else if ([self itemIsChecked:RECENT_CABG]) {
+            message = [message stringByAppendingString:icdNotApprovedMessage];
+            message = [message stringByAppendingString:@"\nICD implantation is too soon post myocardial revascularization"];
+            indicated = false;
+        } else if (crtCriteriaMet && nyhaIV) // CRT-ICD must be used for
+            // NYHA IV
+            message = [message stringByAppendingString:@"CRT-ICD implantation appears to meet CMS guidelines."];
+        else {
+            message = [message stringByAppendingString:icdApprovedMessage];
+            if (crtCriteriaMet)
+                message = [message stringByAppendingString:crtApprovedMessage];
+        }
+    } else
+        message = [message stringByAppendingString:icdNotApprovedMessage];
+
+    
+    
+    return message;
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -187,6 +337,7 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 
 @end
