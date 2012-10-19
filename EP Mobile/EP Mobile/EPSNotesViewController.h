@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSNotesViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 @property (strong, nonatomic) NSString *key;
 @property (strong, nonatomic) IBOutlet UINavigationBar *titleBar;
 @property (strong, nonatomic) IBOutlet UILabel *headerLabel;
+@property (strong, nonatomic) IBOutlet UITextView *notesTextView;
 
 - (IBAction)doneButtonPressed:(id)sender;
 

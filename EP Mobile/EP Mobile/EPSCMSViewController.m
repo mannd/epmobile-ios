@@ -7,6 +7,8 @@
 //
 
 #import "EPSCMSViewController.h"
+#import "EPSCMSNotes.h"
+#import "EPSNotesViewController.h"
 
 @interface EPSCMSViewController ()
 
@@ -34,6 +36,9 @@
     [self.efSegmentedControl setTitle:@">35"forSegmentAtIndex:0];
         [self.efSegmentedControl setTitle:@">30&≤35"forSegmentAtIndex:1];
         [self.efSegmentedControl setTitle:@"≤30"forSegmentAtIndex:2];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,4 +54,17 @@
     self.risks = nil;
     [super viewDidUnload];
 }
+
+- (void)showNotes {
+    [self performSegueWithIdentifier:@"CMSNotesSegue" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"CMSNotesSegue"]) {
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = @"CMSNotes";
+    }
+}
+
 @end

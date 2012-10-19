@@ -494,7 +494,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="254"/>
+            <point key="canvasLocation" x="-567" y="174"/>
         </scene>
         <!--View Controller - VT-->
         <scene sceneID="bq8-Pb-GWV">
@@ -1078,7 +1078,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2689" y="-954"/>
+            <point key="canvasLocation" x="-2017" y="-154"/>
         </scene>
         <!--Tab Bar Controller - LQTS Subtypes-->
         <scene sceneID="pmf-U3-p8F">
@@ -1301,7 +1301,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umm-np-Lbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2655" y="-880"/>
+            <point key="canvasLocation" x="-3655" y="-544"/>
         </scene>
         <!--Table View Controller - LQT 3-->
         <scene sceneID="NkL-gw-vQK">
@@ -1476,7 +1476,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2551" y="-929"/>
+            <point key="canvasLocation" x="-2311" y="-1065"/>
         </scene>
         <!--LongQTECG View Controller - LQTS ECG Patterns-->
         <scene sceneID="I94-Wk-eUW">
@@ -1497,7 +1497,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2706" y="-900"/>
+            <point key="canvasLocation" x="-2362" y="-564"/>
         </scene>
         <!--Table View Controller - LVH-->
         <scene sceneID="s8B-nf-m3V">
@@ -1922,7 +1922,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2599" y="-1975"/>
+            <point key="canvasLocation" x="-2567" y="-2239"/>
         </scene>
         <!--View Controller - R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
@@ -2019,7 +2019,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQD-ug-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2721" y="-1031"/>
+            <point key="canvasLocation" x="-3297" y="-551"/>
         </scene>
         <!--Table View Controller - ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
@@ -2174,12 +2174,11 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-862" y="-211"/>
+            <point key="canvasLocation" x="-274" y="1385"/>
         </scene>
         <!--Brugada Morphology Table View Controller - LBBB in V1-->
         <scene sceneID="n6J-Ns-GoM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E5b-Gs-4ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="grW-sJ-dLw" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6p7-DV-f9z">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
@@ -2204,6 +2203,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     </tableView>
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="EmL-ZL-mbi"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5b-Gs-4ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1238" y="-413"/>
         </scene>
@@ -2292,11 +2292,12 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="criteriaTableView" destination="Cyb-Q4-P68" id="W2k-wd-fiQ"/>
                         <outlet property="efSegmentedControl" destination="cjk-t1-GJ8" id="BX3-AB-UA4"/>
                         <outlet property="hfClassSegmentedControl" destination="5sX-AV-8s6" id="YfD-mp-8G1"/>
+                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="CMSNotesSegue" modalTransitionStyle="flipHorizontal" id="sIb-ay-0FY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhe-NH-Dng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031" y="422"/>
+            <point key="canvasLocation" x="2" y="-988"/>
         </scene>
         <!--Tab Bar Controller - Morphology-->
         <scene sceneID="sG9-FN-jzK">
@@ -2524,31 +2525,15 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn"/>
+                                    <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
+                                            <connections>
+                                                <action selector="doneButtonPressed:" destination="PQv-Iu-QYe" id="Lk1-LF-KP2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="46W-lj-NcM">
-                                <rect key="frame" x="20" y="86" width="280" height="309"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kAe-wt-Vwb">
-                                <rect key="frame" x="124" y="403" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doneButtonPressed:" destination="PQv-Iu-QYe" eventType="touchUpInside" id="db4-WM-evi"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="EIn-cj-Io0">
                                 <rect key="frame" x="11" y="57" width="298" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2556,18 +2541,27 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="1Vx-uc-pdM">
+                                <rect key="frame" x="20" y="86" width="280" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="headerLabel" destination="EIn-cj-Io0" id="FgF-m9-hGf"/>
-                        <outlet property="notesLabel" destination="46W-lj-NcM" id="GpT-fo-c3D"/>
+                        <outlet property="notesTextView" destination="1Vx-uc-pdM" id="bsp-Mc-Bxc"/>
                         <outlet property="titleBar" destination="8rj-Bv-2Q2" id="JrZ-nx-q4i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-609" y="-785"/>
+            <point key="canvasLocation" x="-344" y="-1002"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -2606,7 +2600,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3383" y="-308"/>
+            <point key="canvasLocation" x="-3225" y="-324"/>
         </scene>
         <!--Tc Calculator View Controller - QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
@@ -3409,7 +3403,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3292" y="294"/>
+            <point key="canvasLocation" x="-3297" y="1110"/>
         </scene>
         <!--Table View Controller - Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -3958,7 +3952,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
             <relationships>
                 <relationship kind="action" name="doneButtonPressed:"/>
                 <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="notesTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="titleBar" candidateClass="UINavigationBar"/>
             </relationships>
         </class>
@@ -4010,8 +4004,10 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="calculateButtonPressed:"/>
                 <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="action" name="toggleTabletSize:"/>
                 <relationship kind="action" name="toggleTargetRange:"/>
                 <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
@@ -4055,9 +4051,9 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9RH-WQ-qQ2"/>
-        <segue reference="BtS-Mb-lIg"/>
-        <segue reference="oIL-n2-cNM"/>
+        <segue reference="sIb-ay-0FY"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="LxC-Ko-A9I"/>
+        <segue reference="BtS-Mb-lIg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,16 +11,17 @@
 #import "EPSOutFlowTractVTNotes.h"
 #import "EPSAnnularVTNotes.h"
 #import "EPSWarfarinNotes.h"
+#import "EPSCMSNotes.h"
 
 @interface EPSNotesViewController ()
 
 @end
 
 @implementation EPSNotesViewController
-@synthesize notesLabel;
 @synthesize key;
 @synthesize titleBar;
 @synthesize headerLabel;
+@synthesize notesTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,7 +46,9 @@
         notes = [[EPSBrugadaNotes alloc] init];
     else if ([self.key isEqualToString:@"WarfarinNotes"])
         notes = [[EPSWarfarinNotes alloc] init];
-    [self.notesLabel setText:[notes noteText]];
+    else if ([self.key isEqualToString:@"CMSNotes"])
+        notes = [[EPSCMSNotes alloc] init];
+    [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
 }
@@ -53,9 +56,9 @@
 - (void)viewDidUnload
 {
     self.key = nil;
-    [self setNotesLabel:nil];
     [self setTitleBar:nil];
     [self setHeaderLabel:nil];
+    [self setNotesTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
