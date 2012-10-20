@@ -22,6 +22,10 @@
 		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E0DD7881631B50500DDC4CC /* EPSCMSNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */; };
 		8E0DD78B1631E4AD00DDC4CC /* asap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0DD78A1631E4AD00DDC4CC /* asap.png */; };
+		8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */; };
+		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
+		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
+		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */; };
@@ -102,6 +106,14 @@
 		8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSNotes.h; sourceTree = "<group>"; };
 		8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSNotes.m; sourceTree = "<group>"; };
 		8E0DD78A1631E4AD00DDC4CC /* asap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asap.png; path = "../../../../Downloads/mannd-epmobile-6a76b95-1/res/drawable-mdpi/asap.png"; sourceTree = "<group>"; };
+		8E0DD78C16320E0D00DDC4CC /* EPSArrudaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSArrudaAlgorithm.h; sourceTree = "<group>"; };
+		8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSArrudaAlgorithm.m; sourceTree = "<group>"; };
+		8E0DD78F163211B800DDC4CC /* EPSWPWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWPWTableViewController.h; sourceTree = "<group>"; };
+		8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWPWTableViewController.m; sourceTree = "<group>"; };
+		8E0DD79216321A4300DDC4CC /* EPSModifiedArrudaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSModifiedArrudaAlgorithm.h; sourceTree = "<group>"; };
+		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
+		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
+		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
 		8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMainTableViewController.m; sourceTree = "<group>"; };
 		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -226,6 +238,12 @@
 				8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */,
 				8E815D42162F448B001025ED /* EPSBrugadaMorphologyTableViewController.h */,
 				8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */,
+				8E0DD78C16320E0D00DDC4CC /* EPSArrudaAlgorithm.h */,
+				8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */,
+				8E0DD79216321A4300DDC4CC /* EPSModifiedArrudaAlgorithm.h */,
+				8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */,
+				8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */,
+				8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -266,6 +284,8 @@
 				8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */,
 				8E815D3A162EE2F0001025ED /* EPSWCTTableViewController.h */,
 				8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */,
+				8E0DD78F163211B800DDC4CC /* EPSWPWTableViewController.h */,
+				8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */,
 			);
 			name = "Table View Controllers";
 			sourceTree = "<group>";
@@ -562,6 +582,10 @@
 				8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */,
 				8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */,
 				8E0DD7881631B50500DDC4CC /* EPSCMSNotes.m in Sources */,
+				8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */,
+				8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */,
+				8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */,
+				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

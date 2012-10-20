@@ -90,11 +90,6 @@ const int notchingQInferiorLeadsStep = 4;
     return YES;
 }
 
-- (NSString *)step1 {
-    return [self getQuestion:1];
-//    return @"Precordial transition (first precordial lead with R > S) in V1 or V2 with R or Rs pattern in V2 to V5 (R/S > 3 in V2-V4)?";
-}
-
 - (NSString *)getQuestion:(int)step {
     NSString *question = nil;
     switch (step) {

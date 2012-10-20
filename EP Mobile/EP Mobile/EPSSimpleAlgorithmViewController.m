@@ -12,10 +12,16 @@
 #import "EPSOutflowVTAlgorithm.h"
 #import "EPSAnnularVTAlgorithm.h"
 #import "EPSBrugadaWCTAlgorithm.h"
+#import "EPSArrudaAlgorithm.h"
+#import "EPSModifiedArrudaAlgorithm.h"
+#import "EPSMilsteinAlgorithm.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
 #define BRUGADA_WCT @"BrugadaWCT"
+#define ARRUDA_WPW @"ArrudaWPW"
+#define MILSTEIN_WPW @"MilsteinWPW"
+#define MODIFIED_ARRUDA_WPW @"ModifiedArrudaWPW"
 
 @interface EPSSimpleAlgorithmViewController ()
 
@@ -53,6 +59,12 @@
         algorithm = [[EPSAnnularVTAlgorithm alloc] init];
     else if ([self.algorithmName isEqualToString:BRUGADA_WCT])
         algorithm = [[EPSBrugadaWCTAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:ARRUDA_WPW])
+        algorithm = [[EPSArrudaAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:MODIFIED_ARRUDA_WPW])
+        algorithm = [[EPSModifiedArrudaAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:MILSTEIN_WPW])
+        algorithm = [[EPSMilsteinAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
         
     // ...
