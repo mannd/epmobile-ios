@@ -21,7 +21,6 @@
 		8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */; };
 		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E0DD7881631B50500DDC4CC /* EPSCMSNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */; };
-		8E0DD78B1631E4AD00DDC4CC /* asap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0DD78A1631E4AD00DDC4CC /* asap.png */; };
 		8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */; };
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
@@ -31,6 +30,20 @@
 		8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */; };
 		8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */; };
 		8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */; };
+		8E4B27AC1633449100BF1F2C /* asap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AB1633449100BF1F2C /* asap.png */; };
+		8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AD1633459300BF1F2C /* epicardialap.png */; };
+		8E4B27BB1633459400BF1F2C /* lalap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AE1633459300BF1F2C /* lalap.png */; };
+		8E4B27BC1633459400BF1F2C /* llap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AF1633459300BF1F2C /* llap.png */; };
+		8E4B27BD1633459400BF1F2C /* lpap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B01633459300BF1F2C /* lpap.png */; };
+		8E4B27BE1633459400BF1F2C /* lplap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B11633459300BF1F2C /* lplap.png */; };
+		8E4B27BF1633459400BF1F2C /* msap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B21633459300BF1F2C /* msap.png */; };
+		8E4B27C01633459400BF1F2C /* psmaap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B31633459300BF1F2C /* psmaap.png */; };
+		8E4B27C11633459400BF1F2C /* pstaap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B41633459300BF1F2C /* pstaap.png */; };
+		8E4B27C21633459400BF1F2C /* raap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B51633459300BF1F2C /* raap.png */; };
+		8E4B27C31633459400BF1F2C /* ralap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B61633459300BF1F2C /* ralap.png */; };
+		8E4B27C41633459400BF1F2C /* rlap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B71633459400BF1F2C /* rlap.png */; };
+		8E4B27C51633459400BF1F2C /* rpap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B81633459400BF1F2C /* rpap.png */; };
+		8E4B27C61633459400BF1F2C /* rplap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B91633459400BF1F2C /* rplap.png */; };
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
@@ -105,7 +118,6 @@
 		8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAboutViewController.m; sourceTree = "<group>"; };
 		8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSNotes.h; sourceTree = "<group>"; };
 		8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSNotes.m; sourceTree = "<group>"; };
-		8E0DD78A1631E4AD00DDC4CC /* asap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asap.png; path = "../../../../Downloads/mannd-epmobile-6a76b95-1/res/drawable-mdpi/asap.png"; sourceTree = "<group>"; };
 		8E0DD78C16320E0D00DDC4CC /* EPSArrudaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSArrudaAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD78F163211B800DDC4CC /* EPSWPWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWPWTableViewController.h; sourceTree = "<group>"; };
@@ -123,6 +135,20 @@
 		8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinCalculatorViewController.m; sourceTree = "<group>"; };
 		8E44006015BC4B22009169DC /* EPSWarfarinDosingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDosingTableViewController.h; sourceTree = "<group>"; };
 		8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDosingTableViewController.m; sourceTree = "<group>"; };
+		8E4B27AB1633449100BF1F2C /* asap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asap.png; path = ../asap.png; sourceTree = "<group>"; };
+		8E4B27AD1633459300BF1F2C /* epicardialap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epicardialap.png; sourceTree = "<group>"; };
+		8E4B27AE1633459300BF1F2C /* lalap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lalap.png; sourceTree = "<group>"; };
+		8E4B27AF1633459300BF1F2C /* llap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = llap.png; sourceTree = "<group>"; };
+		8E4B27B01633459300BF1F2C /* lpap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lpap.png; sourceTree = "<group>"; };
+		8E4B27B11633459300BF1F2C /* lplap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lplap.png; sourceTree = "<group>"; };
+		8E4B27B21633459300BF1F2C /* msap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msap.png; sourceTree = "<group>"; };
+		8E4B27B31633459300BF1F2C /* psmaap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psmaap.png; sourceTree = "<group>"; };
+		8E4B27B41633459300BF1F2C /* pstaap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pstaap.png; sourceTree = "<group>"; };
+		8E4B27B51633459300BF1F2C /* raap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raap.png; sourceTree = "<group>"; };
+		8E4B27B61633459300BF1F2C /* ralap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ralap.png; sourceTree = "<group>"; };
+		8E4B27B71633459400BF1F2C /* rlap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rlap.png; sourceTree = "<group>"; };
+		8E4B27B81633459400BF1F2C /* rpap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rpap.png; sourceTree = "<group>"; };
+		8E4B27B91633459400BF1F2C /* rplap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rplap.png; sourceTree = "<group>"; };
 		8E511E5915BC527300CF83B5 /* EPSRiskScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskScoreTableViewController.h; sourceTree = "<group>"; };
 		8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskScoreTableViewController.m; sourceTree = "<group>"; };
 		8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskFactor.h; sourceTree = "<group>"; };
@@ -383,9 +409,22 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E0DD78A1631E4AD00DDC4CC /* asap.png */,
+				8E4B27AD1633459300BF1F2C /* epicardialap.png */,
+				8E4B27AE1633459300BF1F2C /* lalap.png */,
+				8E4B27AF1633459300BF1F2C /* llap.png */,
+				8E4B27B01633459300BF1F2C /* lpap.png */,
+				8E4B27B11633459300BF1F2C /* lplap.png */,
+				8E4B27B21633459300BF1F2C /* msap.png */,
+				8E4B27B31633459300BF1F2C /* psmaap.png */,
+				8E4B27B41633459300BF1F2C /* pstaap.png */,
+				8E4B27B51633459300BF1F2C /* raap.png */,
+				8E4B27B61633459300BF1F2C /* ralap.png */,
+				8E4B27B71633459400BF1F2C /* rlap.png */,
+				8E4B27B81633459400BF1F2C /* rpap.png */,
+				8E4B27B91633459400BF1F2C /* rplap.png */,
 				8E9755B2161F71B900EAFD10 /* Settings.bundle */,
 				8E97559D1617C79D00EAFD10 /* epivt.png */,
+				8E4B27AB1633449100BF1F2C /* asap.png */,
 				8E09D05F15DC69E600756EA1 /* longqtecg.png */,
 				8E06012015DB39D800BB7550 /* rbbbmorphology.png */,
 				8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */,
@@ -511,7 +550,20 @@
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
-				8E0DD78B1631E4AD00DDC4CC /* asap.png in Resources */,
+				8E4B27AC1633449100BF1F2C /* asap.png in Resources */,
+				8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */,
+				8E4B27BB1633459400BF1F2C /* lalap.png in Resources */,
+				8E4B27BC1633459400BF1F2C /* llap.png in Resources */,
+				8E4B27BD1633459400BF1F2C /* lpap.png in Resources */,
+				8E4B27BE1633459400BF1F2C /* lplap.png in Resources */,
+				8E4B27BF1633459400BF1F2C /* msap.png in Resources */,
+				8E4B27C01633459400BF1F2C /* psmaap.png in Resources */,
+				8E4B27C11633459400BF1F2C /* pstaap.png in Resources */,
+				8E4B27C21633459400BF1F2C /* raap.png in Resources */,
+				8E4B27C31633459400BF1F2C /* ralap.png in Resources */,
+				8E4B27C41633459400BF1F2C /* rlap.png in Resources */,
+				8E4B27C51633459400BF1F2C /* rpap.png in Resources */,
+				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
