@@ -39,6 +39,7 @@
 - (void)viewDidUnload
 {
     [self setMapImageView:nil];
+    [self setAsapImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

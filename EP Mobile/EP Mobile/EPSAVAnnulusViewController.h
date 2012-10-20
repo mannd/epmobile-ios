@@ -10,5 +10,6 @@
 
 @interface EPSAVAnnulusViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *mapImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *asapImageView;
 
 @end

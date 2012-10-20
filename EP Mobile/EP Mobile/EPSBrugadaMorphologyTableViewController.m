@@ -61,6 +61,10 @@
     
     
     
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
     UIBarButtonItem *editButton = self.tabBarController.navigationItem.rightBarButtonItem;
     [editButton setTarget:self];
     [editButton setAction:@selector(calculateScore)];
@@ -82,6 +86,7 @@
 }
 
 - (void)calculateScore {
+    
     int count = 0;
     for (int i = 0; i < [self.list count]; ++i)
         if ([[self.list objectAtIndex:i] selected])
@@ -103,6 +108,7 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"WCT Result" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alertView show];
     
+    
 }
 
 #pragma mark - Table view data source
@@ -121,8 +127,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"BrugadaMorphologyCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     NSUInteger row = [indexPath row];
