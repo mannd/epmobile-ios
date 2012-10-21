@@ -2528,6 +2528,46 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <rect key="frame" x="0.0" y="107" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" id="AHB-u6-JtR">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" id="SEs-Ji-GrW">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" id="9I9-Uu-U8T">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" id="Sff-vt-pYQ">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" id="gco-M8-5yJ">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" id="Fc8-nj-Uaz">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" id="xHX-bV-EvX">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" id="QBL-OF-jfK">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" id="IWU-ux-lqO">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" id="rGc-dy-KlA">
+                                <rect key="frame" x="0.0" y="107" width="320" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -2537,13 +2577,23 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <outlet property="epicardialapImageView" destination="fVz-e0-JTT" id="liH-4L-bql"/>
                         <outlet property="lalapImageView" destination="0rb-g4-jki" id="TOO-hy-dEp"/>
                         <outlet property="llapImageView" destination="mIa-S1-Y7q" id="px7-6r-hME"/>
+                        <outlet property="lpapImageView" destination="AHB-u6-JtR" id="aIh-gD-b4l"/>
+                        <outlet property="lplapImageView" destination="SEs-Ji-GrW" id="mqb-jS-bCZ"/>
                         <outlet property="mapImageView" destination="gWp-Vz-OiS" id="j1K-2r-TuS"/>
                         <outlet property="mapLocationLabel" destination="kKB-Ed-jco" id="Os3-lo-pdu"/>
+                        <outlet property="msapImageView" destination="9I9-Uu-U8T" id="OgN-bA-gyd"/>
+                        <outlet property="psmaapImageView" destination="Sff-vt-pYQ" id="sq7-Ab-v9f"/>
+                        <outlet property="pstaapImageView" destination="gco-M8-5yJ" id="N5k-Bu-ZZJ"/>
+                        <outlet property="raapImageView" destination="Fc8-nj-Uaz" id="7eM-QJ-rdD"/>
+                        <outlet property="ralapImageView" destination="xHX-bV-EvX" id="8NH-6g-PNL"/>
+                        <outlet property="rlapImageView" destination="QBL-OF-jfK" id="zWF-6o-NH8"/>
+                        <outlet property="rpapImageView" destination="rGc-dy-KlA" id="QWp-Z3-d7q"/>
+                        <outlet property="rplapImageView" destination="IWU-ux-lqO" id="ez2-YR-BD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1023" y="830"/>
+            <point key="canvasLocation" x="-1095" y="818"/>
         </scene>
         <!--BrugadaECG View Controller - Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
@@ -3916,9 +3966,19 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <image name="lbbbmorphology.png" width="800" height="651"/>
         <image name="llap.png" width="452" height="400"/>
         <image name="longqtecg.png" width="470" height="179"/>
+        <image name="lpap.png" width="452" height="400"/>
+        <image name="lplap.png" width="452" height="400"/>
         <image name="modgrayavannulus.png" width="452" height="400"/>
+        <image name="msap.png" width="452" height="400"/>
+        <image name="psmaap.png" width="452" height="400"/>
+        <image name="pstaap.png" width="452" height="400"/>
+        <image name="raap.png" width="452" height="400"/>
+        <image name="ralap.png" width="452" height="400"/>
         <image name="rbbbicon.png" width="25" height="24"/>
         <image name="rbbbmorphology.png" width="800" height="600"/>
+        <image name="rlap.png" width="452" height="400"/>
+        <image name="rpap.png" width="452" height="400"/>
+        <image name="rplap.png" width="452" height="400"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <classes>
@@ -3935,8 +3995,18 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 <relationship kind="outlet" name="epicardialapImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lalapImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="llapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lpapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lplapImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="mapImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="mapLocationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="msapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="psmaapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="pstaapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="raapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ralapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rlapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rpapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rplapImageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="EPSAboutViewController" superclassName="UIViewController">
