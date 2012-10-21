@@ -195,73 +195,89 @@
 - (NSString *)outcome:(int)step {
     step %= SUCCESS_STEP;
     [self setMessageAndLocation:step];
-    return message;
+    return self.message;
+}
+
+- (NSString *)outcomeLocation1:(int)step {
+    step %= SUCCESS_STEP;
+    [self setMessageAndLocation:step];
+    return self.location1;
+}
+
+- (NSString *)outcomeLocation2:(int)step {
+    step %= SUCCESS_STEP;
+    [self setMessageAndLocation:step];
+    return self.location2;
 }
 
 - (void)setMessageAndLocation:(int)step {
+    // nillify lingering messages and locations
+    self.message = nil;
+    self.location1 = nil;
+    self.location2 = nil;
     switch (step) {
 		case 9:
-			message = @"Left Posterolateral or Left Lateral";
-            location1 = LPL;
-			location2 = LL;
+			self.message = @"Left Posterolateral or Left Lateral";
+            self.location1 = LPL;
+			self.location2 = LL;
 			break;
 		case 10:
-			message = @"Left Lateral";
-			location1 = LL;
+			self.message = @"Left Lateral";
+			self.location1 = LL;
 			break;
 		case 11:
-			message = @"Left Anterolateral";
-			location1 = LAL;
+			self.message = @"Left Anterolateral";
+			self.location1 = LAL;
 			break;
 		case 12:
-			message = @"Left Posterior or Posteroseptal Tricuspid Annulus";
-			location1 = LP;
-			location2 = PSTA;
+			self.message = @"Left Posterior or Posteroseptal Tricuspid Annulus";
+			self.location1 = LP;
+			self.location2 = PSTA;
 			break;
 		case 4:
-			message = @"Left Posterior or Left Posterolateral";
-			location1 = LP;
-			location2 = LPL;
+			self.message = @"Left Posterior or Left Posterolateral";
+			self.location1 = LP;
+			self.location2 = LPL;
 			break;
 		case 5:
-			message = @"Left Lateral or Left Anterolateral";
-			location1 = LL;
-			location2 = LAL;
+			self.message = @"Left Lateral or Left Anterolateral";
+			self.location1 = LL;
+			self.location2 = LAL;
 			break;
 		case 14:
-			message = @"Epicardial: Coronary Sinus or Middle Cardiac Vein";
-			location1 = SUBEPI;
+			self.message = @"Epicardial: Coronary Sinus or Middle Cardiac Vein";
+			self.location1 = SUBEPI;
 			break;
 		case 19:
-			message = @"Posteroseptal Tricuspid Annulus or Posteroseptal Mitral Annulus";
-			location1 = PSTA;
-			location2 = PSMA;
+			self.message = @"Posteroseptal Tricuspid Annulus or Posteroseptal Mitral Annulus";
+			self.location1 = PSTA;
+			self.location2 = PSMA;
 			break;
 		case 21:
-			message = @"Anteroseptal";
-			location1 = AS;
+			self.message = @"Anteroseptal";
+			self.location1 = AS;
 			break;
 		case 23:
-			message = @"Posteroseptal Tricuspid Annulus";
-			location1 = PSTA;
+			self.message = @"Posteroseptal Tricuspid Annulus";
+			self.location1 = PSTA;
 			break;
 		case 22:
-			message = @"Midseptal Tricuspid Annulus";
-			location1 = MSTA;
+			self.message = @"Midseptal Tricuspid Annulus";
+			self.location1 = MSTA;
 			break;
 		case 30:
-			message = @"Right Anterior or Right Anterolateral";
-			location1 = RA;
-			location2 = RAL;
+			self.message = @"Right Anterior or Right Anterolateral";
+			self.location1 = RA;
+			self.location2 = RAL;
 			break;
 		case 29:
-			message = @"Right Lateral";
-			location1 = RL;
+			self.message = @"Right Lateral";
+			self.location1 = RL;
 			break;
 		case 28:
-			message = @"Right Posterior or Right Posterolateral";
-			location1 = RP;
-			location2 = RPL;
+			self.message = @"Right Posterior or Right Posterolateral";
+			self.location1 = RP;
+			self.location2 = RPL;
 			break;
     }
     

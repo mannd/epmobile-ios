@@ -151,10 +151,9 @@
     else if ([segueIdentifier isEqualToString:@"MapSegue"]) {
         EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];
         vc.showPathway = YES;
-//        vc.location1 = [(EPSArrudaAlgorithm *)algorithm location1];
-//        vc.location2 = [(EPSArrudaAlgorithm *)algorithm location2];
+        vc.location1 = [(EPSArrudaAlgorithm *)algorithm outcomeLocation1:step];
+        vc.location2 = [(EPSArrudaAlgorithm *)algorithm outcomeLocation2:step];
         vc.message = [algorithm outcome:step];
-        // TODO
     }
 }
 

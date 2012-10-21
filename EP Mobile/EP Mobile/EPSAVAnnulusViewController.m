@@ -39,6 +39,7 @@
     if ([self showPathway]) {
         [self setTitle:@"AP Location"];
         [self.mapLocationLabel setText:self.message];
+        self.asapImageView.hidden = !([self.location1 isEqualToString:AS] || [self.location2 isEqualToString:AS]);
     }
 //    UIImage *testView = [UIImage imageNamed:@"asap.png"];
 //    UIImageView *overlayImageView = [[UIImageView alloc] initWithImage:testView];

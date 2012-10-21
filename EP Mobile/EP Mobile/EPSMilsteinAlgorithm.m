@@ -130,33 +130,51 @@
 - (NSString *)outcome:(int)step {
     step %= SUCCESS_STEP;
     [self setMessageAndLocation:step];
-    return message;
+    return self.message;
+}
+
+- (NSString *)outcomeLocation1:(int)step {
+    step %= SUCCESS_STEP;
+    [self setMessageAndLocation:step];
+    return self.location1;
+}
+
+- (NSString *)outcomeLocation2:(int)step {
+    step %= SUCCESS_STEP;
+    [self setMessageAndLocation:step];
+    return self.location2;
 }
 
 - (void)setMessageAndLocation:(int)step {
+    // nillify lingering messages and locations
+    self.message = nil;
+    self.location1 = nil;
+    self.location2 = nil;
     switch (step) {
 		case 8:
 		case 12:
-			message = @"Anteroseptal";
-			location1 = AS;
+			self.message = @"Anteroseptal";
+			self.location1 = AS;
 			break;
 		case 9:
 		case 14:
-			message = @"Left Lateral";
-			location1 = LL;
+			self.message = @"Left Lateral";
+			self.location1 = LL;
 			break;
 		case 10:
-			message = @"Posteroseptal Tricuspid Annulus or Posteroseptal Mitral Annulus";
-			location1 = PSTA;
-			location2 = PSMA;
+			self.message = @"Posteroseptal Tricuspid Annulus or Posteroseptal Mitral Annulus";
+			self.location1 = PSTA;
+			self.location2 = PSMA;
 			break;
 		case 11:
 		case 13:
-			message = @"Right Lateral";
-			location1 = RL;
+			self.message = @"Right Lateral";
+			self.location1 = RL;
 			break;
 		case 15:
-			message = @"Undetermined Location";
+			self.message = @"Undetermined Location";
+            self.location1 = nil;
+            self.location2 = nil;
 			break;
     }
     
