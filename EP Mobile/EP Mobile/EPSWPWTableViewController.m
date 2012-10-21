@@ -46,7 +46,7 @@
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"ArrudaSegue"])
         vc.algorithmName = @"ArrudaWPW";
-    else if ([segueIdentifier isEqualToString:@"MilsteinTSegue"])
+    else if ([segueIdentifier isEqualToString:@"MilsteinSegue"])
         vc.algorithmName = @"MilsteinWPW";
     else if ([segueIdentifier isEqualToString:@"ModifiedArrudaSegue"])
         vc.algorithmName = @"ModifiedArrudaWPW";

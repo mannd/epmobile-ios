@@ -7,6 +7,7 @@
 //
 
 #import "EPSAVAnnulusViewController.h"
+#import "EPSAccessoryPathwayLocations.h"
 
 @interface EPSAVAnnulusViewController ()
 
@@ -14,6 +15,12 @@
 
 @implementation EPSAVAnnulusViewController
 @synthesize mapImageView;
+@synthesize mapLocationLabel;
+@synthesize asapImageView;
+@synthesize showPathway;
+@synthesize message;
+@synthesize location1;
+@synthesize location2;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +35,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    // all these labels will have to be tweaked with GIMP
+    self.mapLocationLabel.hidden = ![self showPathway];
+    if ([self showPathway]) {
+        [self setTitle:@"AP Location"];
+        [self.mapLocationLabel setText:self.message];
+    }
 //    UIImage *testView = [UIImage imageNamed:@"asap.png"];
 //    UIImageView *overlayImageView = [[UIImageView alloc] initWithImage:testView];
 //
@@ -40,6 +51,9 @@
 {
     [self setMapImageView:nil];
     [self setAsapImageView:nil];
+    self.location1 = nil;
+    self.location2 = nil;
+    [self setMapLocationLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

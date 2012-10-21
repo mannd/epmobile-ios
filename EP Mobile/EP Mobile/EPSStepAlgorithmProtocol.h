@@ -18,6 +18,7 @@
 - (NSString *)outcome:(int)step;
 - (NSString *)name;
 - (BOOL)showInstructionsButton;
+- (BOOL)showMap;
 - (NSString *)step1;
 - (void)resetSteps:(int *)step;
 - (NSString *)resultDialogTitle;

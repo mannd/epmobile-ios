@@ -7,8 +7,13 @@
 //
 
 #import "EPSArrudaAlgorithm.h"
+#import "EPSAccessoryPathwayLocations.h"
 
 @implementation EPSArrudaAlgorithm
+
+@synthesize message;
+@synthesize location1;
+@synthesize location2;
 
 - (NSString *)name {
     return @"Arruda Algorithm";
@@ -22,9 +27,11 @@
     return NO;
 }
 
+- (BOOL)showMap {
+    return  YES;
+}
+
 - (NSString *)yesResult:(int *)step {
-    // temporary
-//    BOOL modifiedArruda = NO;
     [self adjustStepsForward:*step];
     switch (*step) {
 		case 1:
@@ -68,7 +75,7 @@
 			break;
     }
     if ([self checkForSuccess:*step])
-        *step = SUCCESS_STEP;
+        *step += SUCCESS_STEP;
     return [self getQuestion:*step];
 }
 
@@ -114,7 +121,7 @@
 			break;
     }
     if ([self checkForSuccess:*step])
-        *step = SUCCESS_STEP;
+        *step += SUCCESS_STEP;
     return [self getQuestion:*step]; 
 }
 
@@ -143,6 +150,7 @@
 
 - (NSString *)getQuestion:(int)step {
     NSString *question = nil;
+
     switch (step) {
         case 1:
             question = @"Lead I \u00b1 or -\n or V1 R/S \u2265 1?";
@@ -185,7 +193,78 @@
 }
 
 - (NSString *)outcome:(int)step {
-    return @"TEST";
+    step %= SUCCESS_STEP;
+    [self setMessageAndLocation:step];
+    return message;
+}
+
+- (void)setMessageAndLocation:(int)step {
+    switch (step) {
+		case 9:
+			message = @"Left Posterolateral or Left Lateral";
+            location1 = LPL;
+			location2 = LL;
+			break;
+		case 10:
+			message = @"Left Lateral";
+			location1 = LL;
+			break;
+		case 11:
+			message = @"Left Anterolateral";
+			location1 = LAL;
+			break;
+		case 12:
+			message = @"Left Posterior or Posteroseptal Tricuspid Annulus";
+			location1 = LP;
+			location2 = PSTA;
+			break;
+		case 4:
+			message = @"Left Posterior or Left Posterolateral";
+			location1 = LP;
+			location2 = LPL;
+			break;
+		case 5:
+			message = @"Left Lateral or Left Anterolateral";
+			location1 = LL;
+			location2 = LAL;
+			break;
+		case 14:
+			message = @"Epicardial: Coronary Sinus or Middle Cardiac Vein";
+			location1 = SUBEPI;
+			break;
+		case 19:
+			message = @"Posteroseptal Tricuspid Annulus or Posteroseptal Mitral Annulus";
+			location1 = PSTA;
+			location2 = PSMA;
+			break;
+		case 21:
+			message = @"Anteroseptal";
+			location1 = AS;
+			break;
+		case 23:
+			message = @"Posteroseptal Tricuspid Annulus";
+			location1 = PSTA;
+			break;
+		case 22:
+			message = @"Midseptal Tricuspid Annulus";
+			location1 = MSTA;
+			break;
+		case 30:
+			message = @"Right Anterior or Right Anterolateral";
+			location1 = RA;
+			location2 = RAL;
+			break;
+		case 29:
+			message = @"Right Lateral";
+			location1 = RL;
+			break;
+		case 28:
+			message = @"Right Posterior or Right Posterolateral";
+			location1 = RP;
+			location2 = RPL;
+			break;
+    }
+    
 }
 
 

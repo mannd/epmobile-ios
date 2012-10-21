@@ -7,8 +7,14 @@
 //
 
 #import "EPSMilsteinAlgorithm.h"
+#import "EPSAccessoryPathwayLocations.h"
 
-@implementation EPSMilsteinAlgorithm
+@implementation EPSMilsteinAlgorithm {
+    NSString *message;
+    NSString *location1;
+    NSString *location2;
+}
+
 
 - (NSString *)name {
     return @"Milstein Algorithm";
@@ -40,7 +46,7 @@
 			break;
     }
     if ([self checkForSuccess:*step])
-        *step = SUCCESS_STEP;
+        *step += SUCCESS_STEP;
     return [self getQuestion:*step];
 }
 
@@ -71,7 +77,7 @@
 
     }
     if ([self checkForSuccess:*step])
-        *step = SUCCESS_STEP;
+        *step += SUCCESS_STEP;
     return [self getQuestion:*step];
 }
 
@@ -122,11 +128,39 @@
 }
 
 - (NSString *)outcome:(int)step {
-    return @"TEST";
+    step %= SUCCESS_STEP;
+    [self setMessageAndLocation:step];
+    return message;
 }
 
-
-
+- (void)setMessageAndLocation:(int)step {
+    switch (step) {
+		case 8:
+		case 12:
+			message = @"Anteroseptal";
+			location1 = AS;
+			break;
+		case 9:
+		case 14:
+			message = @"Left Lateral";
+			location1 = LL;
+			break;
+		case 10:
+			message = @"Posteroseptal Tricuspid Annulus or Posteroseptal Mitral Annulus";
+			location1 = PSTA;
+			location2 = PSMA;
+			break;
+		case 11:
+		case 13:
+			message = @"Right Lateral";
+			location1 = RL;
+			break;
+		case 15:
+			message = @"Undetermined Location";
+			break;
+    }
+    
+}
 
 
 @end

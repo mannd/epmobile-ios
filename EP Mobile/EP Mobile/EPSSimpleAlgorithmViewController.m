@@ -15,6 +15,7 @@
 #import "EPSArrudaAlgorithm.h"
 #import "EPSModifiedArrudaAlgorithm.h"
 #import "EPSMilsteinAlgorithm.h"
+#import "EPSAVAnnulusViewController.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
@@ -147,25 +148,36 @@
         EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
         vc.key = self.algorithmName;
     }
+    else if ([segueIdentifier isEqualToString:@"MapSegue"]) {
+        EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];
+        vc.showPathway = YES;
+//        vc.location1 = [(EPSArrudaAlgorithm *)algorithm location1];
+//        vc.location2 = [(EPSArrudaAlgorithm *)algorithm location2];
+        vc.message = [algorithm outcome:step];
+        // TODO
+    }
 }
 
 - (void)showResults {
     NSString *details = [algorithm outcome:step];
     NSString *title = [algorithm resultDialogTitle];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    if ([algorithm showMap])
+        [alert addButtonWithTitle:@"Show Map"];
     [alert show];
 
   
 }
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    // the user clicked one of the OK/Cancel buttons
-    if (buttonIndex == 0) {
-        NSLog(@"Button index = %d", buttonIndex);
-        [algorithm resetSteps:&step];
-        self.backButton.enabled = NO;
-        self.questionLabel.text = [algorithm step1];
+    NSLog(@"Button index = %d", buttonIndex);
+    // show map button
+    if (buttonIndex == 1) {
+        [self performSegueWithIdentifier:@"MapSegue" sender:nil];
     }
+    [algorithm resetSteps:&step];
+    self.backButton.enabled = NO;
+    self.questionLabel.text = [algorithm step1];
 }
 
 

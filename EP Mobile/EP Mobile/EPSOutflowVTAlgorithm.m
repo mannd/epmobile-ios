@@ -145,6 +145,10 @@ const int supraValvularStep = 9;
     return YES;
 }
 
+- (BOOL)showMap {
+    return NO;
+}
+
 - (NSString *)step1 {
     return [self getQuestion:1];
 }

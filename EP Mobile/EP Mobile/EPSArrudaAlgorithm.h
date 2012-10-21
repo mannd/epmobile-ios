@@ -10,6 +10,10 @@
 
 @interface EPSArrudaAlgorithm : EPSOutflowVTAlgorithm
 // must declare this so modified can inherit it
--(NSString *)getQuestion:(int)step;
+- (NSString *)getQuestion:(int)step;
+
+@property (strong, nonatomic) NSString *message;
+@property (strong, nonatomic) NSString *location1;
+@property (strong, nonatomic) NSString *location2;
 
 @end
