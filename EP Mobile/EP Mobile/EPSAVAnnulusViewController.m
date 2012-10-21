@@ -17,6 +17,9 @@
 @synthesize mapImageView;
 @synthesize mapLocationLabel;
 @synthesize asapImageView;
+@synthesize epicardialapImageView;
+@synthesize lalapImageView;
+@synthesize llapImageView;
 @synthesize showPathway;
 @synthesize message;
 @synthesize location1;
@@ -40,6 +43,10 @@
         [self setTitle:@"AP Location"];
         [self.mapLocationLabel setText:self.message];
         self.asapImageView.hidden = !([self.location1 isEqualToString:AS] || [self.location2 isEqualToString:AS]);
+        self.epicardialapImageView.hidden = !([self.location1 isEqualToString:SUBEPI] || [self.location2 isEqualToString:SUBEPI]);
+        self.lalapImageView.hidden = !([self.location1 isEqualToString:LAL] || [self.location2 isEqualToString:LAL]);
+        self.llapImageView.hidden = !([self.location1 isEqualToString:LL] || [self.location2 isEqualToString:LL]);
+        
     }
 //    UIImage *testView = [UIImage imageNamed:@"asap.png"];
 //    UIImageView *overlayImageView = [[UIImageView alloc] initWithImage:testView];
@@ -55,6 +62,10 @@
     self.location1 = nil;
     self.location2 = nil;
     [self setMapLocationLabel:nil];
+    [self setEpicardialapImageView:nil];
+    [self setLalapImageView:nil];
+    [self setLalapImageView:nil];
+    [self setLlapImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
