@@ -44,6 +44,9 @@
 		8E4B27C41633459400BF1F2C /* rlap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B71633459400BF1F2C /* rlap.png */; };
 		8E4B27C51633459400BF1F2C /* rpap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B81633459400BF1F2C /* rpap.png */; };
 		8E4B27C61633459400BF1F2C /* rplap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B91633459400BF1F2C /* rplap.png */; };
+		8E4B27C81634C2D000BF1F2C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFBBD2162C504F00D3B964 /* Default-568h@2x.png */; };
+		8E4B27CA1634C2D500BF1F2C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27C91634C2D400BF1F2C /* Default@2x.png */; };
+		8E4B27CC1634C2D800BF1F2C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27CB1634C2D800BF1F2C /* Default.png */; };
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
@@ -150,6 +153,8 @@
 		8E4B27B81633459400BF1F2C /* rpap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rpap.png; sourceTree = "<group>"; };
 		8E4B27B91633459400BF1F2C /* rplap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rplap.png; sourceTree = "<group>"; };
 		8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAccessoryPathwayLocations.h; sourceTree = "<group>"; };
+		8E4B27C91634C2D400BF1F2C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8E4B27CB1634C2D800BF1F2C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8E511E5915BC527300CF83B5 /* EPSRiskScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskScoreTableViewController.h; sourceTree = "<group>"; };
 		8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskScoreTableViewController.m; sourceTree = "<group>"; };
 		8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskFactor.h; sourceTree = "<group>"; };
@@ -358,6 +363,8 @@
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
+				8E4B27CB1634C2D800BF1F2C /* Default.png */,
+				8E4B27C91634C2D400BF1F2C /* Default@2x.png */,
 				8EBFBBD2162C504F00D3B964 /* Default-568h@2x.png */,
 				8EC19C31159FE0FA00975E2B /* EP Mobile */,
 				8EC19C49159FE0FA00975E2B /* EP MobileTests */,
@@ -566,6 +573,9 @@
 				8E4B27C41633459400BF1F2C /* rlap.png in Resources */,
 				8E4B27C51633459400BF1F2C /* rpap.png in Resources */,
 				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
+				8E4B27C81634C2D000BF1F2C /* Default-568h@2x.png in Resources */,
+				8E4B27CA1634C2D500BF1F2C /* Default@2x.png in Resources */,
+				8E4B27CC1634C2D800BF1F2C /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +742,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -743,6 +754,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
