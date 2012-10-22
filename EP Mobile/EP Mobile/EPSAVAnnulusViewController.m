@@ -97,7 +97,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    if (![self showPathway])
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    else
+        return NO;
 }
 
 @end
