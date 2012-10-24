@@ -238,16 +238,12 @@
         if ([self itemIsChecked:RECENT_MI]) {
             message = [message stringByAppendingString:icdNotApprovedMessage];
             message = [message stringByAppendingString:@"\nICD implantation is too soon post MI."];
-            // note that these indicated statements don't do anything anymore ?remove?
-            indicated = false;
         } else if (maditIndication && [self itemIsChecked:RECENT_MI_EPS]) {
             message = [message stringByAppendingString:icdNotApprovedMessage];
             message = [message stringByAppendingString:@"\nEPS performed too soon post MI."];
-            indicated = false;
         } else if ([self itemIsChecked:RECENT_CABG]) {
             message = [message stringByAppendingString:icdNotApprovedMessage];
             message = [message stringByAppendingString:@"\nICD implantation is too soon post myocardial revascularization"];
-            indicated = false;
         } else if (crtCriteriaMet && nyhaIV) // CRT-ICD must be used for
             // NYHA IV
             message = [message stringByAppendingString:@"CRT-ICD implantation appears to meet CMS guidelines."];
