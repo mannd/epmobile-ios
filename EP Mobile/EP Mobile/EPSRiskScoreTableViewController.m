@@ -415,10 +415,10 @@
     NSString *details = [[self.risks objectAtIndex:indexPath.row + offset] details];
     cell.textLabel.text = risk;
     if ([scoreType isEqualToString:@"Estes"]) {
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
         cell.textLabel.numberOfLines = 0;
         //cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
-        cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
         cell.detailTextLabel.numberOfLines = 0;
 
     }

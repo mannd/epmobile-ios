@@ -169,7 +169,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"QTCell"];
     }
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.font = [UIFont systemFontOfSize:16.0f];
     int offset = [self calculateOffset:indexPath.section];
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];

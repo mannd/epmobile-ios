@@ -185,7 +185,7 @@
     cell.detailTextLabel.text = text;
     
     cell.detailTextLabel.numberOfLines = 0;
-    cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
     if ([[[self.list objectAtIndex:section] objectAtIndex:row] points] == 100)
         cell.textLabel.text = @"MAJOR";

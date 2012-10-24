@@ -21,6 +21,8 @@ The Brugada syndrome ECG pattern figure is from
 It is licensed under the
 [Creative Commons Attribution 2.0 Generic License](http://creativecommons.org/licenses/by/2.0/deed.en).
 
+Due to screen size limitations, all references are not included in the iOS version.  Complete references will be available on the [EP Studios website](http://www/epstudiossoftware.com).
+
 ## Author
 David Mann
 

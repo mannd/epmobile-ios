@@ -300,7 +300,7 @@
     cell.textLabel.text = text;
     
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
     BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] selected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
