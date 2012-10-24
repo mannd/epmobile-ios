@@ -214,7 +214,7 @@
 - (BOOL)weeklyDoseIsSane:(float)dose forTabletSize:(float)size {
     //return dose - 0.2 * dose >= 7 * 0.5 * tabletSize && dose + 0.2 * dose <= 7 * 2.0 * tabletSize;
     // dose calculator algorithm should handle from about 3 half tabs a week to 2 tabs daily
-    return dose > (4 * 0.5 * size) && dose < (2 * tabletSize * 7);
+    return (dose > (4 * 0.5 * size)) && (dose < (2 * size * 7));
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
