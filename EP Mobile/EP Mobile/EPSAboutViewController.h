@@ -11,6 +11,6 @@
 @interface EPSAboutViewController : UIViewController
 
 - (IBAction)doneButtonPressed:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *aboutLabel;
+@property (strong, nonatomic) IBOutlet UITextView *aboutTextView;
 
 @end
