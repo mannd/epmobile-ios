@@ -112,8 +112,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || 
-            interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)showNotes {
@@ -173,8 +172,8 @@
     float inr = [inrText floatValue];
     NSString *weeklyDoseText = [self.weeklyDoseField text];
     weeklyDose = [weeklyDoseText floatValue];
-    if (inr == 0 || weeklyDose == 0) {
-        message = @"Invalid Entries!";
+    if (inr <= 0 || weeklyDose <= 0) {
+        message = @"INVALID ENTRY";
     }
     else if (inr >= 6.0)
         message = @"Hold warfarin until INR back in therapeutic range.";
@@ -182,8 +181,8 @@
         message = @"INR is therapeutic. No change in warfarin dose.";
     else {
         doseChange = [self percentDoseChange:inr];
-        if (doseChange.lowEnd == 0 || doseChange.highEnd == 0)
-            message = @"Invalid Entries!";
+        if (doseChange.lowEnd <= 0 || doseChange.highEnd <= 0)
+            message = @"INVALID ENTRY";
         else {
             if (doseChange.message != nil)
                 message = [doseChange.message stringByAppendingString:@"\n"];

@@ -95,7 +95,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)toggleWeightUnits:(id)sender {
@@ -143,7 +143,7 @@
     double creatinine = [creatinineText doubleValue];
     NSLog(@"Creatinine is %f", creatinine);
     // make sure all entries ok
-    if (weight == 0.0 || age == 0.0 || creatinine == 0.0) {
+    if (weight <= 0.0 || age <= 0.0 || creatinine <= 0.0) {
         self.resultLabel.text = @"INVALID ENTRY";
         return;
     }
