@@ -30,6 +30,7 @@
 @synthesize ageField;
 @synthesize weightField;
 @synthesize weightUnitsSegmentedControl;
+@synthesize creatinineUnitsSegmentedControl;
 @synthesize creatinineField;
 @synthesize resultLabel;
 @synthesize drug;
@@ -52,7 +53,29 @@
     self.navigationItem.title = drug;
     weightIsPounds = YES;
     unitsAreMgPerDl = YES;
-    
+    [self refreshDefaults];
+    if ([self.defaultWeightUnit isEqualToString:@"lb"]) {
+        [self setWeightPlaceholder:0];
+        [weightUnitsSegmentedControl setSelectedSegmentIndex:0];
+    }
+    else if ([self.defaultWeightUnit isEqualToString:@"kg"]) {
+        [self setWeightPlaceholder:1];
+        [weightUnitsSegmentedControl setSelectedSegmentIndex:1];
+    }
+    if ([self.defaultCreatinineUnit isEqualToString:@"mg"]) {
+        [self setCrUnitsPlaceholder:0];
+        [creatinineUnitsSegmentedControl setSelectedSegmentIndex:0];
+    }
+    else if ([self.defaultCreatinineUnit isEqualToString:@"micromol"]) {
+        [self setCrUnitsPlaceholder:1];
+        [creatinineUnitsSegmentedControl setSelectedSegmentIndex:1];
+    }
+}
+
+- (void)refreshDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.defaultWeightUnit = [defaults objectForKey:@"defaultweightunit"];
+    self.defaultCreatinineUnit = [defaults objectForKey:@"defaultcreatinineunit"];
 }
 
 - (void)viewDidUnload
@@ -64,6 +87,7 @@
     [self setWeightUnitsSegmentedControl:nil];
     [self setCreatinineField:nil];
     [self setResultLabel:nil];
+    [self setCreatinineUnitsSegmentedControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 
@@ -71,26 +95,37 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)toggleWeightUnits:(id)sender {
     //self.weightField.text  = nil;  this is bad if people enter weight first and then units, so it's gone.
     self.resultLabel.text = nil;
-    if ((weightIsPounds = [sender selectedSegmentIndex] == 0)) 
-        self.weightField.placeholder = @"Weight (lb)";
-        
-    else 
-        self.weightField.placeholder = @"Weight (kg)";
+    [self setWeightPlaceholder:[sender selectedSegmentIndex]];
 }
 
 - (IBAction)toggleCrUnits:(id)sender {
     self.resultLabel.text = nil;
-    if ((unitsAreMgPerDl = [sender selectedSegmentIndex] == 0))
-        self.creatinineField.placeholder = @"Cr (mg/dL)";
-    else
-        self.creatinineField.placeholder = @"Cr (µmol/L)";
+    [self setCrUnitsPlaceholder:[sender selectedSegmentIndex]];
 }
+
+- (void)setWeightPlaceholder:(int)index {
+    NSString *placeholder = @"Weight (";
+    if ((weightIsPounds = index == 0))
+        self.weightField.placeholder = [placeholder stringByAppendingString:@"lb)"];
+    else
+        self.weightField.placeholder = [placeholder stringByAppendingString:@"kg)"];
+}
+
+- (void)setCrUnitsPlaceholder:(int)index {
+    NSString *placeholder = @"Cr (";
+    if ((unitsAreMgPerDl = index == 0))
+        self.creatinineField.placeholder = [placeholder stringByAppendingString:@"mg/dL)"];
+    else
+        self.creatinineField.placeholder = [placeholder stringByAppendingString:@"µmol/L)"];
+}
+
+
 
 
 - (IBAction)toggleSex:(id)sender {
@@ -108,7 +143,7 @@
     double creatinine = [creatinineText doubleValue];
     NSLog(@"Creatinine is %f", creatinine);
     // make sure all entries ok
-    if (weight == 0.0 || age == 0.0 || creatinine == 0.0) {
+    if (weight <= 0.0 || age <= 0.0 || creatinine <= 0.0) {
         self.resultLabel.text = @"INVALID ENTRY";
         return;
     }
@@ -159,15 +194,16 @@
     }
     else {
         if (isMale)
-            crClr = crClr * 1.23;
+            crClr = crClr * 1.2291;
         else
-            crClr = crClr * 1.04;
+            crClr = crClr * 1.0447;
         crClr = crClr / creatinine;
         result = (int) (crClr + 0.5);
         
     }
     NSLog(@"Unrounded crClr = %f, Rounded = %i", crClr, result);
-    return result;
+    // don't return negative creatinine clearance
+    return result < 0 ? 0 : result;
 }
 
 

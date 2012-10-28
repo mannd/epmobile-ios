@@ -15,7 +15,8 @@
 @end
 
 @implementation EPSAboutViewController
-@synthesize aboutLabel;
+
+@synthesize aboutTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,13 +34,13 @@
 //    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
 //                                   initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(doneButtonPressed:)];
     //self.titleBar. = editButton;
-    self.aboutLabel.text = [[NSString alloc] initWithFormat:@"EP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright 2012, EP Studios, Inc.\nLicensed under Apache License 2.0", VERSION];
+    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"EP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright 2012, EP Studios, Inc.\nLicensed under Apache License 2.0", VERSION];
 }
 
 - (void)viewDidUnload
 {
 
-    [self setAboutLabel:nil];
+    [self setAboutTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

@@ -50,8 +50,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"RomhiltSegue"])
-        vc.scoreType = @"Romhilt";
+    if ([segueIdentifier isEqualToString:@"EstesSegue"])
+        vc.scoreType = @"Estes";
  }
 
 

@@ -15,6 +15,10 @@
 #define CHADS_VASC_AGE_75 2
 #define CHADS_VASC_AGE_65 6
 
+// the 2 mutually exclusive ESTES risks
+#define ESTES_STRAIN_WITH_DIG 1
+#define ESTES_STRAIN_WITHOUT_DIG 2
+
 @interface EPSRiskScoreTableViewController ()
 
 @end
@@ -106,6 +110,16 @@
         [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Elevated fall risk" withValue:1 withDetails:@"e.g. Alzheimer, Parkinson, schizophrenia"]];
         [array addObject:[[EPSRiskFactor alloc] initWith:@"Stroke" withValue:1]];          
     }
+    else if ([scoreType isEqualToString:@"Estes"]) {
+        self.title = @"Estes LVH Score";
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Any limb-lead R or S \u2265 20 mm or S V1 or V2 \u2265 30 mm or R V5 or V6 \u2265 30 mm" withValue:3]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Left ventricular strain pattern without digitalis" withValue:3 withDetails:@"ST-J point depression \u2265 1 mm & inverted T in V5"]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Left ventricular strain pattern with digitalis" withValue:1 withDetails:@"ST-J point depression \u2265 1 mm & inverted T in V5"]];
+        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Left atrial enlargement" withValue:3 withDetails:@"P terminal force in V1 \u2265 1 mm & \u2265 40 msec"]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Left axis deviation \u2265 -30\u00b0" withValue:2]];
+                [array addObject:[[EPSRiskFactor alloc] initWith:@"QRS duration \u2265 90 msec" withValue:1]];
+        [array addObject:[[EPSRiskFactor alloc] initWith:@"Intrinsicoid QRS deflection of \u2265 50 msec in V5 or V6" withValue:1]];
+    }
     self.risks = array;
  
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
@@ -123,11 +137,18 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait ||
-        interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)calculateScore {
+    // handle mutually exclusive Estes scores
+    if ([scoreType isEqualToString:@"Estes"]) {
+        if ([[self.risks objectAtIndex:ESTES_STRAIN_WITH_DIG] selected] && [[self.risks objectAtIndex:ESTES_STRAIN_WITHOUT_DIG] selected]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You have selected strain pattern with and without digitalis.  Please select one or the other, not both." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            return;
+        }
+    }
     int score = 0;
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
@@ -144,71 +165,137 @@
     [alertView show];
 }
 
+- (float)getChads2Risk:(int)score {
+    float risk = 0.0f;
+    switch (score) {
+        case 0:
+            risk = 1.9;
+            break;
+        case 1:
+            risk = 2.8;
+            break;
+        case 2:
+            risk = 4.0;
+            break;
+        case 3:
+            risk = 5.9;
+            break;
+        case 4:
+            risk = 8.5;
+            break;
+        case 5:
+            risk = 12.5;
+            break;
+        case 6:
+            risk = 18.2;
+            break;
+    }
+    return risk;
+}
+
+- (float)getChadsVascRisk:(int)score {
+    float risk = 0.0f;
+    switch (score) {
+        case 0:
+            risk = 0;
+            break;
+        case 1:
+            risk = 1.3;
+            break;
+        case 2:
+            risk = 2.2;
+            break;
+        case 3:
+            risk = 3.2;
+            break;
+        case 4:
+            risk = 4.0;
+            break;
+        case 5:
+            risk = 6.7;
+            break;
+        case 6:
+            risk = 9.8;
+            break;
+        case 7:
+            risk = 9.6;
+            break;
+        case 8:
+            risk = 6.7;
+            break;
+        case 9:
+            risk = 15.2;
+            break;
+    }
+    return risk;
+}
+
+- (NSString *)getHasBledRisk:(int)score {
+    NSString *riskString = nil;
+    switch (score) {
+        case 0:
+        case 1:
+            riskString = @"1.02-1.13";
+            break;
+        case 2:
+            riskString = @"1.88";
+            break;
+        case 3:
+            riskString = @"3.74";
+            break;
+        case 4:
+            riskString = @"8.70";
+            break;
+        case 5:
+            riskString = @"12.50";
+            break;
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            riskString = @"> 12.50";
+            break;
+    }
+    return riskString;
+}
+
+- (float)getHemorrhagesRisk:(int)score {
+    float risk = 0.0f;
+    switch (score) {
+        case 0:
+            risk = 1.9;
+            break;
+        case 1:
+            risk = 2.5;
+            break;
+        case 2:
+            risk = 5.3;
+            break;
+        case 3:
+            risk = 8.4;
+            break;
+        case 4:
+            risk = 10.4;
+            break;
+    }
+    if (score >= 5)
+        risk = 12.3;
+    return risk;
+}
+
 - (NSString *)getResultsMessage:(int)result {
-    NSString *message = [[NSString alloc] init];
+    NSString *message = nil;
+    NSString *resultMessage = nil;
     float risk = 0;
     // some risk scores require a string, e.g. HAS-BLED
-    NSString *riskString = [[NSString alloc] init];
-    NSString *scoreName = [[NSString alloc] init];
+    NSString *riskString = nil;
+    NSString *scoreName = nil;
     if ([scoreType isEqualToString:@"Chads2"]) {
-        switch (result) {
-            case 0:
-                risk = 1.9;
-                break;
-            case 1:
-                risk = 2.8;
-                break;
-            case 2:
-                risk = 4.0;
-                break;
-            case 3:
-                risk = 5.9;
-                break;
-            case 4:
-                risk = 8.5;
-                break;
-            case 5:
-                risk = 12.5;
-                break;
-            case 6:
-                risk = 18.2;
-                break;
-        }
+        risk = [self getChads2Risk:result];
         scoreName = @"CHADS\u2082";
     }
     else if ([scoreType isEqualToString:@"ChadsVasc"]) {
-		switch (result) {
-            case 0:
-                risk = 0;
-                break;
-            case 1:
-                risk = 1.3;
-                break;
-            case 2:
-                risk = 2.2;
-                break;
-            case 3:
-                risk = 3.2;
-                break;
-            case 4:
-                risk = 4.0;
-                break;
-            case 5:
-                risk = 6.7;
-                break;
-            case 6:
-                risk = 9.8;
-                break;
-            case 7:
-                risk = 9.6;
-                break;
-            case 8:
-                risk = 6.7;
-                break;
-            case 9:
-                risk = 15.2;
-                break;
-		}
+        risk = [self getChadsVascRisk:result];
         scoreName = @"CHA\u2082DS\u2082-VASc";
 
     }
@@ -217,31 +304,8 @@
             message = @"Low bleeding risk";
         else 
             message = @"High bleeding risk";
-        switch (result) {
-            case 0:
-            case 1:
-                riskString = @"1.02-1.13";
-                break;
-            case 2:
-                riskString = @"1.88";
-                break;
-            case 3:
-                riskString = @"3.74";
-                break;
-            case 4:
-                riskString = @"8.70";
-                break;
-            case 5:
-                riskString = @"12.50";
-                break;
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-                riskString = @"> 12.50";
-                break;
-        }
-        message = [[NSString alloc] initWithFormat:@"HAS-BLED score = %d\n%@\nBleeding risk is %@ bleeds per 100 patient-years", result, message, riskString];
+        riskString = [self getHasBledRisk:result];
+        resultMessage = [[NSString alloc] initWithFormat:@"HAS-BLED score = %d\n%@\nBleeding risk is %@ bleeds per 100 patient-years", result, message, riskString];
         
     }
     else if ([scoreType isEqualToString:@"Hemorrhages"]) {
@@ -251,26 +315,18 @@
             message = @"Intermediate bleeding risk";
         else 
             message = @"High bleeding risk";
-		switch (result) {
-            case 0:
-                risk = 1.9;
-                break;
-            case 1:
-                risk = 2.5;
-                break;
-            case 2:
-                risk = 5.3;
-                break;
-            case 3:
-                risk = 8.4;
-                break;
-            case 4:
-                risk = 10.4;
-                break;
-		}
-		if (result >= 5)
-			risk = 12.3;        
-        message = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", result, message, risk];        
+        risk =[self getHemorrhagesRisk:result];
+
+        resultMessage = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", result, message, risk];
+    }
+    else if ([scoreType isEqualToString:@"Estes"]) {
+        if (result < 4)
+            message = @"Left Ventricular Hypertrophy not present.";
+        else if (result == 4)
+            message = @"Probable Left Ventricular Hypertrophy.";
+        else // result > 4
+            message = @"Definite Left Ventricular Hypertrophy.";
+        resultMessage = [[NSString alloc] initWithFormat:@"Romhilt-Estes score = %d\n%@\n", result, message];
     }
     else if ([scoreType isEqualToString:@"HCM"]) {
         int minorScore = 0;
@@ -286,37 +342,38 @@
             NSLog(@"Minor score = %i", minorScore);
         }
         if (result == HIGHEST_RISK_SCORE)
-            message = @"Survivors of cardiac arrest and patients with spontaneous sustained VT are considered at very high risk for SD and are ICD candidates.";
+            resultMessage = @"Survivors of cardiac arrest and patients with spontaneous sustained VT are considered at very high risk for SD and are ICD candidates.";
         else {
             message = [[NSString alloc] initWithFormat:@"Major risks = %i\nMinor risks = %i\n", majorScore, minorScore];
             if (majorScore >= 2)
-                message = [message stringByAppendingString:@"Patients with 2 or more major risk factors are considered at high risk and should be considered for ICD implantation."];
+                resultMessage = [message stringByAppendingString:@"Patients with 2 or more major risk factors are considered at high risk and should be considered for ICD implantation."];
             else if (majorScore == 1)
-                message = [message stringByAppendingString:@"Patients with 1 major risk factor have increased risk for SD and recommendations should be individualized. Factors such as the nature of the risk factor (e.g. SD in an immediate family member), young age (which confers greater risk) and presence of minor risk factors should be considered.  ICD implantation can be considered depending on these factors."];
+                resultMessage = [message stringByAppendingString:@"Patients with 1 major risk factor have increased risk for SD and recommendations should be individualized. Factors such as the nature of the risk factor (e.g. SD in an immediate family member), young age (which confers greater risk) and presence of minor risk factors should be considered.  ICD implantation can be considered depending on these factors."];
             else // result == 0
-                message = [message stringByAppendingString:@"Patients without any major risk factors (even if minor risk factors are present) are considered to be at low risk for SD. ICD implantation is not recommended."];
+                resultMessage = [message stringByAppendingString:@"Patients without any major risk factors (even if minor risk factors are present) are considered to be at low risk for SD. ICD implantation is not recommended."];
         }
     }
 
     if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) { 
         NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", risk];
-        message = [[NSString alloc] initWithFormat:@"%@ score = %d\n%@\n", scoreName, result, strokeRisk];
+        message = [NSString stringWithFormat:@"%@ score = %d\n%@\n", scoreName, result, strokeRisk];
         if (result < 1) { 
-            message = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or no drug recommended."];
+            resultMessage = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or no drug recommended."];
             if ([scoreType isEqualToString:@"Chads2"])
-                message = [message stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
+                resultMessage = [resultMessage stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
         }
         else if (result == 1) {
-            message = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran or rivaroxaban) recommended."];
+            NSString *intermediateMessage = @"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran or rivaroxaban) recommended.";
             if ([scoreType isEqualToString:@"Chads2"])
-                message = [message stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better and using bleeding score (e.g. HAS-BLED) to help choose between ASA and oral anticoagulation."];
+                intermediateMessage = [intermediateMessage stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better and using bleeding score (e.g. HAS-BLED) to help choose between ASA and oral anticoagulation."];
             else 
-                message = [message stringByAppendingString:@"\n\nConsider assessing bleeding score (e.g. HAS-BLED) to help choose between ASA and anticoagulation."];
+                intermediateMessage = [intermediateMessage stringByAppendingString:@"\n\nConsider assessing bleeding score (e.g. HAS-BLED) to help choose between ASA and anticoagulation."];
+            resultMessage = [message stringByAppendingString:intermediateMessage];
         }
         else 
-            message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran or rivaroxaban) recommended."];
+            resultMessage = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran or rivaroxaban) recommended."];
     }
-    return message;
+    return resultMessage;
 
 }
 
@@ -328,16 +385,22 @@
         return 2;
     return 1;
 }
-
+ 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([scoreType isEqualToString:@"HCM"]) {
         if (section == 0)
             return 7;   // 7 major criteria for HCM
         else 
-            return 4;   // 7 minor criteria for HCM
+            return 4;   // 4 minor criteria for HCM
     }
     return [risks count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([scoreType isEqualToString:@"Estes"])
+        return 80;
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -351,6 +414,15 @@
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     NSString *details = [[self.risks objectAtIndex:indexPath.row + offset] details];
     cell.textLabel.text = risk;
+    if ([scoreType isEqualToString:@"Estes"]) {
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.textLabel.numberOfLines = 0;
+        //cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+        cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.detailTextLabel.numberOfLines = 0;
+
+    }
+
     cell.detailTextLabel.text = details;
     if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -378,6 +450,7 @@
     return nil;
 
 }
+
 
 #pragma mark - Table view delegate
 

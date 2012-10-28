@@ -13,6 +13,16 @@
 #define SAGIE 2
 #define HODGES 3
 
+#define MAX_NORMAL_QTC 440.0
+
+#define RATE_INDEX 0
+#define INTERVAL_INDEX 1
+
+#define DEFAULT_QTC_FORMULA_KEY @"defaultqtcformula"
+#define MAXIMUM_QTC_KEY @"maximumqtc"
+#define INTERVAL_OR_RATE_KEY @"intervalorrate"
+//#define RATE_KEY @"
+
 #define INVALID_ENTRY @"INVALID ENTRY"
 
 @interface EPSQTcCalculatorViewController ()
@@ -28,6 +38,10 @@
 @synthesize inputField;
 @synthesize qtField;
 @synthesize resultLabel;
+@synthesize defaultQTcFormula;
+@synthesize maxQTc;
+@synthesize defaultInputTypeIsInterval;
+@synthesize intervalRateSegmentedControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +64,28 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self refreshDefaults];
+    if (self.defaultInputTypeIsInterval) {
+        [self setInputType:INTERVAL_INDEX];
+        [intervalRateSegmentedControl setSelectedSegmentIndex:INTERVAL_INDEX];
+    }
+    else {
+        [self setInputType:RATE_INDEX];
+        [intervalRateSegmentedControl setSelectedSegmentIndex:RATE_INDEX];
+    }
+
+
+}
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([self.defaultQTcFormula isEqualToString:@"Bazett"])
+        [formulaPicker selectRow:0 inComponent:0 animated:NO];
+    else if ([self.defaultQTcFormula isEqualToString:@"Fridericia"])
+        [formulaPicker selectRow:1 inComponent:0 animated:YES];
+    else if ([self.defaultQTcFormula isEqualToString:@"Sagie"])
+        [formulaPicker selectRow:2 inComponent:0 animated:YES];
+    else if ([self.defaultQTcFormula isEqualToString:@"Hodges"])
+        [formulaPicker selectRow:3 inComponent:0 animated:YES];
 }
 
 - (void)viewDidUnload
@@ -57,16 +93,35 @@
     [self setInputField:nil];
     [self setQtField:nil];
     [self setResultLabel:nil];
+    [self setIntervalRateSegmentedControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     self.formulaPicker = nil;
     self.formulaData = nil;
+    self.defaultQTcFormula = nil;
+}
+
+- (void)refreshDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.defaultQTcFormula = [defaults objectForKey:DEFAULT_QTC_FORMULA_KEY];
+    NSString *maxQTcString = [defaults objectForKey:MAXIMUM_QTC_KEY];
+    NSString *defaultIntervalOrRate = [defaults objectForKey:INTERVAL_OR_RATE_KEY];
+    // If defaults aren't loaded this defaults to a default input type
+    // of RATE which is what we want.
+    self.defaultInputTypeIsInterval = ([defaultIntervalOrRate isEqualToString:@"interval"]);
+    self.maxQTc = [maxQTcString floatValue];
+    // this ensures maxQTc is sane if defaults aren't loaded
+    if (self.maxQTc == 0.0)
+        self.maxQTc = MAX_NORMAL_QTC;
+    NSLog(@"MaxQTcString = %@", maxQTcString);
+    NSLog(@"MaxQTc = %f", self.maxQTc);
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
@@ -85,26 +140,32 @@
     NSString *qt = self.qtField.text;
     NSInteger qtNumber = [qt intValue];
     NSLog(@"The value of qtNumber is %d", qtNumber);
-    if (inputNumber == 0 || qtNumber == 0) {
+    if (inputNumber <= 0 || qtNumber <= 0) {
+        self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;
         return;
     }
     if (inputIsRate) {
-        inputNumber = round(60000.0 / inputNumber);
+        inputNumber = 60000.0 / inputNumber;
         NSLog(@"Converted to RR interval in msec is %d", inputNumber);
     }
-//    double intervalSec = inputNumber / 1000.0;
-//    double qtSec = qtNumber / 1000.0;
     NSInteger row = [formulaPicker selectedRowInComponent:0];
     NSString *formula = [formulaData objectAtIndex:row];
     NSLog(@"Formula is %@", formula);
     NSLog(@"Row is %d", row);
     NSInteger qtc = [self qtcFromQtInMsec:qtNumber AndIntervalInMsec:inputNumber UsingFormula:row];
     NSLog(@"QTc = %d", qtc);
-    if (qtc == 0.0)
+    if (qtc == 0.0) {
+        self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;
+    }
     else {
+        if (qtc > self.maxQTc)
+            self.resultLabel.textColor = [UIColor redColor];
+        else
+            self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = [[NSString alloc] initWithFormat:@"QTc is %i msec (%@ formula)", qtc, formula];
+        // result text color
     }
     //self.resultLabel.text = resultString;
 }
@@ -149,12 +210,14 @@
     self.inputField.text = nil;
     self.resultLabel.text = nil;
     // 0 == Rate
-    if ((inputIsRate = [sender selectedSegmentIndex] == 0)) {
+    [self setInputType:[sender selectedSegmentIndex]];
+}
+
+- (void)setInputType:(int)index {
+    if ((inputIsRate = index == RATE_INDEX))
         self.inputField.placeholder = @"Heart Rate (bpm)";
-    }
-    else {
+    else
         self.inputField.placeholder = @"RR Interval (msec)";
-    }
 }
 
 

@@ -2,12 +2,284 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Root</key>
+	<key>ARVC</key>
 	<dict>
-		<key>ARVC2010</key>
+		<key>SectionHeaders</key>
 		<array>
-			<string>2D echo: regional RV akinesia, or dyssynchrony with PLAX RVOT &gt;= 32 mm (PLAX/BSA &gt;= 19 mm/m2)</string>
-			<string>test2</string>
+			<string>I. Global/Regional Dysfunction and Structural Alterations</string>
+			<string>II. Tissue Characterizations of Wall</string>
+			<string>III. Repolarization Abnormalities</string>
+			<string>IV. Depolarization and Conduction Abnormalities</string>
+			<string>V. Arrhythmias</string>
+			<string>VI. Family History</string>
+		</array>
+	</dict>
+	<key>ARVC2010</key>
+	<array>
+		<array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 32 mm (PLAX/BSA ≥ 19 mm/m²) OR WITH PSAX RVOT ≥ 36 mm (PLAX/BSA ≥ 21 mm/m²) OR fractional area change ≤ 33%</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm WITH ratio of RV EDV/BSA ≥110 mL/m² (male) or ≥ 100 mL/m² (female) OR RV EF ≤ 40%</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>RV Angiography: Regional RV akinesia, dyskinesia, or aneurysm</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>2D Echo: Regional RV akinesia, dyskinesia, or aneurysm WITH PLAX RVOT ≥ 29 to &lt; 32 mm (PLAX/BSA ≥ 16 to &gt; 19 mm/m²) OR WITH PSAX RVOT ≥ 32 to &lt; 36 mm (PLAX/BSA ≥ 18 to &lt; 21 mm/m²) OR fractional area change &gt; 33% and ≤ 40%</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>MRI: Regional RV akinesia, dyskinesia, or aneurysm with ratio of RV EDV/BSA ≥100 to &lt; 110 		mL/m² 		(male) or ≥ 90 to &lt; 100 mL/m² (female) OR RV EF &gt; 40% to ≤ 45%</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Residual myocytes &lt; 60% by morphometric analysis (or &lt; 50% if estimated) with fibrous replacement of RV free wall myocardium in ≥ 1 sample, with or without fatty replacement of tissue on endomyocardial biopsy</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Residual myocytes 60% to 70% by morphometric analysis (or 50% to 60% if estimated) with fibrous replacement of RV 		free wall myocardium in ≥ 1 sample, with or without fatty 	replacement of tissue on endomyocardial biopsy</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>T wave inversion (V1, V2, and V3) or beyond in individuals &gt; 14 yrs (in absence of complete RBBB)</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>T wave inversion in V1 and V2 in individuals &gt; 14 yrs (in absence of complete RBBB) or in V4, V5, V6</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>T wave inversion in V1-V4 in individuals &gt; 14 yrs in presence of complete RBBB</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Epsilon wave (reproducible low-amplitude signals between end of QRS complex to onset of T ave) in right precordial leads (V1-V3)</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG in absence of QRS duration ≥ 110 msec on standard ECG:  Filtered QRS duration ≥ 114 msec</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG in absence of QRS duration ≥ 110 msec on standard ECG:  Duration of terminal QRS &lt; 40 µV (low amplitude signal duration) ≥ 38 msec</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG in absence of QRS duration ≥ 110 msec on standard ECG:  Root-mean-square voltage of terminal 40 msec ≤ 20 µV</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Terminal activation duration of QRS ≥ 55 msec measured from the nadir of the S wave to the end of the QRS including R&apos;, in V1, V2, or V3, in the absence of complete RBBB</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Nonsustained or sustained VT of LBBB morphology with superior axis (negative or indeterminate QRS in leads II, III, and aVF and positive in lead aVL)</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Nonsustained or sustained VT of RV outflow configuration, LBBB morphology with inferior axis (positive QRS in leads II, III, and aVF and negative in lead aVL) or of unknown axis</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>&gt; 500 ventricular extrasystoles per 24 hours (by Holter)</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>ARVC/D confirmed in a first-degree relative who meets current Task Force criteria</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>ARVC/D confirmed apthologically at autopsy or surgery in a first-degree relative</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Identification of a pathogenic mutation categorized as associated or probably asoociated with ARC/D in the patient under evaluation</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>History of ARVC/D in a first-degree relative in whom it is not possible or practical to determine whether the family member meets current Task Force criteria</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Premature sudden death (&lt; 35 years of age) due to suspected ARVC/D in a first-degree relative</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>ARVC/D confirmed pathologically or by current Task Force Cirteria in a second-degree relative</string>
+				<integer>1</integer>
+			</array>
+		</array>
+	</array>
+	<key>ARVC1994</key>
+	<array>
+		<array>
+			<array>
+				<string>Severe dilatation and reduction of RVEF with no or only mild LV impairment</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Localized RV aneurysms (akinetic or dyskinetic areas with diastolic bulging)</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Severe segmental dilatation of the RV</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Mild global RV dilatation and/or EF reduction with normal LV</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Mild segmental dilatation of the RV</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Regional RV hypokinesia</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Fibrofatty replacement of myocardium on endomyocardial biopsy</string>
+				<integer>100</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>T wave inversion in leads V2 and V3, with age &gt; 12 yrsin absence of complete RBBB)</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Epsilon wave or localized prolongation (&gt; 110 msec) of QRS complex in leads V1 to V3</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Late potentials on SAECG</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Sustained or nonsustained ventricular tachycardia with LBBB morphology on ECG, Holter or treadmill test</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>&gt; 1000 ventricular extrasystoles per 24 hours</string>
+				<integer>1</integer>
+			</array>
+		</array>
+		<array>
+			<array>
+				<string>Familial ARVC/D confirmed at autopsy or surgery</string>
+				<integer>100</integer>
+			</array>
+			<array>
+				<string>Family history of sudden death (&lt; 35 yrs) due to suspected ARVC/d</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>Family history of ARVC/D based on these criteria</string>
+				<integer>1</integer>
+			</array>
+		</array>
+	</array>
+	<key>CMS</key>
+	<dict>
+		<key>SectionHeaders</key>
+		<array>
+			<string>Secondary Prevention</string>
+			<string>Primary Prevention</string>
+			<string>Exclusions</string>
+		</array>
+		<key>Sections</key>
+		<array>
+			<array>
+				<array>
+					<string>Documented cardiac arrest, without transient or reversible cause</string>
+					<integer>0</integer>
+				</array>
+				<array>
+					<string>Documented sustained VT/VF, either spontaneous or induced at EPS, not associated with an acute MI, and without transient or reversible cause</string>
+					<integer>1</integer>
+				</array>
+			</array>
+			<array>
+				<array>
+					<string>Documented familial or inherited condition with a high risk of life-threatening VT, e.g. LQTS or HCM</string>
+					<integer>2</integer>
+				</array>
+				<array>
+					<string>Ischemic cardiomyopathy</string>
+					<integer>3</integer>
+				</array>
+				<array>
+					<string>Nonischemic cardiomyopathy</string>
+					<integer>4</integer>
+				</array>
+				<array>
+					<string>CM duration &gt; 3 months</string>
+					<integer>5</integer>
+				</array>
+				<array>
+					<string>Documented prior MI</string>
+					<integer>6</integer>
+				</array>
+				<array>
+					<string>Inducible sustained VT/VF at EPS</string>
+					<integer>7</integer>
+				</array>
+				<array>
+					<string>QRS duration ≥ 120 msec</string>
+					<integer>8</integer>
+				</array>
+			</array>
+			<array>
+				<array>
+					<string>Cardiogenic shock or symptomatic hypotension</string>
+					<integer>9</integer>
+				</array>
+				<array>
+					<string>CABG or PCI within past 3 months</string>
+					<integer>10</integer>
+				</array>
+				<array>
+					<string>Acute MI within past 40 days</string>
+					<integer>11</integer>
+				</array>
+				<array>
+					<string>EPS performed within 4 weeks post-MI</string>
+					<integer>12</integer>
+				</array>
+				<array>
+					<string>Symptoms or findings that would make patient a candidate for revascularization</string>
+					<integer>13</integer>
+				</array>
+				<array>
+					<string>Non-cardiac disease with likelihood of survival &lt; 1 year</string>
+					<integer>14</integer>
+				</array>
+				<array>
+					<string>Irreversible brain damage from preexisting cerebral disease</string>
+					<integer>15</integer>
+				</array>
+			</array>
 		</array>
 	</dict>
 </dict>

@@ -88,5 +88,13 @@
     STAssertTrue([vc weeklyDoseIsSane:30 forTabletSize:5], nil);
 }
 
+- (void)testRound {
+    STAssertTrue(round(1.2) == 1, nil);
+    STAssertTrue(round(1.6) == 2, nil);
+    STAssertTrue(round(1.5) == 2, nil);
+
+    
+}
+
 
 @end

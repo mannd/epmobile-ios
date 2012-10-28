@@ -9,6 +9,7 @@
 #import "EPSWarfarinCalculatorViewController.h"
 #import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
+#import "EPSNotesViewController.h"
 
 
 @interface EPSWarfarinCalculatorViewController ()
@@ -34,6 +35,8 @@
 @synthesize inrField;
 @synthesize resultLabel;
 @synthesize doseChange;
+@synthesize tabletSizeSegmentedControl;
+@synthesize targetSegmentedControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,6 +57,45 @@
     tabletSize = 5.0;
     minINR = 2.0;
     maxINR = 3.0;
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    [self refreshDefaults];
+    if ([self.defaultWarfarinTabletSize isEqualToString:@"2"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:0];
+        tabletSize = 2.0;
+    }
+    else if ([self.defaultWarfarinTabletSize isEqualToString:@"2.5"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:1];
+        tabletSize = 2.5;
+    }
+    else if ([self.defaultWarfarinTabletSize isEqualToString:@"5"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:2];
+        tabletSize = 5.0;
+    }
+    else if ([self.defaultWarfarinTabletSize isEqualToString:@"7.5"]) {
+        [tabletSizeSegmentedControl setSelectedSegmentIndex:3];
+        tabletSize = 7.5;
+    }
+    if ([self.defaultINR isEqualToString:@"2"]) {
+        [targetSegmentedControl setSelectedSegmentIndex:0];
+        minINR = 2.0;
+        maxINR = 3.0;
+    }
+    else if ([self.defaultINR isEqualToString:@"2.5"]){
+        [targetSegmentedControl setSelectedSegmentIndex:1];
+        minINR = 2.5;
+        maxINR = 3.5;
+    }
+}
+
+- (void)refreshDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.defaultWarfarinTabletSize = [defaults objectForKey:@"defaultwarfarintablet"];
+    self.defaultINR = [defaults objectForKey:@"defaultinrtarget"];
+    NSLog(@"DefaultWafarinTabletSize = %@", self.defaultWarfarinTabletSize);
+    NSLog(@"DefaultINR = %@", self.defaultINR);
+
 }
 
 - (void)viewDidUnload
@@ -62,14 +104,19 @@
     [self setInrField:nil];
     [self setResultLabel:nil];
     [self setDoseChange:nil];
+    [self setTabletSizeSegmentedControl:nil];
+    [self setTargetSegmentedControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || 
-            interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)showNotes {
+    [self performSegueWithIdentifier:@"WarfarinNotesSegue" sender:nil];
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
@@ -125,8 +172,8 @@
     float inr = [inrText floatValue];
     NSString *weeklyDoseText = [self.weeklyDoseField text];
     weeklyDose = [weeklyDoseText floatValue];
-    if (inr == 0 || weeklyDose == 0) {
-        message = @"Invalid Entries!";
+    if (inr <= 0 || weeklyDose <= 0) {
+        message = @"INVALID ENTRY";
     }
     else if (inr >= 6.0)
         message = @"Hold warfarin until INR back in therapeutic range.";
@@ -134,8 +181,8 @@
         message = @"INR is therapeutic. No change in warfarin dose.";
     else {
         doseChange = [self percentDoseChange:inr];
-        if (doseChange.lowEnd == 0 || doseChange.highEnd == 0)
-            message = @"Invalid Entries!";
+        if (doseChange.lowEnd <= 0 || doseChange.highEnd <= 0)
+            message = @"INVALID ENTRY";
         else {
             if (doseChange.message != nil)
                 message = [doseChange.message stringByAppendingString:@"\n"];
@@ -167,7 +214,7 @@
 - (BOOL)weeklyDoseIsSane:(float)dose forTabletSize:(float)size {
     //return dose - 0.2 * dose >= 7 * 0.5 * tabletSize && dose + 0.2 * dose <= 7 * 2.0 * tabletSize;
     // dose calculator algorithm should handle from about 3 half tabs a week to 2 tabs daily
-    return dose > (4 * 0.5 * size) && dose < (2 * tabletSize * 7);
+    return (dose > (4 * 0.5 * size)) && (dose < (2 * size * 7));
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -179,12 +226,20 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSWarfarinDosingTableViewController *dc = (EPSWarfarinDosingTableViewController *)[segue destinationViewController]; 
-    dc.tabletSize = tabletSize;
-    dc.lowEnd = doseChange.lowEnd;
-    dc.highEnd = doseChange.highEnd;
-    dc.increase = (doseChange.direction == INCREASE);
-    dc.weeklyDose = weeklyDose;
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"WarfarinNotesSegue"]) {
+        NSLog(@"Warfarin notes");
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = @"WarfarinNotes";
+    }
+    else if ([segueIdentifier isEqualToString:@"DosingSegue"]) {
+        EPSWarfarinDosingTableViewController *dc = (EPSWarfarinDosingTableViewController *)[segue destinationViewController];
+        dc.tabletSize = tabletSize;
+        dc.lowEnd = doseChange.lowEnd;
+        dc.highEnd = doseChange.highEnd;
+        dc.increase = (doseChange.direction == INCREASE);
+        dc.weeklyDose = weeklyDose;
+    }
 }
 
 

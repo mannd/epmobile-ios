@@ -47,7 +47,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);}
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);}
 
 - (int)convertInterval:(int)n {
     // make sure result rounded up to nearest msec

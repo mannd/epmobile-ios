@@ -25,8 +25,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *weeklyDoseField;
 @property (strong, nonatomic) IBOutlet UITextField *inrField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *tabletSizeSegmentedControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *targetSegmentedControl;
 
 @property (strong, nonatomic) EPSDoseChange *doseChange;
+@property (strong, nonatomic) NSString *defaultWarfarinTabletSize;
+@property (strong, nonatomic) NSString *defaultINR;
 
 - (IBAction)toggleTabletSize:(id)sender;
 - (IBAction)toggleTargetRange:(id)sender;

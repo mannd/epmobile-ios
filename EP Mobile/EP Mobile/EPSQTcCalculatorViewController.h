@@ -16,6 +16,11 @@
 @property (strong, nonatomic) IBOutlet UITextField *inputField;
 @property (strong, nonatomic) IBOutlet UITextField *qtField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *intervalRateSegmentedControl;
+
+@property (strong, nonatomic) NSString *defaultQTcFormula;
+@property float maxQTc;
+@property BOOL defaultInputTypeIsInterval;
 
 - (IBAction)calculateButtonPressed:(id)sender;
 - (IBAction)clearButtonPressed:(id)sender;
@@ -25,5 +30,7 @@
 - (IBAction)backgroundTap:(id)sender;
 
 - (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(NSInteger)formula;
+
+- (void)refreshDefaults;
 
 @end

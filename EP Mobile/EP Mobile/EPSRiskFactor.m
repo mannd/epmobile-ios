@@ -13,6 +13,8 @@
 @synthesize points=points_;
 @synthesize details=details_;
 @synthesize selected=selected_;
+@synthesize isMajor=isMajor_;
+@synthesize sectionNumber=sectionNumber_;
 
 - (id)initWith:(NSString *)name withValue:(int)value {
     self = [super init];
@@ -30,6 +32,25 @@
     if (self)
         self.details = details;
     return self;
+}
+
+- (id)initWithAllFields:(NSString *)name withValue:(int)value withDetails:(NSString *)details withIsMajor:(BOOL)isMajor withSectionNumber:(NSUInteger) sectionNumber {
+    self = [self initWithDetails:name withValue:value withDetails:details];
+    if (self) {
+        self.isMajor = isMajor;
+        self.sectionNumber = sectionNumber;
+    }
+    return self;
+}
+
+
+
+
+- (void)setName:(NSString *)name withValue:(int)value withDetails:(NSString *)details {
+    self.name = name;
+    self.points = value;
+    self.details = details;
+
 }
 
 @end
