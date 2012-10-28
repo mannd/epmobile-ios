@@ -56,14 +56,14 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
     BOOL allowZeroDoses = NO;
     if (order == DECREASE_DOSE) {
         while ([self actualWeeklyDose:doses] > self.weeklyDose) {
-            // check for all half tablets, we're done
+            // check for all half tablets, can start using zero doses
             if ([self allHalfTablets:doses]) {
                 NSLog(@"All Half Doses!");
-                // don't allow zero dose days unless already at all half doses
                 allowZeroDoses = YES;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
-            if ((allowZeroDoses && value > 0.0) || value > 0.5)                    [doses insertObject:[NSNumber numberWithFloat:(value - 0.5)] atIndex:orderedDays[nextDay]];
+            if ((allowZeroDoses && value > 0.0) || value > 0.5)
+                [doses replaceObjectAtIndex:orderedDays[nextDay] withObject:[NSNumber numberWithFloat:(value - 0.5)]];
             NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
             NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
             ++nextDay;
@@ -75,14 +75,15 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
     }
     if (order == INCREASE_DOSE) {
         while ([self actualWeeklyDose:doses] < self.weeklyDose) {
-            // check for all half tablets, we're done
+            // check for all double tablets, we're done
             if ([self allDoubleTablets:doses]) {
-                //[self zeroDoses:doses];
-                return;
+               return;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
             if (value < 2.0)
-                [doses insertObject:[NSNumber numberWithFloat:(value + 0.5)] atIndex:orderedDays[nextDay]];
+                [doses replaceObjectAtIndex:orderedDays[nextDay] withObject:[NSNumber numberWithFloat:(value + 0.5)]];
+            NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
+            NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
             ++nextDay;
             if (nextDay > NUM_DAYS - 1)
                 nextDay = 0;
@@ -108,11 +109,6 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
         if ([[doses objectAtIndex:i] floatValue] != 2.0)
             allDoubleTabs = NO;
     return allDoubleTabs;
-}
-
-- (void)zeroDoses:(NSMutableArray *)doses {
-for (int i = 0; i < NUM_DAYS; ++i)
-    [doses insertObject:[NSNumber numberWithFloat:0.0] atIndex:i];
 }
 
 - (float)actualWeeklyDose:(NSMutableArray *)doses {

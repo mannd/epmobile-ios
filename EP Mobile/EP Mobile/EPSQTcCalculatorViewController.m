@@ -140,13 +140,13 @@
     NSString *qt = self.qtField.text;
     NSInteger qtNumber = [qt intValue];
     NSLog(@"The value of qtNumber is %d", qtNumber);
-    if (inputNumber == 0 || qtNumber == 0) {
+    if (inputNumber <= 0 || qtNumber <= 0) {
         self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;
         return;
     }
     if (inputIsRate) {
-        inputNumber = round(60000.0 / inputNumber);
+        inputNumber = 60000.0 / inputNumber;
         NSLog(@"Converted to RR interval in msec is %d", inputNumber);
     }
     NSInteger row = [formulaPicker selectedRowInComponent:0];
