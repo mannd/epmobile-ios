@@ -34,13 +34,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LFv-s2-rHW">
                                 <rect key="frame" x="20" y="185" width="280" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Pseudo-delta wave Δ: Measured from earliest ventricular activation to the earliest fast deflection in any precordial lead. Pseudo-delta wave ≥ 34 msec predicts epicardial origin (Sens 83%, Spec 95%).
+                                <string key="text">Pseudo-delta wave Δ: Measured from earliest ventricular activation to the earliest fast deflection in any precordial lead. Pseudo-delta wave ≥ 34 msec predicts epicardial origin (Sens 83%, Spec 95%).
 
 Intrinsicoid deflection time (ID): Measured from earliest ventricular activation to the peak of the R wave in V2. ID of ≥ 85 msec predicts epicardial origin (Sens 87%, Spec 90%).
 
 Shortest RS complex (RS): Measured from the earliest ventricular activation to the nadir of the first S wave in any precordial lead. RS ≥ 121 msec predicts epicardial origin (Sens 76%, Spec 85%).
 
-Reference: Berruezo A et al.  Circulation 2004;109:1842.</mutableString>
+Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
