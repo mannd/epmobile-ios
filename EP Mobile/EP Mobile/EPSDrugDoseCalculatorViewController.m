@@ -146,6 +146,11 @@
         self.resultLabel.text = @"INVALID ENTRY";
         return;
     }
+    if (age < 18) {
+        self.resultLabel.text = @"Pediatric dosing is not recommended or not calculated by EP Mobile.";
+        return;
+    }
+
     if (weightIsPounds) {
         NSLog(@"Weight is in pounds (%f lb)", weight);
         weight = [self lbsToKgs:weight];
