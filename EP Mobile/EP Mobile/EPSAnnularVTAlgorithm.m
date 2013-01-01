@@ -94,7 +94,7 @@ const int notchingQInferiorLeadsStep = 4;
     NSString *question = nil;
     switch (step) {
         case initialStep:
-            question = @"Precordial transition (first precordial lead with R > S) in V1 or V2";
+            question = @"Precordial transition (first precordial lead with R > S) in V1 or V2?";
             break;
         case positiveQrsInferiorLeadsStep:
             question = @"Positive QRS in inferior leads?";
