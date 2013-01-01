@@ -12,7 +12,6 @@
 #define DOFETILIDE @"Dofetilide"
 #define RIVAROXABAN @"Rivaroxaban"
 #define SOTALOL @"Sotalol"
-// for the future
 #define APIXABAN @"Apixaban"
 
 #define DO_NOT_USE @"DO NOT USE! "
@@ -156,7 +155,10 @@
     int cc = [self creatinineClearanceForAge:age isMale:isMale forWeightInKgs:weight forCreatinine:creatinine usingMicroMolUnits:!unitsAreMgPerDl];
 
     NSString *result = [[NSString alloc] init];
-    result = [result stringByAppendingString:[self getDose:cc]];
+    if (!unitsAreMgPerDl)
+        creatinine = [self creatinineFromMicroMolUnits:creatinine];
+    result = [result stringByAppendingString:[self getDose:cc forWeightInKgs:weight forCreatinine:creatinine
+                                                    forAge:age]];
     result = [result stringByAppendingString:[NSString stringWithFormat:@"\nCreatinine Clearance = %i ml/min.", cc]];
     NSString *details = result;
     
@@ -179,6 +181,10 @@
     self.weightField.text = nil;
     self.creatinineField.text = nil;
     self.resultLabel.text = nil;
+}
+
+- (double)creatinineFromMicroMolUnits:(double)creatinine {
+    return creatinine / 88.4;
 }
 
 - (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine usingMicroMolUnits:(BOOL)usingMicroMolUnits {
@@ -211,8 +217,9 @@
     double CONVERSION_FACTOR = 0.45359237;
     return weight * CONVERSION_FACTOR;
 }
-              
-- (NSString *)getDose:(int)crCl {
+
+// need more than just crCl for Apixaban dosing
+- (NSString *)getDose:(int)crCl forWeightInKgs:(double)weight forCreatinine:(double)creatinine forAge:(double)age {
     int dose;
     NSString *message = [[NSString alloc] init];
     if ([drug isEqualToString:DABIGATRAN]) {
@@ -264,6 +271,27 @@
         if (crCl >= 40)
             return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg daily. ", dose]];  
     }
+    if ([drug isEqualToString:APIXABAN]) {
+        NSString* stringDose = @"";
+        if (crCl < 15)
+            stringDose = @"0";
+        else if (crCl <= 24)
+             stringDose = @"Use Caution";
+        else {
+            NSLog(@"Creatine = %f", creatinine);
+
+            if ((creatinine >= 1.5 && (age >= 80 || weight <= 60))
+                    || (age >= 80 && weight <= 60))
+                stringDose = @"2.5";
+            else
+                stringDose = @"5";
+        }
+        if ([stringDose isEqualToString:@"0"])
+            return [message stringByAppendingString:DO_NOT_USE];
+        if ([stringDose isEqualToString:@"Use Caution"])
+            return [message stringByAppendingString:@"No dose recommendation"];
+        return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg BID. ", stringDose]];
+    }
     return @"Unknown Dose";
 }
 
@@ -276,6 +304,8 @@
         return crCl < 15;
     if ([drug isEqualToString:SOTALOL])
         return crCl < 40;
+    if ([drug isEqualToString:APIXABAN])
+        return crCl <= 24;
     return NO;
 }
 
@@ -310,6 +340,11 @@
                 return [msg stringByAppendingString:@"BID."];
             else 
                 return [msg stringByAppendingString:@"daily."];
+        }
+    }
+    if ([drug isEqualToString:APIXABAN]) {
+        if (crCl >= 15 && crCl <= 24) {
+            return @"Clinical data are too limited to provide a dosing recommendation at this creatinine clearance.";
         }
     }
         

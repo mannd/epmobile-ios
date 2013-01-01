@@ -11,6 +11,7 @@
 #import "EPSQTcCalculatorViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSWarfarinCalculatorViewController.h"
+#import "EPSDrugDoseCalculatorViewController.h"
 
 @implementation EP_MobileTests
 
@@ -92,8 +93,13 @@
     STAssertTrue(round(1.2) == 1, nil);
     STAssertTrue(round(1.6) == 2, nil);
     STAssertTrue(round(1.5) == 2, nil);
+}
 
-    
+- (void)testCreatinineConversion {
+    EPSDrugDoseCalculatorViewController *vc = [[EPSDrugDoseCalculatorViewController alloc] init];
+    STAssertEqualsWithAccuracy([vc creatinineFromMicroMolUnits:150.0], 1.696, 0.01, nil);
+    STAssertEqualsWithAccuracy([vc creatinineFromMicroMolUnits:87.5], 0.98981, 0.01, nil);
+
 }
 
 
