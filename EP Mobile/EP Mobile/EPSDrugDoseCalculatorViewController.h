@@ -30,4 +30,6 @@
 
 - (int)creatinineClearanceForAge:(double)age isMale:(BOOL)isMale forWeightInKgs:(double)weight forCreatinine:(double)creatinine usingMicroMolUnits:(BOOL)usingMicroMolUnits;
 - (double)lbsToKgs:(double)weight;
+- (double)creatinineFromMicroMolUnits:(double)creatinine;
+
 @end
