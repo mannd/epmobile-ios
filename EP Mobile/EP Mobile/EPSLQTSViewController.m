@@ -97,15 +97,21 @@
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
             score += [[self.risks objectAtIndex:i] points];
+    
+
     // Torsade and syncope are mutually exclusive, so don't count syncope
     // if has torsade.
-
 	if ([[self.risks objectAtIndex:HAS_TORSADE_INDEX] selected] && ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] || [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])) {
         if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected])
             score -= 20;
-        else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
             score -= 10;
-    }
+    }  
+    // Not allowed to have syncope with and without stress, count it as syncope with stress
+    // (radio buttons would fix this, but not available in iOS)
+    else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] && [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+        // subtract the points for syncope without stress
+        score -= 10;
         
     NSString *message = [self getResultsMessage:score];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
