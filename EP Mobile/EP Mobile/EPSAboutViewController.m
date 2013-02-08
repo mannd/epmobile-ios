@@ -8,7 +8,7 @@
 
 #import "EPSAboutViewController.h"
 
-#define VERSION @"1.0"
+#define VERSION @"1.2"
 
 @interface EPSAboutViewController ()
 
@@ -34,7 +34,7 @@
 //    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
 //                                   initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(doneButtonPressed:)];
     //self.titleBar. = editButton;
-    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"EP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright 2012, EP Studios, Inc.\nLicensed under Apache License 2.0", VERSION];
+    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"EP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright © 2012, 2013\nEP Studios, Inc.\nLicensed under Apache License 2.0", VERSION];
 }
 
 - (void)viewDidUnload

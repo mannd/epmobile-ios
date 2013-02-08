@@ -37,6 +37,7 @@
     [self.qtcSegmentedControl setTitle:@"≥ 480" forSegmentAtIndex:3];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"QTc 4 min post-ex test ≥ 480 msec" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Torsade de pointes" withValue:20]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"T wave alternans" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Notched T wave in 3 leads" withValue:10]];
@@ -80,9 +81,9 @@
     const int MOD_QTC_PROLONGATION = 2;
     const int MARKED_QTC_PROLONGATION = 3;
     
-    const int HAS_TORSADE_INDEX = 0;
-    const int HAS_SYNCOPE_WITH_STRESS_INDEX = 4;
-    const int HAS_SYNCOPE_WITHOUT_STRESS_INDEX = 5;
+    const int HAS_TORSADE_INDEX = 1;
+    const int HAS_SYNCOPE_WITH_STRESS_INDEX = 5;
+    const int HAS_SYNCOPE_WITHOUT_STRESS_INDEX = 6;
     
     int score = 0;
     
@@ -96,15 +97,21 @@
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
             score += [[self.risks objectAtIndex:i] points];
+    
+
     // Torsade and syncope are mutually exclusive, so don't count syncope
     // if has torsade.
-
 	if ([[self.risks objectAtIndex:HAS_TORSADE_INDEX] selected] && ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] || [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])) {
         if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected])
             score -= 20;
-        else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
             score -= 10;
-    }
+    }  
+    // Not allowed to have syncope with and without stress, count it as syncope with stress
+    // (radio buttons would fix this, but not available in iOS)
+    else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] && [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+        // subtract the points for syncope without stress
+        score -= 10;
         
     NSString *message = [self getResultsMessage:score];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -116,9 +123,9 @@
 - (NSString *)getResultsMessage:(int)score {
     double displayScore = score / 10.0;
     NSString *message = [[NSString alloc] initWithFormat:@"Risk Score = %1.1f\n", displayScore];
-    if (score >= 40)
-        message = [[NSString alloc] initWithFormat:@"%@Definite ", message];
-    else if (score >= 20)
+    if (score >= 35)
+        message = [[NSString alloc] initWithFormat:@"%@High probability of ", message];
+    else if (score >= 15)
         message = [[NSString alloc] initWithFormat:@"%@Intermediate probability of ", message];
     else
         message = [[NSString alloc] initWithFormat:@"%@Low probability of ", message];
@@ -140,7 +147,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0)
-        return  4;
+        return  5;
     else if (section == 1)
         return  3;
     else {
@@ -185,9 +192,9 @@
 - (int)calculateOffset:(int)section {
     int offset = 0;
     if (section == 1)
-        offset = 4;
+        offset = 5;
     else if (section == 2)
-        offset = 7;
+        offset = 8;
     return offset;
 }
 
