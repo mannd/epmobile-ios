@@ -82,6 +82,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="hSz-kY-OPb" kind="push" id="haK-7t-E3C"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Mpb-BA-cZM" style="IBUITableViewCellStyleDefault" id="7Na-dY-HhQ">
                                         <rect key="frame" x="0.0" y="91" width="320" height="44"/>
@@ -589,7 +592,138 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-805" y="155"/>
+            <point key="canvasLocation" x="-734" y="84"/>
+        </scene>
+        <!--Date Calculator View Controller - Date Calculator-->
+        <scene sceneID="kv5-Xr-G9v">
+            <objects>
+                <viewController id="hSz-kY-OPb" customClass="EPSDateCalculatorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d0h-Lg-Guf" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="K5t-et-TmX">
+                                <rect key="frame" x="0.0" y="88" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="385827755.47134">
+                                    <!--2013-03-24 14:22:35 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                                </timeZone>
+                            </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="mJ0-gN-YFQ">
+                                <rect key="frame" x="20" y="39" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="90 days"/>
+                                    <segment title="40 days"/>
+                                    <segment title="30 days"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeNumberOfDays:" destination="hSz-kY-OPb" eventType="valueChanged" id="OGl-CQ-Kne"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="TFs-Om-7eu">
+                                <rect key="frame" x="201" y="312" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fn8-Pt-FLw">
+                                <rect key="frame" x="20" y="344" width="58" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Calc">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xqu-ot-ijf">
+                                <rect key="frame" x="242" y="344" width="58" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="hSz-kY-OPb" eventType="touchUpInside" id="454-Nk-D2N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ttx-uS-cbo">
+                                <rect key="frame" x="86" y="355" width="148" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Subtract Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="deR-vb-cmM">
+                                <rect key="frame" x="51" y="315" width="142" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" placeholder="Days" textAlignment="right" minimumFontSize="17" id="7du-d7-6cx">
+                                <rect key="frame" x="236" y="6" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="hSz-kY-OPb" eventType="editingDidEndOnExit" id="4tm-xX-Dgr"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uWG-AZ-076">
+                                <rect key="frame" x="51" y="9" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backgroundTap:" destination="hSz-kY-OPb" eventType="touchDown" id="NLP-zS-KF1"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Date Calculator" id="I0G-Ri-oPK"/>
+                    <connections>
+                        <outlet property="datePicker" destination="K5t-et-TmX" id="8IJ-A5-841"/>
+                        <outlet property="daysSegmentedControl" destination="mJ0-gN-YFQ" id="c28-l9-DyZ"/>
+                        <outlet property="numberOfDaysTextField" destination="7du-d7-6cx" id="riZ-1e-Bch"/>
+                        <outlet property="resultLabel" destination="ttx-uS-cbo" id="3Eo-2m-pd4"/>
+                        <outlet property="subtractDaysSwitch" destination="TFs-Om-7eu" id="7j5-vP-Igh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="br2-3y-1zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-764" y="-323"/>
         </scene>
         <!--Link View Controller-->
         <scene sceneID="wuk-kW-8mj">
@@ -614,7 +748,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849" y="-15"/>
+            <point key="canvasLocation" x="-725" y="751"/>
         </scene>
         <!--View Controller - VT-->
         <scene sceneID="bq8-Pb-GWV">
@@ -4096,7 +4230,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQn-gj-7lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1813" y="287"/>
+            <point key="canvasLocation" x="-1792" y="221"/>
         </scene>
     </scenes>
     <resources>
@@ -4185,6 +4319,21 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSDateCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDateCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="changeNumberOfDays:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="daysSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="numberOfDaysTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="subtractDaysSwitch" candidateClass="UISwitch"/>
             </relationships>
         </class>
         <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
@@ -4295,8 +4444,10 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="calculateButtonPressed:"/>
                 <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="action" name="toggleTabletSize:"/>
                 <relationship kind="action" name="toggleTargetRange:"/>
                 <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
@@ -4340,11 +4491,11 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
-        <segue reference="9RH-WQ-qQ2"/>
-        <segue reference="bT0-Tb-wFg"/>
+        <segue reference="hpG-ma-Wwm"/>
+        <segue reference="WZv-9D-sK8"/>
         <segue reference="BXP-mT-oa5"/>
         <segue reference="HWu-7U-py6"/>
+        <segue reference="bT0-Tb-wFg"/>
         <segue reference="ucK-8l-Jyw"/>
-        <segue reference="WZv-9D-sK8"/>
     </inferredMetricsTieBreakers>
 </document>
