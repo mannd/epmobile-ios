@@ -719,11 +719,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="numberOfDaysTextField" destination="7du-d7-6cx" id="riZ-1e-Bch"/>
                         <outlet property="resultLabel" destination="ttx-uS-cbo" id="3Eo-2m-pd4"/>
                         <outlet property="subtractDaysSwitch" destination="TFs-Om-7eu" id="7j5-vP-Igh"/>
+                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="DateCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="wO3-53-DBV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br2-3y-1zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-764" y="-323"/>
+            <point key="canvasLocation" x="-817" y="-856"/>
         </scene>
         <!--Link View Controller-->
         <scene sceneID="wuk-kW-8mj">
@@ -2913,6 +2914,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="btM-lP-yv8"/>
                     <connections>
                         <outlet property="headerLabel" destination="EIn-cj-Io0" id="FgF-m9-hGf"/>
                         <outlet property="notesTextView" destination="1Vx-uc-pdM" id="bsp-Mc-Bxc"/>
@@ -2921,7 +2923,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-340" y="-1287"/>
+            <point key="canvasLocation" x="-340" y="-1283"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -4444,10 +4446,8 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="calculateButtonPressed:"/>
                 <relationship kind="action" name="clearButtonPressed:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="action" name="toggleTabletSize:"/>
                 <relationship kind="action" name="toggleTargetRange:"/>
                 <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
@@ -4495,7 +4495,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <segue reference="WZv-9D-sK8"/>
         <segue reference="BXP-mT-oa5"/>
         <segue reference="HWu-7U-py6"/>
-        <segue reference="bT0-Tb-wFg"/>
+        <segue reference="wO3-53-DBV"/>
         <segue reference="ucK-8l-Jyw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 //
 
 #import "EPSDateCalculatorViewController.h"
+#import "EPSNotesViewController.h"
 
 @interface EPSDateCalculatorViewController ()
 
@@ -27,6 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,4 +96,14 @@
     self.numberOfDaysTextField.text = @"90";
     self.daysSegmentedControl.selectedSegmentIndex = 0;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+    vc.key = @"DateCalculatorNotes";
+}
+
+- (void)showNotes {
+    [self performSegueWithIdentifier:@"DateCalculatorNotesSegue" sender:nil];
+}
+
 @end
