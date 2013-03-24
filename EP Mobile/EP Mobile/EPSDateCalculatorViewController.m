@@ -9,6 +9,8 @@
 #import "EPSDateCalculatorViewController.h"
 #import "EPSNotesViewController.h"
 
+#define INVALID_ENTRY @"INVALID ENTRY!"
+
 @interface EPSDateCalculatorViewController ()
 
 @end
@@ -74,6 +76,11 @@
 - (IBAction)calculate:(id)sender {
     NSString *numberOfDays = self.numberOfDaysTextField.text;
     NSInteger days = [numberOfDays intValue];
+    NSLog(@"Formula is %d", days);
+    if (days == 0) { // either zero entered or bad stuff entered
+        [self.resultLabel setText:INVALID_ENTRY];
+        return;
+    }
     NSDate *date = [self.datePicker date];
     BOOL subtract = self.subtractDaysSwitch.on;
     if (subtract)
