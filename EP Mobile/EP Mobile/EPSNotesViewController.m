@@ -12,6 +12,7 @@
 #import "EPSAnnularVTNotes.h"
 #import "EPSWarfarinNotes.h"
 #import "EPSCMSNotes.h"
+#import "EPSDateCalculatorNotes.h"
 
 @interface EPSNotesViewController ()
 
@@ -48,6 +49,8 @@
         notes = [[EPSWarfarinNotes alloc] init];
     else if ([self.key isEqualToString:@"CMSNotes"])
         notes = [[EPSCMSNotes alloc] init];
+    else if ([self.key isEqualToString:@"DateCalculatorNotes"])
+        notes = [[EPSDateCalculatorNotes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
