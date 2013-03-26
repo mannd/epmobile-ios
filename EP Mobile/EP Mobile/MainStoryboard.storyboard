@@ -212,6 +212,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="MUe-xB-0XX" kind="push" id="Bne-Eu-tHH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HAg-Rt-3mG" style="IBUITableViewCellStyleDefault" id="QPN-x7-0jU">
                                         <rect key="frame" x="0.0" y="403" width="320" height="44"/>
@@ -595,7 +598,146 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-811" y="-2397"/>
+            <point key="canvasLocation" x="-896" y="-2403"/>
+        </scene>
+        <!--Complex Algorithm View Controller - Atrial Tach Location-->
+        <scene sceneID="AL5-ZZ-YO7">
+            <objects>
+                <viewController id="MUe-xB-0XX" customClass="EPSComplexAlgorithmViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N4a-9B-7dU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Os-il-hkg">
+                                <rect key="frame" x="20" y="28" width="280" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1rf-jy-c25">
+                                <rect key="frame" x="20" y="107" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="M1a-bk-bZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y34-aD-0la">
+                                <rect key="frame" x="227" y="107" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="bPu-yo-dRp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YmV-rW-Nsa">
+                                <rect key="frame" x="124" y="107" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="9wZ-42-88k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yOC-nG-iwY">
+                                <rect key="frame" x="20" y="158" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button4Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="rp6-Ct-yR8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zde-3L-Q7E">
+                                <rect key="frame" x="124" y="158" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button5Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="hYb-pf-MP9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TIB-BC-Egf">
+                                <rect key="frame" x="227" y="158" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button6Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="JDC-zu-xb3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zox-6e-UxA">
+                                <rect key="frame" x="20" y="209" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="instructionsButtonClick:" destination="MUe-xB-0XX" eventType="touchUpInside" id="vu5-gA-2qn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Atrial Tach Location" id="7tf-m5-bz5"/>
+                    <connections>
+                        <outlet property="button1" destination="1rf-jy-c25" id="9z0-RW-WwB"/>
+                        <outlet property="button2" destination="YmV-rW-Nsa" id="Atd-GS-3hi"/>
+                        <outlet property="button3" destination="y34-aD-0la" id="yoO-Cy-r1b"/>
+                        <outlet property="button4" destination="yOC-nG-iwY" id="Vdg-EV-cUl"/>
+                        <outlet property="button5" destination="zde-3L-Q7E" id="QWn-rq-yQO"/>
+                        <outlet property="button6" destination="TIB-BC-Egf" id="YbV-Sk-O11"/>
+                        <outlet property="instructionsButton" destination="Zox-6e-UxA" id="0Jc-mm-rRX"/>
+                        <outlet property="questionLabel" destination="6Os-il-hkg" id="Kjk-Iy-jSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zjs-FE-Azd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-854" y="-2418"/>
         </scene>
         <!--Entrainment View Controller - Entrainment Map-->
         <scene sceneID="OZ9-P5-J2I">
@@ -757,7 +899,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHN-5k-r6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="-2044"/>
+            <point key="canvasLocation" x="-730" y="-1702"/>
         </scene>
         <!--Date Calculator View Controller - Date Calculator-->
         <scene sceneID="kv5-Xr-G9v">
@@ -4475,6 +4617,26 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 <relationship kind="outlet" name="hfClassSegmentedControl" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
+        <class className="EPSComplexAlgorithmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSComplexAlgorithmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="button1Click:"/>
+                <relationship kind="action" name="button2Click:"/>
+                <relationship kind="action" name="button3Click:"/>
+                <relationship kind="action" name="button4Click:"/>
+                <relationship kind="action" name="button5Click:"/>
+                <relationship kind="action" name="button6Click:"/>
+                <relationship kind="action" name="instructionsButtonClick:"/>
+                <relationship kind="outlet" name="button1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button6" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="instructionsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
             <relationships>
@@ -4674,12 +4836,12 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hpG-ma-Wwm"/>
         <segue reference="9A7-Dn-UeD"/>
+        <segue reference="hpG-ma-Wwm"/>
         <segue reference="ucK-8l-Jyw"/>
+        <segue reference="ojN-Fe-z3g"/>
+        <segue reference="WZv-9D-sK8"/>
         <segue reference="BXP-mT-oa5"/>
         <segue reference="HWu-7U-py6"/>
-        <segue reference="WZv-9D-sK8"/>
-        <segue reference="wO3-53-DBV"/>
     </inferredMetricsTieBreakers>
 </document>
