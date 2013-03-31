@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *button6;
 @property (strong, nonatomic) IBOutlet UIButton *instructionsButton;
 
+@property int step;
+
 - (IBAction)button1Click:(id)sender;
 - (IBAction)button2Click:(id)sender;
 - (IBAction)button3Click:(id)sender;
