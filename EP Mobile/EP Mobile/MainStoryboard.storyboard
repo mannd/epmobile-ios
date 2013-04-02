@@ -718,6 +718,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </state>
                                 <connections>
                                     <action selector="instructionsButtonClick:" destination="MUe-xB-0XX" eventType="touchUpInside" id="vu5-gA-2qn"/>
+                                    <segue destination="PQv-Iu-QYe" kind="modal" identifier="AtrialTachNotesSegue" id="VLv-ky-ss1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -737,7 +738,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjs-FE-Azd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-854" y="-2418"/>
+            <point key="canvasLocation" x="-2" y="-1507"/>
         </scene>
         <!--Entrainment View Controller - Entrainment Map-->
         <scene sceneID="OZ9-P5-J2I">
@@ -2737,7 +2738,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226" y="966"/>
+            <point key="canvasLocation" x="-123" y="865"/>
         </scene>
         <!--Brugada Morphology Table View Controller - LBBB in V1-->
         <scene sceneID="n6J-Ns-GoM">
@@ -3230,7 +3231,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-104" y="-1549"/>
+            <point key="canvasLocation" x="-577" y="-1407"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -4836,12 +4837,12 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9A7-Dn-UeD"/>
         <segue reference="hpG-ma-Wwm"/>
-        <segue reference="ucK-8l-Jyw"/>
-        <segue reference="ojN-Fe-z3g"/>
+        <segue reference="9A7-Dn-UeD"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="BXP-mT-oa5"/>
         <segue reference="HWu-7U-py6"/>
+        <segue reference="ucK-8l-Jyw"/>
+        <segue reference="VLv-ky-ss1"/>
     </inferredMetricsTieBreakers>
 </document>

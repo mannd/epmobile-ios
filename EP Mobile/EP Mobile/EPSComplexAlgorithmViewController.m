@@ -7,7 +7,7 @@
 //
 
 #import "EPSComplexAlgorithmViewController.h"
-
+#import "EPSNotesViewController.h"
 
 #define v24PosStep 2
 #define aVLStep 3
@@ -160,10 +160,24 @@
 }
 
 - (IBAction)instructionsButtonClick:(id)sender {
+    [self showInstructions];
 }
 
+- (void)showInstructions {
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"AtrialTachNotesSegue"]) {
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = @"AtrialTachNotes";
+    }
+}
+
+
 - (void)showResults:(NSString *)details {
-    NSString *title = @"Atrial Tachycardia Location";
+    NSString *title = @"Atrial Tachy Location";
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
     step = 1;

@@ -14,6 +14,7 @@
 #import "EPSCMSNotes.h"
 #import "EPSDateCalculatorNotes.h"
 #import "EPSEntrainmentNotes.h"
+#import "EPSAtrialTachNotes.h"
 
 @interface EPSNotesViewController ()
 
@@ -54,6 +55,8 @@
         notes = [[EPSDateCalculatorNotes alloc] init];
     else if ([self.key isEqualToString:@"EntrainmentNotes"])
         notes = [[EPSEntrainmentNotes alloc] init];
+    else if ([self.key isEqualToString:@"AtrialTachNotes"])
+        notes = [[EPSAtrialTachNotes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
