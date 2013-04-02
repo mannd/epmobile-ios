@@ -10,6 +10,11 @@
 
 
 #define v24PosStep 2
+#define aVLStep 3
+#define bifidIIStep 4
+#define negAllInfStep 5
+#define negAllInf2Step 6
+#define sinusRhythmPStep 7
 
 @interface EPSComplexAlgorithmViewController ()
 
@@ -83,6 +88,41 @@
     
 }
 
+- (void) getNoResult {
+    switch (self.step) {
+        case 1:
+            [self showResults:@"Crista Terminalis"];
+            break;
+    }
+    [self setButtons];
+}
+
+- (void) getBackResult {
+    if (step == 1)
+        step = aVLStep;
+    else
+        [self adjustStepsBackwards];
+    [self setButtons];
+}
+
+- (void) adjustStepsBackwards {
+    switch (step) {
+		case v24PosStep:
+		case aVLStep:
+		case bifidIIStep:
+			step = 1;
+			break;
+		case negAllInfStep:
+			step = v24PosStep;
+			break;
+		case negAllInf2Step:
+		case sinusRhythmPStep:
+			step = bifidIIStep;
+			break;
+    }
+
+}
+
 - (void) setButtons {
     if (step == 1)
         [self step1];
@@ -102,12 +142,15 @@
 }
 
 - (IBAction)button2Click:(id)sender {
+    [self getNoResult];
 }
 
 - (IBAction)button3Click:(id)sender {
+    [self getBackResult];
 }
 
 - (IBAction)button4Click:(id)sender {
+    [self showResults:@"Right Side of Septum or Perinodal"];
 }
 
 - (IBAction)button5Click:(id)sender {
@@ -118,4 +161,14 @@
 
 - (IBAction)instructionsButtonClick:(id)sender {
 }
+
+- (void)showResults:(NSString *)details {
+    NSString *title = @"Atrial Tachycardia Location";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    step = 1;
+    [self setButtons];
+}
+
+
 @end
