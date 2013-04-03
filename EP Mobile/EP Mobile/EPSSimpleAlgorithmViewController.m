@@ -8,7 +8,7 @@
 
 #import "EPSSimpleAlgorithmViewController.h"
 #import "EPSNotesViewController.h"
-#import "EPSStepAlgorithmProtocol.h"
+//#import "EPSStepAlgorithmProtocol.h"
 #import "EPSOutflowVTAlgorithm.h"
 #import "EPSAnnularVTAlgorithm.h"
 #import "EPSBrugadaWCTAlgorithm.h"

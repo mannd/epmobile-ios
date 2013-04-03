@@ -64,6 +64,7 @@
 		8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */; };
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
+		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
@@ -195,6 +196,8 @@
 		8E5D93E815CF5B1A00ACBA4F /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data.plist; path = ../Data.plist; sourceTree = "<group>"; };
 		8E6106FD170B6B6200A5B9CE /* EPSAtrialTachNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachNotes.h; sourceTree = "<group>"; };
 		8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachNotes.m; sourceTree = "<group>"; };
+		8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachAlgorithm.h; sourceTree = "<group>"; };
+		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */,
 				8E6106FD170B6B6200A5B9CE /* EPSAtrialTachNotes.h */,
 				8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */,
+				8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */,
+				8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -709,6 +714,7 @@
 				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
+				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

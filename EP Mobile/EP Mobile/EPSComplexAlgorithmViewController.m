@@ -7,6 +7,7 @@
 //
 
 #import "EPSComplexAlgorithmViewController.h"
+#import "EPSAtrialTachAlgorithm.h"
 #import "EPSNotesViewController.h"
 
 #define v24PosStep 2
@@ -20,9 +21,8 @@
 
 @end
 
-@implementation EPSComplexAlgorithmViewController
-{
-    int priorStep, priorStep1, priorStep2, priorStep3, priorStep4, priorStep5, priorStep6, priorStep7;
+@implementation EPSComplexAlgorithmViewController {
+    id<EPSStepAlgorithmProtocol> algorithm;
   
 }
 
@@ -41,9 +41,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    priorStep = priorStep1 = priorStep2 = priorStep3 = priorStep4 = priorStep5 = priorStep6 = priorStep7 = 1;
+    // Assumes only one algorithm uses this controller, see EPSSimpleAlgorithmViewController
+    // if need to use for more than this algorithm.
+    algorithm = [[EPSAtrialTachAlgorithm alloc] init];
+    self.navigationItem.title = [algorithm name];
+    self.instructionsButton.hidden = ![algorithm showInstructionsButton];
+    if (!self.instructionsButton.hidden)
+        [self.instructionsButton setTitle:@"Instructions" forState:UIControlStateNormal];
     self.step = 1;
     [self setButtons];
+    self.questionLabel.text = [algorithm step1];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,19 +71,9 @@
     [super viewDidUnload];
 }
 
-- (void) step1 {
-    self.questionLabel.text = @"P Wave Morphology in Lead V1?";
-    self.button4.hidden = NO;
-    self.button5.hidden = NO;
-    self.button6.hidden = NO;
-    self.instructionsButton.hidden = NO;
-    [self.button1 setTitle:@"Neg" forState:UIControlStateNormal];
-    [self.button2 setTitle:@"Pos/Neg" forState:UIControlStateNormal];
-    [self.button3 setTitle:@"Neg/Pos" forState:UIControlStateNormal];
-    [self.button4 setTitle:@"Iso/Pos" forState:UIControlStateNormal];
-    [self.button5 setTitle:@"Iso" forState:UIControlStateNormal];
-    [self.button6 setTitle:@"Pos" forState:UIControlStateNormal];
-}
+//- (void) step1 {
+//    self.questionLabel.text = @"P Wave Morphology in Lead V1?";
+//}
 
 - (void) getYesResult {
     switch (self.step) {
@@ -124,8 +121,19 @@
 }
 
 - (void) setButtons {
-    if (step == 1)
-        [self step1];
+    if (step == 1) {
+        self.button4.hidden = NO;
+        self.button5.hidden = NO;
+        self.button6.hidden = NO;
+        self.instructionsButton.hidden = NO;
+        [self.button1 setTitle:@"Neg" forState:UIControlStateNormal];
+        [self.button2 setTitle:@"Pos/Neg" forState:UIControlStateNormal];
+        [self.button3 setTitle:@"Neg/Pos" forState:UIControlStateNormal];
+        [self.button4 setTitle:@"Iso/Pos" forState:UIControlStateNormal];
+        [self.button5 setTitle:@"Iso" forState:UIControlStateNormal];
+        [self.button6 setTitle:@"Pos" forState:UIControlStateNormal];
+
+    }
     else {   // step > 1
         self.button4.hidden = YES;
         self.button5.hidden = YES;
@@ -159,13 +167,6 @@
 - (IBAction)button6Click:(id)sender {
 }
 
-- (IBAction)instructionsButtonClick:(id)sender {
-    [self showInstructions];
-}
-
-- (void)showInstructions {
-    
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
