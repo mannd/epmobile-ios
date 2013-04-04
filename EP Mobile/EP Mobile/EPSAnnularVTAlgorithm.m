@@ -82,10 +82,6 @@ const int notchingQInferiorLeadsStep = 4;
     return @"Mitral Annular VT";
 }
 
-- (NSString *)resultDialogTitle {
-    return @"Proposed VT Location";
-}
-
 - (BOOL)showInstructionsButton {
     return YES;
 }

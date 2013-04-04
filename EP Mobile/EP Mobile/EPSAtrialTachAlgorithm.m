@@ -42,7 +42,7 @@ const int locationRSPV = 1009;
 }
 
 - (NSString *)resultDialogTitle {
-    return @"Proposed AT Location";
+    return @"Atrial Tachycardia Location";
 }
 
 - (BOOL)showMap {

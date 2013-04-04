@@ -138,7 +138,7 @@ const int supraValvularStep = 9;
 }
 
 - (NSString *)resultDialogTitle {
-    return @"Proposed VT Location";
+    return @"Ventricular Tachycardia Location";
 }
 
 - (BOOL)showInstructionsButton {
