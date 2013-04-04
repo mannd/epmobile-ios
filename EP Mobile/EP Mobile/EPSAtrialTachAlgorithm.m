@@ -50,7 +50,6 @@ const int locationRSPV = 1009;
 }
 
 - (NSString *)yesResult:(int *)step {
-    [self adjustStepsForward:*step];
     switch (*step) {
         case 1:
             *step = v24PosStep;
@@ -61,23 +60,71 @@ const int locationRSPV = 1009;
         case aVLStep:
             *step = locationSMA;
             break;
+        case bifidIIStep:
+            *step = negAllInf2Step;
+            break;
+        case negAllInfStep:
+            *step = locationTA;
+            break;
+        case negAllInf2Step:
+            *step = locationCsBody;
+            break;
+        case sinusRhythmPStep:
+            *step = locationCristaOrRPV;
+            break;
     }
     return [self getQuestion:*step];
     
 }
 
 - (NSString *)noResult:(int *)step {
-    [self adjustStepsForward:*step];
     switch (*step) {
         case 1:
             *step = locationCrista;
+            break;
+        case v24PosStep:
+            *step = negAllInfStep;
+            break;
+        case aVLStep:
+            *step = locationOsOrLeftSeptum;
+            break;
+        case bifidIIStep:
+            *step = sinusRhythmPStep;
+            break;
+        case negAllInfStep:
+            *step = locationTAOrRAA;
+            break;
+        case negAllInf2Step:
+            *step = locationLPVOrLAA;
+            break;
+        case sinusRhythmPStep:
+            *step = locationRSPV;
             break;
     }
     return [self getQuestion:*step];
 }
 
 - (NSString *)backResult:(int *)step {
-    [self adjustStepsBackwards:step];
+    // back button moves forward in step 1, back button is neg/pos button
+    if (*step == 1)
+        *step = aVLStep;
+    else
+        [self adjustStepsBackwards:step];
+    return [self getQuestion:*step];
+}
+
+- (NSString *)button4Result:(int *)step {
+    *step = aVLStep;
+    return [self getQuestion:*step];
+}
+
+- (NSString *)button5Result:(int *)step {
+    *step = locationRightSeptum;
+    return nil;
+}
+
+- (NSString *)button6Result:(int *)step {
+    *step = bifidIIStep;
     return [self getQuestion:*step];
 }
 

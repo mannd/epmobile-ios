@@ -7,7 +7,9 @@
 //
 
 #import "EPSOutflowVTAlgorithm.h"
+#import "EPSComplexStepAlgorithmProtocol.h"
 
 @interface EPSAtrialTachAlgorithm : EPSOutflowVTAlgorithm
+    <EPSComplexStepAlgorithmProtocol>
 
 @end

@@ -9,6 +9,7 @@
 #import "EPSComplexAlgorithmViewController.h"
 #import "EPSAtrialTachAlgorithm.h"
 #import "EPSNotesViewController.h"
+#import "EPSComplexStepAlgorithmProtocol.h"
 
 #define v24PosStep 2
 #define aVLStep 3
@@ -22,7 +23,7 @@
 @end
 
 @implementation EPSComplexAlgorithmViewController {
-    id<EPSStepAlgorithmProtocol> algorithm;
+    id<EPSComplexStepAlgorithmProtocol> algorithm;
   
 }
 
@@ -71,11 +72,7 @@
     [super viewDidUnload];
 }
 
-//- (void) step1 {
-//    self.questionLabel.text = @"P Wave Morphology in Lead V1?";
-//}
-
-
+// his information really should be hidden in the algorithm, not view controller
 - (void) setButtons {
     if (step == 1) {
         self.button4.hidden = NO;
@@ -99,47 +96,75 @@
         [self.button2 setTitle:@"No" forState:UIControlStateNormal];
         [self.button3 setTitle:@"Back" forState:UIControlStateNormal];
     }
+
+    if (step == aVLStep) {
+        [self.button1 setTitle:@"Neg" forState:UIControlStateNormal];
+        [self.button2 setTitle:@"Pos" forState:UIControlStateNormal];
+    }
+    if (step == sinusRhythmPStep) {
+        [self.button1 setTitle:@"Pos" forState:UIControlStateNormal];
+        [self.button2 setTitle:@"Pos/Neg" forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)button1Click:(id)sender {
     NSString *question = [algorithm yesResult:&step];
-    [self setButtons];
     if (step >= SUCCESS_STEP)    // locations
         [self showResults];
-    else
+    else {
+        [self setButtons];
         self.questionLabel.text = question;
+    }
 }
 
 - (IBAction)button2Click:(id)sender {
     NSString *question = [algorithm noResult:&step];
-    [self setButtons];
-    if (step >= SUCCESS_STEP)    // locations
+      if (step >= SUCCESS_STEP)    // locations
         [self showResults];
-    else
+    else {
+        [self setButtons];
         self.questionLabel.text = question;
-
-  
+    }
 }
 
 - (IBAction)button3Click:(id)sender {
     NSString *question = [algorithm backResult:&step];
-    [self setButtons];
-    if (step >= SUCCESS_STEP)    // locations
+       if (step >= SUCCESS_STEP)    // locations
         [self showResults];
-    else
+    else {
+        [self setButtons];
         self.questionLabel.text = question;
-    
-  
+    }
 }
 
 - (IBAction)button4Click:(id)sender {
-    [self showResults];
+    NSString *question = [algorithm button4Result:&step];
+     if (step >= SUCCESS_STEP)    // locations
+        [self showResults];
+    else {
+        [self setButtons];
+        self.questionLabel.text = question;
+    }
 }
 
 - (IBAction)button5Click:(id)sender {
+    NSString *question = [algorithm button5Result:&step];
+    if (step >= SUCCESS_STEP)    // locations
+        [self showResults];
+    else {
+        [self setButtons];
+        self.questionLabel.text = question;
+    }
 }
 
 - (IBAction)button6Click:(id)sender {
+    NSString *question = [algorithm button6Result:&step];
+    if (step >= SUCCESS_STEP)    // locations
+        [self showResults];
+    else {
+        [self setButtons];
+        self.questionLabel.text = question;
+    }
 }
 
 
@@ -154,12 +179,18 @@
 
 - (void)showResults {
     NSString *details = [algorithm outcome:step];
-    NSString *title = @"Atrial Tachy Location";
+    NSString *title = [algorithm resultDialogTitle];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-    step = 1;
-    [self setButtons];
 }
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"Button index = %d", buttonIndex);
+    [algorithm resetSteps:&step];
+    [self setButtons];
+    self.questionLabel.text = [algorithm step1];
+}
+
 
 
 @end
