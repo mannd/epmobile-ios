@@ -15,6 +15,9 @@
 #define APIXABAN @"Apixaban"
 
 #define DO_NOT_USE @"DO NOT USE! "
+#define APIXABAN_2_5_CAUTION @"Avoid coadministration with strong dual inhibitors of CYP3A4 and P-gp "
+#define APIXABAN_5_CAUTION @"Use 2.5 mg twice daily when administered with strong dual inhibitors of CYP3A4 and P-gp "
+#define INHIBITORS @"(e.g. ketoconazole, itraconazole, ritonavir, clarithromycin)."
 
 @interface EPSDrugDoseCalculatorViewController ()
 
@@ -280,11 +283,8 @@
         NSString* stringDose = @"";
         if (crCl < 15)
             stringDose = @"0";
-        else if (crCl <= 24)
-             stringDose = @"Use Caution";
         else {
             NSLog(@"Creatine = %f", creatinine);
-
             if ((creatinine >= 1.5 && (age >= 80 || weight <= 60))
                     || (age >= 80 && weight <= 60))
                 stringDose = @"2.5";
@@ -293,9 +293,12 @@
         }
         if ([stringDose isEqualToString:@"0"])
             return [message stringByAppendingString:DO_NOT_USE];
-        if ([stringDose isEqualToString:@"Use Caution"])
-            return [message stringByAppendingString:@"No dose recommendation"];
-        return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg BID. ", stringDose]];
+        message = [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg BID. ", stringDose]];
+        if ([stringDose isEqualToString:@"2.5"])
+            message = [message stringByAppendingString:APIXABAN_2_5_CAUTION];
+        else
+            message = [message stringByAppendingString:APIXABAN_5_CAUTION];
+        return [message stringByAppendingString:INHIBITORS];
     }
     return @"Unknown Dose";
 }
@@ -310,7 +313,7 @@
     if ([drug isEqualToString:SOTALOL])
         return crCl < 40;
     if ([drug isEqualToString:APIXABAN])
-        return crCl <= 24;
+        return crCl < 15;
     return NO;
 }
 
@@ -347,12 +350,6 @@
                 return [msg stringByAppendingString:@"daily."];
         }
     }
-    if ([drug isEqualToString:APIXABAN]) {
-        if (crCl >= 15 && crCl <= 24) {
-            return @"Clinical data are too limited to provide a dosing recommendation at this creatinine clearance.";
-        }
-    }
-        
     return @"";
 }
 

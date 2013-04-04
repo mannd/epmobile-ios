@@ -12,6 +12,9 @@
 #import "EPSAnnularVTNotes.h"
 #import "EPSWarfarinNotes.h"
 #import "EPSCMSNotes.h"
+#import "EPSDateCalculatorNotes.h"
+#import "EPSEntrainmentNotes.h"
+#import "EPSAtrialTachNotes.h"
 
 @interface EPSNotesViewController ()
 
@@ -48,6 +51,12 @@
         notes = [[EPSWarfarinNotes alloc] init];
     else if ([self.key isEqualToString:@"CMSNotes"])
         notes = [[EPSCMSNotes alloc] init];
+    else if ([self.key isEqualToString:@"DateCalculatorNotes"])
+        notes = [[EPSDateCalculatorNotes alloc] init];
+    else if ([self.key isEqualToString:@"EntrainmentNotes"])
+        notes = [[EPSEntrainmentNotes alloc] init];
+    else if ([self.key isEqualToString:@"AtrialTachNotes"])
+        notes = [[EPSAtrialTachNotes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];

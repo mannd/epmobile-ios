@@ -7,6 +7,7 @@
 //
 
 #import "EPSMainTableViewController.h"
+#import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
 
 @interface EPSMainTableViewController ()
@@ -68,6 +69,11 @@
         vc.scoreType = @"Hemorrhages";
     else if ([segueIdentifier isEqualToString:@"HcmSegue"])
         vc.scoreType = @"HCM";
+    EPSLinkViewController *lc = (EPSLinkViewController *)vc;
+    if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
+        lc.webPage = @"http://www.brugadadrugs.org";
+    if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
+        lc.webPage = @"http://www.azcert.org/medical-pros/drug-lists/drug-lists.cfm";        
 }
 
 

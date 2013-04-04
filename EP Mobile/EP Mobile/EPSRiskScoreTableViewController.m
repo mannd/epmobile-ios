@@ -371,7 +371,7 @@
             resultMessage = [message stringByAppendingString:intermediateMessage];
         }
         else 
-            resultMessage = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran or rivaroxaban) recommended."];
+            resultMessage = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban or apixaban) recommended."];
     }
     return resultMessage;
 
