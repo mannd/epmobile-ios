@@ -717,7 +717,6 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="instructionsButtonClick:" destination="MUe-xB-0XX" eventType="touchUpInside" id="vu5-gA-2qn"/>
                                     <segue destination="PQv-Iu-QYe" kind="modal" identifier="AtrialTachNotesSegue" id="VLv-ky-ss1"/>
                                 </connections>
                             </button>
@@ -738,7 +737,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjs-FE-Azd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-1507"/>
+            <point key="canvasLocation" x="-113" y="-1531"/>
         </scene>
         <!--Entrainment View Controller - Entrainment Map-->
         <scene sceneID="OZ9-P5-J2I">
@@ -4627,7 +4626,6 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 <relationship kind="action" name="button4Click:"/>
                 <relationship kind="action" name="button5Click:"/>
                 <relationship kind="action" name="button6Click:"/>
-                <relationship kind="action" name="instructionsButtonClick:"/>
                 <relationship kind="outlet" name="button1" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="button2" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="button3" candidateClass="UIButton"/>

@@ -75,50 +75,6 @@
 //    self.questionLabel.text = @"P Wave Morphology in Lead V1?";
 //}
 
-- (void) getYesResult {
-    switch (self.step) {
-        case 1:
-            self.step = v24PosStep;
-            break;
-    }
-    [self setButtons];
-    
-}
-
-- (void) getNoResult {
-    switch (self.step) {
-        case 1:
-            [self showResults:@"Crista Terminalis"];
-            break;
-    }
-    [self setButtons];
-}
-
-- (void) getBackResult {
-    if (step == 1)
-        step = aVLStep;
-    else
-        [self adjustStepsBackwards];
-    [self setButtons];
-}
-
-- (void) adjustStepsBackwards {
-    switch (step) {
-		case v24PosStep:
-		case aVLStep:
-		case bifidIIStep:
-			step = 1;
-			break;
-		case negAllInfStep:
-			step = v24PosStep;
-			break;
-		case negAllInf2Step:
-		case sinusRhythmPStep:
-			step = bifidIIStep;
-			break;
-    }
-
-}
 
 - (void) setButtons {
     if (step == 1) {
@@ -146,19 +102,38 @@
 }
 
 - (IBAction)button1Click:(id)sender {
-    [self getYesResult];
+    NSString *question = [algorithm yesResult:&step];
+    [self setButtons];
+    if (step >= SUCCESS_STEP)    // locations
+        [self showResults];
+    else
+        self.questionLabel.text = question;
 }
 
 - (IBAction)button2Click:(id)sender {
-    [self getNoResult];
+    NSString *question = [algorithm noResult:&step];
+    [self setButtons];
+    if (step >= SUCCESS_STEP)    // locations
+        [self showResults];
+    else
+        self.questionLabel.text = question;
+
+  
 }
 
 - (IBAction)button3Click:(id)sender {
-    [self getBackResult];
+    NSString *question = [algorithm backResult:&step];
+    [self setButtons];
+    if (step >= SUCCESS_STEP)    // locations
+        [self showResults];
+    else
+        self.questionLabel.text = question;
+    
+  
 }
 
 - (IBAction)button4Click:(id)sender {
-    [self showResults:@"Right Side of Septum or Perinodal"];
+    [self showResults];
 }
 
 - (IBAction)button5Click:(id)sender {
@@ -177,7 +152,8 @@
 }
 
 
-- (void)showResults:(NSString *)details {
+- (void)showResults {
+    NSString *details = [algorithm outcome:step];
     NSString *title = @"Atrial Tachy Location";
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

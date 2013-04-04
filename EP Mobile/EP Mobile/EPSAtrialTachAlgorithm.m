@@ -17,11 +17,21 @@ const int aVLStep = 3;
 const int bifidIIStep = 4;
 const int negAllInfStep = 5;
 const int negAllInf2Step = 6;
-const int sinusRhythmStep = 7;
+const int sinusRhythmPStep = 7;
+
 // result "steps" == outcomes == locations
-const int locationCrista = 100;
-const int locationRightSeptum = 101;
-// etc.
+// in ViewController, SUCCESS_STEP = 1000
+const int locationCrista = 1000;
+const int locationRightSeptum = 1001;
+const int locationSMA = 1002;
+const int locationOsOrLeftSeptum = 1003;
+const int locationTA = 1004;
+const int locationTAOrRAA = 1005;
+const int locationCsBody = 1006;
+const int locationLPVOrLAA = 1007;
+const int locationCristaOrRPV = 1008;
+const int locationRSPV = 1009;
+
 
 - (NSString *)name {
     return @"Atrial Tach Location";
@@ -38,6 +48,57 @@ const int locationRightSeptum = 101;
 - (BOOL)showMap {
     return NO;
 }
+
+- (NSString *)yesResult:(int *)step {
+    [self adjustStepsForward:*step];
+    switch (*step) {
+        case 1:
+            *step = v24PosStep;
+            break;
+        case v24PosStep:
+            *step = locationCrista;
+            break;
+        case aVLStep:
+            *step = locationSMA;
+            break;
+    }
+    return [self getQuestion:*step];
+    
+}
+
+- (NSString *)noResult:(int *)step {
+    [self adjustStepsForward:*step];
+    switch (*step) {
+        case 1:
+            *step = locationCrista;
+            break;
+    }
+    return [self getQuestion:*step];
+}
+
+- (NSString *)backResult:(int *)step {
+    [self adjustStepsBackwards:step];
+    return [self getQuestion:*step];
+}
+
+- (void)adjustStepsBackwards:(int *)step {
+    switch (*step) {
+		case v24PosStep:
+		case aVLStep:
+		case bifidIIStep:
+			*step = 1;
+			break;
+		case negAllInfStep:
+			*step = v24PosStep;
+			break;
+		case negAllInf2Step:
+		case sinusRhythmPStep:
+			*step = bifidIIStep;
+			break;
+    }
+    
+}
+
 
 - (NSString *)getQuestion:(int)step {
     NSString *question = nil;
@@ -58,7 +119,7 @@ const int locationRightSeptum = 101;
         case negAllInf2Step:
             question = @"Negative P in All Inferior Leads?";
             break;
-        case sinusRhythmStep:
+        case sinusRhythmPStep:
             question = @"Sinus Rhythm P Wave Morphology?";
             break;
     }
@@ -66,15 +127,38 @@ const int locationRightSeptum = 101;
 }
 
 - (NSString *)outcome:(int)step {
-    NSString* message = nil;
+    NSString* message = @"Undefined";
     switch (step) {
-//        case :
-//            ;
-            
-//            break;
-//            
-//        default:
-//            break;
+        case locationCrista:
+            message = @"Crista Terminalis";
+            break;
+        case locationRightSeptum:
+            message = @"Right Side of Septum or Perinodal";
+            break;
+        case locationSMA:
+            message = @"Superior Mitral Annulus";
+            break;
+        case locationOsOrLeftSeptum:
+            message = @"Coronary Sinus Os or Left Side of Septum";
+            break;
+        case locationTA:
+            message = @"Tricuspid Annulus";
+            break;
+        case locationTAOrRAA:
+            message = @"Tricuspid Annulus or Right Atrial Appendage";
+            break;
+        case locationCsBody:
+            message = @"Coronary Sinus Body";
+            break;
+        case locationLPVOrLAA:
+            message = @"Left Sided Pulmonary Vein or Left Atrial Appendage";
+            break;
+        case locationCristaOrRPV:
+            message = @"Crista Terminalis or Right Sided Pulmonary Vein";
+            break;
+        case locationRSPV:
+            message = @"Right Sided Pulmonary Vein";
+            break;
     }
     return message;
 }
