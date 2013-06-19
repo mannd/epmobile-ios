@@ -37,6 +37,8 @@
 @synthesize doseChange;
 @synthesize tabletSizeSegmentedControl;
 @synthesize targetSegmentedControl;
+@synthesize tabletSizePickerView;
+@synthesize tabletSizeData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,6 +59,8 @@
     tabletSize = 5.0;
     minINR = 2.0;
     maxINR = 3.0;
+    NSArray *array = [[NSArray alloc] initWithObjects:@"1 mg", @"2 mg", @"2.5 mg", @"3 mg", @"4 mg", @"5 mg", @"6 mg", @"7.5 mg", @"10 mg", nil];
+    self.tabletSizeData = array;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
@@ -89,6 +93,14 @@
     }
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSUInteger index = [self.tabletSizeData indexOfObject:self.defaultWarfarinTabletSize];
+    if (index == NSNotFound)
+        index = 0;
+    [self.tabletSizePickerView selectRow:index inComponent:0 animated:YES];
+}
+
 - (void)refreshDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.defaultWarfarinTabletSize = [defaults objectForKey:@"defaultwarfarintablet"];
@@ -106,6 +118,7 @@
     [self setDoseChange:nil];
     [self setTabletSizeSegmentedControl:nil];
     [self setTargetSegmentedControl:nil];
+    [self setTabletSizePickerView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -317,6 +330,24 @@
     self.inrField.text = nil;
     self.resultLabel.text = nil;
 }
+
+
+#pragma mark - Formula Picker Data Methods
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [tabletSizeData count];
+}
+
+
+# pragma mark - Formula Picker Delegate Methods
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [tabletSizeData objectAtIndex:row];
+}
+
 
 
 
