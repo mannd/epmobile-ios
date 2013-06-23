@@ -75,17 +75,27 @@
 		<dict>
 			<key>Titles</key>
 			<array>
+				<string>1 mg</string>
 				<string>2 mg</string>
 				<string>2.5 mg</string>
+				<string>3 mg</string>
+				<string>4 mg</string>
 				<string>5 mg</string>
+				<string>6 mg</string>
 				<string>7.5 mg</string>
+				<string>10 mg</string>
 			</array>
 			<key>Values</key>
 			<array>
-				<string>2</string>
-				<string>2.5</string>
-				<string>5</string>
-				<string>7.5</string>
+				<string>1 mg</string>
+				<string>2 mg</string>
+				<string>2.5 mg</string>
+				<string>3 mg</string>
+				<string>4 mg</string>
+				<string>5 mg</string>
+				<string>6 mg</string>
+				<string>7.5 mg</string>
+				<string>10 mg</string>
 			</array>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
@@ -94,7 +104,7 @@
 			<key>Key</key>
 			<string>defaultwarfarintablet</string>
 			<key>DefaultValue</key>
-			<string>5</string>
+			<string>5 mg</string>
 		</dict>
 		<dict>
 			<key>Titles</key>

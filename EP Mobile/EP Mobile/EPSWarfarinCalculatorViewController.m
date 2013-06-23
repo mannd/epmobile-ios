@@ -11,6 +11,8 @@
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSNotesViewController.h"
 
+#define DEFAULT_TABLET_INDEX 5  // 5 mg tablet at index 5
+
 
 @interface EPSWarfarinCalculatorViewController ()
 
@@ -25,7 +27,6 @@
 
 @implementation EPSWarfarinCalculatorViewController
 {
-    float tabletSize;
     float minINR;
     float maxINR;
     float weeklyDose;
@@ -37,6 +38,8 @@
 @synthesize doseChange;
 @synthesize tabletSizeSegmentedControl;
 @synthesize targetSegmentedControl;
+@synthesize tabletSizePickerView;
+@synthesize tabletSizeData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,40 +57,34 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     // set defaults
-    tabletSize = 5.0;
+    
     minINR = 2.0;
     maxINR = 3.0;
+    NSArray *array = [[NSArray alloc] initWithObjects:@"1 mg", @"2 mg", @"2.5 mg", @"3 mg", @"4 mg", @"5 mg", @"6 mg", @"7.5 mg", @"10 mg", nil];
+    self.tabletSizeData = array;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     [self refreshDefaults];
-    if ([self.defaultWarfarinTabletSize isEqualToString:@"2"]) {
-        [tabletSizeSegmentedControl setSelectedSegmentIndex:0];
-        tabletSize = 2.0;
-    }
-    else if ([self.defaultWarfarinTabletSize isEqualToString:@"2.5"]) {
-        [tabletSizeSegmentedControl setSelectedSegmentIndex:1];
-        tabletSize = 2.5;
-    }
-    else if ([self.defaultWarfarinTabletSize isEqualToString:@"5"]) {
-        [tabletSizeSegmentedControl setSelectedSegmentIndex:2];
-        tabletSize = 5.0;
-    }
-    else if ([self.defaultWarfarinTabletSize isEqualToString:@"7.5"]) {
-        [tabletSizeSegmentedControl setSelectedSegmentIndex:3];
-        tabletSize = 7.5;
-    }
+    NSUInteger index = [self.tabletSizeData indexOfObject:self.defaultWarfarinTabletSize];
+    if (index == NSNotFound)
+        index = DEFAULT_TABLET_INDEX;
+    [self.tabletSizePickerView selectRow:index inComponent:0 animated:NO];
+    [self.tabletSizePickerView setShowsSelectionIndicator:YES];
     if ([self.defaultINR isEqualToString:@"2"]) {
         [targetSegmentedControl setSelectedSegmentIndex:0];
         minINR = 2.0;
         maxINR = 3.0;
     }
-    else if ([self.defaultINR isEqualToString:@"2.5"]){
+    else if ([self.defaultINR isEqualToString:@"2.5"]) {
         [targetSegmentedControl setSelectedSegmentIndex:1];
         minINR = 2.5;
         maxINR = 3.5;
     }
+
+    
 }
+
 
 - (void)refreshDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -106,6 +103,7 @@
     [self setDoseChange:nil];
     [self setTabletSizeSegmentedControl:nil];
     [self setTargetSegmentedControl:nil];
+    [self setTabletSizePickerView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -144,26 +142,15 @@
     }
 }
 
-- (IBAction)toggleTabletSize:(id)sender {
-    switch ([sender selectedSegmentIndex]) {
-        case 0:
-            tabletSize = 2.0;
-            break;
-        case 1:
-            tabletSize = 2.5;
-            break;
-        case 2:
-            tabletSize = 5.0;
-            break;
-        case 3:
-            tabletSize = 7.5;
-            break;
-        default:
-            tabletSize = 5.0;
-            break;
-    }
-    NSLog(@"Tablet size = %f", tabletSize);
+- (double)getTabletSize {
+    NSInteger row = [tabletSizePickerView selectedRowInComponent:0];
+    NSString *tabletSizeString = [tabletSizeData objectAtIndex:row];
+    double tabSize = [tabletSizeString doubleValue];
+    NSLog(@"Picker tablet size = %f", tabSize);
+    return tabSize;
+    
 }
+
 
 - (IBAction)calculateButtonPressed:(id)sender {
     NSString *message = @"";
@@ -195,7 +182,7 @@
             float highEndDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(doseChange.highEnd / 100.0) fromOldDose:weeklyDose isIncrease:(increaseDose)];
             message = [message stringByAppendingString:@"weekly dose by "];
             message = [message stringByAppendingFormat:@"%d%% (%1.1f mg/wk) to %d%% (%1.1f mg/wk).", doseChange.lowEnd, lowEndDose, doseChange.highEnd, highEndDose];
-            showDoses = [self weeklyDoseIsSane:weeklyDose forTabletSize:tabletSize];
+            showDoses = [self weeklyDoseIsSane:weeklyDose forTabletSize:[self getTabletSize]];
             
         }
     }
@@ -234,7 +221,7 @@
     }
     else if ([segueIdentifier isEqualToString:@"DosingSegue"]) {
         EPSWarfarinDosingTableViewController *dc = (EPSWarfarinDosingTableViewController *)[segue destinationViewController];
-        dc.tabletSize = tabletSize;
+        dc.tabletSize = [self getTabletSize];
         dc.lowEnd = doseChange.lowEnd;
         dc.highEnd = doseChange.highEnd;
         dc.increase = (doseChange.direction == INCREASE);
@@ -317,6 +304,24 @@
     self.inrField.text = nil;
     self.resultLabel.text = nil;
 }
+
+
+#pragma mark - Formula Picker Data Methods
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [tabletSizeData count];
+}
+
+
+# pragma mark - Formula Picker Delegate Methods
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [tabletSizeData objectAtIndex:row];
+}
+
 
 
 
