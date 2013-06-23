@@ -33,7 +33,6 @@
 @property (strong, nonatomic) NSString *defaultINR;
 @property (strong, nonatomic) NSArray *tabletSizeData;
 
-- (IBAction)toggleTabletSize:(id)sender;
 - (IBAction)toggleTargetRange:(id)sender;
 - (IBAction)calculateButtonPressed:(id)sender;
 - (IBAction)clearButtonPressed:(id)sender;

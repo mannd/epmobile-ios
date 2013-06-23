@@ -3399,9 +3399,6 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                     <segment title="5 mg"/>
                                     <segment title="7.5 mg"/>
                                 </segments>
-                                <connections>
-                                    <action selector="toggleTabletSize:" destination="sOk-N9-fM0" eventType="valueChanged" id="IPT-D8-oCY"/>
-                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7Aw-PB-nWj">
                                 <rect key="frame" x="20" y="12" width="128" height="21"/>
