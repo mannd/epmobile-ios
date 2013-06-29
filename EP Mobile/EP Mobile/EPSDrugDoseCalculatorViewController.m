@@ -171,7 +171,7 @@
     NSString *details = result;
     
     details = [details stringByAppendingString:@"\n"];
-    details = [details stringByAppendingString:[self getDetails:cc]];
+    details = [details stringByAppendingString:[self getDetails:cc forAge:age]];
     self.resultLabel.text = details;
 
     
@@ -317,15 +317,20 @@
     return NO;
 }
 
-- (NSString *)getDetails:(int)crCl {
+- (NSString *)getDetails:(int)crCl forAge:(double)age {
     if ([drug isEqualToString:DABIGATRAN]) {
+        NSString *message = @"";
         if (crCl < 15)
-            return @"";
-        else if (crCl <= 30)
-            return @"Avoid concomitant use of P-gp inhibitors (e.g. dronedarone).";
+            return message;
+        if (crCl <= 30)
+            message = @"Avoid concomitant use of P-gp inhibitors (e.g. dronedarone).";
         else if (crCl <= 50)
-            return @"Consider reducing dose of dabigatran to 75 mg twice a day " 
-                "when dronedarone or systemic ketoconazole is administered with dabigatran.";
+            message = @"Consider reducing dose to 75 mg BID "
+                "when using with dronedarone or systemic ketoconazole.";
+        if (age >= 75.0)
+            message = [message stringByAppendingString:@" Possible increased bleeding risk (age > 75 y)."];
+        return message;
+        
     }
     if ([drug isEqualToString:DOFETILIDE]) {
         if (crCl <= 20)
