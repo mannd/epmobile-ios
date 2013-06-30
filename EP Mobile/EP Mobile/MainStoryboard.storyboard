@@ -625,7 +625,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
         <scene sceneID="2v5-oP-3AI">
             <objects>
                 <viewController id="WgW-Px-vxE" customClass="EPSWeightCalculatorViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vMX-ak-cqp">
+                    <view key="view" contentMode="scaleToFill" id="vMX-ak-cqp" customClass="UIControl">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -636,20 +636,29 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleSex:" destination="WgW-Px-vxE" eventType="valueChanged" id="sU8-5O-tuh"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="INF-SQ-lFM">
-                                <rect key="frame" x="199" y="71" width="101" height="44"/>
+                                <rect key="frame" x="161" y="71" width="139" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
                                     <segment title="kg"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleWeightUnits:" destination="WgW-Px-vxE" eventType="valueChanged" id="FIY-ja-7S8"/>
+                                </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (lb)" minimumFontSize="17" id="acW-06-BX6">
-                                <rect key="frame" x="93" y="77" width="89" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" id="acW-06-BX6">
+                                <rect key="frame" x="93" y="78" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="WgW-Px-vxE" eventType="editingDidEndOnExit" id="hVJ-Lz-ceQ"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Xhk-2x-0f4">
                                 <rect key="frame" x="20" y="82" width="53" height="21"/>
@@ -659,18 +668,24 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kAO-2U-Neg">
-                                <rect key="frame" x="199" y="122" width="101" height="44"/>
+                                <rect key="frame" x="161" y="122" width="139" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="in"/>
                                     <segment title="cm"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleHeightUnits:" destination="WgW-Px-vxE" eventType="valueChanged" id="nTi-Rx-eUx"/>
+                                </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height (in)" minimumFontSize="17" id="MUb-kT-wXg">
-                                <rect key="frame" x="93" y="128" width="89" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" id="MUb-kT-wXg">
+                                <rect key="frame" x="93" y="128" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="WgW-Px-vxE" eventType="editingDidEndOnExit" id="vfs-ui-Ww8"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="XnI-rU-Cjr">
                                 <rect key="frame" x="20" y="133" width="50" height="21"/>
@@ -679,36 +694,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ideal Body Wt (kg)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0KI-eZ-3Co">
-                                <rect key="frame" x="20" y="173" width="140" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adjusted Body Wt (kg)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WIB-wS-gQd">
-                                <rect key="frame" x="20" y="202" width="170" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IBW (kg)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UjQ-TB-u1m">
-                                <rect key="frame" x="205" y="173" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ABW (kg)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ftf-kL-7vD">
-                                <rect key="frame" x="205" y="202" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2an-Nc-I8z">
-                                <rect key="frame" x="20" y="231" width="133" height="37"/>
+                                <rect key="frame" x="20" y="173" width="133" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Calculate!">
@@ -723,7 +710,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MSA-Li-Cri">
-                                <rect key="frame" x="161" y="231" width="139" height="37"/>
+                                <rect key="frame" x="161" y="173" width="139" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Clear">
@@ -737,11 +724,19 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="clear:" destination="WgW-Px-vxE" eventType="touchUpInside" id="PLQ-53-7I1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MjT-L6-XHC">
-                                <rect key="frame" x="56" y="275" width="208" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LgC-fu-gZn">
+                                <rect key="frame" x="20" y="217" width="280" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M18-mI-lT6">
+                                <rect key="frame" x="20" y="337" width="133" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Copy IBW To Clipboard">
+                                <state key="normal" title="Copy IBW ">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -749,14 +744,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="copyIbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="WhF-kX-Srg"/>
+                                    <action selector="copyIbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="ZG8-65-1kS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XZc-f1-aL1">
-                                <rect key="frame" x="56" y="326" width="208" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dd6-Hd-KPz">
+                                <rect key="frame" x="161" y="337" width="139" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Copy ABW To Clipboard">
+                                <state key="normal" title="Copy ABW">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -764,28 +759,28 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="copyAbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="9rS-lg-eyJ"/>
+                                    <action selector="copyAbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="3dh-r2-EG8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backgroundTap:" destination="WgW-Px-vxE" eventType="touchDown" id="E5c-sb-tgK"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Weight Calculator" id="Uoh-ar-h9v"/>
                     <connections>
-                        <outlet property="abwLabel" destination="WIB-wS-gQd" id="iOQ-5f-E4t"/>
-                        <outlet property="abwResultLabel" destination="ftf-kL-7vD" id="KOA-Gn-K92"/>
                         <outlet property="heightTextField" destination="MUb-kT-wXg" id="CLy-NE-oUO"/>
                         <outlet property="heightUnitsSegmentedControl" destination="kAO-2U-Neg" id="vxa-cm-lZI"/>
-                        <outlet property="ibwLabel" destination="0KI-eZ-3Co" id="9g8-Zy-eRD"/>
-                        <outlet property="ibwResultLabel" destination="UjQ-TB-u1m" id="rGZ-ia-TaT"/>
-                        <outlet property="sexSegementedControl" destination="Jhs-Su-D4p" id="K23-nS-7TC"/>
+                        <outlet property="resultLabel" destination="LgC-fu-gZn" id="GfT-9B-xD5"/>
+                        <outlet property="sexSegmentedControl" destination="Jhs-Su-D4p" id="1nX-1v-D6C"/>
                         <outlet property="weightTextField" destination="acW-06-BX6" id="j11-vX-gy0"/>
                         <outlet property="weightUnitsSegmentedControl" destination="INF-SQ-lFM" id="zC7-Fr-RgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wus-K6-qU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1115" y="-2289"/>
+            <point key="canvasLocation" x="-1018" y="-2116"/>
         </scene>
         <!--Complex Algorithm View Controller - Atrial Tach Location-->
         <scene sceneID="AL5-ZZ-YO7">
@@ -4267,7 +4262,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1144" y="-2032"/>
+            <point key="canvasLocation" x="-1246" y="-2116"/>
         </scene>
         <!--Table View Controller - Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -5024,17 +5019,19 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <class className="EPSWeightCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWeightCalculatorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
                 <relationship kind="action" name="calculate:"/>
                 <relationship kind="action" name="clear:"/>
                 <relationship kind="action" name="copyAbw:"/>
                 <relationship kind="action" name="copyIbw:"/>
-                <relationship kind="outlet" name="abwLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="abwResultLabel" candidateClass="UILabel"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleHeightUnits:"/>
+                <relationship kind="action" name="toggleSex:"/>
+                <relationship kind="action" name="toggleWeightUnits:"/>
                 <relationship kind="outlet" name="heightTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="heightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="ibwLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ibwResultLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sexSegementedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="weightTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
             </relationships>
