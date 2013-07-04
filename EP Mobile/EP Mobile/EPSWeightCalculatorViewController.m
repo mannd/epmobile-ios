@@ -89,8 +89,10 @@
         self.resultLabel.text = @"INVALID ENTRY";
         return;
     }
+    double weightInPounds = 0;
     if (weightIsPounds) {
         NSLog(@"Weight is in pounds (%f lb)", weight);
+        weightInPounds = weight;
         weight = [self lbsToKgs:weight];
         NSLog(@"Converted weight in kgs is %f", weight);
     }
@@ -103,28 +105,38 @@
     if (weightIsPounds) {
         calculatedIbw = [self kgsToLbs:calculatedIbw];
         calculatedAbw = [self kgsToLbs:calculatedAbw];
+        // change actual weight back to pounds for determining overweight and underweight
+        weight = weightInPounds;
     }
     NSString *formattedIbw = [NSString stringWithFormat:@"%.1f", calculatedIbw];
     NSString *formattedAbw = [NSString stringWithFormat:@"%.1f", calculatedAbw];
+    NSString *formattedWeight = [NSString stringWithFormat:@"%.1f", weight];
     // these are the string pasted to the clipboard
     roundedIbw = formattedIbw;
     roundedAbw = formattedAbw;
 
     if (weightIsPounds) {
         formattedIbw = [formattedIbw stringByAppendingString:@" lbs"];
-        formattedAbw = [formattedAbw stringByAppendingString:@" lbs"            ];
+        formattedAbw = [formattedAbw stringByAppendingString:@" lbs"];
+        formattedWeight = [formattedWeight stringByAppendingString:@" lbs"];
     }
     else {
         formattedIbw = [formattedIbw stringByAppendingString:@" kgs"];
         formattedAbw = [formattedAbw stringByAppendingString:@" kgs"];
+        formattedWeight = [formattedWeight stringByAppendingString:@" kgs"];
+
     }
     
     NSString *result = @"";
     result = [result stringByAppendingString:[NSString stringWithFormat:@"Ideal Body Weight = %@\nAdjusted Body Weight = %@", formattedIbw, formattedAbw]];
-    if ([self isOverweight:calculatedIbw forActualWeight:weight])
-        result = [result stringByAppendingString:@"\nAs actual weight is at least 30% over Ideal Body Weight, Adjusted Body Weight recommended"];
     if ([self isUnderHeight:height])
         result = [result stringByAppendingString:@"\nThese measurements might not be useful when height < 60 inches."];
+    else if ([self isOverweight:calculatedIbw forActualWeight:weight])
+        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended weight = Adjusted Body Weight (%@)", formattedAbw]];
+    else if ([self isUnderWeight:weight forIbw:calculatedIbw])
+        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended weight = Actual Body Weight (%@)", formattedWeight]];
+    else // normal weight
+        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended weight = Ideal Body Weight (%@)", formattedIbw]];
     self.resultLabel.text = result;
 }
 
@@ -166,6 +178,10 @@
 
 - (BOOL)isUnderHeight:(double)height {
     return height <= 60.0;
+}
+
+- (BOOL)isUnderWeight:(double)weight forIbw:(double)ibw {
+    return weight < ibw;
 }
 
 - (IBAction)clear:(id)sender {
