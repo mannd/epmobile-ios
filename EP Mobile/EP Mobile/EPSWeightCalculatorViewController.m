@@ -40,6 +40,10 @@
     weightIsPounds = YES;
     heightIsInches = YES;
     calculatedIbw = calculatedAbw = 0.0;
+    roundedAbw = @"";
+    roundedIbw = @"";
+    calculatedIbw = 0.0;
+    calculatedAbw = 0.0;
     // defaults here
     [self refreshDefaults];
     if ([self.defaultWeightUnit isEqualToString:@"lb"]) {
