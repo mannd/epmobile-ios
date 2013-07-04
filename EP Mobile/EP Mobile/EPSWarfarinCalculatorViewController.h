@@ -24,7 +24,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *weeklyDoseField;
 @property (strong, nonatomic) IBOutlet UITextField *inrField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *tabletSizeSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *targetSegmentedControl;
 @property (strong, nonatomic) IBOutlet UIPickerView *tabletSizePickerView;
 
