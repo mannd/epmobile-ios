@@ -130,7 +130,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Drug Calculator Settings</string>
+			<string>Other Calculator Settings</string>
 		</dict>
 		<dict>
 			<key>Titles</key>
@@ -151,6 +151,26 @@
 			<string>defaultweightunit</string>
 			<key>DefaultValue</key>
 			<string>lb</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>centimeters</string>
+				<string>inches</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>cm</string>
+				<string>in</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Default Height Unit</string>
+			<key>Key</key>
+			<string>defaultheightunit</string>
+			<key>DefaultValue</key>
+			<string>in</string>
 		</dict>
 		<dict>
 			<key>Titles</key>

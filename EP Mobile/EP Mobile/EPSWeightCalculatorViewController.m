@@ -7,6 +7,7 @@
 //
 
 #import "EPSWeightCalculatorViewController.h"
+#import "EPSNotesViewController.h"
 
 @interface EPSWeightCalculatorViewController ()
 
@@ -33,6 +34,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     weightIsPounds = YES;
     heightIsInches = YES;
     calculatedIbw = calculatedAbw = 0.0;
@@ -239,5 +243,15 @@
     [self.weightTextField resignFirstResponder];
     [self.heightTextField resignFirstResponder];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+    vc.key = @"WeightCalculatorNotes";
+}
+
+- (void)showNotes {
+    [self performSegueWithIdentifier:@"WeightCalculatorNotesSegue" sender:nil];
+}
+
 
 @end
