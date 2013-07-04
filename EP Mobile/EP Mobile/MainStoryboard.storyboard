@@ -150,7 +150,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Dtp-nb-8RS" style="IBUITableViewCellStyleDefault" id="zJC-n9-ygc">
-                                        <rect key="frame" x="0.0" y="223" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="223" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -170,12 +170,33 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <segue destination="sOk-N9-fM0" kind="push" id="M9c-7a-omc"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3LV-Fa-o5I" style="IBUITableViewCellStyleDefault" id="ar1-b6-lLh">
+                                        <rect key="frame" x="0.0" y="267" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Weight Calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3LV-Fa-o5I">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="WgW-Px-vxE" kind="push" id="ApD-DV-kqr"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Diagnosis" id="toQ-f7-tpH">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AtN-EZ-td4" style="IBUITableViewCellStyleDefault" id="7RL-L4-hk9">
-                                        <rect key="frame" x="0.0" y="314" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="358" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -196,7 +217,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BEJ-fq-uRR" style="IBUITableViewCellStyleDefault" id="O2q-zg-iLI">
-                                        <rect key="frame" x="0.0" y="359" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="403" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -217,7 +238,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HAg-Rt-3mG" style="IBUITableViewCellStyleDefault" id="QPN-x7-0jU">
-                                        <rect key="frame" x="0.0" y="403" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="447" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -238,7 +259,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lw4-8k-rby" style="IBUITableViewCellStyleDefault" id="0Ip-8U-U4D">
-                                        <rect key="frame" x="0.0" y="447" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="491" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -259,7 +280,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="p9o-6k-5Nz" style="IBUITableViewCellStyleDefault" id="Df4-ee-RSD">
-                                        <rect key="frame" x="0.0" y="491" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="535" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -280,7 +301,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DyE-Mf-oeD" style="IBUITableViewCellStyleDefault" id="HEE-Gk-3qG">
-                                        <rect key="frame" x="0.0" y="535" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="579" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -301,7 +322,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MVG-WH-ZHn" style="IBUITableViewCellStyleDefault" id="GKt-9A-wDm">
-                                        <rect key="frame" x="0.0" y="579" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="623" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -322,7 +343,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3gJ-zU-UxP" style="IBUITableViewCellStyleDefault" id="EQo-JS-28G">
-                                        <rect key="frame" x="0.0" y="623" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="667" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -343,7 +364,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dqN-NA-uwo" style="IBUITableViewCellStyleDefault" id="RfR-lg-oXP">
-                                        <rect key="frame" x="0.0" y="667" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="711" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -368,7 +389,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <tableViewSection headerTitle="Reference &amp; Tools" id="ZTg-bt-Zew">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="KYF-8r-1wD" style="IBUITableViewCellStyleDefault" id="MqU-YO-j5H">
-                                        <rect key="frame" x="0.0" y="758" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="802" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -389,7 +410,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EEG-a9-Vzg" style="IBUITableViewCellStyleDefault" id="6V6-KI-xvk">
-                                        <rect key="frame" x="0.0" y="803" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="847" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -410,7 +431,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vFm-4F-8a0" style="IBUITableViewCellStyleDefault" id="Av1-GD-e7A">
-                                        <rect key="frame" x="0.0" y="847" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="891" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -431,7 +452,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HeU-Co-g3v" style="IBUITableViewCellStyleDefault" id="Aja-52-aWC">
-                                        <rect key="frame" x="0.0" y="891" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="935" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -452,7 +473,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="a2W-xk-jV3" style="IBUITableViewCellStyleDefault" id="bad-gB-qW4">
-                                        <rect key="frame" x="0.0" y="935" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="979" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -477,7 +498,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <tableViewSection headerTitle="Risk Scores" id="1em-Se-FbY">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JzV-4e-i9q" style="IBUITableViewCellStyleDefault" id="rvh-St-Shc">
-                                        <rect key="frame" x="0.0" y="1026" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="1070" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -498,7 +519,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ikf-bS-MVr" style="IBUITableViewCellStyleDefault" id="rvD-4k-0Cb">
-                                        <rect key="frame" x="0.0" y="1071" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1115" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -519,7 +540,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lw7-Rc-dMU" style="IBUITableViewCellStyleDefault" id="obU-Ni-e3Z">
-                                        <rect key="frame" x="0.0" y="1115" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1159" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -540,7 +561,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Jsu-qK-3o9" style="IBUITableViewCellStyleDefault" id="D5d-Q7-wsB">
-                                        <rect key="frame" x="0.0" y="1159" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1203" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -561,7 +582,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nak-Eu-smJ" style="IBUITableViewCellStyleDefault" id="Ldh-M8-v5H">
-                                        <rect key="frame" x="0.0" y="1203" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="1247" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -598,7 +619,169 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-896" y="-2403"/>
+            <point key="canvasLocation" x="-1376" y="-2347"/>
+        </scene>
+        <!--Weight Calculator View Controller - Weight Calculator-->
+        <scene sceneID="2v5-oP-3AI">
+            <objects>
+                <viewController id="WgW-Px-vxE" customClass="EPSWeightCalculatorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMX-ak-cqp" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Jhs-Su-D4p">
+                                <rect key="frame" x="20" y="20" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleSex:" destination="WgW-Px-vxE" eventType="valueChanged" id="sU8-5O-tuh"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="INF-SQ-lFM">
+                                <rect key="frame" x="161" y="71" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="lb"/>
+                                    <segment title="kg"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleWeightUnits:" destination="WgW-Px-vxE" eventType="valueChanged" id="FIY-ja-7S8"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" id="acW-06-BX6">
+                                <rect key="frame" x="93" y="78" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="WgW-Px-vxE" eventType="editingDidEndOnExit" id="hVJ-Lz-ceQ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Xhk-2x-0f4">
+                                <rect key="frame" x="20" y="82" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kAO-2U-Neg">
+                                <rect key="frame" x="161" y="122" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="in"/>
+                                    <segment title="cm"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleHeightUnits:" destination="WgW-Px-vxE" eventType="valueChanged" id="nTi-Rx-eUx"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" id="MUb-kT-wXg">
+                                <rect key="frame" x="93" y="128" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="WgW-Px-vxE" eventType="editingDidEndOnExit" id="vfs-ui-Ww8"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="XnI-rU-Cjr">
+                                <rect key="frame" x="20" y="133" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2an-Nc-I8z">
+                                <rect key="frame" x="20" y="173" width="133" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculate:" destination="WgW-Px-vxE" eventType="touchUpInside" id="RbE-F7-SzL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MSA-Li-Cri">
+                                <rect key="frame" x="161" y="173" width="139" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="WgW-Px-vxE" eventType="touchUpInside" id="PLQ-53-7I1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LgC-fu-gZn">
+                                <rect key="frame" x="20" y="217" width="280" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M18-mI-lT6">
+                                <rect key="frame" x="20" y="337" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy IBW ">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyIbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="ZG8-65-1kS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dd6-Hd-KPz">
+                                <rect key="frame" x="161" y="337" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy ABW">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyAbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="3dh-r2-EG8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backgroundTap:" destination="WgW-Px-vxE" eventType="touchDown" id="E5c-sb-tgK"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weight Calculator" id="Uoh-ar-h9v"/>
+                    <connections>
+                        <outlet property="heightTextField" destination="MUb-kT-wXg" id="CLy-NE-oUO"/>
+                        <outlet property="heightUnitsSegmentedControl" destination="kAO-2U-Neg" id="vxa-cm-lZI"/>
+                        <outlet property="resultLabel" destination="LgC-fu-gZn" id="GfT-9B-xD5"/>
+                        <outlet property="sexSegmentedControl" destination="Jhs-Su-D4p" id="1nX-1v-D6C"/>
+                        <outlet property="weightTextField" destination="acW-06-BX6" id="j11-vX-gy0"/>
+                        <outlet property="weightUnitsSegmentedControl" destination="INF-SQ-lFM" id="zC7-Fr-RgD"/>
+                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="WeightCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="9Dj-9f-rbx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wus-K6-qU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1223" y="-2399"/>
         </scene>
         <!--Complex Algorithm View Controller - Atrial Tach Location-->
         <scene sceneID="AL5-ZZ-YO7">
@@ -3230,7 +3413,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-577" y="-1407"/>
+            <point key="canvasLocation" x="-674" y="-2450"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -3380,7 +3563,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgu-il-7Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2209" y="-856"/>
+            <point key="canvasLocation" x="-2137" y="-1097"/>
         </scene>
         <!--Warfarin Calculator View Controller - Warfarin Clinic-->
         <scene sceneID="LZR-Ds-iJD">
@@ -3390,46 +3573,33 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" id="OBS-kR-u8q">
-                                <rect key="frame" x="19" y="113" width="282" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="2 mg"/>
-                                    <segment title="2.5 mg"/>
-                                    <segment title="5 mg"/>
-                                    <segment title="7.5 mg"/>
-                                </segments>
-                                <connections>
-                                    <action selector="toggleTabletSize:" destination="sOk-N9-fM0" eventType="valueChanged" id="IPT-D8-oCY"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7Aw-PB-nWj">
-                                <rect key="frame" x="20" y="84" width="280" height="21"/>
+                                <rect key="frame" x="20" y="12" width="128" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="INR Target" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Owb-RF-BTt">
-                                <rect key="frame" x="20" y="175" width="114" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="INR Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Owb-RF-BTt">
+                                <rect key="frame" x="156" y="185" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="6HG-3O-j5s">
-                                <rect key="frame" x="142" y="164" width="159" height="44"/>
+                                <rect key="frame" x="156" y="214" width="144" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="2.0 - 3.0"/>
-                                    <segment title="2.5 - 3.5"/>
+                                    <segment title="2-3"/>
+                                    <segment title="2.5-3.5"/>
                                 </segments>
                                 <connections>
                                     <action selector="toggleTargetRange:" destination="sOk-N9-fM0" eventType="valueChanged" id="kR8-6Q-d7v"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dose (mg/week)" minimumFontSize="17" id="Thg-P6-5q7">
-                                <rect key="frame" x="174" y="10" width="126" height="31"/>
+                                <rect key="frame" x="156" y="41" width="140" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3437,22 +3607,22 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                     <action selector="textFieldDoneEditing:" destination="sOk-N9-fM0" eventType="editingDidEndOnExit" id="Zhh-m6-jZE"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weekly Dose (mg)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="n2r-fT-8Fk">
-                                <rect key="frame" x="19" y="15" width="141" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weekly Dose (mg)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="n2r-fT-8Fk">
+                                <rect key="frame" x="156" y="12" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current INR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pQg-dl-S4k">
-                                <rect key="frame" x="19" y="55" width="141" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current INR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pQg-dl-S4k">
+                                <rect key="frame" x="156" y="104" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INR" minimumFontSize="17" id="dU7-n3-yDr">
-                                <rect key="frame" x="174" y="50" width="126" height="31"/>
+                                <rect key="frame" x="156" y="133" width="142" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3461,7 +3631,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1ko-60-X6S">
-                                <rect key="frame" x="19" y="215" width="129" height="37"/>
+                                <rect key="frame" x="19" y="272" width="129" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Calculate!">
@@ -3476,7 +3646,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EBk-aS-HiD">
-                                <rect key="frame" x="156" y="215" width="145" height="37"/>
+                                <rect key="frame" x="156" y="272" width="140" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Clear">
@@ -3491,13 +3661,21 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cOI-Fx-0AG">
-                                <rect key="frame" x="20" y="260" width="280" height="131"/>
+                                <rect key="frame" x="20" y="316" width="276" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" id="Et0-4W-qXv">
+                                <rect key="frame" x="20" y="41" width="128" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sOk-N9-fM0" id="PiK-Cy-cXc"/>
+                                    <outlet property="delegate" destination="sOk-N9-fM0" id="y3y-LR-PKK"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -3508,7 +3686,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                     <connections>
                         <outlet property="inrField" destination="dU7-n3-yDr" id="JR8-p7-g6c"/>
                         <outlet property="resultLabel" destination="cOI-Fx-0AG" id="Iuc-SY-48c"/>
-                        <outlet property="tabletSizeSegmentedControl" destination="OBS-kR-u8q" id="d0K-hL-KlN"/>
+                        <outlet property="tabletSizePickerView" destination="Et0-4W-qXv" id="v3v-Ij-JPT"/>
                         <outlet property="targetSegmentedControl" destination="6HG-3O-j5s" id="dRu-oM-uLQ"/>
                         <outlet property="weeklyDoseField" destination="Thg-P6-5q7" id="Cld-Oh-fOu"/>
                         <segue destination="hga-UT-wNf" kind="modal" identifier="DosingSegue" id="bQ2-uS-Pdo"/>
@@ -3517,7 +3695,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-T1-3Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1857" y="-905"/>
+            <point key="canvasLocation" x="-1787" y="-1097"/>
         </scene>
         <!--Warfarin Dosing Table View Controller-->
         <scene sceneID="652-RR-u7n">
@@ -3986,8 +4164,8 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" id="SvF-Ho-s7V">
-                                <rect key="frame" x="20" y="265" width="280" height="131"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="264" width="280" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -4074,7 +4252,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1003" y="-1549"/>
+            <point key="canvasLocation" x="-1246" y="-2116"/>
         </scene>
         <!--Table View Controller - Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -4567,18 +4745,300 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <image name="rplap.png" width="452" height="400"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
+    <classes>
+        <class className="EPSARVC2010TableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVC2010TableViewController.h"/>
+        </class>
+        <class className="EPSARVCTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSARVCTableViewController.h"/>
+        </class>
+        <class className="EPSAVAnnulusViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAVAnnulusViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="asapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="epicardialapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lalapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="llapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lpapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lplapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapLocationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="msapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="psmaapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="pstaapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="raapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ralapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rlapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rpapImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rplapImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="EPSAboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="aboutTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="EPSBrugadaECGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaECGViewController.h"/>
+        </class>
+        <class className="EPSBrugadaMorphologyTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSBrugadaMorphologyTableViewController.h"/>
+        </class>
+        <class className="EPSCMSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCMSViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateResult:"/>
+                <relationship kind="outlet" name="criteriaTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="efSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="hfClassSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EPSComplexAlgorithmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSComplexAlgorithmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="button1Click:"/>
+                <relationship kind="action" name="button2Click:"/>
+                <relationship kind="action" name="button3Click:"/>
+                <relationship kind="action" name="button4Click:"/>
+                <relationship kind="action" name="button5Click:"/>
+                <relationship kind="action" name="button6Click:"/>
+                <relationship kind="outlet" name="button1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button6" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="instructionsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSCycleLengthCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSCycleLengthCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculateButton:"/>
+                <relationship kind="action" name="clearButton:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleSwitch:"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inputLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSDateCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDateCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="changeNumberOfDays:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="daysSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="numberOfDaysTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="subtractDaysSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="EPSDrugDoseCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleCrUnits:"/>
+                <relationship kind="action" name="toggleSex:"/>
+                <relationship kind="action" name="toggleWeightUnits:"/>
+                <relationship kind="outlet" name="ageField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="creatinineField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="creatinineUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EPSDrugDoseTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSDrugDoseTableViewController.h"/>
+        </class>
+        <class className="EPSEntrainmentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSEntrainmentViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="clearAll:"/>
+                <relationship kind="action" name="concealedFusionSwitchValueChanged:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="outlet" name="concealedFusionSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="egqrsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="egqrsTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ppiTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sqrsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sqrsTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tclTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EPSLQTSDetailsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSDetailsTableViewController.h"/>
+        </class>
+        <class className="EPSLQTSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLQTSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EPSLVHTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLVHTableViewController.h"/>
+        </class>
+        <class className="EPSLinkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLinkViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="EPSLongQTECGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSLongQTECGViewController.h"/>
+        </class>
+        <class className="EPSMainTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSMainTableViewController.h"/>
+        </class>
+        <class className="EPSNotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSNotesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="notesTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationBar"/>
+            </relationships>
+        </class>
+        <class className="EPSQTViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="qtcSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="riskTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="EPSQTcCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSQTcCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculateButtonPressed:"/>
+                <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleInputType:"/>
+                <relationship kind="outlet" name="formulaPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="intervalRateSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="qtField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSRiskScoreTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSRiskScoreTableViewController.h"/>
+        </class>
+        <class className="EPSSimpleAlgorithmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSSimpleAlgorithmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backButtonPushed:"/>
+                <relationship kind="action" name="noButtonPushed:"/>
+                <relationship kind="action" name="yesButtonPushed:"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="instructionsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="morphologyCriteriaButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="noButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yesButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EPSVTViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSVTViewController.h"/>
+        </class>
+        <class className="EPSWCTTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWCTTableViewController.h"/>
+        </class>
+        <class className="EPSWPWTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWPWTableViewController.h"/>
+        </class>
+        <class className="EPSWarfarinCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateButtonPressed:"/>
+                <relationship kind="action" name="clearButtonPressed:"/>
+                <relationship kind="action" name="toggleTargetRange:"/>
+                <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tabletSizePickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="tabletSizeSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="targetSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EPSWarfarinDosingTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWarfarinDosingTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="friDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="friDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="highChangeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowChangeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="monDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="monDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="satDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="satDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sunDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thuDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thuDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalWeeklyHighDose" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalWeeklyLowDose" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tueDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tueDose2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedDose1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedDose2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EPSWeightCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPSWeightCalculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="copyAbw:"/>
+                <relationship kind="action" name="copyIbw:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="action" name="toggleHeightUnits:"/>
+                <relationship kind="action" name="toggleSex:"/>
+                <relationship kind="action" name="toggleWeightUnits:"/>
+                <relationship kind="outlet" name="heightTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="heightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sexSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="weightTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightUnitsSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hpG-ma-Wwm"/>
         <segue reference="9A7-Dn-UeD"/>
+        <segue reference="hpG-ma-Wwm"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="ucK-8l-Jyw"/>
         <segue reference="BXP-mT-oa5"/>
         <segue reference="HWu-7U-py6"/>
-        <segue reference="ucK-8l-Jyw"/>
-        <segue reference="VLv-ky-ss1"/>
+        <segue reference="bT0-Tb-wFg"/>
     </inferredMetricsTieBreakers>
 </document>

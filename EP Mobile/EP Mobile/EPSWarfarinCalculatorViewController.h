@@ -17,22 +17,21 @@
 @property (strong, nonatomic) NSString *message;
 @property (assign, nonatomic) enum Direction direction;
 
-
 @end
 
 @interface EPSWarfarinCalculatorViewController : UIViewController
-    <UIActionSheetDelegate>
+    <UIActionSheetDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 @property (strong, nonatomic) IBOutlet UITextField *weeklyDoseField;
 @property (strong, nonatomic) IBOutlet UITextField *inrField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *tabletSizeSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *targetSegmentedControl;
+@property (strong, nonatomic) IBOutlet UIPickerView *tabletSizePickerView;
 
 @property (strong, nonatomic) EPSDoseChange *doseChange;
 @property (strong, nonatomic) NSString *defaultWarfarinTabletSize;
 @property (strong, nonatomic) NSString *defaultINR;
+@property (strong, nonatomic) NSArray *tabletSizeData;
 
-- (IBAction)toggleTabletSize:(id)sender;
 - (IBAction)toggleTargetRange:(id)sender;
 - (IBAction)calculateButtonPressed:(id)sender;
 - (IBAction)clearButtonPressed:(id)sender;
