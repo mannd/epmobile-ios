@@ -36,7 +36,6 @@
 @synthesize inrField;
 @synthesize resultLabel;
 @synthesize doseChange;
-@synthesize tabletSizeSegmentedControl;
 @synthesize targetSegmentedControl;
 @synthesize tabletSizePickerView;
 @synthesize tabletSizeData;
@@ -101,7 +100,6 @@
     [self setInrField:nil];
     [self setResultLabel:nil];
     [self setDoseChange:nil];
-    [self setTabletSizeSegmentedControl:nil];
     [self setTargetSegmentedControl:nil];
     [self setTabletSizePickerView:nil];
     [super viewDidUnload];
