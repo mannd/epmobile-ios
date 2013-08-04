@@ -8,6 +8,8 @@
 
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSRiskScore.h"
+#import "EPSChadsRiskScore.h"
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
@@ -23,7 +25,9 @@
 
 @end
 
-@implementation EPSRiskScoreTableViewController
+@implementation EPSRiskScoreTableViewController {
+    EPSRiskScore *riskScore;
+}
 @synthesize risks;
 @synthesize scoreType;
 
@@ -41,12 +45,9 @@
     [super viewDidLoad];
     NSMutableArray *array = [[NSMutableArray alloc] init];
     if ([scoreType isEqualToString:@"Chads2"]) {
-        self.title = @"CHADS\u2082";
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Congestive heart failure" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"BP ≥ 140/90 or treated HTN"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 75 years" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Diabetes mellitus" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Stroke history" withValue:2 withDetails:@"or TIA or thromboembolism"]];
+        riskScore = [[EPSChadsRiskScore alloc] init];
+        self.title = [riskScore getTitle];
+        array = [riskScore getArray];
     }
     else if ([scoreType isEqualToString:@"ChadsVasc"]) {
         self.title = @"CHA\u2082DS\u2082-VASc";
@@ -150,9 +151,14 @@
         }
     }
     int score = 0;
+    if ([scoreType isEqualToString:@"Chads2"]) {
+       score = [riskScore calculateScore:self.risks];
+    }
+    else {
     for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
             score += [[self.risks objectAtIndex:i] points];
+    }
     // adjust for duplicate age entry in ChadsVasc
     if ([scoreType isEqualToString:@"ChadsVasc"]) {
         if ([[self.risks objectAtIndex:CHADS_VASC_AGE_65] selected] && [[self.risks objectAtIndex:CHADS_VASC_AGE_75] selected])
