@@ -582,7 +582,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nak-Eu-smJ" style="IBUITableViewCellStyleDefault" id="Ldh-M8-v5H">
-                                        <rect key="frame" x="0.0" y="1247" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="1247" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -602,6 +602,24 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <segue destination="Jt3-by-I3p" kind="push" identifier="HcmSegue" id="hpG-ma-Wwm"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wss-TW-Icg" style="IBUITableViewCellStyleDefault" id="bqP-Zg-Xfy">
+                                        <rect key="frame" x="0.0" y="1291" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Syncope" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wss-TW-Icg">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -619,7 +637,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1376" y="-2347"/>
+            <point key="canvasLocation" x="-1415" y="-2347"/>
         </scene>
         <!--Weight Calculator View Controller - Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -4975,7 +4993,6 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 <relationship kind="outlet" name="inrField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tabletSizePickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="tabletSizeSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="targetSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="weeklyDoseField" candidateClass="UITextField"/>
             </relationships>
