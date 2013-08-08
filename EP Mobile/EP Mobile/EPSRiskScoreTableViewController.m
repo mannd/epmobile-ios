@@ -369,7 +369,7 @@
                 resultMessage = [resultMessage stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
         }
         else if (result == 1) {
-            NSString *intermediateMessage = @"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran or rivaroxaban) recommended.";
+            NSString *intermediateMessage = @"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran, rivaroxaban or apixaban) recommended.";
             if ([scoreType isEqualToString:@"Chads2"])
                 intermediateMessage = [intermediateMessage stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better and using bleeding score (e.g. HAS-BLED) to help choose between ASA and oral anticoagulation."];
             else 
