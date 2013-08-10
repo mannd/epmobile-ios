@@ -12,9 +12,8 @@
 #import "EPSChadsRiskScore.h"
 #import "EPSChadsVascRiskScore.h"
 #import "EPSHasBledRiskScore.h"
-
-// used to distinguish specially handled risk factor in HCM
-#define HIGHEST_RISK_SCORE 100
+#import "EPSHemorrhagesRiskScore.h"
+#import "EPSHcmRiskScore.h"
 
 // the 2 mutually exclusive ESTES risks
 #define ESTES_STRAIN_WITH_DIG 1
@@ -60,41 +59,15 @@
         array = [riskScore getArray];
     }
     else if ([scoreType isEqualToString:@"Hemorrhages"]) {
-        self.title = @"HEMORR\u2082HAGES";
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hepatic or renal disease" withValue:1 withDetails:@"cirrhosis, 2x AST/ALT, alb < 3.6, CrCl < 30"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Ethanol use" withValue:1 withDetails:@"EtOH abuse, EtOH related illness"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Malignancy" withValue:1 withDetails:@"recent metastatic cancer"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Older" withValue:1 withDetails:@"Age > 75 years"]];   
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Reduced platelet count or function" withValue:1 withDetails:@"plts < 75K, antiplatelet drugs"]];
-        
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Rebleeding" withValue:2 withDetails:@"prior bleed requiring hospitalizaiton"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"BP not currently controlled, > 160"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Anemia" withValue:1 withDetails:@"most recent Hct < 30, Hgb < 10"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Genetic factors" withValue:1 withDetails:@"CYP2C9*2 and/or CYP2C9*3"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Elevated fall risk" withValue:1 withDetails:@"e.g. Alzheimer, Parkinson, schizophrenia"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Stroke" withValue:1]];
-        
+        riskScore = [[EPSHemorrhagesRiskScore alloc] init];
+        self.title = [riskScore getTitle];
+        array = [riskScore getArray];
         
     }
     else if ([scoreType isEqualToString:@"HCM"]) {
-        self.title = @"Hypertrophic CM";
-        // Major criteria
-        // will be able to tease out major and minor because major 1 order of magnitude higher
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Cardiac arrest" withValue:10]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Spontaneous sustained VT" withValue:10 ]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Family history" withValue:10 withDetails:@"of premature sudden death"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:10]];          
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"LV thickness ≥ 3 cm" withValue:10]];  
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:10 withDetails:@"failure of BP to rise with exercise"]];
-        
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Nonsustained VT" withValue:10]];
-        // Minor criteria
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Atrial fibrillation" withValue:1]];  
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Myocardial ischemia" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"LV outflow obstruction" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"High risk mutation" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Elevated fall risk" withValue:1 withDetails:@"e.g. Alzheimer, Parkinson, schizophrenia"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Stroke" withValue:1]];          
+        riskScore = [[EPSHcmRiskScore alloc] init];
+        self.title = [riskScore getTitle];
+        array = [riskScore getArray];
     }
     else if ([scoreType isEqualToString:@"Estes"]) {
         self.title = @"Estes LVH Score";
@@ -138,7 +111,8 @@
     int score = 0;
     NSString *message;
     if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]
-        || [scoreType isEqualToString:@"HasBled"]) {
+        || [scoreType isEqualToString:@"HasBled"] || [scoreType isEqualToString:@"Hemorrhages"]
+        || [scoreType isEqualToString:@"HCM"]) {
         score = [riskScore calculateScore:self.risks];
         message = [riskScore getMessage:score];
     }
@@ -155,46 +129,10 @@
     [alertView show];
 }
 
-- (float)getHemorrhagesRisk:(int)score {
-    float risk = 0.0f;
-    switch (score) {
-        case 0:
-            risk = 1.9;
-            break;
-        case 1:
-            risk = 2.5;
-            break;
-        case 2:
-            risk = 5.3;
-            break;
-        case 3:
-            risk = 8.4;
-            break;
-        case 4:
-            risk = 10.4;
-            break;
-    }
-    if (score >= 5)
-        risk = 12.3;
-    return risk;
-}
-
 - (NSString *)getResultsMessage:(int)result {
     NSString *message = nil;
     NSString *resultMessage = nil;
-    float risk = 0;
-    if ([scoreType isEqualToString:@"Hemorrhages"]) {
-        if (result < 2)
-            message = @"Low bleeding risk";
-        else if (result < 4)
-            message = @"Intermediate bleeding risk";
-        else 
-            message = @"High bleeding risk";
-        risk =[self getHemorrhagesRisk:result];
-
-        resultMessage = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", result, message, risk];
-    }
-    else if ([scoreType isEqualToString:@"Estes"]) {
+    if ([scoreType isEqualToString:@"Estes"]) {
         if (result < 4)
             message = @"Left Ventricular Hypertrophy not present.";
         else if (result == 4)
@@ -203,32 +141,6 @@
             message = @"Definite Left Ventricular Hypertrophy.";
         resultMessage = [[NSString alloc] initWithFormat:@"Romhilt-Estes score = %d\n%@\n", result, message];
     }
-    else if ([scoreType isEqualToString:@"HCM"]) {
-        int minorScore = 0;
-        int majorScore = 0;
-         // cardiac arrest and VT treated specially 
-        if ([[self.risks objectAtIndex:0] selected] || [[self.risks objectAtIndex:1] selected])  
-            result = HIGHEST_RISK_SCORE;
-        else {
-            // extract major and minor risks
-            majorScore = result / 10;
-            minorScore = result % 10;
-            NSLog(@"Major score = %i", majorScore);
-            NSLog(@"Minor score = %i", minorScore);
-        }
-        if (result == HIGHEST_RISK_SCORE)
-            resultMessage = @"Survivors of cardiac arrest and patients with spontaneous sustained VT are considered at very high risk for SD and are ICD candidates.";
-        else {
-            message = [[NSString alloc] initWithFormat:@"Major risks = %i\nMinor risks = %i\n", majorScore, minorScore];
-            if (majorScore >= 2)
-                resultMessage = [message stringByAppendingString:@"Patients with 2 or more major risk factors are considered at high risk and should be considered for ICD implantation."];
-            else if (majorScore == 1)
-                resultMessage = [message stringByAppendingString:@"Patients with 1 major risk factor have increased risk for SD and recommendations should be individualized. Factors such as the nature of the risk factor (e.g. SD in an immediate family member), young age (which confers greater risk) and presence of minor risk factors should be considered.  ICD implantation can be considered depending on these factors."];
-            else // result == 0
-                resultMessage = [message stringByAppendingString:@"Patients without any major risk factors (even if minor risk factors are present) are considered to be at low risk for SD. ICD implantation is not recommended."];
-        }
-    }
-
     return resultMessage;
 
 }
