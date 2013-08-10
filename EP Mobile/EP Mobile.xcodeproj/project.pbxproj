@@ -11,6 +11,7 @@
 		8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E93C17AEFCF50007A146 /* EPSChadsRiskScore.m */; };
 		8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */; };
 		8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94217B697540007A146 /* EPSChadsVascRiskScore.m */; };
+		8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94517B6EB610007A146 /* EPSHasBledRiskScore.m */; };
 		8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
 		8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DF15D1FF1500BB7550 /* rwpt.png */; };
@@ -124,6 +125,8 @@
 		8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSyncopeRiskViewController.m; sourceTree = "<group>"; };
 		8E00E94117B697540007A146 /* EPSChadsVascRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSChadsVascRiskScore.h; sourceTree = "<group>"; };
 		8E00E94217B697540007A146 /* EPSChadsVascRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSChadsVascRiskScore.m; sourceTree = "<group>"; };
+		8E00E94417B6EB610007A146 /* EPSHasBledRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHasBledRiskScore.h; sourceTree = "<group>"; };
+		8E00E94517B6EB610007A146 /* EPSHasBledRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHasBledRiskScore.m; sourceTree = "<group>"; };
 		8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modgrayavannulus.png; sourceTree = "<group>"; };
 		8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAVAnnulusViewController.h; sourceTree = "<group>"; };
 		8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAVAnnulusViewController.m; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 				8E00E93C17AEFCF50007A146 /* EPSChadsRiskScore.m */,
 				8E00E94117B697540007A146 /* EPSChadsVascRiskScore.h */,
 				8E00E94217B697540007A146 /* EPSChadsVascRiskScore.m */,
+				8E00E94417B6EB610007A146 /* EPSHasBledRiskScore.h */,
+				8E00E94517B6EB610007A146 /* EPSHasBledRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
 				8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */,
+				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

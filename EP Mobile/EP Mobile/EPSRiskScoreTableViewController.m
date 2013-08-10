@@ -11,12 +11,10 @@
 #import "EPSRiskScore.h"
 #import "EPSChadsRiskScore.h"
 #import "EPSChadsVascRiskScore.h"
+#import "EPSHasBledRiskScore.h"
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
-// the 2 mutually exclusive CHADS-VASc risk that must be dealt with specially
-#define CHADS_VASC_AGE_75 2
-#define CHADS_VASC_AGE_65 6
 
 // the 2 mutually exclusive ESTES risks
 #define ESTES_STRAIN_WITH_DIG 1
@@ -57,17 +55,9 @@
         
     }
     else if ([scoreType isEqualToString:@"HasBled"]) {
-        self.title = @"HAS-BLED";
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"systolic BP ≥ 160"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal renal function" withValue:1 withDetails:@"dialysis, kidney transplant, Cr ≥ 2.6 mg/dL"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Abnormal liver function" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Stroke history" withValue:1]];   
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Bleeding history" withValue:1 withDetails:@"or anemia or predisposition to bleeding"]];
-   
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Labile INR" withValue:1 withDetails:@"unstable, high or < 60%  therapeutic INRs"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Elderly" withValue:1 withDetails:@"65 years or older"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Drugs" withValue:1 withDetails:@"taking antiplatlet drugs like ASA or clopidogrel"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Alcohol" withValue:1 withDetails:@"8 or more alcoholic drinks per week"]];
+        riskScore = [[EPSHasBledRiskScore alloc] init];
+        self.title = [riskScore getTitle];
+        array = [riskScore getArray];
     }
     else if ([scoreType isEqualToString:@"Hemorrhages"]) {
         self.title = @"HEMORR\u2082HAGES";
@@ -146,53 +136,23 @@
         }
     }
     int score = 0;
-    if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) {
-       score = [riskScore calculateScore:self.risks];
+    NSString *message;
+    if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]
+        || [scoreType isEqualToString:@"HasBled"]) {
+        score = [riskScore calculateScore:self.risks];
+        message = [riskScore getMessage:score];
     }
     else {
         for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
             score += [[self.risks objectAtIndex:i] points];
-    }
-    NSString *message;
-    if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) {
-        message = [riskScore getMessage:score];
-    }
-    else
         message = [self getResultsMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+
+    }
+     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     // left justify message
     //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
     [alertView show];
-}
-
-- (NSString *)getHasBledRisk:(int)score {
-    NSString *riskString = nil;
-    switch (score) {
-        case 0:
-        case 1:
-            riskString = @"1.02-1.13";
-            break;
-        case 2:
-            riskString = @"1.88";
-            break;
-        case 3:
-            riskString = @"3.74";
-            break;
-        case 4:
-            riskString = @"8.70";
-            break;
-        case 5:
-            riskString = @"12.50";
-            break;
-        case 6:
-        case 7:
-        case 8:
-        case 9:
-            riskString = @"> 12.50";
-            break;
-    }
-    return riskString;
 }
 
 - (float)getHemorrhagesRisk:(int)score {
@@ -223,18 +183,7 @@
     NSString *message = nil;
     NSString *resultMessage = nil;
     float risk = 0;
-    // some risk scores require a string, e.g. HAS-BLED
-    NSString *riskString = nil;
-    if ([scoreType isEqualToString:@"HasBled"]) {
-		if (result < 3)
-            message = @"Low bleeding risk";
-        else 
-            message = @"High bleeding risk";
-        riskString = [self getHasBledRisk:result];
-        resultMessage = [[NSString alloc] initWithFormat:@"HAS-BLED score = %d\n%@\nBleeding risk is %@ bleeds per 100 patient-years", result, message, riskString];
-        
-    }
-    else if ([scoreType isEqualToString:@"Hemorrhages"]) {
+    if ([scoreType isEqualToString:@"Hemorrhages"]) {
         if (result < 2)
             message = @"Low bleeding risk";
         else if (result < 4)
