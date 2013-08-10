@@ -12,10 +12,9 @@
 - (NSString *)getTitle;
 - (NSString *)getScoreName;
 - (NSMutableArray *)getArray;
-- (NSString *)getRisk;
 - (NSString *)getTitleForHeaderSection;
 - (int)getOffset;
 - (int)calculateScore:(NSMutableArray *)risks;
-- (NSString *)getResultMessage:(NSMutableArray *)risks;
+- (NSString *)getMessage:(int)score;
 
 @end

@@ -25,10 +25,6 @@
     return nil;
 }
 
-- (NSString *)getRisk {
-    return nil;
-}
-
 - (NSString *)getTitleForHeaderSection {
     return nil;
 }
@@ -46,7 +42,7 @@
     return score;
 }
 
-- (NSString *)getResultMessage:(NSMutableArray *)risks {
+- (NSString *)getMessage:(int)score {
     return nil;
 }
 @end

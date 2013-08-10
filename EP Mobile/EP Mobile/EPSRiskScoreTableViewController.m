@@ -10,6 +10,7 @@
 #import "EPSRiskFactor.h"
 #import "EPSRiskScore.h"
 #import "EPSChadsRiskScore.h"
+#import "EPSChadsVascRiskScore.h"
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
@@ -50,15 +51,9 @@
         array = [riskScore getArray];
     }
     else if ([scoreType isEqualToString:@"ChadsVasc"]) {
-        self.title = @"CHA\u2082DS\u2082-VASc";
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Congestive heart failure" withValue:1 withDetails:@"or left ventricular systolic dysfunction"]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"BP ≥ 140/90 or treated HTN"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 75 years" withValue:2]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Diabetes mellitus" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Stroke history" withValue:2 withDetails:@"or TIA or thromboembolism"]];        
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Vascular disease" withValue:1 withDetails:@"e.g. PAD, MI, aortic plaque"]];
-        [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 65 years" withValue:1]];
-        [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Sex category" withValue:1 withDetails:@"i.e. female gender"]];        
+        riskScore = [[EPSChadsVascRiskScore alloc] init];
+        self.title = [riskScore getTitle];
+        array = [riskScore getArray];
         
     }
     else if ([scoreType isEqualToString:@"HasBled"]) {
@@ -151,89 +146,24 @@
         }
     }
     int score = 0;
-    if ([scoreType isEqualToString:@"Chads2"]) {
+    if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) {
        score = [riskScore calculateScore:self.risks];
     }
     else {
-    for (int i = 0; i < [self.risks count]; ++i)
+        for (int i = 0; i < [self.risks count]; ++i)
         if ([[self.risks objectAtIndex:i] selected] == YES)
             score += [[self.risks objectAtIndex:i] points];
     }
-    // adjust for duplicate age entry in ChadsVasc
-    if ([scoreType isEqualToString:@"ChadsVasc"]) {
-        if ([[self.risks objectAtIndex:CHADS_VASC_AGE_65] selected] && [[self.risks objectAtIndex:CHADS_VASC_AGE_75] selected])
-            --score;
+    NSString *message;
+    if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) {
+        message = [riskScore getMessage:score];
     }
-    NSString *message = [self getResultsMessage:score];
+    else
+        message = [self getResultsMessage:score];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     // left justify message
     //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
     [alertView show];
-}
-
-- (float)getChads2Risk:(int)score {
-    float risk = 0.0f;
-    switch (score) {
-        case 0:
-            risk = 1.9;
-            break;
-        case 1:
-            risk = 2.8;
-            break;
-        case 2:
-            risk = 4.0;
-            break;
-        case 3:
-            risk = 5.9;
-            break;
-        case 4:
-            risk = 8.5;
-            break;
-        case 5:
-            risk = 12.5;
-            break;
-        case 6:
-            risk = 18.2;
-            break;
-    }
-    return risk;
-}
-
-- (float)getChadsVascRisk:(int)score {
-    float risk = 0.0f;
-    switch (score) {
-        case 0:
-            risk = 0;
-            break;
-        case 1:
-            risk = 1.3;
-            break;
-        case 2:
-            risk = 2.2;
-            break;
-        case 3:
-            risk = 3.2;
-            break;
-        case 4:
-            risk = 4.0;
-            break;
-        case 5:
-            risk = 6.7;
-            break;
-        case 6:
-            risk = 9.8;
-            break;
-        case 7:
-            risk = 9.6;
-            break;
-        case 8:
-            risk = 6.7;
-            break;
-        case 9:
-            risk = 15.2;
-            break;
-    }
-    return risk;
 }
 
 - (NSString *)getHasBledRisk:(int)score {
@@ -295,17 +225,7 @@
     float risk = 0;
     // some risk scores require a string, e.g. HAS-BLED
     NSString *riskString = nil;
-    NSString *scoreName = nil;
-    if ([scoreType isEqualToString:@"Chads2"]) {
-        risk = [self getChads2Risk:result];
-        scoreName = @"CHADS\u2082";
-    }
-    else if ([scoreType isEqualToString:@"ChadsVasc"]) {
-        risk = [self getChadsVascRisk:result];
-        scoreName = @"CHA\u2082DS\u2082-VASc";
-
-    }
-    else if ([scoreType isEqualToString:@"HasBled"]) {
+    if ([scoreType isEqualToString:@"HasBled"]) {
 		if (result < 3)
             message = @"Low bleeding risk";
         else 
@@ -360,25 +280,6 @@
         }
     }
 
-    if ([scoreType isEqualToString:@"Chads2"] || [scoreType isEqualToString:@"ChadsVasc"]) { 
-        NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", risk];
-        message = [NSString stringWithFormat:@"%@ score = %d\n%@\n", scoreName, result, strokeRisk];
-        if (result < 1) { 
-            resultMessage = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or no drug recommended."];
-            if ([scoreType isEqualToString:@"Chads2"])
-                resultMessage = [resultMessage stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
-        }
-        else if (result == 1) {
-            NSString *intermediateMessage = @"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran, rivaroxaban or apixaban) recommended.";
-            if ([scoreType isEqualToString:@"Chads2"])
-                intermediateMessage = [intermediateMessage stringByAppendingString:@"\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better and using bleeding score (e.g. HAS-BLED) to help choose between ASA and oral anticoagulation."];
-            else 
-                intermediateMessage = [intermediateMessage stringByAppendingString:@"\n\nConsider assessing bleeding score (e.g. HAS-BLED) to help choose between ASA and anticoagulation."];
-            resultMessage = [message stringByAppendingString:intermediateMessage];
-        }
-        else 
-            resultMessage = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban or apixaban) recommended."];
-    }
     return resultMessage;
 
 }
