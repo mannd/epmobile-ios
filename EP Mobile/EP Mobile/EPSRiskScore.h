@@ -12,9 +12,13 @@
 - (NSString *)getTitle;
 - (NSString *)getScoreName;
 - (NSMutableArray *)getArray;
-- (NSString *)getTitleForHeaderSection;
-- (int)getOffset;
+- (NSString *)getTitleForHeaderSection:(int)section;
+- (int)getOffset:(int)section;
+- (int)numberOfSections;
+- (int)numberOfRowsInSection:(int)section;
 - (int)calculateScore:(NSMutableArray *)risks;
 - (NSString *)getMessage:(int)score;
+- (CGFloat)rowHeight:(CGFloat)defaultHeight;
+- (void)formatCell:(UITableViewCell *)cell;
 
 @end

@@ -25,12 +25,32 @@
     return nil;
 }
 
-- (NSString *)getTitleForHeaderSection {
+- (NSString *)getTitleForHeaderSection:(int)section {
     return nil;
 }
 
-- (int)getOffset {
+- (int)getOffset:(int)section {
+    // default 1 section, no offset
     return 0;
+}
+
+- (int)numberOfSections {
+    return 1;
+}
+
+- (int)numberOfRowsInSection:(int)section {
+    // if returns 0 calling function will assume only one section
+    return 0;
+}
+
+- (CGFloat)rowHeight:(CGFloat)defaultHeight {
+    // default behavior just passes back passed in height
+    return defaultHeight;
+}
+
+- (void)formatCell:(UITableViewCell *)cell {
+    // default doesn't change cell
+    return;
 }
 
 - (int)calculateScore:(NSMutableArray *)risks {

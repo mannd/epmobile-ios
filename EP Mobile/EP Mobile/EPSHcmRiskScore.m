@@ -76,6 +76,32 @@
     return resultMessage;
 }
 
+- (int)numberOfSections {
+    return 2;
+}
+
+- (int)numberOfRowsInSection:(int)section {
+    if (section == 0)
+        return 7;
+    else
+        return 4;
+}
+
+- (int)getOffset:(int)section {
+    if (section == 1)
+        return 7;
+    else
+        return 0;
+}
+
+- (NSString *)getTitleForHeaderSection:(int)section {
+    if (section == 0)
+        return @"MAJOR";
+    else
+        return @"MINOR";
+}
+
+
 
 
 @end
