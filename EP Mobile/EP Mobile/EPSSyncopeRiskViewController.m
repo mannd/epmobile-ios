@@ -7,6 +7,7 @@
 //
 
 #import "EPSSyncopeRiskViewController.h"
+#import "EPSRiskScoreTableViewController.h"
 
 @interface EPSSyncopeRiskViewController ()
 
@@ -39,5 +40,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"EgsysScoreSegue"])
+        vc.scoreType = @"EgsysScore";
+    else if ([segueIdentifier isEqualToString:@"MartinScoreSegue"])
+        vc.scoreType = @"MartinScoreVasc";
+    else if ([segueIdentifier isEqualToString:@"OesilScoreSegue"])
+        vc.scoreType = @"OesilScore";
+    else if ([segueIdentifier isEqualToString:@"SfRuleSegue"])
+        vc.scoreType = @"SfRule";
+}
+
+
 
 @end
