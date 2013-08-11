@@ -15,6 +15,7 @@
 #import "EPSHemorrhagesRiskScore.h"
 #import "EPSHcmRiskScore.h"
 #import "EPSEstesRiskScore.h"
+#import "EPSSfRuleRiskScore.h"
 
 @interface EPSRiskScoreTableViewController ()
 
@@ -49,9 +50,10 @@
         riskScore = [[EPSHemorrhagesRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"HCM"])
         riskScore = [[EPSHcmRiskScore alloc] init];
-    else if ([scoreType isEqualToString:@"Estes"]) {
+    else if ([scoreType isEqualToString:@"Estes"])
         riskScore = [[EPSEstesRiskScore alloc] init];
-    }
+    else if ([scoreType isEqualToString:@"SfRule"])
+        riskScore = [[EPSSfRuleRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;
