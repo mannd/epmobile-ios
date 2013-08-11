@@ -52,7 +52,7 @@
     if ([segueIdentifier isEqualToString:@"EgsysScoreSegue"])
         vc.scoreType = @"EgsysScore";
     else if ([segueIdentifier isEqualToString:@"MartinScoreSegue"])
-        vc.scoreType = @"MartinScoreVasc";
+        vc.scoreType = @"MartinScore";
     else if ([segueIdentifier isEqualToString:@"OesilScoreSegue"])
         vc.scoreType = @"OesilScore";
     else if ([segueIdentifier isEqualToString:@"SfRuleSegue"])

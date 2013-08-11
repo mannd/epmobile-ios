@@ -17,6 +17,7 @@
 #import "EPSEstesRiskScore.h"
 #import "EPSSfRuleRiskScore.h"
 #import "EPSEgsysRiskScore.h"
+#import "EPSMartinRiskScore.h"
 
 @interface EPSRiskScoreTableViewController ()
 
@@ -57,6 +58,8 @@
         riskScore = [[EPSSfRuleRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"EgsysScore"])
         riskScore = [[EPSEgsysRiskScore alloc] init];
+    else if ([scoreType isEqualToString:@"MartinScore"])
+        riskScore = [[EPSMartinRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;
