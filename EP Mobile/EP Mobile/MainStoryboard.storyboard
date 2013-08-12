@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-cy-u4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3568" y="-1231"/>
+            <point key="canvasLocation" x="-3400" y="-1463"/>
         </scene>
         <!--View Controller - Epi vs Endocardial VT-->
         <scene sceneID="6Vl-xv-P4K">
@@ -749,7 +749,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1238" y="-1487"/>
+            <point key="canvasLocation" x="-1418" y="-1589"/>
         </scene>
         <!--Weight Calculator View Controller - Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -4881,12 +4881,12 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ucK-8l-Jyw"/>
+        <segue reference="pGj-ye-BDw"/>
         <segue reference="9A7-Dn-UeD"/>
-        <segue reference="zlS-au-Ibg"/>
         <segue reference="pFv-5Z-NQa"/>
-        <segue reference="5yz-gw-x5v"/>
-        <segue reference="bT0-Tb-wFg"/>
+        <segue reference="zlS-au-Ibg"/>
+        <segue reference="ucK-8l-Jyw"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="bT0-Tb-wFg"/>
     </inferredMetricsTieBreakers>
 </document>
