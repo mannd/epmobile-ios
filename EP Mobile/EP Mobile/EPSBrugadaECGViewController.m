@@ -31,6 +31,13 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    UIScrollView *scrollView = (UIScrollView *)self.view;
+    float width = scrollView.bounds.size.width;
+    float height = scrollView.bounds.size.height;
+    scrollView.contentSize = CGSizeMake(width, height);
+    scrollView.minimumZoomScale = 1.0;
+    scrollView.maximumZoomScale = 2.0;
+    scrollView.delegate = self;
 //    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
 //                                   initWithTitle:@"Notes" style:UIBarButtonItemStyleBordered target:self action:@selector(showNotes)];
 //    self.navigationItem.rightBarButtonItem = editButton;
@@ -66,6 +73,10 @@
 - (void)showNotes {
     [self performSegueWithIdentifier:@"BrugadaNotesSegue" sender:nil];
     
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return [scrollView viewWithTag:999];
 }
 
 @end

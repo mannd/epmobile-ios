@@ -3474,11 +3474,11 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <scene sceneID="YNC-eM-1m3">
             <objects>
                 <viewController id="e5o-Mg-pZA" customClass="EPSBrugadaECGViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP">
+                    <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brugadaecg.png" id="Xtc-ai-f3e">
+                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" id="Xtc-ai-f3e">
                                 <rect key="frame" x="0.0" y="140" width="320" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -3492,7 +3492,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-854" y="-1507"/>
+            <point key="canvasLocation" x="-912" y="-1549"/>
         </scene>
         <!--Notes View Controller - NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -4885,8 +4885,8 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
         <segue reference="9A7-Dn-UeD"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
+        <segue reference="gzd-ih-l4g"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="WZv-9D-sK8"/>
-        <segue reference="bT0-Tb-wFg"/>
     </inferredMetricsTieBreakers>
 </document>
