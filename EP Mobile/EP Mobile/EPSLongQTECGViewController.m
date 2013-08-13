@@ -40,4 +40,8 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
 @end

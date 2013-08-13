@@ -50,6 +50,17 @@
     [super viewDidUnload];
 }
 
+// for iOS 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
+}
+
+// for iOS 6
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }

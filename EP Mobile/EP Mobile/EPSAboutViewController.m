@@ -45,18 +45,19 @@
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+// for iOS 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
-- (BOOL)shouldAutorotate
-{
+// for iOS 6
+- (BOOL)shouldAutorotate {
     return NO;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
+    //decide number of origination tob supported by Viewcontroller.
     return UIInterfaceOrientationMaskPortrait;
 }
 
