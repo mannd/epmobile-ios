@@ -50,10 +50,10 @@
     return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
-// for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
-}
+//// for iOS 6
+//- (BOOL)shouldAutorotate {
+//    return NO;
+//}
 
 - (NSUInteger)supportedInterfaceOrientations
 {

@@ -90,7 +90,7 @@
 
 // for iOS 5
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
+    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
 - (BOOL)shouldAutorotate {

@@ -55,7 +55,6 @@
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController]; 
     NSString *segueIdentifier = [segue identifier];
