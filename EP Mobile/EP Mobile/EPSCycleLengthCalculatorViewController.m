@@ -47,12 +47,7 @@
 
 // for iOS 5
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
+    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
 - (int)convertInterval:(int)n {

@@ -46,11 +46,6 @@
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 5)
         return 100;

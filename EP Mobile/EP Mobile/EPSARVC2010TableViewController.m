@@ -93,10 +93,6 @@
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
 - (void)calculateScore {
     int major = 0;
     int minor = 0;
