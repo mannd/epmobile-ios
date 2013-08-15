@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E93917AEFBF60007A146 /* EPSRiskScore.m */; };
+		8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E93C17AEFCF50007A146 /* EPSChadsRiskScore.m */; };
+		8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */; };
+		8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94217B697540007A146 /* EPSChadsVascRiskScore.m */; };
+		8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94517B6EB610007A146 /* EPSHasBledRiskScore.m */; };
+		8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94817B6F0050007A146 /* EPSHemorrhagesRiskScore.m */; };
+		8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94B17B6F46E0007A146 /* EPSHcmRiskScore.m */; };
+		8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E94E17B6F88B0007A146 /* EPSEstesRiskScore.m */; };
+		8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E95117B7F89E0007A146 /* EPSSfRuleRiskScore.m */; };
+		8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E95417B83CF60007A146 /* EPSEgsysRiskScore.m */; };
+		8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E95717B84EC10007A146 /* EPSMartinRiskScore.m */; };
+		8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E95A17B851E50007A146 /* EPSOesilScore.m */; };
+		8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */; };
+		8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96517BC46EF0007A146 /* EPSNavigationController.m */; };
+		8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96A17BC52810007A146 /* EPSViewController.m */; };
+		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
 		8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DF15D1FF1500BB7550 /* rwpt.png */; };
@@ -112,6 +128,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E00E93817AEFBF60007A146 /* EPSRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskScore.h; sourceTree = "<group>"; };
+		8E00E93917AEFBF60007A146 /* EPSRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskScore.m; sourceTree = "<group>"; };
+		8E00E93B17AEFCF40007A146 /* EPSChadsRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSChadsRiskScore.h; sourceTree = "<group>"; };
+		8E00E93C17AEFCF50007A146 /* EPSChadsRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSChadsRiskScore.m; sourceTree = "<group>"; };
+		8E00E93E17B30B2E0007A146 /* EPSSyncopeRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSyncopeRiskViewController.h; sourceTree = "<group>"; };
+		8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSyncopeRiskViewController.m; sourceTree = "<group>"; };
+		8E00E94117B697540007A146 /* EPSChadsVascRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSChadsVascRiskScore.h; sourceTree = "<group>"; };
+		8E00E94217B697540007A146 /* EPSChadsVascRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSChadsVascRiskScore.m; sourceTree = "<group>"; };
+		8E00E94417B6EB610007A146 /* EPSHasBledRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHasBledRiskScore.h; sourceTree = "<group>"; };
+		8E00E94517B6EB610007A146 /* EPSHasBledRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHasBledRiskScore.m; sourceTree = "<group>"; };
+		8E00E94717B6F0050007A146 /* EPSHemorrhagesRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHemorrhagesRiskScore.h; sourceTree = "<group>"; };
+		8E00E94817B6F0050007A146 /* EPSHemorrhagesRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHemorrhagesRiskScore.m; sourceTree = "<group>"; };
+		8E00E94A17B6F46E0007A146 /* EPSHcmRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmRiskScore.h; sourceTree = "<group>"; };
+		8E00E94B17B6F46E0007A146 /* EPSHcmRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmRiskScore.m; sourceTree = "<group>"; };
+		8E00E94D17B6F88B0007A146 /* EPSEstesRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEstesRiskScore.h; sourceTree = "<group>"; };
+		8E00E94E17B6F88B0007A146 /* EPSEstesRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEstesRiskScore.m; sourceTree = "<group>"; };
+		8E00E95017B7F89E0007A146 /* EPSSfRuleRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSfRuleRiskScore.h; sourceTree = "<group>"; };
+		8E00E95117B7F89E0007A146 /* EPSSfRuleRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSfRuleRiskScore.m; sourceTree = "<group>"; };
+		8E00E95317B83CF60007A146 /* EPSEgsysRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEgsysRiskScore.h; sourceTree = "<group>"; };
+		8E00E95417B83CF60007A146 /* EPSEgsysRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEgsysRiskScore.m; sourceTree = "<group>"; };
+		8E00E95617B84EC10007A146 /* EPSMartinRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMartinRiskScore.h; sourceTree = "<group>"; };
+		8E00E95717B84EC10007A146 /* EPSMartinRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMartinRiskScore.m; sourceTree = "<group>"; };
+		8E00E95917B851E50007A146 /* EPSOesilScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOesilScore.h; sourceTree = "<group>"; };
+		8E00E95A17B851E50007A146 /* EPSOesilScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOesilScore.m; sourceTree = "<group>"; };
+		8E00E96017BB1E890007A146 /* EPSLQTSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLQTSTableViewController.h; sourceTree = "<group>"; };
+		8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLQTSTableViewController.m; sourceTree = "<group>"; };
+		8E00E96417BC46EF0007A146 /* EPSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNavigationController.h; sourceTree = "<group>"; };
+		8E00E96517BC46EF0007A146 /* EPSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSNavigationController.m; sourceTree = "<group>"; };
+		8E00E96917BC527F0007A146 /* EPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSViewController.h; sourceTree = "<group>"; };
+		8E00E96A17BC52810007A146 /* EPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSViewController.m; sourceTree = "<group>"; };
+		8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSTabBarViewController.h; sourceTree = "<group>"; };
+		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modgrayavannulus.png; sourceTree = "<group>"; };
 		8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAVAnnulusViewController.h; sourceTree = "<group>"; };
 		8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAVAnnulusViewController.m; sourceTree = "<group>"; };
@@ -287,6 +335,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E00E93617A569EB0007A146 /* RiskScores */ = {
+			isa = PBXGroup;
+			children = (
+				8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */,
+				8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */,
+				8E00E93817AEFBF60007A146 /* EPSRiskScore.h */,
+				8E00E93917AEFBF60007A146 /* EPSRiskScore.m */,
+				8E00E93B17AEFCF40007A146 /* EPSChadsRiskScore.h */,
+				8E00E93C17AEFCF50007A146 /* EPSChadsRiskScore.m */,
+				8E00E94117B697540007A146 /* EPSChadsVascRiskScore.h */,
+				8E00E94217B697540007A146 /* EPSChadsVascRiskScore.m */,
+				8E00E94417B6EB610007A146 /* EPSHasBledRiskScore.h */,
+				8E00E94517B6EB610007A146 /* EPSHasBledRiskScore.m */,
+				8E00E94717B6F0050007A146 /* EPSHemorrhagesRiskScore.h */,
+				8E00E94817B6F0050007A146 /* EPSHemorrhagesRiskScore.m */,
+				8E00E94A17B6F46E0007A146 /* EPSHcmRiskScore.h */,
+				8E00E94B17B6F46E0007A146 /* EPSHcmRiskScore.m */,
+				8E00E94D17B6F88B0007A146 /* EPSEstesRiskScore.h */,
+				8E00E94E17B6F88B0007A146 /* EPSEstesRiskScore.m */,
+				8E00E95017B7F89E0007A146 /* EPSSfRuleRiskScore.h */,
+				8E00E95117B7F89E0007A146 /* EPSSfRuleRiskScore.m */,
+				8E00E95317B83CF60007A146 /* EPSEgsysRiskScore.h */,
+				8E00E95417B83CF60007A146 /* EPSEgsysRiskScore.m */,
+				8E00E95617B84EC10007A146 /* EPSMartinRiskScore.h */,
+				8E00E95717B84EC10007A146 /* EPSMartinRiskScore.m */,
+				8E00E95917B851E50007A146 /* EPSOesilScore.h */,
+				8E00E95A17B851E50007A146 /* EPSOesilScore.m */,
+			);
+			name = RiskScores;
+			sourceTree = "<group>";
+		};
+		8E00E96317BC42E40007A146 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
+				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
+				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
+				8E00E96417BC46EF0007A146 /* EPSNavigationController.h */,
+				8E00E96517BC46EF0007A146 /* EPSNavigationController.m */,
+				8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */,
+				8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		8E00E96717BC48530007A146 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */,
+				8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */,
+				8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */,
+				8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */,
+				8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */,
+				8E9755AC161A66E900EAFD10 /* EPSAnnularVTNotes.h */,
+				8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */,
+				8E6106FD170B6B6200A5B9CE /* EPSAtrialTachNotes.h */,
+				8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */,
+				8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */,
+				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
+				8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */,
+				8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */,
+				8E37A59F16FF6016004E66B2 /* EPSDateCalculatorNotes.h */,
+				8E37A5A016FF6016004E66B2 /* EPSDateCalculatorNotes.m */,
+				8E37A5A516FFD540004E66B2 /* EPSEntrainmentNotes.h */,
+				8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */,
+				8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */,
+				8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */,
+				8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */,
+				8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */,
+				8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */,
+				8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		8E00E96817BC48710007A146 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		8E741AB616FE88B500A701B3 /* Links */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,10 +433,6 @@
 			children = (
 				8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */,
 				8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */,
-				8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */,
-				8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */,
-				8E9755AC161A66E900EAFD10 /* EPSAnnularVTNotes.h */,
-				8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */,
 				8EBFBBD5162CA6ED00D3B964 /* EPSStepAlgorithmProtocol.h */,
 				8EBFBBD6162CA7DD00D3B964 /* EPSOutflowVTAlgorithm.h */,
 				8EBFBBD7162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m */,
@@ -323,8 +450,6 @@
 				8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */,
 				8E37A5A8170126FA004E66B2 /* EPSComplexAlgorithmViewController.h */,
 				8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */,
-				8E6106FD170B6B6200A5B9CE /* EPSAtrialTachNotes.h */,
-				8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */,
 				8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */,
 				8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */,
 				8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */,
@@ -341,8 +466,6 @@
 				8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */,
 				8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */,
 				8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */,
-				8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */,
-				8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */,
 			);
 			name = Warfarin;
 			sourceTree = "<group>";
@@ -370,6 +493,10 @@
 				8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */,
 				8E0DD78F163211B800DDC4CC /* EPSWPWTableViewController.h */,
 				8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */,
+				8E00E93E17B30B2E0007A146 /* EPSSyncopeRiskViewController.h */,
+				8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */,
+				8E00E96017BB1E890007A146 /* EPSLQTSTableViewController.h */,
+				8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */,
 			);
 			name = "Table View Controllers";
 			sourceTree = "<group>";
@@ -384,28 +511,18 @@
 				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
 				8E31CEBC15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.h */,
 				8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */,
-				8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */,
-				8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */,
 				8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */,
 				8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */,
 				8E09D07215E1C8D900756EA1 /* EPSLQTSViewController.h */,
 				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
 				8EC343E31630A188008938F6 /* EPSCMSViewController.h */,
 				8EC343E41630A188008938F6 /* EPSCMSViewController.m */,
-				8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */,
-				8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */,
 				8E37A59C16FF46FF004E66B2 /* EPSDateCalculatorViewController.h */,
 				8E37A59D16FF46FF004E66B2 /* EPSDateCalculatorViewController.m */,
-				8E37A59F16FF6016004E66B2 /* EPSDateCalculatorNotes.h */,
-				8E37A5A016FF6016004E66B2 /* EPSDateCalculatorNotes.m */,
 				8E37A5A216FF8C8D004E66B2 /* EPSEntrainmentViewController.h */,
 				8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */,
-				8E37A5A516FFD540004E66B2 /* EPSEntrainmentNotes.h */,
-				8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */,
 				8EC6E948177F301D00B76C38 /* EPSWeightCalculatorViewController.h */,
 				8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */,
-				8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */,
-				8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -419,8 +536,6 @@
 				8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */,
 				8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */,
 				8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */,
-				8E9755A6161A5A3900EAFD10 /* EPSBrugadaNotes.h */,
-				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
 			);
 			name = "Image Views";
 			sourceTree = "<group>";
@@ -461,21 +576,18 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
-				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
-				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
-				8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */,
-				8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */,
-				8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */,
-				8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */,
-				8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */,
-				8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */,
+				8E00E96817BC48710007A146 /* Headers */,
+				8E00E96317BC42E40007A146 /* Main */,
+				8E00E96717BC48530007A146 /* Notes */,
+				8E00E93617A569EB0007A146 /* RiskScores */,
 				8E741AB616FE88B500A701B3 /* Links */,
 				8E815D41162F1AEE001025ED /* Image Views */,
 				8E815D40162F1A5B001025ED /* Calculators */,
 				8E815D3F162EE5CA001025ED /* Table View Controllers */,
 				8E815D3D162EE4F7001025ED /* Algorithms */,
 				8EC19C32159FE0FA00975E2B /* Supporting Files */,
+				8E00E96917BC527F0007A146 /* EPSViewController.h */,
+				8E00E96A17BC52810007A146 /* EPSViewController.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -729,6 +841,22 @@
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
 				8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */,
 				8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */,
+				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
+				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
+				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
+				8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */,
+				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
+				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
+				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
+				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
+				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
+				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
+				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
+				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
+				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,
+				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
+				8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */,
+				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +967,7 @@
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -851,6 +980,7 @@
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

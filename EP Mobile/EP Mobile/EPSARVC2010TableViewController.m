@@ -88,6 +88,11 @@
     // e.g. self.myOutlet = nil;
 }
 
+// for iOS 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
+}
+
 - (void)calculateScore {
     int major = 0;
     int minor = 0;
@@ -146,11 +151,6 @@
     else
         message = [messageStart stringByAppendingString:@"Not Diagnostic of ARVC/D"];
     return message;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
