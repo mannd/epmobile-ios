@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSBrugadaECGViewController : UIViewController
+    <UIScrollViewDelegate>
 
 @end

@@ -33,6 +33,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +49,17 @@
     [self setSubtractDaysSwitch:nil];
     [self setResultLabel:nil];
     [super viewDidUnload];
+}
+
+// for iOS 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    //decide number of origination tob supported by Viewcontroller.
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {

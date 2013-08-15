@@ -1,19 +1,18 @@
 //
-//  EPSSyncopeRiskViewController.m
+//  EPSLQTSTableViewController.m
 //  EP Mobile
 //
-//  Created by David Mann on 8/7/13.
+//  Created by David Mann on 8/13/13.
 //  Copyright (c) 2013 EP Studios. All rights reserved.
 //
 
-#import "EPSSyncopeRiskViewController.h"
-#import "EPSRiskScoreTableViewController.h"
+#import "EPSLQTSTableViewController.h"
 
-@interface EPSSyncopeRiskViewController ()
+@interface EPSLQTSTableViewController ()
 
 @end
 
-@implementation EPSSyncopeRiskViewController
+@implementation EPSLQTSTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,20 +44,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"EgsysScoreSegue"])
-        vc.scoreType = @"EgsysScore";
-    else if ([segueIdentifier isEqualToString:@"MartinScoreSegue"])
-        vc.scoreType = @"MartinScore";
-    else if ([segueIdentifier isEqualToString:@"OesilScoreSegue"])
-        vc.scoreType = @"OesilScore";
-    else if ([segueIdentifier isEqualToString:@"SfRuleSegue"])
-        vc.scoreType = @"SfRule";
-}
-
 
 
 @end
