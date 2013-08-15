@@ -31,7 +31,7 @@
         message = [message stringByAppendingString:@"No or little risk of serious events at 30 days."];
     else
         message = [message stringByAppendingString:@"Risk of serious events at 30 days (98% sensitive and 56% specific."];
-    NSString *resultMessage = [[NSString alloc] initWithFormat:@"SF Rule Score %@\n%@", (score > 0 ? @"> 1." : @"= 0."), message];
+    NSString *resultMessage = [[NSString alloc] initWithFormat:@"SF Rule Score %@\n%@", (score > 0 ? @"\u2265 1." : @"= 0."), message];
     return resultMessage;
 }
 
