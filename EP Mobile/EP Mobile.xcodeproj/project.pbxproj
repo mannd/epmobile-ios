@@ -21,6 +21,8 @@
 		8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E95A17B851E50007A146 /* EPSOesilScore.m */; };
 		8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */; };
 		8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96517BC46EF0007A146 /* EPSNavigationController.m */; };
+		8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96A17BC52810007A146 /* EPSViewController.m */; };
+		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
 		8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DF15D1FF1500BB7550 /* rwpt.png */; };
@@ -154,6 +156,10 @@
 		8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLQTSTableViewController.m; sourceTree = "<group>"; };
 		8E00E96417BC46EF0007A146 /* EPSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNavigationController.h; sourceTree = "<group>"; };
 		8E00E96517BC46EF0007A146 /* EPSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSNavigationController.m; sourceTree = "<group>"; };
+		8E00E96917BC527F0007A146 /* EPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSViewController.h; sourceTree = "<group>"; };
+		8E00E96A17BC52810007A146 /* EPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSViewController.m; sourceTree = "<group>"; };
+		8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSTabBarViewController.h; sourceTree = "<group>"; };
+		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modgrayavannulus.png; sourceTree = "<group>"; };
 		8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAVAnnulusViewController.h; sourceTree = "<group>"; };
 		8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAVAnnulusViewController.m; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
 				8E00E96417BC46EF0007A146 /* EPSNavigationController.h */,
 				8E00E96517BC46EF0007A146 /* EPSNavigationController.m */,
+				8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */,
+				8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -569,8 +577,8 @@
 			isa = PBXGroup;
 			children = (
 				8E00E96817BC48710007A146 /* Headers */,
-				8E00E96717BC48530007A146 /* Notes */,
 				8E00E96317BC42E40007A146 /* Main */,
+				8E00E96717BC48530007A146 /* Notes */,
 				8E00E93617A569EB0007A146 /* RiskScores */,
 				8E741AB616FE88B500A701B3 /* Links */,
 				8E815D41162F1AEE001025ED /* Image Views */,
@@ -578,6 +586,8 @@
 				8E815D3F162EE5CA001025ED /* Table View Controllers */,
 				8E815D3D162EE4F7001025ED /* Algorithms */,
 				8EC19C32159FE0FA00975E2B /* Supporting Files */,
+				8E00E96917BC527F0007A146 /* EPSViewController.h */,
+				8E00E96A17BC52810007A146 /* EPSViewController.m */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -845,6 +855,8 @@
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
 				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,
 				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
+				8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */,
+				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

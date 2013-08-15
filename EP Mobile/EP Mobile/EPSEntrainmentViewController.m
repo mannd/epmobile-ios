@@ -44,6 +44,11 @@
     return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
+// for iOS 6
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 
 
 - (void)didReceiveMemoryWarning

@@ -72,6 +72,17 @@
     [super viewDidUnload];
 }
 
+// for iOS 5
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
+}
+
+// for iOS 6
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 // his information really should be hidden in the algorithm, not view controller
 - (void) setButtons {
     if (step == 1) {

@@ -71,9 +71,11 @@
 }
 
 // for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
+
+
 - (void) calculateScore {
     // since this score uses 0.5, we will multiply points by 10, e.g.
     // 1 = 10, to avoid using non-integer arithmetic
