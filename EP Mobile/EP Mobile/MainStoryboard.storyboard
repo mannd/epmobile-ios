@@ -2753,7 +2753,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--View Controller - R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
             <objects>
-                <viewController id="v7F-Ni-Oso" customClass="EPSViewController" sceneMemberID="viewController">
+                <viewController id="v7F-Ni-Oso" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="53H-Px-fsL"/>
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
@@ -2763,19 +2763,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
-                                <rect key="frame" x="0.0" y="64" width="321" height="282"/>
+                                <rect key="frame" x="-18" y="74" width="357" height="282"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="317" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
-                                <rect key="frame" x="4" y="380" width="317" height="106"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
+                                <rect key="frame" x="20" y="364" width="279" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="uf5-MH-tcY"/>
-                                </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <string key="text">R wave peak time in lead II (RWPT).
-Measure the onset of the QRS in ECG lead II to the first	change in polarity (nadir Q or peak R). RWPT ≥ 50 msec strongly suggests VT (positive likelihood ratio 34.8). Reference: Pava LF, et al. Heart Rhythm 2010;7:922.</string>
+Measure the onset of the QRS in ECG lead II to the first change in polarity (nadir Q or peak R). RWPT ≥ 50 msec strongly suggests VT (positive likelihood ratio 34.8). Reference: Pava LF, et al. Heart Rhythm 2010;7:922.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -2783,11 +2780,10 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leading" id="3L8-tm-S6m"/>
-                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="centerX" secondItem="v4f-bo-OZD" secondAttribute="centerX" id="M3y-Ys-bvG"/>
-                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" constant="3" id="TaD-xJ-bA2"/>
-                            <constraint firstItem="v4f-bo-OZD" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leading" constant="20" symbolic="YES" id="uDw-Cy-fN8"/>
-                            <constraint firstItem="v4f-bo-OZD" firstAttribute="top" secondItem="9Mw-vh-A5V" secondAttribute="bottom" constant="30" id="vzZ-K2-nrU"/>
+                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="centerX" secondItem="1e9-YG-z72" secondAttribute="centerX" id="2zc-bt-yI3"/>
+                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" constant="10" id="U1b-1x-x1x"/>
+                            <constraint firstItem="v4f-bo-OZD" firstAttribute="top" secondItem="9Mw-vh-A5V" secondAttribute="bottom" constant="8" symbolic="YES" id="dNG-2l-uFi"/>
+                            <constraint firstItem="v4f-bo-OZD" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leading" constant="20" symbolic="YES" id="mbA-lM-B73"/>
                         </constraints>
                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                     </view>
@@ -2795,7 +2791,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3732" y="-1770"/>
+            <point key="canvasLocation" x="-3627" y="-2015"/>
         </scene>
         <!--Table View Controller - ARVC/D-->
         <scene sceneID="L5H-Ax-xj6">
@@ -3432,12 +3428,17 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                <rect key="frame" x="0.0" y="172" width="320" height="224"/>
+                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" misplaced="YES" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
+                                <rect key="frame" x="12" y="160" width="297" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Xtc-ai-f3e" secondAttribute="centerY" id="8DW-hJ-C3p"/>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leading" constant="12" id="nBP-Rl-OhM"/>
+                            <constraint firstAttribute="centerX" secondItem="Xtc-ai-f3e" secondAttribute="centerX" id="v1M-hj-YDI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
                     <connections>
@@ -3446,7 +3447,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1121" y="-1642"/>
+            <point key="canvasLocation" x="-1468" y="-1728"/>
         </scene>
         <!--Notes View Controller - NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -4110,7 +4111,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CL (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-N2-R0a">
-                                <rect key="frame" x="177" y="71" width="123.00000000000001" height="31"/>
+                                <rect key="frame" x="177.00000000000003" y="71" width="123" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4204,7 +4205,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
-                                <rect key="frame" x="161.00000000000006" y="116" width="139" height="29"/>
+                                <rect key="frame" x="161" y="116" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
@@ -4233,7 +4234,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-wR-tqp">
-                                <rect key="frame" x="169" y="84" width="56.000000000000007" height="21"/>
+                                <rect key="frame" x="169" y="84" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -4258,7 +4259,7 @@ Measure the onset of the QRS in ECG lead II to the first	change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-7N-Tzv">
-                                <rect key="frame" x="161.00000000000006" y="220" width="139" height="37"/>
+                                <rect key="frame" x="161" y="220" width="139" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
