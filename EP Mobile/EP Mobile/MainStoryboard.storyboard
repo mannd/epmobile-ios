@@ -29,15 +29,18 @@
                         <viewControllerLayoutGuide type="bottom" id="5e2-jj-ZpT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ww0-Kk-xdd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
                                 <rect key="frame" x="44" y="53" width="212" height="188"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="qMm-MX-RCn"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
-                                <rect key="frame" x="20" y="237" width="280" height="223"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
+                                <rect key="frame" x="20" y="249" width="280" height="311"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Pseudo-delta wave Δ: Measured from earliest ventricular activation to the earliest fast deflection in any precordial lead. Pseudo-delta wave ≥ 34 msec predicts epicardial origin (Sens 83%, Spec 95%).
 
@@ -52,6 +55,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bgx-S4-2Ha" secondAttribute="trailing" constant="64" id="22E-MW-omz"/>
+                            <constraint firstItem="LFv-s2-rHW" firstAttribute="leading" secondItem="Ww0-Kk-xdd" secondAttribute="leading" constant="20" symbolic="YES" id="Oce-TC-0F5"/>
+                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="leading" secondItem="Ww0-Kk-xdd" secondAttribute="leading" constant="44" id="S0b-dO-yTP"/>
+                            <constraint firstItem="LFv-s2-rHW" firstAttribute="top" secondItem="Bgx-S4-2Ha" secondAttribute="bottom" constant="8" symbolic="YES" id="SpW-Zs-nL7"/>
+                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="top" secondItem="Ww0-Kk-xdd" secondAttribute="top" constant="53" id="djK-er-TSf"/>
+                            <constraint firstItem="5e2-jj-ZpT" firstAttribute="top" secondItem="LFv-s2-rHW" secondAttribute="bottom" constant="8" id="wh8-ef-HMp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Epi vs Endocardial VT" id="oXB-Rd-rwY"/>
                 </viewController>
@@ -64,7 +75,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="GpZ-Ky-wdH" customClass="EPSSyncopeRiskViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kbk-e3-e5e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -169,7 +180,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="hAV-CN-VfG" customClass="EPSMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BUr-MO-rbp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -735,7 +746,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="Eth-D7-6LG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vMX-ak-cqp" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-Su-D4p">
@@ -881,7 +892,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="Jyc-nL-Tqf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N4a-9B-7dU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-il-hkg">
@@ -989,7 +1000,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="7RR-1d-gmx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xce-fs-yOv" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tachycardia CL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-l8-uJd">
@@ -1111,7 +1122,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-S5-vDu">
-                                <rect key="frame" x="20" y="352" width="280" height="108"/>
+                                <rect key="frame" x="20" y="352" width="280" height="196"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1194,7 +1205,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="jWV-Zt-7xw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d0h-Lg-Guf" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-et-TmX">
@@ -1320,11 +1331,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="qcC-8d-5wf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UeZ-HF-lbM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -1345,7 +1356,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="giy-zl-bNh" customClass="EPSVTViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYS-Pp-zIq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1430,7 +1441,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="nEp-iW-oAh" customClass="EPSLQTSTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1521,7 +1532,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="fGd-zb-Hqv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Zq-Fn-EkL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gyt-Vl-6qm">
@@ -1550,7 +1561,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-RR-HzT">
-                                <rect key="frame" x="20" y="185" width="280" height="275"/>
+                                <rect key="frame" x="20" y="185" width="280" height="363"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1592,7 +1603,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="g7a-XK-NAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vpy-Q3-sDV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1732,7 +1743,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Triggers: stress, exercise, swimming, diving. QT fails to shorten with exercise." textAlignment="right" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" preferredMaxLayoutWidth="215" id="fdg-je-L6A">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Triggers: stress, exercise, swimming, diving. QT fails to shorten with exercise." textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" preferredMaxLayoutWidth="215" id="fdg-je-L6A">
                                                     <rect key="frame" x="90" y="-9" width="215" height="61"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1754,14 +1765,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Fl-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2617" y="-235"/>
+            <point key="canvasLocation" x="-2937" y="-376"/>
         </scene>
-        <!--Details Table View Controller - LQT 2-->
+        <!--Table View Controller - LQT 2-->
         <scene sceneID="Mgx-ZU-nDB">
             <objects>
-                <tableViewController id="8yg-ey-fv3" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="8yg-ey-fv3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3eT-3Q-Tgb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1895,14 +1906,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Features" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wBQ-PU-UWD">
-                                                    <rect key="frame" x="15" y="11" width="69" height="21"/>
+                                                    <rect key="frame" x="15" y="1" width="69" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Triggers: loud noises, alarms" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rd8-K3-oVj">
-                                                    <rect key="frame" x="90" y="11" width="215" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Triggers: loud noises, alarms" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="168" id="Rd8-K3-oVj">
+                                                    <rect key="frame" x="137" y="1" width="168" height="41"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
@@ -1923,12 +1934,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2245" y="-168"/>
+            <point key="canvasLocation" x="-2437" y="-184"/>
         </scene>
         <!--Tab Bar View Controller - LQTS Subtypes-->
         <scene sceneID="pmf-U3-p8F">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="rz7-AJ-Xbv" customClass="EPSTabBarViewController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="LQTS Subtypes" id="CES-gU-jSf"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YkC-jc-WP1">
@@ -1957,7 +1969,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="SvN-fK-CzK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cgn-ix-R6J">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-yo-Op1">
@@ -1982,7 +1994,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="dbO-Dt-ozE" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mw2-6h-B2m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2151,7 +2163,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="Oqu-Qb-RBM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oMS-87-ZKo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2285,14 +2297,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Features" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="776-ok-3dy">
-                                                    <rect key="frame" x="15" y="11" width="69" height="21"/>
+                                                    <rect key="frame" x="15" y="1" width="69" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Associated with bradycardia" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yxi-Al-66R">
-                                                    <rect key="frame" x="90" y="11" width="215" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Associated with bradycardia" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="127" id="Yxi-Al-66R">
+                                                    <rect key="frame" x="178" y="1" width="127" height="41"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
@@ -2313,7 +2325,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1863" y="-268"/>
+            <point key="canvasLocation" x="-2065" y="-271"/>
         </scene>
         <!--LongQTECG View Controller - LQTS ECG Patterns-->
         <scene sceneID="I94-Wk-eUW">
@@ -2324,11 +2336,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="JRl-zj-jIJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
-                                <rect key="frame" x="10" y="173" width="300" height="133"/>
+                                <rect key="frame" x="10" y="173" width="300" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2351,7 +2363,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="BNS-oY-3ea" customClass="EPSLVHTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OfG-uj-FEZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2416,7 +2428,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="0fl-pN-FCi" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gOI-r5-LEc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -2617,7 +2629,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="gQS-UR-7vQ" customClass="EPSWCTTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TxO-6c-JAG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2706,11 +2718,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="aCU-aB-bhQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
-                                <rect key="frame" x="0.0" y="64" width="320" height="362"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="450"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -2731,11 +2743,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="iFd-wc-3l4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
-                                <rect key="frame" x="0.0" y="64" width="320" height="351"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="439"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -2776,7 +2788,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72" customClass="eps">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
@@ -2809,7 +2821,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="px5-kc-Vhu" customClass="EPSARVCTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sc4-9e-0Q9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2874,7 +2886,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="oHx-TU-Y6s" customClass="EPSARVC2010TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rZm-5w-a1a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2923,7 +2935,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="BsG-Le-w3L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-Gg-ohP">
@@ -3008,7 +3020,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="grW-sJ-dLw" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6p7-DV-f9z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3038,7 +3050,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="UcS-xA-2wF" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OGV-Nc-tw7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3061,7 +3073,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVv-tn-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1539" y="-475"/>
+            <point key="canvasLocation" x="-1535" y="-459"/>
         </scene>
         <!--View Controller - CMS ICD Criteria-->
         <scene sceneID="gR2-cI-aou">
@@ -3072,10 +3084,10 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="6eX-aG-0BF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S3d-hE-9E9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cjk-t1-GJ8">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cjk-t1-GJ8">
                                 <rect key="frame" x="19" y="97" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -3084,7 +3096,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <segment title=""/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-AV-8s6">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-AV-8s6">
                                 <rect key="frame" x="20" y="162" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -3094,22 +3106,22 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <segment title="IV"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Left Ventricular Ejection Fraction (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZJ-84-YQm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Left Ventricular Ejection Fraction (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZJ-84-YQm">
                                 <rect key="frame" x="19" y="68" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="NYHA Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-32-WW9">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="NYHA Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-32-WW9">
                                 <rect key="frame" x="113" y="133" width="95" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-Q4-P68">
-                                <rect key="frame" x="19" y="198" width="280" height="238"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-Q4-P68">
+                                <rect key="frame" x="19" y="198" width="280" height="326"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -3117,8 +3129,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <outlet property="delegate" destination="5Lf-aF-glM" id="oUG-3v-kFw"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-R2-ETE">
-                                <rect key="frame" x="-1" y="436" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-R2-ETE">
+                                <rect key="frame" x="-1" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Calculate" id="hEy-dF-l3z">
@@ -3130,6 +3142,25 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5sX-AV-8s6" secondAttribute="trailing" constant="20" symbolic="YES" id="0cV-DI-FOy"/>
+                            <constraint firstAttribute="bottom" secondItem="xaG-R2-ETE" secondAttribute="bottom" id="2ZX-8U-77d"/>
+                            <constraint firstItem="5sX-AV-8s6" firstAttribute="centerX" secondItem="OEo-32-WW9" secondAttribute="centerX" id="3B7-mY-uHb"/>
+                            <constraint firstItem="Cyb-Q4-P68" firstAttribute="top" secondItem="5sX-AV-8s6" secondAttribute="bottom" constant="8" symbolic="YES" id="8wa-NR-1u5"/>
+                            <constraint firstItem="cjk-t1-GJ8" firstAttribute="top" secondItem="kZJ-84-YQm" secondAttribute="bottom" constant="8" symbolic="YES" id="9I9-BG-Uy6"/>
+                            <constraint firstItem="5sX-AV-8s6" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="APV-uq-QYO"/>
+                            <constraint firstItem="xaG-R2-ETE" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="-1" id="GNN-FT-rLr"/>
+                            <constraint firstItem="OEo-32-WW9" firstAttribute="top" secondItem="cjk-t1-GJ8" secondAttribute="bottom" constant="8" symbolic="YES" id="K2B-f6-ApK"/>
+                            <constraint firstItem="cjk-t1-GJ8" firstAttribute="leading" secondItem="Cyb-Q4-P68" secondAttribute="leading" id="NJx-8C-A9W"/>
+                            <constraint firstItem="5sX-AV-8s6" firstAttribute="top" secondItem="OEo-32-WW9" secondAttribute="bottom" constant="8" symbolic="YES" id="TFp-PI-VRu"/>
+                            <constraint firstItem="cjk-t1-GJ8" firstAttribute="trailing" secondItem="kZJ-84-YQm" secondAttribute="trailing" id="Uk8-Me-aPY"/>
+                            <constraint firstItem="kZJ-84-YQm" firstAttribute="top" secondItem="8GY-Fb-5Hm" secondAttribute="bottom" constant="4" id="V1K-Vu-sg5"/>
+                            <constraint firstItem="kZJ-84-YQm" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="19" id="Zf5-7U-JJO"/>
+                            <constraint firstItem="xaG-R2-ETE" firstAttribute="top" secondItem="Cyb-Q4-P68" secondAttribute="bottom" id="bvf-Oi-bz5"/>
+                            <constraint firstItem="xaG-R2-ETE" firstAttribute="centerX" secondItem="Cyb-Q4-P68" secondAttribute="centerX" id="vDx-0N-dXc"/>
+                            <constraint firstItem="cjk-t1-GJ8" firstAttribute="leading" secondItem="kZJ-84-YQm" secondAttribute="leading" id="wjs-9y-rEy"/>
+                            <constraint firstItem="Cyb-Q4-P68" firstAttribute="trailing" secondItem="cjk-t1-GJ8" secondAttribute="trailing" id="wpr-5v-913"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CMS ICD Criteria" id="PjX-Dp-zSL"/>
                     <connections>
@@ -3147,6 +3178,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <scene sceneID="sG9-FN-jzK">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="vtm-vW-Qf5" customClass="EPSTabBarViewController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Morphology" id="JEk-9M-20k">
                         <barButtonItem key="rightBarButtonItem" title="Calc" id="sHB-Ih-Wct"/>
                     </navigationItem>
@@ -3163,14 +3195,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CST-Qs-u8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1767" y="-482"/>
+            <point key="canvasLocation" x="-1916" y="-483"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
             <objects>
                 <tableViewController id="qaF-mx-6rF" customClass="EPSWPWTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -3279,7 +3311,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="3QY-w9-lHB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Afq-pr-79s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c13-bY-26V">
@@ -3293,7 +3325,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R03-ng-L6Q">
-                                <rect key="frame" x="20" y="141" width="280" height="319"/>
+                                <rect key="frame" x="20" y="141" width="280" height="407"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -3342,15 +3374,15 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-Ed-jco">
@@ -3361,55 +3393,55 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
-                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
-                                <rect key="frame" x="0.0" y="104" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="152" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -3448,11 +3480,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="qDE-vj-ZfQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                <rect key="frame" x="12" y="116" width="297" height="248"/>
+                                <rect key="frame" x="12" y="116" width="297" height="336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -3482,7 +3514,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
@@ -3506,7 +3538,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="106" width="280" height="327"/>
+                                <rect key="frame" x="20" y="106" width="280" height="415"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -3549,7 +3581,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="Td1-hp-uja"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Fg-up-bWw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="160" affinity="minX"/>
@@ -3569,7 +3601,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7E7-vf-HGo">
-                                <rect key="frame" x="40" y="155" width="240" height="170"/>
+                                <rect key="frame" x="40" y="155" width="240" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -3606,7 +3638,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="yiE-xJ-H9r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Okz-dr-M1J" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-vL-WEo">
@@ -3709,7 +3741,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="F53-rT-ULF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-PB-nWj">
@@ -3835,7 +3867,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="HT9-sp-RBQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="00o-Pi-5Su">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-4R-EHc">
@@ -4088,7 +4120,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="Jt3-by-I3p" customClass="EPSRiskScoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ho-EI-08a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -4137,7 +4169,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="hBE-rR-j0F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qc1-Hs-d2Q" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-Rp-Gfg">
@@ -4229,7 +4261,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="m6f-1n-GSk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AfC-EP-iLu" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-Gg-2so">
@@ -4374,7 +4406,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController title="Normal EP Values" id="QEg-8T-H7h" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v9X-oc-aBr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -4695,7 +4727,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="eRb-uZ-GP2" customClass="EPSDrugDoseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jnL-qM-irM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -4825,7 +4857,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="epivt.png" width="357" height="282"/>
         <image name="lalap.png" width="452" height="400"/>
         <image name="lbbbicon.png" width="25" height="24"/>
-        <image name="lbbbicon.png" width="25" height="24"/>
         <image name="lbbbmorphology.png" width="800" height="651"/>
         <image name="llap.png" width="452" height="400"/>
         <image name="longqtecg.png" width="470" height="179"/>
@@ -4838,7 +4869,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="raap.png" width="452" height="400"/>
         <image name="ralap.png" width="452" height="400"/>
         <image name="rbbbicon.png" width="25" height="24"/>
-        <image name="rbbbicon.png" width="25" height="24"/>
         <image name="rbbbmorphology.png" width="800" height="600"/>
         <image name="rlap.png" width="452" height="400"/>
         <image name="rpap.png" width="452" height="400"/>
@@ -4848,7 +4878,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="pGj-ye-BDw"/>
@@ -4856,7 +4886,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="BtS-Mb-lIg"/>
-        <segue reference="gzd-ih-l4g"/>
         <segue reference="pFv-5Z-NQa"/>
+        <segue reference="sIb-ay-0FY"/>
     </inferredMetricsTieBreakers>
 </document>
