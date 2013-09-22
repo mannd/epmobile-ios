@@ -29,11 +29,11 @@
                         <viewControllerLayoutGuide type="bottom" id="5e2-jj-ZpT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ww0-Kk-xdd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
-                                <rect key="frame" x="47" y="0.0" width="226" height="337"/>
+                                <rect key="frame" x="47" y="0.0" width="226" height="249"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
@@ -64,7 +64,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="GpZ-Ky-wdH" customClass="EPSSyncopeRiskViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kbk-e3-e5e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -169,7 +169,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="hAV-CN-VfG" customClass="EPSMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BUr-MO-rbp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -735,7 +735,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="Eth-D7-6LG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vMX-ak-cqp" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-Su-D4p">
@@ -881,18 +881,18 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="Jyc-nL-Tqf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N4a-9B-7dU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-il-hkg">
-                                <rect key="frame" x="20" y="28" width="280" height="71"/>
+                                <rect key="frame" x="20" y="75" width="280" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-jy-c25">
-                                <rect key="frame" x="20" y="107" width="73" height="44"/>
+                                <rect key="frame" x="20" y="154" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -902,7 +902,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y34-aD-0la">
-                                <rect key="frame" x="227" y="107" width="73" height="44"/>
+                                <rect key="frame" x="227" y="154" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -912,7 +912,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmV-rW-Nsa">
-                                <rect key="frame" x="124" y="107" width="73" height="44"/>
+                                <rect key="frame" x="124" y="154" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -922,7 +922,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-nG-iwY">
-                                <rect key="frame" x="20" y="158" width="73" height="44"/>
+                                <rect key="frame" x="20" y="205" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -932,7 +932,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zde-3L-Q7E">
-                                <rect key="frame" x="124" y="158" width="73" height="44"/>
+                                <rect key="frame" x="124" y="205" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -942,7 +942,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIB-BC-Egf">
-                                <rect key="frame" x="227" y="158" width="73" height="44"/>
+                                <rect key="frame" x="227" y="205" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -952,7 +952,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-6e-UxA">
-                                <rect key="frame" x="20" y="209" width="280" height="44"/>
+                                <rect key="frame" x="20" y="256" width="280" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Instructions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -989,7 +989,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="7RR-1d-gmx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xce-fs-yOv" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tachycardia CL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-l8-uJd">
@@ -1035,7 +1035,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <rect key="frame" x="251" y="168" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="JwS-yq-AmS"/>
+                                    <constraint firstAttribute="width" constant="49" id="5rR-f9-MGV"/>
                                 </constraints>
                                 <connections>
                                     <action selector="concealedFusionSwitchValueChanged:" destination="cPY-v3-A4O" eventType="valueChanged" id="JPA-cb-Jnm"/>
@@ -1077,8 +1077,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <rect key="frame" x="20" y="300" width="91" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="laB-q5-Z0l"/>
-                                    <constraint firstAttribute="width" constant="91" id="q81-B5-1GY"/>
+                                    <constraint firstAttribute="height" constant="44" id="dK3-Mp-JQ8"/>
+                                    <constraint firstAttribute="width" constant="91" id="ehb-6b-bCD"/>
                                 </constraints>
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1101,7 +1101,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <rect key="frame" x="228" y="300" width="72" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="cCt-8w-osw"/>
+                                    <constraint firstAttribute="width" constant="72" id="uPs-fu-GTX"/>
                                 </constraints>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1111,7 +1111,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-S5-vDu">
-                                <rect key="frame" x="20" y="354" width="280" height="157"/>
+                                <rect key="frame" x="20" y="352" width="280" height="78"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1121,48 +1121,48 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XOL-QA-Vp1" firstAttribute="top" secondItem="AdP-l8-uJd" secondAttribute="bottom" constant="17" id="1Ny-Op-fS9"/>
-                            <constraint firstItem="ygY-1B-ial" firstAttribute="leading" secondItem="Uok-jA-Qne" secondAttribute="trailing" constant="72" id="1hc-K0-hpX"/>
-                            <constraint firstItem="ygY-1B-ial" firstAttribute="trailing" secondItem="7E1-XQ-5yh" secondAttribute="trailing" id="7Ob-Hz-diz"/>
-                            <constraint firstItem="h4N-L4-ec1" firstAttribute="leading" secondItem="LgL-om-dp4" secondAttribute="trailing" constant="8" symbolic="YES" id="7lJ-NS-r0c"/>
-                            <constraint firstItem="ycT-KT-abj" firstAttribute="top" secondItem="Xr9-dm-aeH" secondAttribute="bottom" constant="28" id="B8g-9Z-vdq"/>
-                            <constraint firstItem="EI6-0V-UHQ" firstAttribute="leading" secondItem="YBS-EI-sqa" secondAttribute="leading" id="Bth-Qs-jcd"/>
-                            <constraint firstItem="ygY-1B-ial" firstAttribute="trailing" secondItem="YBS-EI-sqa" secondAttribute="trailing" id="Cso-EP-YAH"/>
-                            <constraint firstItem="zrS-5T-eOB" firstAttribute="bottom" secondItem="h4N-L4-ec1" secondAttribute="bottom" id="DPl-i9-xyA"/>
-                            <constraint firstItem="EI6-0V-UHQ" firstAttribute="leading" secondItem="mOI-iT-Rtr" secondAttribute="trailing" constant="93" id="DUe-cq-4g3"/>
-                            <constraint firstItem="YBS-EI-sqa" firstAttribute="trailing" secondItem="EI6-0V-UHQ" secondAttribute="trailing" id="HFG-Kd-gtB"/>
-                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="top" secondItem="ycT-KT-abj" secondAttribute="bottom" constant="8" symbolic="YES" id="Iyt-ii-ciV"/>
-                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="trailing" secondItem="ycT-KT-abj" secondAttribute="trailing" id="KRP-M6-Xmn"/>
-                            <constraint firstItem="zrS-5T-eOB" firstAttribute="trailing" secondItem="4pU-S5-vDu" secondAttribute="trailing" id="KvD-pK-ags"/>
-                            <constraint firstItem="ycT-KT-abj" firstAttribute="leading" secondItem="AdP-l8-uJd" secondAttribute="trailing" constant="41" id="LEW-Dm-frp"/>
-                            <constraint firstItem="CdC-MZ-Jtn" firstAttribute="top" secondItem="Uok-jA-Qne" secondAttribute="bottom" constant="17" id="MUj-5S-s1d"/>
-                            <constraint firstItem="AdP-l8-uJd" firstAttribute="leading" secondItem="XOL-QA-Vp1" secondAttribute="leading" id="MWw-JD-6Rl"/>
-                            <constraint firstItem="Uok-jA-Qne" firstAttribute="top" secondItem="XOL-QA-Vp1" secondAttribute="bottom" constant="18" id="P8x-fd-916"/>
-                            <constraint firstItem="mOI-iT-Rtr" firstAttribute="top" secondItem="CdC-MZ-Jtn" secondAttribute="bottom" constant="17" id="Qeg-hj-l8w"/>
-                            <constraint firstItem="Uok-jA-Qne" firstAttribute="trailing" secondItem="XOL-QA-Vp1" secondAttribute="trailing" id="Qqa-GN-ZrG"/>
-                            <constraint firstItem="zrS-5T-eOB" firstAttribute="top" secondItem="h4N-L4-ec1" secondAttribute="top" id="R22-yB-gcq"/>
-                            <constraint firstItem="4pU-S5-vDu" firstAttribute="top" secondItem="LgL-om-dp4" secondAttribute="bottom" constant="10" id="R9J-ar-Gtt"/>
-                            <constraint firstItem="h4N-L4-ec1" firstAttribute="top" secondItem="LgL-om-dp4" secondAttribute="top" id="RRQ-Fr-BmJ"/>
-                            <constraint firstItem="LgL-om-dp4" firstAttribute="leading" secondItem="4pU-S5-vDu" secondAttribute="leading" id="SL9-6u-4qQ"/>
-                            <constraint firstItem="XOL-QA-Vp1" firstAttribute="leading" secondItem="Uok-jA-Qne" secondAttribute="leading" id="U8d-q6-XEK"/>
-                            <constraint firstItem="Uok-jA-Qne" firstAttribute="leading" secondItem="CdC-MZ-Jtn" secondAttribute="leading" id="ZD6-Ih-oCK"/>
-                            <constraint firstItem="LgL-om-dp4" firstAttribute="bottom" secondItem="h4N-L4-ec1" secondAttribute="bottom" id="c3v-AV-xnM"/>
-                            <constraint firstItem="AdP-l8-uJd" firstAttribute="leading" secondItem="Xce-fs-yOv" secondAttribute="leading" constant="20" symbolic="YES" id="cAi-EC-VOL"/>
-                            <constraint firstItem="mOI-iT-Rtr" firstAttribute="leading" secondItem="LgL-om-dp4" secondAttribute="leading" id="d9x-cb-3Yg"/>
-                            <constraint firstItem="YBS-EI-sqa" firstAttribute="leading" secondItem="7E1-XQ-5yh" secondAttribute="leading" id="g8n-TM-UCM"/>
-                            <constraint firstItem="zrS-5T-eOB" firstAttribute="leading" secondItem="h4N-L4-ec1" secondAttribute="trailing" constant="8" symbolic="YES" id="gqd-D0-YAs"/>
-                            <constraint firstItem="EI6-0V-UHQ" firstAttribute="top" secondItem="YBS-EI-sqa" secondAttribute="bottom" constant="8" symbolic="YES" id="mAQ-B3-17S"/>
-                            <constraint firstItem="AdP-l8-uJd" firstAttribute="top" secondItem="Xr9-dm-aeH" secondAttribute="bottom" constant="32" id="mBc-rF-NeT"/>
-                            <constraint firstItem="h4N-L4-ec1" firstAttribute="top" secondItem="EI6-0V-UHQ" secondAttribute="bottom" constant="25" id="naI-FY-CRc"/>
-                            <constraint firstAttribute="bottom" secondItem="4pU-S5-vDu" secondAttribute="bottom" constant="57" id="pqb-XQ-vqP"/>
-                            <constraint firstItem="ygY-1B-ial" firstAttribute="top" secondItem="7E1-XQ-5yh" secondAttribute="bottom" constant="8" symbolic="YES" id="rGf-rS-1gJ"/>
-                            <constraint firstAttribute="trailing" secondItem="ycT-KT-abj" secondAttribute="trailing" constant="20" symbolic="YES" id="sSs-FD-AuG"/>
-                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="leading" secondItem="ycT-KT-abj" secondAttribute="leading" id="uf5-k9-yfN"/>
-                            <constraint firstItem="zrS-5T-eOB" firstAttribute="trailing" secondItem="EI6-0V-UHQ" secondAttribute="trailing" id="v9l-IK-Gjh"/>
-                            <constraint firstItem="mOI-iT-Rtr" firstAttribute="leading" secondItem="CdC-MZ-Jtn" secondAttribute="leading" id="vBx-sx-eRk"/>
-                            <constraint firstItem="LgL-om-dp4" firstAttribute="top" secondItem="mOI-iT-Rtr" secondAttribute="bottom" constant="30" id="vmQ-6R-W2B"/>
-                            <constraint firstItem="YBS-EI-sqa" firstAttribute="top" secondItem="ygY-1B-ial" secondAttribute="bottom" constant="8" symbolic="YES" id="z1o-Ao-SIM"/>
-                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="leading" secondItem="XOL-QA-Vp1" secondAttribute="trailing" constant="2" id="zoK-Y5-D1O"/>
+                            <constraint firstItem="EI6-0V-UHQ" firstAttribute="top" secondItem="YBS-EI-sqa" secondAttribute="bottom" constant="8" symbolic="YES" id="1uC-Ki-dVY"/>
+                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="leading" secondItem="ycT-KT-abj" secondAttribute="leading" id="430-x9-RPX"/>
+                            <constraint firstItem="AdP-l8-uJd" firstAttribute="top" secondItem="Xr9-dm-aeH" secondAttribute="bottom" constant="32" id="5gJ-tX-cPx"/>
+                            <constraint firstItem="YBS-EI-sqa" firstAttribute="leading" secondItem="7E1-XQ-5yh" secondAttribute="leading" id="6tf-ut-rCt"/>
+                            <constraint firstItem="LgL-om-dp4" firstAttribute="leading" secondItem="mOI-iT-Rtr" secondAttribute="leading" id="8fh-a8-yak"/>
+                            <constraint firstItem="ygY-1B-ial" firstAttribute="trailing" secondItem="YBS-EI-sqa" secondAttribute="trailing" id="94L-Lf-Mey"/>
+                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="trailing" secondItem="ygY-1B-ial" secondAttribute="trailing" id="B1L-3M-10x"/>
+                            <constraint firstItem="mOI-iT-Rtr" firstAttribute="top" secondItem="CdC-MZ-Jtn" secondAttribute="bottom" constant="17" id="DPK-L9-5L9"/>
+                            <constraint firstAttribute="trailing" secondItem="ycT-KT-abj" secondAttribute="trailing" constant="20" symbolic="YES" id="Dds-d4-2tb"/>
+                            <constraint firstItem="CdC-MZ-Jtn" firstAttribute="top" secondItem="Uok-jA-Qne" secondAttribute="bottom" constant="17" id="FoS-FM-agT"/>
+                            <constraint firstItem="4pU-S5-vDu" firstAttribute="top" secondItem="zrS-5T-eOB" secondAttribute="bottom" constant="8" symbolic="YES" id="Hod-3T-cmK"/>
+                            <constraint firstItem="ycT-KT-abj" firstAttribute="top" secondItem="Xr9-dm-aeH" secondAttribute="bottom" constant="28" id="LYe-m9-Jid"/>
+                            <constraint firstItem="ygY-1B-ial" firstAttribute="leading" secondItem="Uok-jA-Qne" secondAttribute="trailing" constant="72" id="Myi-rh-qd0"/>
+                            <constraint firstItem="AdP-l8-uJd" firstAttribute="leading" secondItem="Xce-fs-yOv" secondAttribute="leading" constant="20" symbolic="YES" id="O1P-vR-Lgr"/>
+                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="top" secondItem="ycT-KT-abj" secondAttribute="bottom" constant="8" symbolic="YES" id="Onm-OJ-ez7"/>
+                            <constraint firstItem="Uok-jA-Qne" firstAttribute="top" secondItem="XOL-QA-Vp1" secondAttribute="bottom" constant="18" id="Pou-oB-IUC"/>
+                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="trailing" secondItem="ycT-KT-abj" secondAttribute="trailing" id="SNO-rD-Zyd"/>
+                            <constraint firstItem="ycT-KT-abj" firstAttribute="leading" secondItem="AdP-l8-uJd" secondAttribute="trailing" constant="41" id="Vim-9Z-OTh"/>
+                            <constraint firstItem="zrS-5T-eOB" firstAttribute="trailing" secondItem="4pU-S5-vDu" secondAttribute="trailing" id="XEb-y3-esx"/>
+                            <constraint firstItem="4pU-S5-vDu" firstAttribute="top" secondItem="h4N-L4-ec1" secondAttribute="bottom" constant="8" symbolic="YES" id="XIF-sq-3KA"/>
+                            <constraint firstItem="zrS-5T-eOB" firstAttribute="top" secondItem="h4N-L4-ec1" secondAttribute="top" id="aSu-de-0e4"/>
+                            <constraint firstItem="LgL-om-dp4" firstAttribute="leading" secondItem="4pU-S5-vDu" secondAttribute="leading" id="ac7-l7-tUS"/>
+                            <constraint firstItem="Uok-jA-Qne" firstAttribute="leading" secondItem="XOL-QA-Vp1" secondAttribute="leading" id="c6X-sn-1Rf"/>
+                            <constraint firstItem="h4N-L4-ec1" firstAttribute="leading" secondItem="LgL-om-dp4" secondAttribute="trailing" constant="8" symbolic="YES" id="e8Y-5n-7dT"/>
+                            <constraint firstItem="YBS-EI-sqa" firstAttribute="top" secondItem="ygY-1B-ial" secondAttribute="bottom" constant="8" symbolic="YES" id="glH-uv-5YL"/>
+                            <constraint firstItem="YBS-EI-sqa" firstAttribute="trailing" secondItem="EI6-0V-UHQ" secondAttribute="trailing" id="hfq-FA-1Ec"/>
+                            <constraint firstItem="CdC-MZ-Jtn" firstAttribute="leading" secondItem="mOI-iT-Rtr" secondAttribute="leading" id="ioF-LC-SfC"/>
+                            <constraint firstItem="7RR-1d-gmx" firstAttribute="top" secondItem="4pU-S5-vDu" secondAttribute="bottom" constant="50" id="khe-vR-baP"/>
+                            <constraint firstItem="XOL-QA-Vp1" firstAttribute="trailing" secondItem="Uok-jA-Qne" secondAttribute="trailing" id="kle-so-A8e"/>
+                            <constraint firstItem="LgL-om-dp4" firstAttribute="top" secondItem="mOI-iT-Rtr" secondAttribute="bottom" constant="30" id="mHV-Ea-6uy"/>
+                            <constraint firstItem="zrS-5T-eOB" firstAttribute="leading" secondItem="h4N-L4-ec1" secondAttribute="trailing" constant="8" symbolic="YES" id="mbc-fG-74r"/>
+                            <constraint firstItem="XOL-QA-Vp1" firstAttribute="top" secondItem="AdP-l8-uJd" secondAttribute="bottom" constant="17" id="mhh-Lj-dgy"/>
+                            <constraint firstItem="7E1-XQ-5yh" firstAttribute="leading" secondItem="XOL-QA-Vp1" secondAttribute="trailing" constant="2" id="qRA-BC-VnX"/>
+                            <constraint firstItem="h4N-L4-ec1" firstAttribute="top" secondItem="EI6-0V-UHQ" secondAttribute="bottom" constant="25" id="qce-92-Ysx"/>
+                            <constraint firstItem="XOL-QA-Vp1" firstAttribute="leading" secondItem="AdP-l8-uJd" secondAttribute="leading" id="qgy-jW-Q5L"/>
+                            <constraint firstItem="4pU-S5-vDu" firstAttribute="top" secondItem="LgL-om-dp4" secondAttribute="bottom" constant="8" symbolic="YES" id="qlA-Kg-jN8"/>
+                            <constraint firstItem="zrS-5T-eOB" firstAttribute="trailing" secondItem="EI6-0V-UHQ" secondAttribute="trailing" id="rG2-7W-VuL"/>
+                            <constraint firstItem="EI6-0V-UHQ" firstAttribute="leading" secondItem="YBS-EI-sqa" secondAttribute="leading" id="s4b-Dg-Lfb"/>
+                            <constraint firstItem="ygY-1B-ial" firstAttribute="top" secondItem="7E1-XQ-5yh" secondAttribute="bottom" constant="8" symbolic="YES" id="vaU-F8-76J"/>
+                            <constraint firstItem="h4N-L4-ec1" firstAttribute="top" secondItem="LgL-om-dp4" secondAttribute="top" id="w2s-kM-ERQ"/>
+                            <constraint firstItem="EI6-0V-UHQ" firstAttribute="leading" secondItem="mOI-iT-Rtr" secondAttribute="trailing" constant="93" id="yaq-nw-DOP"/>
+                            <constraint firstItem="Uok-jA-Qne" firstAttribute="leading" secondItem="CdC-MZ-Jtn" secondAttribute="leading" id="yib-1S-FwA"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="cPY-v3-A4O" eventType="touchDown" id="yhf-y0-Uzm"/>
@@ -1194,11 +1194,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="jWV-Zt-7xw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d0h-Lg-Guf" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-et-TmX">
-                                <rect key="frame" x="0.0" y="109" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="385827755.47134">
                                     <!--2013-03-24 14:22:35 +0000-->
@@ -1226,7 +1226,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </timeZone>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-gN-YFQ">
-                                <rect key="frame" x="20" y="57" width="280" height="29"/>
+                                <rect key="frame" x="20" y="117" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="90 days"/>
@@ -1238,11 +1238,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-Om-7eu">
-                                <rect key="frame" x="197" y="333" width="51" height="31"/>
+                                <rect key="frame" x="197" y="381" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
-                                <rect key="frame" x="20" y="368" width="58" height="44"/>
+                                <rect key="frame" x="20" y="416" width="58" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calc">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1252,7 +1252,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-ot-ijf">
-                                <rect key="frame" x="242" y="368" width="58" height="44"/>
+                                <rect key="frame" x="242" y="416" width="58" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1262,21 +1262,21 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-uS-cbo">
-                                <rect key="frame" x="86" y="379" width="148" height="21"/>
+                                <rect key="frame" x="86" y="427" width="148" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Subtract Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-vb-cmM">
-                                <rect key="frame" x="47" y="336" width="142" height="21"/>
+                                <rect key="frame" x="47" y="384" width="142" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" placeholder="Days" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7du-d7-6cx">
-                                <rect key="frame" x="194" y="14" width="91" height="30"/>
+                                <rect key="frame" x="194" y="74" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -1285,7 +1285,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-AZ-076">
-                                <rect key="frame" x="36" y="17" width="133" height="21"/>
+                                <rect key="frame" x="36" y="77" width="133" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1320,11 +1320,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="qcC-8d-5wf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UeZ-HF-lbM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -1345,7 +1345,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="giy-zl-bNh" customClass="EPSVTViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYS-Pp-zIq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1430,7 +1430,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="nEp-iW-oAh" customClass="EPSLQTSTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1521,11 +1521,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="fGd-zb-Hqv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Zq-Fn-EkL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gyt-Vl-6qm">
-                                <rect key="frame" x="20" y="50" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gyt-Vl-6qm">
+                                <rect key="frame" x="20" y="107" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="First"/>
@@ -1534,23 +1534,23 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title=""/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="QTc Interval (msec)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-D6-p5P">
-                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QTc Interval (msec)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-D6-p5P">
+                                <rect key="frame" x="20" y="78" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pWE-wA-ke3">
-                                <rect key="frame" x="20" y="101" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pWE-wA-ke3">
+                                <rect key="frame" x="20" y="149" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-RR-HzT">
-                                <rect key="frame" x="20" y="160" width="280" height="388"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-RR-HzT">
+                                <rect key="frame" x="20" y="185" width="280" height="275"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1560,6 +1560,21 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JcZ-D6-p5P" secondAttribute="trailing" constant="20" symbolic="YES" id="2Oj-Hu-cVv"/>
+                            <constraint firstItem="pWE-wA-ke3" firstAttribute="trailing" secondItem="Id6-RR-HzT" secondAttribute="trailing" id="2pK-tN-0Rd"/>
+                            <constraint firstItem="pWE-wA-ke3" firstAttribute="top" secondItem="Gyt-Vl-6qm" secondAttribute="bottom" constant="14" id="CjI-15-pNh"/>
+                            <constraint firstItem="Gyt-Vl-6qm" firstAttribute="trailing" secondItem="JcZ-D6-p5P" secondAttribute="trailing" id="Dhh-5l-SbL"/>
+                            <constraint firstItem="JcZ-D6-p5P" firstAttribute="top" secondItem="P7y-ZL-1b2" secondAttribute="bottom" constant="14" id="Imf-3d-Nby"/>
+                            <constraint firstItem="pWE-wA-ke3" firstAttribute="leading" secondItem="Gyt-Vl-6qm" secondAttribute="leading" id="O24-qm-ib7"/>
+                            <constraint firstItem="Gyt-Vl-6qm" firstAttribute="top" secondItem="JcZ-D6-p5P" secondAttribute="bottom" constant="8" symbolic="YES" id="U8o-aN-nvG"/>
+                            <constraint firstItem="pWE-wA-ke3" firstAttribute="leading" secondItem="Id6-RR-HzT" secondAttribute="leading" id="h03-oG-4H7"/>
+                            <constraint firstAttribute="bottom" secondItem="Id6-RR-HzT" secondAttribute="bottom" constant="20" symbolic="YES" id="hFM-V8-uAg"/>
+                            <constraint firstItem="Gyt-Vl-6qm" firstAttribute="leading" secondItem="JcZ-D6-p5P" secondAttribute="leading" id="qmQ-Hf-oR6"/>
+                            <constraint firstItem="pWE-wA-ke3" firstAttribute="trailing" secondItem="Gyt-Vl-6qm" secondAttribute="trailing" id="sw0-Pw-hm7"/>
+                            <constraint firstItem="Id6-RR-HzT" firstAttribute="top" secondItem="pWE-wA-ke3" secondAttribute="bottom" constant="8" symbolic="YES" id="wZp-VZ-eR6"/>
+                            <constraint firstItem="JcZ-D6-p5P" firstAttribute="leading" secondItem="3Zq-Fn-EkL" secondAttribute="leading" constant="20" symbolic="YES" id="z5K-EO-b9d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS" id="qEI-UM-QVe"/>
                     <connections>
@@ -1577,7 +1592,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="g7a-XK-NAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vpy-Q3-sDV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1746,7 +1761,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="8yg-ey-fv3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3eT-3Q-Tgb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1942,7 +1957,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="SvN-fK-CzK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cgn-ix-R6J">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-yo-Op1">
@@ -1967,7 +1982,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="dbO-Dt-ozE" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mw2-6h-B2m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2136,7 +2151,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="Oqu-Qb-RBM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oMS-87-ZKo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2309,11 +2324,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="JRl-zj-jIJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
-                                <rect key="frame" x="10" y="217" width="300" height="133"/>
+                                <rect key="frame" x="10" y="173" width="300" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2330,7 +2345,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="BNS-oY-3ea" customClass="EPSLVHTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OfG-uj-FEZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2395,7 +2410,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="0fl-pN-FCi" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gOI-r5-LEc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -2596,7 +2611,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="gQS-UR-7vQ" customClass="EPSWCTTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TxO-6c-JAG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2685,11 +2700,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="aCU-aB-bhQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
-                                <rect key="frame" x="0.0" y="20" width="320" height="528"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="362"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -2699,7 +2714,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3275" y="-2152"/>
+            <point key="canvasLocation" x="-3261" y="-2384"/>
         </scene>
         <!--View Controller - LBBB in V1-->
         <scene sceneID="OFo-xx-IkS">
@@ -2710,11 +2725,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="iFd-wc-3l4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
-                                <rect key="frame" x="0.0" y="20" width="320" height="528"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="351"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -2749,22 +2764,22 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--View Controller - R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
             <objects>
-                <viewController id="v7F-Ni-Oso" sceneMemberID="viewController">
+                <viewController id="v7F-Ni-Oso" customClass="EPSViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="53H-Px-fsL"/>
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1e9-YG-z72">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="1e9-YG-z72" customClass="eps">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
-                                <rect key="frame" x="-18" y="74" width="357" height="282"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
+                                <rect key="frame" x="7" y="68" width="305" height="234"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
-                                <rect key="frame" x="20" y="364" width="279" height="126"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
+                                <rect key="frame" x="21" y="310" width="279" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <string key="text">R wave peak time in lead II (RWPT).
@@ -2775,12 +2790,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="centerX" secondItem="1e9-YG-z72" secondAttribute="centerX" id="2zc-bt-yI3"/>
-                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" constant="10" id="U1b-1x-x1x"/>
-                            <constraint firstItem="v4f-bo-OZD" firstAttribute="top" secondItem="9Mw-vh-A5V" secondAttribute="bottom" constant="8" symbolic="YES" id="dNG-2l-uFi"/>
-                            <constraint firstItem="v4f-bo-OZD" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leading" constant="20" symbolic="YES" id="mbA-lM-B73"/>
-                        </constraints>
                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                     </view>
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
@@ -2794,7 +2803,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="px5-kc-Vhu" customClass="EPSARVCTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sc4-9e-0Q9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2859,7 +2868,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="oHx-TU-Y6s" customClass="EPSARVC2010TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rZm-5w-a1a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2908,18 +2917,18 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="BsG-Le-w3L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-Gg-ohP">
-                                <rect key="frame" x="20" y="26" width="280" height="174"/>
+                                <rect key="frame" x="20" y="90" width="280" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-Ev-5du">
-                                <rect key="frame" x="20" y="211" width="72" height="37"/>
+                                <rect key="frame" x="20" y="275" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2929,7 +2938,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz0-ac-a0F">
-                                <rect key="frame" x="124" y="211" width="72" height="37"/>
+                                <rect key="frame" x="124" y="284" width="72" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="No">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2939,7 +2948,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-Fq-8S7">
-                                <rect key="frame" x="228" y="211" width="72" height="37"/>
+                                <rect key="frame" x="228" y="275" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2949,7 +2958,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZE-LY-4NT">
-                                <rect key="frame" x="20" y="256" width="280" height="37"/>
+                                <rect key="frame" x="20" y="320" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2959,7 +2968,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-JJ-jxK">
-                                <rect key="frame" x="20" y="282" width="280" height="44"/>
+                                <rect key="frame" x="20" y="346" width="280" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Morphology Criteria">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2993,7 +3002,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="grW-sJ-dLw" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6p7-DV-f9z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3023,7 +3032,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="UcS-xA-2wF" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OGV-Nc-tw7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3057,11 +3066,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="6eX-aG-0BF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S3d-hE-9E9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cjk-t1-GJ8">
-                                <rect key="frame" x="19" y="41" width="280" height="29"/>
+                                <rect key="frame" x="19" y="97" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="First"/>
@@ -3070,7 +3079,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-AV-8s6">
-                                <rect key="frame" x="19" y="121" width="280" height="29"/>
+                                <rect key="frame" x="20" y="162" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="I"/>
@@ -3080,21 +3089,21 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Left Ventricular Ejection Fraction (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZJ-84-YQm">
-                                <rect key="frame" x="19" y="12" width="280" height="21"/>
+                                <rect key="frame" x="19" y="68" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="NYHA Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-32-WW9">
-                                <rect key="frame" x="112" y="92" width="95" height="21"/>
+                                <rect key="frame" x="113" y="133" width="95" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-Q4-P68">
-                                <rect key="frame" x="19" y="172" width="280" height="352"/>
+                                <rect key="frame" x="19" y="198" width="280" height="238"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -3103,7 +3112,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-R2-ETE">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="-1" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Calculate" id="hEy-dF-l3z">
@@ -3155,7 +3164,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="qaF-mx-6rF" customClass="EPSWPWTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -3264,11 +3273,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="3QY-w9-lHB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Afq-pr-79s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c13-bY-26V">
-                                <rect key="frame" x="20" y="49" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c13-bY-26V">
+                                <rect key="frame" x="20" y="105" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="First"/>
@@ -3277,8 +3286,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <segment title=""/>
                                 </segments>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R03-ng-L6Q">
-                                <rect key="frame" x="20" y="102" width="280" height="446"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R03-ng-L6Q">
+                                <rect key="frame" x="20" y="141" width="280" height="319"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -3286,8 +3295,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <outlet property="delegate" destination="lqo-iy-icD" id="gvV-Mt-LkY"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="QTc Interval (msec)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-5Q-wl2">
-                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QTc Interval (msec)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-5Q-wl2">
+                                <rect key="frame" x="20" y="76" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -3295,6 +3304,18 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Twr-5Q-wl2" firstAttribute="leading" secondItem="Afq-pr-79s" secondAttribute="leading" constant="20" symbolic="YES" id="DrQ-mG-Qob"/>
+                            <constraint firstItem="Twr-5Q-wl2" firstAttribute="top" secondItem="fA4-d5-ay7" secondAttribute="bottom" constant="12" id="Nxd-UQ-RaV"/>
+                            <constraint firstItem="R03-ng-L6Q" firstAttribute="trailing" secondItem="c13-bY-26V" secondAttribute="trailing" id="Sxl-1x-Eih"/>
+                            <constraint firstItem="c13-bY-26V" firstAttribute="top" secondItem="Twr-5Q-wl2" secondAttribute="bottom" constant="8" symbolic="YES" id="anL-KF-BQ5"/>
+                            <constraint firstAttribute="bottom" secondItem="R03-ng-L6Q" secondAttribute="bottom" constant="20" symbolic="YES" id="hkX-Gq-4Z1"/>
+                            <constraint firstItem="c13-bY-26V" firstAttribute="leading" secondItem="R03-ng-L6Q" secondAttribute="leading" id="j9A-3n-mXl"/>
+                            <constraint firstItem="Twr-5Q-wl2" firstAttribute="trailing" secondItem="c13-bY-26V" secondAttribute="trailing" id="muF-RK-Ltc"/>
+                            <constraint firstItem="R03-ng-L6Q" firstAttribute="top" secondItem="c13-bY-26V" secondAttribute="bottom" constant="8" symbolic="YES" id="vge-Je-lk5"/>
+                            <constraint firstItem="Twr-5Q-wl2" firstAttribute="leading" secondItem="c13-bY-26V" secondAttribute="leading" id="xeR-cP-1KB"/>
+                            <constraint firstAttribute="trailing" secondItem="Twr-5Q-wl2" secondAttribute="trailing" constant="20" symbolic="YES" id="y2O-LR-Ccl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SQTS" id="aex-Od-Phy"/>
                     <connections>
@@ -3315,15 +3336,15 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-Ed-jco">
@@ -3334,55 +3355,55 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
-                                <rect key="frame" x="0.0" y="139" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="104" width="320" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -3421,19 +3442,20 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="qDE-vj-ZfQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" misplaced="YES" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                <rect key="frame" x="12" y="160" width="297" height="248"/>
+                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
+                                <rect key="frame" x="12" y="116" width="297" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Xtc-ai-f3e" secondAttribute="centerY" id="8DW-hJ-C3p"/>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leading" constant="12" id="nBP-Rl-OhM"/>
-                            <constraint firstAttribute="centerX" secondItem="Xtc-ai-f3e" secondAttribute="centerX" id="v1M-hj-YDI"/>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="top" secondItem="8FP-vg-Gmf" secondAttribute="bottom" constant="52" id="0rc-yP-oBo"/>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerY" secondItem="3bH-b1-BzP" secondAttribute="centerY" id="X2j-To-zBJ"/>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leading" constant="12" id="m9A-D2-2ZC"/>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerX" secondItem="3bH-b1-BzP" secondAttribute="centerX" id="ojo-gi-8mV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
@@ -3454,10 +3476,10 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
@@ -3470,15 +3492,15 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
                                 <rect key="frame" x="11" y="77" width="298" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="106" width="280" height="415"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
+                                <rect key="frame" x="20" y="106" width="280" height="327"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -3489,9 +3511,16 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1Vx-uc-pdM" secondAttribute="bottom" constant="47" id="URa-lW-ycB"/>
-                            <constraint firstItem="EIn-cj-Io0" firstAttribute="top" secondItem="ux0-iJ-jS8" secondAttribute="top" constant="77" id="jaB-rO-jvz"/>
-                            <constraint firstItem="1Vx-uc-pdM" firstAttribute="top" secondItem="ux0-iJ-jS8" secondAttribute="top" constant="106" id="whC-Fv-pBX"/>
+                            <constraint firstItem="EIn-cj-Io0" firstAttribute="centerX" secondItem="1Vx-uc-pdM" secondAttribute="centerX" id="77H-dV-0aQ"/>
+                            <constraint firstItem="8rj-Bv-2Q2" firstAttribute="leading" secondItem="ux0-iJ-jS8" secondAttribute="leading" id="9vd-ru-Hj8"/>
+                            <constraint firstItem="EIn-cj-Io0" firstAttribute="top" secondItem="8rj-Bv-2Q2" secondAttribute="bottom" constant="13" id="Azv-EB-ta1"/>
+                            <constraint firstItem="8rj-Bv-2Q2" firstAttribute="top" secondItem="z1x-dQ-5w8" secondAttribute="bottom" id="Qqp-5E-TjA"/>
+                            <constraint firstItem="1Vx-uc-pdM" firstAttribute="top" secondItem="EIn-cj-Io0" secondAttribute="bottom" constant="8" symbolic="YES" id="Rsw-kI-PtF"/>
+                            <constraint firstItem="1Vx-uc-pdM" firstAttribute="leading" secondItem="ux0-iJ-jS8" secondAttribute="leading" constant="20" symbolic="YES" id="UOa-Sp-W9Q"/>
+                            <constraint firstItem="MOr-a8-N1c" firstAttribute="top" secondItem="1Vx-uc-pdM" secondAttribute="bottom" constant="47" id="dxq-F0-Sq7"/>
+                            <constraint firstAttribute="trailing" secondItem="1Vx-uc-pdM" secondAttribute="trailing" constant="20" symbolic="YES" id="kIE-Df-8U1"/>
+                            <constraint firstItem="EIn-cj-Io0" firstAttribute="centerX" secondItem="8rj-Bv-2Q2" secondAttribute="centerX" id="lbo-Nm-Lrh"/>
+                            <constraint firstItem="EIn-cj-Io0" firstAttribute="leading" secondItem="ux0-iJ-jS8" secondAttribute="leading" constant="11" id="rom-I4-fBB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="btM-lP-yv8"/>
@@ -3514,7 +3543,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="Td1-hp-uja"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Fg-up-bWw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="160" affinity="minX"/>
@@ -3534,7 +3563,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7E7-vf-HGo">
-                                <rect key="frame" x="40" y="155" width="240" height="258"/>
+                                <rect key="frame" x="40" y="155" width="240" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -3571,11 +3600,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="yiE-xJ-H9r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Okz-dr-M1J" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-vL-WEo">
-                                <rect key="frame" x="169" y="20" width="131" height="30"/>
+                                <rect key="frame" x="169" y="90" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3584,7 +3613,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QT Interval (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-4W-sJW">
-                                <rect key="frame" x="169" y="57" width="131" height="30"/>
+                                <rect key="frame" x="169" y="134" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3593,14 +3622,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="QT Interval (msec)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tRG-dW-1ao">
-                                <rect key="frame" x="20" y="62" width="141" height="21"/>
+                                <rect key="frame" x="20" y="139" width="141" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fFd-Ms-mnW">
-                                <rect key="frame" x="20" y="14" width="141" height="29"/>
+                                <rect key="frame" x="20" y="91" width="141" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Rate"/>
@@ -3611,7 +3640,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wE-CI-ZhZ">
-                                <rect key="frame" x="20" y="91" width="141" height="37"/>
+                                <rect key="frame" x="20" y="168" width="141" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3621,7 +3650,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-63-tYu">
-                                <rect key="frame" x="169" y="91" width="131" height="37"/>
+                                <rect key="frame" x="169" y="168" width="131" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3631,7 +3660,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="h8J-Bz-HiA">
-                                <rect key="frame" x="20" y="136" width="280" height="36"/>
+                                <rect key="frame" x="20" y="213" width="280" height="36"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -3639,7 +3668,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtU-vr-R3h">
-                                <rect key="frame" x="20" y="180" width="280" height="162"/>
+                                <rect key="frame" x="20" y="257" width="280" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="isk-zH-Tuy" id="tCQ-c9-ROB"/>
@@ -3674,25 +3703,25 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="F53-rT-ULF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-PB-nWj">
-                                <rect key="frame" x="20" y="12" width="128" height="21"/>
+                                <rect key="frame" x="21" y="70" width="128" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="INR Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Owb-RF-BTt">
-                                <rect key="frame" x="156" y="185" width="143" height="21"/>
+                                <rect key="frame" x="157" y="243" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-3O-j5s">
-                                <rect key="frame" x="156" y="214" width="144" height="29"/>
+                                <rect key="frame" x="157" y="272" width="144" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="2-3"/>
@@ -3703,7 +3732,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dose (mg/week)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-P6-5q7">
-                                <rect key="frame" x="156" y="41" width="140" height="30"/>
+                                <rect key="frame" x="157" y="99" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3712,21 +3741,21 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Weekly Dose (mg)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-fT-8Fk">
-                                <rect key="frame" x="156" y="12" width="143" height="21"/>
+                                <rect key="frame" x="157" y="70" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Current INR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQg-dl-S4k">
-                                <rect key="frame" x="156" y="104" width="140" height="21"/>
+                                <rect key="frame" x="157" y="162" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INR" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-n3-yDr">
-                                <rect key="frame" x="156" y="133" width="142" height="30"/>
+                                <rect key="frame" x="157" y="191" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3735,7 +3764,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-60-X6S">
-                                <rect key="frame" x="19" y="272" width="129" height="37"/>
+                                <rect key="frame" x="20" y="330" width="129" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3745,7 +3774,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBk-aS-HiD">
-                                <rect key="frame" x="156" y="272" width="140" height="37"/>
+                                <rect key="frame" x="157" y="330" width="140" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3755,7 +3784,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-Fx-0AG">
-                                <rect key="frame" x="20" y="316" width="276" height="86"/>
+                                <rect key="frame" x="21" y="374" width="276" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -3763,7 +3792,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-4W-qXv">
-                                <rect key="frame" x="20" y="41" width="128" height="162"/>
+                                <rect key="frame" x="21" y="99" width="128" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="sOk-N9-fM0" id="PiK-Cy-cXc"/>
@@ -3800,11 +3829,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="HT9-sp-RBQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="00o-Pi-5Su">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-4R-EHc">
-                                <rect key="frame" x="124" y="359" width="72" height="37"/>
+                                <rect key="frame" x="124" y="379" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3814,206 +3843,206 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-sz-yR9">
-                                <rect key="frame" x="20" y="49" width="42" height="21"/>
+                                <rect key="frame" x="20" y="69" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="10% Decrease" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FMw-cf-Fyw">
-                                <rect key="frame" x="70" y="49" width="113" height="21"/>
+                                <rect key="frame" x="70" y="69" width="113" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="20% Decrease" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hwg-pA-egJ">
-                                <rect key="frame" x="191" y="49" width="113" height="21"/>
+                                <rect key="frame" x="191" y="69" width="113" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="SUN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-gN-DyI">
-                                <rect key="frame" x="20" y="88" width="42" height="21"/>
+                                <rect key="frame" x="20" y="108" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="MON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SW9-F6-0G4">
-                                <rect key="frame" x="20" y="118" width="42" height="21"/>
+                                <rect key="frame" x="20" y="138" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="TUE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="y64-sy-fN4">
-                                <rect key="frame" x="20" y="147" width="42" height="21"/>
+                                <rect key="frame" x="20" y="167" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="WED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="i5I-eE-dcB">
-                                <rect key="frame" x="20" y="176" width="42" height="21"/>
+                                <rect key="frame" x="20" y="196" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="FRI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-9K-eeS">
-                                <rect key="frame" x="20" y="234" width="42" height="21"/>
+                                <rect key="frame" x="20" y="254" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="THU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cs8-lH-CiP">
-                                <rect key="frame" x="20" y="205" width="42" height="21"/>
+                                <rect key="frame" x="20" y="225" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="SAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="r0E-pm-vzt">
-                                <rect key="frame" x="20" y="263" width="42" height="21"/>
+                                <rect key="frame" x="20" y="283" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="TOTAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-IT-8fG">
-                                <rect key="frame" x="20" y="312" width="55" height="21"/>
+                                <rect key="frame" x="20" y="332" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBF-iS-P2k">
-                                <rect key="frame" x="20" y="296" width="280" height="8"/>
+                                <rect key="frame" x="20" y="316" width="280" height="8"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qI-Fe-1xK">
-                                <rect key="frame" x="20" y="78" width="280" height="8"/>
+                                <rect key="frame" x="20" y="98" width="280" height="8"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t5Q-ey-gUh">
-                                <rect key="frame" x="83" y="88" width="100" height="21"/>
+                                <rect key="frame" x="83" y="108" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="I8l-qM-8Iu">
-                                <rect key="frame" x="83" y="118" width="100" height="21"/>
+                                <rect key="frame" x="83" y="138" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U8v-uV-pY0">
-                                <rect key="frame" x="83" y="147" width="100" height="21"/>
+                                <rect key="frame" x="83" y="167" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-tD-OB6">
-                                <rect key="frame" x="83" y="176" width="100" height="21"/>
+                                <rect key="frame" x="83" y="196" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mSe-a8-A6t">
-                                <rect key="frame" x="83" y="205" width="100" height="21"/>
+                                <rect key="frame" x="83" y="225" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Ms-eX-c7I">
-                                <rect key="frame" x="83" y="234" width="100" height="21"/>
+                                <rect key="frame" x="83" y="254" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mMN-SR-wrt">
-                                <rect key="frame" x="83" y="263" width="100" height="21"/>
+                                <rect key="frame" x="83" y="283" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kRM-kh-NVt">
-                                <rect key="frame" x="191" y="88" width="109" height="21"/>
+                                <rect key="frame" x="191" y="108" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iuZ-yl-5Qk">
-                                <rect key="frame" x="191" y="118" width="109" height="21"/>
+                                <rect key="frame" x="191" y="138" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c7Z-fa-b44">
-                                <rect key="frame" x="191" y="147" width="109" height="21"/>
+                                <rect key="frame" x="191" y="167" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-gf-gj9">
-                                <rect key="frame" x="191" y="176" width="109" height="21"/>
+                                <rect key="frame" x="191" y="196" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vdD-7z-0YR">
-                                <rect key="frame" x="191" y="205" width="109" height="21"/>
+                                <rect key="frame" x="191" y="225" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lef-x1-kHj">
-                                <rect key="frame" x="191" y="234" width="109" height="21"/>
+                                <rect key="frame" x="191" y="254" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lGP-gY-wu6">
-                                <rect key="frame" x="191" y="263" width="109" height="21"/>
+                                <rect key="frame" x="191" y="283" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Eu5-71-sDw">
-                                <rect key="frame" x="83" y="312" width="100" height="21"/>
+                                <rect key="frame" x="83" y="332" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-m2-xe3">
-                                <rect key="frame" x="196" y="312" width="104" height="21"/>
+                                <rect key="frame" x="196" y="332" width="104" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uey-Ls-g42">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="U9G-Gl-fyl"/>
@@ -4053,7 +4082,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="Jt3-by-I3p" customClass="EPSRiskScoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ho-EI-08a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -4102,18 +4131,18 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="hBE-rR-j0F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qc1-Hs-d2Q" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-Rp-Gfg">
-                                <rect key="frame" x="44" y="276" width="233" height="21"/>
+                                <rect key="frame" x="44" y="350" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-dD-kIV">
-                                <rect key="frame" x="20" y="20" width="280" height="29"/>
+                                <rect key="frame" x="20" y="94" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Interval"/>
@@ -4124,7 +4153,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CL (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-N2-R0a">
-                                <rect key="frame" x="177.00000000000003" y="71" width="123" height="30"/>
+                                <rect key="frame" x="177" y="145" width="122.99999999999999" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4133,7 +4162,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saO-to-SDQ">
-                                <rect key="frame" x="20" y="110" width="123" height="37"/>
+                                <rect key="frame" x="20" y="184" width="123" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -4144,7 +4173,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U7N-7y-LLP">
-                                <rect key="frame" x="20" y="155" width="280" height="40"/>
+                                <rect key="frame" x="20" y="229" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -4152,7 +4181,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x94-1P-igt">
-                                <rect key="frame" x="177" y="110" width="122.99999999999999" height="37"/>
+                                <rect key="frame" x="177" y="184" width="122.99999999999999" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -4162,7 +4191,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="u3u-Mb-TNY">
-                                <rect key="frame" x="20" y="76" width="149" height="21"/>
+                                <rect key="frame" x="20" y="150" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -4194,12 +4223,15 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="m6f-1n-GSk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AfC-EP-iLu" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-Gg-2so">
-                                <rect key="frame" x="20" y="20" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-Gg-2so">
+                                <rect key="frame" x="20" y="85" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="wiQ-SF-ucc"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
@@ -4208,8 +4240,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="toggleSex:" destination="gDm-AP-yUd" eventType="valueChanged" id="XC2-yR-yft"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age (yr)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-5m-lcW">
-                                <rect key="frame" x="64" y="79" width="89" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age (yr)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-5m-lcW">
+                                <rect key="frame" x="64" y="144" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4217,8 +4249,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEndOnExit" id="oBI-dj-iOc"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
-                                <rect key="frame" x="161" y="116" width="139" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
+                                <rect key="frame" x="161" y="190" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
@@ -4228,8 +4260,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="toggleWeightUnits:" destination="gDm-AP-yUd" eventType="valueChanged" id="CBY-kp-GDw"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11h-mp-an5">
-                                <rect key="frame" x="64" y="124" width="89" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11h-mp-an5">
+                                <rect key="frame" x="64" y="189" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4237,8 +4269,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEndOnExit" id="cuD-dM-cPb"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cr (mg/dL)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-6k-nzO">
-                                <rect key="frame" x="64" y="171" width="89" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cr (mg/dL)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-6k-nzO">
+                                <rect key="frame" x="64" y="236" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4246,24 +4278,30 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEndOnExit" id="kAW-CS-qyH"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-wR-tqp">
-                                <rect key="frame" x="169" y="84" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-wR-tqp">
+                                <rect key="frame" x="169" y="149" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="7pI-uc-Xz6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="SvF-Ho-s7V">
-                                <rect key="frame" x="20" y="264" width="280" height="131"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="SvF-Ho-s7V">
+                                <rect key="frame" x="20" y="329" width="280" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-NA-HB9">
-                                <rect key="frame" x="20" y="220" width="133" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-NA-HB9">
+                                <rect key="frame" x="20" y="285" width="133" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="fRN-cx-Ua5"/>
+                                </constraints>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -4271,8 +4309,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="calculate:" destination="gDm-AP-yUd" eventType="touchUpInside" id="e72-KW-4aZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-7N-Tzv">
-                                <rect key="frame" x="161" y="220" width="139" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-7N-Tzv">
+                                <rect key="frame" x="161" y="285" width="139" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -4281,8 +4319,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="clear:" destination="gDm-AP-yUd" eventType="touchUpInside" id="NOt-Sh-led"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OYK-i5-cZ2">
-                                <rect key="frame" x="163" y="164" width="137" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OYK-i5-cZ2">
+                                <rect key="frame" x="163" y="237" width="137" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="mg/dL"/>
@@ -4292,22 +4330,25 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="toggleCrUnits:" destination="gDm-AP-yUd" eventType="valueChanged" id="AOw-Tv-Nvp"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Z0-le-dmm">
-                                <rect key="frame" x="20" y="83" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Z0-le-dmm">
+                                <rect key="frame" x="20" y="148" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="zGz-pj-FgV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sdQ-3t-zne">
+                                <rect key="frame" x="20" y="193" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Wt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sdQ-3t-zne">
-                                <rect key="frame" x="20" y="128" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Cr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BVl-Bf-Vys">
-                                <rect key="frame" x="20" y="175" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BVl-Bf-Vys">
+                                <rect key="frame" x="20" y="240" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -4315,6 +4356,50 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R4Z-5m-lcW" firstAttribute="leading" secondItem="7Z0-le-dmm" secondAttribute="trailing" constant="2" id="0yZ-Dg-j8t"/>
+                            <constraint firstItem="Ibh-Gg-2so" firstAttribute="top" secondItem="t22-Qh-JeM" secondAttribute="bottom" constant="21" id="1z4-2g-FDc"/>
+                            <constraint firstItem="BVl-Bf-Vys" firstAttribute="leading" secondItem="sdQ-3t-zne" secondAttribute="leading" id="2MZ-zI-vip"/>
+                            <constraint firstItem="OYK-i5-cZ2" firstAttribute="centerY" secondItem="TFQ-6k-nzO" secondAttribute="centerY" id="4WW-Rn-Y8V"/>
+                            <constraint firstAttribute="trailing" secondItem="Ibh-Gg-2so" secondAttribute="trailing" constant="20" symbolic="YES" id="4d4-D6-lUA"/>
+                            <constraint firstItem="TFQ-6k-nzO" firstAttribute="leading" secondItem="11h-mp-an5" secondAttribute="leading" id="7DE-OG-rvd"/>
+                            <constraint firstItem="vSy-wR-tqp" firstAttribute="leading" secondItem="R4Z-5m-lcW" secondAttribute="trailing" constant="16" id="7QC-Bu-OmR"/>
+                            <constraint firstItem="Jv5-49-c9s" firstAttribute="trailing" secondItem="Ibh-Gg-2so" secondAttribute="trailing" id="8tF-mK-ypZ"/>
+                            <constraint firstItem="R4Z-5m-lcW" firstAttribute="trailing" secondItem="11h-mp-an5" secondAttribute="trailing" id="B6l-9V-O5f"/>
+                            <constraint firstItem="sdQ-3t-zne" firstAttribute="leading" secondItem="7Z0-le-dmm" secondAttribute="leading" id="BsC-UJ-whB"/>
+                            <constraint firstItem="11h-mp-an5" firstAttribute="centerY" secondItem="Jv5-49-c9s" secondAttribute="centerY" id="DkB-u6-00F"/>
+                            <constraint firstItem="Jv5-49-c9s" firstAttribute="top" secondItem="vSy-wR-tqp" secondAttribute="bottom" constant="20" id="EhA-zh-So5"/>
+                            <constraint firstItem="BVl-Bf-Vys" firstAttribute="top" secondItem="sdQ-3t-zne" secondAttribute="bottom" constant="26" id="GR1-XH-nQc"/>
+                            <constraint firstItem="SvF-Ho-s7V" firstAttribute="leading" secondItem="Idq-NA-HB9" secondAttribute="leading" id="I7I-Jj-Hyz"/>
+                            <constraint firstItem="OYK-i5-cZ2" firstAttribute="top" secondItem="Jv5-49-c9s" secondAttribute="bottom" constant="19" id="M77-tm-p8X"/>
+                            <constraint firstItem="Ibh-Gg-2so" firstAttribute="leading" secondItem="AfC-EP-iLu" secondAttribute="leading" constant="20" symbolic="YES" id="NGw-zN-ACr"/>
+                            <constraint firstItem="Ibh-Gg-2so" firstAttribute="leading" secondItem="7Z0-le-dmm" secondAttribute="leading" id="RCk-Vu-9Ce"/>
+                            <constraint firstItem="OYK-i5-cZ2" firstAttribute="baseline" secondItem="TFQ-6k-nzO" secondAttribute="baseline" id="U3B-Nd-S1r"/>
+                            <constraint firstItem="Idq-NA-HB9" firstAttribute="top" secondItem="BVl-Bf-Vys" secondAttribute="bottom" constant="24" id="UBm-Fd-AnZ"/>
+                            <constraint firstItem="TFQ-6k-nzO" firstAttribute="trailing" secondItem="11h-mp-an5" secondAttribute="trailing" id="UNj-HZ-vwd"/>
+                            <constraint firstItem="R4Z-5m-lcW" firstAttribute="centerY" secondItem="vSy-wR-tqp" secondAttribute="centerY" id="UXN-Cv-fac"/>
+                            <constraint firstItem="sdQ-3t-zne" firstAttribute="top" secondItem="7Z0-le-dmm" secondAttribute="bottom" constant="24" id="WaR-uF-h9H"/>
+                            <constraint firstItem="SvF-Ho-s7V" firstAttribute="top" secondItem="Idq-NA-HB9" secondAttribute="bottom" constant="7" id="Y4g-Dk-p9Y"/>
+                            <constraint firstItem="OYK-i5-cZ2" firstAttribute="leading" secondItem="TFQ-6k-nzO" secondAttribute="trailing" constant="10" id="ZxE-pC-5Ac"/>
+                            <constraint firstItem="Jv5-49-c9s" firstAttribute="baseline" secondItem="11h-mp-an5" secondAttribute="baseline" id="bKP-F1-tBU"/>
+                            <constraint firstItem="LHO-7N-Tzv" firstAttribute="leading" secondItem="Idq-NA-HB9" secondAttribute="trailing" constant="8" symbolic="YES" id="cZy-Mf-6fu"/>
+                            <constraint firstItem="Jv5-49-c9s" firstAttribute="leading" secondItem="11h-mp-an5" secondAttribute="trailing" constant="8" symbolic="YES" id="cfy-xv-hFD"/>
+                            <constraint firstItem="OYK-i5-cZ2" firstAttribute="trailing" secondItem="Jv5-49-c9s" secondAttribute="trailing" id="eyv-cK-zCR"/>
+                            <constraint firstItem="Idq-NA-HB9" firstAttribute="leading" secondItem="BVl-Bf-Vys" secondAttribute="leading" id="glP-J8-5J5"/>
+                            <constraint firstItem="11h-mp-an5" firstAttribute="top" secondItem="R4Z-5m-lcW" secondAttribute="bottom" constant="15" id="heG-VY-Yqk"/>
+                            <constraint firstItem="11h-mp-an5" firstAttribute="leading" secondItem="R4Z-5m-lcW" secondAttribute="leading" id="jcU-D1-PaN"/>
+                            <constraint firstItem="R4Z-5m-lcW" firstAttribute="top" secondItem="Ibh-Gg-2so" secondAttribute="bottom" constant="31" id="kCO-VP-Fwn"/>
+                            <constraint firstItem="Idq-NA-HB9" firstAttribute="top" secondItem="LHO-7N-Tzv" secondAttribute="top" id="kp6-zw-VbD"/>
+                            <constraint firstAttribute="bottom" secondItem="SvF-Ho-s7V" secondAttribute="bottom" constant="20" symbolic="YES" id="lYo-RG-DDZ"/>
+                            <constraint firstItem="7Z0-le-dmm" firstAttribute="trailing" secondItem="sdQ-3t-zne" secondAttribute="trailing" id="mSL-QJ-det"/>
+                            <constraint firstItem="SvF-Ho-s7V" firstAttribute="trailing" secondItem="LHO-7N-Tzv" secondAttribute="trailing" id="pKY-a5-NAv"/>
+                            <constraint firstItem="OYK-i5-cZ2" firstAttribute="trailing" secondItem="LHO-7N-Tzv" secondAttribute="trailing" id="qLf-n7-mxz"/>
+                            <constraint firstAttribute="trailing" secondItem="vSy-wR-tqp" secondAttribute="trailing" constant="95" id="rHy-Co-inx"/>
+                            <constraint firstItem="LHO-7N-Tzv" firstAttribute="leading" secondItem="Jv5-49-c9s" secondAttribute="leading" id="sqf-3a-wRW"/>
+                            <constraint firstItem="LHO-7N-Tzv" firstAttribute="bottom" secondItem="Idq-NA-HB9" secondAttribute="bottom" id="wCL-3z-Na5"/>
+                            <constraint firstItem="Idq-NA-HB9" firstAttribute="top" secondItem="TFQ-6k-nzO" secondAttribute="bottom" constant="19" id="wFl-9m-QLF"/>
+                            <constraint firstItem="sdQ-3t-zne" firstAttribute="trailing" secondItem="BVl-Bf-Vys" secondAttribute="trailing" id="wVi-7D-Z6A"/>
+                        </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="gDm-AP-yUd" eventType="touchDown" id="5mf-cu-517"/>
                         </connections>
@@ -4339,7 +4424,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController title="Normal EP Values" id="QEg-8T-H7h" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v9X-oc-aBr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -4660,7 +4745,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="eRb-uZ-GP2" customClass="EPSDrugDoseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jnL-qM-irM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -4813,14 +4898,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pGj-ye-BDw"/>
         <segue reference="9A7-Dn-UeD"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
-        <segue reference="ojN-Fe-z3g"/>
+        <segue reference="fDD-Ze-qxl"/>
+        <segue reference="wO3-53-DBV"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
     </inferredMetricsTieBreakers>
