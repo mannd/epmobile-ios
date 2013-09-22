@@ -2327,12 +2327,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
+                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
                                 <rect key="frame" x="10" y="173" width="300" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="He5-kK-9Z1" firstAttribute="leading" secondItem="CZF-4x-r1c" secondAttribute="leading" constant="10" id="CtN-Ck-86B"/>
+                            <constraint firstItem="He5-kK-9Z1" firstAttribute="top" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" constant="109" id="HJC-qt-9uJ"/>
+                            <constraint firstItem="He5-kK-9Z1" firstAttribute="centerX" secondItem="CZF-4x-r1c" secondAttribute="centerX" id="Jyq-Ot-Du0"/>
+                            <constraint firstItem="JRl-zj-jIJ" firstAttribute="top" secondItem="He5-kK-9Z1" secondAttribute="bottom" constant="174" id="p9u-5d-JDo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
                 </viewController>
@@ -3025,7 +3031,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5b-Gs-4ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1131" y="-243"/>
+            <point key="canvasLocation" x="-1128" y="-459"/>
         </scene>
         <!--Brugada Morphology Table View Controller - RBBB in V1-->
         <scene sceneID="9NI-hW-HUE">
@@ -3051,11 +3057,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             <outlet property="delegate" destination="UcS-xA-2wF" id="JNJ-rL-caI"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="a8B-96-ggf"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="RBBB in V1" image="rbbbicon.png" id="a8B-96-ggf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVv-tn-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1466" y="-243"/>
+            <point key="canvasLocation" x="-1539" y="-475"/>
         </scene>
         <!--View Controller - CMS ICD Criteria-->
         <scene sceneID="gR2-cI-aou">
@@ -3157,7 +3163,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CST-Qs-u8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1904" y="-459"/>
+            <point key="canvasLocation" x="-1767" y="-482"/>
         </scene>
         <!--Table View Controller - WPW-->
         <scene sceneID="vVV-kV-uUe">
@@ -4850,7 +4856,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="BtS-Mb-lIg"/>
-        <segue reference="ojN-Fe-z3g"/>
+        <segue reference="gzd-ih-l4g"/>
         <segue reference="pFv-5Z-NQa"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -59,9 +59,6 @@
     else
         self.list = rbbbRisks;
     
-    
-    
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
