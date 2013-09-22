@@ -4153,7 +4153,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CL (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-N2-R0a">
-                                <rect key="frame" x="177" y="145" width="122.99999999999999" height="30"/>
+                                <rect key="frame" x="177" y="145" width="123.00000000000001" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4250,7 +4250,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
-                                <rect key="frame" x="161" y="190" width="139" height="29"/>
+                                <rect key="frame" x="161.00000000000006" y="190" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
@@ -4310,7 +4310,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-7N-Tzv">
-                                <rect key="frame" x="161" y="285" width="139" height="37"/>
+                                <rect key="frame" x="161" y="285" width="139.00000000000006" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -4875,7 +4875,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="epivt.png" width="357" height="282"/>
         <image name="lalap.png" width="452" height="400"/>
         <image name="lbbbicon.png" width="25" height="24"/>
-        <image name="lbbbicon.png" width="25" height="24"/>
         <image name="lbbbmorphology.png" width="800" height="651"/>
         <image name="llap.png" width="452" height="400"/>
         <image name="longqtecg.png" width="470" height="179"/>
@@ -4887,7 +4886,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="pstaap.png" width="452" height="400"/>
         <image name="raap.png" width="452" height="400"/>
         <image name="ralap.png" width="452" height="400"/>
-        <image name="rbbbicon.png" width="25" height="24"/>
         <image name="rbbbicon.png" width="25" height="24"/>
         <image name="rbbbmorphology.png" width="800" height="600"/>
         <image name="rlap.png" width="452" height="400"/>
@@ -4901,11 +4899,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="pGj-ye-BDw"/>
         <segue reference="9A7-Dn-UeD"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
-        <segue reference="fDD-Ze-qxl"/>
-        <segue reference="wO3-53-DBV"/>
+        <segue reference="ojN-Fe-z3g"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
     </inferredMetricsTieBreakers>
