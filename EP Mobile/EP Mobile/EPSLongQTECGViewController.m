@@ -46,9 +46,9 @@
     return [scrollView viewWithTag:999];
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
+// no rotation
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

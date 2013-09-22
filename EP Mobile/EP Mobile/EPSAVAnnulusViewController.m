@@ -95,12 +95,9 @@
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if (![self showPathway])
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    else
-        return NO;
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end
