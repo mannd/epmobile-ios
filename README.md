@@ -27,5 +27,5 @@ Due to screen size limitations, all references are not included in the iOS versi
 David Mann
 
 Email: [mannd@epstudiossoftware.com](mailto:mannd@epstudiossoftware.com)  
-Website: [http://www.epstudiossoftware.com](http://www/epstudiossoftware.com)   
+Website: [http://www.epstudiossoftware.com](http://www.epstudiossoftware.com)   
 
