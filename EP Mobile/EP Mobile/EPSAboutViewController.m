@@ -3,7 +3,7 @@
 //  EP Mobile
 //
 //  Created by David Mann on 7/29/12.
-//  Copyright (c) 2012 EP Studios. All rights reserved.
+//  Copyright (c) 2012, 2013, 2104 EP Studios. All rights reserved.
 //
 
 #import "EPSAboutViewController.h"
