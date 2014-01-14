@@ -3,7 +3,7 @@
 //  EP Mobile
 //
 //  Created by David Mann on 7/14/12.
-//  Copyright (c) 2012 EP Studios. All rights reserved.
+//  Copyright (c) 2012, 2013, 2014 EP Studios. All rights reserved.
 //
 
 #import "EPSMainTableViewController.h"
@@ -72,7 +72,7 @@
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";
     if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
-        lc.webPage = @"http://www.azcert.org/medical-pros/drug-lists/drug-lists.cfm";        
+        lc.webPage = @"http://www.crediblemeds.org";        
 }
 
 
