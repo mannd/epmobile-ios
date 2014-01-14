@@ -72,7 +72,7 @@
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";
     if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
-        lc.webPage = @"http://www.azcert.org/medical-pros/drug-lists/drug-lists.cfm";        
+        lc.webPage = @"http://www.crediblemeds.org";        
 }
 
 
