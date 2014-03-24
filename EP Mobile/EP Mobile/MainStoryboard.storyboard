@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kBV-s3-VWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kBV-s3-VWz">
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -735,7 +735,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2352" y="-2231"/>
+            <point key="canvasLocation" x="-3288" y="1745"/>
         </scene>
         <!--Weight Calculator View Controller - Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -761,7 +761,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="INF-SQ-lFM">
-                                <rect key="frame" x="161" y="75" width="139" height="29"/>
+                                <rect key="frame" x="161.00000127380636" y="75" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
@@ -772,7 +772,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-06-BX6">
-                                <rect key="frame" x="82" y="75" width="59.999999999999993" height="30"/>
+                                <rect key="frame" x="82" y="75" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -788,7 +788,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kAO-2U-Neg">
-                                <rect key="frame" x="161" y="133" width="139" height="29"/>
+                                <rect key="frame" x="161.00000127380636" y="133" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="in"/>
@@ -799,7 +799,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-kT-wXg">
-                                <rect key="frame" x="82" y="132" width="59.999999999999993" height="30"/>
+                                <rect key="frame" x="82" y="132" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -825,7 +825,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSA-Li-Cri">
-                                <rect key="frame" x="161.00000000000003" y="173" width="139" height="37"/>
+                                <rect key="frame" x="161.00000127380636" y="173" width="139" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3584,7 +3584,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="160" affinity="minX"/>
+                            <userLayoutGuide location="149" affinity="minX"/>
                         </userGuides>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WU9-hu-Y5c">
@@ -3627,7 +3627,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3025" y="-822"/>
+            <point key="canvasLocation" x="-2437" y="2362"/>
         </scene>
         <!--Tc Calculator View Controller - QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
@@ -3642,7 +3642,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-vL-WEo">
-                                <rect key="frame" x="163.00000000000003" y="90" width="137" height="30"/>
+                                <rect key="frame" x="163.00000050468165" y="90" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3651,7 +3651,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QT Interval (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-4W-sJW">
-                                <rect key="frame" x="163.00000000000003" y="134" width="137" height="30"/>
+                                <rect key="frame" x="163" y="134" width="137.00000050468165" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -3688,7 +3688,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-63-tYu">
-                                <rect key="frame" x="169.00000000000006" y="168" width="131" height="37"/>
+                                <rect key="frame" x="169.00000050468165" y="168" width="131" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3706,7 +3706,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtU-vr-R3h">
-                                <rect key="frame" x="20" y="257" width="280.00000000000006" height="162"/>
+                                <rect key="frame" x="20" y="257" width="280.00000050468168" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="isk-zH-Tuy" id="tCQ-c9-ROB"/>
@@ -4191,7 +4191,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CL (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-N2-R0a">
-                                <rect key="frame" x="177" y="145" width="123" height="30"/>
+                                <rect key="frame" x="177.00000008514951" y="145" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -4211,7 +4211,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U7N-7y-LLP">
-                                <rect key="frame" x="20" y="229" width="280" height="40"/>
+                                <rect key="frame" x="20" y="229" width="280.00000008514951" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -4285,7 +4285,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
-                                <rect key="frame" x="161.00000000000006" y="169" width="139" height="29"/>
+                                <rect key="frame" x="161.00000008514951" y="169" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="lb"/>
@@ -4314,7 +4314,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-wR-tqp">
-                                <rect key="frame" x="169" y="128" width="56" height="21"/>
+                                <rect key="frame" x="169.00000239628153" y="128" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -4883,10 +4883,10 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     <inferredMetricsTieBreakers>
         <segue reference="pGj-ye-BDw"/>
         <segue reference="9A7-Dn-UeD"/>
+        <segue reference="sIb-ay-0FY"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="pFv-5Z-NQa"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="BtS-Mb-lIg"/>
-        <segue reference="pFv-5Z-NQa"/>
-        <segue reference="sIb-ay-0FY"/>
     </inferredMetricsTieBreakers>
 </document>
