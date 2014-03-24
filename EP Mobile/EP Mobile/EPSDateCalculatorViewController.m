@@ -71,7 +71,7 @@
 }
 
 - (IBAction)changeNumberOfDays:(id)sender {
-    int selection = [sender selectedSegmentIndex];
+    NSInteger selection = [sender selectedSegmentIndex];
     switch(selection) {
         case 0:
             [self.numberOfDaysTextField setText:@"90"];
@@ -88,7 +88,7 @@
 - (IBAction)calculate:(id)sender {
     NSString *numberOfDays = self.numberOfDaysTextField.text;
     NSInteger days = [numberOfDays intValue];
-    NSLog(@"Formula is %d", days);
+    NSLog(@"Formula is %ld", (long)days);
     if (days == 0) { // either zero entered or bad stuff entered
         [self.resultLabel setText:INVALID_ENTRY];
         return;

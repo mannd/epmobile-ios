@@ -196,7 +196,7 @@
 }
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"Button index = %d", buttonIndex);
+    NSLog(@"Button index = %ld", (long)buttonIndex);
     [algorithm resetSteps:&step];
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
