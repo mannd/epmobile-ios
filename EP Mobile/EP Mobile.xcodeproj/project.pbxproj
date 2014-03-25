@@ -107,7 +107,6 @@
 		8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C34159FE0FA00975E2B /* InfoPlist.strings */; };
 		8EC19C38159FE0FA00975E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C37159FE0FA00975E2B /* main.m */; };
 		8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */; };
-		8EC19C44159FE0FA00975E2B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C43159FE0FA00975E2B /* SenTestingKit.framework */; };
 		8EC19C45159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
 		8EC19C46159FE0FA00975E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2D159FE0FA00975E2B /* Foundation.framework */; };
 		8EC19C4E159FE0FA00975E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C4C159FE0FA00975E2B /* InfoPlist.strings */; };
@@ -120,6 +119,7 @@
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
+		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -299,8 +299,7 @@
 		8EC19C39159FE0FA00975E2B /* EP Mobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EP Mobile-Prefix.pch"; sourceTree = "<group>"; };
 		8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAppDelegate.h; sourceTree = "<group>"; };
 		8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAppDelegate.m; sourceTree = "<group>"; };
-		8EC19C42159FE0FA00975E2B /* EP MobileTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EP MobileTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EC19C43159FE0FA00975E2B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8EC19C42159FE0FA00975E2B /* EP MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EP MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC19C4B159FE0FA00975E2B /* EP MobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EP MobileTests-Info.plist"; sourceTree = "<group>"; };
 		8EC19C4D159FE0FA00975E2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8EC19C4F159FE0FA00975E2B /* EP_MobileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EP_MobileTests.h; sourceTree = "<group>"; };
@@ -319,6 +318,8 @@
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
 		8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorNotes.m; sourceTree = "<group>"; };
+		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
+		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
 		8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCTableViewController.h; sourceTree = "<group>"; };
 		8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -338,7 +339,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EC19C44159FE0FA00975E2B /* SenTestingKit.framework in Frameworks */,
 				8EC19C45159FE0FA00975E2B /* UIKit.framework in Frameworks */,
 				8EC19C46159FE0FA00975E2B /* Foundation.framework in Frameworks */,
 			);
@@ -465,6 +465,8 @@
 				8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */,
 				8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */,
 				8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */,
+				8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */,
+				8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -574,7 +576,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC19C27159FE0FA00975E2B /* EP Mobile.app */,
-				8EC19C42159FE0FA00975E2B /* EP MobileTests.octest */,
+				8EC19C42159FE0FA00975E2B /* EP MobileTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -585,7 +587,6 @@
 				8EC19C2B159FE0FA00975E2B /* UIKit.framework */,
 				8EC19C2D159FE0FA00975E2B /* Foundation.framework */,
 				8EC19C2F159FE0FA00975E2B /* CoreGraphics.framework */,
-				8EC19C43159FE0FA00975E2B /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -705,8 +706,8 @@
 			);
 			name = "EP MobileTests";
 			productName = "EP MobileTests";
-			productReference = 8EC19C42159FE0FA00975E2B /* EP MobileTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 8EC19C42159FE0FA00975E2B /* EP MobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -715,7 +716,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EPS;
-				LastUpgradeCheck = 0460;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C26159FE0FA00975E2B = {
@@ -880,6 +882,7 @@
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
+				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
 				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,
@@ -931,9 +934,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -950,10 +954,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -965,9 +973,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -976,8 +985,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -1026,14 +1038,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1043,14 +1054,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

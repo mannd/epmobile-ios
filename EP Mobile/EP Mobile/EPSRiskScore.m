@@ -25,11 +25,11 @@
     return nil;
 }
 
-- (NSString *)getTitleForHeaderSection:(int)section {
+- (NSString *)getTitleForHeaderSection:(NSInteger)section {
     return nil;
 }
 
-- (int)getOffset:(int)section {
+- (int)getOffset:(NSInteger)section {
     // default 1 section, no offset
     return 0;
 }
@@ -38,7 +38,7 @@
     return 1;
 }
 
-- (int)numberOfRowsInSection:(int)section {
+- (int)numberOfRowsInSection:(NSInteger)section {
     // if returns 0 calling function will assume only one section
     return 0;
 }

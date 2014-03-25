@@ -32,11 +32,11 @@
 - (void)testCycleLengthCalculator {
     EPSCycleLengthCalculatorViewController *c = [[EPSCycleLengthCalculatorViewController alloc] init];
     int result = [c convertInterval:60];
-    STAssertTrue(result == 1000, @"Test failed");
+    XCTAssertTrue(result == 1000, @"Test failed");
     result = [c convertInterval:1000];
-    STAssertTrue(result == 60, @"Test failed");
+    XCTAssertTrue(result == 60, @"Test failed");
     result = [c convertInterval:733];
-    STAssertTrue(result == 82, @"Test failed.  Result was %i", result);
+    XCTAssertTrue(result == 82, @"Test failed.  Result was %i", result);
 }
 
 - (void)testQTcCalculator {
@@ -46,59 +46,59 @@
     const int SAGIE = 2;
     const int HODGES = 3;
     int result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:BAZETT];
-    STAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:FRIDERICIA];   
-    STAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:SAGIE];
-    STAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:HODGES];
-    STAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:BAZETT];
-    STAssertTrue(result == 411, @"Actual result was %d", result);
+    XCTAssertTrue(result == 411, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:FRIDERICIA];
-    STAssertTrue(result == 395, @"Actual result was %d", result);
+    XCTAssertTrue(result == 395, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:SAGIE];
-    STAssertTrue(result == 397, @"Actual result was %d", result);    
+    XCTAssertTrue(result == 397, @"Actual result was %d", result);    
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:HODGES];
-    STAssertTrue(result == 393, @"Actual result was %d", result);
+    XCTAssertTrue(result == 393, @"Actual result was %d", result);
     result = [c qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:BAZETT];
-    STAssertTrue(result == 0, @"Actual result was %d", result);
+    XCTAssertTrue(result == 0, @"Actual result was %d", result);
     
 }
 
 - (void)testActualWeeklyDose {
     float newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:100 isIncrease:NO];
-    STAssertTrue(newDose == 50.0, @"Actual was %f", newDose);
+    XCTAssertTrue(newDose == 50.0, @"Actual was %f", newDose);
     newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:100 isIncrease:YES];
-    STAssertTrue(newDose == 150.0, @"Actual was %f", newDose);
+    XCTAssertTrue(newDose == 150.0, @"Actual was %f", newDose);
     newDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:.5 fromOldDose:50 isIncrease:NO];
-    STAssertTrue(newDose == 25.0, @"Actual was %f", newDose);
+    XCTAssertTrue(newDose == 25.0, @"Actual was %f", newDose);
 }
 
 - (void)testTryDoses {
     EPSWarfarinDailyDoseCalculator *calculator = [[EPSWarfarinDailyDoseCalculator alloc] initWithTabletDose:7.5 andWeeklyDose:80];
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    STAssertNoThrow(array = [calculator weeklyDoses], @"It threw!");
+    XCTAssertNoThrow(array = [calculator weeklyDoses], @"It threw!");
     
 }
 
 - (void)testIsDoseSane {
     EPSWarfarinCalculatorViewController *vc = [[EPSWarfarinCalculatorViewController alloc] init];
-    STAssertTrue([vc weeklyDoseIsSane:40 forTabletSize:5], nil);
-    STAssertTrue([vc weeklyDoseIsSane:50 forTabletSize:5], nil);
-    STAssertTrue([vc weeklyDoseIsSane:30 forTabletSize:5], nil);
+    XCTAssertTrue([vc weeklyDoseIsSane:40 forTabletSize:5]);
+    XCTAssertTrue([vc weeklyDoseIsSane:50 forTabletSize:5]);
+    XCTAssertTrue([vc weeklyDoseIsSane:30 forTabletSize:5]);
 }
 
 - (void)testRound {
-    STAssertTrue(round(1.2) == 1, nil);
-    STAssertTrue(round(1.6) == 2, nil);
-    STAssertTrue(round(1.5) == 2, nil);
+    XCTAssertTrue(round(1.2) == 1);
+    XCTAssertTrue(round(1.6) == 2);
+    XCTAssertTrue(round(1.5) == 2);
 }
 
 - (void)testCreatinineConversion {
     EPSDrugDoseCalculatorViewController *vc = [[EPSDrugDoseCalculatorViewController alloc] init];
-    STAssertEqualsWithAccuracy([vc creatinineFromMicroMolUnits:150.0], 1.696, 0.01, nil);
-    STAssertEqualsWithAccuracy([vc creatinineFromMicroMolUnits:87.5], 0.98981, 0.01, nil);
+    XCTAssertEqualWithAccuracy([vc creatinineFromMicroMolUnits:150.0], 1.696, 0.01);
+    XCTAssertEqualWithAccuracy([vc creatinineFromMicroMolUnits:87.5], 0.98981, 0.01);
 
 }
 

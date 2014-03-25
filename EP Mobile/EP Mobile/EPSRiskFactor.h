@@ -16,9 +16,9 @@
 @property (assign, nonatomic) BOOL isMajor;
 @property (assign, nonatomic) NSUInteger sectionNumber;
 
-- (id)initWith:(NSString *)name withValue:(int)value;
-- (id)initWithDetails:(NSString *)name withValue:(int)value withDetails:(NSString *)details;
-- (id)initWithAllFields:(NSString *)name withValue:(int)value withDetails:(NSString *)details withIsMajor:(BOOL)isMajor withSectionNumber:(NSUInteger) sectionNumber;
-- (void)setName:(NSString *)name withValue:(int)value withDetails:(NSString *)details;
+- (id)initWith:(NSString *)name withValue:(NSInteger)value;
+- (id)initWithDetails:(NSString *)name withValue:(NSInteger)value withDetails:(NSString *)details;
+- (id)initWithAllFields:(NSString *)name withValue:(NSInteger)value withDetails:(NSString *)details withIsMajor:(BOOL)isMajor withSectionNumber:(NSUInteger) sectionNumber;
+- (void)setName:(NSString *)name withValue:(NSInteger)value withDetails:(NSString *)details;
 
 @end

@@ -34,8 +34,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalWeeklyHighDose;
 
 @property (assign, nonatomic) float tabletSize;
-@property (assign, nonatomic) int lowEnd;
-@property (assign, nonatomic) int highEnd;
+@property (assign, nonatomic) NSInteger lowEnd;
+@property (assign, nonatomic) NSInteger highEnd;
 @property (assign, nonatomic) BOOL increase;
 @property (assign, nonatomic) float weeklyDose;
 

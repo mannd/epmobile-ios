@@ -64,9 +64,9 @@
 	// Do any additional setup after loading the view.
     NSString *title = [[NSString alloc] initWithFormat:@"Warfarin Dosing (%g mg tab)", self.tabletSize];
     self.titleBar.title = title;
-    self.lowChangeLabel.text = [[NSString alloc] initWithFormat:@"%d%% %@", self.lowEnd,
+    self.lowChangeLabel.text = [[NSString alloc] initWithFormat:@"%ld%% %@", (long)self.lowEnd,
     self.increase ? @"Increase" : @"Decrease"];
-    self.highChangeLabel.text = [[NSString alloc] initWithFormat:@"%d%% %@", self.highEnd, self.increase ? @"Increase" : @"Decrease"];
+    self.highChangeLabel.text = [[NSString alloc] initWithFormat:@"%ld%% %@", (long)self.highEnd, self.increase ? @"Increase" : @"Decrease"];
     
     float newLowEndWeeklyDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(self.lowEnd / 100.0) fromOldDose:self.weeklyDose isIncrease:self.increase];
     float newHighEndWeeklyDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(self.highEnd / 100.0) fromOldDose:self.weeklyDose isIncrease:self.increase];

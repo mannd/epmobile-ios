@@ -228,7 +228,7 @@
     [self setWeightPlaceholder:[sender selectedSegmentIndex]];
 }
 
-- (void)setWeightPlaceholder:(int)index {
+- (void)setWeightPlaceholder:(NSInteger)index {
     NSString *placeholder = @"Wt (";
     if ((weightIsPounds = index == 0))
         self.weightTextField.placeholder = [placeholder stringByAppendingString:@"lb)"];
@@ -241,7 +241,7 @@
     [self setHeightPlaceholder:[sender selectedSegmentIndex]];
 }
 
-- (void)setHeightPlaceholder:(int)index {
+- (void)setHeightPlaceholder:(NSInteger)index {
     NSString *placeholder = @"Ht (";
     if ((heightIsInches = index == 0))
         self.heightTextField.placeholder = [placeholder stringByAppendingString:@"in)"];

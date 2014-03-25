@@ -117,7 +117,7 @@
     [self setCrUnitsPlaceholder:[sender selectedSegmentIndex]];
 }
 
-- (void)setWeightPlaceholder:(int)index {
+- (void)setWeightPlaceholder:(NSInteger)index {
     NSString *placeholder = @"Weight (";
     if ((weightIsPounds = index == 0))
         self.weightField.placeholder = [placeholder stringByAppendingString:@"lb)"];
@@ -125,7 +125,7 @@
         self.weightField.placeholder = [placeholder stringByAppendingString:@"kg)"];
 }
 
-- (void)setCrUnitsPlaceholder:(int)index {
+- (void)setCrUnitsPlaceholder:(NSInteger)index {
     NSString *placeholder = @"Cr (";
     if ((unitsAreMgPerDl = index == 0))
         self.creatinineField.placeholder = [placeholder stringByAppendingString:@"mg/dL)"];

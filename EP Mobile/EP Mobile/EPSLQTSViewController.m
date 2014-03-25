@@ -195,7 +195,7 @@
     return cell;
 }
 
-- (int)calculateOffset:(int)section {
+- (int)calculateOffset:(NSInteger)section {
     int offset = 0;
     if (section == 1)
         offset = 5;
@@ -209,7 +209,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int offset = [self calculateOffset:indexPath.section];
-    NSLog(@"Offset = %d section = %d row = %d", offset, indexPath.section, indexPath.row);
+    NSLog(@"Offset = %d section = %ld row = %ld", offset, (long)indexPath.section, (long)indexPath.row);
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;

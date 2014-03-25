@@ -135,7 +135,7 @@
     for (id object in self.list) {
         for (id criteria in object)
             if ([criteria selected]) {
-                NSNumber *value = [NSNumber numberWithInt:[criteria points]];
+                NSNumber *value = [NSNumber numberWithInteger:[criteria points]];
                 [self.checkedItems addObject:value];
             }
     }
