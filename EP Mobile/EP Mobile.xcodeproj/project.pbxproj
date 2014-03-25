@@ -94,6 +94,10 @@
 		8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */; };
 		8E9755B1161D11E600EAFD10 /* EPSWarfarinNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */; };
 		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
+		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
+		8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
+		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
+		8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
 		8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FB17EFA533006FE65F /* epmobile_icon3.png */; };
 		8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */; };
 		8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */; };
@@ -279,6 +283,10 @@
 		8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinNotes.h; sourceTree = "<group>"; };
 		8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinNotes.m; sourceTree = "<group>"; };
 		8E9755B2161F71B900EAFD10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskScore.h; sourceTree = "<group>"; };
+		8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskScore.m; sourceTree = "<group>"; };
+		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
+		8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskViewController.m; sourceTree = "<group>"; };
 		8EB418FB17EFA533006FE65F /* epmobile_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon3.png; sourceTree = "<group>"; };
 		8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon4spotlight.png; sourceTree = "<group>"; };
 		8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon5settings.png; sourceTree = "<group>"; };
@@ -374,6 +382,8 @@
 				8E00E95717B84EC10007A146 /* EPSMartinRiskScore.m */,
 				8E00E95917B851E50007A146 /* EPSOesilScore.h */,
 				8E00E95A17B851E50007A146 /* EPSOesilScore.m */,
+				8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */,
+				8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -511,6 +521,8 @@
 				8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */,
 				8E00E96017BB1E890007A146 /* EPSLQTSTableViewController.h */,
 				8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */,
+				8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */,
+				8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */,
 			);
 			name = "Table View Controllers";
 			sourceTree = "<group>";
@@ -887,6 +899,8 @@
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
 				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,
 				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
+				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
+				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 			);
@@ -896,7 +910,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
+				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
