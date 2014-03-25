@@ -35,6 +35,9 @@
     //scrollView.maximumZoomScale = 2.0;
     scrollView.delegate = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for device relocation", @"Gen change for upgrade" , @"gen change for malfunction", @"gen change other reason", nil];
+    self.procedureTypeData = array;
+
 
 }
 
@@ -58,6 +61,22 @@
 //- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
 //    return [scrollView viewWithTag:999];
 //}
+
+#pragma mark - Picker Data Methods
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [self.procedureTypeData count];
+}
+
+
+# pragma mark - Picker Delegate Methods
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [self.procedureTypeData objectAtIndex:row];
+}
 
 
 @end

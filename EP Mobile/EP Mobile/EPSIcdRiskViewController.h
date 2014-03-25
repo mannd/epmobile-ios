@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSIcdRiskViewController : UIViewController
-    <UIScrollViewDelegate>
-
+    <UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
+@property (strong, nonatomic) IBOutlet UISegmentedControl *procedureTypeSegmentedControl;
+@property (strong, nonatomic) NSArray* procedureTypeData;
 
 @end
