@@ -28,9 +28,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIScrollView *scrollView = (UIScrollView *)self.view;
-//    float width = scrollView.bounds.size.width;
-//    float height = scrollView.bounds.size.height;
-    scrollView.contentSize = CGSizeMake(320, 836);
+    float width = scrollView.bounds.size.width;
+    float height = scrollView.bounds.size.height;
+    scrollView.contentSize = CGSizeMake(width, height);
     //scrollView.minimumZoomScale = 1.0;
     //scrollView.maximumZoomScale = 2.0;
     scrollView.delegate = self;
