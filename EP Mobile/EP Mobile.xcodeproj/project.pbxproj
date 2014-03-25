@@ -119,6 +119,7 @@
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
+		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -317,6 +318,8 @@
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
 		8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorNotes.m; sourceTree = "<group>"; };
+		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
+		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
 		8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCTableViewController.h; sourceTree = "<group>"; };
 		8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -462,6 +465,8 @@
 				8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */,
 				8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */,
 				8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */,
+				8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */,
+				8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
+				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
 				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,

@@ -52,4 +52,10 @@
         EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
         vc.algorithmName = @"BrugadaWCT";
     }
-}@end
+    else if ([segueIdentifier isEqualToString:@"VereckeiAlgorithmSegue"]) {
+        EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
+        vc.algorithmName = @"VereckeiWCT";
+    }
+}
+
+@end

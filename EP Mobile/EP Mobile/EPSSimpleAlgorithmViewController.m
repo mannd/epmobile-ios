@@ -16,6 +16,7 @@
 #import "EPSModifiedArrudaAlgorithm.h"
 #import "EPSMilsteinAlgorithm.h"
 #import "EPSAVAnnulusViewController.h"
+#import "EPSVereckeiAlgorithm.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
@@ -23,6 +24,7 @@
 #define ARRUDA_WPW @"ArrudaWPW"
 #define MILSTEIN_WPW @"MilsteinWPW"
 #define MODIFIED_ARRUDA_WPW @"ModifiedArrudaWPW"
+#define VERECKEI_WCT @"VereckeiWCT"
 
 @interface EPSSimpleAlgorithmViewController ()
 
@@ -66,6 +68,8 @@
         algorithm = [[EPSModifiedArrudaAlgorithm alloc] init];
     else if ([self.algorithmName isEqualToString:MILSTEIN_WPW])
         algorithm = [[EPSMilsteinAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:VERECKEI_WCT])
+        algorithm = [[EPSVereckeiAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
         
     // ...
