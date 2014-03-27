@@ -185,7 +185,7 @@
             float lowEndDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(doseChange.lowEnd / 100.0) fromOldDose:weeklyDose isIncrease:(increaseDose)];
             float highEndDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(doseChange.highEnd / 100.0) fromOldDose:weeklyDose isIncrease:(increaseDose)];
             message = [message stringByAppendingString:@"weekly dose by "];
-            message = [message stringByAppendingFormat:@"%d%% (%1.1f mg/wk) to %d%% (%1.1f mg/wk).", doseChange.lowEnd, lowEndDose, doseChange.highEnd, highEndDose];
+            message = [message stringByAppendingFormat:@"%ld%% (%1.1f mg/wk) to %ld%% (%1.1f mg/wk).", (long)doseChange.lowEnd, lowEndDose, (long)doseChange.highEnd, highEndDose];
             showDoses = [self weeklyDoseIsSane:weeklyDose forTabletSize:[self getTabletSize]];
             
         }

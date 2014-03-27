@@ -189,7 +189,7 @@
     return cell;
 }
 
-- (int)calculateOffset:(int)section {
+- (int)calculateOffset:(NSInteger)section {
     int offset = 0;
     if (section == 1)
         offset = 1;

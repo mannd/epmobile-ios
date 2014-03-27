@@ -126,7 +126,7 @@
                 if (hasEgqrs && !invalidSqrs) {
                     NSInteger egMinusQrs = egqrs - sqrs;
                     message = [message stringByAppendingString:@" "];
-                    if (abs(egMinusQrs) <= 20)
+                    if (abs((int)egMinusQrs) <= 20)
                         message = [message stringByAppendingString:@"Similar S-QRS and EG-QRS intervals suggest site in isthmus of reentry circuit."];
                     else
                         message = [message stringByAppendingString:@"Dissimilar S-QRS and EG-QRS intervals suggest site may be an adjacent bystander."];
@@ -135,7 +135,7 @@
         }
     }
     NSString *finalResult = @"PPI-TCL = ";
-    NSString *ppiMinusTclString = [NSString stringWithFormat:@"%d. ", ppiMinusTcl];
+    NSString *ppiMinusTclString = [NSString stringWithFormat:@"%ld. ", (long)ppiMinusTcl];
     finalResult = [finalResult stringByAppendingString:ppiMinusTclString];
     finalResult = [finalResult stringByAppendingString:message];
     self.resultLabel.text = finalResult;
