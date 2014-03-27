@@ -94,19 +94,48 @@
             score += [self.risks[i] points];
         }
     }
-    if (self.icdTypeSegmentedControl.selectedSegmentIndex == 1) {
+    NSInteger selection = [self.icdTypeSegmentedControl selectedSegmentIndex];
+    if (selection == 1) {
         score += 4; // dual chamber
     }
-    else if (self.icdTypeSegmentedControl.selectedSegmentIndex == 2) {
-        score += 6;
+    else if (selection == 2) {
+        score += 6; // CRT-D
     }
-
-    
+    selection = [self.nyhaClassSegmentedControl selectedSegmentIndex];
+    if (selection == 1) {
+        score += 3; // class III
+    }
+    else if (selection == 2) {
+        score += 7;
+    }
+    selection = [self.abnormalConductionSegmentedControl selectedSegmentIndex];
+    if (selection == 1 || selection == 2) {
+        score += 2;
+    }
+    selection = [self.sodiumSegmentedControl selectedSegmentIndex];
+    if (selection == 0) {
+        score += 3;
+    }
+    else if (selection == 2) {
+        score += 2;
+    }
+    selection = [self.hgbSegmentedControl selectedSegmentIndex];
+    if (selection == 0) {
+        score += 3;
+    }
+    else if (selection == 1) {
+        score += 2;
+    }
+    selection = [self.bunSegmentedControl selectedSegmentIndex];
+    if (selection == 1) {
+        score += 2;
+    }
+    else if (selection == 2) {
+        score += 4;
+    }
     
     NSString *message = [self getResultsMessage:score];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    // left justify message
-    //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
     [alertView show];
     
 }
@@ -125,21 +154,6 @@
     
     return message;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-//- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-//    return [scrollView viewWithTag:999];
-//}
 
 #pragma mark - Picker Data Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
