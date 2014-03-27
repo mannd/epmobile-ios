@@ -42,7 +42,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSMutableArray *array = [[NSMutableArray alloc] init];
+    NSMutableArray *array;
     if ([scoreType isEqualToString:@"Chads2"]) 
         riskScore = [[EPSChadsRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"ChadsVasc"])
