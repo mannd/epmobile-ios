@@ -20,6 +20,8 @@
 #import "EPSMartinRiskScore.h"
 #import "EPSOesilScore.h"
 
+#define COPY_RESULT_BUTTON_NUMBER 1
+
 @interface EPSRiskScoreTableViewController ()
 
 @end
@@ -164,11 +166,12 @@
 #pragma mark - Alert view delegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
+    if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
+        // calculate full result here,
+        NSString* result = [riskScore getFullRiskReportFromMessage:[alertView message] andRisks:nil];
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = [alertView message];
+        pasteboard.string = result;
         [alertView dismissWithClickedButtonIndex:0 animated:YES];
-
 
     }
 }

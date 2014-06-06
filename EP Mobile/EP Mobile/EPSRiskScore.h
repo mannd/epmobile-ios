@@ -21,5 +21,7 @@
 - (CGFloat)rowHeight:(CGFloat)defaultHeight;
 - (void)formatCell:(UITableViewCell *)cell;
 - (NSString *)getReference;
+- (NSArray *)risksSelected:(NSArray *)risks;
+- (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks;
 
 @end
