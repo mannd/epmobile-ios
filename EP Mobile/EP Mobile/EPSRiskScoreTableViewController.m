@@ -89,7 +89,7 @@
 - (void)calculateScore {
     int score = [riskScore calculateScore:self.risks];
     NSString *message = [riskScore getMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", nil];
     // left justify message
     //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
     [alertView show];
@@ -159,6 +159,18 @@
         [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = [alertView message];
+        [alertView dismissWithClickedButtonIndex:0 animated:YES];
+
+
+    }
 }
 
 @end

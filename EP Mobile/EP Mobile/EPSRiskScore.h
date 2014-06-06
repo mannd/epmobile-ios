@@ -20,5 +20,6 @@
 - (NSString *)getMessage:(int)score;
 - (CGFloat)rowHeight:(CGFloat)defaultHeight;
 - (void)formatCell:(UITableViewCell *)cell;
+- (NSString *)getReference;
 
 @end

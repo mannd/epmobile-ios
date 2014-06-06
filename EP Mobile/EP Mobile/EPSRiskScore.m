@@ -65,4 +65,9 @@
 - (NSString *)getMessage:(int)score {
     return nil;
 }
+
+- (NSString *)getReference {
+    return nil;
+}
+
 @end
