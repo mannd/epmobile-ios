@@ -14,6 +14,10 @@
     return @"EGSYS Score";
 }
 
+- (NSString *)getReference {
+    return @"Del Rosso A, Ungar A, Maggi R, Giada F, Petix NR, De Santo T, Menozzi C, Brignole M. Clinical predictors of cardiac syncope at initial evaluation in patients referred urgently to a general hospital: the EGSYS score. Heart [Internet]. 2008 Dec [cited 2014                                                     Jun 6];94(12):1620-6. Available from: http://heart.bmj.com/content/94/12/1620.abstract";
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Palpitations before syncope" withValue:4]];
