@@ -14,6 +14,10 @@
     return @"HEMORR\u2082HAGES";
 }
 
+- (NSString *)getReference {
+    return @"Gage BF, Yan Y, Milligan PE, Waterman AD, Culverhouse R, Rich MW, Radford MJ. Clinical classification schemes for predicitng hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J [Internet]. 2006 [cited 2014 Jun 6];151:713-9. Available from: http://www.hematology.fi/system/files/HEMORRHAGES-score.pdf";
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hepatic or renal disease" withValue:1 withDetails:@"cirrhosis, 2x AST/ALT, alb < 3.6, CrCl < 30"]];
