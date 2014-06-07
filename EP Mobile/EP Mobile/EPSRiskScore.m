@@ -65,4 +65,47 @@
 - (NSString *)getMessage:(int)score {
     return nil;
 }
+
+- (NSString *)getReference {
+    return nil;
+}
+
+- (NSArray *)risksSelected:(NSArray *)risks {
+    if ([risks count] == 0) {
+        return nil;
+    }
+    NSMutableArray *selected = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [risks count]; ++i) {
+        if ([[risks objectAtIndex:i] selected] == YES) {
+            [selected addObject:[[risks objectAtIndex:i] name]];
+        }
+    }
+    return selected;
+}
+
+- (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks {
+    NSString *riskList = [self formatRisks:risks];
+    NSString *report = @"Risk score: ";
+    report = [report stringByAppendingString:[self getTitle]];
+    report = [report stringByAppendingString:@"\nRisks: "];
+    report = [report stringByAppendingString:riskList];
+    report = [report stringByAppendingString:@"\n"];
+    report = [report stringByAppendingString:message];
+    report = [report stringByAppendingString:@"\nReference: "];
+    report = [report stringByAppendingString:[self getReference]];
+    report = [report stringByAppendingString:@"\n"];
+    // eliminate blank lines
+    report = [report stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
+    return report;
+}
+
+- (NSString *)formatRisks:(NSArray *)risks {
+    NSString *riskString = @"None";
+    if (risks != nil && [risks count] != 0) {
+        riskString = [risks componentsJoinedByString:@", "];
+    }
+    return riskString;
+}
+
+
 @end
