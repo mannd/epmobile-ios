@@ -166,13 +166,13 @@
 #pragma mark - Alert view delegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // note that there is no way not to dismiss the alert view with any button click
     if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
         // calculate full result here,
         NSArray *risksSelected = [riskScore risksSelected:risks];
         NSString* result = [riskScore getFullRiskReportFromMessage:[alertView message] andRisks:risksSelected];
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         pasteboard.string = result;
-        [alertView dismissWithClickedButtonIndex:0 animated:YES];
 
     }
 }

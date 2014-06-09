@@ -20,7 +20,7 @@
 }
 
 - (NSString *)getReference {
-    return @"Romhilt DW, Estes EH Jr. A point-score system for the ECG diagnosis of left ventricular hypertropy. Am Heart J. 1968 Jun;75(6):752-8.";
+    return @"Romhilt DW, Estes EH Jr. A point-score system for the ECG diagnosis of left ventricular hypertrophy. Am Heart J. 1968 Jun;75(6):752-8.";
 }
 
 - (NSMutableArray *)getArray {

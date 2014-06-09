@@ -15,7 +15,7 @@
 }
 
 - (NSString *)getReference {
-    return @"Gage BF, Yan Y, Milligan PE, Waterman AD, Culverhouse R, Rich MW, Radford MJ. Clinical classification schemes for predicitng hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J [Internet]. 2006 [cited 2014 Jun 6];151:713-9. Available from: http://www.hematology.fi/system/files/HEMORRHAGES-score.pdf";
+    return @"Gage BF, Yan Y, Milligan PE, Waterman AD, Culverhouse R, Rich MW, Radford MJ. Clinical classification schemes for predicting hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J [Internet]. 2006 [cited 2014 Jun 6];151:713-9. Available from: http://www.hematology.fi/system/files/HEMORRHAGES-score.pdf";
 }
 
 - (NSMutableArray *)getArray {
