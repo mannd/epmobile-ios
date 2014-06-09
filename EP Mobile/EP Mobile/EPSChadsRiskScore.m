@@ -10,8 +10,12 @@
 #import "EPSRiskFactor.h"
 
 @implementation EPSChadsRiskScore
--(NSString *)getTitle {
+- (NSString *)getTitle {
     return @"CHADS\u2082";
+}
+
+- (NSString *)getReference {
+    return @"Gage BF, Waterman AD, Shannon W, Boechler M, Rich MW, Radford MJ. Validation of clinical classification schemes for predicting stroke. JAMA [Internet]. 2001 Jun 13 [cited 2014 Jun 6];285(22):2864-70. Available from: http://jama.jamanetwork.com/article.aspx?articleid=193912";
 }
 
 - (NSMutableArray *)getArray {

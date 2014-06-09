@@ -15,6 +15,10 @@
     return @"Martin Algorithm";
 }
 
+- (NSString *)getReference {
+    return @"Martin TP, Hanusa BH, Kapoor WN.  Risk stratification of patients with syncope. Ann Emerg Med [Internet]. 1997 April [cited 2014 Jun                                                     6];29(4):459-66. Available from: http://www.annemergmed.com/article/S0196-0644(97)70217-8/abstract";
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal ECG" withValue:1 withDetails:@"New changes or non-sinus rhythm"]];

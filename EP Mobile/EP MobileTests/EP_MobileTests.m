@@ -12,6 +12,9 @@
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSWarfarinCalculatorViewController.h"
 #import "EPSDrugDoseCalculatorViewController.h"
+#import "EPSRiskScore.h"
+#import "EPSRiskFactor.h"
+#import "EPSChadsRiskScore.h"
 
 @implementation EP_MobileTests
 
@@ -45,24 +48,24 @@
     const int FRIDERICIA = 1;
     const int SAGIE = 2;
     const int HODGES = 3;
-    int result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:BAZETT];
-    XCTAssertTrue(result == 400, @"Actual result was %d", result);
+    long result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:BAZETT];
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:FRIDERICIA];   
-    XCTAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:SAGIE];
-    XCTAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:HODGES];
-    XCTAssertTrue(result == 400, @"Actual result was %d", result);
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:BAZETT];
-    XCTAssertTrue(result == 411, @"Actual result was %d", result);
+    XCTAssertTrue(result == 411, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:FRIDERICIA];
-    XCTAssertTrue(result == 395, @"Actual result was %d", result);
+    XCTAssertTrue(result == 395, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:SAGIE];
-    XCTAssertTrue(result == 397, @"Actual result was %d", result);    
+    XCTAssertTrue(result == 397, @"Actual result was %ld", result);    
     result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:HODGES];
-    XCTAssertTrue(result == 393, @"Actual result was %d", result);
+    XCTAssertTrue(result == 393, @"Actual result was %ld", result);
     result = [c qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:BAZETT];
-    XCTAssertTrue(result == 0, @"Actual result was %d", result);
+    XCTAssertTrue(result == 0, @"Actual result was %ld", result);
     
 }
 
@@ -100,6 +103,22 @@
     XCTAssertEqualWithAccuracy([vc creatinineFromMicroMolUnits:150.0], 1.696, 0.01);
     XCTAssertEqualWithAccuracy([vc creatinineFromMicroMolUnits:87.5], 0.98981, 0.01);
 
+}
+
+- (void)testRiskFactor {
+    EPSChadsRiskScore *riskScore = [[EPSChadsRiskScore alloc] init];
+    NSArray *risks = [riskScore getArray ];
+    NSArray *risksSelected = [riskScore risksSelected:risks];
+    NSString *riskString = [riskScore formatRisks:risksSelected];
+    XCTAssertTrue([riskString isEqualToString:@"None"]);
+    EPSRiskFactor *risk0 = [risks objectAtIndex:0];
+    risk0.selected = YES;
+    EPSRiskFactor *risk2 = [risks objectAtIndex:2];
+    risk2.selected = YES;
+    risksSelected = [riskScore risksSelected:risks];
+    riskString = [riskScore formatRisks:risksSelected];
+    XCTAssertTrue([riskString isEqualToString:@"Congestive heart failure, Age ≥ 75 years"]);
+    
 }
 
 

@@ -19,6 +19,10 @@
     return @"Hypertrophic CM";
 }
 
+- (NSString *)getReference {
+    return @"McKenna WJ. Behr ER. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart [Internet]. 2002 Feb [cited 2014 Jun 6];87(2):169-176. Available from: http://heart.bmj.com/content/87/2/169.full";
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     // Major criteria

@@ -15,6 +15,10 @@
     return @"SF Rule";
 }
 
+- (NSString *)getReference {
+    return @"Quinn J, McDermott D, Stiell I, Kohn M, Wells G. Prospective validation of the San Francisco Syncope rule to predict patients with serious outcomes. 2006 May [cited 2014 Jun 6];47(5):448-54. Available from: http://www.annemergmed.com/article/S0196-0644(05)01959-1/abstract";
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal ECG" withValue:1 withDetails:@"New changes or non-sinus rhythm"]];
@@ -30,7 +34,7 @@
     if (score < 1)
         message = [message stringByAppendingString:@"No or little risk of serious events at 30 days."];
     else
-        message = [message stringByAppendingString:@"Risk of serious events at 30 days (98% sensitive and 56% specific."];
+        message = [message stringByAppendingString:@"Risk of serious events at 30 days (98% sensitive and 56% specific)."];
     NSString *resultMessage = [[NSString alloc] initWithFormat:@"SF Rule Score %@\n%@", (score > 0 ? @"\u2265 1." : @"= 0."), message];
     return resultMessage;
 }
