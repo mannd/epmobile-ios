@@ -1894,11 +1894,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="fGd-zb-Hqv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Zq-Fn-EkL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gyt-Vl-6qm">
-                                <rect key="frame" x="20" y="107" width="280" height="29"/>
+                                <rect key="frame" x="20" y="106" width="374" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -1907,20 +1907,20 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QTc Interval (msec)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-D6-p5P">
-                                <rect key="frame" x="20" y="78" width="280" height="21"/>
+                                <rect key="frame" x="20" y="78" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pWE-wA-ke3">
-                                <rect key="frame" x="20" y="149" width="280" height="29"/>
+                                <rect key="frame" x="20" y="148" width="374" height="29"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-RR-HzT">
-                                <rect key="frame" x="20" y="185" width="280" height="275"/>
+                                <rect key="frame" x="20" y="184" width="374" height="531.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yXh-DH-lMg" id="53W-L9-wsz"/>
@@ -1946,6 +1946,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS" id="qEI-UM-QVe"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="qtcSegmentedControl" destination="Gyt-Vl-6qm" id="f4K-AJ-dPA"/>
                         <outlet property="riskTableView" destination="Id6-RR-HzT" id="mjJ-R3-LoE"/>
@@ -2709,10 +2710,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2533" y="-1011"/>
+            <point key="canvasLocation" x="-2751" y="-1109"/>
         </scene>
         <!--LVH-->
         <scene sceneID="s8B-nf-m3V">
@@ -2784,7 +2786,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             <objects>
                 <tableViewController id="0fl-pN-FCi" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gOI-r5-LEc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -2975,6 +2977,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="LVH Voltage Criteria" id="Yh2-Fu-qGS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIm-GV-y6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3094,7 +3097,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="aCU-aB-bhQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
@@ -3104,6 +3107,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3165,12 +3169,15 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
                                 <rect key="frame" x="7" y="68" width="305" height="234"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
                                 <rect key="frame" x="21" y="310" width="279" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="HH6-nD-xeE"/>
+                                </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <string key="text">R wave peak time in lead II (RWPT).
 Measure the onset of the QRS in ECG lead II to the first change in polarity (nadir Q or peak R). RWPT ≥ 50 msec strongly suggests VT (positive likelihood ratio 34.8). Reference: Pava LF, et al. Heart Rhythm 2010;7:922.</string>
@@ -3180,13 +3187,22 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KB4-Rc-uzv" firstAttribute="top" secondItem="v4f-bo-OZD" secondAttribute="bottom" constant="44" id="9LG-sG-meh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Mw-vh-A5V" secondAttribute="trailing" constant="-8" id="HHF-1d-NeQ"/>
+                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" constant="4" id="mnh-fZ-aas"/>
+                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leadingMargin" constant="-9" id="r8N-go-7G5"/>
+                            <constraint firstItem="v4f-bo-OZD" firstAttribute="centerX" secondItem="1e9-YG-z72" secondAttribute="centerX" id="uK1-T7-bEg"/>
+                            <constraint firstItem="v4f-bo-OZD" firstAttribute="top" secondItem="9Mw-vh-A5V" secondAttribute="bottom" constant="8" symbolic="YES" id="wzu-Pp-thd"/>
+                        </constraints>
                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                     </view>
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3627" y="-2015"/>
+            <point key="canvasLocation" x="-3453" y="-2047"/>
         </scene>
         <!--ARVC/D-->
         <scene sceneID="L5H-Ax-xj6">
@@ -5156,11 +5172,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
+        <segue reference="HkF-9J-Ir2"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="wO3-53-DBV"/>
         <segue reference="pFv-5Z-NQa"/>
-        <segue reference="zlS-au-Ibg"/>
-        <segue reference="fDD-Ze-qxl"/>
+        <segue reference="LkX-gi-qIk"/>
     </inferredMetricsTieBreakers>
 </document>
