@@ -1244,7 +1244,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="7RR-1d-gmx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xce-fs-yOv" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Tachycardia CL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-l8-uJd">
@@ -1356,7 +1356,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Entrainment Map" id="ofK-pU-Xox"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="concealedFusionSwitch" destination="ygY-1B-ial" id="4Cz-dP-WYE"/>
                         <outlet property="egqrsLabel" destination="mOI-iT-Rtr" id="T9R-5f-vo2"/>
@@ -1386,13 +1386,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-et-TmX">
-                                <rect key="frame" x="0.0" y="169" width="414" height="162"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="385827755.47134">
                                     <!--2013-03-24 14:22:35 +0000-->
                                 </date>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-gN-YFQ">
-                                <rect key="frame" x="20" y="119" width="374" height="29"/>
+                                <rect key="frame" x="4" y="119" width="312" height="29"/>
                                 <segments>
                                     <segment title="90 days"/>
                                     <segment title="40 days"/>
@@ -1402,17 +1402,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="changeNumberOfDays:" destination="hSz-kY-OPb" eventType="valueChanged" id="OGl-CQ-Kne"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
-                                <rect key="frame" x="20" y="672" width="58" height="44"/>
-                                <state key="normal" title="Calc">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-ot-ijf">
-                                <rect key="frame" x="335" y="672" width="58" height="44"/>
+                                <rect key="frame" x="262" y="418" width="42" height="30"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1421,13 +1412,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-uS-cbo">
-                                <rect key="frame" x="86" y="683" width="242" height="21"/>
+                                <rect key="frame" x="70" y="422" width="180" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" placeholder="Days" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7du-d7-6cx">
-                                <rect key="frame" x="303" y="74" width="91" height="30"/>
+                                <rect key="frame" x="213" y="70" width="91" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -1435,20 +1426,29 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-AZ-076">
-                                <rect key="frame" x="20" y="77" width="227" height="21"/>
+                                <rect key="frame" x="16" y="74" width="165" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-Om-7eu">
-                                <rect key="frame" x="311" y="633" width="51" height="31"/>
+                                <rect key="frame" x="213" y="352" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Subtract Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-vb-cmM">
-                                <rect key="frame" x="55" y="638" width="236" height="21"/>
+                                <rect key="frame" x="16" y="357" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
+                                <rect key="frame" x="16" y="410" width="58" height="45"/>
+                                <state key="normal" title="Calc">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -2951,7 +2951,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72" customClass="eps">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
@@ -2972,7 +2972,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                     </view>
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5023,11 +5023,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
-        <segue reference="HkF-9J-Ir2"/>
-        <segue reference="WZv-9D-sK8"/>
-        <segue reference="bT0-Tb-wFg"/>
-        <segue reference="ucK-8l-Jyw"/>
-        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="pGj-ye-BDw"/>
         <segue reference="zlS-au-Ibg"/>
+        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="WZv-9D-sK8"/>
+        <segue reference="wO3-53-DBV"/>
+        <segue reference="ucK-8l-Jyw"/>
     </inferredMetricsTieBreakers>
 </document>
