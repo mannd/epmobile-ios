@@ -3940,29 +3940,32 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="qDE-vj-ZfQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                <rect key="frame" x="12" y="116" width="297" height="248"/>
+                                <rect key="frame" x="59" y="244" width="297" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="29J-0W-RQm"/>
+                                    <constraint firstAttribute="height" constant="248" id="qdA-69-JPv"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="top" secondItem="8FP-vg-Gmf" secondAttribute="bottom" constant="52" id="0rc-yP-oBo"/>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerY" secondItem="3bH-b1-BzP" secondAttribute="centerY" id="X2j-To-zBJ"/>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leading" constant="12" id="m9A-D2-2ZC"/>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerX" secondItem="3bH-b1-BzP" secondAttribute="centerX" id="ojo-gi-8mV"/>
+                            <constraint firstAttribute="centerY" secondItem="Xtc-ai-f3e" secondAttribute="centerY" id="2BR-jR-1nG"/>
+                            <constraint firstAttribute="centerX" secondItem="Xtc-ai-f3e" secondAttribute="centerX" id="zTy-nd-Of7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <segue destination="PQv-Iu-QYe" kind="modal" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2194" y="-1032"/>
+            <point key="canvasLocation" x="-2132" y="-1086"/>
         </scene>
         <!--NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -4018,6 +4021,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="btM-lP-yv8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="headerLabel" destination="EIn-cj-Io0" id="FgF-m9-hGf"/>
                         <outlet property="notesTextView" destination="1Vx-uc-pdM" id="bsp-Mc-Bxc"/>
@@ -5267,10 +5271,10 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
         <segue reference="HkF-9J-Ir2"/>
-        <segue reference="sIb-ay-0FY"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
+        <segue reference="gzd-ih-l4g"/>
     </inferredMetricsTieBreakers>
 </document>
