@@ -73,7 +73,7 @@
     else
         cellHeight = ARVC_2010_CELL_HEIGHT;
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Risk" style:UIBarButtonItemStyleBordered target:self action:@selector(calculateScore)];
+                                   initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
     
 }

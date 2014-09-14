@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kBV-s3-VWz">
     <dependencies>
-        <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
+        <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -4230,7 +4230,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="F53-rT-ULF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-PB-nWj">
@@ -4322,6 +4322,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Warfarin Clinic" id="8Ck-fG-cEI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="inrField" destination="dU7-n3-yDr" id="JR8-p7-g6c"/>
                         <outlet property="resultLabel" destination="cOI-Fx-0AG" id="Iuc-SY-48c"/>
@@ -4334,7 +4335,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-T1-3Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1787" y="-1097"/>
+            <point key="canvasLocation" x="-1971" y="-1191"/>
         </scene>
         <!--Warfarin Dosing Table View Controller-->
         <scene sceneID="652-RR-u7n">
@@ -4345,7 +4346,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="HT9-sp-RBQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="00o-Pi-5Su">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-4R-EHc">
@@ -4682,6 +4683,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Interval/Rate Converter" id="Ua9-74-ghV"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="inputField" destination="ISU-N2-R0a" id="mDB-QM-Te5"/>
                         <outlet property="inputLabel" destination="u3u-Mb-TNY" id="g3q-cE-KfW"/>
@@ -4701,7 +4703,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="m6f-1n-GSk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AfC-EP-iLu" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-Gg-2so">
@@ -4814,6 +4816,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="pbU-Sa-gko"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="ageField" destination="R4Z-5m-lcW" id="Xsy-GG-qIQ"/>
                         <outlet property="creatinineField" destination="TFQ-6k-nzO" id="ICg-Xx-hB7"/>
@@ -4833,7 +4836,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController title="Normal EP Values" id="QEg-8T-H7h" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v9X-oc-aBr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -5144,10 +5147,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Normal EP Values" id="09V-8t-ZVq"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-AF-fbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3078" y="-1121"/>
+            <point key="canvasLocation" x="-3010" y="-1249"/>
         </scene>
         <!--Drug Calculators-->
         <scene sceneID="8SY-3g-55b">
@@ -5311,9 +5315,9 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="9A7-Dn-UeD"/>
         <segue reference="HkF-9J-Ir2"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="bT0-Tb-wFg"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
-        <segue reference="gzd-ih-l4g"/>
     </inferredMetricsTieBreakers>
 </document>
