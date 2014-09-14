@@ -189,121 +189,148 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="Fya-sj-4Yd"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="X7c-MZ-flg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhc-7O-EpN">
-                                <rect key="frame" x="0.0" y="65" width="320" height="989"/>
+                                <rect key="frame" x="0.0" y="65" width="414" height="989"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sodium (mEq/l)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMz-xe-CQf">
-                                        <rect key="frame" x="20" y="452" width="280" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sodium (mEq/l)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMz-xe-CQf">
+                                        <rect key="frame" x="20" y="452" width="374" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="UiN-i1-x22"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j7z-l2-laJ">
-                                        <rect key="frame" x="10" y="475" width="301" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j7z-l2-laJ">
+                                        <rect key="frame" x="10" y="475" width="395" height="29"/>
                                         <segments>
                                             <segment title="&lt; 135"/>
                                             <segment title="135-145"/>
                                             <segment title="> 145"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hgb (gm/dl)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6y-dN-Cg1">
-                                        <rect key="frame" x="18" y="511" width="285" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hgb (gm/dl)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6y-dN-Cg1">
+                                        <rect key="frame" x="18" y="511" width="379" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="mFD-tR-7KG"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUN (mg/dl)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-T6-q75">
-                                        <rect key="frame" x="24" y="571" width="272" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUN (mg/dl)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-T6-q75">
+                                        <rect key="frame" x="24" y="571" width="366" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Mpf-E8-dBJ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wgT-aV-FUc">
-                                        <rect key="frame" x="9" y="595" width="302" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wgT-aV-FUc">
+                                        <rect key="frame" x="9" y="595" width="396" height="29"/>
                                         <segments>
                                             <segment title="&lt; 20"/>
                                             <segment title="20-40"/>
                                             <segment title="> 40"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abnormal Conduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-g9-i3G">
-                                        <rect key="frame" x="20" y="387" width="280" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abnormal Conduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-g9-i3G">
+                                        <rect key="frame" x="20" y="387" width="374" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8ue-Jd-KFN"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Ui-fs-wFA">
-                                        <rect key="frame" x="10" y="416" width="300" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Ui-fs-wFA">
+                                        <rect key="frame" x="10" y="416" width="394" height="29"/>
                                         <segments>
                                             <segment title="No"/>
                                             <segment title="Yes - LBBB"/>
                                             <segment title="Yes - Other"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reason for Admission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-UB-cql">
-                                        <rect key="frame" x="46" y="326" width="229" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason for Admission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-UB-cql">
+                                        <rect key="frame" x="46" y="326" width="323" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="POG-gk-Amk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z3y-Dz-te9">
-                                        <rect key="frame" x="9" y="351" width="302" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z3y-Dz-te9">
+                                        <rect key="frame" x="9" y="351" width="396" height="29"/>
                                         <segments>
                                             <segment title="For procedure"/>
                                             <segment title="For CHF"/>
                                             <segment title="Other reason"/>
                                         </segments>
                                     </segmentedControl>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-0a-bOp">
-                                        <rect key="frame" x="8" y="631" width="302" height="250"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-0a-bOp">
+                                        <rect key="frame" x="8" y="631" width="396" height="250"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="11h-su-kHt"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="vup-Sl-A1o" id="Nn2-go-2ZU"/>
                                             <outlet property="delegate" destination="vup-Sl-A1o" id="vJc-RG-G5a"/>
                                         </connections>
                                     </tableView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-J4-GTK">
-                                        <rect key="frame" x="10" y="225" width="300" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-J4-GTK">
+                                        <rect key="frame" x="10" y="225" width="394" height="29"/>
                                         <segments>
                                             <segment title="Single"/>
                                             <segment title="Dual"/>
                                             <segment title="CRT-D"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NYHA Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-34-dtY">
-                                        <rect key="frame" x="32" y="261" width="256" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYHA Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-34-dtY">
+                                        <rect key="frame" x="32" y="261" width="350" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="25D-0c-kOJ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAH-7d-xzQ">
-                                        <rect key="frame" x="10" y="290" width="300" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAH-7d-xzQ">
+                                        <rect key="frame" x="10" y="290" width="394" height="29"/>
                                         <segments>
                                             <segment title="I/II"/>
                                             <segment title="III"/>
                                             <segment title="IV"/>
                                         </segments>
                                     </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-CI-gGR">
-                                        <rect key="frame" x="9" y="535" width="302" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-CI-gGR">
+                                        <rect key="frame" x="9" y="535" width="396" height="29"/>
                                         <segments>
                                             <segment title="&lt; 12"/>
                                             <segment title="12-14"/>
                                             <segment title="> 14"/>
                                         </segments>
                                     </segmentedControl>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ObW-YW-Q72">
-                                        <rect key="frame" x="18" y="0.0" width="285" height="162"/>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObW-YW-Q72">
+                                        <rect key="frame" x="18" y="0.0" width="379" height="162"/>
                                         <connections>
                                             <outlet property="dataSource" destination="vup-Sl-A1o" id="rB2-Qr-Vl6"/>
                                             <outlet property="delegate" destination="vup-Sl-A1o" id="ORr-aa-V2d"/>
                                         </connections>
                                     </pickerView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ICD Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoh-4R-t9X">
-                                        <rect key="frame" x="29" y="196" width="263" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICD Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoh-4R-t9X">
+                                        <rect key="frame" x="29" y="196" width="357" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="cOb-HB-EfU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Procedure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnR-Cs-UJU">
-                                        <rect key="frame" x="40" y="0.0" width="241" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Procedure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnR-Cs-UJU">
+                                        <rect key="frame" x="40" y="0.0" width="335" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="O0z-cl-32n"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -311,7 +338,58 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="MnR-Cs-UJU" firstAttribute="centerX" secondItem="ObW-YW-Q72" secondAttribute="centerX" id="1kQ-yS-ipG"/>
+                                    <constraint firstItem="Z3y-Dz-te9" firstAttribute="centerX" secondItem="6KI-UB-cql" secondAttribute="centerX" id="22h-5R-L1c"/>
+                                    <constraint firstItem="qHR-CI-gGR" firstAttribute="top" secondItem="Q6y-dN-Cg1" secondAttribute="bottom" constant="3" id="3dK-kE-04d"/>
+                                    <constraint firstItem="ObW-YW-Q72" firstAttribute="top" secondItem="Fhc-7O-EpN" secondAttribute="top" id="6XG-Gw-f6o"/>
+                                    <constraint firstItem="rAH-7d-xzQ" firstAttribute="centerX" secondItem="6KI-UB-cql" secondAttribute="centerX" id="8ZM-68-ahU"/>
+                                    <constraint firstItem="rAH-7d-xzQ" firstAttribute="leading" secondItem="MVJ-J4-GTK" secondAttribute="leading" id="9Ri-2m-P7H"/>
+                                    <constraint firstItem="eoh-4R-t9X" firstAttribute="top" secondItem="ObW-YW-Q72" secondAttribute="bottom" constant="34" id="9eN-8Z-WrK"/>
+                                    <constraint firstItem="qHR-CI-gGR" firstAttribute="leading" secondItem="Z3y-Dz-te9" secondAttribute="leading" id="9zF-9T-03m"/>
+                                    <constraint firstItem="Qvb-g9-i3G" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="20" id="ATq-bm-FC1"/>
+                                    <constraint firstItem="1Ui-fs-wFA" firstAttribute="trailing" secondItem="MjR-0a-bOp" secondAttribute="trailing" id="Bnt-N6-tDR"/>
+                                    <constraint firstItem="MVJ-J4-GTK" firstAttribute="centerX" secondItem="eoh-4R-t9X" secondAttribute="centerX" id="CQk-87-jS5"/>
                                     <constraint firstAttribute="height" constant="989" id="E1e-MS-6jg"/>
+                                    <constraint firstItem="MVJ-J4-GTK" firstAttribute="top" secondItem="eoh-4R-t9X" secondAttribute="bottom" constant="8" symbolic="YES" id="EdE-TZ-CST"/>
+                                    <constraint firstItem="1Ui-fs-wFA" firstAttribute="top" secondItem="Qvb-g9-i3G" secondAttribute="bottom" constant="8" symbolic="YES" id="Efv-WC-LjP"/>
+                                    <constraint firstItem="1Ui-fs-wFA" firstAttribute="trailing" secondItem="rAH-7d-xzQ" secondAttribute="trailing" id="Elu-NU-Z4b"/>
+                                    <constraint firstItem="wgT-aV-FUc" firstAttribute="centerX" secondItem="Dqz-T6-q75" secondAttribute="centerX" id="GZV-OJ-3kU"/>
+                                    <constraint firstItem="j7z-l2-laJ" firstAttribute="centerX" secondItem="Fhc-7O-EpN" secondAttribute="centerX" id="HUT-XJ-WWt"/>
+                                    <constraint firstItem="ObW-YW-Q72" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="18" id="IZD-Mb-RnW"/>
+                                    <constraint firstItem="6KI-UB-cql" firstAttribute="top" secondItem="rAH-7d-xzQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Ioj-f8-PmV"/>
+                                    <constraint firstItem="rAH-7d-xzQ" firstAttribute="leading" secondItem="1Ui-fs-wFA" secondAttribute="leading" id="JF0-t3-B2e"/>
+                                    <constraint firstItem="wgT-aV-FUc" firstAttribute="trailing" secondItem="qHR-CI-gGR" secondAttribute="trailing" id="MTh-eE-ukl"/>
+                                    <constraint firstItem="kpM-34-dtY" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="32" id="NmA-zk-19V"/>
+                                    <constraint firstItem="MnR-Cs-UJU" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="40" id="PIJ-te-j9f"/>
+                                    <constraint firstItem="j7z-l2-laJ" firstAttribute="trailing" secondItem="qHR-CI-gGR" secondAttribute="trailing" id="Pd6-kd-hFf"/>
+                                    <constraint firstItem="wgT-aV-FUc" firstAttribute="leading" secondItem="qHR-CI-gGR" secondAttribute="leading" id="PrK-e0-vRw"/>
+                                    <constraint firstItem="kpM-34-dtY" firstAttribute="top" secondItem="MVJ-J4-GTK" secondAttribute="bottom" constant="8" symbolic="YES" id="RZa-UH-yoZ"/>
+                                    <constraint firstItem="wgT-aV-FUc" firstAttribute="top" secondItem="Dqz-T6-q75" secondAttribute="bottom" constant="3" id="SGI-tS-L9N"/>
+                                    <constraint firstItem="Dqz-T6-q75" firstAttribute="top" secondItem="qHR-CI-gGR" secondAttribute="bottom" constant="8" symbolic="YES" id="UiP-cN-d5h"/>
+                                    <constraint firstItem="MjR-0a-bOp" firstAttribute="top" secondItem="wgT-aV-FUc" secondAttribute="bottom" constant="8" symbolic="YES" id="WFb-Ai-8nV"/>
+                                    <constraint firstItem="Q6y-dN-Cg1" firstAttribute="top" secondItem="j7z-l2-laJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Ymy-CG-Rfg"/>
+                                    <constraint firstItem="eoh-4R-t9X" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="29" id="ZTS-vA-EvU"/>
+                                    <constraint firstItem="qHR-CI-gGR" firstAttribute="centerX" secondItem="Q6y-dN-Cg1" secondAttribute="centerX" id="b1g-ED-GpV"/>
+                                    <constraint firstItem="MjR-0a-bOp" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leadingMargin" id="ccg-fb-b5e"/>
+                                    <constraint firstItem="MVJ-J4-GTK" firstAttribute="centerX" secondItem="kpM-34-dtY" secondAttribute="centerX" id="cv9-g0-7hk"/>
+                                    <constraint firstItem="j7z-l2-laJ" firstAttribute="leading" secondItem="1Ui-fs-wFA" secondAttribute="leading" id="dGT-HS-yQ5"/>
+                                    <constraint firstItem="Z3y-Dz-te9" firstAttribute="centerX" secondItem="Qvb-g9-i3G" secondAttribute="centerX" id="gFR-PC-rcU"/>
+                                    <constraint firstItem="rAH-7d-xzQ" firstAttribute="top" secondItem="kpM-34-dtY" secondAttribute="bottom" constant="8" symbolic="YES" id="gkP-9a-PSg"/>
+                                    <constraint firstItem="Qvb-g9-i3G" firstAttribute="top" secondItem="Z3y-Dz-te9" secondAttribute="bottom" constant="8" symbolic="YES" id="iFL-ZI-geI"/>
+                                    <constraint firstItem="Dqz-T6-q75" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="24" id="jKt-d8-sQg"/>
+                                    <constraint firstItem="Z3y-Dz-te9" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="9" id="jZ4-Yq-8HE"/>
+                                    <constraint firstItem="j7z-l2-laJ" firstAttribute="top" secondItem="VMz-xe-CQf" secondAttribute="bottom" constant="2" id="nHh-XI-jNQ"/>
+                                    <constraint firstItem="ObW-YW-Q72" firstAttribute="top" secondItem="MnR-Cs-UJU" secondAttribute="top" id="qS2-vk-jiT"/>
+                                    <constraint firstItem="Qvb-g9-i3G" firstAttribute="trailing" secondItem="VMz-xe-CQf" secondAttribute="trailing" id="qzK-6X-kzX"/>
+                                    <constraint firstItem="6KI-UB-cql" firstAttribute="leading" secondItem="Fhc-7O-EpN" secondAttribute="leading" constant="46" id="rC1-BU-KS1"/>
+                                    <constraint firstItem="Q6y-dN-Cg1" firstAttribute="leading" secondItem="ObW-YW-Q72" secondAttribute="leading" id="t97-gx-a1o"/>
+                                    <constraint firstItem="j7z-l2-laJ" firstAttribute="trailing" secondItem="Z3y-Dz-te9" secondAttribute="trailing" id="tCc-jk-dzN"/>
+                                    <constraint firstItem="rAH-7d-xzQ" firstAttribute="trailing" secondItem="MVJ-J4-GTK" secondAttribute="trailing" id="vzA-nR-Nwk"/>
+                                    <constraint firstItem="j7z-l2-laJ" firstAttribute="centerX" secondItem="VMz-xe-CQf" secondAttribute="centerX" id="wjW-aA-6Tq"/>
+                                    <constraint firstItem="VMz-xe-CQf" firstAttribute="top" secondItem="1Ui-fs-wFA" secondAttribute="bottom" constant="8" symbolic="YES" id="yAv-5r-oz7"/>
+                                    <constraint firstItem="Z3y-Dz-te9" firstAttribute="top" secondItem="6KI-UB-cql" secondAttribute="bottom" constant="4" id="yH4-TY-xq7"/>
+                                    <constraint firstItem="Q6y-dN-Cg1" firstAttribute="trailing" secondItem="ObW-YW-Q72" secondAttribute="trailing" id="yYy-g4-Jfd"/>
+                                    <constraint firstItem="Qvb-g9-i3G" firstAttribute="leading" secondItem="VMz-xe-CQf" secondAttribute="leading" id="zwF-o0-O8N"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -324,6 +402,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" title="ICD Implantation" id="oBM-1E-NLK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="abnormalConductionSegmentedControl" destination="1Ui-fs-wFA" id="CIg-TN-ImQ"/>
                         <outlet property="bunSegmentedControl" destination="wgT-aV-FUc" id="bgO-AD-Cgx"/>
@@ -339,7 +418,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lv8-OA-EiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3566" y="1555"/>
+            <point key="canvasLocation" x="-3551" y="1400"/>
         </scene>
         <!--EP Mobile-->
         <scene sceneID="k1X-XA-AxI">
@@ -4929,11 +5008,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
-        <segue reference="pGj-ye-BDw"/>
         <segue reference="sIb-ay-0FY"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
+        <segue reference="fDD-Ze-qxl"/>
     </inferredMetricsTieBreakers>
 </document>
