@@ -1014,8 +1014,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-Su-D4p">
-                                <rect key="frame" x="20" y="20" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-Su-D4p">
+                                <rect key="frame" x="4" y="20" width="312" height="29"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
@@ -1024,8 +1024,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="toggleSex:" destination="WgW-Px-vxE" eventType="valueChanged" id="sU8-5O-tuh"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="INF-SQ-lFM">
-                                <rect key="frame" x="161" y="75" width="139" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="INF-SQ-lFM">
+                                <rect key="frame" x="145" y="75" width="171" height="29"/>
                                 <segments>
                                     <segment title="lb"/>
                                     <segment title="kg"/>
@@ -1034,22 +1034,28 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="toggleWeightUnits:" destination="WgW-Px-vxE" eventType="valueChanged" id="FIY-ja-7S8"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-06-BX6">
-                                <rect key="frame" x="82" y="75" width="60" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-06-BX6">
+                                <rect key="frame" x="66" y="75" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cA1-fR-v4h"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="WgW-Px-vxE" eventType="editingDidEndOnExit" id="hVJ-Lz-ceQ"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xhk-2x-0f4">
-                                <rect key="frame" x="21" y="77" width="53" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xhk-2x-0f4">
+                                <rect key="frame" x="5" y="77" width="53" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3Pi-f1-Nfb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kAO-2U-Neg">
-                                <rect key="frame" x="161" y="133" width="139" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kAO-2U-Neg">
+                                <rect key="frame" x="145" y="133" width="171" height="29"/>
                                 <segments>
                                     <segment title="in"/>
                                     <segment title="cm"/>
@@ -1058,22 +1064,28 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="toggleHeightUnits:" destination="WgW-Px-vxE" eventType="valueChanged" id="nTi-Rx-eUx"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-kT-wXg">
-                                <rect key="frame" x="82" y="132" width="60" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-kT-wXg">
+                                <rect key="frame" x="66" y="132" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="WgW-Px-vxE" eventType="editingDidEndOnExit" id="vfs-ui-Ww8"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-rU-Cjr">
-                                <rect key="frame" x="24" y="135" width="50" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-rU-Cjr">
+                                <rect key="frame" x="8" y="135" width="50" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="a77-kj-odZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2an-Nc-I8z">
-                                <rect key="frame" x="20" y="173" width="133" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2an-Nc-I8z">
+                                <rect key="frame" x="4" y="173" width="133" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="J2z-wV-AI6"/>
+                                </constraints>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1081,8 +1093,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="calculate:" destination="WgW-Px-vxE" eventType="touchUpInside" id="RbE-F7-SzL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSA-Li-Cri">
-                                <rect key="frame" x="161" y="173" width="139" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSA-Li-Cri">
+                                <rect key="frame" x="145" y="173" width="171" height="37"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1090,15 +1102,18 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="clear:" destination="WgW-Px-vxE" eventType="touchUpInside" id="PLQ-53-7I1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LgC-fu-gZn">
-                                <rect key="frame" x="20" y="217" width="280" height="112"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LgC-fu-gZn">
+                                <rect key="frame" x="4" y="217" width="312" height="112"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M18-mI-lT6">
-                                <rect key="frame" x="20" y="337" width="133" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M18-mI-lT6">
+                                <rect key="frame" x="4" y="337" width="133" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Hc-8M-tAt"/>
+                                </constraints>
                                 <state key="normal" title="Copy IBW ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1106,8 +1121,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="copyIbw:" destination="WgW-Px-vxE" eventType="touchUpInside" id="ZG8-65-1kS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd6-Hd-KPz">
-                                <rect key="frame" x="161" y="337" width="139" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd6-Hd-KPz">
+                                <rect key="frame" x="145" y="337" width="171" height="44"/>
                                 <state key="normal" title="Copy ABW">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1117,11 +1132,53 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MUb-kT-wXg" firstAttribute="leading" secondItem="acW-06-BX6" secondAttribute="leading" id="2PJ-4d-QVQ"/>
+                            <constraint firstItem="INF-SQ-lFM" firstAttribute="top" secondItem="acW-06-BX6" secondAttribute="top" id="37C-Rw-wuM"/>
+                            <constraint firstItem="M18-mI-lT6" firstAttribute="baseline" secondItem="dd6-Hd-KPz" secondAttribute="firstBaseline" id="8Yu-4h-5fb"/>
+                            <constraint firstItem="LgC-fu-gZn" firstAttribute="trailing" secondItem="MSA-Li-Cri" secondAttribute="trailing" id="9If-re-y0w"/>
+                            <constraint firstItem="acW-06-BX6" firstAttribute="leading" secondItem="Xhk-2x-0f4" secondAttribute="trailing" constant="8" symbolic="YES" id="9Qf-7D-fmc"/>
+                            <constraint firstItem="Eth-D7-6LG" firstAttribute="top" secondItem="M18-mI-lT6" secondAttribute="bottom" constant="99" id="Ats-5D-dxp"/>
+                            <constraint firstItem="LgC-fu-gZn" firstAttribute="leading" secondItem="M18-mI-lT6" secondAttribute="leading" id="Dzf-xS-4vv"/>
+                            <constraint firstItem="XnI-rU-Cjr" firstAttribute="top" secondItem="Xhk-2x-0f4" secondAttribute="bottom" constant="37" id="H0I-Dk-xfH"/>
+                            <constraint firstItem="Jhs-Su-D4p" firstAttribute="top" secondItem="vMX-ak-cqp" secondAttribute="top" constant="20" symbolic="YES" id="IEM-OR-KV4"/>
+                            <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="INF-SQ-lFM" secondAttribute="trailing" id="IJi-O1-4Xh"/>
+                            <constraint firstItem="LgC-fu-gZn" firstAttribute="top" secondItem="2an-Nc-I8z" secondAttribute="bottom" constant="7" id="L1C-zZ-SmV"/>
+                            <constraint firstItem="Xhk-2x-0f4" firstAttribute="top" secondItem="caI-jc-Qmc" secondAttribute="bottom" constant="13" id="Ls1-ut-vRE"/>
+                            <constraint firstItem="Jhs-Su-D4p" firstAttribute="trailing" secondItem="INF-SQ-lFM" secondAttribute="trailing" id="MNS-sL-qNp"/>
+                            <constraint firstItem="dd6-Hd-KPz" firstAttribute="baseline" secondItem="M18-mI-lT6" secondAttribute="firstBaseline" id="Nj6-6r-SE0"/>
+                            <constraint firstItem="LgC-fu-gZn" firstAttribute="trailing" secondItem="dd6-Hd-KPz" secondAttribute="trailing" id="SHs-pX-ZkL"/>
+                            <constraint firstItem="MSA-Li-Cri" firstAttribute="top" secondItem="kAO-2U-Neg" secondAttribute="bottom" constant="12" id="UBz-k1-D8f"/>
+                            <constraint firstItem="kAO-2U-Neg" firstAttribute="centerY" secondItem="MUb-kT-wXg" secondAttribute="centerY" id="XKD-MY-Ft3"/>
+                            <constraint firstItem="2an-Nc-I8z" firstAttribute="baseline" secondItem="MSA-Li-Cri" secondAttribute="firstBaseline" id="Y9p-Xy-9nv"/>
+                            <constraint firstItem="dd6-Hd-KPz" firstAttribute="leading" secondItem="M18-mI-lT6" secondAttribute="trailing" constant="8" symbolic="YES" id="ZJC-Gd-zTY"/>
+                            <constraint firstItem="MUb-kT-wXg" firstAttribute="baseline" secondItem="XnI-rU-Cjr" secondAttribute="baseline" id="ad1-JE-OzQ"/>
+                            <constraint firstItem="XnI-rU-Cjr" firstAttribute="leading" secondItem="vMX-ak-cqp" secondAttribute="leading" constant="8" id="c8K-aX-pqb"/>
+                            <constraint firstItem="M18-mI-lT6" firstAttribute="top" secondItem="LgC-fu-gZn" secondAttribute="bottom" constant="8" symbolic="YES" id="cwT-mf-FPt"/>
+                            <constraint firstItem="MSA-Li-Cri" firstAttribute="leading" secondItem="kAO-2U-Neg" secondAttribute="leading" id="cyo-I1-h8x"/>
+                            <constraint firstItem="MUb-kT-wXg" firstAttribute="leading" secondItem="XnI-rU-Cjr" secondAttribute="trailing" constant="8" symbolic="YES" id="dkI-Dh-GOt"/>
+                            <constraint firstItem="acW-06-BX6" firstAttribute="top" secondItem="caI-jc-Qmc" secondAttribute="bottom" constant="11" id="eL3-DK-O7b"/>
+                            <constraint firstItem="MUb-kT-wXg" firstAttribute="trailing" secondItem="acW-06-BX6" secondAttribute="trailing" id="gOK-ja-EVF"/>
+                            <constraint firstItem="MUb-kT-wXg" firstAttribute="top" secondItem="acW-06-BX6" secondAttribute="bottom" constant="27" id="iAd-SG-vI3"/>
+                            <constraint firstItem="2an-Nc-I8z" firstAttribute="top" secondItem="MSA-Li-Cri" secondAttribute="top" id="khz-PF-oXQ"/>
+                            <constraint firstItem="2an-Nc-I8z" firstAttribute="leading" secondItem="LgC-fu-gZn" secondAttribute="leading" id="mjn-A6-wXA"/>
+                            <constraint firstItem="2an-Nc-I8z" firstAttribute="leading" secondItem="Jhs-Su-D4p" secondAttribute="leading" id="pE0-R0-hFj"/>
+                            <constraint firstItem="dd6-Hd-KPz" firstAttribute="top" secondItem="M18-mI-lT6" secondAttribute="top" id="qR3-LA-P7M"/>
+                            <constraint firstItem="MSA-Li-Cri" firstAttribute="baseline" secondItem="2an-Nc-I8z" secondAttribute="firstBaseline" id="qRo-B8-jlf"/>
+                            <constraint firstItem="Jhs-Su-D4p" firstAttribute="centerX" secondItem="vMX-ak-cqp" secondAttribute="centerX" id="rwy-0m-679"/>
+                            <constraint firstItem="MSA-Li-Cri" firstAttribute="leading" secondItem="2an-Nc-I8z" secondAttribute="trailing" constant="8" symbolic="YES" id="tEa-fo-3eM"/>
+                            <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="MSA-Li-Cri" secondAttribute="trailing" id="tF9-ia-ZQq"/>
+                            <constraint firstItem="Jhs-Su-D4p" firstAttribute="leading" secondItem="vMX-ak-cqp" secondAttribute="leading" constant="4" id="tOs-N6-eFG"/>
+                            <constraint firstItem="INF-SQ-lFM" firstAttribute="leading" secondItem="kAO-2U-Neg" secondAttribute="leading" id="tU1-Uj-Ekm"/>
+                            <constraint firstItem="MSA-Li-Cri" firstAttribute="leading" secondItem="dd6-Hd-KPz" secondAttribute="leading" id="wk0-Lc-QGl"/>
+                            <constraint firstItem="INF-SQ-lFM" firstAttribute="leading" secondItem="acW-06-BX6" secondAttribute="trailing" constant="19" id="x7X-OU-qRc"/>
+                        </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="WgW-Px-vxE" eventType="touchDown" id="E5c-sb-tgK"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Weight Calculator" id="Uoh-ar-h9v"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="heightTextField" destination="MUb-kT-wXg" id="CLy-NE-oUO"/>
                         <outlet property="heightUnitsSegmentedControl" destination="kAO-2U-Neg" id="vxa-cm-lZI"/>
@@ -1134,7 +1191,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wus-K6-qU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1223" y="-2399"/>
+            <point key="canvasLocation" x="-1394" y="-2394"/>
         </scene>
         <!--Atrial Tach Location-->
         <scene sceneID="AL5-ZZ-YO7">
@@ -5008,11 +5065,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
-        <segue reference="sIb-ay-0FY"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
         <segue reference="fDD-Ze-qxl"/>
+        <segue reference="9Dj-9f-rbx"/>
     </inferredMetricsTieBreakers>
 </document>
