@@ -1205,14 +1205,18 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-il-hkg">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-il-hkg">
                                 <rect key="frame" x="20" y="75" width="280" height="71"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-jy-c25">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-jy-c25">
                                 <rect key="frame" x="20" y="154" width="73" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5x3-5V-aXN"/>
+                                    <constraint firstAttribute="width" constant="73" id="nzd-5h-sW8"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1220,7 +1224,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="button1Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="M1a-bk-bZ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y34-aD-0la">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y34-aD-0la">
                                 <rect key="frame" x="227" y="154" width="73" height="44"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1229,7 +1233,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="button3Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="bPu-yo-dRp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmV-rW-Nsa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmV-rW-Nsa">
                                 <rect key="frame" x="124" y="154" width="73" height="44"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1238,8 +1242,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="button2Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="9wZ-42-88k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-nG-iwY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-nG-iwY">
                                 <rect key="frame" x="20" y="205" width="73" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4eM-aO-5gR"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1247,7 +1254,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="button4Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="rp6-Ct-yR8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zde-3L-Q7E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zde-3L-Q7E">
                                 <rect key="frame" x="124" y="205" width="73" height="44"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1256,7 +1263,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="button5Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="hYb-pf-MP9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIB-BC-Egf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIB-BC-Egf">
                                 <rect key="frame" x="227" y="205" width="73" height="44"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1265,8 +1272,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="button6Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="JDC-zu-xb3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-6e-UxA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-6e-UxA">
                                 <rect key="frame" x="20" y="256" width="280" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bHP-iI-lIt"/>
+                                </constraints>
                                 <state key="normal" title="Instructions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1276,8 +1286,45 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="centerX" secondItem="Zox-6e-UxA" secondAttribute="centerX" id="0YB-Hy-LHA"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="top" secondItem="1rf-jy-c25" secondAttribute="top" id="1tY-Y2-uq5"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="baseline" secondItem="yOC-nG-iwY" secondAttribute="baseline" id="3FI-5W-hXS"/>
+                            <constraint firstItem="1rf-jy-c25" firstAttribute="top" secondItem="6Os-il-hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="4j5-6w-KzI"/>
+                            <constraint firstItem="y34-aD-0la" firstAttribute="trailing" secondItem="TIB-BC-Egf" secondAttribute="trailing" id="5EY-5S-AEl"/>
+                            <constraint firstItem="yOC-nG-iwY" firstAttribute="trailing" secondItem="1rf-jy-c25" secondAttribute="trailing" id="E6I-gK-sWz"/>
+                            <constraint firstItem="6Os-il-hkg" firstAttribute="top" secondItem="HWO-OE-zrN" secondAttribute="bottom" constant="11" id="H2M-Ae-IPR"/>
+                            <constraint firstItem="TIB-BC-Egf" firstAttribute="baseline" secondItem="zde-3L-Q7E" secondAttribute="firstBaseline" id="IsO-32-Sjw"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="baseline" secondItem="y34-aD-0la" secondAttribute="firstBaseline" id="Mbb-xc-wZj"/>
+                            <constraint firstItem="y34-aD-0la" firstAttribute="baseline" secondItem="YmV-rW-Nsa" secondAttribute="firstBaseline" id="NDZ-Zg-hb2"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="baseline" secondItem="TIB-BC-Egf" secondAttribute="baseline" id="NZl-wS-s8u"/>
+                            <constraint firstItem="Zox-6e-UxA" firstAttribute="top" secondItem="yOC-nG-iwY" secondAttribute="bottom" constant="7" id="SNp-2C-aTE"/>
+                            <constraint firstItem="6Os-il-hkg" firstAttribute="trailing" secondItem="y34-aD-0la" secondAttribute="trailing" id="SWv-lV-S9Z"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="baseline" secondItem="1rf-jy-c25" secondAttribute="firstBaseline" id="TER-9t-kKK"/>
+                            <constraint firstItem="Jyc-nL-Tqf" firstAttribute="top" secondItem="Zox-6e-UxA" secondAttribute="bottom" constant="180" id="UCZ-GC-ro3"/>
+                            <constraint firstItem="yOC-nG-iwY" firstAttribute="leading" secondItem="Zox-6e-UxA" secondAttribute="leading" id="ViN-ry-WrV"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="leading" secondItem="1rf-jy-c25" secondAttribute="trailing" constant="31" id="afM-W8-H2t"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="leading" secondItem="YmV-rW-Nsa" secondAttribute="leading" id="an4-Fc-D7n"/>
+                            <constraint firstItem="y34-aD-0la" firstAttribute="leading" secondItem="YmV-rW-Nsa" secondAttribute="trailing" constant="30" id="bjT-pa-lMX"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="trailing" secondItem="zde-3L-Q7E" secondAttribute="trailing" id="c65-br-zBx"/>
+                            <constraint firstItem="TIB-BC-Egf" firstAttribute="leading" secondItem="y34-aD-0la" secondAttribute="leading" id="cyh-gZ-tyd"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="baseline" secondItem="TIB-BC-Egf" secondAttribute="firstBaseline" id="ha0-8o-QWM"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="top" secondItem="TIB-BC-Egf" secondAttribute="top" id="hzM-yo-yo3"/>
+                            <constraint firstItem="yOC-nG-iwY" firstAttribute="top" secondItem="zde-3L-Q7E" secondAttribute="top" id="jMH-Jr-z7j"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="top" secondItem="y34-aD-0la" secondAttribute="top" id="p9m-H7-KCK"/>
+                            <constraint firstItem="yOC-nG-iwY" firstAttribute="top" secondItem="1rf-jy-c25" secondAttribute="bottom" constant="7" id="pOi-c6-qAj"/>
+                            <constraint firstItem="yOC-nG-iwY" firstAttribute="leading" secondItem="1rf-jy-c25" secondAttribute="leading" id="pWy-6E-6ha"/>
+                            <constraint firstItem="Zox-6e-UxA" firstAttribute="trailing" secondItem="TIB-BC-Egf" secondAttribute="trailing" id="t6Y-Ls-b94"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="baseline" secondItem="yOC-nG-iwY" secondAttribute="firstBaseline" id="tSI-R5-98F"/>
+                            <constraint firstItem="6Os-il-hkg" firstAttribute="leading" secondItem="N4a-9B-7dU" secondAttribute="leadingMargin" constant="4" id="vjJ-pE-qdn"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="centerX" secondItem="N4a-9B-7dU" secondAttribute="centerX" id="w5Z-Ou-6hH"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="baseline" secondItem="1rf-jy-c25" secondAttribute="baseline" id="xZw-LW-jQ7"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="baseline" secondItem="y34-aD-0la" secondAttribute="baseline" id="zY8-IV-Y3S"/>
+                            <constraint firstItem="1rf-jy-c25" firstAttribute="leading" secondItem="6Os-il-hkg" secondAttribute="leading" id="zcj-eS-LOz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Atrial Tach Location" id="7tf-m5-bz5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="button1" destination="1rf-jy-c25" id="9z0-RW-WwB"/>
                         <outlet property="button2" destination="YmV-rW-Nsa" id="Atd-GS-3hi"/>
@@ -1291,7 +1338,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjs-FE-Azd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-1531"/>
+            <point key="canvasLocation" x="-260" y="-1571"/>
         </scene>
         <!--Entrainment Map-->
         <scene sceneID="OZ9-P5-J2I">
@@ -5065,11 +5112,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9A7-Dn-UeD"/>
+        <segue reference="VLv-ky-ss1"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
         <segue reference="fDD-Ze-qxl"/>
-        <segue reference="9Dj-9f-rbx"/>
     </inferredMetricsTieBreakers>
 </document>
