@@ -32,17 +32,18 @@
                         <viewControllerLayoutGuide type="bottom" id="5e2-jj-ZpT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ww0-Kk-xdd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
-                                <rect key="frame" x="44" y="53" width="212" height="188"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
+                                <rect key="frame" x="100" y="64" width="212" height="188"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="188" id="qMm-MX-RCn"/>
+                                    <constraint firstAttribute="width" constant="212" id="M5p-ao-2rw"/>
+                                    <constraint firstAttribute="height" constant="188" id="qqw-9l-7Bu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
-                                <rect key="frame" x="20" y="249" width="280" height="223"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
+                                <rect key="frame" x="20" y="244" width="280" height="223"/>
                                 <string key="text">Pseudo-delta wave Δ: Measured from earliest ventricular activation to the earliest fast deflection in any precordial lead. Pseudo-delta wave ≥ 34 msec predicts epicardial origin (Sens 83%, Spec 95%).
 
 Intrinsicoid deflection time (ID): Measured from earliest ventricular activation to the peak of the R wave in V2. ID of ≥ 85 msec predicts epicardial origin (Sens 87%, Spec 90%).
@@ -57,15 +58,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Bgx-S4-2Ha" secondAttribute="trailing" constant="64" id="22E-MW-omz"/>
-                            <constraint firstItem="LFv-s2-rHW" firstAttribute="leading" secondItem="Ww0-Kk-xdd" secondAttribute="leading" constant="20" symbolic="YES" id="Oce-TC-0F5"/>
-                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="leading" secondItem="Ww0-Kk-xdd" secondAttribute="leading" constant="44" id="S0b-dO-yTP"/>
-                            <constraint firstItem="LFv-s2-rHW" firstAttribute="top" secondItem="Bgx-S4-2Ha" secondAttribute="bottom" constant="8" symbolic="YES" id="SpW-Zs-nL7"/>
-                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="top" secondItem="Ww0-Kk-xdd" secondAttribute="top" constant="53" id="djK-er-TSf"/>
-                            <constraint firstItem="5e2-jj-ZpT" firstAttribute="top" secondItem="LFv-s2-rHW" secondAttribute="bottom" constant="8" id="wh8-ef-HMp"/>
+                            <constraint firstAttribute="centerX" secondItem="Bgx-S4-2Ha" secondAttribute="centerX" id="R5l-BF-UNm"/>
+                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="top" secondItem="iPq-uN-D9U" secondAttribute="bottom" id="vBE-LN-Rmd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Epi vs Endocardial VT" id="oXB-Rd-rwY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAX-Bg-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
