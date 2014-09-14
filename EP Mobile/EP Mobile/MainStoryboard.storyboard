@@ -1032,7 +1032,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-06-BX6">
-                                <rect key="frame" x="66" y="75" width="60" height="30"/>
+                                <rect key="frame" x="66" y="75" width="71" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -1056,7 +1056,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-kT-wXg">
-                                <rect key="frame" x="66" y="132" width="60" height="30"/>
+                                <rect key="frame" x="66" y="132" width="71" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -5017,7 +5017,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="zlS-au-Ibg"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="WZv-9D-sK8"/>
-        <segue reference="sIb-ay-0FY"/>
+        <segue reference="9Dj-9f-rbx"/>
         <segue reference="ucK-8l-Jyw"/>
     </inferredMetricsTieBreakers>
 </document>
