@@ -46,6 +46,15 @@
     [self performSegueWithIdentifier:@"AboutSegue" sender:nil];
 }
 
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:YES];
+    
+}
+
+
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];

@@ -29,9 +29,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIScrollView *scrollView = (UIScrollView *)self.view;
-    float width = scrollView.bounds.size.width;
-    float height = scrollView.bounds.size.height;
-    scrollView.contentSize = CGSizeMake(width, height);
+    float w = self.internalScrollView.bounds.size.width;
+    float h = self.internalScrollView.bounds.size.height;
+    scrollView.contentSize = CGSizeMake(w, h);
     scrollView.delegate = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
     NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
