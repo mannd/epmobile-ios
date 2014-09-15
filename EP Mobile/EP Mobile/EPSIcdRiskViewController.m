@@ -28,11 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIScrollView *scrollView = (UIScrollView *)self.view;
-    float width = scrollView.bounds.size.width;
-    float height = scrollView.bounds.size.height;
-    scrollView.contentSize = CGSizeMake(width, height);
-    scrollView.delegate = self;
+    //UIScrollView *scrollView = (UIScrollView *)self.view;
+    //float w = self.internalScrollView.bounds.size.width;
+    //scrollView.contentSize = CGSizeMake(w, 990);
+    //scrollView.delegate = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
     NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
     self.procedureTypeData = array;
@@ -45,7 +44,7 @@
     self.risks = riskArray;
     
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Risk" style:UIBarButtonItemStyleBordered target:self action:@selector(calculateScore)];
+                                   initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
 
 }

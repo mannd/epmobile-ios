@@ -88,6 +88,11 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *buttonCalculate = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResult:)];
+    self.toolbarItems = [ NSArray arrayWithObjects: buttonCalculate, nil ];
+
+
+    [self.navigationController setToolbarHidden:NO];
     
 }
 
