@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kBV-s3-VWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kBV-s3-VWz">
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-cy-u4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3214" y="-1716"/>
+            <point key="canvasLocation" x="-6026.25" y="-2145"/>
         </scene>
         <!--Epi vs Endocardial VT-->
         <scene sceneID="6Vl-xv-P4K">
@@ -70,14 +70,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAX-Bg-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1971" y="-2399"/>
+            <point key="canvasLocation" x="-3695.625" y="-2998.75"/>
         </scene>
         <!--Syncope-->
         <scene sceneID="v1d-vr-UE4">
             <objects>
                 <tableViewController id="GpZ-Ky-wdH" customClass="EPSSyncopeRiskViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kbk-e3-e5e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -100,7 +100,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="EgsysScoreSegue" id="fDD-Ze-qxl"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="EgsysScoreSegue" id="fDD-Ze-qxl"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="QB2-I6-4LO" style="IBUITableViewCellStyleDefault" id="AYU-1e-AV8">
@@ -120,7 +120,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="MartinScoreSegue" id="N8m-3x-1em"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="MartinScoreSegue" id="N8m-3x-1em"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lQz-BX-A0m" style="IBUITableViewCellStyleDefault" id="j70-OK-zzc">
@@ -140,7 +140,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="OesilScoreSegue" id="Cda-nH-838"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="OesilScoreSegue" id="Cda-nH-838"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="tER-ra-ov2" style="IBUITableViewCellStyleDefault" id="b4h-VH-prj">
@@ -160,7 +160,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="SfRuleSegue" id="5yz-gw-x5v"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="SfRuleSegue" id="5yz-gw-x5v"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -175,7 +175,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdU-hc-gxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-433" y="-2384"/>
+            <point key="canvasLocation" x="-811.875" y="-2980"/>
         </scene>
         <!--ICD Implantation-->
         <scene sceneID="PgV-hc-wVo">
@@ -416,14 +416,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lv8-OA-EiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3551" y="1400"/>
+            <point key="canvasLocation" x="-6658.125" y="1750"/>
         </scene>
         <!--EP Mobile-->
         <scene sceneID="k1X-XA-AxI">
             <objects>
                 <tableViewController id="hAV-CN-VfG" customClass="EPSMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BUr-MO-rbp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -446,7 +446,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hSz-kY-OPb" kind="push" id="haK-7t-E3C"/>
+                                            <segue destination="hSz-kY-OPb" kind="show" id="haK-7t-E3C"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Mpb-BA-cZM" style="IBUITableViewCellStyleDefault" id="7Na-dY-HhQ">
@@ -466,7 +466,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="eRb-uZ-GP2" kind="push" id="979-j6-MO8"/>
+                                            <segue destination="eRb-uZ-GP2" kind="show" id="979-j6-MO8"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="l68-T6-y6G" style="IBUITableViewCellStyleDefault" id="3Ee-hV-RK5">
@@ -486,7 +486,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="eJm-HL-6uf" kind="push" id="aQm-sT-ggu"/>
+                                            <segue destination="eJm-HL-6uf" kind="show" id="aQm-sT-ggu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="See-x6-Y5S" style="IBUITableViewCellStyleDefault" id="4pC-Yu-cUr">
@@ -506,7 +506,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="isk-zH-Tuy" kind="push" id="yHw-DJ-Wct"/>
+                                            <segue destination="isk-zH-Tuy" kind="show" id="yHw-DJ-Wct"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Dtp-nb-8RS" style="IBUITableViewCellStyleDefault" id="zJC-n9-ygc">
@@ -526,7 +526,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="sOk-N9-fM0" kind="push" id="M9c-7a-omc"/>
+                                            <segue destination="sOk-N9-fM0" kind="show" id="M9c-7a-omc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3LV-Fa-o5I" style="IBUITableViewCellStyleDefault" id="ar1-b6-lLh">
@@ -546,7 +546,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="WgW-Px-vxE" kind="push" id="ApD-DV-kqr"/>
+                                            <segue destination="WgW-Px-vxE" kind="show" id="ApD-DV-kqr"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -570,7 +570,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="px5-kc-Vhu" kind="push" id="8Bs-iC-XDP"/>
+                                            <segue destination="px5-kc-Vhu" kind="show" id="8Bs-iC-XDP"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BEJ-fq-uRR" style="IBUITableViewCellStyleDefault" id="O2q-zg-iLI">
@@ -590,7 +590,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="MUe-xB-0XX" kind="push" id="Bne-Eu-tHH"/>
+                                            <segue destination="MUe-xB-0XX" kind="show" id="Bne-Eu-tHH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HAg-Rt-3mG" style="IBUITableViewCellStyleDefault" id="QPN-x7-0jU">
@@ -610,7 +610,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="e5o-Mg-pZA" kind="push" id="0JW-qK-Irg"/>
+                                            <segue destination="e5o-Mg-pZA" kind="show" id="0JW-qK-Irg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lw4-8k-rby" style="IBUITableViewCellStyleDefault" id="0Ip-8U-U4D">
@@ -630,7 +630,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BNS-oY-3ea" kind="push" id="yuJ-cP-hRs"/>
+                                            <segue destination="BNS-oY-3ea" kind="show" id="yuJ-cP-hRs"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="p9o-6k-5Nz" style="IBUITableViewCellStyleDefault" id="Df4-ee-RSD">
@@ -650,7 +650,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="nEp-iW-oAh" kind="push" id="fpe-BN-1z5"/>
+                                            <segue destination="nEp-iW-oAh" kind="show" id="fpe-BN-1z5"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DyE-Mf-oeD" style="IBUITableViewCellStyleDefault" id="HEE-Gk-3qG">
@@ -670,7 +670,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="lqo-iy-icD" kind="push" identifier="ShortQTSegue" id="QJC-ZY-Qzy"/>
+                                            <segue destination="lqo-iy-icD" kind="show" identifier="ShortQTSegue" id="QJC-ZY-Qzy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MVG-WH-ZHn" style="IBUITableViewCellStyleDefault" id="GKt-9A-wDm">
@@ -690,7 +690,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="giy-zl-bNh" kind="push" id="2oa-ff-7pO"/>
+                                            <segue destination="giy-zl-bNh" kind="show" id="2oa-ff-7pO"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3gJ-zU-UxP" style="IBUITableViewCellStyleDefault" id="EQo-JS-28G">
@@ -710,7 +710,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gQS-UR-7vQ" kind="push" id="vxX-CM-xWZ"/>
+                                            <segue destination="gQS-UR-7vQ" kind="show" id="vxX-CM-xWZ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dqN-NA-uwo" style="IBUITableViewCellStyleDefault" id="RfR-lg-oXP">
@@ -730,7 +730,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qaF-mx-6rF" kind="push" id="44H-5G-06T"/>
+                                            <segue destination="qaF-mx-6rF" kind="show" id="44H-5G-06T"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -754,7 +754,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TwG-tp-Ach" kind="push" identifier="BrugadaDrugsSegue" id="tjF-od-osy"/>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="BrugadaDrugsSegue" id="tjF-od-osy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EEG-a9-Vzg" style="IBUITableViewCellStyleDefault" id="6V6-KI-xvk">
@@ -774,7 +774,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5Lf-aF-glM" kind="push" id="TJz-NZ-uh8"/>
+                                            <segue destination="5Lf-aF-glM" kind="show" id="TJz-NZ-uh8"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vFm-4F-8a0" style="IBUITableViewCellStyleDefault" id="Av1-GD-e7A">
@@ -794,7 +794,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="cPY-v3-A4O" kind="push" id="8tM-Kp-LAw"/>
+                                            <segue destination="cPY-v3-A4O" kind="show" id="8tM-Kp-LAw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HeU-Co-g3v" style="IBUITableViewCellStyleDefault" id="Aja-52-aWC">
@@ -814,7 +814,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="QEg-8T-H7h" kind="push" id="Ra3-V2-5j7"/>
+                                            <segue destination="QEg-8T-H7h" kind="show" id="Ra3-V2-5j7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="a2W-xk-jV3" style="IBUITableViewCellStyleDefault" id="bad-gB-qW4">
@@ -834,7 +834,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TwG-tp-Ach" kind="push" identifier="LongQTDrugsSegue" id="9A7-Dn-UeD"/>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="LongQTDrugsSegue" id="9A7-Dn-UeD"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -858,7 +858,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="Chads2Segue" id="7ur-AF-UMG"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="Chads2Segue" id="7ur-AF-UMG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ikf-bS-MVr" style="IBUITableViewCellStyleDefault" id="rvD-4k-0Cb">
@@ -878,7 +878,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="ChadsVascSegue" id="4eH-DF-Cyt"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="ChadsVascSegue" id="4eH-DF-Cyt"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lw7-Rc-dMU" style="IBUITableViewCellStyleDefault" id="obU-Ni-e3Z">
@@ -898,7 +898,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="HasBledSegue" id="pGj-ye-BDw"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="HasBledSegue" id="pGj-ye-BDw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Jsu-qK-3o9" style="IBUITableViewCellStyleDefault" id="D5d-Q7-wsB">
@@ -918,7 +918,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="HemorrhagesSegue" id="9RH-WQ-qQ2"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="HemorrhagesSegue" id="9RH-WQ-qQ2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nak-Eu-smJ" style="IBUITableViewCellStyleDefault" id="Ldh-M8-v5H">
@@ -938,7 +938,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="HcmSegue" id="hpG-ma-Wwm"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="HcmSegue" id="hpG-ma-Wwm"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ZsD-AL-did" style="IBUITableViewCellStyleDefault" id="wHt-KN-o78">
@@ -958,7 +958,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vup-Sl-A1o" kind="push" id="gEY-1F-zyR"/>
+                                            <segue destination="vup-Sl-A1o" kind="show" id="gEY-1F-zyR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wss-TW-Icg" style="IBUITableViewCellStyleDefault" id="bqP-Zg-Xfy">
@@ -978,7 +978,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="GpZ-Ky-wdH" kind="push" identifier="SyncopeRiskScores" id="GhH-WW-dFy"/>
+                                            <segue destination="GpZ-Ky-wdH" kind="show" identifier="SyncopeRiskScores" id="GhH-WW-dFy"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -993,12 +993,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <barButtonItem key="backBarButtonItem" title="EP Mobile" id="hXm-vT-P1U"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="JZA-px-d51" kind="modal" identifier="AboutSegue" modalTransitionStyle="flipHorizontal" id="NJQ-bC-nz4"/>
+                        <segue destination="JZA-px-d51" kind="presentation" identifier="AboutSegue" modalTransitionStyle="flipHorizontal" id="NJQ-bC-nz4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3297" y="1535"/>
+            <point key="canvasLocation" x="-6181.875" y="1918.75"/>
         </scene>
         <!--Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -1128,12 +1128,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <outlet property="sexSegmentedControl" destination="Jhs-Su-D4p" id="1nX-1v-D6C"/>
                         <outlet property="weightTextField" destination="acW-06-BX6" id="j11-vX-gy0"/>
                         <outlet property="weightUnitsSegmentedControl" destination="INF-SQ-lFM" id="zC7-Fr-RgD"/>
-                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="WeightCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="9Dj-9f-rbx"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="WeightCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="9Dj-9f-rbx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wus-K6-qU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1394" y="-2394"/>
+            <point key="canvasLocation" x="-2613.75" y="-2992.5"/>
         </scene>
         <!--Atrial Tach Location-->
         <scene sceneID="AL5-ZZ-YO7">
@@ -1213,7 +1213,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PQv-Iu-QYe" kind="modal" identifier="AtrialTachNotesSegue" id="VLv-ky-ss1"/>
+                                    <segue destination="PQv-Iu-QYe" kind="presentation" identifier="AtrialTachNotesSegue" id="VLv-ky-ss1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1234,7 +1234,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjs-FE-Azd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="-1571"/>
+            <point key="canvasLocation" x="-487.5" y="-1963.75"/>
         </scene>
         <!--Entrainment Map-->
         <scene sceneID="OZ9-P5-J2I">
@@ -1367,12 +1367,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <outlet property="sqrsLabel" destination="CdC-MZ-Jtn" id="UyJ-ID-eet"/>
                         <outlet property="sqrsTextField" destination="YBS-EI-sqa" id="OCv-DW-gdq"/>
                         <outlet property="tclTextField" destination="ycT-KT-abj" id="Ge8-9c-NYw"/>
-                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="EntrainmentNotesSegue" modalTransitionStyle="flipHorizontal" id="ojN-Fe-z3g"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="EntrainmentNotesSegue" modalTransitionStyle="flipHorizontal" id="ojN-Fe-z3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHN-5k-r6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-730" y="-1702"/>
+            <point key="canvasLocation" x="-1368.75" y="-2127.5"/>
         </scene>
         <!--Date Calculator-->
         <scene sceneID="kv5-Xr-G9v">
@@ -1464,12 +1464,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <outlet property="numberOfDaysTextField" destination="7du-d7-6cx" id="riZ-1e-Bch"/>
                         <outlet property="resultLabel" destination="ttx-uS-cbo" id="3Eo-2m-pd4"/>
                         <outlet property="subtractDaysSwitch" destination="TFs-Om-7eu" id="7j5-vP-Igh"/>
-                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="DateCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="wO3-53-DBV"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="DateCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="wO3-53-DBV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br2-3y-1zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762" y="-922"/>
+            <point key="canvasLocation" x="-1428.75" y="-1152.5"/>
         </scene>
         <!--Link View Controller-->
         <scene sceneID="wuk-kW-8mj">
@@ -1480,7 +1480,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="qcC-8d-5wf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UeZ-HF-lbM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
@@ -1497,14 +1497,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1278" y="1191"/>
+            <point key="canvasLocation" x="-2396.25" y="1488.75"/>
         </scene>
         <!--VT-->
         <scene sceneID="bq8-Pb-GWV">
             <objects>
                 <tableViewController id="giy-zl-bNh" customClass="EPSVTViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYS-Pp-zIq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1527,7 +1527,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Pvc-ip-j9i" kind="push" id="uik-ff-fjZ"/>
+                                            <segue destination="Pvc-ip-j9i" kind="show" id="uik-ff-fjZ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Lrc-5f-tjK" style="IBUITableViewCellStyleDefault" id="GQW-eW-PG6">
@@ -1547,7 +1547,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="OutflowVTSegue" id="T9m-qH-TX2"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="OutflowVTSegue" id="T9m-qH-TX2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5sn-ig-pBH" style="IBUITableViewCellStyleDefault" id="Hdx-HP-oQm">
@@ -1567,7 +1567,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="AnnularVTSegue" id="BXP-mT-oa5"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="AnnularVTSegue" id="BXP-mT-oa5"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1582,14 +1582,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lZ-2g-w1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1278" y="-2009"/>
+            <point key="canvasLocation" x="-2396.25" y="-2511.25"/>
         </scene>
         <!--Long QT Syndrome-->
         <scene sceneID="Sog-O3-tzt">
             <objects>
                 <tableViewController id="nEp-iW-oAh" customClass="EPSLQTSTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eg8-xk-Uep">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1612,7 +1612,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Xwt-iy-wz5" kind="push" id="8cu-Hb-IL0"/>
+                                            <segue destination="Xwt-iy-wz5" kind="show" id="8cu-Hb-IL0"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c8j-AN-Crx" style="IBUITableViewCellStyleDefault" id="QBn-5V-bGw">
@@ -1632,7 +1632,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="yXh-DH-lMg" kind="push" id="wFY-UI-DZO"/>
+                                            <segue destination="yXh-DH-lMg" kind="show" id="wFY-UI-DZO"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dQV-un-dCN" style="IBUITableViewCellStyleDefault" id="s0o-Uw-roo">
@@ -1652,7 +1652,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="rz7-AJ-Xbv" kind="push" id="F6C-Uf-6Cm"/>
+                                            <segue destination="rz7-AJ-Xbv" kind="show" id="F6C-Uf-6Cm"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1669,7 +1669,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-r8-eVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3529" y="-184"/>
+            <point key="canvasLocation" x="-6616.875" y="-230"/>
         </scene>
         <!--LQTS-->
         <scene sceneID="W8c-lv-CGf">
@@ -1741,14 +1741,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBs-yc-JAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2017" y="-1803"/>
+            <point key="canvasLocation" x="-3781.875" y="-2253.75"/>
         </scene>
         <!--LQT 1-->
         <scene sceneID="hEf-rr-Rr2">
             <objects>
                 <tableViewController id="g7a-XK-NAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vpy-Q3-sDV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1910,14 +1910,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Fl-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2937" y="-376"/>
+            <point key="canvasLocation" x="-5506.875" y="-470"/>
         </scene>
         <!--LQT 2-->
         <scene sceneID="Mgx-ZU-nDB">
             <objects>
                 <tableViewController id="8yg-ey-fv3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3eT-3Q-Tgb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2079,7 +2079,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2437" y="-184"/>
+            <point key="canvasLocation" x="-4569.375" y="-230"/>
         </scene>
         <!--LQTS Subtypes-->
         <scene sceneID="pmf-U3-p8F">
@@ -2103,7 +2103,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufU-3U-yOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3817" y="-1109"/>
+            <point key="canvasLocation" x="-7156.875" y="-1386.25"/>
         </scene>
         <!--LQT 5-11-->
         <scene sceneID="9ko-Jl-hmG">
@@ -2114,7 +2114,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="SvN-fK-CzK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cgn-ix-R6J">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-yo-Op1">
@@ -2131,14 +2131,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uld-V7-BgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3853" y="-453"/>
+            <point key="canvasLocation" x="-7224.375" y="-566.25"/>
         </scene>
         <!--LQT 4-->
         <scene sceneID="IpH-dg-zvm">
             <objects>
                 <tableViewController id="dbO-Dt-ozE" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mw2-6h-B2m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2300,14 +2300,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umm-np-Lbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3655" y="-544"/>
+            <point key="canvasLocation" x="-6853.125" y="-680"/>
         </scene>
         <!--LQT 3-->
         <scene sceneID="NkL-gw-vQK">
             <objects>
                 <tableViewController id="Oqu-Qb-RBM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oMS-87-ZKo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2469,7 +2469,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2065" y="-271"/>
+            <point key="canvasLocation" x="-3871.875" y="-338.75"/>
         </scene>
         <!--LQTS ECG Patterns-->
         <scene sceneID="I94-Wk-eUW">
@@ -2500,14 +2500,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2751" y="-1109"/>
+            <point key="canvasLocation" x="-5158.125" y="-1386.25"/>
         </scene>
         <!--LVH-->
         <scene sceneID="s8B-nf-m3V">
             <objects>
                 <tableViewController id="BNS-oY-3ea" customClass="EPSLVHTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OfG-uj-FEZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2530,7 +2530,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="0fl-pN-FCi" kind="push" id="5gP-64-IBt"/>
+                                            <segue destination="0fl-pN-FCi" kind="show" id="5gP-64-IBt"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Owf-kh-9VZ" style="IBUITableViewCellStyleDefault" id="A9I-fK-qTC">
@@ -2550,7 +2550,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jt3-by-I3p" kind="push" identifier="EstesSegue" id="HkF-9J-Ir2"/>
+                                            <segue destination="Jt3-by-I3p" kind="show" identifier="EstesSegue" id="HkF-9J-Ir2"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2565,7 +2565,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLS-zH-Nev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-782" y="1621"/>
+            <point key="canvasLocation" x="-1466.25" y="2026.25"/>
         </scene>
         <!--LVH Voltage Criteria-->
         <scene sceneID="5J4-b1-xfe">
@@ -2767,14 +2767,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIm-GV-y6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2717" y="215"/>
+            <point key="canvasLocation" x="-5094.375" y="268.75"/>
         </scene>
         <!--WCT-->
         <scene sceneID="LKt-TZ-t6U">
             <objects>
                 <tableViewController id="gQS-UR-7vQ" customClass="EPSWCTTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TxO-6c-JAG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2797,7 +2797,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="BrugadaAlgorithmSegue" id="BtS-Mb-lIg"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="BrugadaAlgorithmSegue" id="BtS-Mb-lIg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Boe-9B-Oh5" style="IBUITableViewCellStyleDefault" id="9bz-rv-rAR">
@@ -2817,7 +2817,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ntH-d0-hOl" kind="push" id="Sx0-WJ-m8b"/>
+                                            <segue destination="ntH-d0-hOl" kind="show" id="Sx0-WJ-m8b"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kHj-xD-wa0" style="IBUITableViewCellStyleDefault" id="ApO-D9-739">
@@ -2837,7 +2837,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="v7F-Ni-Oso" kind="push" id="ERT-5M-QBw"/>
+                                            <segue destination="v7F-Ni-Oso" kind="show" id="ERT-5M-QBw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NY5-4i-Bkp" style="IBUITableViewCellStyleDefault" id="SlV-Z7-w9r">
@@ -2857,7 +2857,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="VereckeiAlgorithmSegue" id="LkX-gi-qIk"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="VereckeiAlgorithmSegue" id="LkX-gi-qIk"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2872,7 +2872,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6J-nQ-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1971" y="851"/>
+            <point key="canvasLocation" x="-3695.625" y="1063.75"/>
         </scene>
         <!--RBBB in V1-->
         <scene sceneID="wD2-q2-jc9">
@@ -2897,7 +2897,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3261" y="-2384"/>
+            <point key="canvasLocation" x="-6114.375" y="-2980"/>
         </scene>
         <!--LBBB in V1-->
         <scene sceneID="OFo-xx-IkS">
@@ -2908,7 +2908,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="iFd-wc-3l4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
@@ -2921,7 +2921,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rn4-e9-KqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3617" y="-2384"/>
+            <point key="canvasLocation" x="-6781.875" y="-2980"/>
         </scene>
         <!--Morphology Criteria-->
         <scene sceneID="koM-V1-bil">
@@ -2941,7 +2941,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2567" y="-2239"/>
+            <point key="canvasLocation" x="-4813.125" y="-2798.75"/>
         </scene>
         <!--R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
@@ -2977,14 +2977,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3453" y="-2047"/>
+            <point key="canvasLocation" x="-6474.375" y="-2558.75"/>
         </scene>
         <!--ARVC/D-->
         <scene sceneID="L5H-Ax-xj6">
             <objects>
                 <tableViewController id="px5-kc-Vhu" customClass="EPSARVCTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sc4-9e-0Q9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -3007,7 +3007,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oHx-TU-Y6s" kind="push" identifier="ARVC1994Segue" id="TBZ-O5-SDC"/>
+                                            <segue destination="oHx-TU-Y6s" kind="show" identifier="ARVC1994Segue" id="TBZ-O5-SDC"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ur4-nd-KPu" style="IBUITableViewCellStyleDefault" id="qsk-Jc-g5c">
@@ -3027,7 +3027,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oHx-TU-Y6s" kind="push" identifier="ARVC2010Segue" id="WZv-9D-sK8"/>
+                                            <segue destination="oHx-TU-Y6s" kind="show" identifier="ARVC2010Segue" id="WZv-9D-sK8"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -3042,14 +3042,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQD-ug-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3297" y="-551"/>
+            <point key="canvasLocation" x="-6181.875" y="-688.75"/>
         </scene>
         <!--ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
             <objects>
                 <tableViewController id="oHx-TU-Y6s" customClass="EPSARVC2010TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rZm-5w-a1a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -3087,7 +3087,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFl-fg-FOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2701" y="-822"/>
+            <point key="canvasLocation" x="-5064.375" y="-1027.5"/>
         </scene>
         <!--Simple Algorithm View Controller-->
         <scene sceneID="ZHr-QH-jRc">
@@ -3098,7 +3098,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="BsG-Le-w3L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-Gg-ohP">
@@ -3140,7 +3140,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PQv-Iu-QYe" kind="modal" identifier="NotesSegue" id="oIL-n2-cNM"/>
+                                    <segue destination="PQv-Iu-QYe" kind="presentation" identifier="NotesSegue" id="oIL-n2-cNM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-JJ-jxK">
@@ -3149,7 +3149,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vtm-vW-Qf5" kind="push" id="4c8-da-XP1"/>
+                                    <segue destination="vtm-vW-Qf5" kind="show" id="4c8-da-XP1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3165,19 +3165,19 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <outlet property="noButton" destination="Wz0-ac-a0F" id="Jz3-tv-Ky6"/>
                         <outlet property="questionLabel" destination="UQt-Gg-ohP" id="QbH-Vo-aSQ"/>
                         <outlet property="yesButton" destination="f4B-Ev-5du" id="1E3-g4-PcM"/>
-                        <segue destination="YrN-55-ygA" kind="push" identifier="MapSegue" id="HWu-7U-py6"/>
+                        <segue destination="YrN-55-ygA" kind="show" identifier="MapSegue" id="HWu-7U-py6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="865"/>
+            <point key="canvasLocation" x="-230.625" y="1081.25"/>
         </scene>
         <!--LBBB in V1-->
         <scene sceneID="n6J-Ns-GoM">
             <objects>
                 <tableViewController id="grW-sJ-dLw" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6p7-DV-f9z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3200,14 +3200,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5b-Gs-4ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1128" y="-459"/>
+            <point key="canvasLocation" x="-2115" y="-573.75"/>
         </scene>
         <!--RBBB in V1-->
         <scene sceneID="9NI-hW-HUE">
             <objects>
                 <tableViewController id="UcS-xA-2wF" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OGV-Nc-tw7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3230,7 +3230,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVv-tn-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1535" y="-459"/>
+            <point key="canvasLocation" x="-2878.125" y="-573.75"/>
         </scene>
         <!--CMS ICD Criteria-->
         <scene sceneID="gR2-cI-aou">
@@ -3290,12 +3290,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <outlet property="criteriaTableView" destination="Cyb-Q4-P68" id="W2k-wd-fiQ"/>
                         <outlet property="efSegmentedControl" destination="cjk-t1-GJ8" id="BX3-AB-UA4"/>
                         <outlet property="hfClassSegmentedControl" destination="5sX-AV-8s6" id="YfD-mp-8G1"/>
-                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="CMSNotesSegue" modalTransitionStyle="flipHorizontal" id="sIb-ay-0FY"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="CMSNotesSegue" modalTransitionStyle="flipHorizontal" id="sIb-ay-0FY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhe-NH-Dng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-237" y="-1408"/>
+            <point key="canvasLocation" x="-444.375" y="-1760"/>
         </scene>
         <!--Morphology-->
         <scene sceneID="sG9-FN-jzK">
@@ -3318,14 +3318,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CST-Qs-u8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1916" y="-483"/>
+            <point key="canvasLocation" x="-3592.5" y="-603.75"/>
         </scene>
         <!--WPW-->
         <scene sceneID="vVV-kV-uUe">
             <objects>
                 <tableViewController id="qaF-mx-6rF" customClass="EPSWPWTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -3348,7 +3348,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="YrN-55-ygA" kind="push" id="pFv-5Z-NQa"/>
+                                            <segue destination="YrN-55-ygA" kind="show" id="pFv-5Z-NQa"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3fL-sW-Ock" style="IBUITableViewCellStyleDefault" id="Y0H-RR-a6e">
@@ -3368,7 +3368,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="ArrudaSegue" id="zlS-au-Ibg"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="ArrudaSegue" id="zlS-au-Ibg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M26-3b-beC" style="IBUITableViewCellStyleDefault" id="IdX-G4-Nag">
@@ -3388,7 +3388,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="MilsteinSegue" id="Rd3-Ia-06S"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="MilsteinSegue" id="Rd3-Ia-06S"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5Zy-nJ-FWL" style="IBUITableViewCellStyleDefault" id="eMv-Oo-REm">
@@ -3408,7 +3408,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="29p-JF-Eiw" kind="push" identifier="ModifiedArrudaSegue" id="n92-eI-ba6"/>
+                                            <segue destination="29p-JF-Eiw" kind="show" identifier="ModifiedArrudaSegue" id="n92-eI-ba6"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -3423,7 +3423,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgk-ng-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="-856"/>
+            <point key="canvasLocation" x="-487.5" y="-1070"/>
         </scene>
         <!--SQTS-->
         <scene sceneID="ptk-VO-6fT">
@@ -3484,7 +3484,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqu-Zd-ecp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2806" y="-1392"/>
+            <point key="canvasLocation" x="-5261.25" y="-1740"/>
         </scene>
         <!--AV Annulus-->
         <scene sceneID="LXY-4s-Z6Q">
@@ -3667,7 +3667,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1445" y="501"/>
+            <point key="canvasLocation" x="-2709.375" y="626.25"/>
         </scene>
         <!--Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
@@ -3698,12 +3698,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2132" y="-1086"/>
+            <point key="canvasLocation" x="-3997.5" y="-1357.5"/>
         </scene>
         <!--NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -3768,7 +3768,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-795" y="-2394"/>
+            <point key="canvasLocation" x="-1490.625" y="-2992.5"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -3824,7 +3824,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2857" y="2246"/>
+            <point key="canvasLocation" x="-5356.875" y="2807.5"/>
         </scene>
         <!--QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
@@ -3920,7 +3920,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgu-il-7Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2137" y="-1097"/>
+            <point key="canvasLocation" x="-4006.875" y="-1371.25"/>
         </scene>
         <!--Warfarin Clinic-->
         <scene sceneID="LZR-Ds-iJD">
@@ -4030,13 +4030,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <outlet property="tabletSizePickerView" destination="Et0-4W-qXv" id="v3v-Ij-JPT"/>
                         <outlet property="targetSegmentedControl" destination="6HG-3O-j5s" id="dRu-oM-uLQ"/>
                         <outlet property="weeklyDoseField" destination="Thg-P6-5q7" id="Cld-Oh-fOu"/>
-                        <segue destination="hga-UT-wNf" kind="modal" identifier="DosingSegue" id="bQ2-uS-Pdo"/>
-                        <segue destination="PQv-Iu-QYe" kind="modal" identifier="WarfarinNotesSegue" modalTransitionStyle="flipHorizontal" id="bT0-Tb-wFg"/>
+                        <segue destination="hga-UT-wNf" kind="presentation" identifier="DosingSegue" id="bQ2-uS-Pdo"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="WarfarinNotesSegue" modalTransitionStyle="flipHorizontal" id="bT0-Tb-wFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-T1-3Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1971" y="-1191"/>
+            <point key="canvasLocation" x="-3695.625" y="-1488.75"/>
         </scene>
         <!--Warfarin Dosing Table View Controller-->
         <scene sceneID="652-RR-u7n">
@@ -4262,14 +4262,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF0-l1-oVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3071" y="-243"/>
+            <point key="canvasLocation" x="-5758.125" y="-303.75"/>
         </scene>
         <!--Title-->
         <scene sceneID="kti-NI-1xN">
             <objects>
                 <tableViewController id="Jt3-by-I3p" customClass="EPSRiskScoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ho-EI-08a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -4307,7 +4307,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-G5-ryY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="-2312"/>
+            <point key="canvasLocation" x="-90" y="-2890"/>
         </scene>
         <!--Interval/Rate Converter-->
         <scene sceneID="s0B-z1-cNk">
@@ -4318,7 +4318,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="hBE-rR-j0F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qc1-Hs-d2Q" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-Rp-Gfg">
@@ -4384,7 +4384,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Interval/Rate Converter" id="Ua9-74-ghV"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="inputField" destination="ISU-N2-R0a" id="mDB-QM-Te5"/>
                         <outlet property="inputLabel" destination="u3u-Mb-TNY" id="g3q-cE-KfW"/>
@@ -4393,7 +4392,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="213-4v-dCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3395" y="-285"/>
+            <point key="canvasLocation" x="-6234" y="-485"/>
         </scene>
         <!--Drug Dose Calculator View Controller-->
         <scene sceneID="Yag-7n-5UD">
@@ -4530,7 +4529,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1246" y="-2116"/>
+            <point key="canvasLocation" x="-2336.25" y="-2645"/>
         </scene>
         <!--Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -4852,14 +4851,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-AF-fbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3010" y="-1249"/>
+            <point key="canvasLocation" x="-5643.75" y="-1561.25"/>
         </scene>
         <!--Drug Calculators-->
         <scene sceneID="8SY-3g-55b">
             <objects>
                 <tableViewController id="eRb-uZ-GP2" customClass="EPSDrugDoseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jnL-qM-irM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -4882,7 +4881,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gDm-AP-yUd" kind="push" identifier="ApixabanSegue" id="ucK-8l-Jyw"/>
+                                            <segue destination="gDm-AP-yUd" kind="show" identifier="ApixabanSegue" id="ucK-8l-Jyw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BpW-Cj-Zdc" style="IBUITableViewCellStyleDefault" id="5jR-VC-9wy">
@@ -4902,7 +4901,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gDm-AP-yUd" kind="push" identifier="DabigatranSegue" id="eiy-8v-4OG"/>
+                                            <segue destination="gDm-AP-yUd" kind="show" identifier="DabigatranSegue" id="eiy-8v-4OG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4IK-e8-uYR" style="IBUITableViewCellStyleDefault" id="h27-S6-8Zc">
@@ -4922,7 +4921,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gDm-AP-yUd" kind="push" identifier="DofetilideSegue" id="gv9-3M-yHC"/>
+                                            <segue destination="gDm-AP-yUd" kind="show" identifier="DofetilideSegue" id="gv9-3M-yHC"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MfJ-kt-YdA" style="IBUITableViewCellStyleDefault" id="OUV-Iu-6Me">
@@ -4942,7 +4941,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gDm-AP-yUd" kind="push" identifier="RivaroxabanSegue" id="dMK-0T-o1I"/>
+                                            <segue destination="gDm-AP-yUd" kind="show" identifier="RivaroxabanSegue" id="dMK-0T-o1I"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="62h-61-bDz" style="IBUITableViewCellStyleDefault" id="VQd-qC-5u6">
@@ -4962,7 +4961,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gDm-AP-yUd" kind="push" identifier="SotalolSegue" id="LxC-Ko-A9I"/>
+                                            <segue destination="gDm-AP-yUd" kind="show" identifier="SotalolSegue" id="LxC-Ko-A9I"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -4979,7 +4978,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQn-gj-7lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1792" y="221"/>
+            <point key="canvasLocation" x="-3360" y="276.25"/>
         </scene>
     </scenes>
     <resources>
@@ -5007,18 +5006,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rplap.png" width="452" height="400"/>
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="pGj-ye-BDw"/>
-        <segue reference="9A7-Dn-UeD"/>
+        <segue reference="tjF-od-osy"/>
+        <segue reference="wO3-53-DBV"/>
+        <segue reference="ucK-8l-Jyw"/>
+        <segue reference="WZv-9D-sK8"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
-        <segue reference="WZv-9D-sK8"/>
-        <segue reference="ucK-8l-Jyw"/>
-        <segue reference="ojN-Fe-z3g"/>
     </inferredMetricsTieBreakers>
 </document>
