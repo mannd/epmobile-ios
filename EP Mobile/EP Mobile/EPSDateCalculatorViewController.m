@@ -51,17 +51,6 @@
     [super viewDidUnload];
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-- (NSUInteger)supportedInterfaceOrientations
-{
-    //decide number of origination tob supported by Viewcontroller.
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }
