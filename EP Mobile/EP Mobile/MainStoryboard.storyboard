@@ -3,6 +3,7 @@
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -3495,157 +3496,171 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
+                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gWp-Vz-OiS" secondAttribute="height" multiplier="320:289" id="laE-o7-7fs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
+                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RrO-cy-PwH" secondAttribute="height" multiplier="320:289" id="JZv-Mw-ycV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
+                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fVz-e0-JTT" secondAttribute="height" multiplier="320:289" id="LOF-b6-6cH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
+                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0rb-g4-jki" secondAttribute="height" multiplier="320:289" id="DFO-wB-J0h"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mIa-S1-Y7q" secondAttribute="height" multiplier="320:289" id="zQQ-eD-mdR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AHB-u6-JtR" secondAttribute="height" multiplier="320:289" id="Nfe-0N-SSm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SEs-Ji-GrW" secondAttribute="height" multiplier="320:289" id="yEv-6t-Bvu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9I9-Uu-U8T" secondAttribute="height" multiplier="320:289" id="ZNb-vG-7DJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Sff-vt-pYQ" secondAttribute="height" multiplier="320:289" id="fxU-M2-bXx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gco-M8-5yJ" secondAttribute="height" multiplier="320:289" id="xFf-ib-lTS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fc8-nj-Uaz" secondAttribute="height" multiplier="320:289" id="b8A-OD-UVk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xHX-bV-EvX" secondAttribute="height" multiplier="320:289" id="IVx-9k-zp6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QBL-OF-jfK" secondAttribute="height" multiplier="320:289" id="x88-o9-4Wi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IWU-ux-lqO" secondAttribute="height" multiplier="320:289" id="5lZ-hf-57q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
+                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
+                                </constraints>
+                            </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-Ed-jco">
                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="ENN-QB-bKd"/>
-                                    <constraint firstAttribute="height" constant="289" id="FfU-5c-slT"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="2hZ-Ju-HBJ"/>
-                                    <constraint firstAttribute="height" constant="289" id="rNh-iN-NvL"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="03O-Hk-92Q"/>
-                                    <constraint firstAttribute="height" constant="289" id="SEg-Pa-BB5"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="bMn-fL-Nvl"/>
-                                    <constraint firstAttribute="width" constant="320" id="x2N-2f-MkB"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="lP0-QD-Ucb"/>
-                                    <constraint firstAttribute="width" constant="320" id="xVC-YL-Slj"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="4qL-Yh-hCH"/>
-                                    <constraint firstAttribute="height" constant="289" id="E0F-MC-ukj"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="ARX-Q3-Jc1"/>
-                                    <constraint firstAttribute="height" constant="289" id="BqQ-Ea-F7N"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Whb-65-1Ad"/>
-                                    <constraint firstAttribute="height" constant="289" id="xHl-dJ-pfP"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="INt-sf-ngH"/>
-                                    <constraint firstAttribute="width" constant="320" id="mEQ-or-AZQ"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="2Nk-V0-X29"/>
-                                    <constraint firstAttribute="width" constant="320" id="9iN-1M-HAR"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="ROz-AZ-K1J"/>
-                                    <constraint firstAttribute="width" constant="320" id="YaG-iJ-uVo"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="VV6-9F-UZU"/>
-                                    <constraint firstAttribute="width" constant="320" id="aSQ-9o-qLk"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="QU5-v9-tMi"/>
-                                    <constraint firstAttribute="height" constant="289" id="moo-Pf-t9N"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="onM-Gi-SEU"/>
-                                    <constraint firstAttribute="height" constant="289" id="pWj-IY-DV8"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
-                                <rect key="frame" x="0.0" y="95.5" width="320" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="86S-8h-4kD"/>
-                                    <constraint firstAttribute="height" constant="289" id="MwT-NS-tPG"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="mIa-S1-Y7q" secondAttribute="centerX" id="0yk-yx-Oag"/>
+                            <constraint firstItem="RrO-cy-PwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="3AV-Vm-hxK"/>
+                            <constraint firstItem="rGc-dy-KlA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="4a3-Yn-tWW"/>
                             <constraint firstAttribute="centerY" secondItem="IWU-ux-lqO" secondAttribute="centerY" id="71I-cN-gxV"/>
+                            <constraint firstItem="gco-M8-5yJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="9c0-Oy-znX"/>
                             <constraint firstAttribute="centerY" secondItem="fVz-e0-JTT" secondAttribute="centerY" id="AsT-Ra-ply"/>
+                            <constraint firstItem="SEs-Ji-GrW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="BaC-RJ-a9R"/>
                             <constraint firstAttribute="centerX" secondItem="rGc-dy-KlA" secondAttribute="centerX" id="ByK-2e-QYh"/>
+                            <constraint firstItem="QBL-OF-jfK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="CmT-Ju-4cu"/>
                             <constraint firstAttribute="centerY" secondItem="RrO-cy-PwH" secondAttribute="centerY" id="Dbp-d8-hQY"/>
+                            <constraint firstItem="xHX-bV-EvX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="Hpb-jx-LIU"/>
                             <constraint firstAttribute="centerX" secondItem="gWp-Vz-OiS" secondAttribute="centerX" id="MkM-pf-tXj"/>
                             <constraint firstAttribute="centerX" secondItem="Sff-vt-pYQ" secondAttribute="centerX" id="Nkd-RK-iiS"/>
+                            <constraint firstItem="IWU-ux-lqO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="PUv-IM-3Xi"/>
                             <constraint firstAttribute="centerY" secondItem="QBL-OF-jfK" secondAttribute="centerY" id="ROg-Tn-yCu"/>
+                            <constraint firstItem="9I9-Uu-U8T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="RXL-Q9-QTw"/>
+                            <constraint firstItem="gWp-Vz-OiS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="Rjx-eF-qJp"/>
                             <constraint firstAttribute="centerX" secondItem="IWU-ux-lqO" secondAttribute="centerX" id="S2R-eU-uuo"/>
                             <constraint firstAttribute="centerX" secondItem="RrO-cy-PwH" secondAttribute="centerX" id="T0Y-MO-Q8Y"/>
                             <constraint firstAttribute="centerX" secondItem="AHB-u6-JtR" secondAttribute="centerX" id="TMX-hF-N5C"/>
                             <constraint firstAttribute="centerY" secondItem="Sff-vt-pYQ" secondAttribute="centerY" id="WeV-FE-9ng"/>
+                            <constraint firstItem="rGc-dy-KlA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="XmV-Uf-hUG"/>
                             <constraint firstAttribute="centerX" secondItem="gco-M8-5yJ" secondAttribute="centerX" id="Ych-cG-2ft"/>
+                            <constraint firstItem="Sff-vt-pYQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="Yd7-it-821"/>
                             <constraint firstAttribute="centerY" secondItem="Fc8-nj-Uaz" secondAttribute="centerY" id="ahU-jY-p6h"/>
+                            <constraint firstItem="gWp-Vz-OiS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="ar1-vB-I8s"/>
                             <constraint firstAttribute="centerY" secondItem="AHB-u6-JtR" secondAttribute="centerY" id="bdd-Q0-Sut"/>
+                            <constraint firstItem="Fc8-nj-Uaz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="bgM-lT-jgp"/>
                             <constraint firstAttribute="centerX" secondItem="9I9-Uu-U8T" secondAttribute="centerX" id="cNY-0v-WWE"/>
                             <constraint firstAttribute="centerY" secondItem="9I9-Uu-U8T" secondAttribute="centerY" id="cSS-e3-cxR"/>
+                            <constraint firstItem="0rb-g4-jki" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="cid-s0-eZW"/>
                             <constraint firstAttribute="centerY" secondItem="rGc-dy-KlA" secondAttribute="centerY" id="dxk-XJ-J4m"/>
+                            <constraint firstItem="9I9-Uu-U8T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="edd-ho-Lf5"/>
+                            <constraint firstItem="mIa-S1-Y7q" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="hJW-E5-ulx"/>
+                            <constraint firstItem="gco-M8-5yJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="hax-nJ-sIt"/>
                             <constraint firstAttribute="centerX" secondItem="Fc8-nj-Uaz" secondAttribute="centerX" id="hb0-FY-rQw"/>
+                            <constraint firstItem="fVz-e0-JTT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="htK-11-yc0"/>
                             <constraint firstAttribute="centerY" secondItem="mIa-S1-Y7q" secondAttribute="centerY" id="i5O-XQ-dPJ"/>
+                            <constraint firstItem="0rb-g4-jki" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="kAX-oz-kIZ"/>
                             <constraint firstAttribute="centerX" secondItem="0rb-g4-jki" secondAttribute="centerX" id="lUh-In-3Gh"/>
                             <constraint firstAttribute="centerY" secondItem="xHX-bV-EvX" secondAttribute="centerY" id="mHI-wZ-3pm"/>
+                            <constraint firstItem="mIa-S1-Y7q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="nKb-Va-8Ta"/>
                             <constraint firstAttribute="centerX" secondItem="SEs-Ji-GrW" secondAttribute="centerX" id="njb-aQ-kqJ"/>
+                            <constraint firstItem="RrO-cy-PwH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="oMx-Tm-RZ0"/>
                             <constraint firstAttribute="centerY" secondItem="gco-M8-5yJ" secondAttribute="centerY" id="oRb-ej-q7r"/>
+                            <constraint firstItem="AHB-u6-JtR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="oS9-JA-TD5"/>
                             <constraint firstAttribute="centerX" secondItem="xHX-bV-EvX" secondAttribute="centerX" id="oWk-75-kf1"/>
                             <constraint firstAttribute="centerY" secondItem="gWp-Vz-OiS" secondAttribute="centerY" id="owF-LL-5Tg"/>
                             <constraint firstAttribute="centerX" secondItem="fVz-e0-JTT" secondAttribute="centerX" id="pA2-Ux-4cw"/>
                             <constraint firstAttribute="centerY" secondItem="SEs-Ji-GrW" secondAttribute="centerY" id="paP-sv-z7w"/>
+                            <constraint firstItem="AHB-u6-JtR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="qHv-fC-cP9"/>
+                            <constraint firstItem="Sff-vt-pYQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="rEf-Mj-HrC"/>
                             <constraint firstAttribute="centerX" secondItem="QBL-OF-jfK" secondAttribute="centerX" id="rOK-hW-iw9"/>
+                            <constraint firstItem="Fc8-nj-Uaz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="rsO-xR-hhG"/>
+                            <constraint firstItem="SEs-Ji-GrW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="tJu-Bl-weI"/>
+                            <constraint firstItem="IWU-ux-lqO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="tg8-Qs-8ts"/>
+                            <constraint firstItem="QBL-OF-jfK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="tup-aa-mbI"/>
                             <constraint firstAttribute="centerY" secondItem="0rb-g4-jki" secondAttribute="centerY" id="ych-Xp-ygO"/>
+                            <constraint firstItem="xHX-bV-EvX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="zAk-6R-aLr"/>
+                            <constraint firstItem="fVz-e0-JTT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="zLc-pi-RuU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AV Annulus" id="sPs-U4-Zla"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="asapImageView" destination="RrO-cy-PwH" id="nvb-vU-jbH"/>
                         <outlet property="epicardialapImageView" destination="fVz-e0-JTT" id="liH-4L-bql"/>
@@ -3667,7 +3682,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2709.375" y="626.25"/>
+            <point key="canvasLocation" x="-2813" y="453"/>
         </scene>
         <!--Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
