@@ -44,6 +44,8 @@
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
+		8E0E4CC619CFDB5E00E017F6 /* testbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E4CC519CFDB5E00E017F6 /* testbutton.png */; };
+		8E0E4CC719CFDB5E00E017F6 /* testbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E4CC519CFDB5E00E017F6 /* testbutton.png */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CEBD15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m */; };
@@ -202,6 +204,7 @@
 		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
+		8E0E4CC519CFDB5E00E017F6 /* testbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testbutton.png; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
 		8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMainTableViewController.m; sourceTree = "<group>"; };
 		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -641,6 +644,7 @@
 				8E4B27B71633459400BF1F2C /* rlap.png */,
 				8E4B27B81633459400BF1F2C /* rpap.png */,
 				8E4B27B91633459400BF1F2C /* rplap.png */,
+				8E0E4CC519CFDB5E00E017F6 /* testbutton.png */,
 				8E9755B2161F71B900EAFD10 /* Settings.bundle */,
 				8E97559D1617C79D00EAFD10 /* epivt.png */,
 				8E4B27AB1633449100BF1F2C /* asap.png */,
@@ -780,6 +784,7 @@
 				8E4B27AC1633449100BF1F2C /* asap.png in Resources */,
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
 				8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */,
+				8E0E4CC619CFDB5E00E017F6 /* testbutton.png in Resources */,
 				8E4B27BB1633459400BF1F2C /* lalap.png in Resources */,
 				8E4B27BC1633459400BF1F2C /* llap.png in Resources */,
 				8E4B27BD1633459400BF1F2C /* lpap.png in Resources */,
@@ -808,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC19C4E159FE0FA00975E2B /* InfoPlist.strings in Resources */,
+				8E0E4CC719CFDB5E00E017F6 /* testbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
