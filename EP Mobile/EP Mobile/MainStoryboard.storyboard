@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kBV-s3-VWz">
     <dependencies>
-        <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
+        <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -3814,14 +3814,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="Td1-hp-uja"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Fg-up-bWw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="149" affinity="minX"/>
                         </userGuides>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WU9-hu-Y5c">
-                                <rect key="frame" x="0.0" y="21" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="21" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="About EP Mobile" id="PUn-Hr-wdH">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="pqt-fJ-Lcc">
@@ -3833,7 +3833,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7E7-vf-HGo">
-                                <rect key="frame" x="40" y="117" width="334" height="559"/>
+                                <rect key="frame" x="20" y="65" width="560" height="475"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
@@ -3844,15 +3844,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Td1-hp-uja" firstAttribute="top" secondItem="7E7-vf-HGo" secondAttribute="bottom" constant="60" id="318-Rn-PHb"/>
-                            <constraint firstItem="7E7-vf-HGo" firstAttribute="leading" secondItem="6Fg-up-bWw" secondAttribute="leading" constant="40" id="IA4-Gz-bo8"/>
-                            <constraint firstItem="7E7-vf-HGo" firstAttribute="top" secondItem="WU9-hu-Y5c" secondAttribute="bottom" constant="52" id="KT5-j8-Hrx"/>
+                            <constraint firstItem="7E7-vf-HGo" firstAttribute="leading" secondItem="6Fg-up-bWw" secondAttribute="leading" constant="20" symbolic="YES" id="IA4-Gz-bo8"/>
+                            <constraint firstItem="7E7-vf-HGo" firstAttribute="top" secondItem="WU9-hu-Y5c" secondAttribute="bottom" symbolic="YES" id="KT5-j8-Hrx"/>
                             <constraint firstItem="WU9-hu-Y5c" firstAttribute="centerX" secondItem="7E7-vf-HGo" secondAttribute="centerX" id="NyM-pr-bpn"/>
                             <constraint firstItem="WU9-hu-Y5c" firstAttribute="top" secondItem="bvd-ll-Kk1" secondAttribute="bottom" constant="1" id="XEB-QM-sU4"/>
                             <constraint firstItem="WU9-hu-Y5c" firstAttribute="leading" secondItem="6Fg-up-bWw" secondAttribute="leading" id="aj0-gA-51d"/>
                             <constraint firstAttribute="trailing" secondItem="WU9-hu-Y5c" secondAttribute="trailing" id="vBx-lK-PNR"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="aboutTextView" destination="7E7-vf-HGo" id="UzP-Ms-Gu6"/>
                     </connections>
