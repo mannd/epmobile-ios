@@ -3771,7 +3771,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
                                 <rect key="frame" x="20" y="112" width="560" height="480"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -3827,8 +3827,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7E7-vf-HGo">
-                                <rect key="frame" x="20" y="65" width="560" height="475"/>
+                                <rect key="frame" x="172.5" y="170" width="255" height="260"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="2jh-uS-7k1"/>
+                                    <constraint firstAttribute="width" constant="255" id="czr-OX-nOe"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3837,12 +3841,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Td1-hp-uja" firstAttribute="top" secondItem="7E7-vf-HGo" secondAttribute="bottom" constant="60" id="318-Rn-PHb"/>
-                            <constraint firstItem="7E7-vf-HGo" firstAttribute="leading" secondItem="6Fg-up-bWw" secondAttribute="leading" constant="20" symbolic="YES" id="IA4-Gz-bo8"/>
-                            <constraint firstItem="7E7-vf-HGo" firstAttribute="top" secondItem="WU9-hu-Y5c" secondAttribute="bottom" symbolic="YES" id="KT5-j8-Hrx"/>
+                            <constraint firstAttribute="centerY" secondItem="7E7-vf-HGo" secondAttribute="centerY" id="9v6-WG-gaz"/>
                             <constraint firstItem="WU9-hu-Y5c" firstAttribute="centerX" secondItem="7E7-vf-HGo" secondAttribute="centerX" id="NyM-pr-bpn"/>
                             <constraint firstItem="WU9-hu-Y5c" firstAttribute="top" secondItem="bvd-ll-Kk1" secondAttribute="bottom" constant="1" id="XEB-QM-sU4"/>
                             <constraint firstItem="WU9-hu-Y5c" firstAttribute="leading" secondItem="6Fg-up-bWw" secondAttribute="leading" id="aj0-gA-51d"/>
+                            <constraint firstAttribute="centerX" secondItem="7E7-vf-HGo" secondAttribute="centerX" id="f7N-ha-PtN"/>
                             <constraint firstAttribute="trailing" secondItem="WU9-hu-Y5c" secondAttribute="trailing" id="vBx-lK-PNR"/>
                         </constraints>
                     </view>
@@ -3852,7 +3855,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5356.875" y="2807.5"/>
+            <point key="canvasLocation" x="-5357" y="2807"/>
         </scene>
         <!--QTc Calculator-->
         <scene sceneID="kiq-6q-8Xe">
