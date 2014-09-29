@@ -45,11 +45,6 @@
     // Release any retained subviews of the main view.
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
-}
-
 - (int)convertInterval:(int)n {
     // make sure result rounded up to nearest msec
     return (int)round(60000.0 / n);
