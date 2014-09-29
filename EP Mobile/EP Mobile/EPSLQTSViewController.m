@@ -52,8 +52,6 @@
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
-
-
 }
 
 - (void)viewDidUnload
@@ -64,17 +62,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
-
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 
 - (void) calculateScore {
     // since this score uses 0.5, we will multiply points by 10, e.g.
