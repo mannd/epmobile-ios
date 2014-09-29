@@ -106,17 +106,6 @@
     // Release any retained subviews of the main view.
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-
 - (void)showNotes {
     [self performSegueWithIdentifier:@"WarfarinNotesSegue" sender:nil];
 }

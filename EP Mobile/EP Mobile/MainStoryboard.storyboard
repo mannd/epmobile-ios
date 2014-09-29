@@ -4028,23 +4028,32 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="F53-rT-ULF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-PB-nWj">
-                                <rect key="frame" x="21" y="70" width="128" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-PB-nWj">
+                                <rect key="frame" x="22" y="84" width="128" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="3BS-6d-IMs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="INR Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Owb-RF-BTt">
-                                <rect key="frame" x="157" y="243" width="143" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="INR Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Owb-RF-BTt">
+                                <rect key="frame" x="158" y="240" width="140" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="gQ9-5K-baM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-3O-j5s">
-                                <rect key="frame" x="157" y="272" width="144" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-3O-j5s">
+                                <rect key="frame" x="158" y="268" width="140" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="sSw-db-xVc"/>
+                                </constraints>
                                 <segments>
                                     <segment title="2-3"/>
                                     <segment title="2.5-3.5"/>
@@ -4053,36 +4062,54 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="toggleTargetRange:" destination="sOk-N9-fM0" eventType="valueChanged" id="kR8-6Q-d7v"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dose (mg/week)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-P6-5q7">
-                                <rect key="frame" x="157" y="99" width="140" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dose (mg/week)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-P6-5q7">
+                                <rect key="frame" x="158" y="112" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="5dE-6O-lQR"/>
+                                    <constraint firstAttribute="height" constant="30" id="lZL-0h-aJK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="sOk-N9-fM0" eventType="editingDidEndOnExit" id="Zhh-m6-jZE"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Weekly Dose (mg)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-fT-8Fk">
-                                <rect key="frame" x="157" y="70" width="143" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weekly Dose (mg)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-fT-8Fk">
+                                <rect key="frame" x="160" y="84" width="137.5" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137.5" id="4td-gL-tCu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Current INR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQg-dl-S4k">
-                                <rect key="frame" x="157" y="162" width="140" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current INR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQg-dl-S4k">
+                                <rect key="frame" x="158" y="162" width="140" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="3ba-tq-gyG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INR" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-n3-yDr">
-                                <rect key="frame" x="157" y="191" width="142" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INR" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-n3-yDr">
+                                <rect key="frame" x="158" y="190" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="IWU-Mv-uss"/>
+                                    <constraint firstAttribute="height" constant="30" id="vZR-25-DDl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="sOk-N9-fM0" eventType="editingDidEndOnExit" id="fnO-7i-7eH"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-60-X6S">
-                                <rect key="frame" x="20" y="330" width="129" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-60-X6S">
+                                <rect key="frame" x="22" y="316" width="129" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="0Ll-0c-xNa"/>
+                                    <constraint firstAttribute="height" constant="37" id="SEA-r1-Eid"/>
+                                </constraints>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -4090,8 +4117,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="calculateButtonPressed:" destination="sOk-N9-fM0" eventType="touchUpInside" id="c8Q-eH-IY3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBk-aS-HiD">
-                                <rect key="frame" x="157" y="330" width="140" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBk-aS-HiD">
+                                <rect key="frame" x="158" y="316" width="140" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="30Y-5Y-22Q"/>
+                                    <constraint firstAttribute="width" constant="140" id="enf-yw-87L"/>
+                                </constraints>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -4099,15 +4130,23 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="clearButtonPressed:" destination="sOk-N9-fM0" eventType="touchUpInside" id="bYR-wJ-aSr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-Fx-0AG">
-                                <rect key="frame" x="21" y="374" width="276" height="86"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-Fx-0AG">
+                                <rect key="frame" x="22" y="361" width="276" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="c87-3e-zjW"/>
+                                    <constraint firstAttribute="width" constant="276" id="qHd-rc-fnA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-4W-qXv">
-                                <rect key="frame" x="21" y="99" width="128" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-4W-qXv">
+                                <rect key="frame" x="22" y="112" width="128" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="7Nm-P9-gDS"/>
+                                    <constraint firstAttribute="height" constant="162" id="zNH-8F-WIL"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="sOk-N9-fM0" id="PiK-Cy-cXc"/>
                                     <outlet property="delegate" destination="sOk-N9-fM0" id="y3y-LR-PKK"/>
@@ -4115,12 +4154,38 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cOI-Fx-0AG" firstAttribute="top" secondItem="EBk-aS-HiD" secondAttribute="bottom" constant="8" symbolic="YES" id="0UX-sn-DZg"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="top" secondItem="6HG-3O-j5s" secondAttribute="bottom" constant="20" id="0cP-gw-RFZ"/>
+                            <constraint firstItem="7Aw-PB-nWj" firstAttribute="leading" secondItem="1ko-60-X6S" secondAttribute="leading" id="2hr-Iz-JJp"/>
+                            <constraint firstItem="Thg-P6-5q7" firstAttribute="top" secondItem="n2r-fT-8Fk" secondAttribute="bottom" constant="8" id="5Jk-gQ-zz6"/>
+                            <constraint firstAttribute="centerX" secondItem="cOI-Fx-0AG" secondAttribute="centerX" id="5eV-0H-bWI"/>
+                            <constraint firstItem="1ko-60-X6S" firstAttribute="centerY" secondItem="EBk-aS-HiD" secondAttribute="centerY" id="81Q-dB-96Y"/>
+                            <constraint firstItem="7Aw-PB-nWj" firstAttribute="leading" secondItem="Et0-4W-qXv" secondAttribute="leading" id="BsA-lE-TIa"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="6HG-3O-j5s" secondAttribute="trailing" id="H92-du-K1G"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="pQg-dl-S4k" secondAttribute="trailing" id="HPj-y4-Gys"/>
+                            <constraint firstItem="dU7-n3-yDr" firstAttribute="top" secondItem="pQg-dl-S4k" secondAttribute="bottom" constant="8" symbolic="YES" id="I5c-t1-bSW"/>
+                            <constraint firstItem="n2r-fT-8Fk" firstAttribute="top" secondItem="Tnz-i1-QoY" secondAttribute="bottom" constant="20" id="I8Y-Tg-Kej"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="Owb-RF-BTt" secondAttribute="trailing" id="Kio-N5-K8v"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="dU7-n3-yDr" secondAttribute="trailing" id="NaJ-Jh-0pS"/>
+                            <constraint firstItem="pQg-dl-S4k" firstAttribute="top" secondItem="Thg-P6-5q7" secondAttribute="bottom" constant="20" id="Oel-g1-evY"/>
+                            <constraint firstItem="6HG-3O-j5s" firstAttribute="top" secondItem="Owb-RF-BTt" secondAttribute="bottom" constant="8" symbolic="YES" id="Pig-oz-2ch"/>
+                            <constraint firstItem="7Aw-PB-nWj" firstAttribute="centerX" secondItem="Et0-4W-qXv" secondAttribute="centerX" id="Si8-QJ-ZHg"/>
+                            <constraint firstItem="7Aw-PB-nWj" firstAttribute="top" secondItem="Tnz-i1-QoY" secondAttribute="bottom" constant="20" id="bTy-Z2-woT"/>
+                            <constraint firstItem="7Aw-PB-nWj" firstAttribute="leading" secondItem="cOI-Fx-0AG" secondAttribute="leading" id="bzC-2M-PPu"/>
+                            <constraint firstItem="7Aw-PB-nWj" firstAttribute="centerY" secondItem="n2r-fT-8Fk" secondAttribute="centerY" id="dA5-YU-Cq3"/>
+                            <constraint firstItem="Owb-RF-BTt" firstAttribute="top" secondItem="dU7-n3-yDr" secondAttribute="bottom" constant="20" id="goV-tW-Q65"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="Thg-P6-5q7" secondAttribute="trailing" id="h1L-aC-xJY"/>
+                            <constraint firstItem="Et0-4W-qXv" firstAttribute="top" secondItem="7Aw-PB-nWj" secondAttribute="bottom" constant="8" symbolic="YES" id="kQE-yc-DhC"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="cOI-Fx-0AG" secondAttribute="trailing" id="mOC-Fj-1NQ"/>
+                            <constraint firstItem="EBk-aS-HiD" firstAttribute="trailing" secondItem="n2r-fT-8Fk" secondAttribute="trailing" id="qY8-me-VoU"/>
+                        </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="sOk-N9-fM0" eventType="touchDown" id="Ee4-7d-nev"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Warfarin Clinic" id="8Ck-fG-cEI"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="inrField" destination="dU7-n3-yDr" id="JR8-p7-g6c"/>
                         <outlet property="resultLabel" destination="cOI-Fx-0AG" id="Iuc-SY-48c"/>
@@ -4133,7 +4198,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-T1-3Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3695.625" y="-1488.75"/>
+            <point key="canvasLocation" x="-3696" y="-1489"/>
         </scene>
         <!--Warfarin Dosing Table View Controller-->
         <scene sceneID="652-RR-u7n">
@@ -4144,7 +4209,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="HT9-sp-RBQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="00o-Pi-5Su">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-4R-EHc">
@@ -5183,8 +5248,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="pGj-ye-BDw"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="zlS-au-Ibg"/>
+        <segue reference="bT0-Tb-wFg"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
-        <segue reference="wO3-53-DBV"/>
     </inferredMetricsTieBreakers>
 </document>
