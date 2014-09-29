@@ -95,17 +95,6 @@
 
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
-
 - (IBAction)toggleWeightUnits:(id)sender {
     //self.weightField.text  = nil;  this is bad if people enter weight first and then units, so it's gone.
     self.resultLabel.text = nil;
