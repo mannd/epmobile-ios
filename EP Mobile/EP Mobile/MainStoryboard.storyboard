@@ -1406,14 +1406,14 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-et-TmX">
-                                <rect key="frame" x="0.0" y="169" width="320" height="162"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-et-TmX">
+                                <rect key="frame" x="140" y="110" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="385827755.47134">
                                     <!--2013-03-24 14:22:35 +0000-->
                                 </date>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-gN-YFQ">
-                                <rect key="frame" x="4" y="119" width="312" height="29"/>
+                                <rect key="frame" x="-7.5" y="0.0" width="188" height="29"/>
                                 <segments>
                                     <segment title="90 days"/>
                                     <segment title="40 days"/>
@@ -1423,46 +1423,43 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="changeNumberOfDays:" destination="hSz-kY-OPb" eventType="valueChanged" id="OGl-CQ-Kne"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-ot-ijf">
-                                <rect key="frame" x="262" y="418" width="42" height="30"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clear:" destination="hSz-kY-OPb" eventType="touchUpInside" id="454-Nk-D2N"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-uS-cbo">
-                                <rect key="frame" x="70" y="422" width="180" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-uS-cbo">
+                                <rect key="frame" x="210" y="319" width="180" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="vLj-oA-YKg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" placeholder="Days" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7du-d7-6cx">
-                                <rect key="frame" x="213" y="70" width="91" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" placeholder="Days" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7du-d7-6cx">
+                                <rect key="frame" x="270" y="72" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="fGa-Wf-wwO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="hSz-kY-OPb" eventType="editingDidEndOnExit" id="4tm-xX-Dgr"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-AZ-076">
-                                <rect key="frame" x="16" y="74" width="165" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-AZ-076">
+                                <rect key="frame" x="137" y="72" width="124.5" height="30.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-Om-7eu">
-                                <rect key="frame" x="213" y="352" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-Om-7eu">
+                                <rect key="frame" x="275.5" y="280" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Subtract Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-vb-cmM">
-                                <rect key="frame" x="16" y="357" width="118" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Subtract Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-vb-cmM">
+                                <rect key="frame" x="137" y="285" width="109" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
-                                <rect key="frame" x="16" y="410" width="58" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
+                                <rect key="frame" x="171" y="314" width="31" height="30"/>
                                 <state key="normal" title="Calc">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1470,8 +1467,39 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-ot-ijf">
+                                <rect key="frame" x="398" y="314" width="37" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="hSz-kY-OPb" eventType="touchUpInside" id="454-Nk-D2N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7du-d7-6cx" secondAttribute="centerX" priority="250" id="4KF-Bb-VDF"/>
+                            <constraint firstItem="TFs-Om-7eu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="deR-vb-cmM" secondAttribute="trailing" priority="750" constant="8" symbolic="YES" id="4N2-qx-SKY"/>
+                            <constraint firstAttribute="centerX" secondItem="K5t-et-TmX" secondAttribute="centerX" priority="250" id="5LG-Su-dqC"/>
+                            <constraint firstItem="ttx-uS-cbo" firstAttribute="top" secondItem="TFs-Om-7eu" secondAttribute="bottom" constant="8" symbolic="YES" id="5mV-eu-sDR"/>
+                            <constraint firstItem="xqu-ot-ijf" firstAttribute="leading" secondItem="ttx-uS-cbo" secondAttribute="trailing" constant="8" symbolic="YES" id="DnA-zm-FLM"/>
+                            <constraint firstItem="uWG-AZ-076" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d0h-Lg-Guf" secondAttribute="leading" constant="20" symbolic="YES" id="Edc-iA-mZJ"/>
+                            <constraint firstItem="7du-d7-6cx" firstAttribute="top" secondItem="8pH-nu-FxG" secondAttribute="bottom" constant="8" symbolic="YES" id="Fc9-wG-xlI"/>
+                            <constraint firstItem="7du-d7-6cx" firstAttribute="centerY" secondItem="uWG-AZ-076" secondAttribute="centerY" id="Jet-gb-ElV"/>
+                            <constraint firstItem="7du-d7-6cx" firstAttribute="leading" secondItem="uWG-AZ-076" secondAttribute="trailing" constant="8" symbolic="YES" id="LcV-He-0pe"/>
+                            <constraint firstItem="TFs-Om-7eu" firstAttribute="top" secondItem="K5t-et-TmX" secondAttribute="bottom" constant="8" symbolic="YES" id="TJX-2v-nsy"/>
+                            <constraint firstAttribute="centerX" secondItem="ttx-uS-cbo" secondAttribute="centerX" id="WWY-8O-kHR"/>
+                            <constraint firstItem="fn8-Pt-FLw" firstAttribute="centerY" secondItem="xqu-ot-ijf" secondAttribute="centerY" id="YQw-oF-s3O"/>
+                            <constraint firstItem="deR-vb-cmM" firstAttribute="leading" secondItem="uWG-AZ-076" secondAttribute="leading" id="adM-yC-559"/>
+                            <constraint firstItem="ttx-uS-cbo" firstAttribute="leading" secondItem="fn8-Pt-FLw" secondAttribute="trailing" constant="8" symbolic="YES" id="cIb-PP-dNr"/>
+                            <constraint firstItem="xqu-ot-ijf" firstAttribute="centerY" secondItem="ttx-uS-cbo" secondAttribute="centerY" id="egg-wc-7AO"/>
+                            <constraint firstItem="uWG-AZ-076" firstAttribute="top" secondItem="8pH-nu-FxG" secondAttribute="bottom" constant="8" symbolic="YES" id="iHq-cI-Y2R"/>
+                            <constraint firstItem="K5t-et-TmX" firstAttribute="top" secondItem="7du-d7-6cx" secondAttribute="bottom" constant="8" symbolic="YES" id="rv3-wz-PYR"/>
+                            <constraint firstItem="fn8-Pt-FLw" firstAttribute="centerY" secondItem="ttx-uS-cbo" secondAttribute="centerY" id="tcs-yL-TpN"/>
+                            <constraint firstAttribute="centerX" secondItem="TFs-Om-7eu" secondAttribute="centerX" id="uS6-OM-u7B"/>
+                            <constraint firstItem="deR-vb-cmM" firstAttribute="centerY" secondItem="TFs-Om-7eu" secondAttribute="centerY" id="xGZ-P7-B0O"/>
+                        </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="hSz-kY-OPb" eventType="touchDown" id="NLP-zS-KF1"/>
                         </connections>
@@ -1488,7 +1516,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br2-3y-1zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1428.75" y="-1152.5"/>
+            <point key="canvasLocation" x="-1445" y="-1164"/>
         </scene>
         <!--Link View Controller-->
         <scene sceneID="wuk-kW-8mj">
