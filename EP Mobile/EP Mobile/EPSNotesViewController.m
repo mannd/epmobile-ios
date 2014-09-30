@@ -16,7 +16,7 @@
 #import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
 #import "EPSWeightCalculatorNotes.h"
-
+#import "EPSLogging.h"
 
 @interface EPSNotesViewController ()
 
@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"self key = %@", self.key);
+    EPSLog(@"self key = %@", self.key);
     id <EPSNotesProtocol> notes = nil;
     if ([self.key isEqualToString:@"OutflowVT"])
         notes = [[EPSOutFlowTractVTNotes alloc] init];

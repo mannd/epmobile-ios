@@ -8,6 +8,7 @@
 
 #import "EPSHcmRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EPSLogging.h"
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
@@ -62,8 +63,8 @@
     // extract major and minor risks
     majorScore = score / 10;
     minorScore = score % 10;
-    NSLog(@"Major score = %i", majorScore);
-    NSLog(@"Minor score = %i", minorScore);
+    EPSLog(@"Major score = %i", majorScore);
+    EPSLog(@"Minor score = %i", minorScore);
     NSString *resultMessage = @"";
     NSString *message = @"";
     if (score == HIGHEST_RISK_SCORE)

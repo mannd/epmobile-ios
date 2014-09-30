@@ -8,6 +8,7 @@
 
 #import "EPSWeightCalculatorViewController.h"
 #import "EPSNotesViewController.h"
+#import "EPSLogging.h"
 
 @interface EPSWeightCalculatorViewController ()
 
@@ -110,10 +111,10 @@
     }
     double weightInPounds = 0;
     if (weightIsPounds) {
-        NSLog(@"Weight is in pounds (%f lb)", weight);
+        EPSLog(@"Weight is in pounds (%f lb)", weight);
         weightInPounds = weight;
         weight = [self lbsToKgs:weight];
-        NSLog(@"Converted weight in kgs is %f", weight);
+        EPSLog(@"Converted weight in kgs is %f", weight);
     }
     if (! heightIsInches) {
         height = [self cmsToIns:height];

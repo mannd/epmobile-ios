@@ -10,6 +10,7 @@
 #import "EPSAtrialTachAlgorithm.h"
 #import "EPSNotesViewController.h"
 #import "EPSComplexStepAlgorithmProtocol.h"
+#import "EPSLogging.h"
 
 #define v24PosStep 2
 #define aVLStep 3
@@ -185,7 +186,7 @@
 }
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"Button index = %ld", (long)buttonIndex);
+    EPSLog(@"Button index = %ld", (long)buttonIndex);
     [algorithm resetSteps:&step];
     [self setButtons];
     self.questionLabel.text = [algorithm step1];

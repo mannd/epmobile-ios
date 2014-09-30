@@ -10,6 +10,7 @@
 #import "EPSCMSNotes.h"
 #import "EPSNotesViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSLogging.h"
 
 // these magic numbers are in Data.plist
 #define CARDIAC_ARREST 0
@@ -172,7 +173,7 @@
         result = FAMILIAL_CONDITION;
     else
         result = POSSIBLE_INDICATION;
-    NSLog(@"CMS result = %d", result);
+    EPSLog(@"CMS result = %d", result);
     [self showResults:[self getResultMessage:result]];
 }
 

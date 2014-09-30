@@ -17,6 +17,7 @@
 #import "EPSMilsteinAlgorithm.h"
 #import "EPSAVAnnulusViewController.h"
 #import "EPSVereckeiAlgorithm.h"
+#import "EPSLogging.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
@@ -168,7 +169,7 @@
 }
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"Button index = %ld", (long)buttonIndex);
+    EPSLog(@"Button index = %ld", (long)buttonIndex);
     // show map button
     if (buttonIndex == 1) {
         [self performSegueWithIdentifier:@"MapSegue" sender:nil];

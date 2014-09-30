@@ -295,6 +295,7 @@
 		8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon5settings.png; sourceTree = "<group>"; };
 		8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-2x.png"; sourceTree = "<group>"; };
 		8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-R4.png"; sourceTree = "<group>"; };
+		8EBCB46E19DB672F001A8DA3 /* EPSLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLogging.h; sourceTree = "<group>"; };
 		8EBFBBD5162CA6ED00D3B964 /* EPSStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSStepAlgorithmProtocol.h; sourceTree = "<group>"; };
 		8EBFBBD6162CA7DD00D3B964 /* EPSOutflowVTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOutflowVTAlgorithm.h; sourceTree = "<group>"; };
 		8EBFBBD7162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOutflowVTAlgorithm.m; sourceTree = "<group>"; };
@@ -440,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */,
+				8EBCB46E19DB672F001A8DA3 /* EPSLogging.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";

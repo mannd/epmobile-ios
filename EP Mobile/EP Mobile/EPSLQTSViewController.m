@@ -8,6 +8,7 @@
 
 #import "EPSLQTSViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSLogging.h"
 
 @interface EPSLQTSViewController ()
 
@@ -196,7 +197,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int offset = [self calculateOffset:indexPath.section];
-    NSLog(@"Offset = %d section = %ld row = %ld", offset, (long)indexPath.section, (long)indexPath.row);
+    EPSLog(@"Offset = %d section = %ld row = %ld", offset, (long)indexPath.section, (long)indexPath.row);
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
