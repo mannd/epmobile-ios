@@ -3774,11 +3774,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -3790,13 +3790,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="578" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="298" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="560" height="480"/>
+                                <rect key="frame" x="20" y="112" width="280" height="360"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -4030,11 +4030,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="F53-rT-ULF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hef-jm-fC2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tablet Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-PB-nWj">
-                                <rect key="frame" x="125" y="84" width="128" height="20.5"/>
+                                <rect key="frame" x="20" y="84" width="128" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="3BS-6d-IMs"/>
                                 </constraints>
@@ -4043,7 +4043,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="INR Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Owb-RF-BTt">
-                                <rect key="frame" x="335" y="240" width="140" height="20.5"/>
+                                <rect key="frame" x="160" y="240" width="140" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="gQ9-5K-baM"/>
                                 </constraints>
@@ -4052,7 +4052,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-3O-j5s">
-                                <rect key="frame" x="335" y="268" width="140" height="29"/>
+                                <rect key="frame" x="160" y="268" width="140" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="sSw-db-xVc"/>
                                 </constraints>
@@ -4065,7 +4065,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dose (mg/week)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-P6-5q7">
-                                <rect key="frame" x="335" y="112" width="140" height="30"/>
+                                <rect key="frame" x="160" y="112" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="5dE-6O-lQR"/>
                                     <constraint firstAttribute="height" constant="30" id="lZL-0h-aJK"/>
@@ -4077,7 +4077,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weekly Dose (mg)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-fT-8Fk">
-                                <rect key="frame" x="337" y="84" width="137.5" height="20.5"/>
+                                <rect key="frame" x="162" y="84" width="137.5" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137.5" id="4td-gL-tCu"/>
                                 </constraints>
@@ -4086,7 +4086,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current INR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQg-dl-S4k">
-                                <rect key="frame" x="335" y="162" width="140" height="20.5"/>
+                                <rect key="frame" x="160" y="162" width="140" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="3ba-tq-gyG"/>
                                 </constraints>
@@ -4095,7 +4095,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INR" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-n3-yDr">
-                                <rect key="frame" x="335" y="190" width="140" height="30"/>
+                                <rect key="frame" x="160" y="190" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="IWU-Mv-uss"/>
                                     <constraint firstAttribute="height" constant="30" id="vZR-25-DDl"/>
@@ -4107,7 +4107,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-60-X6S">
-                                <rect key="frame" x="125" y="316" width="129" height="37"/>
+                                <rect key="frame" x="20" y="316" width="129" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="0Ll-0c-xNa"/>
                                     <constraint firstAttribute="height" constant="37" id="SEA-r1-Eid"/>
@@ -4120,7 +4120,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBk-aS-HiD">
-                                <rect key="frame" x="335" y="316" width="140" height="37"/>
+                                <rect key="frame" x="160" y="316" width="140" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="30Y-5Y-22Q"/>
                                     <constraint firstAttribute="width" constant="140" id="enf-yw-87L"/>
@@ -4133,7 +4133,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-Fx-0AG">
-                                <rect key="frame" x="125" y="361" width="350" height="100"/>
+                                <rect key="frame" x="20" y="361" width="280" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="c87-3e-zjW"/>
@@ -4144,7 +4144,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-4W-qXv">
-                                <rect key="frame" x="125" y="112" width="128" height="162"/>
+                                <rect key="frame" x="20" y="112" width="128" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="7Nm-P9-gDS"/>
                                     <constraint firstAttribute="height" constant="162" id="zNH-8F-WIL"/>
@@ -4189,6 +4189,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Warfarin Clinic" id="8Ck-fG-cEI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="inrField" destination="dU7-n3-yDr" id="JR8-p7-g6c"/>
                         <outlet property="resultLabel" destination="cOI-Fx-0AG" id="Iuc-SY-48c"/>
