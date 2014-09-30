@@ -1186,11 +1186,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="Jyc-nL-Tqf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N4a-9B-7dU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-il-hkg">
-                                <rect key="frame" x="20" y="72" width="560" height="71"/>
+                                <rect key="frame" x="20" y="72" width="374" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="FsJ-yg-8eM"/>
                                 </constraints>
@@ -1199,14 +1199,20 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-jy-c25">
-                                <rect key="frame" x="20" y="151" width="46" height="30"/>
+                                <rect key="frame" x="20" y="151" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="vwy-9E-c73"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="button1Click:" destination="MUe-xB-0XX" eventType="touchUpInside" id="M1a-bk-bZ5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y34-aD-0la">
-                                <rect key="frame" x="534" y="151" width="46" height="30"/>
+                                <rect key="frame" x="334" y="151" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cWC-Eu-9r6"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1215,7 +1221,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmV-rW-Nsa">
-                                <rect key="frame" x="277" y="151" width="46" height="30"/>
+                                <rect key="frame" x="177" y="151" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Wnp-ML-Hnm"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1224,7 +1233,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-nG-iwY">
-                                <rect key="frame" x="20" y="189" width="46" height="30"/>
+                                <rect key="frame" x="20" y="189" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="c3e-oj-Bow"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1233,7 +1245,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zde-3L-Q7E">
-                                <rect key="frame" x="277" y="189" width="46" height="30"/>
+                                <rect key="frame" x="177" y="189" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="lZ2-8Z-qTD"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1242,7 +1257,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIB-BC-Egf">
-                                <rect key="frame" x="534" y="189" width="46" height="30"/>
+                                <rect key="frame" x="334" y="189" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="R8y-Qe-1VQ"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1251,7 +1269,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-6e-UxA">
-                                <rect key="frame" x="259" y="562" width="81" height="30"/>
+                                <rect key="frame" x="166.5" y="698" width="81" height="30"/>
                                 <state key="normal" title="Instructions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1263,25 +1281,30 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Zox-6e-UxA" secondAttribute="centerX" id="3eb-hU-lEW"/>
+                            <constraint firstItem="YmV-rW-Nsa" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1rf-jy-c25" secondAttribute="trailing" constant="150" id="BJk-HW-zag"/>
                             <constraint firstItem="y34-aD-0la" firstAttribute="top" secondItem="6Os-il-hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="EyE-19-sE7"/>
                             <constraint firstAttribute="centerX" secondItem="zde-3L-Q7E" secondAttribute="centerX" id="Fhq-hb-U6r"/>
                             <constraint firstItem="6Os-il-hkg" firstAttribute="top" secondItem="HWO-OE-zrN" secondAttribute="bottom" constant="8" symbolic="YES" id="O7k-F3-H3W"/>
-                            <constraint firstAttribute="trailing" secondItem="TIB-BC-Egf" secondAttribute="trailing" constant="20" symbolic="YES" id="TTM-mW-CKA"/>
-                            <constraint firstAttribute="trailing" secondItem="y34-aD-0la" secondAttribute="trailing" constant="20" symbolic="YES" id="U2K-RA-O5z"/>
+                            <constraint firstItem="zde-3L-Q7E" firstAttribute="leading" relation="lessThanOrEqual" secondItem="yOC-nG-iwY" secondAttribute="trailing" constant="150" id="PMp-Mb-cFV"/>
+                            <constraint firstAttribute="trailing" secondItem="TIB-BC-Egf" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="TTM-mW-CKA"/>
+                            <constraint firstAttribute="trailing" secondItem="y34-aD-0la" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="U2K-RA-O5z"/>
                             <constraint firstAttribute="trailing" secondItem="6Os-il-hkg" secondAttribute="trailing" constant="20" symbolic="YES" id="UJc-gV-hOr"/>
+                            <constraint firstItem="TIB-BC-Egf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="zde-3L-Q7E" secondAttribute="trailing" constant="150" id="XLZ-2y-VDu"/>
                             <constraint firstItem="yOC-nG-iwY" firstAttribute="top" secondItem="1rf-jy-c25" secondAttribute="bottom" constant="8" symbolic="YES" id="eoK-wm-OGf"/>
                             <constraint firstItem="YmV-rW-Nsa" firstAttribute="top" secondItem="6Os-il-hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="f1m-Iw-Nhi"/>
+                            <constraint firstItem="y34-aD-0la" firstAttribute="leading" relation="lessThanOrEqual" secondItem="YmV-rW-Nsa" secondAttribute="trailing" constant="150" id="itF-YR-ibQ"/>
                             <constraint firstItem="zde-3L-Q7E" firstAttribute="top" secondItem="YmV-rW-Nsa" secondAttribute="bottom" constant="8" symbolic="YES" id="jIg-2K-ynQ"/>
                             <constraint firstItem="Jyc-nL-Tqf" firstAttribute="top" secondItem="Zox-6e-UxA" secondAttribute="bottom" constant="8" symbolic="YES" id="lV5-wG-LME"/>
                             <constraint firstAttribute="centerX" secondItem="YmV-rW-Nsa" secondAttribute="centerX" id="lj4-ga-rO2"/>
-                            <constraint firstItem="yOC-nG-iwY" firstAttribute="leading" secondItem="N4a-9B-7dU" secondAttribute="leading" constant="20" symbolic="YES" id="qmu-YX-hZ7"/>
-                            <constraint firstItem="1rf-jy-c25" firstAttribute="leading" secondItem="N4a-9B-7dU" secondAttribute="leading" constant="20" symbolic="YES" id="rUY-xV-f0j"/>
+                            <constraint firstItem="yOC-nG-iwY" firstAttribute="leading" secondItem="N4a-9B-7dU" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="qmu-YX-hZ7"/>
+                            <constraint firstItem="1rf-jy-c25" firstAttribute="leading" secondItem="N4a-9B-7dU" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="rUY-xV-f0j"/>
                             <constraint firstItem="TIB-BC-Egf" firstAttribute="top" secondItem="YmV-rW-Nsa" secondAttribute="bottom" constant="8" symbolic="YES" id="tgR-4b-393"/>
                             <constraint firstItem="1rf-jy-c25" firstAttribute="top" secondItem="6Os-il-hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="vjb-Ua-HzS"/>
                             <constraint firstItem="6Os-il-hkg" firstAttribute="leading" secondItem="N4a-9B-7dU" secondAttribute="leading" constant="20" symbolic="YES" id="y4g-yf-Sc9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Atrial Tach Location" id="7tf-m5-bz5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="button1" destination="1rf-jy-c25" id="9z0-RW-WwB"/>
                         <outlet property="button2" destination="YmV-rW-Nsa" id="Atd-GS-3hi"/>
@@ -3816,11 +3839,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -3832,13 +3855,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="578" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="392" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="560" height="480"/>
+                                <rect key="frame" x="20" y="112" width="374" height="616"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5453,8 +5476,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     <inferredMetricsTieBreakers>
         <segue reference="pGj-ye-BDw"/>
         <segue reference="tjF-od-osy"/>
-        <segue reference="9Dj-9f-rbx"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="VLv-ky-ss1"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="zlS-au-Ibg"/>
         <segue reference="pFv-5Z-NQa"/>
