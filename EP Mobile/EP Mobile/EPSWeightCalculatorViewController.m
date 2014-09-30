@@ -90,16 +90,6 @@
     [super viewDidUnload];
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
 - (IBAction)calculate:(id)sender {
     NSString *weightText = self.weightTextField.text;
     double weight = [weightText doubleValue];
