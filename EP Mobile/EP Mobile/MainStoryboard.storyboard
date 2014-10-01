@@ -3088,15 +3088,18 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72" customClass="eps">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
-                                <rect key="frame" x="-9" y="68" width="321" height="234"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
+                                <rect key="frame" x="190.5" y="72" width="387" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Mw-vh-A5V" secondAttribute="height" multiplier="107:78" id="n7f-oq-w6J"/>
+                                </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
-                                <rect key="frame" x="21" y="310" width="279" height="126"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
+                                <rect key="frame" x="20" y="362" width="728" height="125.5"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <string key="text">R wave peak time in lead II (RWPT).
 Measure the onset of the QRS in ECG lead II to the first change in polarity (nadir Q or peak R). RWPT ≥ 50 msec strongly suggests VT (positive likelihood ratio 34.8). Reference: Pava LF, et al. Heart Rhythm 2010;7:922.</string>
@@ -3106,10 +3109,18 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" constant="8" symbolic="YES" id="2lF-VT-3rB"/>
+                            <constraint firstItem="v4f-bo-OZD" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leading" constant="20" symbolic="YES" id="BoY-Bd-3aX"/>
+                            <constraint firstAttribute="centerX" secondItem="9Mw-vh-A5V" secondAttribute="centerX" id="JaO-dh-rEn"/>
+                            <constraint firstAttribute="centerX" secondItem="v4f-bo-OZD" secondAttribute="centerX" id="LeV-XL-gUx"/>
+                            <constraint firstItem="v4f-bo-OZD" firstAttribute="top" secondItem="9Mw-vh-A5V" secondAttribute="bottom" constant="8" symbolic="YES" id="h1Q-OR-7Xb"/>
+                            <constraint firstItem="9Mw-vh-A5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1e9-YG-z72" secondAttribute="leading" constant="20" symbolic="YES" id="hKr-2I-0mI"/>
+                        </constraints>
                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                     </view>
                     <navigationItem key="navigationItem" title="R Wave Peak Time" id="GTv-7o-Esr"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHA-h1-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
