@@ -3215,17 +3215,21 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="BsG-Le-w3L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wch-tr-Pvf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-Gg-ohP">
-                                <rect key="frame" x="20" y="90" width="280" height="174"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-Gg-ohP">
+                                <rect key="frame" x="20" y="72" width="279.5" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="Ujz-BK-xHr"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="wgh-fn-wVc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-Ev-5du">
-                                <rect key="frame" x="20" y="275" width="72" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-Ev-5du">
+                                <rect key="frame" x="20" y="243" width="30" height="30"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3233,8 +3237,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="yesButtonPushed:" destination="29p-JF-Eiw" eventType="touchUpInside" id="3xV-62-kd0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz0-ac-a0F">
-                                <rect key="frame" x="124" y="284" width="72" height="19"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz0-ac-a0F">
+                                <rect key="frame" x="145" y="243" width="30" height="30"/>
                                 <state key="normal" title="No">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3242,17 +3246,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <action selector="noButtonPushed:" destination="29p-JF-Eiw" eventType="touchUpInside" id="m3W-RJ-cBj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-Fq-8S7">
-                                <rect key="frame" x="228" y="275" width="72" height="37"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButtonPushed:" destination="29p-JF-Eiw" eventType="touchUpInside" id="SWd-rY-klD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZE-LY-4NT">
-                                <rect key="frame" x="20" y="320" width="280" height="37"/>
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3260,8 +3255,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <segue destination="PQv-Iu-QYe" kind="presentation" identifier="NotesSegue" id="oIL-n2-cNM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-JJ-jxK">
-                                <rect key="frame" x="20" y="346" width="280" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-JJ-jxK">
+                                <rect key="frame" x="92" y="313" width="136" height="30"/>
                                 <state key="normal" title="Morphology Criteria">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3269,12 +3264,35 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <segue destination="vtm-vW-Qf5" kind="show" id="4c8-da-XP1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-Fq-8S7">
+                                <rect key="frame" x="264.5" y="243" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPushed:" destination="29p-JF-Eiw" eventType="touchUpInside" id="SWd-rY-klD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UQt-Gg-ohP" firstAttribute="trailing" secondItem="vd4-Fq-8S7" secondAttribute="trailing" id="2EO-Cl-0v4"/>
+                            <constraint firstItem="UQt-Gg-ohP" firstAttribute="top" secondItem="JkC-ed-cdk" secondAttribute="bottom" constant="8" symbolic="YES" id="9Qa-QC-6KW"/>
+                            <constraint firstAttribute="centerX" secondItem="UQt-Gg-ohP" secondAttribute="centerX" id="CjV-e8-OMG"/>
+                            <constraint firstItem="6BY-JJ-jxK" firstAttribute="top" secondItem="vd4-Fq-8S7" secondAttribute="bottom" constant="40" id="IKj-7r-dqg"/>
+                            <constraint firstItem="UQt-Gg-ohP" firstAttribute="leading" secondItem="f4B-Ev-5du" secondAttribute="leading" id="Iz9-4f-PpT"/>
+                            <constraint firstAttribute="centerX" secondItem="Wz0-ac-a0F" secondAttribute="centerX" id="L3a-Uk-V2W"/>
+                            <constraint firstItem="vd4-Fq-8S7" firstAttribute="centerY" secondItem="Wz0-ac-a0F" secondAttribute="centerY" id="Qjh-qX-2Qf"/>
+                            <constraint firstItem="f4B-Ev-5du" firstAttribute="top" secondItem="UQt-Gg-ohP" secondAttribute="bottom" constant="29" id="Wwo-vd-H8A"/>
+                            <constraint firstItem="UQt-Gg-ohP" firstAttribute="leading" secondItem="Wch-tr-Pvf" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="ada-Dg-akk"/>
+                            <constraint firstItem="vd4-Fq-8S7" firstAttribute="centerY" secondItem="f4B-Ev-5du" secondAttribute="centerY" id="fLY-3N-gZP"/>
+                            <constraint firstAttribute="centerX" secondItem="6BY-JJ-jxK" secondAttribute="centerX" id="pzh-MB-b38"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CMV-cz-Wpu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xiO-az-Sil"/>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="vd4-Fq-8S7" id="t9Q-Ba-Rqe"/>
                         <outlet property="instructionsButton" destination="hZE-LY-4NT" id="3aB-eN-S2t"/>
@@ -3287,14 +3305,14 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caF-3n-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-230.625" y="1081.25"/>
+            <point key="canvasLocation" x="-473" y="1062"/>
         </scene>
         <!--LBBB in V1-->
         <scene sceneID="n6J-Ns-GoM">
             <objects>
                 <tableViewController id="grW-sJ-dLw" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6p7-DV-f9z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3324,7 +3342,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             <objects>
                 <tableViewController id="UcS-xA-2wF" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OGV-Nc-tw7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -3612,95 +3630,95 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
-                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gWp-Vz-OiS" secondAttribute="height" multiplier="320:289" id="laE-o7-7fs"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
-                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RrO-cy-PwH" secondAttribute="height" multiplier="320:289" id="JZv-Mw-ycV"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
-                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fVz-e0-JTT" secondAttribute="height" multiplier="320:289" id="LOF-b6-6cH"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
-                                <rect key="frame" x="74" y="96" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0rb-g4-jki" secondAttribute="height" multiplier="320:289" id="DFO-wB-J0h"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mIa-S1-Y7q" secondAttribute="height" multiplier="320:289" id="zQQ-eD-mdR"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AHB-u6-JtR" secondAttribute="height" multiplier="320:289" id="Nfe-0N-SSm"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SEs-Ji-GrW" secondAttribute="height" multiplier="320:289" id="yEv-6t-Bvu"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9I9-Uu-U8T" secondAttribute="height" multiplier="320:289" id="ZNb-vG-7DJ"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sff-vt-pYQ" secondAttribute="height" multiplier="320:289" id="fxU-M2-bXx"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gco-M8-5yJ" secondAttribute="height" multiplier="320:289" id="xFf-ib-lTS"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fc8-nj-Uaz" secondAttribute="height" multiplier="320:289" id="b8A-OD-UVk"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xHX-bV-EvX" secondAttribute="height" multiplier="320:289" id="IVx-9k-zp6"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QBL-OF-jfK" secondAttribute="height" multiplier="320:289" id="x88-o9-4Wi"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IWU-ux-lqO" secondAttribute="height" multiplier="320:289" id="5lZ-hf-57q"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
-                                <rect key="frame" x="74" y="95.5" width="452" height="408"/>
+                                <rect key="frame" x="20" y="113" width="280" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
                                 </constraints>
@@ -3845,11 +3863,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -3861,13 +3879,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="578" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="298" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="560" height="480"/>
+                                <rect key="frame" x="20" y="112" width="280" height="360"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5485,7 +5503,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="zlS-au-Ibg"/>
-        <segue reference="pFv-5Z-NQa"/>
-        <segue reference="gzd-ih-l4g"/>
+        <segue reference="oIL-n2-cNM"/>
+        <segue reference="HWu-7U-py6"/>
     </inferredMetricsTieBreakers>
 </document>
