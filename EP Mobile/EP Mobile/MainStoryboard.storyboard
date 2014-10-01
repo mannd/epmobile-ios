@@ -1592,12 +1592,18 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AFr-eV-oTs" firstAttribute="leading" secondItem="UeZ-HF-lbM" secondAttribute="leading" id="8q5-kh-MhC"/>
+                            <constraint firstItem="AFr-eV-oTs" firstAttribute="top" secondItem="UeZ-HF-lbM" secondAttribute="top" id="sTd-7i-2JQ"/>
+                            <constraint firstItem="qcC-8d-5wf" firstAttribute="top" secondItem="AFr-eV-oTs" secondAttribute="bottom" id="sX0-sS-YgY"/>
+                            <constraint firstAttribute="trailing" secondItem="AFr-eV-oTs" secondAttribute="trailing" id="xkd-ZJ-3zL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0S6-y4-ASA"/>
                     <connections>
@@ -3406,19 +3412,19 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="6eX-aG-0BF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S3d-hE-9E9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cjk-t1-GJ8">
-                                <rect key="frame" x="19" y="96" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cjk-t1-GJ8">
+                                <rect key="frame" x="20" y="100" width="335" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                     <segment title=""/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-AV-8s6">
-                                <rect key="frame" x="20" y="162" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-AV-8s6">
+                                <rect key="frame" x="20" y="165" width="335" height="29"/>
                                 <segments>
                                     <segment title="I"/>
                                     <segment title="II"/>
@@ -3426,20 +3432,20 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                     <segment title="IV"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Left Ventricular Ejection Fraction (%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZJ-84-YQm">
-                                <rect key="frame" x="19" y="68" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Left Ventricular Ejection Fraction (%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZJ-84-YQm">
+                                <rect key="frame" x="20" y="72" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="NYHA Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-32-WW9">
-                                <rect key="frame" x="112" y="132" width="95" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="NYHA Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-32-WW9">
+                                <rect key="frame" x="20" y="136" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-Q4-P68">
-                                <rect key="frame" x="19" y="198" width="280" height="244"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-Q4-P68">
+                                <rect key="frame" x="20" y="201" width="335" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5Lf-aF-glM" id="ed7-gw-n4d"/>
@@ -3448,9 +3454,27 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OEo-32-WW9" secondAttribute="trailing" constant="20" symbolic="YES" id="0Hv-aC-kBo"/>
+                            <constraint firstItem="kZJ-84-YQm" firstAttribute="top" secondItem="8GY-Fb-5Hm" secondAttribute="bottom" constant="8" symbolic="YES" id="0p2-Rk-irL"/>
+                            <constraint firstItem="6eX-aG-0BF" firstAttribute="top" secondItem="Cyb-Q4-P68" secondAttribute="bottom" constant="8" symbolic="YES" id="8K3-uo-AxH"/>
+                            <constraint firstAttribute="trailing" secondItem="5sX-AV-8s6" secondAttribute="trailing" constant="20" symbolic="YES" id="IKb-NK-aSY"/>
+                            <constraint firstAttribute="trailing" secondItem="cjk-t1-GJ8" secondAttribute="trailing" constant="20" symbolic="YES" id="Qmp-eA-slo"/>
+                            <constraint firstItem="cjk-t1-GJ8" firstAttribute="top" secondItem="kZJ-84-YQm" secondAttribute="bottom" constant="8" symbolic="YES" id="Slc-Wb-a3a"/>
+                            <constraint firstItem="5sX-AV-8s6" firstAttribute="top" secondItem="OEo-32-WW9" secondAttribute="bottom" constant="8" symbolic="YES" id="WZg-9V-T86"/>
+                            <constraint firstItem="5sX-AV-8s6" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="XBB-40-3rW"/>
+                            <constraint firstAttribute="trailing" secondItem="Cyb-Q4-P68" secondAttribute="trailing" constant="20" symbolic="YES" id="coG-Db-Pet"/>
+                            <constraint firstItem="OEo-32-WW9" firstAttribute="top" secondItem="cjk-t1-GJ8" secondAttribute="bottom" constant="8" symbolic="YES" id="gSM-aF-rUp"/>
+                            <constraint firstItem="kZJ-84-YQm" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="gjE-df-1up"/>
+                            <constraint firstItem="cjk-t1-GJ8" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="izr-Ma-I12"/>
+                            <constraint firstItem="OEo-32-WW9" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="onM-IZ-00q"/>
+                            <constraint firstItem="Cyb-Q4-P68" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="pHw-E7-nrW"/>
+                            <constraint firstAttribute="trailing" secondItem="kZJ-84-YQm" secondAttribute="trailing" constant="20" symbolic="YES" id="t4B-Jl-RxK"/>
+                            <constraint firstItem="Cyb-Q4-P68" firstAttribute="top" secondItem="5sX-AV-8s6" secondAttribute="bottom" constant="8" symbolic="YES" id="w5x-22-m7S"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CMS ICD Criteria" id="PjX-Dp-zSL"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="criteriaTableView" destination="Cyb-Q4-P68" id="W2k-wd-fiQ"/>
                         <outlet property="efSegmentedControl" destination="cjk-t1-GJ8" id="BX3-AB-UA4"/>
@@ -3893,11 +3917,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -3909,13 +3933,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="298" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="353" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="280" height="360"/>
+                                <rect key="frame" x="20" y="112" width="335" height="547"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5532,8 +5556,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="tjF-od-osy"/>
         <segue reference="WZv-9D-sK8"/>
         <segue reference="ucK-8l-Jyw"/>
+        <segue reference="sIb-ay-0FY"/>
         <segue reference="zlS-au-Ibg"/>
-        <segue reference="oIL-n2-cNM"/>
         <segue reference="HWu-7U-py6"/>
     </inferredMetricsTieBreakers>
 </document>
