@@ -1039,6 +1039,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wt (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-06-BX6">
                                 <rect key="frame" x="186" y="129" width="62.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62.5" id="F68-oo-61s"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -1065,7 +1068,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ht (in)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-kT-wXg">
-                                <rect key="frame" x="183" y="188" width="59" height="30"/>
+                                <rect key="frame" x="186" y="188" width="62.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62.5" id="mPv-7C-b4I"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -1131,7 +1137,6 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="LgC-fu-gZn" secondAttribute="trailing" id="0CX-Je-pup"/>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="Jhs-Su-D4p" secondAttribute="trailing" id="3sH-DL-0yl"/>
                             <constraint firstItem="M18-mI-lT6" firstAttribute="top" secondItem="LgC-fu-gZn" secondAttribute="bottom" constant="8" id="4Tt-yS-6GV"/>
-                            <constraint firstItem="MUb-kT-wXg" firstAttribute="leading" secondItem="XnI-rU-Cjr" secondAttribute="trailing" constant="8" id="9pL-El-YjN"/>
                             <constraint firstItem="Jhs-Su-D4p" firstAttribute="top" secondItem="caI-jc-Qmc" secondAttribute="bottom" constant="20" id="JjV-SW-Vag"/>
                             <constraint firstItem="XnI-rU-Cjr" firstAttribute="top" secondItem="Xhk-2x-0f4" secondAttribute="bottom" constant="37.5" id="LEe-g9-Dgc"/>
                             <constraint firstItem="LgC-fu-gZn" firstAttribute="leading" secondItem="vMX-ak-cqp" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="LJh-RF-gGM"/>
@@ -1147,6 +1152,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="2an-Nc-I8z" firstAttribute="top" secondItem="XnI-rU-Cjr" secondAttribute="bottom" constant="16" id="jqI-zI-PtF"/>
                             <constraint firstItem="Jhs-Su-D4p" firstAttribute="leading" secondItem="XnI-rU-Cjr" secondAttribute="leading" id="kvJ-hH-yFn"/>
                             <constraint firstItem="acW-06-BX6" firstAttribute="leading" secondItem="Xhk-2x-0f4" secondAttribute="trailing" constant="8" id="nCN-Pb-Ui3"/>
+                            <constraint firstItem="acW-06-BX6" firstAttribute="leading" secondItem="MUb-kT-wXg" secondAttribute="leading" id="qNa-Hh-XdO"/>
                             <constraint firstItem="INF-SQ-lFM" firstAttribute="centerY" secondItem="acW-06-BX6" secondAttribute="centerY" id="qTm-AF-JFn"/>
                             <constraint firstItem="Jhs-Su-D4p" firstAttribute="leading" secondItem="M18-mI-lT6" secondAttribute="leading" id="s6k-iu-Y1n"/>
                             <constraint firstAttribute="centerX" secondItem="Jhs-Su-D4p" secondAttribute="centerX" id="sKP-m6-ebP"/>
