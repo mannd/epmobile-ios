@@ -2228,8 +2228,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-yo-Op1">
-                                <rect key="frame" x="20" y="53" width="280" height="262"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-yo-Op1">
+                                <rect key="frame" x="160" y="229" width="280" height="142"/>
                                 <string key="text">Remaining subtypes all &lt;1% frequency (some just single families) without distinguishing features.  One exception is LQT 8 which affects the ICaL channel, has alternating T waves on ECG, and is associated with Timothy Syndrome.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2237,6 +2237,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="mS7-yo-Op1" secondAttribute="centerY" id="xyI-EP-VQp"/>
+                            <constraint firstAttribute="centerX" secondItem="mS7-yo-Op1" secondAttribute="centerX" id="yMJ-iI-Ks1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="LQT 5-11" id="IFA-tI-TRG"/>
                 </viewController>
