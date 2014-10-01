@@ -8,6 +8,7 @@
 
 #import "EPSDateCalculatorViewController.h"
 #import "EPSNotesViewController.h"
+#import "EPSLogging.h"
 
 #define INVALID_ENTRY @"INVALID ENTRY!"
 
@@ -51,17 +52,6 @@
     [super viewDidUnload];
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-- (NSUInteger)supportedInterfaceOrientations
-{
-    //decide number of origination tob supported by Viewcontroller.
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }
@@ -88,7 +78,7 @@
 - (IBAction)calculate:(id)sender {
     NSString *numberOfDays = self.numberOfDaysTextField.text;
     NSInteger days = [numberOfDays intValue];
-    NSLog(@"Formula is %ld", (long)days);
+    EPSLog(@"Formula is %ld", (long)days);
     if (days == 0) { // either zero entered or bad stuff entered
         [self.resultLabel setText:INVALID_ENTRY];
         return;

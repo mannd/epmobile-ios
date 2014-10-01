@@ -7,6 +7,7 @@
 //
 
 #import "EPSDrugDoseCalculatorViewController.h"
+#import "EPSLogging.h"
 
 #define DABIGATRAN @"Dabigatran"
 #define DOFETILIDE @"Dofetilide"
@@ -95,17 +96,6 @@
 
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
-
 - (IBAction)toggleWeightUnits:(id)sender {
     //self.weightField.text  = nil;  this is bad if people enter weight first and then units, so it's gone.
     self.resultLabel.text = nil;
@@ -143,13 +133,13 @@
 - (IBAction)calculate:(id)sender {
     NSString *weightText = self.weightField.text;
     double weight = [weightText doubleValue];
-    NSLog(@"Weight is %f", weight);
+    EPSLog(@"Weight is %f", weight);
     NSString *ageText = self.ageField.text;
     double age = [ageText doubleValue];
-    NSLog(@"Age is %f", age);
+    EPSLog(@"Age is %f", age);
     NSString *creatinineText = self.creatinineField.text;
     double creatinine = [creatinineText doubleValue];
-    NSLog(@"Creatinine is %f", creatinine);
+    EPSLog(@"Creatinine is %f", creatinine);
     // make sure all entries ok
     if (weight <= 0.0 || age <= 0.0 || creatinine <= 0.0) {
         self.resultLabel.text = @"INVALID ENTRY";
@@ -161,9 +151,9 @@
     }
 
     if (weightIsPounds) {
-        NSLog(@"Weight is in pounds (%f lb)", weight);
+        EPSLog(@"Weight is in pounds (%f lb)", weight);
         weight = [self lbsToKgs:weight];
-        NSLog(@"Converted weight in kgs is %f", weight);
+        EPSLog(@"Converted weight in kgs is %f", weight);
     }
     BOOL isMale = ([sexSegmentedControl selectedSegmentIndex] == 0);
     int cc = [self creatinineClearanceForAge:age isMale:isMale forWeightInKgs:weight forCreatinine:creatinine usingMicroMolUnits:!unitsAreMgPerDl];
@@ -221,7 +211,7 @@
         result = (int) (crClr + 0.5);
         
     }
-    NSLog(@"Unrounded crClr = %f, Rounded = %i", crClr, result);
+    EPSLog(@"Unrounded crClr = %f, Rounded = %i", crClr, result);
     // don't return negative creatinine clearance
     return result < 0 ? 0 : result;
 }
@@ -290,7 +280,7 @@
         if (crCl < 15)
             stringDose = @"0";
         else {
-            NSLog(@"Creatine = %f", creatinine);
+            EPSLog(@"Creatine = %f", creatinine);
             if ((creatinine >= 1.5 && (age >= 80 || weight <= 60))
                     || (age >= 80 && weight <= 60))
                 stringDose = @"2.5";

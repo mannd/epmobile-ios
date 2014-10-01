@@ -55,12 +55,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-// forbid rotation
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-
 - (void)calculateScore
 {
     int score = 0;

@@ -7,9 +7,10 @@
 //
 
 #import "EPSCycleLengthCalculatorViewController.h"
+#import "EPSLogging.h"
+
 
 @interface EPSCycleLengthCalculatorViewController ()
-
 
 @end
 
@@ -45,11 +46,6 @@
     // Release any retained subviews of the main view.
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
-}
-
 - (int)convertInterval:(int)n {
     // make sure result rounded up to nearest msec
     return (int)round(60000.0 / n);
@@ -58,7 +54,7 @@
 - (IBAction)calculateButton:(id)sender {
     NSString *s = self.inputField.text;
     int n = [s intValue];
-    NSLog(@"The value of n is %i", n);
+    EPSLog(@"The value of n is %i", n);
     if (n == 0) {
         self.resultLabel.text = @"INVALID ENTRY";
         return;

@@ -7,6 +7,7 @@
 //
 
 #import "EPSQTcCalculatorViewController.h"
+#import "EPSLogging.h"
 
 #define BAZETT 0
 #define FRIDERICIA 1
@@ -114,21 +115,10 @@
     // this ensures maxQTc is sane if defaults aren't loaded
     if (self.maxQTc == 0.0)
         self.maxQTc = MAX_NORMAL_QTC;
-    NSLog(@"MaxQTcString = %@", maxQTcString);
-    NSLog(@"MaxQTc = %f", self.maxQTc);
+    EPSLog(@"MaxQTcString = %@", maxQTcString);
+    EPSLog(@"MaxQTc = %f", self.maxQTc);
     
 }
-
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
 
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
@@ -142,10 +132,10 @@
 - (IBAction)calculateButtonPressed:(id)sender {
     NSString *input = self.inputField.text;
     NSInteger inputNumber = [input intValue];
-    NSLog(@"The value of inputNumber is %ld", (long)inputNumber);
+    EPSLog(@"The value of inputNumber is %ld", (long)inputNumber);
     NSString *qt = self.qtField.text;
     NSInteger qtNumber = [qt intValue];
-    NSLog(@"The value of qtNumber is %ld", (long)qtNumber);
+    EPSLog(@"The value of qtNumber is %ld", (long)qtNumber);
     if (inputNumber <= 0 || qtNumber <= 0) {
         self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;
@@ -153,14 +143,14 @@
     }
     if (inputIsRate) {
         inputNumber = 60000.0 / inputNumber;
-        NSLog(@"Converted to RR interval in msec is %ld", (long)inputNumber);
+        EPSLog(@"Converted to RR interval in msec is %ld", (long)inputNumber);
     }
     NSInteger row = [formulaPicker selectedRowInComponent:0];
     NSString *formula = [formulaData objectAtIndex:row];
-    NSLog(@"Formula is %@", formula);
-    NSLog(@"Row is %ld", (long)row);
+    EPSLog(@"Formula is %@", formula);
+    EPSLog(@"Row is %ld", (long)row);
     NSInteger qtc = [self qtcFromQtInMsec:qtNumber AndIntervalInMsec:inputNumber UsingFormula:row];
-    NSLog(@"QTc = %ld", (long)qtc);
+    EPSLog(@"QTc = %ld", (long)qtc);
     if (qtc == 0.0) {
         self.resultLabel.textColor = [UIColor darkTextColor];
         self.resultLabel.text = INVALID_ENTRY;

@@ -16,7 +16,7 @@
 #import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
 #import "EPSWeightCalculatorNotes.h"
-
+#import "EPSLogging.h"
 
 @interface EPSNotesViewController ()
 
@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"self key = %@", self.key);
+    EPSLog(@"self key = %@", self.key);
     id <EPSNotesProtocol> notes = nil;
     if ([self.key isEqualToString:@"OutflowVT"])
         notes = [[EPSOutFlowTractVTNotes alloc] init];
@@ -74,16 +74,6 @@
     [self setNotesTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (IBAction)doneButtonPressed:(id)sender {

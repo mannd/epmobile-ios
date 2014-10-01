@@ -8,6 +8,7 @@
 
 #import "EPSLQTSViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSLogging.h"
 
 @interface EPSLQTSViewController ()
 
@@ -52,8 +53,6 @@
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
-
-
 }
 
 - (void)viewDidUnload
@@ -64,17 +63,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
-
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 
 - (void) calculateScore {
     // since this score uses 0.5, we will multiply points by 10, e.g.
@@ -209,7 +197,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int offset = [self calculateOffset:indexPath.section];
-    NSLog(@"Offset = %d section = %ld row = %ld", offset, (long)indexPath.section, (long)indexPath.row);
+    EPSLog(@"Offset = %d section = %ld row = %ld", offset, (long)indexPath.section, (long)indexPath.row);
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;

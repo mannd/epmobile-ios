@@ -10,6 +10,7 @@
 #import "EPSCMSNotes.h"
 #import "EPSNotesViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSLogging.h"
 
 // these magic numbers are in Data.plist
 #define CARDIAC_ARREST 0
@@ -112,17 +113,6 @@
     [super viewDidUnload];
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-
 - (void)showNotes {
     [self performSegueWithIdentifier:@"CMSNotesSegue" sender:nil];
 }
@@ -172,7 +162,7 @@
         result = FAMILIAL_CONDITION;
     else
         result = POSSIBLE_INDICATION;
-    NSLog(@"CMS result = %d", result);
+    EPSLog(@"CMS result = %d", result);
     [self showResults:[self getResultMessage:result]];
 }
 

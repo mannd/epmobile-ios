@@ -7,6 +7,7 @@
 //
 
 #import "EPSWarfarinDailyDoseCalculator.h"
+#import "EPSLogging.h"
 
 #define NUM_DAYS 7
 #define SUN 0
@@ -58,14 +59,14 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
         while ([self actualWeeklyDose:doses] > self.weeklyDose) {
             // check for all half tablets, can start using zero doses
             if ([self allHalfTablets:doses]) {
-                NSLog(@"All Half Doses!");
+                EPSLog(@"All Half Doses!");
                 allowZeroDoses = YES;
             }
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
             if ((allowZeroDoses && value > 0.0) || value > 0.5)
                 [doses replaceObjectAtIndex:orderedDays[nextDay] withObject:[NSNumber numberWithFloat:(value - 0.5)]];
-            NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
-            NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
+            EPSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
+            EPSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
             ++nextDay;
             if (nextDay > NUM_DAYS - 1)
                 nextDay = 0;
@@ -82,8 +83,8 @@ static int orderedDays[] = { MON, FRI, WED, SAT, TUE, THU, SUN };
             float value = [[doses objectAtIndex:orderedDays[nextDay]] floatValue];
             if (value < 2.0)
                 [doses replaceObjectAtIndex:orderedDays[nextDay] withObject:[NSNumber numberWithFloat:(value + 0.5)]];
-            NSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
-            NSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
+            EPSLog(@"Value = %f, nextDay = %d, orderedDay = %d", value, nextDay, orderedDays[nextDay]);
+            EPSLog(@"actualWeeklyDose = %f, target weeklyDose = %f", [self actualWeeklyDose:doses], self.weeklyDose);
             ++nextDay;
             if (nextDay > NUM_DAYS - 1)
                 nextDay = 0;

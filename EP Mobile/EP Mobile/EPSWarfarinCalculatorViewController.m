@@ -10,6 +10,7 @@
 #import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSNotesViewController.h"
+#import "EPSLogging.h"
 
 #define DEFAULT_TABLET_INDEX 5  // 5 mg tablet at index 5
 
@@ -89,8 +90,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.defaultWarfarinTabletSize = [defaults objectForKey:@"defaultwarfarintablet"];
     self.defaultINR = [defaults objectForKey:@"defaultinrtarget"];
-    NSLog(@"DefaultWafarinTabletSize = %@", self.defaultWarfarinTabletSize);
-    NSLog(@"DefaultINR = %@", self.defaultINR);
+    EPSLog(@"DefaultWafarinTabletSize = %@", self.defaultWarfarinTabletSize);
+    EPSLog(@"DefaultINR = %@", self.defaultINR);
 
 }
 
@@ -105,17 +106,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
-
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation == UIInterfaceOrientationPortrait;
-}
-
-// for iOS 6
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 
 - (void)showNotes {
     [self performSegueWithIdentifier:@"WarfarinNotesSegue" sender:nil];
@@ -150,7 +140,7 @@
     NSInteger row = [tabletSizePickerView selectedRowInComponent:0];
     NSString *tabletSizeString = [tabletSizeData objectAtIndex:row];
     double tabSize = [tabletSizeString doubleValue];
-    NSLog(@"Picker tablet size = %f", tabSize);
+    EPSLog(@"Picker tablet size = %f", tabSize);
     return tabSize;
     
 }
@@ -210,7 +200,7 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex != [actionSheet cancelButtonIndex]) {
-        NSLog(@"Flip view");
+        EPSLog(@"Flip view");
         [self performSegueWithIdentifier:@"DosingSegue" sender:nil];
     }
         
@@ -219,7 +209,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"WarfarinNotesSegue"]) {
-        NSLog(@"Warfarin notes");
+        EPSLog(@"Warfarin notes");
         EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
         vc.key = @"WarfarinNotes";
     }

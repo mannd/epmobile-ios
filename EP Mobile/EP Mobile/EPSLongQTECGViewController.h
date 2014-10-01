@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSLongQTECGViewController : UIViewController
-  <UIScrollViewDelegate>
 
 @end
