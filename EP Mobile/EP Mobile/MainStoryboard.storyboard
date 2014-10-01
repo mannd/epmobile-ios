@@ -3003,11 +3003,20 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
-                                <rect key="frame" x="0.0" y="64" width="320" height="362"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
+                                <rect key="frame" x="20" y="156.5" width="374" height="423"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QFC-cs-lDR" secondAttribute="height" multiplier="160:181" id="x8K-Ly-hcX"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QFC-cs-lDR" secondAttribute="centerX" id="NGp-QI-Ow2"/>
+                            <constraint firstItem="QFC-cs-lDR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AGZ-Tn-qml" secondAttribute="leading" constant="20" symbolic="YES" id="XTq-dQ-kwC"/>
+                            <constraint firstItem="QFC-cs-lDR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YOO-nN-huq" secondAttribute="bottom" constant="8" symbolic="YES" id="c6V-PI-5Rt"/>
+                            <constraint firstAttribute="centerY" secondItem="QFC-cs-lDR" secondAttribute="centerY" id="vxE-mi-hb1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -3025,16 +3034,26 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="iFd-wc-3l4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
-                                <rect key="frame" x="0.0" y="64" width="320" height="351"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
+                                <rect key="frame" x="20" y="86.5" width="280" height="307"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0bo-DH-ke2" secondAttribute="height" multiplier="320:351" id="KMH-cx-yCO"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0bo-DH-ke2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qMw-Wp-VKo" secondAttribute="leading" constant="20" symbolic="YES" id="Dd0-we-csF"/>
+                            <constraint firstAttribute="centerY" secondItem="0bo-DH-ke2" secondAttribute="centerY" id="mFs-Kp-1YC"/>
+                            <constraint firstItem="0bo-DH-ke2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DTl-Ud-HWT" secondAttribute="bottom" constant="8" symbolic="YES" id="u0q-ej-oar"/>
+                            <constraint firstAttribute="centerX" secondItem="0bo-DH-ke2" secondAttribute="centerX" id="weg-FT-JJt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rn4-e9-KqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
