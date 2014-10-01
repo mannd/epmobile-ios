@@ -2590,24 +2590,28 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="top" id="AwR-ZZ-Oyc"/>
                         <viewControllerLayoutGuide type="bottom" id="JRl-zj-jIJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
-                                <rect key="frame" x="10" y="173" width="300" height="133"/>
+                                <rect key="frame" x="149" y="408" width="470" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="He5-kK-9Z1" secondAttribute="height" multiplier="300:133" id="wbS-t6-nj9"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="He5-kK-9Z1" firstAttribute="leading" secondItem="CZF-4x-r1c" secondAttribute="leading" constant="10" id="CtN-Ck-86B"/>
-                            <constraint firstItem="He5-kK-9Z1" firstAttribute="top" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" constant="109" id="HJC-qt-9uJ"/>
+                            <constraint firstAttribute="centerX" secondItem="He5-kK-9Z1" secondAttribute="centerX" id="1X1-dU-93e"/>
                             <constraint firstItem="He5-kK-9Z1" firstAttribute="centerX" secondItem="CZF-4x-r1c" secondAttribute="centerX" id="Jyq-Ot-Du0"/>
-                            <constraint firstItem="JRl-zj-jIJ" firstAttribute="top" secondItem="He5-kK-9Z1" secondAttribute="bottom" constant="174" id="p9u-5d-JDo"/>
+                            <constraint firstItem="He5-kK-9Z1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" constant="8" symbolic="YES" id="LnU-Z3-xCo"/>
+                            <constraint firstAttribute="centerY" secondItem="He5-kK-9Z1" secondAttribute="centerY" id="ia3-gp-mkf"/>
+                            <constraint firstItem="He5-kK-9Z1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CZF-4x-r1c" secondAttribute="leading" constant="20" symbolic="YES" id="zNf-vO-g0p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3802,26 +3806,26 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="top" id="8FP-vg-Gmf"/>
                         <viewControllerLayoutGuide type="bottom" id="qDE-vj-ZfQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <view key="view" contentMode="scaleToFill" id="3bH-b1-BzP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                <rect key="frame" x="59" y="244" width="297" height="248"/>
+                                <rect key="frame" x="100" y="133" width="400" height="334"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="297" id="29J-0W-RQm"/>
-                                    <constraint firstAttribute="height" constant="248" id="qdA-69-JPv"/>
+                                    <constraint firstAttribute="width" secondItem="Xtc-ai-f3e" secondAttribute="height" multiplier="297:248" id="TyL-Be-frF"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8FP-vg-Gmf" secondAttribute="bottom" constant="8" symbolic="YES" id="0gj-uz-k5Q"/>
                             <constraint firstAttribute="centerY" secondItem="Xtc-ai-f3e" secondAttribute="centerY" id="2BR-jR-1nG"/>
+                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3bH-b1-BzP" secondAttribute="leading" constant="20" symbolic="YES" id="u31-O0-3Wl"/>
                             <constraint firstAttribute="centerX" secondItem="Xtc-ai-f3e" secondAttribute="centerX" id="zTy-nd-Of7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <segue destination="PQv-Iu-QYe" kind="presentation" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
                     </connections>
@@ -3839,11 +3843,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -3855,13 +3859,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="392" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="578" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="374" height="616"/>
+                                <rect key="frame" x="20" y="112" width="560" height="480"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5477,9 +5481,9 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="pGj-ye-BDw"/>
         <segue reference="tjF-od-osy"/>
         <segue reference="WZv-9D-sK8"/>
-        <segue reference="VLv-ky-ss1"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="zlS-au-Ibg"/>
         <segue reference="pFv-5Z-NQa"/>
+        <segue reference="gzd-ih-l4g"/>
     </inferredMetricsTieBreakers>
 </document>
