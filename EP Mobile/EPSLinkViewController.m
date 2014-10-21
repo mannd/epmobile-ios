@@ -28,9 +28,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.webView setScalesPageToFit:YES];
-    NSString *urlAdress= self.webPage;
-    
-    NSURL *url = [NSURL URLWithString:urlAdress];
+    NSString *urlAddress= self.webPage;
+    NSURL *url = nil;
+    if ([urlAddress hasPrefix:@"http"]) {
+        url = [NSURL URLWithString:urlAddress];
+    }
+    else {
+        url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:urlAddress ofType:@"html"] isDirectory:NO];
+    }
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
     [self.webView loadRequest:requestObj];

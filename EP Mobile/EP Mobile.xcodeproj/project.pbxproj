@@ -76,6 +76,10 @@
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
+		8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */; };
+		8E54A56119F6E37F00EFF001 /* rvapexvsbasepacing.org in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */; };
+		8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */; };
+		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
 		8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */; };
 		8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93C815C7580C00ACBA4F /* brugadaecg.png */; };
 		8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */; };
@@ -248,6 +252,10 @@
 		8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskFactor.m; sourceTree = "<group>"; };
 		8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDailyDoseCalculator.h; sourceTree = "<group>"; };
 		8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDailyDoseCalculator.m; sourceTree = "<group>"; };
+		8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parahisianpacinginstructions.org; sourceTree = "<group>"; };
+		8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvapexvsbasepacing.org; sourceTree = "<group>"; };
+		8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = parahisianpacinginstructions.html; sourceTree = "<group>"; };
+		8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvapexvsbasepacing.html; sourceTree = "<group>"; };
 		8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaECGViewController.h; sourceTree = "<group>"; };
 		8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaECGViewController.m; sourceTree = "<group>"; };
 		8E5D93C815C7580C00ACBA4F /* brugadaecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brugadaecg.png; sourceTree = "<group>"; };
@@ -631,6 +639,10 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */,
+				8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */,
+				8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */,
+				8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */,
 				8E0A6243165E7B9000230EF7 /* epmobile_icon_1024-2.png */,
 				8E0A6240165E7B7200230EF7 /* epmobile_icon_1024.png */,
 				8E4B27AD1633459300BF1F2C /* epicardialap.png */,
@@ -779,6 +791,7 @@
 				8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */,
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
 				8E06011F15DB39CF00BB7550 /* lbbbmorphology.png in Resources */,
+				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
 				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
@@ -803,10 +816,13 @@
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
 				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
+				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
+				8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */,
 				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
 				8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */,
 				8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */,
+				8E54A56119F6E37F00EFF001 /* rvapexvsbasepacing.org in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

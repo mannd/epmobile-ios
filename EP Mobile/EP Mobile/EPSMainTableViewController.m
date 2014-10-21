@@ -76,8 +76,13 @@
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";
-    if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
-        lc.webPage = @"http://www.crediblemeds.org";        
+    else if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
+        lc.webPage = @"http://www.crediblemeds.org";
+    else if ([segueIdentifier isEqualToString:@"ParaHisSegue"])
+        lc.webPage = @"parahisianpacinginstructions";
+    else if ([segueIdentifier isEqualToString:@"RVPaceSegue"])
+        lc.webPage = @"rvapexvsbasepacing";
+    
 }
 
 
