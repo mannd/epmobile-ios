@@ -35,6 +35,7 @@
     }
     else {
         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:urlAddress ofType:@"html"] isDirectory:NO];
+        [self.webView setScalesPageToFit:NO];
     }
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
