@@ -14,11 +14,13 @@
 #define RIVAROXABAN @"Rivaroxaban"
 #define SOTALOL @"Sotalol"
 #define APIXABAN @"Apixaban"
+#define EDOXABAN @"Edoxaban"
 
 #define DO_NOT_USE @"DO NOT USE! "
 #define APIXABAN_2_5_CAUTION @"Avoid coadministration with strong dual inhibitors of CYP3A4 and P-gp "
 #define APIXABAN_5_CAUTION @"Use 2.5 mg twice daily when administered with strong dual inhibitors of CYP3A4 and P-gp "
 #define INHIBITORS @"(e.g. ketoconazole, itraconazole, ritonavir, clarithromycin)."
+#define AFB_DOSING_ONLY_WARNING @"\nDosing only for non-valvular AF (not DVT/PE or other indications)"
 
 @interface EPSDrugDoseCalculatorViewController ()
 
@@ -242,9 +244,9 @@
     if ([drug isEqualToString:DOFETILIDE]) {
  		if (crCl > 60)
 			dose = 500;
-		else if (crCl > 40)
+		else if (crCl >= 40)
 			dose = 250;
-		else if (crCl > 20)
+		else if (crCl >= 20)
 			dose = 125;
 		else 
             dose = 0;
@@ -296,6 +298,23 @@
             message = [message stringByAppendingString:APIXABAN_5_CAUTION];
         return [message stringByAppendingString:INHIBITORS];
     }
+    if ([drug isEqualToString:EDOXABAN]) {
+        NSString* stringDose = @"";
+        if (crCl < 15 || crCl > 95)
+            stringDose = @"0";
+        else {
+            EPSLog(@"Creatine = %f", creatinine);
+            if (crCl <= 50 && crCl >= 15)
+                stringDose = @"30";
+            else
+                stringDose = @"60";
+        }
+        if ([stringDose isEqualToString:@"0"])
+            return [message stringByAppendingString:DO_NOT_USE];
+        message = [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg daily. ", stringDose]];
+        return message;
+        //return [message stringByAppendingString:AFB_DOSING_ONLY_WARNING];
+    }
     return @"Unknown Dose";
 }
 
@@ -310,6 +329,8 @@
         return crCl < 40;
     if ([drug isEqualToString:APIXABAN])
         return crCl < 15;
+    if ([drug isEqualToString:EDOXABAN])
+        return (crCl <15 || crCl > 95);
     return NO;
 }
 
@@ -349,6 +370,14 @@
                 return [msg stringByAppendingString:@"BID."];
             else 
                 return [msg stringByAppendingString:@"daily."];
+        }
+    }
+    if ([drug isEqualToString:EDOXABAN]) {
+        if (crCl < 15) {
+            return @"";
+        }
+        else if (crCl > 95) {
+            return @"Edoxaban should not be used in patients with CrCl > 95 ml/min";
         }
     }
     return @"";

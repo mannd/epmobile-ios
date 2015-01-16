@@ -61,6 +61,8 @@
         vc.drug = @"Sotalol";
     else if ([segueIdentifier isEqualToString:@"ApixabanSegue"])
         vc.drug = @"Apixaban";
+    else if ([segueIdentifier isEqualToString:@"EdoxabanSegue"])
+        vc.drug = @"Edoxaban";
 }
 
 @end
