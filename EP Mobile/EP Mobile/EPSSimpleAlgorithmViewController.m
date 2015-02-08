@@ -17,6 +17,7 @@
 #import "EPSMilsteinAlgorithm.h"
 #import "EPSAVAnnulusViewController.h"
 #import "EPSVereckeiAlgorithm.h"
+#import "EPSDavilaAlgorithm.h"
 #import "EPSLogging.h"
 
 #define OUTFLOW_VT @"OutflowVT"
@@ -26,6 +27,7 @@
 #define MILSTEIN_WPW @"MilsteinWPW"
 #define MODIFIED_ARRUDA_WPW @"ModifiedArrudaWPW"
 #define VERECKEI_WCT @"VereckeiWCT"
+#define DAVILA_WPW @"DavilaWPW"
 
 @interface EPSSimpleAlgorithmViewController ()
 
@@ -71,6 +73,8 @@
         algorithm = [[EPSMilsteinAlgorithm alloc] init];
     else if ([self.algorithmName isEqualToString:VERECKEI_WCT])
         algorithm = [[EPSVereckeiAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:DAVILA_WPW])
+        algorithm = [[EPSDavilaAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
         
     // ...

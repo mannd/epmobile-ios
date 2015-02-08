@@ -55,6 +55,8 @@
         vc.algorithmName = @"MilsteinWPW";
     else if ([segueIdentifier isEqualToString:@"ModifiedArrudaSegue"])
         vc.algorithmName = @"ModifiedArrudaWPW";
+    else if ([segueIdentifier isEqualToString:@"DavilaSegue"])
+        vc.algorithmName = @"DavilaWPW";
 }
 
 @end
