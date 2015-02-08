@@ -153,40 +153,40 @@
 
     switch (step) {
         case 1:
-            question = @"Lead I \u00b1 or -\n or V1 R/S \u2265 1?";
+            question = @"Lead I delta \u00b1 or -\n or V1 R/S \u2265 1?";
             break;
         case 2:
-            question = @"Pathway is Left Free Wall\nLead aVF + ?";
+            question = @"Pathway is Left Free Wall\nLead aVF delta + ?";
             break;
 		case 6:
-			question = @"Pathway is Left Free Wall\nLead I \u00b1 or Lead V1 S \u00b1 ?";
+			question = @"Pathway is Left Free Wall\nLead I delta \u00b1 or Lead V1 S \u00b1 ?";
 			break;
 		case 13:
-            question = @"Lead II - ?";
+            question = @"Lead II delta - ?";
 			break;
 		case 15:
-            question = @"Lead V1 \u00b1 or - ?";
+            question = @"Lead V1 delta \u00b1 or - ?";
 			break;
 		case 16:
-            question = @"Pathway is Septal\nLead aVF - ?";
+            question = @"Pathway is Septal\nLead aVF delta - ?";
 			break;
 		case 18:
-            question = @"Lead aVF \u00b1 ?";
+            question = @"Lead aVF delta \u00b1 ?";
 			break;
 		case 20:
             question = @"Lead III R \u2265 S ?";
 			break;
 		case 24:
-            question = @"Pathway is Right Free Wall\nLead aVF + ?";
+            question = @"Pathway is Right Free Wall\nLead aVF delta + ?";
 			break;
 		case 27:
-            question = @"Lead II + ?";
+            question = @"Lead II delta + ?";
 			break;
 		case 80: // 8a
-            question = @"Lead V1 + ?";
+            question = @"Lead V1 delta + ?";
 			break;
 		case 81:
-            question = @"Lead V1 \u00b1 ?";
+            question = @"Lead V1 delta \u00b1 ?";
 			break;
     }
     return question;
