@@ -10,6 +10,7 @@
 
 @interface EPSMainTableViewController : UITableViewController
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableViewCell *drugCalculatorCell;
 
 
 @end

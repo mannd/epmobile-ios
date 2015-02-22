@@ -15,6 +15,7 @@
 #define SOTALOL @"Sotalol"
 #define APIXABAN @"Apixaban"
 #define EDOXABAN @"Edoxaban"
+#define CREATININE_CLEARNCE_ONLY @"Creatinine Clearance"
 
 #define DO_NOT_USE @"DO NOT USE! "
 #define APIXABAN_2_5_CAUTION @"Avoid coadministration with strong dual inhibitors of CYP3A4 and P-gp "
@@ -75,7 +76,7 @@
         [self setCrUnitsPlaceholder:1];
         [creatinineUnitsSegmentedControl setSelectedSegmentIndex:1];
     }
-}
+ }
 
 - (void)refreshDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -228,6 +229,11 @@
 - (NSString *)getDose:(int)crCl forWeightInKgs:(double)weight forCreatinine:(double)creatinine forAge:(double)age {
     int dose;
     NSString *message = [[NSString alloc] init];
+    if ([drug isEqualToString:CREATININE_CLEARNCE_ONLY]) {
+        message = @"";
+        return message;
+        
+    }
     if ([drug isEqualToString:DABIGATRAN]) {
         if (crCl > 30)
             dose = 150;
