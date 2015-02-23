@@ -180,6 +180,35 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
+    
+    [self saveResultsWithAge:age isMale:isMale weightInKgs:weight creatinine:creatinine creatinineClearance:cc];
+}
+
+/// TODO units need to be units relevant for drug calculations
+// right now weight is always kg, but creatinine is whatever
+// units are.  Will need to send units too
+- (void)saveResultsWithAge:(double)age isMale:(BOOL)isMale weightInKgs:(double)weight creatinine:(double)creatinine creatinineClearance:(double)creatinineClearance {
+    EPSLog(@"Stored age is %f, sex is %d, weight is %f, creatinine is %f, creatinine clearance is %f", age, isMale, weight, creatinine, creatinineClearance);
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setDouble:age forKey:@"CC_age"];
+    [userDefaults setBool:isMale forKey:@"CC_is_male"];
+    [userDefaults setDouble:weight forKey:@"CC_weight_in_kgs"];
+    [userDefaults setDouble:creatinine forKey:@"CC_creatinine"];
+    [userDefaults setDouble:creatinineClearance forKey:@"CC_creatinine_clearance"];
+    // CC units?
+    
+}
+
+- (void)clearSavedResults {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setDouble:0.0 forKey:@"CC_age"];
+    [userDefaults setBool:YES forKey:@"CC_is_male"];
+    [userDefaults setDouble:0.0 forKey:@"CC_weight_in_kgs"];
+    [userDefaults setDouble:0.0
+        forKey:@"CC_creatinine"];
+    [userDefaults setDouble:0.0 forKey:@"CC_creatinine_clearance"];
+    // CC units?
+    
 }
 
 
