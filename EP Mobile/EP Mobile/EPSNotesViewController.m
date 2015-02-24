@@ -16,6 +16,7 @@
 #import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
 #import "EPSWeightCalculatorNotes.h"
+#import "EPSDrugCalculatorNotes.h"
 #import "EPSLogging.h"
 
 @interface EPSNotesViewController ()
@@ -61,6 +62,8 @@
         notes = [[EPSAtrialTachNotes alloc] init];
     else if ([self.key isEqualToString:@"WeightCalculatorNotes"])
         notes = [[EPSWeightCalculatorNotes alloc] init];
+    else if ([self.key isEqualToString:@"DrugCalculatorNotes"])
+        notes = [[EPSDrugCalculatorNotes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];

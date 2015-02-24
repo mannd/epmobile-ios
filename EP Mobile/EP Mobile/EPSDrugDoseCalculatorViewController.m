@@ -7,6 +7,7 @@
 //
 
 #import "EPSDrugDoseCalculatorViewController.h"
+#import "EPSNotesViewController.h"
 #import "EPSLogging.h"
 
 #define DABIGATRAN @"Dabigatran"
@@ -77,7 +78,24 @@
         [self setCrUnitsPlaceholder:1];
         [creatinineUnitsSegmentedControl setSelectedSegmentIndex:1];
     }
+    if (![drug isEqualToString:CREATININE_CLEARNCE_ONLY]) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    }
  }
+
+- (void)showNotes {
+    [self performSegueWithIdentifier:@"DrugCalculatorNotesSegue" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"DrugCalculatorNotesSegue"]) {
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = @"DrugCalculatorNotes";
+    }
+}
 
 - (void)refreshDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

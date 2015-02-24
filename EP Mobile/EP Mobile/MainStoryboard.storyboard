@@ -4182,11 +4182,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -4198,13 +4198,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="578" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="298" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="560" height="480"/>
+                                <rect key="frame" x="20" y="112" width="280" height="360"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -4235,7 +4235,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1490.625" y="-2992.5"/>
+            <point key="canvasLocation" x="-4759" y="1361"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -5335,11 +5335,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <outlet property="sexSegmentedControl" destination="Ibh-Gg-2so" id="q5c-LZ-RZc"/>
                         <outlet property="weightField" destination="11h-mp-an5" id="Mnp-MF-9Ma"/>
                         <outlet property="weightUnitsSegmentedControl" destination="Jv5-49-c9s" id="sPh-SM-PFO"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="DrugCalculatorNotesSegue" id="hHO-Xe-oFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5503" y="1243"/>
+            <point key="canvasLocation" x="-5297" y="1294"/>
         </scene>
         <!--Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -5840,8 +5841,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="Nwd-vW-tfz"/>
         <segue reference="FLw-vY-8Wq"/>
         <segue reference="pGj-ye-BDw"/>
+        <segue reference="hHO-Xe-oFp"/>
         <segue reference="WZv-9D-sK8"/>
-        <segue reference="gzd-ih-l4g"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="5Lp-eh-9Dd"/>
     </inferredMetricsTieBreakers>
