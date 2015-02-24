@@ -20,6 +20,7 @@
 #define DO_NOT_USE @"DO NOT USE! "
 #define APIXABAN_2_5_CAUTION @"Avoid coadministration with strong dual inhibitors of CYP3A4 and P-gp "
 #define APIXABAN_5_CAUTION @"Use 2.5 mg twice daily when administered with strong dual inhibitors of CYP3A4 and P-gp "
+#define APIXABAN_ESRD_CAUTION @"\nUse with caution in patients with ESRD on dialysis"
 #define INHIBITORS @"(e.g. ketoconazole, itraconazole, ritonavir, clarithromycin)."
 #define AFB_DOSING_ONLY_WARNING @"\nDosing only for non-valvular AF (not DVT/PE or other indications)"
 
@@ -314,16 +315,14 @@
     }
     if ([drug isEqualToString:APIXABAN]) {
         NSString* stringDose = @"";
-        if (crCl < 15)
-            stringDose = @"0";
-        else {
+        
             EPSLog(@"Creatine = %f", creatinine);
             if ((creatinine >= 1.5 && (age >= 80 || weight <= 60))
                     || (age >= 80 && weight <= 60))
                 stringDose = @"2.5";
             else
                 stringDose = @"5";
-        }
+        
         if ([stringDose isEqualToString:@"0"])
             return [message stringByAppendingString:DO_NOT_USE];
         message = [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg BID. ", stringDose]];
@@ -331,7 +330,12 @@
             message = [message stringByAppendingString:APIXABAN_2_5_CAUTION];
         else
             message = [message stringByAppendingString:APIXABAN_5_CAUTION];
-        return [message stringByAppendingString:INHIBITORS];
+        
+        message = [message stringByAppendingString:INHIBITORS];
+        if (crCl < 15) {
+            message = [message stringByAppendingString:APIXABAN_ESRD_CAUTION];
+        }
+        return message;
     }
     if ([drug isEqualToString:EDOXABAN]) {
         NSString* stringDose = @"";
