@@ -200,17 +200,6 @@
     
 }
 
-- (void)clearSavedResults {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setDouble:0.0 forKey:@"CC_age"];
-    [userDefaults setBool:YES forKey:@"CC_is_male"];
-    [userDefaults setDouble:0.0 forKey:@"CC_weight_in_kgs"];
-    [userDefaults setDouble:0.0
-        forKey:@"CC_creatinine"];
-    [userDefaults setDouble:0.0 forKey:@"CC_creatinine_clearance"];
-    // CC units?
-    
-}
 
 
 - (IBAction)clear:(id)sender {
