@@ -7,6 +7,7 @@
 //
 
 #import "EPSDrugReferenceTableViewController.h"
+#import "EPSLinkViewController.h"
 #import "EPSLogging.h"
 
 @interface EPSDrugReferenceTableViewController ()
@@ -57,14 +58,37 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
+    NSString *segueIdentifier = [segue identifier];
+
+    if ([segueIdentifier isEqualToString:@"apixabanReferenceSegue"])
+        lc.webPage = @"rvapexvsbasepacing";
+    else if ([segueIdentifier isEqualToString:@"dabigatranReferenceSegue"])
+        lc.webPage = @"http://www.crediblemeds.org";
+    else if ([segueIdentifier isEqualToString:@"dofetilideReferenceSegue"])
+        lc.webPage = @"parahisianpacinginstructions";
+    else if ([segueIdentifier isEqualToString:@"edoxabanReferenceSegue"]) {
+        lc.webPage = @"edoxaban";
+        lc.drugTitle = @"Edoxaban";
+    }
+    else if ([segueIdentifier isEqualToString:@"rivaroxabanReferenceSegue"])
+        lc.webPage = @"rvapexvsbasepacing";
+    else if ([segueIdentifier isEqualToString:@"sotalolReferenceSegue"])
+        lc.webPage = @"rvapexvsbasepacing";
+    lc.showToolbar = YES;
+    
+    
+    
+    
+
 }
-*/
+
 
 @end

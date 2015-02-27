@@ -441,6 +441,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="apixabanReferenceSegue" id="bmh-2h-lmp"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vi2-K8-mnN" style="IBUITableViewCellStyleDefault" id="afw-NL-za4">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -455,6 +458,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="dabigatranReferenceSegue" id="A5w-5O-ZY7"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hGz-z0-3H7" style="IBUITableViewCellStyleDefault" id="l5y-D1-Zjs">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -469,6 +475,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="dofetilideReferenceSegue" id="7Oq-mp-wes"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dJR-99-mrI" style="IBUITableViewCellStyleDefault" id="e1r-Qb-MNM">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -483,6 +492,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="edoxabanReferenceSegue" id="hvR-EJ-1Vt"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="j7r-ja-phv" style="IBUITableViewCellStyleDefault" id="noZ-xu-SOl">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -497,6 +509,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="rivaroxabanReferenceSegue" id="hMb-ve-5a8"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1FB-xD-re7" style="IBUITableViewCellStyleDefault" id="7rU-0W-3EV">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -511,6 +526,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="sotalolReferenceSegue" id="eaz-sd-ZJM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -524,7 +542,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7D2-iK-fMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6673" y="961"/>
+            <point key="canvasLocation" x="-6667" y="894"/>
         </scene>
         <!--EP Mobile-->
         <scene sceneID="k1X-XA-AxI">
@@ -1187,7 +1205,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6172" y="1038"/>
+            <point key="canvasLocation" x="-5678" y="833"/>
         </scene>
         <!--Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -1834,11 +1852,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="qcC-8d-5wf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UeZ-HF-lbM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -1857,7 +1875,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5571" y="1626"/>
+            <point key="canvasLocation" x="-7443" y="1083"/>
         </scene>
         <!--VT-->
         <scene sceneID="bq8-Pb-GWV">
@@ -5838,12 +5856,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nwd-vW-tfz"/>
+        <segue reference="hHO-Xe-oFp"/>
         <segue reference="FLw-vY-8Wq"/>
         <segue reference="pGj-ye-BDw"/>
-        <segue reference="hHO-Xe-oFp"/>
-        <segue reference="WZv-9D-sK8"/>
-        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="bmh-2h-lmp"/>
         <segue reference="5Lp-eh-9Dd"/>
+        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="WZv-9D-sK8"/>
     </inferredMetricsTieBreakers>
 </document>

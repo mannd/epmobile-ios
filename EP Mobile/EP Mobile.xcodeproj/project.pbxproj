@@ -128,6 +128,8 @@
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */; };
 		8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */; };
+		8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3291AA0E302005BDAFD /* edoxaban.org */; };
+		8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32B1AA0E407005BDAFD /* edoxaban.html */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
@@ -340,6 +342,8 @@
 		8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugReferenceTableViewController.m; sourceTree = "<group>"; };
 		8EC5C3261A9D132C005BDAFD /* EPSDrugCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugCalculatorNotes.h; sourceTree = "<group>"; };
 		8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugCalculatorNotes.m; sourceTree = "<group>"; };
+		8EC5C3291AA0E302005BDAFD /* edoxaban.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = edoxaban.org; sourceTree = "<group>"; };
+		8EC5C32B1AA0E407005BDAFD /* edoxaban.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = edoxaban.html; sourceTree = "<group>"; };
 		8EC6E948177F301D00B76C38 /* EPSWeightCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
@@ -651,6 +655,8 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EC5C32B1AA0E407005BDAFD /* edoxaban.html */,
+				8EC5C3291AA0E302005BDAFD /* edoxaban.org */,
 				8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */,
 				8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */,
 				8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */,
@@ -789,6 +795,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
+				8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */,
 				8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */,
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,

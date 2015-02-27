@@ -40,6 +40,9 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
     [self.webView loadRequest:requestObj];
+    if (([self.drugTitle length] > 0)) {
+        self.title = self.drugTitle;
+    }
 }
 
 - (void)didReceiveMemoryWarning
