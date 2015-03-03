@@ -43,7 +43,31 @@
     if (([self.drugTitle length] > 0)) {
         self.title = self.drugTitle;
     }
+    
+    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"Calc" style:UIBarButtonItemStyleBordered target:self action:@selector(calculate)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width, 21.0f)];
+    label.backgroundColor = [UIColor clearColor];
+    
+    UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
+
+
+    
+    self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
+    label.text = @"No patient data entered yet";
+
+
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:!self.showToolbar];
+    
+}
+
+- (void)calculate {
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

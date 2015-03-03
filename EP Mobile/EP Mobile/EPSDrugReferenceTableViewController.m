@@ -25,13 +25,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    // clear old creatinine clearance data on entry into this view
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     // clear old creatinine clearance data on entry into this view
     [self clearSavedCreatinineClearanceData];
+    [self.navigationController setToolbarHidden:YES];
 }
+
 
 - (void) clearSavedCreatinineClearanceData {
     EPSLog(@"Clearing saved CrCl data");
