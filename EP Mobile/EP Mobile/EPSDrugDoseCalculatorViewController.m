@@ -83,6 +83,8 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
         [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     }
+    // if called from the drug reference page, need to get rid of the toolbar
+    [self.navigationController setToolbarHidden:YES];
  }
 
 - (void)showNotes {

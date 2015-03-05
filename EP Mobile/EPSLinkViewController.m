@@ -7,6 +7,7 @@
 //
 
 #import "EPSLinkViewController.h"
+#import "EPSDrugDoseCalculatorViewController.h"
 
 @interface EPSLinkViewController ()
 
@@ -44,16 +45,14 @@
         self.title = self.drugTitle;
     }
     
-    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"Calc" style:UIBarButtonItemStyleBordered target:self action:@selector(calculate)];
+    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"Calc CrCL" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width, 21.0f)];
+    self.resultLabel = label;
     label.backgroundColor = [UIColor clearColor];
     
     UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
-
-
-    
     self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
-    label.text = @"No patient data entered yet";
+    label.text = @"";
 
 
 }
@@ -61,11 +60,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self.navigationController setToolbarHidden:!self.showToolbar];
+    // test for non-zero crcl, if so, update resultLabel.text
+    //self.resultLabel.text = @"Crcl performed";
     
 }
 
 - (void)calculate {
-    
+    [self performSegueWithIdentifier:@"calcCreatinineClearanceSegue" sender:nil];
 }
 
 
@@ -78,5 +79,12 @@
 - (void)viewDidUnload {
     [self setWebView:nil];
     [super viewDidUnload];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSDrugDoseCalculatorViewController *drugDoseViewController = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController];
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"calcCreatinineClearanceSegue"])
+        drugDoseViewController.drug = @"Creatinine Clearance";
 }
 @end

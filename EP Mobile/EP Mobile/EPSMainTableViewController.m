@@ -11,7 +11,9 @@
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseCalculatorViewController.h"
 
+// Sigh!
 #define ALLOW_DRUG_CALCULATORS YES
+
 #define DRUG_CALCULATORS_ROW 2
 
 @interface EPSMainTableViewController ()
@@ -85,11 +87,13 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
     EPSDrugDoseCalculatorViewController *drugDoseViewController = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"CreatinineClearanceSegue"])
         drugDoseViewController.drug = @"Creatinine Clearance";
+    
+    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
+
     if ([segueIdentifier isEqualToString:@"Chads2Segue"])
         vc.scoreType = @"Chads2";
     else if ([segueIdentifier isEqualToString:@"ChadsVascSegue"])

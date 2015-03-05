@@ -1871,6 +1871,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     <navigationItem key="navigationItem" id="0S6-y4-ASA"/>
                     <connections>
                         <outlet property="webView" destination="AFr-eV-oTs" id="ojU-PE-iba"/>
+                        <segue destination="gDm-AP-yUd" kind="show" identifier="calcCreatinineClearanceSegue" id="oVK-G4-7QX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5358,7 +5359,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-wJ-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5297" y="1294"/>
+            <point key="canvasLocation" x="-7025" y="422"/>
         </scene>
         <!--Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -5856,12 +5857,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hHO-Xe-oFp"/>
-        <segue reference="FLw-vY-8Wq"/>
         <segue reference="pGj-ye-BDw"/>
         <segue reference="bmh-2h-lmp"/>
-        <segue reference="5Lp-eh-9Dd"/>
-        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="oVK-G4-7QX"/>
+        <segue reference="hHO-Xe-oFp"/>
         <segue reference="WZv-9D-sK8"/>
+        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="5Lp-eh-9Dd"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -43,11 +43,6 @@
     // e.g. self.myOutlet = nil;
 }
 
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EPSDrugDoseCalculatorViewController *vc = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController]; 
     NSString *segueIdentifier = [segue identifier];
