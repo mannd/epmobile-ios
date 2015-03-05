@@ -147,9 +147,6 @@
         self.creatinineField.placeholder = [placeholder stringByAppendingString:@"µmol/L)"];
 }
 
-
-
-
 - (IBAction)toggleSex:(id)sender {
     self.resultLabel.text = nil;
 }
@@ -205,9 +202,7 @@
     [self saveResultsWithAge:age isMale:isMale weightInKgs:weight creatinine:creatinine creatinineClearance:cc];
 }
 
-/// TODO units need to be units relevant for drug calculations
-// right now weight is always kg, but creatinine is whatever
-// units are.  Will need to send units too
+// weight is in kgs and creatinine in mg/dL always, which is good for drug references (same units)
 - (void)saveResultsWithAge:(double)age isMale:(BOOL)isMale weightInKgs:(double)weight creatinine:(double)creatinine creatinineClearance:(double)creatinineClearance {
     EPSLog(@"Stored age is %f, sex is %d, weight is %f, creatinine is %f, creatinine clearance is %f", age, isMale, weight, creatinine, creatinineClearance);
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

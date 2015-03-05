@@ -24,13 +24,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    [self clearSavedCreatinineClearanceData];
 
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     // clear old creatinine clearance data on entry into this view
-    [self clearSavedCreatinineClearanceData];
     [self.navigationController setToolbarHidden:YES];
 }
 
@@ -70,8 +69,10 @@
     EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
 
-    if ([segueIdentifier isEqualToString:@"apixabanReferenceSegue"])
-        lc.webPage = @"rvapexvsbasepacing";
+    if ([segueIdentifier isEqualToString:@"apixabanReferenceSegue"]) {
+        lc.webPage = @"apixaban";
+        lc.drugTitle = @"Apixaban";
+    }
     else if ([segueIdentifier isEqualToString:@"dabigatranReferenceSegue"])
         lc.webPage = @"http://www.crediblemeds.org";
     else if ([segueIdentifier isEqualToString:@"dofetilideReferenceSegue"])

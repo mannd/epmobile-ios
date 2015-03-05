@@ -44,8 +44,8 @@
     if (([self.drugTitle length] > 0)) {
         self.title = self.drugTitle;
     }
-    
-    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"Calc CrCL" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
+
+    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width, 21.0f)];
     self.resultLabel = label;
     label.backgroundColor = [UIColor clearColor];
@@ -60,11 +60,48 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self.navigationController setToolbarHidden:!self.showToolbar];
-    // test for non-zero crcl, if so, update resultLabel.text
-    //self.resultLabel.text = @"Crcl performed";
+    if (self.showToolbar) {
+        NSString *crClResult = [self getStoredCreatinineClearance];
+        self.resultLabel.text = crClResult;
+    }
     
 }
 
+- (NSString *)getStoredCreatinineClearance {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    double age = [userDefaults doubleForKey:@"CC_age"];
+    // truncate age to integer
+    int ageTruncated = (int)age;
+    // if ageTruncated == 0, abort, just return empty string
+    if (ageTruncated == 0) {
+        return @"";
+    }
+    NSString *ageString = [NSString stringWithFormat:@"%dy", ageTruncated];
+    
+    BOOL isMale = [userDefaults boolForKey:@"CC_is_male"];
+    NSString *sexString = (isMale ? @"M " : @"F ");
+    
+    double weightInKgs = [userDefaults doubleForKey:@"CC_weight_in_kgs"];
+    int weightTruncated = (int)weightInKgs;
+    NSString *weightString = [NSString stringWithFormat:@"%dkg ", weightTruncated];
+    
+    double creatinine = [userDefaults doubleForKey:@"CC_creatinine"];
+    NSString *creatinineString = [NSString stringWithFormat:@"Cr%.3gml/dL)", creatinine];
+    
+    double crCl = [userDefaults doubleForKey:@"CC_creatinine_clearance"];
+    NSString *crClString = [NSString stringWithFormat:@"%.0fml/min (", crCl];
+    
+    NSString *result = @"";
+    result = [result stringByAppendingString:crClString];
+
+    result = [result stringByAppendingString:ageString];
+    result = [result stringByAppendingString:sexString];
+    result = [result stringByAppendingString:weightString];
+    result = [result stringByAppendingString:creatinineString];
+    
+    return result;
+}
+    
 - (void)calculate {
     [self performSegueWithIdentifier:@"calcCreatinineClearanceSegue" sender:nil];
 }
