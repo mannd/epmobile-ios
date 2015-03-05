@@ -7,6 +7,7 @@
 //
 
 #import "EPSDrugDoseCalculatorViewController.h"
+#import "EPSNotesViewController.h"
 #import "EPSLogging.h"
 
 #define DABIGATRAN @"Dabigatran"
@@ -15,10 +16,12 @@
 #define SOTALOL @"Sotalol"
 #define APIXABAN @"Apixaban"
 #define EDOXABAN @"Edoxaban"
+#define CREATININE_CLEARNCE_ONLY @"Creatinine Clearance"
 
 #define DO_NOT_USE @"DO NOT USE! "
 #define APIXABAN_2_5_CAUTION @"Avoid coadministration with strong dual inhibitors of CYP3A4 and P-gp "
 #define APIXABAN_5_CAUTION @"Use 2.5 mg twice daily when administered with strong dual inhibitors of CYP3A4 and P-gp "
+#define APIXABAN_ESRD_CAUTION @"\nUse with caution in patients with ESRD on dialysis"
 #define INHIBITORS @"(e.g. ketoconazole, itraconazole, ritonavir, clarithromycin)."
 #define AFB_DOSING_ONLY_WARNING @"\nDosing only for non-valvular AF (not DVT/PE or other indications)"
 
@@ -75,6 +78,25 @@
         [self setCrUnitsPlaceholder:1];
         [creatinineUnitsSegmentedControl setSelectedSegmentIndex:1];
     }
+    if (![drug isEqualToString:CREATININE_CLEARNCE_ONLY]) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    }
+    // if called from the drug reference page, need to get rid of the toolbar
+    [self.navigationController setToolbarHidden:YES];
+ }
+
+- (void)showNotes {
+    [self performSegueWithIdentifier:@"DrugCalculatorNotesSegue" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"DrugCalculatorNotesSegue"]) {
+        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+        vc.key = @"DrugCalculatorNotes";
+    }
 }
 
 - (void)refreshDefaults {
@@ -124,9 +146,6 @@
     else
         self.creatinineField.placeholder = [placeholder stringByAppendingString:@"µmol/L)"];
 }
-
-
-
 
 - (IBAction)toggleSex:(id)sender {
     self.resultLabel.text = nil;
@@ -179,7 +198,23 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
+    
+    [self saveResultsWithAge:age isMale:isMale weightInKgs:weight creatinine:creatinine creatinineClearance:cc];
 }
+
+// weight is in kgs and creatinine in mg/dL always, which is good for drug references (same units)
+- (void)saveResultsWithAge:(double)age isMale:(BOOL)isMale weightInKgs:(double)weight creatinine:(double)creatinine creatinineClearance:(double)creatinineClearance {
+    EPSLog(@"Stored age is %f, sex is %d, weight is %f, creatinine is %f, creatinine clearance is %f", age, isMale, weight, creatinine, creatinineClearance);
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setDouble:age forKey:@"CC_age"];
+    [userDefaults setBool:isMale forKey:@"CC_is_male"];
+    [userDefaults setDouble:weight forKey:@"CC_weight_in_kgs"];
+    [userDefaults setDouble:creatinine forKey:@"CC_creatinine"];
+    [userDefaults setDouble:creatinineClearance forKey:@"CC_creatinine_clearance"];
+    // CC units?
+    
+}
+
 
 
 - (IBAction)clear:(id)sender {
@@ -228,6 +263,11 @@
 - (NSString *)getDose:(int)crCl forWeightInKgs:(double)weight forCreatinine:(double)creatinine forAge:(double)age {
     int dose;
     NSString *message = [[NSString alloc] init];
+    if ([drug isEqualToString:CREATININE_CLEARNCE_ONLY]) {
+        message = @"";
+        return message;
+        
+    }
     if ([drug isEqualToString:DABIGATRAN]) {
         if (crCl > 30)
             dose = 150;
@@ -279,16 +319,14 @@
     }
     if ([drug isEqualToString:APIXABAN]) {
         NSString* stringDose = @"";
-        if (crCl < 15)
-            stringDose = @"0";
-        else {
+        
             EPSLog(@"Creatine = %f", creatinine);
             if ((creatinine >= 1.5 && (age >= 80 || weight <= 60))
                     || (age >= 80 && weight <= 60))
                 stringDose = @"2.5";
             else
                 stringDose = @"5";
-        }
+        
         if ([stringDose isEqualToString:@"0"])
             return [message stringByAppendingString:DO_NOT_USE];
         message = [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg BID. ", stringDose]];
@@ -296,7 +334,12 @@
             message = [message stringByAppendingString:APIXABAN_2_5_CAUTION];
         else
             message = [message stringByAppendingString:APIXABAN_5_CAUTION];
-        return [message stringByAppendingString:INHIBITORS];
+        
+        message = [message stringByAppendingString:INHIBITORS];
+        if (crCl < 15) {
+            message = [message stringByAppendingString:APIXABAN_ESRD_CAUTION];
+        }
+        return message;
     }
     if ([drug isEqualToString:EDOXABAN]) {
         NSString* stringDose = @"";
