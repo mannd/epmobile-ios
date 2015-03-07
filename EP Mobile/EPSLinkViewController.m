@@ -86,7 +86,7 @@
     NSString *weightString = [NSString stringWithFormat:@"%dkg ", weightTruncated];
     
     double creatinine = [userDefaults doubleForKey:@"CC_creatinine"];
-    NSString *creatinineString = [NSString stringWithFormat:@"Cr%.3gml/dL)", creatinine];
+    NSString *creatinineString = [NSString stringWithFormat:@"Cr %.3gml/dL)", creatinine];
     
     double crCl = [userDefaults doubleForKey:@"CC_creatinine_clearance"];
     NSString *crClString = [NSString stringWithFormat:@"%.0fml/min (", crCl];

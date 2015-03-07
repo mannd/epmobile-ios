@@ -73,18 +73,24 @@
         lc.webPage = @"apixaban";
         lc.drugTitle = @"Apixaban";
     }
-    else if ([segueIdentifier isEqualToString:@"dabigatranReferenceSegue"])
-        lc.webPage = @"http://www.crediblemeds.org";
+    else if ([segueIdentifier isEqualToString:@"dabigatranReferenceSegue"]) {
+        lc.webPage = @"dabigatran";
+        lc.drugTitle = @"Dabigatran";
+    }
     else if ([segueIdentifier isEqualToString:@"dofetilideReferenceSegue"])
         lc.webPage = @"parahisianpacinginstructions";
     else if ([segueIdentifier isEqualToString:@"edoxabanReferenceSegue"]) {
         lc.webPage = @"edoxaban";
         lc.drugTitle = @"Edoxaban";
     }
-    else if ([segueIdentifier isEqualToString:@"rivaroxabanReferenceSegue"])
-        lc.webPage = @"rvapexvsbasepacing";
-    else if ([segueIdentifier isEqualToString:@"sotalolReferenceSegue"])
-        lc.webPage = @"rvapexvsbasepacing";
+    else if ([segueIdentifier isEqualToString:@"rivaroxabanReferenceSegue"]) {
+        lc.webPage = @"rivaroxaban";
+        lc.drugTitle = @"Rivaroxaban";
+    }
+    else if ([segueIdentifier isEqualToString:@"sotalolReferenceSegue"]) {
+        lc.webPage = @"sotalol";
+        lc.drugTitle = @"Sotalol";
+    }
     lc.showToolbar = YES;
     
     
