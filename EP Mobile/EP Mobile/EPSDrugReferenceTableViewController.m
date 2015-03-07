@@ -77,8 +77,10 @@
         lc.webPage = @"dabigatran";
         lc.drugTitle = @"Dabigatran";
     }
-    else if ([segueIdentifier isEqualToString:@"dofetilideReferenceSegue"])
-        lc.webPage = @"parahisianpacinginstructions";
+    else if ([segueIdentifier isEqualToString:@"dofetilideReferenceSegue"]) {
+        lc.webPage = @"dofetilide";
+        lc.drugTitle = @"Dofetilide";
+    }
     else if ([segueIdentifier isEqualToString:@"edoxabanReferenceSegue"]) {
         lc.webPage = @"edoxaban";
         lc.drugTitle = @"Edoxaban";

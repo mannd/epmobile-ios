@@ -138,6 +138,8 @@
 		8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3361AAA7718005BDAFD /* rivaroxaban.org */; };
 		8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3391AAA8134005BDAFD /* sotalol.html */; };
 		8EC5C33C1AAA8134005BDAFD /* sotalol.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33A1AAA8134005BDAFD /* sotalol.org */; };
+		8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33D1AAA8997005BDAFD /* dofetilide.html */; };
+		8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33E1AAA8997005BDAFD /* dofetilide.org */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
@@ -360,6 +362,8 @@
 		8EC5C3361AAA7718005BDAFD /* rivaroxaban.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rivaroxaban.org; sourceTree = "<group>"; };
 		8EC5C3391AAA8134005BDAFD /* sotalol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sotalol.html; sourceTree = "<group>"; };
 		8EC5C33A1AAA8134005BDAFD /* sotalol.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sotalol.org; sourceTree = "<group>"; };
+		8EC5C33D1AAA8997005BDAFD /* dofetilide.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dofetilide.html; sourceTree = "<group>"; };
+		8EC5C33E1AAA8997005BDAFD /* dofetilide.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dofetilide.org; sourceTree = "<group>"; };
 		8EC6E948177F301D00B76C38 /* EPSWeightCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
@@ -671,6 +675,8 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EC5C33D1AAA8997005BDAFD /* dofetilide.html */,
+				8EC5C33E1AAA8997005BDAFD /* dofetilide.org */,
 				8EC5C3391AAA8134005BDAFD /* sotalol.html */,
 				8EC5C33A1AAA8134005BDAFD /* sotalol.org */,
 				8EC5C3351AAA7718005BDAFD /* rivaroxaban.html */,
@@ -819,6 +825,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */,
 				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
 				8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */,
 				8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */,
@@ -831,6 +838,7 @@
 				8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
 				8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */,
+				8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */,
 				8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */,
 				8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */,
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
