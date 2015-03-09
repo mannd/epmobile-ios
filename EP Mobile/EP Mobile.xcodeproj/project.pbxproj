@@ -144,6 +144,8 @@
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */; };
+		8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDA1AAE0672004374C3 /* rvh.org */; };
+		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -372,6 +374,8 @@
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
 		8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCTableViewController.h; sourceTree = "<group>"; };
 		8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCTableViewController.m; sourceTree = "<group>"; };
+		8EFBFBDA1AAE0672004374C3 /* rvh.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvh.org; sourceTree = "<group>"; };
+		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -675,6 +679,8 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EFBFBDA1AAE0672004374C3 /* rvh.org */,
+				8EFBFBDB1AAE0672004374C3 /* rvh.html */,
 				8EC5C33D1AAA8997005BDAFD /* dofetilide.html */,
 				8EC5C33E1AAA8997005BDAFD /* dofetilide.org */,
 				8EC5C3391AAA8134005BDAFD /* sotalol.html */,
@@ -870,11 +876,13 @@
 				8E4B27C51633459400BF1F2C /* rpap.png in Resources */,
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
 				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
+				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
 				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
 				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
+				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
 				8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */,
 				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
 				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
