@@ -16,14 +16,17 @@
 #+XSLT:
 | Criterion                          | Value      | Reference |
 |------------------------------------+------------+-----------|
-| Deep S V                           | >3 mm      | Myers     |
+| Tall R V_1                         | >6 mm      | Myers     |
+| Increased R:S ration V_1           | >1.0       | Myers     |
+| Deep S V_5                         | >10 mm     | Myers     |
+| Deep S V_6                         | >3 mm      | Myers     |
 | Tall R aVR                         | >4 mm      | Sokolow   |
 | Small S V_1                        | <2 mm      | Myers     |
-| Small R V_{5-6}                    | <3 mm      | Myers     |
+| Small R V_{5,6}                    | <3 mm      | Myers     |
 | Reduced R:S ratio V_5              | <0.75      | Myers     |
 | Reduced R:S ratio V_6              | <0.4       | Myers     |
 | Reduced R:S V_5 to R:S V_1         | <0.04      | Sokolow   |
-| (R 1+S III)-(S I+R III)            | <15 mm     | Lewis     |
+| (R I+S III)-(S I+R III)            | <15 mm     | Lewis     |
 | Max R V_{1,2}_max S I, aVL-S V_1   | >6 mm      | Butler    |
 | R V_1+S V_{5,6}                    | >10.5 mm   | Sokolow   |
 | R peak V1 (QRS duration <0.12 sec) | >0.035 sec | Myers     |
@@ -41,7 +44,7 @@
 Amplitudes are given in millimeters, where 1 mm=0.1 mV.
 
 * References
-- Table from: Hancock EW, Deal BJ, Mirvis DM, et al. AHA/ACC/HRS recommendations for the standardization and interpretation of the electrocardiogram.  Part V: Electrocardiogram changes associated with cardiac chamber hypertrophy.  J Am Coll Cardiolo 2009;53:992. http://content.onlinejacc.org/article.aspx?articleid=1139534
+- Table from: Hancock EW, Deal BJ, Mirvis DM, et al. AHA/ACC/HRS recommendations for the standardization and interpretation of the electrocardiogram.  Part V: Electrocardiogram changes associated with cardiac chamber hypertrophy.  J Am Coll Cardiol 2009;53:992. http://content.onlinejacc.org/article.aspx?articleid=1139534
 - Myers Am Heart J 1948;35:1.
 - Sokolow M, Lyon TP. Am Heart J 1949;37:161.
 - Lewis T. Heart 1914;5:367.
