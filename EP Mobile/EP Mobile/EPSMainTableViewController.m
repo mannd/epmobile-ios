@@ -11,8 +11,8 @@
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseCalculatorViewController.h"
 
-// Sigh!
-#define ALLOW_DRUG_CALCULATORS YES
+// Sigh!
+#define ALLOW_DRUG_CALCULATORS NO
 
 #define DRUG_CALCULATORS_ROW 2
 
@@ -50,6 +50,7 @@
     [btn addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
     
     allowDrugCalculators = ALLOW_DRUG_CALCULATORS;
+    
     [self.drugCalculatorCell setHidden:!allowDrugCalculators];
 
     
