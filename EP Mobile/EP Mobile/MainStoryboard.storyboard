@@ -799,6 +799,26 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <segue destination="nEp-iW-oAh" kind="show" id="fpe-BN-1z5"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PYx-Ag-znQ" style="IBUITableViewCellStyleDefault" id="iU5-pk-eOD">
+                                        <rect key="frame" x="0.0" y="783" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iU5-pk-eOD" id="Qln-id-xVy">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Right Ventricular Hypertophy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYx-Ag-znQ">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="RvhSegue" id="cUM-pb-N97"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DyE-Mf-oeD" style="IBUITableViewCellStyleDefault" id="HEE-Gk-3qG">
                                         <rect key="frame" x="0.0" y="651" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1205,7 +1225,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5678" y="833"/>
+            <point key="canvasLocation" x="-5742" y="796"/>
         </scene>
         <!--Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -1852,11 +1872,11 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="qcC-8d-5wf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UeZ-HF-lbM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-eV-oTs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -1876,7 +1896,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7443" y="1083"/>
+            <point key="canvasLocation" x="-6587" y="1085"/>
         </scene>
         <!--VT-->
         <scene sceneID="bq8-Pb-GWV">
@@ -5857,12 +5877,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pGj-ye-BDw"/>
-        <segue reference="bmh-2h-lmp"/>
-        <segue reference="oVK-G4-7QX"/>
         <segue reference="hHO-Xe-oFp"/>
-        <segue reference="WZv-9D-sK8"/>
-        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="FLw-vY-8Wq"/>
+        <segue reference="pGj-ye-BDw"/>
+        <segue reference="cUM-pb-N97"/>
         <segue reference="5Lp-eh-9Dd"/>
+        <segue reference="pFv-5Z-NQa"/>
+        <segue reference="WZv-9D-sK8"/>
     </inferredMetricsTieBreakers>
 </document>

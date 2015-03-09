@@ -11,7 +11,7 @@
 @interface EPSLinkViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) NSString *webPage;
-@property (strong, nonatomic) NSString *drugTitle;
+@property (strong, nonatomic) NSString *linkTitle;
 @property (strong, nonatomic) UILabel *resultLabel;
 @property BOOL showToolbar;
 

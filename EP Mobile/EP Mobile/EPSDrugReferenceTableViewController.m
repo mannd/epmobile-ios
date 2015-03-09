@@ -71,27 +71,27 @@
 
     if ([segueIdentifier isEqualToString:@"apixabanReferenceSegue"]) {
         lc.webPage = @"apixaban";
-        lc.drugTitle = @"Apixaban";
+        lc.linkTitle = @"Apixaban";
     }
     else if ([segueIdentifier isEqualToString:@"dabigatranReferenceSegue"]) {
         lc.webPage = @"dabigatran";
-        lc.drugTitle = @"Dabigatran";
+        lc.linkTitle = @"Dabigatran";
     }
     else if ([segueIdentifier isEqualToString:@"dofetilideReferenceSegue"]) {
         lc.webPage = @"dofetilide";
-        lc.drugTitle = @"Dofetilide";
+        lc.linkTitle = @"Dofetilide";
     }
     else if ([segueIdentifier isEqualToString:@"edoxabanReferenceSegue"]) {
         lc.webPage = @"edoxaban";
-        lc.drugTitle = @"Edoxaban";
+        lc.linkTitle = @"Edoxaban";
     }
     else if ([segueIdentifier isEqualToString:@"rivaroxabanReferenceSegue"]) {
         lc.webPage = @"rivaroxaban";
-        lc.drugTitle = @"Rivaroxaban";
+        lc.linkTitle = @"Rivaroxaban";
     }
     else if ([segueIdentifier isEqualToString:@"sotalolReferenceSegue"]) {
         lc.webPage = @"sotalol";
-        lc.drugTitle = @"Sotalol";
+        lc.linkTitle = @"Sotalol";
     }
     lc.showToolbar = YES;
     

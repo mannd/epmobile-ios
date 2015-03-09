@@ -109,11 +109,19 @@
         lc.webPage = @"http://www.brugadadrugs.org";
     else if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
         lc.webPage = @"http://www.crediblemeds.org";
-    else if ([segueIdentifier isEqualToString:@"ParaHisSegue"])
+    else if ([segueIdentifier isEqualToString:@"ParaHisSegue"]) {
         lc.webPage = @"parahisianpacinginstructions";
-    else if ([segueIdentifier isEqualToString:@"RVPaceSegue"])
+        lc.linkTitle = @"Para-Hisian Pacing";
+    }
+    else if ([segueIdentifier isEqualToString:@"RVPaceSegue"]) {
         lc.webPage = @"rvapexvsbasepacing";
-     
+        lc.linkTitle = @"RV Apex vs Base Pacing";
+    }
+    else if ([segueIdentifier isEqualToString:@"RvhSegue"]) {
+        lc.webPage = @"rvh";
+        lc.linkTitle = @"RVH Criteria";
+    }
+    
 }
 
 

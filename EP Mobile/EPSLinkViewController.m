@@ -41,8 +41,8 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
     [self.webView loadRequest:requestObj];
-    if (([self.drugTitle length] > 0)) {
-        self.title = self.drugTitle;
+    if (([self.linkTitle length] > 0)) {
+        self.title = self.linkTitle;
     }
 
     UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
