@@ -51,10 +51,10 @@
         message = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or no drug recommended."];
     }
     else if (score == 1) {
-        message = [message stringByAppendingString:@"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran, rivaroxaban or apixaban) recommended.\n\nConsider assessing bleeding score (e.g. HAS-BLED) to help choose between ASA and anticoagulation."];
+        message = [message stringByAppendingString:@"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended.\n\nConsider assessing bleeding score (e.g. HAS-BLED) to help choose between ASA and anticoagulation."];
     }
     else
-        message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban or apixaban) recommended."];
+        message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended."];
     
     return [NSString stringWithFormat:@"%@ score = %d\n%@\n%@", [self getTitle], score, strokeRisk, message];
 }
