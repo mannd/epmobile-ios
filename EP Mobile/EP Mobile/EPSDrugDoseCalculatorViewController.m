@@ -184,7 +184,7 @@
         creatinine = [self creatinineFromMicroMolUnits:creatinine];
     result = [result stringByAppendingString:[self getDose:cc forWeightInKgs:weight forCreatinine:creatinine
                                                     forAge:age]];
-    result = [result stringByAppendingString:[NSString stringWithFormat:@"\nCreatinine Clearance = %i ml/min.", cc]];
+    result = [result stringByAppendingString:[NSString stringWithFormat:@"\nCreatinine Clearance = %i mL/min.", cc]];
     NSString *details = result;
     
     details = [details stringByAppendingString:@"\n"];
@@ -420,7 +420,7 @@
             return @"";
         }
         else if (crCl > 95) {
-            return @"Edoxaban should not be used in patients with CrCl > 95 ml/min";
+            return @"Edoxaban should not be used in patients with CrCl > 95 mL/min";
         }
     }
     return @"";

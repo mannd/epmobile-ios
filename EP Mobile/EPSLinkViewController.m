@@ -89,7 +89,7 @@
     NSString *creatinineString = [NSString stringWithFormat:@"Cr %.3gmg/dL)", creatinine];
     
     double crCl = [userDefaults doubleForKey:@"CC_creatinine_clearance"];
-    NSString *crClString = [NSString stringWithFormat:@"%.0fml/min (", crCl];
+    NSString *crClString = [NSString stringWithFormat:@"%.0fmL/min (", crCl];
     
     NSString *result = @"";
     result = [result stringByAppendingString:crClString];
