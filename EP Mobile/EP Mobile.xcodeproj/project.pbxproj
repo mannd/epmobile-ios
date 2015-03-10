@@ -126,10 +126,26 @@
 		8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */; };
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
+		8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */; };
+		8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */; };
+		8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3291AA0E302005BDAFD /* edoxaban.org */; };
+		8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32B1AA0E407005BDAFD /* edoxaban.html */; };
+		8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32D1AA8E246005BDAFD /* apixaban.html */; };
+		8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32E1AA8E246005BDAFD /* apixaban.org */; };
+		8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3311AAA72BE005BDAFD /* dabigatran.html */; };
+		8EC5C3341AAA72BE005BDAFD /* dabigatran.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3321AAA72BE005BDAFD /* dabigatran.org */; };
+		8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3351AAA7718005BDAFD /* rivaroxaban.html */; };
+		8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3361AAA7718005BDAFD /* rivaroxaban.org */; };
+		8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3391AAA8134005BDAFD /* sotalol.html */; };
+		8EC5C33C1AAA8134005BDAFD /* sotalol.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33A1AAA8134005BDAFD /* sotalol.org */; };
+		8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33D1AAA8997005BDAFD /* dofetilide.html */; };
+		8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33E1AAA8997005BDAFD /* dofetilide.org */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */; };
+		8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDA1AAE0672004374C3 /* rvh.org */; };
+		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,6 +350,22 @@
 		8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseTableViewController.m; sourceTree = "<group>"; };
 		8EC343E31630A188008938F6 /* EPSCMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewController.h; sourceTree = "<group>"; };
 		8EC343E41630A188008938F6 /* EPSCMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewController.m; sourceTree = "<group>"; };
+		8EC5C3231A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugReferenceTableViewController.h; sourceTree = "<group>"; };
+		8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugReferenceTableViewController.m; sourceTree = "<group>"; };
+		8EC5C3261A9D132C005BDAFD /* EPSDrugCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugCalculatorNotes.h; sourceTree = "<group>"; };
+		8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugCalculatorNotes.m; sourceTree = "<group>"; };
+		8EC5C3291AA0E302005BDAFD /* edoxaban.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = edoxaban.org; sourceTree = "<group>"; };
+		8EC5C32B1AA0E407005BDAFD /* edoxaban.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = edoxaban.html; sourceTree = "<group>"; };
+		8EC5C32D1AA8E246005BDAFD /* apixaban.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = apixaban.html; sourceTree = "<group>"; };
+		8EC5C32E1AA8E246005BDAFD /* apixaban.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apixaban.org; sourceTree = "<group>"; };
+		8EC5C3311AAA72BE005BDAFD /* dabigatran.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dabigatran.html; sourceTree = "<group>"; };
+		8EC5C3321AAA72BE005BDAFD /* dabigatran.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dabigatran.org; sourceTree = "<group>"; };
+		8EC5C3351AAA7718005BDAFD /* rivaroxaban.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rivaroxaban.html; sourceTree = "<group>"; };
+		8EC5C3361AAA7718005BDAFD /* rivaroxaban.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rivaroxaban.org; sourceTree = "<group>"; };
+		8EC5C3391AAA8134005BDAFD /* sotalol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sotalol.html; sourceTree = "<group>"; };
+		8EC5C33A1AAA8134005BDAFD /* sotalol.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sotalol.org; sourceTree = "<group>"; };
+		8EC5C33D1AAA8997005BDAFD /* dofetilide.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dofetilide.html; sourceTree = "<group>"; };
+		8EC5C33E1AAA8997005BDAFD /* dofetilide.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dofetilide.org; sourceTree = "<group>"; };
 		8EC6E948177F301D00B76C38 /* EPSWeightCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
@@ -342,6 +374,8 @@
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
 		8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCTableViewController.h; sourceTree = "<group>"; };
 		8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCTableViewController.m; sourceTree = "<group>"; };
+		8EFBFBDA1AAE0672004374C3 /* rvh.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvh.org; sourceTree = "<group>"; };
+		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +475,8 @@
 				8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */,
 				8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */,
 				8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */,
+				8EC5C3261A9D132C005BDAFD /* EPSDrugCalculatorNotes.h */,
+				8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -539,6 +575,8 @@
 				8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */,
 				8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */,
 				8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */,
+				8EC5C3231A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.h */,
+				8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */,
 			);
 			name = "Table View Controllers";
 			sourceTree = "<group>";
@@ -641,6 +679,20 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EFBFBDA1AAE0672004374C3 /* rvh.org */,
+				8EFBFBDB1AAE0672004374C3 /* rvh.html */,
+				8EC5C33D1AAA8997005BDAFD /* dofetilide.html */,
+				8EC5C33E1AAA8997005BDAFD /* dofetilide.org */,
+				8EC5C3391AAA8134005BDAFD /* sotalol.html */,
+				8EC5C33A1AAA8134005BDAFD /* sotalol.org */,
+				8EC5C3351AAA7718005BDAFD /* rivaroxaban.html */,
+				8EC5C3361AAA7718005BDAFD /* rivaroxaban.org */,
+				8EC5C3311AAA72BE005BDAFD /* dabigatran.html */,
+				8EC5C3321AAA72BE005BDAFD /* dabigatran.org */,
+				8EC5C32D1AA8E246005BDAFD /* apixaban.html */,
+				8EC5C32E1AA8E246005BDAFD /* apixaban.org */,
+				8EC5C32B1AA0E407005BDAFD /* edoxaban.html */,
+				8EC5C3291AA0E302005BDAFD /* edoxaban.org */,
 				8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */,
 				8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */,
 				8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */,
@@ -779,7 +831,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */,
+				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
+				8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */,
 				8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */,
+				8EC5C33C1AAA8134005BDAFD /* sotalol.org in Resources */,
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
@@ -788,11 +844,14 @@
 				8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
 				8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */,
+				8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */,
 				8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */,
 				8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */,
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
 				8E06011F15DB39CF00BB7550 /* lbbbmorphology.png in Resources */,
+				8EC5C3341AAA72BE005BDAFD /* dabigatran.org in Resources */,
 				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
+				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
 				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
@@ -800,6 +859,7 @@
 				8E4B27AC1633449100BF1F2C /* asap.png in Resources */,
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
 				8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */,
+				8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */,
 				8E4B27BB1633459400BF1F2C /* lalap.png in Resources */,
 				8E4B27BC1633459400BF1F2C /* llap.png in Resources */,
 				8E4B27BD1633459400BF1F2C /* lpap.png in Resources */,
@@ -811,15 +871,21 @@
 				8E4B27C11633459400BF1F2C /* pstaap.png in Resources */,
 				8E4B27C21633459400BF1F2C /* raap.png in Resources */,
 				8E4B27C31633459400BF1F2C /* ralap.png in Resources */,
+				8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */,
 				8E4B27C41633459400BF1F2C /* rlap.png in Resources */,
 				8E4B27C51633459400BF1F2C /* rpap.png in Resources */,
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
+				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
+				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
+				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
 				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
+				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
 				8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */,
 				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
+				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
 				8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */,
 				8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */,
 				8E54A56119F6E37F00EFF001 /* rvapexvsbasepacing.org in Resources */,
@@ -873,6 +939,7 @@
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
+				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
@@ -903,6 +970,7 @@
 				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
 				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
+				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
 				8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */,
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
