@@ -17,7 +17,7 @@
 
 @implementation EPSHcmRiskScore
 -(NSString *)getTitle {
-    return @"Hypertrophic CM";
+    return @"HCM SCD 2002";
 }
 
 - (NSString *)getReference {

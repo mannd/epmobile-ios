@@ -10,6 +10,7 @@
 #import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseCalculatorViewController.h"
+#import "EPSARVC2010TableViewController.h"
 
 // Sigh!
 #define ALLOW_DRUG_CALCULATORS NO
@@ -93,7 +94,7 @@
     if ([segueIdentifier isEqualToString:@"CreatinineClearanceSegue"])
         drugDoseViewController.drug = @"Creatinine Clearance";
     
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
+    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)drugDoseViewController;
 
     if ([segueIdentifier isEqualToString:@"Chads2Segue"])
         vc.scoreType = @"Chads2";
@@ -122,6 +123,13 @@
         lc.webPage = @"rvh";
         lc.linkTitle = @"RVH Criteria";
     }
+    
+    EPSARVC2010TableViewController *arvcVc = (EPSARVC2010TableViewController *)vc;
+    if ([segueIdentifier isEqualToString:@"ARVC2010Segue"])
+        arvcVc.criteria = @"ARVC2010";
+    else if ([segueIdentifier isEqualToString:@"ARVC1994Segue"])
+        arvcVc.criteria = @"ARVC1994";
+
     
 }
 

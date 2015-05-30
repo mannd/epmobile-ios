@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kBV-s3-VWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kBV-s3-VWz">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -706,7 +706,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ARVC/D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AtN-EZ-td4">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ARVC/D Criteria (1994)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AtN-EZ-td4">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -716,7 +716,27 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="px5-kc-Vhu" kind="show" id="8Bs-iC-XDP"/>
+                                            <segue destination="oHx-TU-Y6s" kind="show" identifier="ARVC1994Segue" id="5KV-M6-tO5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wc8-Vy-qN6" style="IBUITableViewCellStyleDefault" id="MV0-Ux-rmG">
+                                        <rect key="frame" x="0.0" y="783" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MV0-Ux-rmG" id="V6U-hH-6xF">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ARVC/D Criteria (2010)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wc8-Vy-qN6">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oHx-TU-Y6s" kind="show" identifier="ARVC2010Segue" id="tuo-Ni-Xiv"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BEJ-fq-uRR" style="IBUITableViewCellStyleDefault" id="O2q-zg-iLI">
@@ -1154,7 +1174,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Hypertrophic Cardiomyopathy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nak-Eu-smJ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="HCM SCD (2002)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nak-Eu-smJ">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -1166,6 +1186,23 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         <connections>
                                             <segue destination="Jt3-by-I3p" kind="show" identifier="HcmSegue" id="hpG-ma-Wwm"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c0g-6Q-hMZ" style="IBUITableViewCellStyleDefault" id="mEF-oW-9Su">
+                                        <rect key="frame" x="0.0" y="1407" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mEF-oW-9Su" id="Jzc-Wl-g9w">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="HCM SCD (2014)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0g-6Q-hMZ">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ZsD-AL-did" style="IBUITableViewCellStyleDefault" id="wHt-KN-o78">
                                         <rect key="frame" x="0.0" y="1363" width="320" height="44"/>
@@ -1218,6 +1255,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                     <navigationItem key="navigationItem" title="EP Mobile" id="enQ-oD-Tu1">
                         <barButtonItem key="backBarButtonItem" title="EP Mobile" id="hXm-vT-P1U"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="drugCalculatorCell" destination="7Na-dY-HhQ" id="xvs-CL-IVF"/>
                         <segue destination="JZA-px-d51" kind="presentation" identifier="AboutSegue" modalTransitionStyle="flipHorizontal" id="NJQ-bC-nz4"/>
@@ -1225,7 +1264,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5742" y="796"/>
+            <point key="canvasLocation" x="-6519" y="796"/>
         </scene>
         <!--Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -3416,71 +3455,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
             </objects>
             <point key="canvasLocation" x="-6474.375" y="-2558.75"/>
         </scene>
-        <!--ARVC/D-->
-        <scene sceneID="L5H-Ax-xj6">
-            <objects>
-                <tableViewController id="px5-kc-Vhu" customClass="EPSARVCTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sc4-9e-0Q9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="N9x-Or-INa">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3P8-zm-MX8" style="IBUITableViewCellStyleDefault" id="LeR-CR-tjf">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LeR-CR-tjf" id="e0a-Xg-PAI">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ARVC/D 1994 Criteria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3P8-zm-MX8">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="oHx-TU-Y6s" kind="show" identifier="ARVC1994Segue" id="TBZ-O5-SDC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ur4-nd-KPu" style="IBUITableViewCellStyleDefault" id="qsk-Jc-g5c">
-                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qsk-Jc-g5c" id="5cM-g4-LnH">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ARVC/D 2010 Criteria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ur4-nd-KPu">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="oHx-TU-Y6s" kind="show" identifier="ARVC2010Segue" id="WZv-9D-sK8"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="px5-kc-Vhu" id="KFC-zs-fpd"/>
-                            <outlet property="delegate" destination="px5-kc-Vhu" id="MJV-TL-Buy"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="ARVC/D" id="FeP-zV-ogk"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GQD-ug-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-6181.875" y="-688.75"/>
-        </scene>
         <!--ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
             <objects>
@@ -3524,7 +3498,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFl-fg-FOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5064.375" y="-1027.5"/>
+            <point key="canvasLocation" x="-5033" y="845"/>
         </scene>
         <!--Simple Algorithm View Controller-->
         <scene sceneID="ZHr-QH-jRc">
@@ -3768,7 +3742,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhe-NH-Dng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-444.375" y="-1760"/>
+            <point key="canvasLocation" x="-336.5" y="-1740.5"/>
         </scene>
         <!--Morphology-->
         <scene sceneID="sG9-FN-jzK">
@@ -4221,11 +4195,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
@@ -4237,13 +4211,13 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="84" width="298" height="20.5"/>
+                                <rect key="frame" x="11" y="84" width="353" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="112" width="280" height="360"/>
+                                <rect key="frame" x="20" y="112" width="335" height="547"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5877,12 +5851,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hHO-Xe-oFp"/>
-        <segue reference="FLw-vY-8Wq"/>
-        <segue reference="pGj-ye-BDw"/>
-        <segue reference="cUM-pb-N97"/>
         <segue reference="5Lp-eh-9Dd"/>
+        <segue reference="FLw-vY-8Wq"/>
+        <segue reference="cUM-pb-N97"/>
+        <segue reference="7ur-AF-UMG"/>
+        <segue reference="tuo-Ni-Xiv"/>
+        <segue reference="sIb-ay-0FY"/>
         <segue reference="pFv-5Z-NQa"/>
-        <segue reference="WZv-9D-sK8"/>
     </inferredMetricsTieBreakers>
 </document>
