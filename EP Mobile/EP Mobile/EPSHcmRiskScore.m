@@ -41,8 +41,7 @@
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Myocardial ischemia" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"LV outflow obstruction" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"High risk mutation" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Elevated fall risk" withValue:1 withDetails:@"e.g. Alzheimer, Parkinson, schizophrenia"]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Stroke" withValue:1]];
+    
     return array;
 }
 

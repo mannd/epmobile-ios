@@ -7,7 +7,12 @@
 //
 
 #import "EPSHcmScd2014ViewController.h"
+#import "EPSRiskScore.h"
 #import "EPSLogging.h"
+
+#define COPY_RESULT_BUTTON_NUMBER 1
+#define TITLE @"HCM SCD 2014"
+#define FULL_REFERENCE @"O’Mahony C., Jichi F., Pavlou M., Monserrat L., Anastasakis A., Rapezzi C.  A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J [Internet] 2014 Aug [cited 2015 May 29];35(30):2010–2020. Available from: http://doi.org/10.1093/eurheartj/eht439"
 
 @interface EPSHcmScd2014ViewController ()
 
@@ -25,11 +30,12 @@ static const int SIZE_OUT_OF_RANGE = 9004;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"HCM SCD 2014";
+    self.navigationItem.title = TITLE;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
-    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    self.risks = array;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,16 +57,6 @@ static const int SIZE_OUT_OF_RANGE = 9004;
 - (void)showNotes {
     // TODO
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)calculate:(id)sender {
     int errorCode = NO_ERROR;
@@ -104,6 +100,20 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     - 0.01799934 * age;
     double scdProb = 1 - pow(coefficient, exp(prognosticIndex));
     EPSLog(@"scdProb = %f", scdProb);
+    [self.risks removeAllObjects];
+    [self.risks addObject:[NSString stringWithFormat:@"Age = %ld yrs", (long)age]];
+    [self.risks addObject:[NSString stringWithFormat:@"Max LV wall thickness = %ld mm", (long)thickness]];
+    [self.risks addObject:[NSString stringWithFormat:@"Max LA diameter = %ld mm", (long)size]];
+    [self.risks addObject:[NSString stringWithFormat:@"Max LVOT gradient = %ld mmHg", (long)gradient]];
+    if (hasFamilyHxScd) {
+        [self.risks addObject:@"Family hx of SCD"];
+    }
+    if (hasNsvt) {
+        [self.risks addObject:@"NSVT"];
+    }
+    if (hasSyncope) {
+        [self.risks addObject:@"Hx of unexplained syncope"];
+    }
     [self showResultDialog:scdProb];
 }
 
@@ -138,6 +148,22 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     [alertView show];
 }
 
+- (NSString *)getFullRiskReport:(NSString *)message {
+    NSString *riskList = [EPSRiskScore formatRisks:self.risks];
+    NSString *report = @"Risk score: ";
+    report = [report stringByAppendingString:TITLE];
+    report = [report stringByAppendingString:@"\nRisks: "];
+    report = [report stringByAppendingString:riskList];
+    report = [report stringByAppendingString:@"\n"];
+    report = [report stringByAppendingString:message];
+    report = [report stringByAppendingString:@"\nReference: "];
+    report = [report stringByAppendingString:FULL_REFERENCE];
+    report = [report stringByAppendingString:@"\n"];
+    // eliminate blank lines
+    report = [report stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
+    return report;
+}
+
 - (void)showResultDialog:(double)prob {
     // make it a percentage
     prob = prob * 100.0;
@@ -154,7 +180,7 @@ static const int SIZE_OUT_OF_RANGE = 9004;
         recommendation = @"\nICD should be considered.";
     }
     NSString *message = [riskMessage stringByAppendingString:recommendation];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", nil];
     [alertView show];
 }
 
@@ -166,7 +192,19 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     [self.familyHxSwitch setOn:NO animated:YES];
     [self.nsvtSwitch setOn:NO animated:YES];
     [self.syncopeSwitch setOn:NO animated:YES];
+    [self.risks removeAllObjects];
 }
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
+        NSString* result = [self getFullRiskReport:[alertView message]];
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = result;
+    }
+}
+
 
 
 @end
