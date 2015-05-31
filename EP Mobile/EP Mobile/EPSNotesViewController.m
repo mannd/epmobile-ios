@@ -17,6 +17,7 @@
 #import "EPSAtrialTachNotes.h"
 #import "EPSWeightCalculatorNotes.h"
 #import "EPSDrugCalculatorNotes.h"
+#import "EPSHcmScd2014Notes.h"
 #import "EPSLogging.h"
 
 @interface EPSNotesViewController ()
@@ -64,9 +65,17 @@
         notes = [[EPSWeightCalculatorNotes alloc] init];
     else if ([self.key isEqualToString:@"DrugCalculatorNotes"])
         notes = [[EPSDrugCalculatorNotes alloc] init];
+    else if ([self.key isEqualToString:@"HcmScd2014"])
+        notes = [[EPSHcmScd2014Notes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.notesTextView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
 }
 
 - (void)viewDidUnload

@@ -8,6 +8,7 @@
 
 #import "EPSHcmScd2014ViewController.h"
 #import "EPSRiskScore.h"
+#import "EPSNotesViewController.h"
 #import "EPSLogging.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
@@ -55,7 +56,7 @@ static const int SIZE_OUT_OF_RANGE = 9004;
 }
 
 - (void)showNotes {
-    // TODO
+    [self performSegueWithIdentifier:@"HcmScd2014NotesSegue" sender:nil];
 }
 
 - (IBAction)calculate:(id)sender {
@@ -194,6 +195,12 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     [self.syncopeSwitch setOn:NO animated:YES];
     [self.risks removeAllObjects];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
+    vc.key = @"HcmScd2014";
+}
+
 
 #pragma mark - Alert view delegate
 

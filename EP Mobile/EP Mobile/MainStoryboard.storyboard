@@ -1466,11 +1466,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <outlet property="sizeTextField" destination="eeg-1J-hRk" id="77R-Bd-uTQ"/>
                         <outlet property="syncopeSwitch" destination="Oiv-Sf-drD" id="ogo-37-VWZ"/>
                         <outlet property="thicknessTextField" destination="Cnv-Lh-Zg0" id="zQc-rq-OMK"/>
+                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="HcmScd2014NotesSegue" id="Ldo-Fs-y6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQl-Ey-hjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6370" y="658"/>
+            <point key="canvasLocation" x="-5428" y="1236"/>
         </scene>
         <!--Weight Calculator-->
         <scene sceneID="2v5-oP-3AI">
@@ -4454,7 +4455,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4759" y="1361"/>
+            <point key="canvasLocation" x="-4513" y="1141"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
@@ -6057,11 +6058,11 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tuo-Ni-Xiv"/>
         <segue reference="7ur-AF-UMG"/>
-        <segue reference="FLw-vY-8Wq"/>
         <segue reference="cUM-pb-N97"/>
-        <segue reference="gzd-ih-l4g"/>
+        <segue reference="FLw-vY-8Wq"/>
+        <segue reference="tuo-Ni-Xiv"/>
+        <segue reference="Ldo-Fs-y6z"/>
         <segue reference="5Lp-eh-9Dd"/>
         <segue reference="pFv-5Z-NQa"/>
     </inferredMetricsTieBreakers>
