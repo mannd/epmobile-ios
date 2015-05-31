@@ -142,8 +142,18 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     // make it a percentage
     prob = prob * 100.0;
     NSString *title = @"HCM-SCD Risk";
-    NSString *message = [NSString stringWithFormat:@"5 year SCD Risk = %2.2f%%", prob];
-    // TODO add ICD recommendation to message
+    NSString *riskMessage = [NSString stringWithFormat:@"5 year SCD Risk = %2.2f%%", prob];
+    NSString *recommendation;
+    if (prob < 4) {
+        recommendation = @"\nICD generally not indicated.";
+    }
+    else if (prob < 6) {
+        recommendation = @"\nICD may be considered.";
+    }
+    else {
+        recommendation = @"\nICD should be considered.";
+    }
+    NSString *message = [riskMessage stringByAppendingString:recommendation];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
