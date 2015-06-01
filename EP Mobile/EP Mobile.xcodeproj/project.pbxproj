@@ -75,6 +75,7 @@
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
+		8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54237D1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m */; };
 		8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */; };
 		8E54A56119F6E37F00EFF001 /* rvapexvsbasepacing.org in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */; };
 		8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */; };
@@ -143,7 +144,7 @@
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
-		8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */; };
+		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
 		8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDA1AAE0672004374C3 /* rvh.org */; };
 		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
 /* End PBXBuildFile section */
@@ -268,6 +269,8 @@
 		8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskFactor.m; sourceTree = "<group>"; };
 		8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDailyDoseCalculator.h; sourceTree = "<group>"; };
 		8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDailyDoseCalculator.m; sourceTree = "<group>"; };
+		8E54237C1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014Notes.h; sourceTree = "<group>"; };
+		8E54237D1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014Notes.m; sourceTree = "<group>"; };
 		8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parahisianpacinginstructions.org; sourceTree = "<group>"; };
 		8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvapexvsbasepacing.org; sourceTree = "<group>"; };
 		8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = parahisianpacinginstructions.html; sourceTree = "<group>"; };
@@ -372,8 +375,8 @@
 		8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorNotes.m; sourceTree = "<group>"; };
 		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
-		8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCTableViewController.h; sourceTree = "<group>"; };
-		8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCTableViewController.m; sourceTree = "<group>"; };
+		8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014ViewController.h; sourceTree = "<group>"; };
+		8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014ViewController.m; sourceTree = "<group>"; };
 		8EFBFBDA1AAE0672004374C3 /* rvh.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvh.org; sourceTree = "<group>"; };
 		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -477,6 +480,8 @@
 				8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */,
 				8EC5C3261A9D132C005BDAFD /* EPSDrugCalculatorNotes.h */,
 				8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */,
+				8E54237C1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.h */,
+				8E54237D1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -561,8 +566,6 @@
 				8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */,
 				8E09D06C15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.h */,
 				8E09D06D15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m */,
-				8EEDF46F160CBC9A007A3058 /* EPSARVCTableViewController.h */,
-				8EEDF470160CBC9B007A3058 /* EPSARVCTableViewController.m */,
 				8E97559F16188AFD00EAFD10 /* EPSVTViewController.h */,
 				8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */,
 				8E815D3A162EE2F0001025ED /* EPSWCTTableViewController.h */,
@@ -603,6 +606,8 @@
 				8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */,
 				8EC6E948177F301D00B76C38 /* EPSWeightCalculatorViewController.h */,
 				8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */,
+				8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */,
+				8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -800,7 +805,7 @@
 			attributes = {
 				CLASSPREFIX = EPS;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C26159FE0FA00975E2B = {
@@ -939,6 +944,7 @@
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
+				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
@@ -946,7 +952,6 @@
 				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
 				8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */,
 				8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */,
-				8EEDF471160CBC9B007A3058 /* EPSARVCTableViewController.m in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */,
@@ -969,6 +974,7 @@
 				8E37A5A116FF6016004E66B2 /* EPSDateCalculatorNotes.m in Sources */,
 				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
 				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
+				8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
@@ -1057,6 +1063,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1096,6 +1103,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

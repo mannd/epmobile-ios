@@ -84,7 +84,7 @@
 }
 
 - (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks {
-    NSString *riskList = [self formatRisks:risks];
+    NSString *riskList = [EPSRiskScore formatRisks:risks];
     NSString *report = @"Risk score: ";
     report = [report stringByAppendingString:[self getTitle]];
     report = [report stringByAppendingString:@"\nRisks: "];
@@ -99,7 +99,7 @@
     return report;
 }
 
-- (NSString *)formatRisks:(NSArray *)risks {
++ (NSString *)formatRisks:(NSArray *)risks {
     NSString *riskString = @"None";
     if (risks != nil && [risks count] != 0) {
         riskString = [risks componentsJoinedByString:@", "];
