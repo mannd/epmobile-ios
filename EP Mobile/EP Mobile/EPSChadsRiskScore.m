@@ -33,10 +33,10 @@
     NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", risk];
     NSString *message = @"";
     if (score < 1) {
-        message = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or no drug recommended.\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
+        message = [message stringByAppendingString:@"\nAnti-platelet drug (e.g. aspirin) or no antithrombic therapy recommended.\n\nCurrent guidelines suggest using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
     }
     else if (score == 1) {
-         message = [message stringByAppendingString:@"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended.\n\nConsider using CHA\u2082DS\u2082-VASc score to define stroke risk better and using bleeding score (e.g. HAS-BLED) to help choose between ASA and oral anticoagulation."];
+         message = [message stringByAppendingString:@"\nEither anti-platelet drug (e.g. aspirin) or oral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended.\n\nCurrent guidelines suggest using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
     }
     else
         message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended."];

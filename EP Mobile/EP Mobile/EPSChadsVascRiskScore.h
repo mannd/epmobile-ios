@@ -9,5 +9,6 @@
 #import "EPSRiskScore.h"
 
 @interface EPSChadsVascRiskScore : EPSRiskScore
+@property BOOL isFemale;
 
 @end

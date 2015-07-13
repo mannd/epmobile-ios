@@ -45,7 +45,7 @@
         message = @"High bleeding risk";
     float risk =[self getRisk:score];
     
-    NSString *resultMessage = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years", score, message, risk];
+    NSString *resultMessage = [[NSString alloc] initWithFormat:@"HEMORR\u2082HAGES score = %d\n%@\nBleeding risk is %1.1f bleeds per 100 patient-years.", score, message, risk];
     return resultMessage;
 }
 
