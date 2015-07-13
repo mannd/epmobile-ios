@@ -12,6 +12,8 @@
 // the 2 mutually exclusive CHADS-VASc risk that must be dealt with specially
 #define CHADS_VASC_AGE_75 2
 #define CHADS_VASC_AGE_65 6
+// also need to deal with female sex if score == 1
+#define CHADS_VASC_FEMALE 7
 
 @implementation EPSChadsVascRiskScore
 
@@ -32,12 +34,13 @@
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Stroke history" withValue:2 withDetails:@"or TIA or thromboembolism"]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Vascular disease" withValue:1 withDetails:@"e.g. PAD, MI, aortic plaque"]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 65 years" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Sex category" withValue:1 withDetails:@"i.e. female gender"]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Sex category" withValue:1 withDetails:@"female sex"]];
     return array;
 }
 
 - (int)calculateScore:(NSMutableArray *)risks {
     int score = [super calculateScore:risks];
+    self.isFemale = [[risks objectAtIndex:CHADS_VASC_FEMALE] selected];
     if ([[risks objectAtIndex:CHADS_VASC_AGE_65] selected] && [[risks objectAtIndex:CHADS_VASC_AGE_75] selected])
         --score;
     return score;
@@ -48,13 +51,19 @@
     NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", risk];
     NSString *message = @"";
     if (score < 1) {
-        message = [message stringByAppendingString:@"\nAnti-platelet drug (ASA) or no drug recommended."];
+        message = [message stringByAppendingString:@"\nIt is reasonable to omit antithrombotic therapy."];
     }
     else if (score == 1) {
-        message = [message stringByAppendingString:@"\nEither anti-platelet drug (ASA) or oral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended.\n\nConsider assessing bleeding score (e.g. HAS-BLED) to help choose between ASA and anticoagulation."];
+        message = [message stringByAppendingString:@"\nNo anticoagulation or oral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) or aspirin may be considered (2014 AHA/ACC/HRS guidelines)."];
+        if (self.isFemale) {
+            message = [message stringByAppendingString:@" European Society of Cardiology (2012) recommends considering no antithrombotic therapy when female sex is the only risk factor."];
+        }
+        else {
+        message = [message stringByAppendingString:@" European Society of Cardiology (2012) recommends anticoagulation."];
+        }
     }
     else
-        message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended."];
+        message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) is recommended."];
     
     return [NSString stringWithFormat:@"%@ score = %d\n%@\n%@", [self getTitle], score, strokeRisk, message];
 }

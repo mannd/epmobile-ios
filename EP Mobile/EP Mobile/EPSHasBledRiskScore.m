@@ -40,7 +40,7 @@
     else
         message = @"High bleeding risk";
     NSString *riskString = [self getRisk:score];
-    NSString *resultMessage = [[NSString alloc] initWithFormat:@"HAS-BLED score = %d\n%@\nBleeding risk is %@ bleeds per 100 patient-years", score, message, riskString];
+    NSString *resultMessage = [[NSString alloc] initWithFormat:@"HAS-BLED score = %d\n%@\nBleeding risk is %@ bleeds per 100 patient-years.", score, message, riskString];
     return resultMessage;
 }
 
