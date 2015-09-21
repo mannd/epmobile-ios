@@ -42,7 +42,7 @@
     
 }
 
--(NSUInteger)supportedInterfaceOrientations
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return [[self.viewControllers lastObject] supportedInterfaceOrientations];
     
