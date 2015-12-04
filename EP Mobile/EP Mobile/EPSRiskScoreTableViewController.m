@@ -19,6 +19,7 @@
 #import "EPSEgsysRiskScore.h"
 #import "EPSMartinRiskScore.h"
 #import "EPSOesilScore.h"
+#import "EPSAtriaBleedRiskScore.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 
@@ -65,6 +66,8 @@
         riskScore = [[EPSMartinRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"OesilScore"])
         riskScore = [[EPSOesilScore alloc] init];
+    else if ([scoreType isEqualToString:@"AtriaBleed"])
+        riskScore = [[EPSAtriaBleedRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;
