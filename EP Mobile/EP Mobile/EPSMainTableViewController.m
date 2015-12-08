@@ -107,9 +107,9 @@
     else if ([segueIdentifier isEqualToString:@"HcmSegue"])
         vc.scoreType = @"HCM";
     else if ([segueIdentifier isEqualToString:@"AtriaBleedSegue"])
-        vc.scoreType = @"AtriaBleed";   // just to test
+        vc.scoreType = @"AtriaBleed";
     else if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
-        vc.scoreType = @"ChadsVasc";
+        vc.scoreType = @"SameTtr";
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";
