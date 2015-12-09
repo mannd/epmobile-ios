@@ -1052,31 +1052,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             </tableViewSection>
                             <tableViewSection headerTitle="Reference &amp; Tools" id="ZTg-bt-Zew">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="KYF-8r-1wD" style="IBUITableViewCellStyleDefault" id="MqU-YO-j5H">
-                                        <rect key="frame" x="0.0" y="989.5" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MqU-YO-j5H" id="ahd-Wr-EWz">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Brugada Drugs (link)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KYF-8r-1wD">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                        <connections>
-                                            <segue destination="TwG-tp-Ach" kind="show" identifier="BrugadaDrugsSegue" id="tjF-od-osy"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EEG-a9-Vzg" style="IBUITableViewCellStyleDefault" id="6V6-KI-xvk">
-                                        <rect key="frame" x="0.0" y="1033.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="989.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6V6-KI-xvk" id="CbU-kx-al3">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1099,7 +1076,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="00X-dT-Niu" style="IBUITableViewCellStyleDefault" id="0lc-NL-EPf">
-                                        <rect key="frame" x="0.0" y="1077.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1033.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0lc-NL-EPf" id="zBd-9a-ep1">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1122,7 +1099,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vFm-4F-8a0" style="IBUITableViewCellStyleDefault" id="Av1-GD-e7A">
-                                        <rect key="frame" x="0.0" y="1121.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1077.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Av1-GD-e7A" id="aTj-0A-PNu">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1145,7 +1122,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HeU-Co-g3v" style="IBUITableViewCellStyleDefault" id="Aja-52-aWC">
-                                        <rect key="frame" x="0.0" y="1165.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1121.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aja-52-aWC" id="h0b-cJ-5Kb">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1167,31 +1144,8 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <segue destination="QEg-8T-H7h" kind="show" id="Ra3-V2-5j7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="a2W-xk-jV3" style="IBUITableViewCellStyleDefault" id="bad-gB-qW4">
-                                        <rect key="frame" x="0.0" y="1209.5" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bad-gB-qW4" id="jyI-lZ-8EK">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Long QT Drugs (link)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a2W-xk-jV3">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                        <connections>
-                                            <segue destination="TwG-tp-Ach" kind="show" identifier="LongQTDrugsSegue" id="9A7-Dn-UeD"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1oS-6q-IaU" style="IBUITableViewCellStyleDefault" id="tbo-Uw-XzN">
-                                        <rect key="frame" x="0.0" y="1253.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1165.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbo-Uw-XzN" id="HqD-lm-kaS">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1214,7 +1168,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lJE-1A-p1e" style="IBUITableViewCellStyleDefault" id="zsW-A6-XfN">
-                                        <rect key="frame" x="0.0" y="1297.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1209.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zsW-A6-XfN" id="uVJ-E6-JXW">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1241,7 +1195,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <tableViewSection headerTitle="Risk Scores" id="1em-Se-FbY">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oXw-87-CX4" style="IBUITableViewCellStyleDefault" id="0pF-iL-QgJ">
-                                        <rect key="frame" x="0.0" y="1383.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1295.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pF-iL-QgJ" id="7gC-oE-gPy">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1264,7 +1218,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0Yt-Le-ZbZ" style="IBUITableViewCellStyleDefault" id="bli-US-HBU">
-                                        <rect key="frame" x="0.0" y="1427.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1339.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bli-US-HBU" id="LrO-go-o09">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1287,7 +1241,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JzV-4e-i9q" style="IBUITableViewCellStyleDefault" id="rvh-St-Shc">
-                                        <rect key="frame" x="0.0" y="1471.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1383.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rvh-St-Shc" id="EZA-FC-zNk">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1310,7 +1264,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ikf-bS-MVr" style="IBUITableViewCellStyleDefault" id="rvD-4k-0Cb">
-                                        <rect key="frame" x="0.0" y="1515.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1427.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rvD-4k-0Cb" id="Skb-Fj-yke">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1333,7 +1287,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lw7-Rc-dMU" style="IBUITableViewCellStyleDefault" id="obU-Ni-e3Z">
-                                        <rect key="frame" x="0.0" y="1559.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1471.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="obU-Ni-e3Z" id="8Q2-uz-nUg">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1356,7 +1310,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Jsu-qK-3o9" style="IBUITableViewCellStyleDefault" id="D5d-Q7-wsB">
-                                        <rect key="frame" x="0.0" y="1603.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1515.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D5d-Q7-wsB" id="mYZ-lC-KWg">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1379,7 +1333,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nak-Eu-smJ" style="IBUITableViewCellStyleDefault" id="Ldh-M8-v5H">
-                                        <rect key="frame" x="0.0" y="1647.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1559.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ldh-M8-v5H" id="wpG-GW-aUt">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1402,7 +1356,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c0g-6Q-hMZ" style="IBUITableViewCellStyleDefault" id="mEF-oW-9Su">
-                                        <rect key="frame" x="0.0" y="1691.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1603.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mEF-oW-9Su" id="Jzc-Wl-g9w">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1425,7 +1379,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ZsD-AL-did" style="IBUITableViewCellStyleDefault" id="wHt-KN-o78">
-                                        <rect key="frame" x="0.0" y="1735.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1647.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wHt-KN-o78" id="TR9-Dc-z9t">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1448,7 +1402,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="D2I-gn-Y77" style="IBUITableViewCellStyleDefault" id="GQz-Y3-rsE">
-                                        <rect key="frame" x="0.0" y="1779.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1691.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GQz-Y3-rsE" id="aIj-Ta-Eye">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1471,7 +1425,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wss-TW-Icg" style="IBUITableViewCellStyleDefault" id="bqP-Zg-Xfy">
-                                        <rect key="frame" x="0.0" y="1823.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1735.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bqP-Zg-Xfy" id="vkA-cI-vTj">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
