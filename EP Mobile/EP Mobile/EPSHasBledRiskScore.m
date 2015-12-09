@@ -74,5 +74,15 @@
     return riskString;
 }
 
+// Detailed text label not big enough on iPhone 4s
+- (CGFloat)rowHeight:(CGFloat)defaultHeight {
+    return defaultHeight + 75.0;
+}
+
+- (int)detailTextNumberOfLines {
+    return 2;
+}
+
+
 
 @end

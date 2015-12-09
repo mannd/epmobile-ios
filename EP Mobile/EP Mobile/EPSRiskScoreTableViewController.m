@@ -19,6 +19,9 @@
 #import "EPSEgsysRiskScore.h"
 #import "EPSMartinRiskScore.h"
 #import "EPSOesilScore.h"
+#import "EPSAtriaBleedRiskScore.h"
+#import "EPSSameTtrRiskScore.h"
+#import "EPSAtriaStrokeRiskScore.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 
@@ -65,6 +68,12 @@
         riskScore = [[EPSMartinRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"OesilScore"])
         riskScore = [[EPSOesilScore alloc] init];
+    else if ([scoreType isEqualToString:@"AtriaBleed"])
+        riskScore = [[EPSAtriaBleedRiskScore alloc] init];
+    else if ([scoreType isEqualToString:@"SameTtr"])
+        riskScore = [[EPSSameTtrRiskScore alloc] init];
+    else if ([scoreType isEqualToString:@"AtriaStroke"])
+        riskScore = [[EPSAtriaStrokeRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;
@@ -113,6 +122,7 @@
         return rows;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [riskScore rowHeight:[super tableView:tableView heightForRowAtIndexPath:indexPath]];
 }
@@ -129,6 +139,7 @@
     [riskScore formatCell:cell];
 
     cell.detailTextLabel.text = details;
+    cell.detailTextLabel.numberOfLines = [riskScore detailTextNumberOfLines];
     if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else

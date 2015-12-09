@@ -100,6 +100,9 @@
 		8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */; };
 		8E9755B1161D11E600EAFD10 /* EPSWarfarinNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */; };
 		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
+		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
+		8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */; };
+		8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */; };
 		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
@@ -313,6 +316,12 @@
 		8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinNotes.h; sourceTree = "<group>"; };
 		8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinNotes.m; sourceTree = "<group>"; };
 		8E9755B2161F71B900EAFD10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8EA0E0571C124E0100BB7E7C /* EPSAtriaBleedRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaBleedRiskScore.h; sourceTree = "<group>"; };
+		8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaBleedRiskScore.m; sourceTree = "<group>"; };
+		8EA0E05A1C124E2000BB7E7C /* EPSSameTtrRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSameTtrRiskScore.h; sourceTree = "<group>"; };
+		8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSameTtrRiskScore.m; sourceTree = "<group>"; };
+		8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaStrokeRiskScore.h; sourceTree = "<group>"; };
+		8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaStrokeRiskScore.m; sourceTree = "<group>"; };
 		8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskScore.h; sourceTree = "<group>"; };
 		8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskScore.m; sourceTree = "<group>"; };
 		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
@@ -434,6 +443,12 @@
 				8E741AB616FE88B500A701B3 /* Links */,
 				8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */,
 				8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */,
+				8EA0E0571C124E0100BB7E7C /* EPSAtriaBleedRiskScore.h */,
+				8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */,
+				8EA0E05A1C124E2000BB7E7C /* EPSSameTtrRiskScore.h */,
+				8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */,
+				8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */,
+				8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -946,6 +961,7 @@
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
 				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,
+				8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
@@ -971,6 +987,7 @@
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
 				8E37A59E16FF46FF004E66B2 /* EPSDateCalculatorViewController.m in Sources */,
+				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
 				8E37A5A116FF6016004E66B2 /* EPSDateCalculatorNotes.m in Sources */,
 				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
 				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
@@ -982,6 +999,7 @@
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
 				8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */,
 				8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */,
+				8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */,
 				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
 				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
