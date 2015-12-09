@@ -116,7 +116,7 @@
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";
     else if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
-        lc.webPage = @"http://www.crediblemeds.org";
+        lc.webPage = @"https://www.crediblemeds.org";
     else if ([segueIdentifier isEqualToString:@"ParaHisSegue"]) {
         lc.webPage = @"parahisianpacinginstructions";
         lc.linkTitle = @"Para-Hisian Pacing";
