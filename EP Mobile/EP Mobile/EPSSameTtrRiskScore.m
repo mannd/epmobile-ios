@@ -47,7 +47,7 @@
 }
 
 - (int)detailTextNumberOfLines {
-    return 2;
+    return 3;
 }
 
 
