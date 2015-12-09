@@ -37,10 +37,19 @@
         message = [message stringByAppendingString:@"\nLow bleeding risk on warfarin (hemorrhage rate 0.8% per year)."];
     }
     else {
-        message = [message stringByAppendingString:@"\nPatient likely to have poor                  anticoagulation control on warfarin with low (< 65%) TTR (Time in Therapeutic Range). Improve education regarding anticoagulation control, or consider a new oral anticoagulant instead of warfarin."];
+        message = [message stringByAppendingString:@"\nPatient likely to have poor anticoagulation control on warfarin with low (< 65%) TTR (Time in Therapeutic Range). Improve education regarding anticoagulation control, or consider a new oral anticoagulant instead of warfarin."];
     }
     return [NSString stringWithFormat:@"%@ score = %d\n%@", [self getTitle], score, message];
 }
+
+- (CGFloat)rowHeight:(CGFloat)defaultHeight {
+    return defaultHeight + 75.0;
+}
+
+- (int)detailTextNumberOfLines {
+    return 2;
+}
+
 
 
 @end

@@ -110,6 +110,8 @@
         vc.scoreType = @"AtriaBleed";
     else if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
         vc.scoreType = @"SameTtr";
+    else if ([segueIdentifier isEqualToString:@"AtriaStrokeSegue"])
+        vc.scoreType = @"Chads2";
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";

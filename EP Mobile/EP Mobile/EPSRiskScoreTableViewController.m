@@ -119,6 +119,7 @@
         return rows;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [riskScore rowHeight:[super tableView:tableView heightForRowAtIndexPath:indexPath]];
 }
@@ -135,9 +136,7 @@
     [riskScore formatCell:cell];
 
     cell.detailTextLabel.text = details;
-    // test
-//    cell.detailTextLabel.numberOfLines = 2;
-    // end test
+    cell.detailTextLabel.numberOfLines = [riskScore detailTextNumberOfLines];
     if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
