@@ -48,6 +48,10 @@
     return defaultHeight;
 }
 
+- (int)detailTextNumberOfLines {
+    return 1;
+}
+
 - (void)formatCell:(UITableViewCell *)cell {
     // default doesn't change cell
     return;

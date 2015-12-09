@@ -23,6 +23,7 @@
 - (NSString *)getReference;
 - (NSArray *)risksSelected:(NSArray *)risks;
 - (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks;
+- (int)detailTextNumberOfLines;
 + (NSString *)formatRisks:(NSArray *)risks;
 
 @end
