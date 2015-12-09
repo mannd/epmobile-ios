@@ -23,7 +23,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sex (female)" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age (< 60 years)" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Medical history" withValue:1 withDetails:@"more than 2 of: HTN, DM, CAD/MI, PAD, CHF, prior stroke, pulmonary disease, hepatic or renal disease"]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Medical history" withValue:1 withDetails:@"more than 2 of: HTN, DM, CAD/MI, PAD, CHF, prior stroke, pulmonary disease, and hepatic or renal disease"]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Treatment: interacting drugs"                                                  withValue:1 withDetails:@"e.g. amiodarone"]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Tobacco use" withValue:2 withDetails:@"within 2 years"]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Race" withValue:2 withDetails:@"non-Caucasian"]];
@@ -34,7 +34,7 @@
     NSString *message = @"";
     
     if (score < 3) {
-        message = [message stringByAppendingString:@"\nLow bleeding risk on warfarin (hemorrhage rate 0.8% per year)."];
+        message = [message stringByAppendingString:@"\nPatient likely to have good anticoagulation control on warfarin with high (≥ 65%) TTR (Time in Therapeutic Range)."];
     }
     else {
         message = [message stringByAppendingString:@"\nPatient likely to have poor anticoagulation control on warfarin with low (< 65%) TTR (Time in Therapeutic Range). Improve education regarding anticoagulation control, or consider a new oral anticoagulant instead of warfarin."];

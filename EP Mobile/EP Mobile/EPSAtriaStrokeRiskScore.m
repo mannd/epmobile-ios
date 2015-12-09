@@ -15,7 +15,7 @@
 
 @implementation EPSAtriaStrokeRiskScore
 - (NSString *)getTitle {
-    return @"ATRIA Bleeding Risk";
+    return @"ATRIA Stroke Risk";
 }
 
 - (NSString *)getReference {
@@ -28,10 +28,10 @@
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age 75 to 84 years" withValue:5]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age 65 to 74 years" withValue:3]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age < 65 years" withValue:0]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Female" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Diabetes" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"CHF" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"HTN" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Female sex" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Diabetes mellitus" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Congestive heart failure" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Hypertension" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Proteinuria" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"eGFR < 45 mL/min/1.73 m\u00B2 or ESRD" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Prior stroke" withValue:0]];
