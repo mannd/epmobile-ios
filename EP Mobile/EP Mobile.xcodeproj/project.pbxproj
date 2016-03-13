@@ -44,6 +44,7 @@
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
+		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
@@ -227,6 +228,8 @@
 		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
+		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
+		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
 		8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDavilaAlgorithm.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */,
 				8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */,
 				8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */,
+				8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */,
+				8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -1017,6 +1022,7 @@
 				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
 				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
+				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
 				8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 			);
