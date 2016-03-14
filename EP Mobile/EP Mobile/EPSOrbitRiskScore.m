@@ -15,7 +15,7 @@
 }
 
 - (NSString *)getReference {
-    return @"O'Brien EC, Simon DN, Thomas LE, Hylek EM, Gersh BJ, Ansell JE, Kowey PR, Mahaffey KW, Chang P, Fonarow GC, Pencina MJ, Piccini JP, Peterson ED. The ORBIT Bleeding Score: A Simple Bedside Score to Assess Bleeding Risk in Atrial Fibrillation.  Eur Heart J [Internet].  2015 [cited 2016 Mar 13];36(46):3258-64.  Available from: http://www.medscape.com/viewarticle/855941_1";
+    return @"O'Brien EC, Simon DN, Thomas LE, Hylek EM, Gersh BJ, Ansell JE, Kowey PR, Mahaffey KW, Chang P, Fonarow GC, Pencina MJ, Piccini JP, Peterson ED. The ORBIT Bleeding Score: A Simple Bedside Score to Assess Bleeding Risk in Atrial Fibrillation.  Eur Heart J [Internet].  2015 [cited 2016 Mar 13] 36(46):3258-64.  Available from: http://www.medscape.com/viewarticle/855941_1";
 }
 
 - (NSMutableArray *)getArray {
@@ -40,7 +40,7 @@
         message = [message stringByAppendingString:@"Low bleeding risk."];
     }
     else if (score == 3) {
-        message = [message stringByAppendingString:@"Medim bleeding risk."];
+        message = [message stringByAppendingString:@"Medium bleeding risk."];
     }
     else {
         message = [message stringByAppendingString:@"High bleeding risk."];
