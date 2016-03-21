@@ -18,5 +18,6 @@ typedef enum {
 } QTFormula;
 
 + (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(QTFormula)formula;
++ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(NSInteger)qt andQRSInMsec:(NSInteger)qrs;
 
 @end

@@ -36,9 +36,20 @@
             break;
     }
     // convert result back to msec, no decimals
-    result = round(result * 1000);
-    return (NSInteger)result;
+    return [self roundValueInSecs:result];
 }
+
++ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(NSInteger)qt andQRSInMsec:(NSInteger)qrs{
+    double result = (double)qt - ((double)qrs * 0.485);
+    return round(result);
+}
+
++ (NSInteger)roundValueInSecs:(double)value {
+    return (NSInteger)round(value * 1000);
+}
+
+
+
 
 
 @end

@@ -118,9 +118,18 @@
     XCTAssertTrue(round(0.5) == 1, @"Actual result was %ld", result);
     XCTAssertTrue(round(0.4) == 0, @"Actual result was %ld", result);
     XCTAssertTrue(round(0.6) == 1, @"Actual result was %ld", result);
+}
+
+- (void)testCorrectQTForBBB {
+    long result = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:360 andQRSInMsec:144];
+    XCTAssertTrue(result == 290, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:444 andQRSInMsec:197];
+    XCTAssertTrue(result == 348, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:400 andQRSInMsec:0];
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+
 
     
-
 }
 
 
