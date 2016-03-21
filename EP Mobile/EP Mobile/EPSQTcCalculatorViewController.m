@@ -7,12 +7,15 @@
 //
 
 #import "EPSQTcCalculatorViewController.h"
+#import "EPSQTMethods.h"
 #import "EPSLogging.h"
 
-#define BAZETT 0
-#define FRIDERICIA 1
-#define SAGIE 2
-#define HODGES 3
+// Formula picker must match below,
+// but constants now defined in EPSQTMethods.h
+//#define BAZETT 0
+//#define FRIDERICIA 1
+//#define SAGIE 2
+//#define HODGES 3
 
 #define MAX_NORMAL_QTC 440.0
 
@@ -149,7 +152,8 @@
     NSString *formula = [formulaData objectAtIndex:row];
     EPSLog(@"Formula is %@", formula);
     EPSLog(@"Row is %ld", (long)row);
-    NSInteger qtc = [self qtcFromQtInMsec:qtNumber AndIntervalInMsec:inputNumber UsingFormula:row];
+    NSInteger qtc = [EPSQTMethods qtcFromQtInMsec:qtNumber AndIntervalInMsec:inputNumber UsingFormula:(QTFormula)row];
+
     EPSLog(@"QTc = %ld", (long)qtc);
     if (qtc == 0.0) {
         self.resultLabel.textColor = [UIColor darkTextColor];
@@ -172,35 +176,6 @@
     self.resultLabel.text = nil;
 }
 
-- (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(NSInteger)formula {
-    if (interval == 0)
-        return 0;   // no divide by zero
-    // convert to Seconds
-    double intervalInSec = interval / 1000.0;
-    double qtInSec = qt / 1000.0;
-    double heartRate = 60000.0 / interval;
-    double result;
-    switch (formula) {
-        case BAZETT:
-            result = qtInSec / sqrt(intervalInSec);
-            break;
-        case FRIDERICIA:
-            result = qtInSec / cbrt(intervalInSec);
-            break;
-        case SAGIE:
-            result = qtInSec + 0.154 * (1.0 - intervalInSec);
-            break;
-        case HODGES:
-            result = qtInSec + ((1.75 * (heartRate - 60) / 1000));
-            break;
-        default:
-            result = 0;
-            break;
-    }
-    // convert result back to msec, no decimals
-    result = round(result * 1000);
-    return (NSInteger)result;
-}
 
 - (IBAction)toggleInputType:(id)sender {
     self.inputField.text = nil;

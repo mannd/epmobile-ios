@@ -90,6 +90,8 @@
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
 		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
+		8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
+		8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
@@ -298,6 +300,8 @@
 		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexStepAlgorithmProtocol.h; sourceTree = "<group>"; };
 		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8E676B741CA093A60035244E /* EPSQTMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTMethods.h; sourceTree = "<group>"; };
+		8E676B751CA093A60035244E /* EPSQTMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTMethods.m; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
@@ -631,6 +635,8 @@
 				8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */,
 				8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */,
 				8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */,
+				8E676B741CA093A60035244E /* EPSQTMethods.h */,
+				8E676B751CA093A60035244E /* EPSQTMethods.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -808,7 +814,6 @@
 				8EC19C3D159FE0FA00975E2B /* Sources */,
 				8EC19C3E159FE0FA00975E2B /* Frameworks */,
 				8EC19C3F159FE0FA00975E2B /* Resources */,
-				8EC19C40159FE0FA00975E2B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -827,6 +832,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EPS;
+				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "EP Studios";
@@ -931,22 +937,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8EC19C40159FE0FA00975E2B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		8EC19C23159FE0FA00975E2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1018,6 +1008,7 @@
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
+				8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
@@ -1038,6 +1029,7 @@
 			files = (
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
+				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1088,6 +1080,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1130,6 +1123,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1154,15 +1148,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP Mobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1173,15 +1171,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP Mobile-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1191,15 +1192,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -1208,15 +1209,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;

@@ -15,6 +15,7 @@
 #import "EPSRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSChadsRiskScore.h"
+#import "EPSQTMethods.h"
 
 @implementation EP_MobileTests
 
@@ -40,33 +41,6 @@
     XCTAssertTrue(result == 60, @"Test failed");
     result = [c convertInterval:733];
     XCTAssertTrue(result == 82, @"Test failed.  Result was %i", result);
-}
-
-- (void)testQTcCalculator {
-    EPSQTcCalculatorViewController *c = [[EPSQTcCalculatorViewController alloc] init];
-    const int BAZETT = 0;
-    const int FRIDERICIA = 1;
-    const int SAGIE = 2;
-    const int HODGES = 3;
-    long result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:BAZETT];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:FRIDERICIA];   
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:SAGIE];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:HODGES];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:BAZETT];
-    XCTAssertTrue(result == 411, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:FRIDERICIA];
-    XCTAssertTrue(result == 395, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:SAGIE];
-    XCTAssertTrue(result == 397, @"Actual result was %ld", result);    
-    result = [c qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:HODGES];
-    XCTAssertTrue(result == 393, @"Actual result was %ld", result);
-    result = [c qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:BAZETT];
-    XCTAssertTrue(result == 0, @"Actual result was %ld", result);
-    
 }
 
 - (void)testActualWeeklyDose {
@@ -109,16 +83,44 @@
     EPSChadsRiskScore *riskScore = [[EPSChadsRiskScore alloc] init];
     NSArray *risks = [riskScore getArray ];
     NSArray *risksSelected = [riskScore risksSelected:risks];
-    NSString *riskString = [riskScore formatRisks:risksSelected];
+    NSString *riskString = [EPSRiskScore formatRisks:risksSelected];
     XCTAssertTrue([riskString isEqualToString:@"None"]);
     EPSRiskFactor *risk0 = [risks objectAtIndex:0];
     risk0.selected = YES;
     EPSRiskFactor *risk2 = [risks objectAtIndex:2];
     risk2.selected = YES;
     risksSelected = [riskScore risksSelected:risks];
-    riskString = [riskScore formatRisks:risksSelected];
+    riskString = [EPSRiskScore formatRisks:risksSelected];
     XCTAssertTrue([riskString isEqualToString:@"Congestive heart failure, Age ≥ 75 years"]);
     
+}
+
+- (void)testQTMethods {
+    long result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kBazett];
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kFridericia];
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kSagie];
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kHodges];
+    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kBazett];
+    XCTAssertTrue(result == 411, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kFridericia];
+    XCTAssertTrue(result == 395, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kSagie];
+    XCTAssertTrue(result == 397, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kHodges];
+    XCTAssertTrue(result == 393, @"Actual result was %ld", result);
+    result = [EPSQTMethods qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:kBazett];
+    XCTAssertTrue(result == 0, @"Actual result was %ld", result);
+    // make sure rounding works the way we want
+    XCTAssertTrue(round(0.5) == 1, @"Actual result was %ld", result);
+    XCTAssertTrue(round(0.4) == 0, @"Actual result was %ld", result);
+    XCTAssertTrue(round(0.6) == 1, @"Actual result was %ld", result);
+
+    
+
 }
 
 
