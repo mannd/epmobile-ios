@@ -17,6 +17,8 @@
 #import "EPSChadsRiskScore.h"
 #import "EPSQTMethods.h"
 
+#define MESSAGE_L @"Actual result was %ld"
+
 @implementation EP_MobileTests
 
 - (void)setUp
@@ -97,39 +99,42 @@
 
 - (void)testQTMethods {
     long result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kBazett];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 400, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kFridericia];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 400, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kSagie];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 400, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:400 AndIntervalInMsec:1000 UsingFormula:kHodges];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 400, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kBazett];
-    XCTAssertTrue(result == 411, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 411, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kFridericia];
-    XCTAssertTrue(result == 395, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 395, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kSagie];
-    XCTAssertTrue(result == 397, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 397, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:365 AndIntervalInMsec:789 UsingFormula:kHodges];
-    XCTAssertTrue(result == 393, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 393, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:kBazett];
-    XCTAssertTrue(result == 0, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 0, MESSAGE_L, result);
     // make sure rounding works the way we want
-    XCTAssertTrue(round(0.5) == 1, @"Actual result was %ld", result);
-    XCTAssertTrue(round(0.4) == 0, @"Actual result was %ld", result);
-    XCTAssertTrue(round(0.6) == 1, @"Actual result was %ld", result);
+    XCTAssertTrue(round(0.5) == 1, MESSAGE_L, result);
+    XCTAssertTrue(round(0.4) == 0, MESSAGE_L, result);
+    XCTAssertTrue(round(0.6) == 1, MESSAGE_L, result);
 }
 
 - (void)testCorrectQTForBBB {
     long result = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:360 andQRSInMsec:144];
-    XCTAssertTrue(result == 290, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 290, MESSAGE_L, result);
     result = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:444 andQRSInMsec:197];
-    XCTAssertTrue(result == 348, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 348, MESSAGE_L, result);
     result = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:400 andQRSInMsec:0];
-    XCTAssertTrue(result == 400, @"Actual result was %ld", result);
+    XCTAssertTrue(result == 400, MESSAGE_L, result);
+}
 
-
-    
+- (void)testCorrectJT {
+    long result = [EPSQTMethods jtCorrectedFromQTinMsec:360 andIntervalInMsec:550 withQRS:135];
+    long qtc = [EPSQTMethods qtcFromQtInMsec:360 AndIntervalInMsec:550 UsingFormula:kBazett];
+    XCTAssertTrue(result == qtc - 135, MESSAGE_L, result);
 }
 
 
