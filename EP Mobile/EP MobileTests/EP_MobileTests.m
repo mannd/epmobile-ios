@@ -132,9 +132,21 @@
 }
 
 - (void)testCorrectJT {
-    long result = [EPSQTMethods jtCorrectedFromQTinMsec:360 andIntervalInMsec:550 withQRS:135];
+    long result = [EPSQTMethods jtCorrectedFromQTInMsec:360 andIntervalInMsec:550 withQRS:135];
     long qtc = [EPSQTMethods qtcFromQtInMsec:360 AndIntervalInMsec:550 UsingFormula:kBazett];
     XCTAssertTrue(result == qtc - 135, MESSAGE_L, result);
+}
+
+- (void)testJT {
+    long result = [EPSQTMethods jtFromQTInMsec:398.4 andQRSInMsec:99];
+    XCTAssertTrue(result == (NSInteger)(398.4 - 99), MESSAGE_L, result);
+}
+
+- (void)testCorrectQTForBBBAndSex {
+    long result = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:379 AndHR:77 AndQRS:155 IsMale:YES];
+    XCTAssertTrue(result == 376, MESSAGE_L, result);
+    result = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:442 AndHR:55 AndQRS:110 IsMale:NO];
+    XCTAssertTrue(result == 421, MESSAGE_L, result);
 }
 
 

@@ -19,6 +19,9 @@ typedef enum {
 
 + (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(QTFormula)formula;
 + (NSInteger)qtCorrectedForLBBBFromQTInMSec:(NSInteger)qt andQRSInMsec:(NSInteger)qrs;
-+ (NSInteger)jtCorrectedFromQTinMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs;
++ (NSInteger)jtCorrectedFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs;
++ (NSInteger)jtFromQTInMsec:(double)qt andQRSInMsec:(double)qrs;
++ (NSInteger)qtCorrectedForIVCDAndSexFromQTInMsec:(double)qt AndHR:(double)hr AndQRS:(double)qrs IsMale:(BOOL)isMale;
+
 
 @end

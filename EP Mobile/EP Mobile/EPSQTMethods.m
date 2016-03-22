@@ -44,10 +44,20 @@
     return (NSInteger)round(result);
 }
 
-+ (NSInteger)jtCorrectedFromQTinMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs {
++ (NSInteger)jtFromQTInMsec:(double)qt andQRSInMsec:(double)qrs {
+    return (NSInteger)round(qt - qrs);
+    
+}
+
++ (NSInteger)jtCorrectedFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs {
     double result = [self qtcFromQtInMsec:qt AndIntervalInMsec:rr UsingFormula:kBazett];
     result -= qrs;
     return (NSInteger)round(result);
+}
+
++ (NSInteger)qtCorrectedForIVCDAndSexFromQTInMsec:(double)qt AndHR:(double)hr AndQRS:(double)qrs IsMale:(BOOL)isMale {
+    double k = isMale ? -22 : - 34;
+    return (NSInteger)round(qt - 155 * (60/hr -1) - 0.93 * (qrs -139) + k);
 }
 
 + (NSInteger)roundValueInSecs:(double)value {
