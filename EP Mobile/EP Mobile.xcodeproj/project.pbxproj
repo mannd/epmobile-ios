@@ -89,6 +89,7 @@
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
+		8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */; };
 		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
 		8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
@@ -299,6 +300,8 @@
 		8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachAlgorithm.h; sourceTree = "<group>"; };
 		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexStepAlgorithmProtocol.h; sourceTree = "<group>"; };
+		8E63D0741CA3241B0053C079 /* EPSQTcIVCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcIVCDViewController.h; sourceTree = "<group>"; };
+		8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDViewController.m; sourceTree = "<group>"; };
 		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8E676B741CA093A60035244E /* EPSQTMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTMethods.h; sourceTree = "<group>"; };
 		8E676B751CA093A60035244E /* EPSQTMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTMethods.m; sourceTree = "<group>"; };
@@ -637,6 +640,8 @@
 				8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */,
 				8E676B741CA093A60035244E /* EPSQTMethods.h */,
 				8E676B751CA093A60035244E /* EPSQTMethods.m */,
+				8E63D0741CA3241B0053C079 /* EPSQTcIVCDViewController.h */,
+				8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -957,6 +962,7 @@
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
+				8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
 				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,
