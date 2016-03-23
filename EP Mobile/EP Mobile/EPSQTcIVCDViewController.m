@@ -24,6 +24,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [self.rateIntervalField resignFirstResponder];
+    [self.qtField resignFirstResponder];
+    [self.qrsField resignFirstResponder];
+    NSLog(@"background tap");
+}
+
+- (IBAction)calculateButtonPressed:(id)sender {
+    
+}
+
+- (IBAction)clearButtonPressed:(id)sender {
+    
+}
+
+- (IBAction)toggleInputType:(id)sender {
+    
+}
+
+
+
 /*
 #pragma mark - Navigation
 

@@ -1354,7 +1354,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="top" id="3yb-Qn-hzk"/>
                         <viewControllerLayoutGuide type="bottom" id="1Id-Z0-5rY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cBe-UR-y3h">
+                    <view key="view" contentMode="scaleToFill" id="cBe-UR-y3h" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1374,6 +1374,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <segment title="RR"/>
                                 </segments>
                                 <connections>
+                                    <action selector="toggleInputType:" destination="Mhq-KQ-Sd1" eventType="valueChanged" id="ldG-sg-3ej"/>
                                     <action selector="toggleInputType:" destination="isk-zH-Tuy" eventType="valueChanged" id="qoC-bV-Xwa"/>
                                 </connections>
                             </segmentedControl>
@@ -1388,7 +1389,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QRS (msec)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-pi-TfV">
                                 <rect key="frame" x="438" y="249.5" width="142" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-K0-vbU">
                                 <rect key="frame" x="438" y="288.5" width="51" height="31"/>
@@ -1418,6 +1419,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <constraint firstAttribute="width" constant="69" id="fSW-Xs-8lj"/>
                                 </constraints>
                                 <state key="normal" title="Calculate!"/>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="Mhq-KQ-Sd1" eventType="touchUpInside" id="Wd7-bp-FPs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrb-Lt-HS2">
                                 <rect key="frame" x="544" y="570" width="36" height="30"/>
@@ -1425,6 +1429,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <constraint firstAttribute="width" constant="36" id="eXc-1u-8OC"/>
                                 </constraints>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="Mhq-KQ-Sd1" eventType="touchUpInside" id="fKV-PU-aAb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-jx-bNd">
                                 <rect key="frame" x="438" y="164" width="142" height="30"/>
@@ -1489,7 +1496,19 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="UdK-vK-rjc" firstAttribute="leading" secondItem="cBe-UR-y3h" secondAttribute="leadingMargin" priority="750" id="u69-NA-del"/>
                             <constraint firstItem="Nix-jx-bNd" firstAttribute="top" secondItem="3yb-Qn-hzk" secondAttribute="bottom" constant="100" id="xEg-u7-wXc"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="qJH-3r-54i" eventType="touchDown" id="1QT-wq-hOx"/>
+                            <action selector="backgroundTap:" destination="Mhq-KQ-Sd1" eventType="touchDown" id="JbD-Q7-Qo3"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="intervalRateSegmentedControl" destination="UdK-vK-rjc" id="9zK-6b-wVt"/>
+                        <outlet property="lbbbSwitch" destination="vN0-K0-vbU" id="wIH-pn-Cja"/>
+                        <outlet property="qrsField" destination="Y3C-pi-TfV" id="WR3-dG-g8U"/>
+                        <outlet property="qtField" destination="Yez-F3-lDe" id="mLT-EW-h4s"/>
+                        <outlet property="rateIntervalField" destination="Nix-jx-bNd" id="mGZ-oF-QaX"/>
+                        <outlet property="sexSegmentedControl" destination="kUC-Uw-tei" id="wXG-hJ-ZwU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJH-3r-54i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
