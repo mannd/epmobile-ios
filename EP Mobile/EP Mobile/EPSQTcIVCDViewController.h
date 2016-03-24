@@ -23,7 +23,7 @@
 - (IBAction)clearButtonPressed:(id)sender;
 - (IBAction)toggleInputType:(id)sender;
 
-- (IBAction)textFieldDoneEditing:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
+- (IBAction)textFieldDoneEditing:(id)sender;
 
 @end
