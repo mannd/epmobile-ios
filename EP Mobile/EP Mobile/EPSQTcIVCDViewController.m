@@ -8,6 +8,7 @@
 
 #import "EPSQTcIVCDViewController.h"
 #import "EPSQTMethods.h"
+#import "EPSLinkViewController.h"
 
 #define INTERVAL_OR_RATE_KEY @"intervalorrate"
 #define RATE_INDEX 0
@@ -63,7 +64,44 @@
 
 - (IBAction)calculateButtonPressed:(id)sender {
     NSLog(@"Calculate!");
-    
+    BOOL error = NO;
+    double rateInterval = [self.rateIntervalField.text doubleValue];
+    double qt = [self.qtField.text doubleValue];
+    double qrs = [self.qrsField.text doubleValue];
+    if (rateInterval <= 0 || qt <= 0 || qrs <= 0) {
+        error = YES;
+        // handle error
+        return;
+    }
+    double interval;
+    double rate;
+    if (inputIsRate) {
+        interval = 60000.0 / rateInterval;
+        rate = rateInterval;
+    }
+    else {
+        interval = rateInterval;
+        rate = 60000.0 / rateInterval;
+    }
+    // qtc uses Bazett in this module
+    NSInteger qtc = [EPSQTMethods qtcFromQtInMsec:qt AndIntervalInMsec:interval UsingFormula:kBazett];
+    NSInteger jt = [EPSQTMethods jtFromQTInMsec:qt andQRSInMsec:qrs];
+    NSInteger jtc = [EPSQTMethods jtCorrectedFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs];
+    NSInteger qtForLBBB = 0;
+    NSInteger qtcForLBBB = 0;
+    if (self.lbbbSwitch.on) {
+        qtForLBBB = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:qt andQRSInMsec:qrs];
+        qtcForLBBB = [EPSQTMethods qtcFromQtInMsec:qtForLBBB AndIntervalInMsec:interval UsingFormula:kBazett];
+    }
+    NSInteger qtcForIVCDAndSex = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:qt AndHR:rate AndQRS:qrs IsMale:[self isMale]];
+    NSLog(@"qt = %f", qt);
+    NSLog(@"qtc = %ld", (long)qtc);
+    NSLog(@"jt = %ld", (long)jt);
+    NSLog(@"jtc = %ld", (long)jtc);
+    NSLog(@"qtForLBBB = %ld", (long)qtForLBBB);
+    NSLog(@"qtcForLBBB = %ld", (long)qtcForLBBB);
+    NSLog(@"qtcForIVCDAndSex = %ld", (long)qtcForIVCDAndSex);
+    // [self showResults];
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
@@ -91,6 +129,17 @@
         self.rateIntervalField.placeholder = @"Heart Rate (bpm)";
     else
         self.rateIntervalField.placeholder = @"RR Interval (msec)";
+}
+
+- (BOOL)isMale {
+    return self.sexSegmentedControl.selectedSegmentIndex == 0;
+}
+
+- (void)showResults {
+    // need to segue to something to show results
+    // can we use a web page?  
+    //EPSLinkViewController *link = [[EPSLinkViewController alloc] init];
+    
 }
 
 

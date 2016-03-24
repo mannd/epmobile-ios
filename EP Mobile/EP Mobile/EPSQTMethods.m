@@ -10,7 +10,7 @@
 
 @implementation EPSQTMethods
 
-+ (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(QTFormula)formula {
++ (NSInteger)qtcFromQtInMsec:(double)qt AndIntervalInMsec:(double)interval UsingFormula:(QTFormula)formula {
     if (interval == 0)
         return 0;   // no divide by zero
     // convert to Seconds
@@ -39,7 +39,7 @@
     return [self roundValueInSecs:result];
 }
 
-+ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(NSInteger)qt andQRSInMsec:(NSInteger)qrs{
++ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(double)qt andQRSInMsec:(double)qrs{
     double result = (double)qt - ((double)qrs * 0.485);
     return (NSInteger)round(result);
 }

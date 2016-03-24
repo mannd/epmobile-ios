@@ -17,8 +17,8 @@ typedef enum {
     kHodges
 } QTFormula;
 
-+ (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(QTFormula)formula;
-+ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(NSInteger)qt andQRSInMsec:(NSInteger)qrs;
++ (NSInteger)qtcFromQtInMsec:(double)qt AndIntervalInMsec:(double)interval UsingFormula:(QTFormula)formula;
++ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(double)qt andQRSInMsec:(double)qrs;
 + (NSInteger)jtCorrectedFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs;
 + (NSInteger)jtFromQTInMsec:(double)qt andQRSInMsec:(double)qrs;
 + (NSInteger)qtCorrectedForIVCDAndSexFromQTInMsec:(double)qt AndHR:(double)hr AndQRS:(double)qrs IsMale:(BOOL)isMale;

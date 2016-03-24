@@ -25,7 +25,7 @@
         <!--Epi vs Endocardial VT-->
         <scene sceneID="6Vl-xv-P4K">
             <objects>
-                <viewController id="Pvc-ip-j9i" customClass="EPSViewController" sceneMemberID="viewController">
+                <viewController id="Pvc-ip-j9i" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iPq-uN-D9U"/>
                         <viewControllerLayoutGuide type="bottom" id="5e2-jj-ZpT"/>
@@ -3863,7 +3863,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
         <!--R Wave Peak Time-->
         <scene sceneID="VqS-fD-HSj">
             <objects>
-                <viewController id="v7F-Ni-Oso" customClass="EPSViewController" sceneMemberID="viewController">
+                <viewController id="v7F-Ni-Oso" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="53H-Px-fsL"/>
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
