@@ -18,6 +18,13 @@
 @property (strong, nonatomic) IBOutlet UISwitch *lbbbSwitch;
 
 @property BOOL defaultInputTypeIsInterval;
+@property NSInteger qtc;
+@property NSInteger qt;
+@property NSInteger jt;
+@property NSInteger jtc;
+@property NSInteger qtm;
+@property NSInteger qtmc;
+@property NSInteger qtrrqrs;
 
 - (IBAction)calculateButtonPressed:(id)sender;
 - (IBAction)clearButtonPressed:(id)sender;

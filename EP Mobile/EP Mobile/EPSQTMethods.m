@@ -40,7 +40,7 @@
 }
 
 + (NSInteger)qtCorrectedForLBBBFromQTInMSec:(double)qt andQRSInMsec:(double)qrs{
-    double result = (double)qt - ((double)qrs * 0.485);
+    double result = qt - (qrs * 0.485);
     return (NSInteger)round(result);
 }
 

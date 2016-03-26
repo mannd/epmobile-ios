@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kBV-s3-VWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kBV-s3-VWz">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1359,13 +1359,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QT (msec)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="091-I8-1Fh">
-                                <rect key="frame" x="20" y="212.5" width="140" height="20.5"/>
+                                <rect key="frame" x="20" y="142.5" width="140" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UdK-vK-rjc">
-                                <rect key="frame" x="20" y="164.5" width="140" height="29"/>
+                                <rect key="frame" x="20" y="94.5" width="140" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="X4r-aU-AAz"/>
                                 </constraints>
@@ -1378,7 +1378,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QT (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-F3-lDe">
-                                <rect key="frame" x="438" y="209" width="142" height="30"/>
+                                <rect key="frame" x="438" y="139" width="142" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -1386,7 +1386,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QRS (msec)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-pi-TfV">
-                                <rect key="frame" x="438" y="249.5" width="142" height="30"/>
+                                <rect key="frame" x="438" y="179.5" width="142" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -1394,25 +1394,25 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-K0-vbU">
-                                <rect key="frame" x="438" y="288.5" width="51" height="31"/>
+                                <rect key="frame" x="438" y="218.5" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBBB?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrP-rC-DMu">
-                                <rect key="frame" x="20" y="293.5" width="50" height="20.5"/>
+                                <rect key="frame" x="20" y="223.5" width="50" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kUC-Uw-tei">
-                                <rect key="frame" x="438" y="331" width="142" height="29"/>
+                                <rect key="frame" x="438" y="261" width="142" height="29"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-mG-fJY">
-                                <rect key="frame" x="20" y="334" width="28" height="20.5"/>
+                                <rect key="frame" x="20" y="264" width="28" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTP-1N-Jtd">
@@ -1436,7 +1436,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-jx-bNd">
-                                <rect key="frame" x="438" y="164" width="142" height="30"/>
+                                <rect key="frame" x="438" y="94" width="142" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="nSW-b5-3Fd"/>
                                 </constraints>
@@ -1452,13 +1452,13 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="560" id="gvX-w5-ahy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRS (msec)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR0-dn-Avj">
-                                <rect key="frame" x="20" y="253" width="91" height="20.5"/>
+                                <rect key="frame" x="20" y="183" width="91" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1496,7 +1496,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="yrP-rC-DMu" firstAttribute="leading" secondItem="SR0-dn-Avj" secondAttribute="leading" id="meL-gh-DAn"/>
                             <constraint firstItem="SR0-dn-Avj" firstAttribute="leading" secondItem="091-I8-1Fh" secondAttribute="leading" id="rVQ-ix-i9Z"/>
                             <constraint firstItem="UdK-vK-rjc" firstAttribute="leading" secondItem="cBe-UR-y3h" secondAttribute="leadingMargin" priority="750" id="u69-NA-del"/>
-                            <constraint firstItem="Nix-jx-bNd" firstAttribute="top" secondItem="3yb-Qn-hzk" secondAttribute="bottom" constant="100" id="xEg-u7-wXc"/>
+                            <constraint firstItem="Nix-jx-bNd" firstAttribute="top" secondItem="3yb-Qn-hzk" secondAttribute="bottom" constant="30" id="xEg-u7-wXc"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="Mhq-KQ-Sd1" eventType="touchDown" id="JbD-Q7-Qo3"/>
@@ -1509,6 +1509,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <outlet property="qtField" destination="Yez-F3-lDe" id="mLT-EW-h4s"/>
                         <outlet property="rateIntervalField" destination="Nix-jx-bNd" id="mGZ-oF-QaX"/>
                         <outlet property="sexSegmentedControl" destination="kUC-Uw-tei" id="wXG-hJ-ZwU"/>
+                        <segue destination="dCL-Fq-3Ro" kind="show" identifier="QTcIVCDResultsSegue" id="KeF-FE-e7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJH-3r-54i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4701,6 +4702,152 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4029" y="1925"/>
+        </scene>
+        <!--QTc With IVCD Results-->
+        <scene sceneID="z1h-dR-mlV">
+            <objects>
+                <viewController title="QTc With IVCD Results" id="dCL-Fq-3Ro" customClass="EPSQTcIVCDResultsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K4E-C8-W1n"/>
+                        <viewControllerLayoutGuide type="bottom" id="bdh-PK-Hjk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qAW-7E-mTn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QT Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTW-5L-Is5">
+                                <rect key="frame" x="20" y="72" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-Hn-cCz">
+                                <rect key="frame" x="558" y="76" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="TmM-Z3-uxW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="qtInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="wd3-Yg-CFi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JT Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-yt-tuu">
+                                <rect key="frame" x="20" y="110" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-yE-M23">
+                                <rect key="frame" x="558" y="114" width="22" height="22"/>
+                                <connections>
+                                    <action selector="jtInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="vzA-ew-MlW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QTc (Bazett) Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-7J-VRx">
+                                <rect key="frame" x="20" y="148" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkR-ep-E0y">
+                                <rect key="frame" x="558" y="152" width="22" height="22"/>
+                                <connections>
+                                    <action selector="qtcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="Zno-UC-8Kp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JTc (Bazett) Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVl-rE-L9w">
+                                <rect key="frame" x="20" y="186" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0l-wi-anq">
+                                <rect key="frame" x="558" y="190" width="22" height="22"/>
+                                <connections>
+                                    <action selector="jtcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="sRA-fk-uUS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QT_m Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bht-rv-JOP">
+                                <rect key="frame" x="20" y="224" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0m-V7-rt1">
+                                <rect key="frame" x="558" y="228" width="22" height="22"/>
+                                <connections>
+                                    <action selector="qtmInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="fIM-Bz-5qt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QT_m Corrected (Bazett) Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbT-19-Wkm">
+                                <rect key="frame" x="20" y="262" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKz-gr-egE">
+                                <rect key="frame" x="558" y="266" width="22" height="22"/>
+                                <connections>
+                                    <action selector="qtmcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="7nL-Sz-AKK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QT_RR,QRS Result" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTk-4e-Zyb">
+                                <rect key="frame" x="20" y="300" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVs-ae-Ya9">
+                                <rect key="frame" x="558" y="304" width="22" height="22"/>
+                                <connections>
+                                    <action selector="qtrrqrsInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="FQi-Z5-kmJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y0m-V7-rt1" firstAttribute="leading" secondItem="Bht-rv-JOP" secondAttribute="trailing" constant="8" symbolic="YES" id="2zF-59-qxS"/>
+                            <constraint firstItem="NrS-Hn-cCz" firstAttribute="trailing" secondItem="qAW-7E-mTn" secondAttribute="trailingMargin" id="5Py-f4-9nn"/>
+                            <constraint firstItem="xTk-4e-Zyb" firstAttribute="top" secondItem="DbT-19-Wkm" secondAttribute="bottom" constant="8" symbolic="YES" id="5uL-98-KzN"/>
+                            <constraint firstItem="vVs-ae-Ya9" firstAttribute="leading" secondItem="xTk-4e-Zyb" secondAttribute="trailing" constant="8" symbolic="YES" id="83E-fI-igb"/>
+                            <constraint firstItem="rkR-ep-E0y" firstAttribute="leading" secondItem="zXs-7J-VRx" secondAttribute="trailing" constant="8" symbolic="YES" id="9gj-tM-YDo"/>
+                            <constraint firstItem="dTW-5L-Is5" firstAttribute="leading" secondItem="IMD-yt-tuu" secondAttribute="leading" id="Ccw-dl-qpM"/>
+                            <constraint firstItem="NrS-Hn-cCz" firstAttribute="leading" secondItem="dTW-5L-Is5" secondAttribute="trailing" constant="8" symbolic="YES" id="DG8-MW-JhF"/>
+                            <constraint firstItem="zXs-7J-VRx" firstAttribute="centerY" secondItem="rkR-ep-E0y" secondAttribute="centerY" id="JGm-f5-fbs"/>
+                            <constraint firstItem="DbT-19-Wkm" firstAttribute="leading" secondItem="xTk-4e-Zyb" secondAttribute="leading" id="Jws-4c-iKE"/>
+                            <constraint firstItem="DbT-19-Wkm" firstAttribute="top" secondItem="Bht-rv-JOP" secondAttribute="bottom" constant="8" symbolic="YES" id="MN9-cG-Had"/>
+                            <constraint firstItem="YVl-rE-L9w" firstAttribute="centerY" secondItem="q0l-wi-anq" secondAttribute="centerY" id="OQ9-kA-lYv"/>
+                            <constraint firstItem="YVl-rE-L9w" firstAttribute="leading" secondItem="Bht-rv-JOP" secondAttribute="leading" id="Que-gT-HT1"/>
+                            <constraint firstItem="rkR-ep-E0y" firstAttribute="leading" secondItem="q0l-wi-anq" secondAttribute="leading" id="UB4-8W-nVo"/>
+                            <constraint firstItem="IMD-yt-tuu" firstAttribute="centerY" secondItem="Igr-yE-M23" secondAttribute="centerY" id="XoX-Ur-NQG"/>
+                            <constraint firstItem="NrS-Hn-cCz" firstAttribute="leading" secondItem="Igr-yE-M23" secondAttribute="leading" id="Y7W-Wh-aJf"/>
+                            <constraint firstItem="dTW-5L-Is5" firstAttribute="top" secondItem="K4E-C8-W1n" secondAttribute="bottom" constant="8" symbolic="YES" id="Z3W-lY-XrV"/>
+                            <constraint firstItem="Bht-rv-JOP" firstAttribute="centerY" secondItem="Y0m-V7-rt1" secondAttribute="centerY" id="bBt-65-baW"/>
+                            <constraint firstItem="Bht-rv-JOP" firstAttribute="top" secondItem="YVl-rE-L9w" secondAttribute="bottom" constant="8" symbolic="YES" id="dfR-4w-I1S"/>
+                            <constraint firstItem="q0l-wi-anq" firstAttribute="leading" secondItem="YVl-rE-L9w" secondAttribute="trailing" constant="8" symbolic="YES" id="fUh-vA-OHE"/>
+                            <constraint firstItem="Y0m-V7-rt1" firstAttribute="leading" secondItem="KKz-gr-egE" secondAttribute="leading" id="fcS-tr-JwW"/>
+                            <constraint firstItem="zXs-7J-VRx" firstAttribute="top" secondItem="IMD-yt-tuu" secondAttribute="bottom" constant="8" symbolic="YES" id="g4S-8Z-qxa"/>
+                            <constraint firstItem="KKz-gr-egE" firstAttribute="leading" secondItem="DbT-19-Wkm" secondAttribute="trailing" constant="8" symbolic="YES" id="gbV-eS-9wf"/>
+                            <constraint firstItem="IMD-yt-tuu" firstAttribute="leading" secondItem="zXs-7J-VRx" secondAttribute="leading" id="gxT-u7-3RM"/>
+                            <constraint firstItem="Igr-yE-M23" firstAttribute="leading" secondItem="rkR-ep-E0y" secondAttribute="leading" id="h1N-VP-cRf"/>
+                            <constraint firstItem="YVl-rE-L9w" firstAttribute="top" secondItem="zXs-7J-VRx" secondAttribute="bottom" constant="8" symbolic="YES" id="jT7-Qm-Gzq"/>
+                            <constraint firstItem="KKz-gr-egE" firstAttribute="leading" secondItem="vVs-ae-Ya9" secondAttribute="leading" id="kLt-Pv-c1z"/>
+                            <constraint firstItem="Igr-yE-M23" firstAttribute="leading" secondItem="IMD-yt-tuu" secondAttribute="trailing" constant="8" symbolic="YES" id="khh-vm-vyP"/>
+                            <constraint firstItem="Bht-rv-JOP" firstAttribute="leading" secondItem="DbT-19-Wkm" secondAttribute="leading" id="lM7-9j-sW1"/>
+                            <constraint firstItem="q0l-wi-anq" firstAttribute="leading" secondItem="Y0m-V7-rt1" secondAttribute="leading" id="msr-0k-dIr"/>
+                            <constraint firstItem="IMD-yt-tuu" firstAttribute="top" secondItem="dTW-5L-Is5" secondAttribute="bottom" constant="8" symbolic="YES" id="nO5-Vx-dKK"/>
+                            <constraint firstItem="DbT-19-Wkm" firstAttribute="centerY" secondItem="KKz-gr-egE" secondAttribute="centerY" id="omp-VQ-ecs"/>
+                            <constraint firstItem="dTW-5L-Is5" firstAttribute="leading" secondItem="qAW-7E-mTn" secondAttribute="leadingMargin" id="sPd-Ri-Bin"/>
+                            <constraint firstItem="xTk-4e-Zyb" firstAttribute="centerY" secondItem="vVs-ae-Ya9" secondAttribute="centerY" id="svB-z2-fve"/>
+                            <constraint firstItem="dTW-5L-Is5" firstAttribute="centerY" secondItem="NrS-Hn-cCz" secondAttribute="centerY" id="wxn-dj-Fcb"/>
+                            <constraint firstItem="zXs-7J-VRx" firstAttribute="leading" secondItem="YVl-rE-L9w" secondAttribute="leading" id="yuI-Xi-ZBf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jtResult" destination="IMD-yt-tuu" id="dZa-CN-Jv1"/>
+                        <outlet property="jtcResult" destination="YVl-rE-L9w" id="KlP-if-iki"/>
+                        <outlet property="qtResult" destination="dTW-5L-Is5" id="itt-Zp-Rsy"/>
+                        <outlet property="qtcResult" destination="zXs-7J-VRx" id="vYs-Th-glt"/>
+                        <outlet property="qtmResult" destination="Bht-rv-JOP" id="MPb-Th-TpA"/>
+                        <outlet property="qtmcResult" destination="DbT-19-Wkm" id="fhw-2V-oQ6"/>
+                        <outlet property="qtrrqrsResult" destination="xTk-4e-Zyb" id="VmU-XC-iA2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYJ-GH-rfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4038" y="2061"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">

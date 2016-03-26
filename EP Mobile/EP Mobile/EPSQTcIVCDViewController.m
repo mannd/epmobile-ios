@@ -8,7 +8,8 @@
 
 #import "EPSQTcIVCDViewController.h"
 #import "EPSQTMethods.h"
-#import "EPSLinkViewController.h"
+#import "EPSQTcIVCDResultsViewController.h"
+
 
 #define INTERVAL_OR_RATE_KEY @"intervalorrate"
 #define RATE_INDEX 0
@@ -64,13 +65,11 @@
 
 - (IBAction)calculateButtonPressed:(id)sender {
     NSLog(@"Calculate!");
-    BOOL error = NO;
     double rateInterval = [self.rateIntervalField.text doubleValue];
     double qt = [self.qtField.text doubleValue];
     double qrs = [self.qrsField.text doubleValue];
     if (rateInterval <= 0 || qt <= 0 || qrs <= 0) {
-        error = YES;
-        // handle error
+        [self showError];
         return;
     }
     double interval;
@@ -84,24 +83,17 @@
         rate = 60000.0 / rateInterval;
     }
     // qtc uses Bazett in this module
-    NSInteger qtc = [EPSQTMethods qtcFromQtInMsec:qt AndIntervalInMsec:interval UsingFormula:kBazett];
-    NSInteger jt = [EPSQTMethods jtFromQTInMsec:qt andQRSInMsec:qrs];
-    NSInteger jtc = [EPSQTMethods jtCorrectedFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs];
-    NSInteger qtForLBBB = 0;
-    NSInteger qtcForLBBB = 0;
+    self.qt = (NSInteger)round(qt);
+    self.qtc = [EPSQTMethods qtcFromQtInMsec:qt AndIntervalInMsec:interval UsingFormula:kBazett];
+    self.jt = [EPSQTMethods jtFromQTInMsec:qt andQRSInMsec:qrs];
+    self.jtc = [EPSQTMethods jtCorrectedFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs];
     if (self.lbbbSwitch.on) {
-        qtForLBBB = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:qt andQRSInMsec:qrs];
-        qtcForLBBB = [EPSQTMethods qtcFromQtInMsec:qtForLBBB AndIntervalInMsec:interval UsingFormula:kBazett];
+        self.qtm = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:qt andQRSInMsec:qrs];
+        self.qtmc = [EPSQTMethods qtcFromQtInMsec:self.qtm AndIntervalInMsec:interval UsingFormula:kBazett];
     }
-    NSInteger qtcForIVCDAndSex = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:qt AndHR:rate AndQRS:qrs IsMale:[self isMale]];
-    NSLog(@"qt = %f", qt);
-    NSLog(@"qtc = %ld", (long)qtc);
-    NSLog(@"jt = %ld", (long)jt);
-    NSLog(@"jtc = %ld", (long)jtc);
-    NSLog(@"qtForLBBB = %ld", (long)qtForLBBB);
-    NSLog(@"qtcForLBBB = %ld", (long)qtcForLBBB);
-    NSLog(@"qtcForIVCDAndSex = %ld", (long)qtcForIVCDAndSex);
-    // [self showResults];
+    self.qtrrqrs = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:qt AndHR:rate AndQRS:qrs IsMale:[self isMale]];
+    [self performSegueWithIdentifier:@"QTcIVCDResultsSegue" sender:nil];
+
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
@@ -111,8 +103,6 @@
 }
 
 - (IBAction)toggleInputType:(id)sender {
-    self.qtField.text = nil;
-    self.qrsField.text = nil;
     self.rateIntervalField.text = nil;
     [self setInputType:[sender selectedSegmentIndex]];
     
@@ -135,25 +125,28 @@
     return self.sexSegmentedControl.selectedSegmentIndex == 0;
 }
 
-- (void)showResults {
-    // need to segue to something to show results
-    // can we use a web page?  
-    //EPSLinkViewController *link = [[EPSLinkViewController alloc] init];
-    
+- (void)showError {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Input Error" message:@"One or more values are incorrect." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
 }
 
 
-
-
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    EPSQTcIVCDResultsViewController *vc = (EPSQTcIVCDResultsViewController *)[segue destinationViewController];
+    vc.isLBBB = self.lbbbSwitch.on;
+    vc.qt = self.qt;
+    vc.qtc = self.qtc;
+    vc.jt = self.jt;
+    vc.jtc = self.jtc;
+    vc.qtm = self.qtm;
+    vc.qtmc = self.qtmc;
+    vc.qtrrqrs = self.qtrrqrs;
 }
-*/
+
 
 @end
