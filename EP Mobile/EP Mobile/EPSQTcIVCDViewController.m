@@ -64,7 +64,6 @@
 }
 
 - (IBAction)calculateButtonPressed:(id)sender {
-    NSLog(@"Calculate!");
     double rateInterval = [self.rateIntervalField.text doubleValue];
     double qt = [self.qtField.text doubleValue];
     double qrs = [self.qrsField.text doubleValue];
@@ -126,7 +125,7 @@
 }
 
 - (void)showError {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Input Error" message:@"One or more values are incorrect." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Input Error" message:@"One or more values are incorrect or missing." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
 }
 

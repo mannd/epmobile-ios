@@ -116,6 +116,8 @@
     XCTAssertTrue(result == 393, MESSAGE_L, result);
     result = [EPSQTMethods qtcFromQtInMsec:0 AndIntervalInMsec:0 UsingFormula:kBazett];
     XCTAssertTrue(result == 0, MESSAGE_L, result);
+    result = [EPSQTMethods qtcFromQtInMsec:498 AndIntervalInMsec:683 UsingFormula:kBazett];
+    XCTAssertTrue(result == 603, MESSAGE_L, result);
     // make sure rounding works the way we want
     XCTAssertTrue(round(0.5) == 1, MESSAGE_L, result);
     XCTAssertTrue(round(0.4) == 0, MESSAGE_L, result);
