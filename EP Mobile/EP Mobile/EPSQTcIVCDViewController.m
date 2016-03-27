@@ -68,7 +68,7 @@
     double rateInterval = [self.rateIntervalField.text doubleValue];
     double qt = [self.qtField.text doubleValue];
     double qrs = [self.qrsField.text doubleValue];
-    if (rateInterval <= 0 || qt <= 0 || qrs <= 0) {
+    if (rateInterval <= 0 || qt <= 0 || qrs <= 0 || qrs >= qt) {
         [self showError];
         return;
     }

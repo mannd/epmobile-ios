@@ -9,6 +9,8 @@
 #import "EPSQTcIVCDResultsViewController.h"
 
 #define DETAILS @"Details"
+#define NO_QTM @"QTm only defined with LBBB"
+#define NO_QTMC @"QTmc only defined with LBBB"
 
 @interface EPSQTcIVCDResultsViewController ()
 
@@ -34,25 +36,17 @@
     [super viewDidAppear:animated];
     self.qtResult.text = [NSString stringWithFormat:@"QT = %ld msec", (long)self.qt];
     self.jtResult.text = [NSString stringWithFormat:@"JT = %ld msec", (long)self.jt];
-    self.qtcResult.text = [NSString stringWithFormat:@"QTc (Bazett) = %ld msec", (long)self.qtc];
-
-    
+    self.qtcResult.text = [NSString stringWithFormat:@"QTc = %ld msec", (long)self.qtc];
+    self.jtcResult.text = [NSString stringWithFormat:@"JTc = %ld msec", (long)self.jtc];
+    self.qtmResult.text = self.isLBBB ? [NSString stringWithFormat:@"QTm = %ld msec", (long)self.qtm] : NO_QTM;
+    self.qtmcResult.text = self.isLBBB ? [NSString stringWithFormat:@"QTmc = %ld msec", (long)self.qtmc] : NO_QTMC;
+    self.qtrrqrsResult.text = [NSString stringWithFormat:@"QTrr,qrs = %ld msec", (long)self.qtrrqrs];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)qtInfoButton:(id)sender {
     NSString *info = [NSString stringWithFormat:@"QT = %ld msec.\n\nFormula: This is the uncorrected QT interval.\n\nNormal values: Not defined.", (long)self.qt];
@@ -64,21 +58,30 @@
     [self showInfo:info withTitle:DETAILS];
 }
 - (IBAction)qtcInfoButton:(id)sender {
-    NSString *info = [NSString stringWithFormat:@"QTc = %ld msec.\n\nFormula: QTc = QT in sec / SQRT(RR in sec)\n\nNormal values: Male xxx Female xxx.", (long)self.qtc];
+    NSString *info = [NSString stringWithFormat:@"QTc = %ld msec.\n\nFormula: Bazett QTc = QT in sec / SQRT(RR in sec)\n\nNormal values: Male xxx Female xxx.", (long)self.qtc];
     [self showInfo:info withTitle:DETAILS];
 
 }
 
 - (IBAction)jtcInfoButton:(id)sender {
+    NSString *info = [NSString stringWithFormat:@"JTc = %ld msec.\n\nFormula: (Bazett) - QRS\n\nNormal values: Male xxx Female xxx.", (long)self.jtc];
+    [self showInfo:info withTitle:DETAILS];
+
 }
 
 - (IBAction)qtmInfoButton:(id)sender {
+    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"QTm = %ld msec.\n\nFormula: (Bazett) - QRS\n\nNormal values: Male xxx Female xxx.", (long)self.qt] : NO_QTM;
+    [self showInfo:info withTitle:DETAILS];
 }
 
 - (IBAction)qtmcInfoButton:(id)sender {
+    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"QTmc = %ld msec.\n\nFormula: (Bazett) - QRS\n\nNormal values: Male xxx Female xxx.", (long)self.qtmc] : NO_QTMC;
+    [self showInfo:info withTitle:DETAILS];
 }
 
 - (IBAction)qtrrqrsInfoButton:(id)sender {
+    NSString *info = [NSString stringWithFormat:@"QTrr,qrs = %ld msec.\n\nFormula: (Bazett) - QRS\n\nNormal values: Male xxx Female xxx.", (long)self.qtrrqrs];
+    [self showInfo:info withTitle:DETAILS];
 }
 
 - (void)showInfo:(NSString *)info withTitle:(NSString *)title {
