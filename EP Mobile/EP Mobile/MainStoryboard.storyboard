@@ -1477,7 +1477,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="Yez-F3-lDe" firstAttribute="leading" secondItem="Y3C-pi-TfV" secondAttribute="leading" id="J4a-zr-HoT"/>
                             <constraint firstItem="aTP-1N-Jtd" firstAttribute="leading" secondItem="091-I8-1Fh" secondAttribute="leading" id="KbK-aX-dOD"/>
                             <constraint firstItem="Nix-jx-bNd" firstAttribute="trailing" secondItem="Yez-F3-lDe" secondAttribute="trailing" id="Khc-TI-eA1"/>
-                            <constraint firstItem="SR0-dn-Avj" firstAttribute="top" secondItem="091-I8-1Fh" secondAttribute="bottom" constant="20" id="Kkd-4s-sD7"/>
+                            <constraint firstItem="SR0-dn-Avj" firstAttribute="top" secondItem="091-I8-1Fh" secondAttribute="bottom" constant="20" id="Kkd-4s-sD7">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
                             <constraint firstItem="091-I8-1Fh" firstAttribute="leading" secondItem="UdK-vK-rjc" secondAttribute="leading" id="Kzh-p3-iqf"/>
                             <constraint firstItem="nrb-Lt-HS2" firstAttribute="top" secondItem="afA-A6-qbK" secondAttribute="bottom" constant="74" id="Lsz-yR-NMD"/>
                             <constraint firstItem="UdK-vK-rjc" firstAttribute="centerX" secondItem="091-I8-1Fh" secondAttribute="centerX" id="QAg-ax-ywD"/>
@@ -1486,17 +1488,25 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="kUC-Uw-tei" firstAttribute="baseline" secondItem="s5X-mG-fJY" secondAttribute="baseline" id="UqQ-rb-ea4"/>
                             <constraint firstItem="s5X-mG-fJY" firstAttribute="leading" secondItem="yrP-rC-DMu" secondAttribute="leading" id="XrG-rk-uGO"/>
                             <constraint firstItem="091-I8-1Fh" firstAttribute="baseline" secondItem="Yez-F3-lDe" secondAttribute="baseline" id="ZNR-4G-Wrm"/>
-                            <constraint firstItem="yrP-rC-DMu" firstAttribute="top" secondItem="SR0-dn-Avj" secondAttribute="bottom" constant="20" id="bFL-co-y8q"/>
+                            <constraint firstItem="yrP-rC-DMu" firstAttribute="top" secondItem="SR0-dn-Avj" secondAttribute="bottom" constant="20" id="bFL-co-y8q">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
                             <constraint firstItem="afA-A6-qbK" firstAttribute="leading" secondItem="UdK-vK-rjc" secondAttribute="leading" id="efe-GA-dTe"/>
-                            <constraint firstItem="091-I8-1Fh" firstAttribute="top" secondItem="UdK-vK-rjc" secondAttribute="bottom" constant="20" id="eoy-1a-H0O"/>
-                            <constraint firstItem="s5X-mG-fJY" firstAttribute="top" secondItem="yrP-rC-DMu" secondAttribute="bottom" constant="20" id="gDW-KF-36S"/>
+                            <constraint firstItem="091-I8-1Fh" firstAttribute="top" secondItem="UdK-vK-rjc" secondAttribute="bottom" constant="20" id="eoy-1a-H0O">
+                                <variation key="heightClass=compact" constant="7"/>
+                            </constraint>
+                            <constraint firstItem="s5X-mG-fJY" firstAttribute="top" secondItem="yrP-rC-DMu" secondAttribute="bottom" constant="20" id="gDW-KF-36S">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="Y3C-pi-TfV" firstAttribute="trailing" secondItem="Yez-F3-lDe" secondAttribute="trailing" id="gt4-8c-YBI"/>
                             <constraint firstItem="Yez-F3-lDe" firstAttribute="leading" secondItem="Nix-jx-bNd" secondAttribute="leading" id="iiM-Ou-9EM"/>
                             <constraint firstItem="vN0-K0-vbU" firstAttribute="leading" secondItem="Y3C-pi-TfV" secondAttribute="leading" id="laT-fD-JIz"/>
                             <constraint firstItem="yrP-rC-DMu" firstAttribute="leading" secondItem="SR0-dn-Avj" secondAttribute="leading" id="meL-gh-DAn"/>
                             <constraint firstItem="SR0-dn-Avj" firstAttribute="leading" secondItem="091-I8-1Fh" secondAttribute="leading" id="rVQ-ix-i9Z"/>
                             <constraint firstItem="UdK-vK-rjc" firstAttribute="leading" secondItem="cBe-UR-y3h" secondAttribute="leadingMargin" priority="750" id="u69-NA-del"/>
-                            <constraint firstItem="Nix-jx-bNd" firstAttribute="top" secondItem="3yb-Qn-hzk" secondAttribute="bottom" constant="30" id="xEg-u7-wXc"/>
+                            <constraint firstItem="Nix-jx-bNd" firstAttribute="top" secondItem="3yb-Qn-hzk" secondAttribute="bottom" constant="30" id="xEg-u7-wXc">
+                                <variation key="heightClass=compact" constant="4"/>
+                            </constraint>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="Mhq-KQ-Sd1" eventType="touchDown" id="JbD-Q7-Qo3"/>
