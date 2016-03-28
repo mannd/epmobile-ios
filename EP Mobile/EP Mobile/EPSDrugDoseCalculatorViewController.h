@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSDrugDoseCalculatorViewController : UIViewController <UITextViewDelegate>
+@interface EPSDrugDoseCalculatorViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UISegmentedControl *sexSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITextField *ageField;
 @property (strong, nonatomic) IBOutlet UITextField *weightField;

@@ -90,6 +90,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self registerForKeyboardNotifications];
+    
  
  }
 
@@ -437,6 +438,7 @@
     [sender resignFirstResponder];
 }
 
+// This not longer works now that calculator is in a scrollView
 - (IBAction)backgroundTap:(id)sender {
     [ageField resignFirstResponder];
     [weightField resignFirstResponder];
