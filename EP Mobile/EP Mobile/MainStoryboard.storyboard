@@ -25,52 +25,62 @@
         <!--Epi vs Endocardial VT-->
         <scene sceneID="6Vl-xv-P4K">
             <objects>
-                <viewController id="Pvc-ip-j9i" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Pvc-ip-j9i" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iPq-uN-D9U"/>
                         <viewControllerLayoutGuide type="bottom" id="5e2-jj-ZpT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ww0-Kk-xdd">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
-                                <rect key="frame" x="20" y="353" width="728" height="223.5"/>
-                                <string key="text">Pseudo-delta wave Δ: Measured from earliest ventricular activation to the earliest fast deflection in any precordial lead. Pseudo-delta wave ≥ 34 msec predicts epicardial origin (Sens 83%, Spec 95%).
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-2Q-Cy5">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
+                                        <rect key="frame" x="122" y="8" width="357" height="289"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bgx-S4-2Ha" secondAttribute="height" multiplier="21:17" id="3pN-Ea-AEz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-s2-rHW">
+                                        <rect key="frame" x="8" y="310" width="584" height="223.5"/>
+                                        <string key="text">Pseudo-delta wave Δ: Measured from earliest ventricular activation to the earliest fast deflection in any precordial lead. Pseudo-delta wave ≥ 34 msec predicts epicardial origin (Sens 83%, Spec 95%).
 
 Intrinsicoid deflection time (ID): Measured from earliest ventricular activation to the peak of the R wave in V2. ID of ≥ 85 msec predicts epicardial origin (Sens 87%, Spec 90%).
 
 Shortest RS complex (RS): Measured from the earliest ventricular activation to the nadir of the first S wave in any precordial lead. RS ≥ 121 msec predicts epicardial origin (Sens 76%, Spec 85%).
 
 Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="epivt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-S4-2Ha">
-                                <rect key="frame" x="205" y="64" width="357" height="289"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Bgx-S4-2Ha" secondAttribute="height" multiplier="211:171" id="y5W-fH-Ez2"/>
+                                    <constraint firstItem="LFv-s2-rHW" firstAttribute="top" secondItem="Bgx-S4-2Ha" secondAttribute="bottom" constant="13" id="1nS-Pl-P4b"/>
+                                    <constraint firstAttribute="bottom" secondItem="LFv-s2-rHW" secondAttribute="bottom" constant="8" id="55U-Wi-HFp"/>
+                                    <constraint firstItem="Bgx-S4-2Ha" firstAttribute="top" secondItem="Ehl-2Q-Cy5" secondAttribute="top" constant="8" id="8fn-gZ-6s5"/>
+                                    <constraint firstItem="LFv-s2-rHW" firstAttribute="trailing" secondItem="Ehl-2Q-Cy5" secondAttribute="trailing" constant="-8" id="IAg-oG-jUA"/>
+                                    <constraint firstItem="LFv-s2-rHW" firstAttribute="centerX" secondItem="Ehl-2Q-Cy5" secondAttribute="centerX" id="dIN-wr-aZT"/>
+                                    <constraint firstItem="LFv-s2-rHW" firstAttribute="leading" secondItem="Ehl-2Q-Cy5" secondAttribute="leading" constant="8" id="f5t-nh-Fic"/>
+                                    <constraint firstItem="Bgx-S4-2Ha" firstAttribute="centerX" secondItem="Ehl-2Q-Cy5" secondAttribute="centerX" id="saX-PR-qlO"/>
                                 </constraints>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Bgx-S4-2Ha" secondAttribute="centerX" id="2m2-Yf-edD"/>
-                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="top" secondItem="iPq-uN-D9U" secondAttribute="bottom" id="5Mo-Jr-gQR"/>
-                            <constraint firstAttribute="centerX" secondItem="Bgx-S4-2Ha" secondAttribute="centerX" id="aNU-rQ-T5Y"/>
-                            <constraint firstAttribute="centerX" secondItem="LFv-s2-rHW" secondAttribute="centerX" id="dvA-26-Adk"/>
-                            <constraint firstItem="LFv-s2-rHW" firstAttribute="leading" secondItem="Ww0-Kk-xdd" secondAttribute="leading" constant="20" symbolic="YES" id="fRI-aG-bm2"/>
-                            <constraint firstItem="LFv-s2-rHW" firstAttribute="top" secondItem="Bgx-S4-2Ha" secondAttribute="bottom" id="hDY-Hd-yne"/>
-                            <constraint firstItem="Bgx-S4-2Ha" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ww0-Kk-xdd" secondAttribute="leading" constant="20" symbolic="YES" id="qMR-0u-EZK"/>
+                            <constraint firstItem="Ehl-2Q-Cy5" firstAttribute="top" secondItem="iPq-uN-D9U" secondAttribute="bottom" id="FEB-VJ-h6u"/>
+                            <constraint firstItem="Ehl-2Q-Cy5" firstAttribute="leading" secondItem="Ww0-Kk-xdd" secondAttribute="leadingMargin" constant="-20" id="SvW-m9-HXv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ehl-2Q-Cy5" secondAttribute="trailing" constant="-20" id="Syh-YP-k1I"/>
+                            <constraint firstItem="5e2-jj-ZpT" firstAttribute="top" secondItem="Ehl-2Q-Cy5" secondAttribute="bottom" id="i2o-Tl-4TU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Epi vs Endocardial VT" id="oXB-Rd-rwY"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAX-Bg-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3695.625" y="-2998.75"/>
+            <point key="canvasLocation" x="-3728" y="-3027"/>
         </scene>
         <!--Syncope-->
         <scene sceneID="v1d-vr-UE4">
