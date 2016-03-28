@@ -1836,12 +1836,17 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                 <rect key="frame" x="125" y="265" width="350" height="112"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="usL-C3-4nT"/>
+                                    <constraint firstAttribute="height" constant="112" id="usL-C3-4nT">
+                                        <variation key="heightClass=compact" constant="80"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="wKG-ZX-kB1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M18-mI-lT6">
                                 <rect key="frame" x="125" y="385" width="72" height="30"/>
@@ -1867,8 +1872,12 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="LgC-fu-gZn" secondAttribute="trailing" id="0CX-Je-pup"/>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="Jhs-Su-D4p" secondAttribute="trailing" id="3sH-DL-0yl"/>
                             <constraint firstItem="M18-mI-lT6" firstAttribute="top" secondItem="LgC-fu-gZn" secondAttribute="bottom" constant="8" id="4Tt-yS-6GV"/>
-                            <constraint firstItem="Jhs-Su-D4p" firstAttribute="top" secondItem="caI-jc-Qmc" secondAttribute="bottom" constant="20" id="JjV-SW-Vag"/>
-                            <constraint firstItem="XnI-rU-Cjr" firstAttribute="top" secondItem="Xhk-2x-0f4" secondAttribute="bottom" constant="37.5" id="LEe-g9-Dgc"/>
+                            <constraint firstItem="Jhs-Su-D4p" firstAttribute="top" secondItem="caI-jc-Qmc" secondAttribute="bottom" constant="20" id="JjV-SW-Vag">
+                                <variation key="heightClass=compact" constant="8" symbolic="YES"/>
+                            </constraint>
+                            <constraint firstItem="XnI-rU-Cjr" firstAttribute="top" secondItem="Xhk-2x-0f4" secondAttribute="bottom" constant="37.5" id="LEe-g9-Dgc">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="LgC-fu-gZn" firstAttribute="leading" secondItem="vMX-ak-cqp" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="LJh-RF-gGM"/>
                             <constraint firstItem="Jhs-Su-D4p" firstAttribute="leading" secondItem="2an-Nc-I8z" secondAttribute="leading" id="LKD-tQ-MfU"/>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="MSA-Li-Cri" secondAttribute="trailing" id="PYi-OY-ExS"/>
@@ -1879,7 +1888,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstAttribute="trailing" secondItem="LgC-fu-gZn" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="eJL-im-exm"/>
                             <constraint firstItem="MUb-kT-wXg" firstAttribute="centerY" secondItem="XnI-rU-Cjr" secondAttribute="centerY" id="gHm-Vz-eNc"/>
                             <constraint firstItem="LgC-fu-gZn" firstAttribute="top" secondItem="2an-Nc-I8z" secondAttribute="bottom" constant="7" id="iuK-7F-44h"/>
-                            <constraint firstItem="2an-Nc-I8z" firstAttribute="top" secondItem="XnI-rU-Cjr" secondAttribute="bottom" constant="16" id="jqI-zI-PtF"/>
+                            <constraint firstItem="2an-Nc-I8z" firstAttribute="top" secondItem="XnI-rU-Cjr" secondAttribute="bottom" constant="16" id="jqI-zI-PtF">
+                                <variation key="heightClass=compact" constant="8" symbolic="YES"/>
+                            </constraint>
                             <constraint firstItem="Jhs-Su-D4p" firstAttribute="leading" secondItem="XnI-rU-Cjr" secondAttribute="leading" id="kvJ-hH-yFn"/>
                             <constraint firstItem="acW-06-BX6" firstAttribute="leading" secondItem="Xhk-2x-0f4" secondAttribute="trailing" constant="8" id="nCN-Pb-Ui3"/>
                             <constraint firstItem="acW-06-BX6" firstAttribute="leading" secondItem="MUb-kT-wXg" secondAttribute="leading" id="qNa-Hh-XdO"/>
@@ -1887,7 +1898,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <constraint firstItem="Jhs-Su-D4p" firstAttribute="leading" secondItem="M18-mI-lT6" secondAttribute="leading" id="s6k-iu-Y1n"/>
                             <constraint firstAttribute="centerX" secondItem="Jhs-Su-D4p" secondAttribute="centerX" id="sKP-m6-ebP"/>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="INF-SQ-lFM" secondAttribute="trailing" id="ur7-lj-UQ3"/>
-                            <constraint firstItem="Xhk-2x-0f4" firstAttribute="top" secondItem="Jhs-Su-D4p" secondAttribute="bottom" constant="22" id="vTq-QN-T3L"/>
+                            <constraint firstItem="Xhk-2x-0f4" firstAttribute="top" secondItem="Jhs-Su-D4p" secondAttribute="bottom" constant="22" id="vTq-QN-T3L">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="kAO-2U-Neg" firstAttribute="trailing" secondItem="dd6-Hd-KPz" secondAttribute="trailing" id="vhs-bg-LFF"/>
                             <constraint firstItem="dd6-Hd-KPz" firstAttribute="centerY" secondItem="M18-mI-lT6" secondAttribute="centerY" id="wC1-Gl-hM8"/>
                             <constraint firstItem="MUb-kT-wXg" firstAttribute="centerY" secondItem="kAO-2U-Neg" secondAttribute="centerY" id="zTg-lx-IhY"/>
@@ -6559,7 +6572,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="9WT-Qa-0m1"/>
         <segue reference="Nwd-vW-tfz"/>
         <segue reference="5KV-M6-tO5"/>
-        <segue reference="bT0-Tb-wFg"/>
+        <segue reference="9Dj-9f-rbx"/>
         <segue reference="ucK-8l-Jyw"/>
         <segue reference="5Lp-eh-9Dd"/>
         <segue reference="HWu-7U-py6"/>
