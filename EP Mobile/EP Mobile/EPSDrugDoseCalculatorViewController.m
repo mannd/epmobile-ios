@@ -86,6 +86,11 @@
     }
     // if called from the drug reference page, need to get rid of the toolbar
     [self.navigationController setToolbarHidden:YES];
+    // see http://stackoverflow.com/questions/18967859/ios7-uiscrollview-offset-in-uinavigationcontroller
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self registerForKeyboardNotifications];
+ 
  }
 
 - (void)showNotes {
@@ -438,20 +443,7 @@
     [creatinineField resignFirstResponder];
 }
 
-//func registerForKeyboardNotifications()
-//{
-//    //Adding notifies on keyboard appearing
-//    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardWillShowNotification, object: nil)
-//    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
-//}
-//
-//
-//func deregisterFromKeyboardNotifications()
-//{
-//    //Removing notifies on keyboard appearing
-//    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-//    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-//}
+// Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -464,6 +456,33 @@
     
 }
 
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
+        [self.scrollView scrollRectToVisible:activeField.frame animated:YES];
+    }
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     activeField = textField;
@@ -472,14 +491,6 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     activeField = nil;
-}
-
-- (void)keyboardWasShown:(NSNotification*)aNotification {
- 
-}
-
-- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
-    
 }
 
 

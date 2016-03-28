@@ -13,7 +13,7 @@
 #import "EPSARVC2010TableViewController.h"
 
 // Sigh!
-#define ALLOW_DRUG_CALCULATORS YES
+#define ALLOW_DRUG_CALCULATORS NO
 
 #define DRUG_CALCULATORS_ROW 2
 
