@@ -33,6 +33,7 @@
 {
     BOOL weightIsPounds;
     BOOL unitsAreMgPerDl;
+    UITextField *activeField;
 }
 @synthesize sexSegmentedControl;
 @synthesize ageField;
@@ -437,6 +438,49 @@
     [creatinineField resignFirstResponder];
 }
 
+//func registerForKeyboardNotifications()
+//{
+//    //Adding notifies on keyboard appearing
+//    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardWillShowNotification, object: nil)
+//    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
+//}
+//
+//
+//func deregisterFromKeyboardNotifications()
+//{
+//    //Removing notifies on keyboard appearing
+//    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+//    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+//}
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    activeField = nil;
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification {
+ 
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
+    
+}
 
 
 @end
