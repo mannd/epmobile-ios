@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSLongQTECGViewController : UIViewController
+@interface EPSLongQTECGViewController : UIViewController <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

@@ -3422,27 +3422,40 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                         <viewControllerLayoutGuide type="bottom" id="JRl-zj-jIJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CZF-4x-r1c">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
-                                <rect key="frame" x="149" y="408" width="470" height="208"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-4B-0Rg">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
+                                        <rect key="frame" x="2" y="145" width="556" height="246"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="He5-kK-9Z1" secondAttribute="height" multiplier="235:104" id="eDn-xO-SFr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="He5-kK-9Z1" secondAttribute="height" multiplier="300:133" id="wbS-t6-nj9"/>
+                                    <constraint firstAttribute="bottom" secondItem="He5-kK-9Z1" secondAttribute="bottom" constant="153" id="PTe-xk-i6w"/>
+                                    <constraint firstItem="He5-kK-9Z1" firstAttribute="leading" secondItem="ntF-4B-0Rg" secondAttribute="leading" constant="2" id="T3A-LZ-r9o"/>
+                                    <constraint firstAttribute="trailing" secondItem="He5-kK-9Z1" secondAttribute="trailing" constant="20" id="aPb-h2-zEi"/>
+                                    <constraint firstItem="He5-kK-9Z1" firstAttribute="centerX" secondItem="ntF-4B-0Rg" secondAttribute="centerX" id="iAN-Rr-Thh"/>
+                                    <constraint firstItem="He5-kK-9Z1" firstAttribute="centerY" secondItem="ntF-4B-0Rg" secondAttribute="centerY" id="xOO-I1-Vqn"/>
                                 </constraints>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="He5-kK-9Z1" secondAttribute="centerX" id="1X1-dU-93e"/>
-                            <constraint firstItem="He5-kK-9Z1" firstAttribute="centerX" secondItem="CZF-4x-r1c" secondAttribute="centerX" id="Jyq-Ot-Du0"/>
-                            <constraint firstItem="He5-kK-9Z1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" constant="8" symbolic="YES" id="LnU-Z3-xCo"/>
-                            <constraint firstAttribute="centerY" secondItem="He5-kK-9Z1" secondAttribute="centerY" id="ia3-gp-mkf"/>
-                            <constraint firstItem="He5-kK-9Z1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CZF-4x-r1c" secondAttribute="leading" constant="20" symbolic="YES" id="zNf-vO-g0p"/>
+                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="top" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" id="GFT-pI-qke"/>
+                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="leading" secondItem="CZF-4x-r1c" secondAttribute="leadingMargin" id="ZZf-yF-quv"/>
+                            <constraint firstItem="JRl-zj-jIJ" firstAttribute="top" secondItem="ntF-4B-0Rg" secondAttribute="bottom" id="vdG-Yr-OKT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ntF-4B-0Rg" secondAttribute="trailing" id="wlL-8d-96J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="scrollView" destination="ntF-4B-0Rg" id="Y5r-mX-r6P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgs-HW-nDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4664,7 +4677,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <!--Brugada ECG-->
         <scene sceneID="YNC-eM-1m3">
             <objects>
-                <viewController id="e5o-Mg-pZA" customClass="EPSBrugadaECGViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="e5o-Mg-pZA" customClass="EPSBrugadaECGViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8FP-vg-Gmf"/>
                         <viewControllerLayoutGuide type="bottom" id="qDE-vj-ZfQ"/>
@@ -4673,29 +4686,43 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                <rect key="frame" x="100" y="133" width="400" height="334"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="MKL-yT-bs1">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
+                                        <rect key="frame" x="20" y="50" width="521" height="436"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xtc-ai-f3e" secondAttribute="height" multiplier="403:337" id="ugH-n1-gRP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Xtc-ai-f3e" secondAttribute="height" multiplier="297:248" id="TyL-Be-frF"/>
+                                    <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" secondItem="MKL-yT-bs1" secondAttribute="leading" constant="20" symbolic="YES" id="LS7-OS-f5y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xtc-ai-f3e" secondAttribute="trailing" constant="78" id="LUF-Pb-0M2"/>
+                                    <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerY" secondItem="MKL-yT-bs1" secondAttribute="centerY" id="XYm-zg-ZIo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xtc-ai-f3e" secondAttribute="bottom" constant="36" id="a4n-SB-1eF"/>
+                                    <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerX" secondItem="MKL-yT-bs1" secondAttribute="centerX" id="agh-4N-or0"/>
                                 </constraints>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8FP-vg-Gmf" secondAttribute="bottom" constant="8" symbolic="YES" id="0gj-uz-k5Q"/>
-                            <constraint firstAttribute="centerY" secondItem="Xtc-ai-f3e" secondAttribute="centerY" id="2BR-jR-1nG"/>
-                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3bH-b1-BzP" secondAttribute="leading" constant="20" symbolic="YES" id="u31-O0-3Wl"/>
-                            <constraint firstAttribute="centerX" secondItem="Xtc-ai-f3e" secondAttribute="centerX" id="zTy-nd-Of7"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leadingMargin" id="JZu-h3-Pj7"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="top" secondItem="8FP-vg-Gmf" secondAttribute="bottom" id="Ss8-IM-kiv"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="bottom" secondItem="qDE-vj-ZfQ" secondAttribute="top" id="VLF-1O-RN7"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="trailing" secondItem="3bH-b1-BzP" secondAttribute="trailingMargin" id="f7T-2O-Qpa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="scrollView" destination="MKL-yT-bs1" id="NOZ-NW-9WP"/>
                         <segue destination="PQv-Iu-QYe" kind="presentation" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3997.5" y="-1357.5"/>
+            <point key="canvasLocation" x="-4202" y="-1409"/>
         </scene>
         <!--NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -5719,9 +5746,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             <constraint firstItem="U8v-uV-pY0" firstAttribute="centerY" secondItem="c7Z-fa-b44" secondAttribute="centerY" id="vCq-dx-D6a"/>
                             <constraint firstItem="mMN-SR-wrt" firstAttribute="centerY" secondItem="lGP-gY-wu6" secondAttribute="centerY" id="wPq-CW-lgY"/>
                             <constraint firstItem="8qI-Fe-1xK" firstAttribute="top" secondItem="Hwg-pA-egJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wYJ-25-WKh"/>
-                            <constraint firstItem="BcE-sz-yR9" firstAttribute="top" secondItem="uey-Ls-g42" secondAttribute="bottom" constant="20" id="x1z-Sb-2L4">
-                                <variation key="heightClass=compact" symbolic="YES"/>
-                            </constraint>
+                            <constraint firstItem="BcE-sz-yR9" firstAttribute="top" secondItem="uey-Ls-g42" secondAttribute="bottom" constant="20" id="x1z-Sb-2L4"/>
                             <constraint firstItem="i5I-eE-dcB" firstAttribute="top" secondItem="y64-sy-fN4" secondAttribute="bottom" constant="8" symbolic="YES" id="zSe-E6-WLx">
                                 <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
@@ -6613,8 +6638,8 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <segue reference="9WT-Qa-0m1"/>
         <segue reference="Nwd-vW-tfz"/>
         <segue reference="5KV-M6-tO5"/>
+        <segue reference="gzd-ih-l4g"/>
         <segue reference="ucK-8l-Jyw"/>
-        <segue reference="ojN-Fe-z3g"/>
         <segue reference="pFv-5Z-NQa"/>
         <segue reference="5Lp-eh-9Dd"/>
     </inferredMetricsTieBreakers>

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSBrugadaECGViewController : UIViewController
+@interface EPSBrugadaECGViewController : UIViewController <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
