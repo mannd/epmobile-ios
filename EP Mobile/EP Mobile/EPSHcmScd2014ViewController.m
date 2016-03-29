@@ -71,9 +71,6 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     NSInteger thickness = [self textFieldToInt:self.thicknessTextField];
     NSInteger size = [self textFieldToInt:self.sizeTextField];
     NSInteger gradient = [self textFieldToInt:self.gradientTextField];
-    // TODO user will be confused if zero gradient entered, and error message isn't clear
-    // that the range is 2 to whatever... What to do??
-    // Maybe put range in hint
     BOOL hasFamilyHxScd = self.familyHxSwitch.on;
     BOOL hasNsvt = self.nsvtSwitch.on;
     BOOL hasSyncope = self.syncopeSwitch.on;
