@@ -67,7 +67,7 @@
 }
 
 - (IBAction)jtcInfoButton:(id)sender {
-    NSString *info = [NSString stringWithFormat:@"JTc = %ld msec.\n\nUse: JTc corrects for heart rate and QRS duration, however normal values are not well established.\n\nFormula: JTc = QTc(Bazett) - QRS", (long)self.jtc];
+    NSString *info = [NSString stringWithFormat:@"JTc = %ld msec.\n\nUse: JTc corrects for heart rate and QRS duration, however normal values are not well established.\n\nFormula: JTc = QTc(Bazett) - QRS\n\nNormal values: Not defined.", (long)self.jtc];
     [self showInfo:info withTitle:@"Corrected JT (JTc)\nBazett Formula"];
 }
 
@@ -78,7 +78,7 @@
 }
 
 - (IBAction)qtmcInfoButton:(id)sender {
-    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"QTmc = %ld msec.\n\nUse: Takes the QTm and corrects for heart rate, in this case using the Bazett formula.\n\nFormula: QTmc = QTm corrected for rate using Bazett formula\n\nNormal values: Presumably the same as QTc.\n\nReference: %@", (long)self.qtmc, QTM_REFERENCE] : NO_QTMC;
+    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"QTmc = %ld msec.\n\nUse: Corrects QTm for heart rate, in this case using the Bazett formula.\n\nFormula: QTmc = QTm corrected for rate using Bazett formula\n\nNormal values: Presumably the same as QTc.\n\nReference: %@", (long)self.qtmc, QTM_REFERENCE] : NO_QTMC;
     [self showInfo:info withTitle:@"Corrected Modified QT in LBBB (QTmc)\nBazett Formula "];
 }
 
