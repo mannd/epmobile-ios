@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSString *drug;
 @property (strong, nonatomic) NSString *defaultWeightUnit;
 @property (strong, nonatomic) NSString *defaultCreatinineUnit;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)toggleWeightUnits:(id)sender;
 - (IBAction)calculate:(id)sender;

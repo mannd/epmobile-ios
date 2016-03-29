@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *egqrsLabel;
 @property (strong, nonatomic) IBOutlet UITextField *egqrsTextField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)calculate:(id)sender;
 - (IBAction)clearAll:(id)sender;

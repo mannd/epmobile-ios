@@ -29,7 +29,7 @@
 - (IBAction)textFieldDoneEditing:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
 
-- (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(NSInteger)formula;
+//- (NSInteger)qtcFromQtInMsec:(NSInteger)qt AndIntervalInMsec:(NSInteger)interval UsingFormula:(NSInteger)formula;
 
 - (void)refreshDefaults;
 

@@ -22,6 +22,7 @@
 #import "EPSAtriaBleedRiskScore.h"
 #import "EPSSameTtrRiskScore.h"
 #import "EPSAtriaStrokeRiskScore.h"
+#import "EPSOrbitRiskScore.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 
@@ -74,6 +75,8 @@
         riskScore = [[EPSSameTtrRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"AtriaStroke"])
         riskScore = [[EPSAtriaStrokeRiskScore alloc] init];
+    else if ([scoreType isEqualToString:@"Orbit"])
+        riskScore = [[EPSOrbitRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;

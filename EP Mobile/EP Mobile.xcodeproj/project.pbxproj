@@ -21,7 +21,6 @@
 		8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E95A17B851E50007A146 /* EPSOesilScore.m */; };
 		8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */; };
 		8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96517BC46EF0007A146 /* EPSNavigationController.m */; };
-		8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96A17BC52810007A146 /* EPSViewController.m */; };
 		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E02998817EE07BC00A7FC6F /* Images.xcassets */; };
 		8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */; };
@@ -44,6 +43,7 @@
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
+		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
@@ -88,6 +88,10 @@
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
+		8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */; };
+		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
+		8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
+		8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
@@ -148,6 +152,7 @@
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
+		8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */; };
 		8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDA1AAE0672004374C3 /* rvh.org */; };
 		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
 /* End PBXBuildFile section */
@@ -191,8 +196,6 @@
 		8E00E96117BB1E8A0007A146 /* EPSLQTSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLQTSTableViewController.m; sourceTree = "<group>"; };
 		8E00E96417BC46EF0007A146 /* EPSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNavigationController.h; sourceTree = "<group>"; };
 		8E00E96517BC46EF0007A146 /* EPSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSNavigationController.m; sourceTree = "<group>"; };
-		8E00E96917BC527F0007A146 /* EPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSViewController.h; sourceTree = "<group>"; };
-		8E00E96A17BC52810007A146 /* EPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSViewController.m; sourceTree = "<group>"; };
 		8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSTabBarViewController.h; sourceTree = "<group>"; };
 		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E02998817EE07BC00A7FC6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
+		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
+		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
 		8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDavilaAlgorithm.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
@@ -293,6 +298,11 @@
 		8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachAlgorithm.h; sourceTree = "<group>"; };
 		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexStepAlgorithmProtocol.h; sourceTree = "<group>"; };
+		8E63D0741CA3241B0053C079 /* EPSQTcIVCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcIVCDViewController.h; sourceTree = "<group>"; };
+		8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDViewController.m; sourceTree = "<group>"; };
+		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8E676B741CA093A60035244E /* EPSQTMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTMethods.h; sourceTree = "<group>"; };
+		8E676B751CA093A60035244E /* EPSQTMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTMethods.m; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
@@ -386,6 +396,8 @@
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
 		8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014ViewController.h; sourceTree = "<group>"; };
 		8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014ViewController.m; sourceTree = "<group>"; };
+		8EEDA7141CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcIVCDResultsViewController.h; sourceTree = "<group>"; };
+		8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDResultsViewController.m; sourceTree = "<group>"; };
 		8EFBFBDA1AAE0672004374C3 /* rvh.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvh.org; sourceTree = "<group>"; };
 		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -449,6 +461,8 @@
 				8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */,
 				8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */,
 				8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */,
+				8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */,
+				8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -457,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
+				8E676B6D1CA07F740035244E /* Launch Screen.storyboard */,
 				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
 				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
 				8E00E96417BC46EF0007A146 /* EPSNavigationController.h */,
@@ -623,6 +638,12 @@
 				8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */,
 				8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */,
 				8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */,
+				8E676B741CA093A60035244E /* EPSQTMethods.h */,
+				8E676B751CA093A60035244E /* EPSQTMethods.m */,
+				8E63D0741CA3241B0053C079 /* EPSQTcIVCDViewController.h */,
+				8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */,
+				8EEDA7141CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.h */,
+				8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -689,8 +710,6 @@
 				8E815D3F162EE5CA001025ED /* Table View Controllers */,
 				8E815D3D162EE4F7001025ED /* Algorithms */,
 				8EC19C32159FE0FA00975E2B /* Supporting Files */,
-				8E00E96917BC527F0007A146 /* EPSViewController.h */,
-				8E00E96A17BC52810007A146 /* EPSViewController.m */,
 				8E02998817EE07BC00A7FC6F /* Images.xcassets */,
 			);
 			path = "EP Mobile";
@@ -800,7 +819,6 @@
 				8EC19C3D159FE0FA00975E2B /* Sources */,
 				8EC19C3E159FE0FA00975E2B /* Frameworks */,
 				8EC19C3F159FE0FA00975E2B /* Resources */,
-				8EC19C40159FE0FA00975E2B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -819,6 +837,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EPS;
+				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "EP Studios";
@@ -904,6 +923,7 @@
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
 				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
 				8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */,
+				8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */,
 				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
 				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
 				8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */,
@@ -921,22 +941,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8EC19C40159FE0FA00975E2B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8EC19C23159FE0FA00975E2B /* Sources */ = {
@@ -958,6 +962,7 @@
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
+				8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
 				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,
@@ -1009,6 +1014,7 @@
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
+				8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
@@ -1017,7 +1023,8 @@
 				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
 				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
-				8E00E96B17BC52830007A146 /* EPSViewController.m in Sources */,
+				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
+				8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1028,6 +1035,7 @@
 			files = (
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
+				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1078,6 +1086,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1098,7 +1107,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6c0b78ed-8ad2-4e55-9041-6cbe809835c1";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -1120,6 +1129,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1132,7 +1142,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6c0b78ed-8ad2-4e55-9041-6cbe809835c1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1144,15 +1154,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP Mobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1163,15 +1177,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP Mobile-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1181,15 +1198,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -1198,15 +1215,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;

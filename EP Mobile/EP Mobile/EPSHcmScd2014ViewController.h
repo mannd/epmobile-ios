@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UISwitch *familyHxSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *nsvtSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *syncopeSwitch;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
 - (IBAction)calculate:(id)sender;
 - (IBAction)clear:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
