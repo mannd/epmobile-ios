@@ -1662,7 +1662,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <constraint firstAttribute="height" constant="21" id="Wha-tj-Ngk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -3441,28 +3441,40 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-4B-0Rg">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
-                                        <rect key="frame" x="2" y="145" width="556" height="246"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XN-eG-Q3Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="596" height="286"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="longqtecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="He5-kK-9Z1">
+                                                <rect key="frame" x="20" y="20" width="556" height="246"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="556" id="iF9-eU-mE6"/>
+                                                    <constraint firstAttribute="height" constant="246" id="sts-Iz-JhP"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="He5-kK-9Z1" secondAttribute="height" multiplier="235:104" id="eDn-xO-SFr"/>
+                                            <constraint firstAttribute="width" constant="596" id="ACw-5q-mTQ"/>
+                                            <constraint firstItem="He5-kK-9Z1" firstAttribute="centerX" secondItem="5XN-eG-Q3Q" secondAttribute="centerX" id="DHW-9s-6BS"/>
+                                            <constraint firstAttribute="height" constant="286" id="YTI-vw-hLe"/>
+                                            <constraint firstItem="He5-kK-9Z1" firstAttribute="centerY" secondItem="5XN-eG-Q3Q" secondAttribute="centerY" id="cVT-0R-iOY"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="He5-kK-9Z1" secondAttribute="bottom" constant="153" id="PTe-xk-i6w"/>
-                                    <constraint firstItem="He5-kK-9Z1" firstAttribute="leading" secondItem="ntF-4B-0Rg" secondAttribute="leading" constant="2" id="T3A-LZ-r9o"/>
-                                    <constraint firstAttribute="trailing" secondItem="He5-kK-9Z1" secondAttribute="trailing" constant="20" id="aPb-h2-zEi"/>
-                                    <constraint firstItem="He5-kK-9Z1" firstAttribute="centerX" secondItem="ntF-4B-0Rg" secondAttribute="centerX" id="iAN-Rr-Thh"/>
-                                    <constraint firstItem="He5-kK-9Z1" firstAttribute="centerY" secondItem="ntF-4B-0Rg" secondAttribute="centerY" id="xOO-I1-Vqn"/>
+                                    <constraint firstAttribute="bottom" secondItem="5XN-eG-Q3Q" secondAttribute="bottom" id="1yx-Hc-1az"/>
+                                    <constraint firstAttribute="trailing" secondItem="5XN-eG-Q3Q" secondAttribute="trailing" id="8kn-tS-eNF"/>
+                                    <constraint firstItem="5XN-eG-Q3Q" firstAttribute="leading" secondItem="ntF-4B-0Rg" secondAttribute="leading" id="LsL-tA-836"/>
+                                    <constraint firstItem="5XN-eG-Q3Q" firstAttribute="top" secondItem="ntF-4B-0Rg" secondAttribute="top" id="acu-CT-beT"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="top" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" id="GFT-pI-qke"/>
-                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="leading" secondItem="CZF-4x-r1c" secondAttribute="leadingMargin" id="ZZf-yF-quv"/>
-                            <constraint firstItem="JRl-zj-jIJ" firstAttribute="top" secondItem="ntF-4B-0Rg" secondAttribute="bottom" id="vdG-Yr-OKT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ntF-4B-0Rg" secondAttribute="trailing" id="wlL-8d-96J"/>
+                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="top" secondItem="AwR-ZZ-Oyc" secondAttribute="bottom" id="FYF-Is-ejX"/>
+                            <constraint firstItem="JRl-zj-jIJ" firstAttribute="top" secondItem="ntF-4B-0Rg" secondAttribute="bottom" id="Yfb-zh-TMl"/>
+                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="leading" secondItem="CZF-4x-r1c" secondAttribute="leadingMargin" id="e81-Jh-4BD"/>
+                            <constraint firstItem="ntF-4B-0Rg" firstAttribute="trailing" secondItem="CZF-4x-r1c" secondAttribute="trailingMargin" id="oth-jY-h1U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LQTS ECG Patterns" id="lJF-m1-cbL"/>
@@ -4702,30 +4714,40 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="MKL-yT-bs1">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
-                                        <rect key="frame" x="20" y="50" width="521" height="436"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRa-Hq-nKd">
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="375"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" image="brugadaecg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-ai-f3e">
+                                                <rect key="frame" x="20" y="20" width="400" height="335"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="335" id="92Z-HK-A8A"/>
+                                                    <constraint firstAttribute="width" constant="400" id="e2H-PS-CpU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Xtc-ai-f3e" secondAttribute="height" multiplier="403:337" id="ugH-n1-gRP"/>
+                                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerX" secondItem="LRa-Hq-nKd" secondAttribute="centerX" id="Mvs-80-0JN"/>
+                                            <constraint firstAttribute="height" constant="375" id="RZf-Fa-egC"/>
+                                            <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerY" secondItem="LRa-Hq-nKd" secondAttribute="centerY" id="kkx-ba-mYy"/>
+                                            <constraint firstAttribute="width" constant="440" id="ufd-OK-fwZ"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Xtc-ai-f3e" firstAttribute="leading" secondItem="MKL-yT-bs1" secondAttribute="leading" constant="20" symbolic="YES" id="LS7-OS-f5y">
-                                        <variation key="heightClass=compact" constant="80"/>
-                                    </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="Xtc-ai-f3e" secondAttribute="trailing" constant="100" id="LUF-Pb-0M2"/>
-                                    <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerY" secondItem="MKL-yT-bs1" secondAttribute="centerY" id="XYm-zg-ZIo"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xtc-ai-f3e" secondAttribute="bottom" constant="100" id="a4n-SB-1eF"/>
-                                    <constraint firstItem="Xtc-ai-f3e" firstAttribute="centerX" secondItem="MKL-yT-bs1" secondAttribute="centerX" id="agh-4N-or0"/>
+                                    <constraint firstAttribute="bottom" secondItem="LRa-Hq-nKd" secondAttribute="bottom" id="8fm-sl-mSY"/>
+                                    <constraint firstItem="LRa-Hq-nKd" firstAttribute="top" secondItem="MKL-yT-bs1" secondAttribute="top" id="9rH-99-T0f"/>
+                                    <constraint firstItem="LRa-Hq-nKd" firstAttribute="leading" secondItem="MKL-yT-bs1" secondAttribute="leading" id="Y2N-wI-SIu"/>
+                                    <constraint firstAttribute="trailing" secondItem="LRa-Hq-nKd" secondAttribute="trailing" id="hwH-8B-AgV"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MKL-yT-bs1" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leadingMargin" id="JZu-h3-Pj7"/>
-                            <constraint firstItem="MKL-yT-bs1" firstAttribute="top" secondItem="8FP-vg-Gmf" secondAttribute="bottom" id="Ss8-IM-kiv"/>
-                            <constraint firstItem="MKL-yT-bs1" firstAttribute="bottom" secondItem="qDE-vj-ZfQ" secondAttribute="top" id="VLF-1O-RN7"/>
-                            <constraint firstItem="MKL-yT-bs1" firstAttribute="trailing" secondItem="3bH-b1-BzP" secondAttribute="trailingMargin" id="f7T-2O-Qpa"/>
+                            <constraint firstItem="qDE-vj-ZfQ" firstAttribute="top" secondItem="MKL-yT-bs1" secondAttribute="bottom" id="RIA-aC-UNg"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="trailing" secondItem="3bH-b1-BzP" secondAttribute="trailingMargin" id="Uy5-r5-Dao"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="top" secondItem="8FP-vg-Gmf" secondAttribute="bottom" id="fzw-I1-FmR"/>
+                            <constraint firstItem="MKL-yT-bs1" firstAttribute="leading" secondItem="3bH-b1-BzP" secondAttribute="leadingMargin" id="naU-zN-0TC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brugada ECG" id="quK-Ke-DfZ"/>
