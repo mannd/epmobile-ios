@@ -114,6 +114,9 @@
         vc.scoreType = @"AtriaStroke";
     else if ([segueIdentifier isEqualToString:@"OrbitSegue"])
         vc.scoreType = @"Orbit";
+    else if ([segueIdentifier isEqualToString:@"ICDMortalityRiskSegue"])
+        vc.scoreType = @"ICDMortalityRisk";
+    
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
         lc.webPage = @"http://www.brugadadrugs.org";
@@ -131,7 +134,7 @@
         lc.webPage = @"rvh";
         lc.linkTitle = @"RVH Criteria";
     }
-    
+  
     EPSARVC2010TableViewController *arvcVc = (EPSARVC2010TableViewController *)vc;
     if ([segueIdentifier isEqualToString:@"ARVC2010Segue"])
         arvcVc.criteria = @"ARVC2010";

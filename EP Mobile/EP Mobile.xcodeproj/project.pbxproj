@@ -104,6 +104,7 @@
 		8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */; };
 		8E9755B1161D11E600EAFD10 /* EPSWarfarinNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */; };
 		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
+		8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */; };
 		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
 		8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */; };
 		8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */; };
@@ -326,6 +327,8 @@
 		8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinNotes.h; sourceTree = "<group>"; };
 		8E9755B0161D11E600EAFD10 /* EPSWarfarinNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinNotes.m; sourceTree = "<group>"; };
 		8E9755B2161F71B900EAFD10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8E97E4DD1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdMortalityRiskScore.h; sourceTree = "<group>"; };
+		8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdMortalityRiskScore.m; sourceTree = "<group>"; };
 		8EA0E0571C124E0100BB7E7C /* EPSAtriaBleedRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaBleedRiskScore.h; sourceTree = "<group>"; };
 		8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaBleedRiskScore.m; sourceTree = "<group>"; };
 		8EA0E05A1C124E2000BB7E7C /* EPSSameTtrRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSameTtrRiskScore.h; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 				8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */,
 				8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */,
 				8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */,
+				8E97E4DD1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.h */,
+				8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -1002,6 +1007,7 @@
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
 				8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */,
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
+				8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */,
 				8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */,
 				8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */,
 				8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */,
