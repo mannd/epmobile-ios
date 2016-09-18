@@ -9,6 +9,9 @@
 #import "EPSIcdMortalityRiskScore.h"
 #import "EPSRiskFactor.h"
 
+#define WARNING_MSG @"Results based on MADIT-II study population, in brief, EF ≤ 30%, prior MI, excluding NYHA class IV, recent MI/CABG, renal failure and others.  See Reference for details."
+
+
 @implementation EPSIcdMortalityRiskScore
 
 static int HIGH_RISK = 99;
@@ -32,12 +35,12 @@ struct RiskResult {
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Very high risk" withValue:HIGH_RISK withDetails:@"BUN ≥ 50 or Cr ≥ 2.5 mg/dl"]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Very High Risk group" withValue:HIGH_RISK withDetails:@"defined by BUN ≥ 50 or Cr ≥ 2.5 mg/dl"]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"NYHA class > II" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age > 70 years" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"BUN > 26 mg/dl" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"QRS > 0.12 sec" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"AFB baseline rhythm" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Atrial fibrillation" withValue:1 withDetails:@"as baseline rhythm"]];
     return array;
 }
 
@@ -45,12 +48,12 @@ struct RiskResult {
     struct RiskResult risk = [self getRisk:score];
     NSString *message = @"";
     if (score >= HIGH_RISK) {
-        message = [NSString stringWithFormat:@"\nIn the Very High Risk group there is high (50%%) 2 year mortality regardless of therapy (Conventional therapy %d%%, ICD %d%% mortality).", risk.conv, risk.icd];
-        return [NSString stringWithFormat:@"Very High Risk group\n\n%@", message];
+        message = [NSString stringWithFormat:@"\nIn the Very High Risk group there is high (50%%) 2 year mortality in MADIT-II type patients regardless of therapy (conventional therapy %d%%, ICD %d%% mortality).", risk.conv, risk.icd];
+        return [NSString stringWithFormat:@"Very High Risk group\n\n%@\n\n%@", message, WARNING_MSG];
     }
     else {
-        message = [NSString stringWithFormat:@"The 2 year mortality risk with Conventional therapy is %d%%, with ICD is %d%%.", risk.conv,risk.icd];
-        return [NSString stringWithFormat:@"%@ score = %d\n\n%@", [self getScoreName], score, message];
+        message = [NSString stringWithFormat:@"The 2 year mortality risk in MADIT-II type patients with conventional therapy is %d%%, with ICD is %d%%.", risk.conv,risk.icd];
+        return [NSString stringWithFormat:@"%@ score = %d\n\n%@\n\n%@", [self getScoreName], score, message, WARNING_MSG];
     }
 }
 
