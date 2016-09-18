@@ -22,6 +22,10 @@ struct RiskResult {
     return @"ICD Mortality Risk";
 }
 
+- (NSString *)getScoreName {
+    return @"ICD mortality risk";
+}
+
 - (NSString *)getReference {
     return @"Goldenberg I, Vyas AK, Hall WJ, Moss AJ, Wang H, He H, Zareba W, McNitt S, Andrews ML, MADIT-II Investigators.  Risk stratification for primary implantation of a cardioverter-defibrillator in patients with ischemic left ventricular dysfunction.  J Am Coll Cardiol [Internet] 2008 Jan [cited 2016 Sep 1];51(3):288-296.  Available from http://content.onlinejacc.org/article.aspx?articleid=1187155";
 }
@@ -41,12 +45,12 @@ struct RiskResult {
     struct RiskResult risk = [self getRisk:score];
     NSString *message = @"";
     if (score >= HIGH_RISK) {
-        message = [NSString stringWithFormat:@"\nIn very high risk group there is high (50%%) 2 year mortality (Conventional therapy %d%%, ICD %d%%).", risk.conv, risk.icd];
-        return [NSString stringWithFormat:@"%@ score = Very High Risk\n%@", [self getTitle], message];
+        message = [NSString stringWithFormat:@"\nIn the Very High Risk group there is high (50%%) 2 year mortality regardless of therapy (Conventional therapy %d%%, ICD %d%% mortality).", risk.conv, risk.icd];
+        return [NSString stringWithFormat:@"Very High Risk group\n\n%@", message];
     }
     else {
-        message = [NSString stringWithFormat:@"2 year mortality risk with Conventional therapy is %d%%, with ICD is %d%%.", risk.conv,risk.icd];
-        return [NSString stringWithFormat:@"%@ score = %d\n%@", [self getTitle], score, message];
+        message = [NSString stringWithFormat:@"The 2 year mortality risk with Conventional therapy is %d%%, with ICD is %d%%.", risk.conv,risk.icd];
+        return [NSString stringWithFormat:@"%@ score = %d\n\n%@", [self getScoreName], score, message];
     }
 }
 
