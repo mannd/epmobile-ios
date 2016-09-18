@@ -11,68 +11,74 @@
 
 @implementation EPSIcdMortalityRiskScore
 
+static int HIGH_RISK = 99;
 
+struct RiskResult {
+    int conv;
+    int icd;
+};
 
 - (NSString *)getTitle {
     return @"ICD Mortality Risk";
 }
 
 - (NSString *)getReference {
-    return @"Gage BF, Waterman AD, Shannon W, Boechler M, Rich MW, Radford MJ. Validation of clinical classification schemes for predicting stroke. JAMA [Internet]. 2001 Jun 13 [cited 2014 Jun 6];285(22):2864-70. Available from: http://jama.jamanetwork.com/article.aspx?articleid=193912";
+    return @"Goldenberg I, Vyas AK, Hall WJ, Moss AJ, Wang H, He H, Zareba W, McNitt S, Andrews ML, MADIT-II Investigators.  Risk stratification for primary implantation of a cardioverter-defibrillator in patients with ischemic left ventricular dysfunction.  J Am Coll Cardiol [Internet] 2008 Jan [cited 2016 Sep 1];51(3):288-296.  Available from http://content.onlinejacc.org/article.aspx?articleid=1187155";
 }
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Congestive heart failure" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"BP ≥ 140/90 or treated HTN"]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 75 years" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWith:@"Diabetes mellitus" withValue:1]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Stroke history" withValue:2 withDetails:@"or TIA or thromboembolism"]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Very high risk" withValue:HIGH_RISK withDetails:@"BUN ≥ 50 or Cr ≥ 2.5 mg/dl"]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"NYHA class > II" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"Age > 70 years" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"BUN > 26 mg/dl" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"QRS > 0.12 sec" withValue:1]];
+    [array addObject:[[EPSRiskFactor alloc] initWith:@"AFB baseline rhythm" withValue:1]];
     return array;
 }
 
 - (NSString *)getMessage:(int)score {
-    float risk = [self getRisk:score];
-    NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", risk];
+    struct RiskResult risk = [self getRisk:score];
     NSString *message = @"";
-    if (score < 1) {
-        message = [message stringByAppendingString:@"\nAnti-platelet drug (e.g. aspirin) or no antithrombic therapy recommended.\n\nCurrent guidelines suggest using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
+    if (score >= HIGH_RISK) {
+        message = [NSString stringWithFormat:@"\nIn very high risk group there is high (50%%) 2 year mortality (Conventional therapy %d%%, ICD %d%%).", risk.conv, risk.icd];
+        return [NSString stringWithFormat:@"%@ score = Very High Risk\n%@", [self getTitle], message];
     }
-    else if (score == 1) {
-        message = [message stringByAppendingString:@"\nEither anti-platelet drug (e.g. aspirin) or oral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended.\n\nCurrent guidelines suggest using CHA\u2082DS\u2082-VASc score to define stroke risk better."];
+    else {
+        message = [NSString stringWithFormat:@"2 year mortality risk with Conventional therapy is %d%%, with ICD is %d%%.", risk.conv,risk.icd];
+        return [NSString stringWithFormat:@"%@ score = %d\n%@", [self getTitle], score, message];
     }
-    else
-        message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) recommended."];
-    
-    return [NSString stringWithFormat:@"%@ score = %d\n%@\n%@", [self getTitle], score, strokeRisk, message];
 }
 
-- (float)getRisk:(int)score {
-    float risk = 0.0f;
+- (struct RiskResult)getRisk:(int)score {
+    struct RiskResult riskResult = {0, 0};
+    if (score >= HIGH_RISK) {
+        riskResult.conv = 43;
+        riskResult.icd = 51;
+        return riskResult;
+    }
     switch (score) {
         case 0:
-            risk = 1.9;
+            riskResult.conv = 8;
+            riskResult.icd = 7;
             break;
         case 1:
-            risk = 2.8;
+            riskResult.conv = 22;
+            riskResult.icd = 9;
             break;
         case 2:
-            risk = 4.0;
+            riskResult.conv = 32;
+            riskResult.icd = 15;
             break;
         case 3:
-            risk = 5.9;
-            break;
         case 4:
-            risk = 8.5;
-            break;
         case 5:
-            risk = 12.5;
+            riskResult.conv = 32;
+            riskResult.icd = 29;
             break;
-        case 6:
-            risk = 18.2;
-            break;
+
     }
-    return risk;
+    return riskResult;
 }
 
 @end
