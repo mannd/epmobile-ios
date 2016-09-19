@@ -27,6 +27,7 @@
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 #define REFERENCE_BUTTON_NUMBER 2
+#define LINK_BUTTON_NUMBER 3
 
 @interface EPSRiskScoreTableViewController ()
 
@@ -107,7 +108,7 @@
 - (void)calculateScore {
     int score = [riskScore calculateScore:self.risks];
     NSString *message = [riskScore getMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", @"Reference", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", @"Reference", @"Link", nil];
     // left justify message
     //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
     [alertView show];
@@ -195,7 +196,11 @@
     }
     else if (buttonIndex == REFERENCE_BUTTON_NUMBER) {
         UIAlertView *referenceAlertView = [[UIAlertView alloc] initWithTitle:@"Reference" message:[riskScore getReference] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+
         [referenceAlertView show];
+    }
+    else if (buttonIndex == LINK_BUTTON_NUMBER) {
+        [[UIApplication sharedApplication] openURL:[riskScore getReferenceLink]];
     }
 }
 

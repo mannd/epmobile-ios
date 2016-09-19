@@ -19,6 +19,11 @@
     return @"Colivicchi F, Ammirati F, Melina D, Guido V, Imperoli G, Santini M, for the OESIL (Osservatorio Epidemiologico sulla Sincope nel Lazio) Study Investigators. Development and prospective validation of a risk stratification system for patients with syncope in the emergency department: the OESIL risk score. Eur Heart J [Internet]. 2003 [cited 2014 Jun 6];24:811-19. Available from: http://eurheartj.oxfordjournals.org/content/24/9/811.full.pdf";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://eurheartj.oxfordjournals.org/content/24/9/811.full.pdf"];
+}
+
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal ECG" withValue:1 withDetails:@"New changes or non-sinus rhythm"]];

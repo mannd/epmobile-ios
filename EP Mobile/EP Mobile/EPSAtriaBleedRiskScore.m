@@ -18,6 +18,11 @@
     return @"Fang MC, Go, AS, Chang Y, Borowsky LH, Pomernacki NK,    Udaltsova N, Singer DE.  A new risk scheme to predict warfarin-associated hemorrhage.  The ATRIA Study.  J Am Coll Cardiol [Internet]. 2011 Jul 2011 [cited 2015 Nov 29];58(4):395-401.  Available from: http://content.onlinejacc.org/article.aspx?articleid=1146658";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://content.onlinejacc.org/article.aspx?articleid=1146658"];
+}
+
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Anemia" withValue:3 withDetails:@"Hgb < 13 g/dL male, < 12 g/dL female"]];

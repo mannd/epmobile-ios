@@ -19,6 +19,11 @@
     return @"Apostolakis S, Sullivan RM, Olshansky B, Lip GYH.  Factors affecting quality of anticoagulation control among patients with atrial fibrillation on warfarin.  The SAMe-TT\u2082R\u2082 Score.  Chest [Internet].  2013 Nov [cited 2015 Dec 2] 144(5):155-1563.  Available from: http://journal.publications.chestnet.org/article.aspx?articleid=1686270";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://journal.publications.chestnet.org/article.aspx?articleid=1686270"];
+}
+
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sex (female)" withValue:1]];

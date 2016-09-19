@@ -18,6 +18,10 @@
     return @"Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJ, Lip GY. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest [Internet]. 2010 Nov [cited 2014 Jun 6];138(5):1093-100. Available from: http://journal.publications.chestnet.org/article.aspx?articleid=1045174";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://journal.publications.chestnet.org/article.aspx?articleid=1045174"];
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Hypertension" withValue:1 withDetails:@"systolic BP ≥ 160"]];

@@ -33,6 +33,10 @@ struct RiskResult {
     return @"Goldenberg I, Vyas AK, Hall WJ, Moss AJ, Wang H, He H, Zareba W, McNitt S, Andrews ML, MADIT-II Investigators.  Risk stratification for primary implantation of a cardioverter-defibrillator in patients with ischemic left ventricular dysfunction.  J Am Coll Cardiol [Internet] 2008 Jan [cited 2016 Sep 1];51(3):288-296.  Available from http://content.onlinejacc.org/article.aspx?articleid=1187155";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://content.onlinejacc.org/article.aspx?articleid=1187155"];
+}
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Very High Risk group" withValue:HIGH_RISK withDetails:@"defined by BUN ≥ 50 or Cr ≥ 2.5 mg/dl"]];
@@ -52,7 +56,7 @@ struct RiskResult {
         return [NSString stringWithFormat:@"Very High Risk group\n\n%@\n\n%@", message, WARNING_MSG];
     }
     else {
-        message = [NSString stringWithFormat:@"The 2 year mortality risk in MADIT-II type patients with conventional therapy is %d%%, with ICD is %d%%.", risk.conv,risk.icd];
+        message = [NSString stringWithFormat:@"The 2 year mortality risk in MADIT-II type patients with conventional therapy is %d%%, and with ICD therapy is %d%%.", risk.conv,risk.icd];
         return [NSString stringWithFormat:@"%@ score = %d\n\n%@\n\n%@", [self getScoreName], score, message, WARNING_MSG];
     }
 }

@@ -13,8 +13,10 @@
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 #define REFERENCE_BUTTON_NUMBER 2
+#define LINK_BUTTON_NUMBER 3
 #define TITLE @"HCM SCD 2014"
 #define FULL_REFERENCE @"O’Mahony C., Jichi F., Pavlou M., Monserrat L., Anastasakis A., Rapezzi C.  A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J [Internet] 2014 Aug [cited 2015 May 29];35(30):2010–2020. Available from: http://doi.org/10.1093/eurheartj/eht439"
+#define REFERENCE_LINK @"http://doi.org/10.1093/eurheartj/eht439"
 
 @interface EPSHcmScd2014ViewController ()
 
@@ -185,7 +187,7 @@ static const int SIZE_OUT_OF_RANGE = 9004;
         recommendation = @"\nICD should be considered.";
     }
     NSString *message = [riskMessage stringByAppendingString:recommendation];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", @"Reference", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", @"Reference", @"Link", nil];
     [alertView show];
 }
 
@@ -217,6 +219,9 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     else if (buttonIndex == REFERENCE_BUTTON_NUMBER) {
         UIAlertView *referenceAlertView = [[UIAlertView alloc] initWithTitle:@"Reference" message:FULL_REFERENCE delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [referenceAlertView show];
+    }
+    else if (buttonIndex == LINK_BUTTON_NUMBER) {
+        [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:REFERENCE_LINK]];
     }
 }
 

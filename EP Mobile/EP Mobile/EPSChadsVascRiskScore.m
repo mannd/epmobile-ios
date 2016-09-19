@@ -25,6 +25,11 @@
     return @"Lip GY, Frison L, Halperin JL, Lane DA. Identifying patients at high risk for stroke despite anticoagulation: a comparison of contemporary stroke risk stratification schemes in an anticoagulated atrial fibrillation cohort. Stroke [Internet]. 2010 Oct 21 [cited 2014 Jun 6];41:2731-8. Available from: http://stroke.ahajournals.org/content/41/12/2731.full.pdf";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://stroke.ahajournals.org/content/41/12/2731.full.pdf"];
+}
+
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Congestive heart failure" withValue:1 withDetails:@"or left ventricular systolic dysfunction"]];
