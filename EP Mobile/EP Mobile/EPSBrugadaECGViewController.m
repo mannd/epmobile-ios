@@ -31,6 +31,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+
     self.scrollView.minimumZoomScale = 0.5;
     self.scrollView.maximumZoomScale = 2.0;
     self.scrollView.delegate = self;
@@ -59,6 +60,5 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return [scrollView.subviews objectAtIndex:0];
 }
-
 
 @end

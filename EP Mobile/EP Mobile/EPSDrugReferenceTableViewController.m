@@ -29,6 +29,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     // clear old creatinine clearance data on entry into this view
     [self.navigationController setToolbarHidden:YES];
 }

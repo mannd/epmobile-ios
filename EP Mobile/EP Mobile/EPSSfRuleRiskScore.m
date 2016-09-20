@@ -19,6 +19,11 @@
     return @"Quinn J, McDermott D, Stiell I, Kohn M, Wells G. Prospective validation of the San Francisco Syncope rule to predict patients with serious outcomes. 2006 May [cited 2014 Jun 6];47(5):448-54. Available from: http://www.annemergmed.com/article/S0196-0644(05)01959-1/abstract";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://www.annemergmed.com/article/S0196-0644(05)01959-1/abstract"];
+}
+
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal ECG" withValue:1 withDetails:@"New changes or non-sinus rhythm"]];

@@ -22,6 +22,11 @@
     return @"Singer DE, Chang Y, Borowsky LH, Fang MC, Pomernacki NK, Udaltsova N, Reynolds K, Go AS.  A new risk scheme to predict ischemic stroke and other thromboembolism in atrial fibrillation: the ATRIA study stroke risk score. J Am Heart Assoc [Internet]. 2013 Jun 19 [cited 2015 Nov 29];2:3000250.  Available from: http://jaha.ahajournals.org/content/2/3/e000250";
 }
 
+- (NSURL *)getReferenceLink {
+    return [[NSURL alloc] initWithString:@"http://jaha.ahajournals.org/content/2/3/e000250"];
+}
+
+
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Age ≥ 85 years" withValue:6]];
