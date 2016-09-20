@@ -186,7 +186,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     // note that there is no way not to dismiss the alert view with any button click
-    NSLog(@"Button index = %d", buttonIndex);
+    NSLog(@"Button index = %ld", (long)buttonIndex);
     if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
         // calculate full result here,
         NSArray *risksSelected = [riskScore risksSelected:risks];

@@ -63,6 +63,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     UIBarButtonItem *editButton = self.tabBarController.navigationItem.rightBarButtonItem;
     [editButton setTarget:self];
     [editButton setAction:@selector(calculateScore)];

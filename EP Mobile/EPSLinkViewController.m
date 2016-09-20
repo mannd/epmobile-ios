@@ -59,6 +59,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     [self.navigationController setToolbarHidden:!self.showToolbar];
     if (self.showToolbar) {
         NSString *crClResult = [self getStoredCreatinineClearance];
