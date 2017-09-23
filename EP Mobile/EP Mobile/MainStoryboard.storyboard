@@ -437,6 +437,84 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             </objects>
             <point key="canvasLocation" x="-6658.125" y="1750"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="bUb-sy-O1J">
+            <objects>
+                <tableViewController id="QHJ-6x-UVo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L8c-P7-cMu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="22l-2U-aff">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="7Xd-9y-nmu" style="IBUITableViewCellStyleDefault" id="gao-G6-f1Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gao-G6-f1Y" id="fkf-7C-yrn">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Brugada ECG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Xd-9y-nmu">
+                                                    <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="e5o-Mg-pZA" kind="show" id="C4a-kx-t7h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="pIW-CJ-Pr2" style="IBUITableViewCellStyleDefault" id="Hnp-Jm-sCM">
+                                        <rect key="frame" x="0.0" y="44" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hnp-Jm-sCM" id="z8y-I7-vPW">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pIW-CJ-Pr2">
+                                                    <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="KBF-PU-pDV" style="IBUITableViewCellStyleDefault" id="Kf6-M9-A6O">
+                                        <rect key="frame" x="0.0" y="88" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kf6-M9-A6O" id="yXN-NH-Dei">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KBF-PU-pDV">
+                                                    <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="QHJ-6x-UVo" id="xz8-KS-gfD"/>
+                            <outlet property="delegate" destination="QHJ-6x-UVo" id="UMO-pp-71E"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojJ-cS-r4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6360" y="2560"/>
+        </scene>
         <!--Drug Reference-->
         <scene sceneID="CaG-AN-PhF">
             <objects>
@@ -823,7 +901,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="735" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Brugada Syndrome ECG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HAg-Rt-3mG">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Brugada Syndrome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HAg-Rt-3mG">
                                                     <rect key="frame" x="20" y="0.0" width="713" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -833,7 +911,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="e5o-Mg-pZA" kind="show" id="0JW-qK-Irg"/>
+                                            <segue destination="QHJ-6x-UVo" kind="show" id="Vm7-JF-cfJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lw4-8k-rby" style="IBUITableViewCellStyleDefault" id="0Ip-8U-U4D">
@@ -1382,7 +1460,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Zg-DdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5704" y="1970"/>
+            <point key="canvasLocation" x="-6115" y="1890"/>
         </scene>
         <!--QTc With IVCD-->
         <scene sceneID="AeE-Eb-v4s">
@@ -3055,7 +3133,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4569.375" y="-230"/>
+            <point key="canvasLocation" x="-4147" y="-253"/>
         </scene>
         <!--LQTS Subtypes-->
         <scene sceneID="pmf-U3-p8F">
@@ -3761,7 +3839,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIm-GV-y6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5094.375" y="268.75"/>
+            <point key="canvasLocation" x="-4279" y="251"/>
         </scene>
         <!--WCT-->
         <scene sceneID="LKt-TZ-t6U">
@@ -4752,7 +4830,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4265.625" y="-1507.6171875"/>
+            <point key="canvasLocation" x="-7279" y="2532"/>
         </scene>
         <!--NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -6638,7 +6716,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQn-gj-7lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5117.5" y="-135.5"/>
+            <point key="canvasLocation" x="-5507" y="-230"/>
         </scene>
     </scenes>
     <resources>
@@ -6668,7 +6746,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FLw-vY-8Wq"/>
-        <segue reference="Pyp-gp-pfL"/>
+        <segue reference="N6T-w8-ifw"/>
         <segue reference="gzd-ih-l4g"/>
         <segue reference="HWu-7U-py6"/>
         <segue reference="vC8-JH-AOS"/>
