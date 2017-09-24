@@ -11,9 +11,7 @@
 @interface EPSIcdRiskViewController : UIViewController
     <UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource,
     UITableViewDelegate, UITableViewDataSource>
-@property (strong, nonatomic) IBOutlet UIView *internalScrollView;
 
-@property (strong, nonatomic) IBOutlet UISegmentedControl *procedureTypeSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *nyhaClassSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *reasonForAdmissionSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *abnormalConductionSegmentedControl;

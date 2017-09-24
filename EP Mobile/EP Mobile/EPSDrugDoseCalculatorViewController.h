@@ -24,8 +24,6 @@
 - (IBAction)toggleWeightUnits:(id)sender;
 - (IBAction)calculate:(id)sender;
 - (IBAction)clear:(id)sender;
-- (IBAction)textFieldDoneEditing:(id)sender;
-- (IBAction)backgroundTap:(id)sender;
 - (IBAction)toggleSex:(id)sender;
 - (IBAction)toggleCrUnits:(id)sender;
 
