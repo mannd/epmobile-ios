@@ -437,10 +437,10 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
             </objects>
             <point key="canvasLocation" x="-6658.125" y="1750"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Brugada Table View Controller-->
         <scene sceneID="bUb-sy-O1J">
             <objects>
-                <tableViewController id="QHJ-6x-UVo" sceneMemberID="viewController">
+                <tableViewController id="QHJ-6x-UVo" customClass="EPSBrugadaTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L8c-P7-cMu">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,7 +475,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pIW-CJ-Pr2">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Brugada Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pIW-CJ-Pr2">
                                                     <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -484,6 +484,9 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TwG-tp-Ach" kind="show" identifier="BrugadaDiagnosisSegue" id="MAd-5A-Xlz"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="KBF-PU-pDV" style="IBUITableViewCellStyleDefault" id="Kf6-M9-A6O">
                                         <rect key="frame" x="0.0" y="88" width="768" height="44"/>
@@ -492,7 +495,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KBF-PU-pDV">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Brugada Shanghai Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KBF-PU-pDV">
                                                     <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -513,7 +516,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojJ-cS-r4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6360" y="2560"/>
+            <point key="canvasLocation" x="-6205" y="2615"/>
         </scene>
         <!--Drug Reference-->
         <scene sceneID="CaG-AN-PhF">
@@ -2552,7 +2555,7 @@ Reference: Berruezo A et al.  Circulation 2004;109:1842.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7072" y="1855"/>
+            <point key="canvasLocation" x="-8009" y="2316"/>
         </scene>
         <!--VT-->
         <scene sceneID="bq8-Pb-GWV">
@@ -4830,7 +4833,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7279" y="2532"/>
+            <point key="canvasLocation" x="-7480" y="2749"/>
         </scene>
         <!--NotesViewController-->
         <scene sceneID="nM3-Qv-EfQ">
@@ -4894,7 +4897,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4029" y="1925"/>
+            <point key="canvasLocation" x="-7280" y="3376"/>
         </scene>
         <!--QTc With IVCD Results-->
         <scene sceneID="z1h-dR-mlV">
@@ -6745,12 +6748,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         <image name="rwpt.png" width="357" height="282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FLw-vY-8Wq"/>
+        <segue reference="oVK-G4-7QX"/>
         <segue reference="N6T-w8-ifw"/>
         <segue reference="gzd-ih-l4g"/>
         <segue reference="HWu-7U-py6"/>
         <segue reference="vC8-JH-AOS"/>
         <segue reference="tuo-Ni-Xiv"/>
-        <segue reference="yyd-qN-wqh"/>
+        <segue reference="MAd-5A-Xlz"/>
     </inferredMetricsTieBreakers>
 </document>

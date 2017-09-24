@@ -92,6 +92,7 @@
 		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
 		8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
+		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
@@ -304,6 +305,8 @@
 		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8E676B741CA093A60035244E /* EPSQTMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTMethods.h; sourceTree = "<group>"; };
 		8E676B751CA093A60035244E /* EPSQTMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTMethods.m; sourceTree = "<group>"; };
+		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
+		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
@@ -615,6 +618,8 @@
 				8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */,
 				8EC5C3231A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.h */,
 				8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */,
+				8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */,
+				8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */,
 			);
 			name = "Table View Controllers";
 			sourceTree = "<group>";
@@ -1003,6 +1008,7 @@
 				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
 				8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
+				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
 				8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */,
