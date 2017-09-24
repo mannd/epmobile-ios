@@ -51,8 +51,8 @@
     EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"BrugadaDiagnosisSegue"]) {
-        lc.webPage = @"rvh";
-        lc.linkTitle = @"RVH Criteria";
+        lc.webPage = @"brugadadiagnosis";
+        lc.linkTitle = @"Brugada Diagnosis";
     }
 
 }

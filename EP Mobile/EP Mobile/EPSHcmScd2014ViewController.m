@@ -46,6 +46,11 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self registerForKeyboardNotifications];
+    
+    self.ageTextField.delegate = self;
+    self.sizeTextField.delegate = self;
+    self.thicknessTextField.delegate = self;
+    self.gradientTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -241,14 +246,13 @@ static const int SIZE_OUT_OF_RANGE = 9004;
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
     
     // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your app might not need or want this behavior.
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
     if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {

@@ -99,6 +99,12 @@
 		8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */; };
 		8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */; };
 		8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C11F775A2700D198BD /* LQTS.storyboard */; };
+		8E71C2C41F775F0700D198BD /* Warfarin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C31F775F0700D198BD /* Warfarin.storyboard */; };
+		8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C51F7760A100D198BD /* VT.storyboard */; };
+		8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C71F77634A00D198BD /* WCT.storyboard */; };
+		8E71C2CA1F7764C900D198BD /* DrugCalculators.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */; };
+		8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CB1F7766A200D198BD /* WPW.storyboard */; };
+		8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CD1F77686500D198BD /* LVH.storyboard */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
@@ -141,6 +147,8 @@
 		8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */; };
 		8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */; };
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
+		8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */; };
+		8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */; };
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */; };
 		8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */; };
@@ -319,6 +327,12 @@
 		8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RWavePeakTime.storyboard; sourceTree = "<group>"; };
 		8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrugadaWCTMorphology.storyboard; sourceTree = "<group>"; };
 		8E71C2C11F775A2700D198BD /* LQTS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQTS.storyboard; sourceTree = "<group>"; };
+		8E71C2C31F775F0700D198BD /* Warfarin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Warfarin.storyboard; sourceTree = "<group>"; };
+		8E71C2C51F7760A100D198BD /* VT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VT.storyboard; sourceTree = "<group>"; };
+		8E71C2C71F77634A00D198BD /* WCT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WCT.storyboard; sourceTree = "<group>"; };
+		8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrugCalculators.storyboard; sourceTree = "<group>"; };
+		8E71C2CB1F7766A200D198BD /* WPW.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WPW.storyboard; sourceTree = "<group>"; };
+		8E71C2CD1F77686500D198BD /* LVH.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LVH.storyboard; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
@@ -388,6 +402,8 @@
 		8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseTableViewController.h; sourceTree = "<group>"; };
 		8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseTableViewController.m; sourceTree = "<group>"; };
+		8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = brugadadiagnosis.org; sourceTree = "<group>"; };
+		8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = brugadadiagnosis.html; sourceTree = "<group>"; };
 		8EC343E31630A188008938F6 /* EPSCMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewController.h; sourceTree = "<group>"; };
 		8EC343E41630A188008938F6 /* EPSCMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewController.m; sourceTree = "<group>"; };
 		8EC5C3231A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugReferenceTableViewController.h; sourceTree = "<group>"; };
@@ -491,6 +507,12 @@
 			isa = PBXGroup;
 			children = (
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
+				8E71C2CD1F77686500D198BD /* LVH.storyboard */,
+				8E71C2CB1F7766A200D198BD /* WPW.storyboard */,
+				8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */,
+				8E71C2C71F77634A00D198BD /* WCT.storyboard */,
+				8E71C2C51F7760A100D198BD /* VT.storyboard */,
+				8E71C2C31F775F0700D198BD /* Warfarin.storyboard */,
 				8E71C2C11F775A2700D198BD /* LQTS.storyboard */,
 				8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */,
 				8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */,
@@ -754,6 +776,8 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */,
+				8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */,
 				8EFBFBDA1AAE0672004374C3 /* rvh.org */,
 				8EFBFBDB1AAE0672004374C3 /* rvh.html */,
 				8EC5C33D1AAA8997005BDAFD /* dofetilide.html */,
@@ -919,6 +943,7 @@
 				8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 				8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */,
+				8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
 				8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */,
 				8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */,
@@ -938,6 +963,7 @@
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
 				8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */,
 				8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */,
+				8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */,
 				8E4B27BB1633459400BF1F2C /* lalap.png in Resources */,
 				8E4B27BC1633459400BF1F2C /* llap.png in Resources */,
 				8E4B27BD1633459400BF1F2C /* lpap.png in Resources */,
@@ -945,6 +971,8 @@
 				8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */,
 				8E4B27BE1633459400BF1F2C /* lplap.png in Resources */,
 				8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */,
+				8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */,
+				8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */,
 				8E4B27BF1633459400BF1F2C /* msap.png in Resources */,
 				8E4B27C01633459400BF1F2C /* psmaap.png in Resources */,
 				8E4B27C11633459400BF1F2C /* pstaap.png in Resources */,
@@ -953,9 +981,12 @@
 				8E4B27C31633459400BF1F2C /* ralap.png in Resources */,
 				8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */,
 				8E4B27C41633459400BF1F2C /* rlap.png in Resources */,
+				8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */,
+				8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */,
 				8E4B27C51633459400BF1F2C /* rpap.png in Resources */,
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
 				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
+				8E71C2CA1F7764C900D198BD /* DrugCalculators.storyboard in Resources */,
 				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
 				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
 				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
@@ -966,6 +997,7 @@
 				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
 				8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */,
 				8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */,
+				8E71C2C41F775F0700D198BD /* Warfarin.storyboard in Resources */,
 				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
 				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
 				8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */,
@@ -1157,7 +1189,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "6c0b78ed-8ad2-4e55-9041-6cbe809835c1";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
@@ -1200,7 +1232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "6c0b78ed-8ad2-4e55-9041-6cbe809835c1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1220,7 +1252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1243,7 +1275,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
