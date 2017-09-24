@@ -93,6 +93,12 @@
 		8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
+		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
+		8E71C2B91F77532F00D198BD /* QTcWithIVCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */; };
+		8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */; };
+		8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */; };
+		8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */; };
+		8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C11F775A2700D198BD /* LQTS.storyboard */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
@@ -307,6 +313,12 @@
 		8E676B751CA093A60035244E /* EPSQTMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTMethods.m; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
+		8E71C2B61F77523900D198BD /* VTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VTMorphology.storyboard; sourceTree = "<group>"; };
+		8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QTcWithIVCD.storyboard; sourceTree = "<group>"; };
+		8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQTSSubtypes.storyboard; sourceTree = "<group>"; };
+		8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RWavePeakTime.storyboard; sourceTree = "<group>"; };
+		8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrugadaWCTMorphology.storyboard; sourceTree = "<group>"; };
+		8E71C2C11F775A2700D198BD /* LQTS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQTS.storyboard; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
@@ -479,6 +491,12 @@
 			isa = PBXGroup;
 			children = (
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
+				8E71C2C11F775A2700D198BD /* LQTS.storyboard */,
+				8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */,
+				8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */,
+				8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */,
+				8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */,
+				8E71C2B61F77523900D198BD /* VTMorphology.storyboard */,
 				8E676B6D1CA07F740035244E /* Launch Screen.storyboard */,
 				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
 				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
@@ -531,6 +549,13 @@
 				8EBCB46E19DB672F001A8DA3 /* EPSLogging.h */,
 			);
 			name = Headers;
+			sourceTree = "<group>";
+		};
+		8E71C2BA1F77546C00D198BD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		8E741AB616FE88B500A701B3 /* Links */ = {
@@ -711,6 +736,7 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8E71C2BA1F77546C00D198BD /* Storyboards */,
 				8E00E96817BC48710007A146 /* Headers */,
 				8E00E96317BC42E40007A146 /* Main */,
 				8E00E96717BC48530007A146 /* Notes */,
@@ -880,12 +906,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */,
 				8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */,
 				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
 				8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */,
 				8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */,
 				8EC5C33C1AAA8134005BDAFD /* sotalol.org in Resources */,
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
+				8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
 				8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */,
@@ -902,6 +930,7 @@
 				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
 				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
 				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
+				8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */,
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
@@ -913,12 +942,14 @@
 				8E4B27BC1633459400BF1F2C /* llap.png in Resources */,
 				8E4B27BD1633459400BF1F2C /* lpap.png in Resources */,
 				8EB4190717EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png in Resources */,
+				8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */,
 				8E4B27BE1633459400BF1F2C /* lplap.png in Resources */,
 				8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */,
 				8E4B27BF1633459400BF1F2C /* msap.png in Resources */,
 				8E4B27C01633459400BF1F2C /* psmaap.png in Resources */,
 				8E4B27C11633459400BF1F2C /* pstaap.png in Resources */,
 				8E4B27C21633459400BF1F2C /* raap.png in Resources */,
+				8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */,
 				8E4B27C31633459400BF1F2C /* ralap.png in Resources */,
 				8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */,
 				8E4B27C41633459400BF1F2C /* rlap.png in Resources */,
@@ -928,6 +959,7 @@
 				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
 				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
 				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
+				8E71C2B91F77532F00D198BD /* QTcWithIVCD.storyboard in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
