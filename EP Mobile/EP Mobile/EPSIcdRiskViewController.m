@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 EP Studios. All rights reserved.
 //
 
+// Reference is http://www.onlinejacc.org/content/63/8/788
+
 #import "EPSIcdRiskViewController.h"
 #import "EPSRiskFactor.h"
 
@@ -32,7 +34,7 @@
     //float w = self.internalScrollView.bounds.size.width;
     //scrollView.contentSize = CGSizeMake(w, 990);
     //scrollView.delegate = self;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
     self.procedureTypeData = array;
     
@@ -49,6 +51,7 @@
     
     self.procedureTypePickerView.delegate = self;
     self.otherRisksTableView.delegate = self;
+    self.otherRisksTableView.dataSource = self;
 
 }
 
@@ -129,6 +132,14 @@
     else if (selection == 2) {
         score += 4;
     }
+    selection = [self.reasonForAdmissionSegmentedControl selectedSegmentIndex];
+    if (selection == 1) {
+        score += 4;
+    }
+    else if (selection == 2) {
+        score += 5;
+    }
+    
     
     NSString *message = [self getResultsMessage:score];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
