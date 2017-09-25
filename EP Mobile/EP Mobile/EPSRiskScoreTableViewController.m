@@ -24,6 +24,7 @@
 #import "EPSAtriaStrokeRiskScore.h"
 #import "EPSOrbitRiskScore.h"
 #import "EPSIcdMortalityRiskScore.h"
+#import "EPSSharedMethods.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 #define REFERENCE_BUTTON_NUMBER 2
@@ -108,10 +109,10 @@
 - (void)calculateScore {
     int score = [riskScore calculateScore:self.risks];
     NSString *message = [riskScore getMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", @"Reference", @"Link", nil];
-    // left justify message
-    //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
-    [alertView show];
+    NSArray *risksSelected = [riskScore risksSelected:risks];
+    NSString* result = [riskScore getFullRiskReportFromMessage:message andRisks:risksSelected];
+    
+    [EPSSharedMethods showRiskDialogWithMessage:message riskResult:result reference:[riskScore getReference] url:[riskScore getReferenceLink] inView:self];
 }
 
 #pragma mark - Table view data source
@@ -180,28 +181,6 @@
         [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark - Alert view delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    // note that there is no way not to dismiss the alert view with any button click
-    NSLog(@"Button index = %ld", (long)buttonIndex);
-    if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
-        // calculate full result here,
-        NSArray *risksSelected = [riskScore risksSelected:risks];
-        NSString* result = [riskScore getFullRiskReportFromMessage:[alertView message] andRisks:risksSelected];
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = result;
-    }
-    else if (buttonIndex == REFERENCE_BUTTON_NUMBER) {
-        UIAlertView *referenceAlertView = [[UIAlertView alloc] initWithTitle:@"Reference" message:[riskScore getReference] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-
-        [referenceAlertView show];
-    }
-    else if (buttonIndex == LINK_BUTTON_NUMBER) {
-        [[UIApplication sharedApplication] openURL:[riskScore getReferenceLink]];
-    }
 }
 
 @end

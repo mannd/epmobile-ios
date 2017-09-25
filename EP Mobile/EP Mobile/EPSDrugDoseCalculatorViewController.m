@@ -9,6 +9,7 @@
 #import "EPSDrugDoseCalculatorViewController.h"
 #import "EPSNotesViewController.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 #define DABIGATRAN @"Dabigatran"
 #define DOFETILIDE @"Dofetilide"
@@ -24,6 +25,8 @@
 #define APIXABAN_ESRD_CAUTION @"\nUse with caution in patients with ESRD on dialysis"
 #define INHIBITORS @"(e.g. ketoconazole, itraconazole, ritonavir, clarithromycin)."
 #define AFB_DOSING_ONLY_WARNING @"\nDosing only for non-valvular AF (not DVT/PE or other indications)"
+
+
 
 @interface EPSDrugDoseCalculatorViewController ()
 
@@ -202,13 +205,10 @@
     details = [details stringByAppendingString:@"\n"];
     details = [details stringByAppendingString:[self getDetails:cc forAge:age]];
     self.resultLabel.text = details;
-
     
     if ([self hasWarning:cc]) {
         NSString *alertTitle = @"Warning";
-
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [EPSSharedMethods showDialogWithTitle:alertTitle andMessage:details inView:self];
     }
     
     [self saveResultsWithAge:age isMale:isMale weightInKgs:weight creatinine:creatinine creatinineClearance:cc];

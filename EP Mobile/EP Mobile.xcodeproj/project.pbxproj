@@ -149,6 +149,7 @@
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
 		8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */; };
 		8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */; };
+		8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1D2AC1F78A36F00F46734 /* EPSSharedMethods.m */; };
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */; };
 		8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3271A9D132C005BDAFD /* EPSDrugCalculatorNotes.m */; };
@@ -404,6 +405,8 @@
 		8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseTableViewController.m; sourceTree = "<group>"; };
 		8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = brugadadiagnosis.org; sourceTree = "<group>"; };
 		8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = brugadadiagnosis.html; sourceTree = "<group>"; };
+		8EC1D2AB1F78A36F00F46734 /* EPSSharedMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSharedMethods.h; sourceTree = "<group>"; };
+		8EC1D2AC1F78A36F00F46734 /* EPSSharedMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSharedMethods.m; sourceTree = "<group>"; };
 		8EC343E31630A188008938F6 /* EPSCMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewController.h; sourceTree = "<group>"; };
 		8EC343E41630A188008938F6 /* EPSCMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewController.m; sourceTree = "<group>"; };
 		8EC5C3231A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugReferenceTableViewController.h; sourceTree = "<group>"; };
@@ -506,26 +509,14 @@
 		8E00E96317BC42E40007A146 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
-				8E71C2CD1F77686500D198BD /* LVH.storyboard */,
-				8E71C2CB1F7766A200D198BD /* WPW.storyboard */,
-				8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */,
-				8E71C2C71F77634A00D198BD /* WCT.storyboard */,
-				8E71C2C51F7760A100D198BD /* VT.storyboard */,
-				8E71C2C31F775F0700D198BD /* Warfarin.storyboard */,
-				8E71C2C11F775A2700D198BD /* LQTS.storyboard */,
-				8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */,
-				8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */,
-				8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */,
-				8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */,
-				8E71C2B61F77523900D198BD /* VTMorphology.storyboard */,
-				8E676B6D1CA07F740035244E /* Launch Screen.storyboard */,
 				8EC19C3A159FE0FA00975E2B /* EPSAppDelegate.h */,
 				8EC19C3B159FE0FA00975E2B /* EPSAppDelegate.m */,
 				8E00E96417BC46EF0007A146 /* EPSNavigationController.h */,
 				8E00E96517BC46EF0007A146 /* EPSNavigationController.m */,
 				8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */,
 				8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */,
+				8EC1D2AB1F78A36F00F46734 /* EPSSharedMethods.h */,
+				8EC1D2AC1F78A36F00F46734 /* EPSSharedMethods.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -576,6 +567,20 @@
 		8E71C2BA1F77546C00D198BD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
+				8E71C2CD1F77686500D198BD /* LVH.storyboard */,
+				8E71C2CB1F7766A200D198BD /* WPW.storyboard */,
+				8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */,
+				8E71C2C71F77634A00D198BD /* WCT.storyboard */,
+				8E71C2C51F7760A100D198BD /* VT.storyboard */,
+				8E71C2C31F775F0700D198BD /* Warfarin.storyboard */,
+				8E71C2C11F775A2700D198BD /* LQTS.storyboard */,
+				8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */,
+				8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */,
+				8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */,
+				8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */,
+				8E71C2B61F77523900D198BD /* VTMorphology.storyboard */,
+				8E676B6D1CA07F740035244E /* Launch Screen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -1085,6 +1090,7 @@
 				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
 				8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */,
+				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,

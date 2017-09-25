@@ -10,6 +10,7 @@
 
 #import "EPSIcdRiskViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSSharedMethods.h"
 
 @interface EPSIcdRiskViewController ()
 
@@ -142,9 +143,7 @@
     
     
     NSString *message = [self getResultsMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alertView show];
-    
+    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:message inView:self];
 }
 
 - (NSString *)getResultsMessage:(int)score

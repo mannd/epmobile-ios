@@ -216,6 +216,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Warfarin Clinic" id="8Ck-fG-cEI"/>
                     <connections>
+                        <outlet property="calculateButton" destination="1ko-60-X6S" id="vb5-9y-5D7"/>
                         <outlet property="inrField" destination="dU7-n3-yDr" id="JR8-p7-g6c"/>
                         <outlet property="resultLabel" destination="cOI-Fx-0AG" id="Iuc-SY-48c"/>
                         <outlet property="tabletSizePickerView" destination="Et0-4W-qXv" id="v3v-Ij-JPT"/>

@@ -9,6 +9,7 @@
 #import "EPSARVC2010TableViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 #define SECTION_0_HEADER @"I. Global/Regional Dysfunction and Structural Alterations"
 #define SECTION_1_HEADER @"II. Tissue Characterizations of Wall"
@@ -118,8 +119,7 @@
     EPSLog(@"major = %d", major);
     EPSLog(@"minor = %d", minor);
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:[self getResultMessage:major :minor] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alertView show];
+    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:[self getResultMessage:major :minor] inView:self];
     
 }
 

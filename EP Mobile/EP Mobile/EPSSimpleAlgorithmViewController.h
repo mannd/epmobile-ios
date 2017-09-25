@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSSimpleAlgorithmViewController : UIViewController
-    <UIAlertViewDelegate>
 @property (strong, nonatomic) NSString *algorithmName;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIButton *instructionsButton;

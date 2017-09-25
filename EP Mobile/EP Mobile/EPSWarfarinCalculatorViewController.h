@@ -20,12 +20,13 @@
 @end
 
 @interface EPSWarfarinCalculatorViewController : UIViewController
-    <UIActionSheetDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
+    <UIPickerViewDelegate, UIPickerViewDataSource>
 @property (strong, nonatomic) IBOutlet UITextField *weeklyDoseField;
 @property (strong, nonatomic) IBOutlet UITextField *inrField;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *targetSegmentedControl;
 @property (strong, nonatomic) IBOutlet UIPickerView *tabletSizePickerView;
+@property (strong, nonatomic) IBOutlet UIButton *calculateButton;
 
 @property (strong, nonatomic) EPSDoseChange *doseChange;
 @property (strong, nonatomic) NSString *defaultWarfarinTabletSize;
