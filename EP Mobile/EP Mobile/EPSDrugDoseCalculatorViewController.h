@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSDrugDoseCalculatorViewController : UIViewController
+@interface EPSDrugDoseCalculatorViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UISegmentedControl *sexSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITextField *ageField;
 @property (strong, nonatomic) IBOutlet UITextField *weightField;
@@ -24,8 +24,6 @@
 - (IBAction)toggleWeightUnits:(id)sender;
 - (IBAction)calculate:(id)sender;
 - (IBAction)clear:(id)sender;
-- (IBAction)textFieldDoneEditing:(id)sender;
-- (IBAction)backgroundTap:(id)sender;
 - (IBAction)toggleSex:(id)sender;
 - (IBAction)toggleCrUnits:(id)sender;
 

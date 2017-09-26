@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSRiskScoreTableViewController : UITableViewController
-    <UIAlertViewDelegate>
 @property (strong, nonatomic) NSMutableArray *risks;
 @property (strong, nonatomic) NSString *scoreType;
 

@@ -182,9 +182,26 @@
     }
     self.resultLabel.text = message;
     if (showDoses) {
-        UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                      initWithTitle:message delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Show Suggested Daily Doses" otherButtonTitles: nil];
-        [actionSheet showInView:self.view];
+//        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+//                                      initWithTitle:message delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Show Suggested Daily Doses" otherButtonTitles: nil];
+//        [actionSheet showInView:self.view];
+        
+        UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action) {}];
+        UIAlertAction *dailyDoseAction = [UIAlertAction actionWithTitle:@"Show Suggested Daily Doses" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            [self performSegueWithIdentifier:@"DosingSegue" sender:nil];
+        }];
+        
+        [actionSheet addAction:dailyDoseAction];
+        [actionSheet addAction:defaultAction];
+        
+        UIPopoverPresentationController *popPresenter = [actionSheet
+                                                         popoverPresentationController];
+        popPresenter.sourceView = self.calculateButton;
+        popPresenter.sourceRect = self.calculateButton.bounds;
+        [self presentViewController:actionSheet animated:YES completion:nil];
     }
 }
              
@@ -196,14 +213,6 @@
     //return dose - 0.2 * dose >= 7 * 0.5 * tabletSize && dose + 0.2 * dose <= 7 * 2.0 * tabletSize;
     // dose calculator algorithm should handle from about 3 half tabs a week to 2 tabs daily
     return (dose > (4 * 0.5 * size)) && (dose < (2 * size * 7));
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != [actionSheet cancelButtonIndex]) {
-        EPSLog(@"Flip view");
-        [self performSegueWithIdentifier:@"DosingSegue" sender:nil];
-    }
-        
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -10,6 +10,7 @@
 #import "EPSRiskScore.h"
 #import "EPSNotesViewController.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
 #define REFERENCE_BUTTON_NUMBER 2
@@ -46,6 +47,11 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self registerForKeyboardNotifications];
+    
+    self.ageTextField.delegate = self;
+    self.sizeTextField.delegate = self;
+    self.thicknessTextField.delegate = self;
+    self.gradientTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,8 +157,7 @@ static const int SIZE_OUT_OF_RANGE = 9004;
         default:
             return;
     }
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
+    [EPSSharedMethods showDialogWithTitle:title andMessage:message inView:self];
 }
 
 - (NSString *)getFullRiskReport:(NSString *)message {
@@ -174,7 +179,7 @@ static const int SIZE_OUT_OF_RANGE = 9004;
 - (void)showResultDialog:(double)prob {
     // make it a percentage
     prob = prob * 100.0;
-    NSString *title = @"HCM-SCD Risk";
+    //NSString *title = @"HCM-SCD Risk";
     NSString *riskMessage = [NSString stringWithFormat:@"5 year SCD Risk = %2.2f%%", prob];
     NSString *recommendation;
     if (prob < 4) {
@@ -187,8 +192,9 @@ static const int SIZE_OUT_OF_RANGE = 9004;
         recommendation = @"\nICD should be considered.";
     }
     NSString *message = [riskMessage stringByAppendingString:recommendation];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Copy Result", @"Reference", @"Link", nil];
-    [alertView show];
+    
+    [EPSSharedMethods showRiskDialogWithMessage:message riskResult:[self getFullRiskReport:message] reference:FULL_REFERENCE url:[[NSURL alloc] initWithString:REFERENCE_LINK] inView:self];
+  
 }
 
 - (IBAction)clear:(id)sender {
@@ -207,23 +213,23 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     vc.key = @"HcmScd2014";
 }
 
-
-#pragma mark - Alert view delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
-        NSString* result = [self getFullRiskReport:[alertView message]];
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = result;
-    }
-    else if (buttonIndex == REFERENCE_BUTTON_NUMBER) {
-        UIAlertView *referenceAlertView = [[UIAlertView alloc] initWithTitle:@"Reference" message:FULL_REFERENCE delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [referenceAlertView show];
-    }
-    else if (buttonIndex == LINK_BUTTON_NUMBER) {
-        [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:REFERENCE_LINK]];
-    }
-}
+//
+//#pragma mark - Alert view delegate
+//
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    if (buttonIndex == COPY_RESULT_BUTTON_NUMBER) {
+//        NSString* result = [self getFullRiskReport:[alertView message]];
+//        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+//        pasteboard.string = result;
+//    }
+//    else if (buttonIndex == REFERENCE_BUTTON_NUMBER) {
+//        UIAlertView *referenceAlertView = [[UIAlertView alloc] initWithTitle:@"Reference" message:FULL_REFERENCE delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        [referenceAlertView show];
+//    }
+//    else if (buttonIndex == LINK_BUTTON_NUMBER) {
+//        [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:REFERENCE_LINK]];
+//    }
+//}
 
 - (void)registerForKeyboardNotifications
 {
@@ -241,14 +247,13 @@ static const int SIZE_OUT_OF_RANGE = 9004;
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
     
     // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your app might not need or want this behavior.
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
     if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {

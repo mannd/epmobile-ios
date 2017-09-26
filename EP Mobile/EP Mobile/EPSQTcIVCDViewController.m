@@ -9,6 +9,7 @@
 #import "EPSQTcIVCDViewController.h"
 #import "EPSQTMethods.h"
 #import "EPSQTcIVCDResultsViewController.h"
+#import "EPSSharedMethods.h"
 
 
 #define INTERVAL_OR_RATE_KEY @"intervalorrate"
@@ -125,8 +126,7 @@
 }
 
 - (void)showError {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Input Error" message:@"One or more values are incorrect or missing." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alert show];
+    [EPSSharedMethods showDialogWithTitle:@"Input Error" andMessage:@"One or more values are incorrect or missing." inView:self];
 }
 
 

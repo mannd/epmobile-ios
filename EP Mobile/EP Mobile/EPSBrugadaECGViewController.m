@@ -36,15 +36,32 @@
     self.scrollView.maximumZoomScale = 2.0;
     self.scrollView.delegate = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
-//    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-//                                   initWithTitle:@"Notes" style:UIBarButtonItemStyleBordered target:self action:@selector(showNotes)];
-//    self.navigationItem.rightBarButtonItem = editButton;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+// See https://www.natashatherobot.com/ios-autolayout-scrollview/ for details
+// of how to center view in scrollview properly (note comments also).
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    NSLog(@"Brugada Layout subviews called");
+    CGRect scrollViewBounds = self.scrollView.bounds;
+    CGRect imageViewBounds = self.imageView.bounds;
+    
+    UIEdgeInsets scrollViewInsets = UIEdgeInsetsZero;
+    scrollViewInsets.top = scrollViewBounds.size.height/2.0;
+    scrollViewInsets.top -= imageViewBounds.size.height/2.0;
+    
+    scrollViewInsets.bottom = scrollViewBounds.size.height/2.0;
+    scrollViewInsets.bottom -= imageViewBounds.size.height/2.0;
+    scrollViewInsets.bottom += 1;
+    
+    self.scrollView.contentInset = scrollViewInsets;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

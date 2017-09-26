@@ -164,25 +164,35 @@
 - (void)showResults {
     NSString *details = [algorithm outcome:step];
     NSString *title = [algorithm resultDialogTitle];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    if ([algorithm showMap])
-        [alert addButtonWithTitle:@"Show Map"];
-    [alert show];
-
-  
-}
-
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    EPSLog(@"Button index = %ld", (long)buttonIndex);
-    // show map button
-    if (buttonIndex == 1) {
-        [self performSegueWithIdentifier:@"MapSegue" sender:nil];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:details preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * action) {}];
+    if ([algorithm showMap]) {
+        UIAlertAction *showMapAction = [UIAlertAction actionWithTitle:@"Show Map" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self performSegueWithIdentifier:@"MapSegue" sender:nil];
+        }];
+        [alert addAction:showMapAction];
     }
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
     [algorithm resetSteps:&step];
     self.backButton.enabled = NO;
     self.questionLabel.text = [algorithm step1];
 }
 
+//- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    EPSLog(@"Button index = %ld", (long)buttonIndex);
+//    // show map button
+//    if (buttonIndex == 1) {
+//        [self performSegueWithIdentifier:@"MapSegue" sender:nil];
+//    }
+//    [algorithm resetSteps:&step];
+//    self.backButton.enabled = NO;
+//    self.questionLabel.text = [algorithm step1];
+//}
+//
 
 
 @end

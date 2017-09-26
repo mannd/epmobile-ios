@@ -8,6 +8,7 @@
 
 #import "EPSQTViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSSharedMethods.h"
 
 // defines for SQTS indexes
 #define SQTS_SHORT_JT 0
@@ -129,9 +130,9 @@
         message = [message stringByAppendingString:@"Intermediate probability"];
     else if (score <= 2)
         message = [message stringByAppendingString:@"Low probability"];
-    message = [message stringByAppendingString:@" of Short QT Syndrome"];    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alertView show];
+    message = [message stringByAppendingString:@" of Short QT Syndrome"];
+    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:message inView:self];
+    
 }
 
 #pragma mark - Table view data source

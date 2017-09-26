@@ -30,13 +30,33 @@
     self.scrollView.minimumZoomScale = 0.5;
     self.scrollView.maximumZoomScale = 2.0;
     self.scrollView.delegate = self;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+// See https://www.natashatherobot.com/ios-autolayout-scrollview/ for details
+// of how to center view in scrollview properly (note comments also).
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    NSLog(@"Layout subviews called");
+    CGRect scrollViewBounds = self.scrollView.bounds;
+    CGRect imageViewBounds = self.imageView.bounds;
+
+    UIEdgeInsets scrollViewInsets = UIEdgeInsetsZero;
+    scrollViewInsets.top = scrollViewBounds.size.height/2.0;
+    scrollViewInsets.top -= imageViewBounds.size.height/2.0;
+
+    scrollViewInsets.bottom = scrollViewBounds.size.height/2.0;
+    scrollViewInsets.bottom -= imageViewBounds.size.height/2.0;
+    scrollViewInsets.bottom += 1;
+    
+    self.scrollView.contentInset = scrollViewInsets;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

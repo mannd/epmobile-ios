@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSComplexAlgorithmViewController : UIViewController
-    <UIAlertViewDelegate>
+
 @property (strong, nonatomic) NSString *algorithmName;
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *button1;

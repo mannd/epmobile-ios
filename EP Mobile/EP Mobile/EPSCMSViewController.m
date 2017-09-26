@@ -11,6 +11,7 @@
 #import "EPSNotesViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 // these magic numbers are in Data.plist
 #define CARDIAC_ARREST 0
@@ -167,12 +168,8 @@
 }
 
 - (void)showResults:(NSString *)message {
-    NSString *details = message;
     NSString *title = @"CMS ICD Criteria";
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-    
-    
+    [EPSSharedMethods showDialogWithTitle:title andMessage:message inView:self];
 }
 
 - (NSString *)getResultMessage:(int)result {
