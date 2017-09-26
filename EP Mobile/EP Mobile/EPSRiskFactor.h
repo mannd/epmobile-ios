@@ -20,5 +20,6 @@
 - (id)initWithDetails:(NSString *)name withValue:(NSInteger)value withDetails:(NSString *)details;
 - (id)initWithAllFields:(NSString *)name withValue:(NSInteger)value withDetails:(NSString *)details withIsMajor:(BOOL)isMajor withSectionNumber:(NSUInteger) sectionNumber;
 - (void)setName:(NSString *)name withValue:(NSInteger)value withDetails:(NSString *)details;
+- (id)initWithDetailsOnly:(NSString *)name withValue:(NSInteger)value;
 
 @end

@@ -143,7 +143,7 @@
     
     
     NSString *message = [self getResultsMessage:score];
-    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:message inView:self];
+    [EPSSharedMethods showDialogWithTitle:@"Risk of Post-Implant Complications" andMessage:message inView:self];
 }
 
 - (NSString *)getResultsMessage:(int)score

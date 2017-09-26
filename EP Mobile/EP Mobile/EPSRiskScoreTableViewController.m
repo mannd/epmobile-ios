@@ -24,6 +24,7 @@
 #import "EPSAtriaStrokeRiskScore.h"
 #import "EPSOrbitRiskScore.h"
 #import "EPSIcdMortalityRiskScore.h"
+#import "EPSBrugadaRiskScore.h"
 #import "EPSSharedMethods.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
@@ -83,6 +84,8 @@
         riskScore = [[EPSOrbitRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"ICDMortalityRisk"])
         riskScore = [[EPSIcdMortalityRiskScore alloc] init];
+    else if ([scoreType isEqualToString:@"BrugadaRisk"])
+        riskScore = [[EPSBrugadaRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;
@@ -138,8 +141,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChadsCell"];
+    static NSString *riskCellIdentifier = @"ChadsCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:riskCellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:riskCellIdentifier];
+    }
     // deal with the 2 sectioned HCM risk
     int offset = [riskScore getOffset:indexPath.section];
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];

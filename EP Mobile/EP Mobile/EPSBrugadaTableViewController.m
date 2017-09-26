@@ -8,6 +8,7 @@
 
 #import "EPSBrugadaTableViewController.h"
 #import "EPSLinkViewController.h"
+#import "EPSRiskScoreTableViewController.h"
 
 
 @interface EPSBrugadaTableViewController ()
@@ -48,11 +49,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"BrugadaDiagnosisSegue"]) {
+        EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
         lc.webPage = @"brugadadiagnosis";
         lc.linkTitle = @"Brugada Diagnosis";
+    }
+    else if ([segueIdentifier isEqualToString:@"BrugadaRiskSegue"]) {
+        EPSRiskScoreTableViewController *rc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
+        rc.scoreType = @"BrugadaRisk";
     }
 
 }
