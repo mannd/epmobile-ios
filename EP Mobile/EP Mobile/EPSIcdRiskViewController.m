@@ -229,6 +229,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Other Risk Factors";
+    }
+    else {
+        return nil;
+    }
+}
+
+
 
 
 
