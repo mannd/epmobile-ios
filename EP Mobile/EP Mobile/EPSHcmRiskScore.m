@@ -38,7 +38,7 @@
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Family history" withValue:10 withDetails:@"of premature sudden death"]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"LV thickness ≥ 3 cm" withValue:10]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:10 withDetails:@"failure of BP to rise with exercise"]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnl BP response to exercise" withValue:10 withDetails:@"Failure of BP to rise with exercise"]];
     
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Nonsustained VT" withValue:10]];
     // Minor criteria

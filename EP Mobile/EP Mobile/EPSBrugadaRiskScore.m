@@ -148,7 +148,7 @@
 
 - (NSString *)getTitleForHeaderSection:(NSInteger)section {
     if (section == 0)
-        return @"ECG (12-lead / ambulatory";
+        return @"ECG (12-lead / ambulatory)";
     else if (section == 1)
         return @"Clinical History";
     else if (section == 2)

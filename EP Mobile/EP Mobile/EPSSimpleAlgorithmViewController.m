@@ -171,28 +171,17 @@
     if ([algorithm showMap]) {
         UIAlertAction *showMapAction = [UIAlertAction actionWithTitle:@"Show Map" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [self performSegueWithIdentifier:@"MapSegue" sender:nil];
+            [algorithm resetSteps:&step];
+            self.backButton.enabled = NO;
+            self.questionLabel.text = [algorithm step1];
         }];
         [alert addAction:showMapAction];
     }
     
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
-    [algorithm resetSteps:&step];
-    self.backButton.enabled = NO;
-    self.questionLabel.text = [algorithm step1];
+    
 }
-
-//- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    EPSLog(@"Button index = %ld", (long)buttonIndex);
-//    // show map button
-//    if (buttonIndex == 1) {
-//        [self performSegueWithIdentifier:@"MapSegue" sender:nil];
-//    }
-//    [algorithm resetSteps:&step];
-//    self.backButton.enabled = NO;
-//    self.questionLabel.text = [algorithm step1];
-//}
-//
 
 
 @end
