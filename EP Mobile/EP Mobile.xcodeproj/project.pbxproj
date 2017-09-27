@@ -171,6 +171,7 @@
 		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
 		8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */; };
 		8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */; };
+		8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */; };
 		8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDA1AAE0672004374C3 /* rvh.org */; };
 		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
 /* End PBXBuildFile section */
@@ -438,6 +439,8 @@
 		8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDResultsViewController.m; sourceTree = "<group>"; };
 		8EF902F21F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaRiskScore.h; sourceTree = "<group>"; };
 		8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaRiskScore.m; sourceTree = "<group>"; };
+		8EF902F51F7B0A4E00D2B6C6 /* EPSErsRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSErsRiskScore.h; sourceTree = "<group>"; };
+		8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSErsRiskScore.m; sourceTree = "<group>"; };
 		8EFBFBDA1AAE0672004374C3 /* rvh.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvh.org; sourceTree = "<group>"; };
 		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -507,6 +510,8 @@
 				8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */,
 				8EF902F21F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.h */,
 				8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */,
+				8EF902F51F7B0A4E00D2B6C6 /* EPSErsRiskScore.h */,
+				8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -1038,6 +1043,7 @@
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */,
+				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
 				8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */,
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
 				8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */,
