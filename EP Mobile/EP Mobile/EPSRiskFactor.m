@@ -43,6 +43,15 @@
     return self;
 }
 
+// Only details field is used, good for long description field
+- (id)initWithDetailsOnly:(NSString *)name withValue:(NSInteger)value {
+    self = [self initWith:@"" withValue:value];
+    if (self) {
+        self.details = name;
+    }
+    return self;
+}
+
 
 
 

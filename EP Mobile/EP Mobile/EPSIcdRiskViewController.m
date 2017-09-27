@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 EP Studios. All rights reserved.
 //
 
+// Reference is http://www.onlinejacc.org/content/63/8/788
+
 #import "EPSIcdRiskViewController.h"
 #import "EPSRiskFactor.h"
+#import "EPSSharedMethods.h"
 
 @interface EPSIcdRiskViewController ()
 
@@ -32,7 +35,7 @@
     //float w = self.internalScrollView.bounds.size.width;
     //scrollView.contentSize = CGSizeMake(w, 990);
     //scrollView.delegate = self;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
     self.procedureTypeData = array;
     
@@ -46,6 +49,10 @@
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
+    
+    self.procedureTypePickerView.delegate = self;
+    self.otherRisksTableView.delegate = self;
+    self.otherRisksTableView.dataSource = self;
 
 }
 
@@ -126,11 +133,17 @@
     else if (selection == 2) {
         score += 4;
     }
+    selection = [self.reasonForAdmissionSegmentedControl selectedSegmentIndex];
+    if (selection == 1) {
+        score += 4;
+    }
+    else if (selection == 2) {
+        score += 5;
+    }
+    
     
     NSString *message = [self getResultsMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alertView show];
-    
+    [EPSSharedMethods showDialogWithTitle:@"Risk of Post-Implant Complications" andMessage:message inView:self];
 }
 
 - (NSString *)getResultsMessage:(int)score
@@ -215,6 +228,16 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Other Risk Factors";
+    }
+    else {
+        return nil;
+    }
+}
+
 
 
 

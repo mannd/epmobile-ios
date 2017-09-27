@@ -117,6 +117,8 @@
         vc.scoreType = @"Orbit";
     else if ([segueIdentifier isEqualToString:@"ICDMortalityRiskSegue"])
         vc.scoreType = @"ICDMortalityRisk";
+    else if ([segueIdentifier isEqualToString:@"ERSSegue"])
+        vc.scoreType = @"ERSRisk";
     
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])

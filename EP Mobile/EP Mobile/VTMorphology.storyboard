@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ntH-d0-hOl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RBBB in V1-->
+        <scene sceneID="wD2-q2-jc9">
+            <objects>
+                <viewController id="eSD-vw-Urv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YOO-nN-huq"/>
+                        <viewControllerLayoutGuide type="bottom" id="aCU-aB-bhQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
+                                <rect key="frame" x="20" y="144" width="335" height="379"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QFC-cs-lDR" secondAttribute="height" multiplier="160:181" id="x8K-Ly-hcX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QFC-cs-lDR" secondAttribute="centerX" id="NGp-QI-Ow2"/>
+                            <constraint firstItem="QFC-cs-lDR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AGZ-Tn-qml" secondAttribute="leading" constant="20" symbolic="YES" id="XTq-dQ-kwC"/>
+                            <constraint firstItem="QFC-cs-lDR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YOO-nN-huq" secondAttribute="bottom" constant="8" symbolic="YES" id="c6V-PI-5Rt"/>
+                            <constraint firstAttribute="centerY" secondItem="QFC-cs-lDR" secondAttribute="centerY" id="vxE-mi-hb1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RBBB in V1" image="rbbbicon.png" id="VmC-wy-YHg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gp-ge-oC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3934" y="-2185"/>
+        </scene>
+        <!--LBBB in V1-->
+        <scene sceneID="OFo-xx-IkS">
+            <objects>
+                <viewController id="DJv-41-R7G" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTl-Ud-HWT"/>
+                        <viewControllerLayoutGuide type="bottom" id="iFd-wc-3l4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
+                                <rect key="frame" x="20" y="150" width="335" height="367"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0bo-DH-ke2" secondAttribute="height" multiplier="320:351" id="KMH-cx-yCO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0bo-DH-ke2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qMw-Wp-VKo" secondAttribute="leading" constant="20" symbolic="YES" id="Dd0-we-csF"/>
+                            <constraint firstAttribute="centerY" secondItem="0bo-DH-ke2" secondAttribute="centerY" id="mFs-Kp-1YC"/>
+                            <constraint firstItem="0bo-DH-ke2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DTl-Ud-HWT" secondAttribute="bottom" constant="8" symbolic="YES" id="u0q-ej-oar"/>
+                            <constraint firstAttribute="centerX" secondItem="0bo-DH-ke2" secondAttribute="centerX" id="weg-FT-JJt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn4-e9-KqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5903" y="-2185"/>
+        </scene>
+        <!--Morphology Criteria-->
+        <scene sceneID="koM-V1-bil">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="ntH-d0-hOl" customClass="EPSTabBarViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Morphology Criteria" id="CXP-a6-5sq"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fCf-Nm-bYL">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DJv-41-R7G" kind="relationship" relationship="viewControllers" id="mfU-G3-8bi"/>
+                        <segue destination="eSD-vw-Urv" kind="relationship" relationship="viewControllers" id="qSA-9t-DoH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-4L-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4915" y="-2980"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lbbbicon.png" width="25" height="24"/>
+        <image name="lbbbmorphology.png" width="800" height="651"/>
+        <image name="rbbbicon.png" width="25" height="24"/>
+        <image name="rbbbmorphology.png" width="800" height="600"/>
+    </resources>
+</document>

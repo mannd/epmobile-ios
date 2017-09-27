@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSEntrainmentViewController : UIViewController
+@interface EPSEntrainmentViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *tclTextField;
 @property (strong, nonatomic) IBOutlet UITextField *ppiTextField;
 @property (strong, nonatomic) IBOutlet UISwitch *concealedFusionSwitch;

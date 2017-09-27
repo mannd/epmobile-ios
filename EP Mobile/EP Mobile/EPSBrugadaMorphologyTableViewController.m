@@ -9,6 +9,7 @@
 #import "EPSBrugadaMorphologyTableViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 #define LBBB_TAG 0
 #define RBBB_TAG 1
@@ -104,10 +105,8 @@
     message = [message stringByAppendingFormat:@" (Sens=%@, Spec=%@) ", sens, spec];
     
     EPSLog(@"Calculating score...%d", count);
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"WCT Result" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alertView show];
-    
-    
+    [EPSSharedMethods showDialogWithTitle:@"WCT Result" andMessage:message inView:self];
+   
 }
 
 #pragma mark - Table view data source

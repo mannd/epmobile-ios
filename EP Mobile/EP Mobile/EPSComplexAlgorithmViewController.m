@@ -11,6 +11,7 @@
 #import "EPSNotesViewController.h"
 #import "EPSComplexStepAlgorithmProtocol.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 #define v24PosStep 2
 #define aVLStep 3
@@ -177,21 +178,10 @@
     }
 }
 
-
 - (void)showResults {
     NSString *details = [algorithm outcome:step];
     NSString *title = [algorithm resultDialogTitle];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
+    [EPSSharedMethods showDialogWithTitle:title andMessage:details inView:self];
 }
-
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    EPSLog(@"Button index = %ld", (long)buttonIndex);
-    [algorithm resetSteps:&step];
-    [self setButtons];
-    self.questionLabel.text = [algorithm step1];
-}
-
-
 
 @end

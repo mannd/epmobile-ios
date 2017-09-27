@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSHcmScd2014ViewController : UIViewController
-    <UIAlertViewDelegate>
+    <UIAlertViewDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) NSMutableArray *risks;
 @property (strong, nonatomic) IBOutlet UITextField *ageTextField;
 @property (strong, nonatomic) IBOutlet UITextField *thicknessTextField;

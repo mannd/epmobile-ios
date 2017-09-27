@@ -9,6 +9,7 @@
 #import "EPSDrugDoseCalculatorViewController.h"
 #import "EPSNotesViewController.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 #define DABIGATRAN @"Dabigatran"
 #define DOFETILIDE @"Dofetilide"
@@ -25,6 +26,8 @@
 #define INHIBITORS @"(e.g. ketoconazole, itraconazole, ritonavir, clarithromycin)."
 #define AFB_DOSING_ONLY_WARNING @"\nDosing only for non-valvular AF (not DVT/PE or other indications)"
 
+
+
 @interface EPSDrugDoseCalculatorViewController ()
 
 @end
@@ -34,6 +37,7 @@
     BOOL weightIsPounds;
     BOOL unitsAreMgPerDl;
     UITextField *activeField;
+    CGRect originalBounds;
 }
 @synthesize sexSegmentedControl;
 @synthesize ageField;
@@ -88,6 +92,10 @@
     [self.navigationController setToolbarHidden:YES];
     // see http://stackoverflow.com/questions/18967859/ios7-uiscrollview-offset-in-uinavigationcontroller
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    ageField.delegate = self;
+    weightField.delegate = self;
+    creatinineField.delegate = self;
     
     [self registerForKeyboardNotifications];
     
@@ -197,13 +205,10 @@
     details = [details stringByAppendingString:@"\n"];
     details = [details stringByAppendingString:[self getDetails:cc forAge:age]];
     self.resultLabel.text = details;
-
     
     if ([self hasWarning:cc]) {
         NSString *alertTitle = @"Warning";
-
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:details delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [EPSSharedMethods showDialogWithTitle:alertTitle andMessage:details inView:self];
     }
     
     [self saveResultsWithAge:age isMale:isMale weightInKgs:weight creatinine:creatinine creatinineClearance:cc];
@@ -433,19 +438,11 @@
     return @"";
 }
 
-
-- (IBAction)textFieldDoneEditing:(id)sender {
-    [sender resignFirstResponder];
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
-// This not longer works now that calculator is in a scrollView
-- (IBAction)backgroundTap:(id)sender {
-    [ageField resignFirstResponder];
-    [weightField resignFirstResponder];
-    [creatinineField resignFirstResponder];
-}
-
-// Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -458,18 +455,32 @@
     
 }
 
-// Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
+//
+//    [UIView animateWithDuration:0.3
+//                          delay:0
+//                        options: UIViewAnimationOptionCurveEaseInOut
+//                     animations:^{
+//                         CGRect frame = self.scrollView.frame;
+//                         originalBounds = frame;
+//                         frame.origin.y = -80;
+//                         self.scrollView.frame = frame;
+//
+//                     }
+//                     completion:nil];
+
     NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    NSLog(@"Keyboard will be shown");
+    // see https://stackoverflow.com/questions/45689664/ios-11-keyboard-height-is-returning-0-in-keyboard-notification
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
-    
+
     // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your app might not need or want this behavior.
+    
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
     if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
@@ -477,9 +488,22 @@
     }
 }
 
-// Called when the UIKeyboardWillHideNotification is sent
+
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
+    
+    NSLog(@"keyboardWillBeHidden");
+
+//    [UIView animateWithDuration:0.3
+//                          delay:0
+//                        options: UIViewAnimationOptionCurveEaseInOut
+//                     animations:^{
+////                         CGRect frame = self.scrollView.frame;
+////                         frame.origin.y = 50;
+//                         self.scrollView.frame = originalBounds;
+//
+//                     }
+//                     completion:nil];
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;

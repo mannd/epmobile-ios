@@ -9,6 +9,7 @@
 #import "EPSLQTSViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
+#import "EPSSharedMethods.h"
 
 @interface EPSLQTSViewController ()
 
@@ -108,10 +109,7 @@
         score -= 10;
         
     NSString *message = [self getResultsMessage:score];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Risk Score" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    // left justify message
-    //((UILabel *)[[alertView subviews] objectAtIndex:1]).textAlignment = UITextAlignmentLeft;
-    [alertView show];
+    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:message inView:self];
 }
     
 - (NSString *)getResultsMessage:(int)score {

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WPW-->
+        <scene sceneID="vVV-kV-uUe">
+            <objects>
+                <tableViewController storyboardIdentifier="UITableViewController-qaF-mx-6rF" id="qaF-mx-6rF" customClass="EPSWPWTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="8A3-4i-xlu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YtH-wy-IX4" style="IBUITableViewCellStyleDefault" id="Xky-X8-SF0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xky-X8-SF0" id="v4G-ON-2qm">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Anatomy of AV Annulus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YtH-wy-IX4">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="YrN-55-ygA" kind="show" id="pFv-5Z-NQa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3fL-sW-Ock" style="IBUITableViewCellStyleDefault" id="Y0H-RR-a6e">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y0H-RR-a6e" id="npq-MV-RLZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Arruda Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3fL-sW-Ock">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pik-u4-CUV" kind="show" identifier="ArrudaSegue" id="5Lp-eh-9Dd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NCt-G2-tIw" style="IBUITableViewCellStyleDefault" id="UFQ-kS-z0U">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UFQ-kS-z0U" id="2PG-Yv-zvv">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="D'Avila Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NCt-G2-tIw">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pik-u4-CUV" kind="show" identifier="DavilaSegue" id="vC8-JH-AOS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M26-3b-beC" style="IBUITableViewCellStyleDefault" id="IdX-G4-Nag">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IdX-G4-Nag" id="lf8-Ck-UaF">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Milstein Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M26-3b-beC">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pik-u4-CUV" kind="show" identifier="MilsteinSegue" id="Rd3-Ia-06S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5Zy-nJ-FWL" style="IBUITableViewCellStyleDefault" id="eMv-Oo-REm">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eMv-Oo-REm" id="qnE-WK-bMw">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Modified Arruda Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Zy-nJ-FWL">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pik-u4-CUV" kind="show" identifier="ModifiedArrudaSegue" id="n92-eI-ba6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qaF-mx-6rF" id="faa-Ku-Y87"/>
+                            <outlet property="delegate" destination="qaF-mx-6rF" id="k6m-aI-NwZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="WPW" id="w9O-uo-1O7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgk-ng-1ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3607" y="-2036"/>
+        </scene>
+        <!--AV Annulus-->
+        <scene sceneID="LXY-4s-Z6Q">
+            <objects>
+                <viewController storyboardIdentifier="AnnulusMap" id="YrN-55-ygA" customClass="EPSAVAnnulusViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jT9-Lx-kwT"/>
+                        <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gWp-Vz-OiS" secondAttribute="height" multiplier="320:289" id="laE-o7-7fs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RrO-cy-PwH" secondAttribute="height" multiplier="320:289" id="JZv-Mw-ycV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fVz-e0-JTT" secondAttribute="height" multiplier="320:289" id="LOF-b6-6cH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0rb-g4-jki" secondAttribute="height" multiplier="320:289" id="DFO-wB-J0h"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mIa-S1-Y7q" secondAttribute="height" multiplier="320:289" id="zQQ-eD-mdR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AHB-u6-JtR" secondAttribute="height" multiplier="320:289" id="Nfe-0N-SSm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SEs-Ji-GrW" secondAttribute="height" multiplier="320:289" id="yEv-6t-Bvu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9I9-Uu-U8T" secondAttribute="height" multiplier="320:289" id="ZNb-vG-7DJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Sff-vt-pYQ" secondAttribute="height" multiplier="320:289" id="fxU-M2-bXx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gco-M8-5yJ" secondAttribute="height" multiplier="320:289" id="xFf-ib-lTS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fc8-nj-Uaz" secondAttribute="height" multiplier="320:289" id="b8A-OD-UVk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xHX-bV-EvX" secondAttribute="height" multiplier="320:289" id="IVx-9k-zp6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QBL-OF-jfK" secondAttribute="height" multiplier="320:289" id="x88-o9-4Wi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IWU-ux-lqO" secondAttribute="height" multiplier="320:289" id="5lZ-hf-57q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
+                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-Ed-jco">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mIa-S1-Y7q" secondAttribute="centerX" id="0yk-yx-Oag"/>
+                            <constraint firstItem="RrO-cy-PwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="3AV-Vm-hxK"/>
+                            <constraint firstItem="rGc-dy-KlA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="4a3-Yn-tWW"/>
+                            <constraint firstAttribute="centerY" secondItem="IWU-ux-lqO" secondAttribute="centerY" id="71I-cN-gxV"/>
+                            <constraint firstItem="gco-M8-5yJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="9c0-Oy-znX"/>
+                            <constraint firstAttribute="centerY" secondItem="fVz-e0-JTT" secondAttribute="centerY" id="AsT-Ra-ply"/>
+                            <constraint firstItem="SEs-Ji-GrW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="BaC-RJ-a9R"/>
+                            <constraint firstAttribute="centerX" secondItem="rGc-dy-KlA" secondAttribute="centerX" id="ByK-2e-QYh"/>
+                            <constraint firstItem="QBL-OF-jfK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="CmT-Ju-4cu"/>
+                            <constraint firstAttribute="centerY" secondItem="RrO-cy-PwH" secondAttribute="centerY" id="Dbp-d8-hQY"/>
+                            <constraint firstItem="xHX-bV-EvX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="Hpb-jx-LIU"/>
+                            <constraint firstAttribute="centerX" secondItem="gWp-Vz-OiS" secondAttribute="centerX" id="MkM-pf-tXj"/>
+                            <constraint firstAttribute="centerX" secondItem="Sff-vt-pYQ" secondAttribute="centerX" id="Nkd-RK-iiS"/>
+                            <constraint firstItem="IWU-ux-lqO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="PUv-IM-3Xi"/>
+                            <constraint firstAttribute="centerY" secondItem="QBL-OF-jfK" secondAttribute="centerY" id="ROg-Tn-yCu"/>
+                            <constraint firstItem="9I9-Uu-U8T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="RXL-Q9-QTw"/>
+                            <constraint firstItem="gWp-Vz-OiS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="Rjx-eF-qJp"/>
+                            <constraint firstAttribute="centerX" secondItem="IWU-ux-lqO" secondAttribute="centerX" id="S2R-eU-uuo"/>
+                            <constraint firstAttribute="centerX" secondItem="RrO-cy-PwH" secondAttribute="centerX" id="T0Y-MO-Q8Y"/>
+                            <constraint firstAttribute="centerX" secondItem="AHB-u6-JtR" secondAttribute="centerX" id="TMX-hF-N5C"/>
+                            <constraint firstAttribute="centerY" secondItem="Sff-vt-pYQ" secondAttribute="centerY" id="WeV-FE-9ng"/>
+                            <constraint firstItem="rGc-dy-KlA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="XmV-Uf-hUG"/>
+                            <constraint firstAttribute="centerX" secondItem="gco-M8-5yJ" secondAttribute="centerX" id="Ych-cG-2ft"/>
+                            <constraint firstItem="Sff-vt-pYQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="Yd7-it-821"/>
+                            <constraint firstAttribute="centerY" secondItem="Fc8-nj-Uaz" secondAttribute="centerY" id="ahU-jY-p6h"/>
+                            <constraint firstItem="gWp-Vz-OiS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="ar1-vB-I8s"/>
+                            <constraint firstAttribute="centerY" secondItem="AHB-u6-JtR" secondAttribute="centerY" id="bdd-Q0-Sut"/>
+                            <constraint firstItem="Fc8-nj-Uaz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="bgM-lT-jgp"/>
+                            <constraint firstAttribute="centerX" secondItem="9I9-Uu-U8T" secondAttribute="centerX" id="cNY-0v-WWE"/>
+                            <constraint firstAttribute="centerY" secondItem="9I9-Uu-U8T" secondAttribute="centerY" id="cSS-e3-cxR"/>
+                            <constraint firstItem="0rb-g4-jki" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="cid-s0-eZW"/>
+                            <constraint firstAttribute="centerY" secondItem="rGc-dy-KlA" secondAttribute="centerY" id="dxk-XJ-J4m"/>
+                            <constraint firstItem="9I9-Uu-U8T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="edd-ho-Lf5"/>
+                            <constraint firstItem="mIa-S1-Y7q" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="hJW-E5-ulx"/>
+                            <constraint firstItem="gco-M8-5yJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="hax-nJ-sIt"/>
+                            <constraint firstAttribute="centerX" secondItem="Fc8-nj-Uaz" secondAttribute="centerX" id="hb0-FY-rQw"/>
+                            <constraint firstItem="fVz-e0-JTT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="htK-11-yc0"/>
+                            <constraint firstAttribute="centerY" secondItem="mIa-S1-Y7q" secondAttribute="centerY" id="i5O-XQ-dPJ"/>
+                            <constraint firstItem="0rb-g4-jki" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="kAX-oz-kIZ"/>
+                            <constraint firstAttribute="centerX" secondItem="0rb-g4-jki" secondAttribute="centerX" id="lUh-In-3Gh"/>
+                            <constraint firstAttribute="centerY" secondItem="xHX-bV-EvX" secondAttribute="centerY" id="mHI-wZ-3pm"/>
+                            <constraint firstItem="mIa-S1-Y7q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="nKb-Va-8Ta"/>
+                            <constraint firstAttribute="centerX" secondItem="SEs-Ji-GrW" secondAttribute="centerX" id="njb-aQ-kqJ"/>
+                            <constraint firstItem="RrO-cy-PwH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="oMx-Tm-RZ0"/>
+                            <constraint firstAttribute="centerY" secondItem="gco-M8-5yJ" secondAttribute="centerY" id="oRb-ej-q7r"/>
+                            <constraint firstItem="AHB-u6-JtR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="oS9-JA-TD5"/>
+                            <constraint firstAttribute="centerX" secondItem="xHX-bV-EvX" secondAttribute="centerX" id="oWk-75-kf1"/>
+                            <constraint firstAttribute="centerY" secondItem="gWp-Vz-OiS" secondAttribute="centerY" id="owF-LL-5Tg"/>
+                            <constraint firstAttribute="centerX" secondItem="fVz-e0-JTT" secondAttribute="centerX" id="pA2-Ux-4cw"/>
+                            <constraint firstAttribute="centerY" secondItem="SEs-Ji-GrW" secondAttribute="centerY" id="paP-sv-z7w"/>
+                            <constraint firstItem="AHB-u6-JtR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="qHv-fC-cP9"/>
+                            <constraint firstItem="Sff-vt-pYQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="rEf-Mj-HrC"/>
+                            <constraint firstAttribute="centerX" secondItem="QBL-OF-jfK" secondAttribute="centerX" id="rOK-hW-iw9"/>
+                            <constraint firstItem="Fc8-nj-Uaz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="rsO-xR-hhG"/>
+                            <constraint firstItem="SEs-Ji-GrW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="tJu-Bl-weI"/>
+                            <constraint firstItem="IWU-ux-lqO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="tg8-Qs-8ts"/>
+                            <constraint firstItem="QBL-OF-jfK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="tup-aa-mbI"/>
+                            <constraint firstAttribute="centerY" secondItem="0rb-g4-jki" secondAttribute="centerY" id="ych-Xp-ygO"/>
+                            <constraint firstItem="xHX-bV-EvX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="zAk-6R-aLr"/>
+                            <constraint firstItem="fVz-e0-JTT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jT9-Lx-kwT" secondAttribute="bottom" constant="8" symbolic="YES" id="zLc-pi-RuU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AV Annulus" id="sPs-U4-Zla"/>
+                    <connections>
+                        <outlet property="asapImageView" destination="RrO-cy-PwH" id="nvb-vU-jbH"/>
+                        <outlet property="epicardialapImageView" destination="fVz-e0-JTT" id="liH-4L-bql"/>
+                        <outlet property="lalapImageView" destination="0rb-g4-jki" id="TOO-hy-dEp"/>
+                        <outlet property="llapImageView" destination="mIa-S1-Y7q" id="px7-6r-hME"/>
+                        <outlet property="lpapImageView" destination="AHB-u6-JtR" id="aIh-gD-b4l"/>
+                        <outlet property="lplapImageView" destination="SEs-Ji-GrW" id="mqb-jS-bCZ"/>
+                        <outlet property="mapImageView" destination="gWp-Vz-OiS" id="j1K-2r-TuS"/>
+                        <outlet property="mapLocationLabel" destination="kKB-Ed-jco" id="Os3-lo-pdu"/>
+                        <outlet property="msapImageView" destination="9I9-Uu-U8T" id="OgN-bA-gyd"/>
+                        <outlet property="psmaapImageView" destination="Sff-vt-pYQ" id="sq7-Ab-v9f"/>
+                        <outlet property="pstaapImageView" destination="gco-M8-5yJ" id="N5k-Bu-ZZJ"/>
+                        <outlet property="raapImageView" destination="Fc8-nj-Uaz" id="7eM-QJ-rdD"/>
+                        <outlet property="ralapImageView" destination="xHX-bV-EvX" id="8NH-6g-PNL"/>
+                        <outlet property="rlapImageView" destination="QBL-OF-jfK" id="zWF-6o-NH8"/>
+                        <outlet property="rpapImageView" destination="rGc-dy-KlA" id="QWp-Z3-d7q"/>
+                        <outlet property="rplapImageView" destination="IWU-ux-lqO" id="ez2-YR-BD4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXH-Fk-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3607" y="-1310"/>
+        </scene>
+        <!--SimpleAlgorithm-->
+        <scene sceneID="R4t-Er-xOc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SimpleAlgorithm" storyboardName="MainStoryboard" referencedIdentifier="SimpleAlgorithm" id="pik-u4-CUV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRM-Tg-pau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2580" y="-2036"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="asap.png" width="452" height="400"/>
+        <image name="epicardialap.png" width="452" height="400"/>
+        <image name="lalap.png" width="452" height="400"/>
+        <image name="llap.png" width="452" height="400"/>
+        <image name="lpap.png" width="452" height="400"/>
+        <image name="lplap.png" width="452" height="400"/>
+        <image name="modgrayavannulus.png" width="452" height="400"/>
+        <image name="msap.png" width="452" height="400"/>
+        <image name="psmaap.png" width="452" height="400"/>
+        <image name="pstaap.png" width="452" height="400"/>
+        <image name="raap.png" width="452" height="400"/>
+        <image name="ralap.png" width="452" height="400"/>
+        <image name="rlap.png" width="452" height="400"/>
+        <image name="rpap.png" width="452" height="400"/>
+        <image name="rplap.png" width="452" height="400"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rd3-Ia-06S"/>
+    </inferredMetricsTieBreakers>
+</document>
