@@ -19,10 +19,7 @@
 }
 
 - (NSString *)getReference {
-    return @"Antzelevitch C, Yan GX, Ackerman MJ, Borggrefe M, Corrado D, Guo J, et al.
-        J-wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge.
-        J Arrhythmia. [Internet] 2016 Oct [cited 2017 Sep 28];32(5):315-339.
-        Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5063270/";
+    return @"Antzelevitch C, Yan GX, Ackerman MJ, Borggrefe M, Corrado D, Guo J, et al. J-wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. J Arrhythmia. [Internet] 2016 Oct [cited 2017 Sep 28];32(5):315-339. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5063270/";
 }
 
 - (NSURL *)getReferenceLink {

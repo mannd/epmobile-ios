@@ -10,6 +10,8 @@
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
 
+#define NO_ECG_RISK_SCORE 1000
+
 @implementation EPSErsRiskScore
 
 -(NSString *)getTitle {
@@ -17,10 +19,7 @@
 }
 
 - (NSString *)getReference {
-    return @"Antzelevitch C, Yan GX, Ackerman MJ, Borggrefe M, Corrado D, Guo J, et al.
-        J-wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge.
-        J Arrhythmia. [Internet] 2016 Oct [cited 2017 Sep 28];32(5):315-339.
-        Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5063270/";
+    return @"Antzelevitch C, Yan GX, Ackerman MJ, Borggrefe M, Corrado D, Guo J, et al. J-wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. J Arrhythmia. [Internet] 2016 Oct [cited 2017 Sep 28];32(5):315-339. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5063270/";
 }
 
 - (NSURL *)getReferenceLink {
@@ -57,11 +56,14 @@
     NSArray *ambulatoryEcgRisks = [risks subarrayWithRange: NSMakeRange(6, 1)];
     NSArray *familyRisks = [risks subarrayWithRange:NSMakeRange(7, 4)];
     NSArray *geneticRisks = [risks subarrayWithRange:NSMakeRange(11, 1)];
-    return [self findMaxPoints:clinicalRisks] +
-      [self findMaxPoints:ecgRisks] +
-      [self findMaxPoints:ambulatoryEcgRisks] +
-        [self findMaxPoints:familyRisks] +
-        [self findMaxPoints:geneticRisks];
+    int ecgPoints = [self findMaxPoints:ecgRisks];
+    if (ecgPoints == 0) {
+        return NO_ECG_RISK_SCORE;
+    }
+    return [self findMaxPoints:clinicalRisks] + ecgPoints +
+          [self findMaxPoints:ambulatoryEcgRisks] +
+            [self findMaxPoints:familyRisks] +
+            [self findMaxPoints:geneticRisks];
 }
 
 - (int)findMaxPoints:(NSArray *)risks {
@@ -90,6 +92,9 @@
 
 
 - (NSString *)getMessage:(int)score {
+    if (score == NO_ECG_RISK_SCORE) {
+        return @"Score requires at least 1 ECG finding.";
+    }
     double riskScore = score / 10.0;
     NSString *message = [NSString stringWithFormat:@"Risk score = %.1f\n", riskScore];
     if (riskScore >= 5) {
