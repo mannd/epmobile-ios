@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EPSCMSModel.h"
 
 @interface EPSCMSViewModel : NSObject
+
+- (NSString *)getMessage;
+- (NSString *)getMessageFromResult:(struct Result)result;
 
 @end

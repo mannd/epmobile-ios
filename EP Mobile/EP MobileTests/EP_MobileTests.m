@@ -17,6 +17,7 @@
 #import "EPSChadsRiskScore.h"
 #import "EPSQTMethods.h"
 #import "EPSCMSModel.h"
+#import "EPSCMSViewModel.h"
 
 #define MESSAGE_L @"Actual result was %ld"
 
@@ -325,6 +326,40 @@
 
 - (EPSCMSModel *)newModel {
     return [[EPSCMSModel alloc] init];
+}
+
+- (void)testCMSViewModel {
+    EPSCMSViewModel *viewModel = [[EPSCMSViewModel alloc] init];
+    NSString *message = [viewModel getMessage];
+    struct Result result;
+    result.indication = Secondary;
+    result.approval = NotApproved;
+    result.details = DetailsNone;
+    message = [viewModel getMessageFromResult:result];
+    XCTAssert([message isEqualToString:@"Secondary Prevention\nICD implantation does NOT meet CMS guidelines."]);
+    result.indication = Primary;
+    result.approval = Approved;
+    message = [viewModel getMessageFromResult:result];
+    XCTAssert([message isEqualToString:@"Primary Prevention\nICD implantation appears to meet CMS guidelines."]);
+    result.indication = Other;
+    result.approval = ApprovalUnclear;
+    message = [viewModel getMessageFromResult:result];
+    XCTAssert([message isEqualToString:@"Other Indication\nNot enough information to determine if ICD is indicated."]);
+    result.indication = IndicationNone;
+    message = [viewModel getMessageFromResult:result];
+    XCTAssert([message isEqualToString:@"\nNot enough information to determine if ICD is indicated."]);
+    result.approval = Approved;
+    result.indication = Other;
+    message = [viewModel getMessageFromResult:result];
+    XCTAssert([message isEqualToString:@"Other Indication\nICD implantation appears to meet CMS guidelines."]);
+    result.indication = Primary;
+    result.details = AbsoluteExclusion;
+    result.approval = NotApproved;
+    message = [viewModel getMessageFromResult:result];
+    XCTAssert([message isEqualToString:@"Primary Prevention\nICD implantation does NOT meet CMS guidelines.\nThere are one or more absolute exclusions to ICD implantation."]);
+    
+
+
 }
 
 @end
