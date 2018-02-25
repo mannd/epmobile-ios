@@ -27,6 +27,7 @@
         brainDamage:(BOOL)brainDamage uncontrolledSvt:(BOOL)uncontrolledSvt {
     self = [super init];
     if (self) {
+        model = [[EPSCMSModel alloc] init];
         model.susVT = susVT;
         model.cardiacArrest = cardiacArrest;
         model.priorMI = priorMI;

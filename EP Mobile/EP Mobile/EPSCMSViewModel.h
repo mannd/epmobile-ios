@@ -13,5 +13,13 @@
 
 - (NSString *)getMessage;
 - (NSString *)getMessageFromResult:(struct Result)result;
+- (id)initWithSusVT:(BOOL)susVT cardiacArrest:(BOOL)cardiacArrest
+            priorMI:(BOOL)priorMI icm:(BOOL)icm nicm:(BOOL)nicm
+  highRiskCondition:(BOOL)highRiskCondition icdAtEri:(BOOL)icdAtEri
+     transplantList:(BOOL)transplantList ef:(EF)ef
+               nyha:(Nyha)nyha cabgWithin3Months:(BOOL)cabgWithin3Months
+     miWithin40Days:(BOOL)miWithin40Days candidateForRevasc:(BOOL)candidateForRevasc
+   cardiogenicShock:(BOOL)cardiogenicShock nonCardiacDisease:(BOOL)nonCardiacDisease
+        brainDamage:(BOOL)brainDamage uncontrolledSvt:(BOOL)uncontrolledSvt;
 
 @end
