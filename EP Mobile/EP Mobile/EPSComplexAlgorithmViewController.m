@@ -24,7 +24,7 @@
 
 @end
 
-@implementation EPSComplexAlgorithmViewController {
+@implementation EPSComplexAlgorithmViewController  {
     id<EPSComplexStepAlgorithmProtocol> algorithm;
   
 }
@@ -181,7 +181,19 @@
 - (void)showResults {
     NSString *details = [algorithm outcome:step];
     NSString *title = [algorithm resultDialogTitle];
-    [EPSSharedMethods showDialogWithTitle:title andMessage:details inView:self];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:details preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * action) {
+                                                              [algorithm resetSteps:&step];
+                                                              self.questionLabel.text = [algorithm step1];
+                                                              [self setButtons];
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
+
 
 @end
