@@ -12,35 +12,36 @@
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"
+#import "EPSCMSViewModel.h"
 
 // these magic numbers are in Data.plist
-#define CARDIAC_ARREST 0
-#define SUS_VT 1
-#define FAMILIAL_CONDITION 2
+#define SUS_VT 0
+#define CARDIAC_ARREST 1
+#define MI 2
 #define ISCHEMIC_CM 3
 #define NONISCHEMIC_CM 4
-#define LONG_DURATION_CM 5
-#define MI 6
-#define INDUCIBLE_VT 7
-#define QRS_DURATION_LONG 8
-#define CARDIOGENIC_SHOCK 9
-#define RECENT_CABG 10
-#define RECENT_MI 11
-#define RECENT_MI_EPS 12
-#define REVASCULARIZATION_CANDIDATE 13
-#define BAD_PROGNOSIS 14
-#define BRAIN_DAMAGE 15
-#define ABSOLUTE_EXCLUSION 100
-#define POSSIBLE_INDICATION 200
+#define FAMILIAL_CONDITION 5
+#define ICD_ERI 6
+#define TRANSPLANT_CANDIDATE 7
+#define RECENT_CABG 8
+#define RECENT_MI 9
+#define REVASCULARIZATION_CANDIDATE 10
+#define CARDIOGENIC_SHOCK 11
+#define BAD_PROGNOSIS 12
+#define BRAIN_DAMAGE 13
+#define UNCONTROLLED_SVT 14
 
-#define DEFAULT_CELL_HEIGHT 60
-#define BIG_CELL_HEIGHT 80
+#define DEFAULT_CELL_HEIGHT 80
+#define BIG_CELL_HEIGHT 120
 
 @interface EPSCMSViewController ()
 
 @end
 
 @implementation EPSCMSViewController
+{
+    EPSCMSViewModel *viewModel;
+}
 @synthesize efSegmentedControl;
 @synthesize hfClassSegmentedControl;
 @synthesize criteriaTableView;
@@ -141,30 +142,10 @@
     return [self.checkedItems containsObject:[NSNumber numberWithInt:item]];
 }
 
-- (BOOL)absoluteExclusion {
-    return ([self itemIsChecked:CARDIOGENIC_SHOCK] || [self itemIsChecked:REVASCULARIZATION_CANDIDATE] || [self itemIsChecked:BAD_PROGNOSIS]);
-}
-
-
-
 - (IBAction)calculateResult:(id)sender {
-    [self calculateCheckedItems];
-    int result = -1;
-    // according to NCD, brain damage excludes all indications
-    if ([self itemIsChecked:BRAIN_DAMAGE])
-        result = BRAIN_DAMAGE;
-    else if ([self itemIsChecked:CARDIAC_ARREST])
-        result = CARDIAC_ARREST;
-    else if ([self itemIsChecked:SUS_VT])
-        result = SUS_VT;
-    else if ([self absoluteExclusion])
-        result = ABSOLUTE_EXCLUSION;
-    else if ([self itemIsChecked:FAMILIAL_CONDITION])
-        result = FAMILIAL_CONDITION;
-    else
-        result = POSSIBLE_INDICATION;
-    EPSLog(@"CMS result = %d", result);
-    [self showResults:[self getResultMessage:result]];
+    [self createViewModel];
+    NSString *message = viewModel.getMessage;
+    [self showResults:message];
 }
 
 - (void)showResults:(NSString *)message {
@@ -172,95 +153,58 @@
     [EPSSharedMethods showDialogWithTitle:title andMessage:message inView:self];
 }
 
-- (NSString *)getResultMessage:(int)result {
-    NSString *icdApprovedMessage = @"ICD implantation appears to meet CMS guidelines.";
-    NSString *icdNotApprovedMessage = @"ICD implantation does NOT meet CMS guidelines.";
-    NSString *crtApprovedMessage = @"\nUse of a CRT-ICD may be indicated.";
-    NSString *message = @"";
-    if (result == BRAIN_DAMAGE) {
-        message = [message stringByAppendingString:icdNotApprovedMessage];
-        message = [message stringByAppendingString:@"\nIrreversible brain damage is an absolute exclusion for ICD implantation."];
-        return message;
-    }
-    BOOL efLessThan30 = [self.efSegmentedControl selectedSegmentIndex] == 2;
-    BOOL efLessThan35 = efLessThan30 || [self.efSegmentedControl selectedSegmentIndex] == 1;
-    BOOL nyhaIIorIII = [self.hfClassSegmentedControl selectedSegmentIndex] == 1 || [self.hfClassSegmentedControl selectedSegmentIndex] == 2;
-    BOOL nyhaIV = [self.hfClassSegmentedControl selectedSegmentIndex] == 3;
-    BOOL nyhaIIIorIV = nyhaIV || [self.hfClassSegmentedControl selectedSegmentIndex] == 2;
-    BOOL crtCriteriaMet = nyhaIIIorIV && [self itemIsChecked:QRS_DURATION_LONG] && efLessThan35;
-    // no ef or NHYA class needed for secondary prevention
-    if (result == CARDIAC_ARREST || result == SUS_VT) {
-        message = [message stringByAppendingString:@"Secondary Prevention\n"];
-        message = [message stringByAppendingString:icdApprovedMessage];
-        if (crtCriteriaMet)
-            message = [message stringByAppendingString:crtApprovedMessage];
-        return message;
-    }
-    message = [message stringByAppendingString:@"Primary Prevention\n"];
-    // check absolute exclusions since they apply to all other indications
-    if (result == ABSOLUTE_EXCLUSION) {
-        message = [message stringByAppendingString:icdNotApprovedMessage];
-        message = [message stringByAppendingString:@"\nICD implantation has one or more exclusions"];
-        return message;
-    }
-    if (result == FAMILIAL_CONDITION) {
-        message = [message stringByAppendingString:icdApprovedMessage];
-        if (crtCriteriaMet)
-            message = [message stringByAppendingString:crtApprovedMessage];
-        return message;
-    }
-	// primary prevention except for familial condition needs ef and NYHA
-    // class (because NYHA class IV is an exclusion except for CRT)
-    // Since no radio buttons in iOS version, don't need to check to see
-    // if these are selected, like we do in Android version.
-    
-    // Now work out possible indications
-    BOOL indicated = NO;
-    // MADIT II -- note MADIT II explicitly excludes class IV,
-    // but Guideline 8 allows class IV if QRS wide
-    indicated = efLessThan30 && [self itemIsChecked:MI] && (!nyhaIV || crtCriteriaMet);
-	// MADIT
-    BOOL maditIndication = NO;
-    if (!indicated) {
-        indicated = efLessThan35 && [self itemIsChecked:MI] && [self itemIsChecked:INDUCIBLE_VT];
-        if (indicated)
-            maditIndication = true;
-    }
-	// SCD-Heft Ischemic CM
-    if (!indicated)
-        indicated = efLessThan35 && [self itemIsChecked:ISCHEMIC_CM]
-        && [self itemIsChecked:MI]
-        && (nyhaIIorIII || crtCriteriaMet);
-    // SCD-Heft Nonischemic CM
-	if (!indicated)
-        indicated = efLessThan35 && [self itemIsChecked:NONISCHEMIC_CM]
-        && (nyhaIIorIII || crtCriteriaMet)
-        && [self itemIsChecked:LONG_DURATION_CM];
-    
-    if (indicated) {
-        if ([self itemIsChecked:RECENT_MI]) {
-            message = [message stringByAppendingString:icdNotApprovedMessage];
-            message = [message stringByAppendingString:@"\nICD implantation is too soon post MI."];
-        } else if (maditIndication && [self itemIsChecked:RECENT_MI_EPS]) {
-            message = [message stringByAppendingString:icdNotApprovedMessage];
-            message = [message stringByAppendingString:@"\nEPS performed too soon post MI."];
-        } else if ([self itemIsChecked:RECENT_CABG]) {
-            message = [message stringByAppendingString:icdNotApprovedMessage];
-            message = [message stringByAppendingString:@"\nICD implantation is too soon post myocardial revascularization"];
-        } else if (crtCriteriaMet && nyhaIV) // CRT-ICD must be used for
-            // NYHA IV
-            message = [message stringByAppendingString:@"CRT-ICD implantation appears to meet CMS guidelines."];
-        else {
-            message = [message stringByAppendingString:icdApprovedMessage];
-            if (crtCriteriaMet)
-                message = [message stringByAppendingString:crtApprovedMessage];
-        }
-    } else
-        message = [message stringByAppendingString:icdNotApprovedMessage];
 
+- (void)createViewModel {
+    EF ef;
+    switch ([self.efSegmentedControl selectedSegmentIndex]) {
+        case 0:
+            ef = EFMoreThan35;
+            break;
+        case 1:
+            ef = EFFrom30To35;
+            break;
+        case 2:
+            ef = EFLessThan30;
+            break;
+        default:
+            ef = EFNA;
+    }
+    Nyha nyha;
+    switch ([self.hfClassSegmentedControl selectedSegmentIndex]) {
+        case 0:
+            nyha = NyhaI;
+            break;
+        case 1:
+            nyha = NyhaII;
+            break;
+        case 2:
+            nyha = NyhaIII;
+            break;
+        case 3:
+            nyha = NyhaIV;
+            break;
+        default:
+            nyha = NyhaNA;
+    }
+    [self calculateCheckedItems];
+    viewModel = [[EPSCMSViewModel alloc] initWithSusVT:[self itemIsChecked:SUS_VT]
+                                                          cardiacArrest:[self itemIsChecked:CARDIAC_ARREST]
+                                                                priorMI:[self itemIsChecked:MI]
+                                                                    icm:[self itemIsChecked:ISCHEMIC_CM]
+                                                                   nicm:[self itemIsChecked:NONISCHEMIC_CM]
+                                                      highRiskCondition:[self itemIsChecked:FAMILIAL_CONDITION]
+                                                               icdAtEri:[self itemIsChecked:ICD_ERI]
+                                                         transplantList:[self itemIsChecked:TRANSPLANT_CANDIDATE]
+                                                                     ef:ef nyha:nyha
+                                                      cabgWithin3Months:[self itemIsChecked:RECENT_CABG]
+                                                         miWithin40Days:[self itemIsChecked:RECENT_MI]
+                                                     candidateForRevasc:[self itemIsChecked:REVASCULARIZATION_CANDIDATE]
+                                                       cardiogenicShock:[self itemIsChecked:CARDIOGENIC_SHOCK]
+                                                      nonCardiacDisease:[self itemIsChecked:BAD_PROGNOSIS]
+                                                            brainDamage:[self itemIsChecked:BRAIN_DAMAGE]
+                                                        uncontrolledSvt:[self itemIsChecked:UNCONTROLLED_SVT]];
     
     
-    return message;
 }
 
 
@@ -294,7 +238,6 @@
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
-   
     NSString *text = [[[self.list objectAtIndex:section] objectAtIndex:row ] name];
     cell.textLabel.text = text;
     
@@ -308,8 +251,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     // this is very tweaky
-    if (([indexPath section] == 0 && [indexPath row] == 1) ||
-        ([indexPath section] == 1 && [indexPath row] == 0))
+    if ([indexPath section] == 0 ||
+        ([indexPath section] == 1 && [indexPath row] == 3))
         return BIG_CELL_HEIGHT;
     else
         return DEFAULT_CELL_HEIGHT;
@@ -320,8 +263,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSUInteger row = indexPath.row;
     NSUInteger section = indexPath.section;

@@ -13,6 +13,4 @@
 
 @interface EPSOutflowVTAlgorithm : NSObject <EPSStepAlgorithmProtocol>
 - (void)adjustStepsForward:(int)step;
-
-
 @end

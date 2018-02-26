@@ -43,6 +43,8 @@
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
+		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
+		8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */; };
 		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
@@ -56,6 +58,7 @@
 		8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */; };
 		8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */; };
 		8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */; };
+		8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E39950A204328520079E391 /* EPSCMSStrings.m */; };
 		8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */; };
 		8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */; };
 		8E4B27AC1633449100BF1F2C /* asap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AB1633449100BF1F2C /* asap.png */; };
@@ -249,6 +252,10 @@
 		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
+		8E24EDB9203F375300C49B66 /* EPSCMSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSModel.h; sourceTree = "<group>"; };
+		8E24EDBA203F375300C49B66 /* EPSCMSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSModel.m; sourceTree = "<group>"; };
+		8E24EDBC203F3D2100C49B66 /* EPSCMSViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewModel.h; sourceTree = "<group>"; };
+		8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewModel.m; sourceTree = "<group>"; };
 		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
 		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
@@ -271,6 +278,8 @@
 		8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEntrainmentNotes.m; sourceTree = "<group>"; };
 		8E37A5A8170126FA004E66B2 /* EPSComplexAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexAlgorithmViewController.h; sourceTree = "<group>"; };
 		8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSComplexAlgorithmViewController.m; sourceTree = "<group>"; };
+		8E399509204328520079E391 /* EPSCMSStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSStrings.h; sourceTree = "<group>"; };
+		8E39950A204328520079E391 /* EPSCMSStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSStrings.m; sourceTree = "<group>"; };
 		8E44005815BA4571009169DC /* EPSWarfarinCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinCalculatorViewController.h; sourceTree = "<group>"; };
 		8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinCalculatorViewController.m; sourceTree = "<group>"; };
 		8E44006015BC4B22009169DC /* EPSWarfarinDosingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDosingTableViewController.h; sourceTree = "<group>"; };
@@ -574,6 +583,19 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		8E24EDB8203F36DE00C49B66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E24EDB9203F375300C49B66 /* EPSCMSModel.h */,
+				8E24EDBA203F375300C49B66 /* EPSCMSModel.m */,
+				8E24EDBC203F3D2100C49B66 /* EPSCMSViewModel.h */,
+				8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */,
+				8E399509204328520079E391 /* EPSCMSStrings.h */,
+				8E39950A204328520079E391 /* EPSCMSStrings.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		8E71C2BA1F77546C00D198BD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,6 +795,7 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8E24EDB8203F36DE00C49B66 /* Models */,
 				8E71C2BA1F77546C00D198BD /* Storyboards */,
 				8E00E96817BC48710007A146 /* Headers */,
 				8E00E96317BC42E40007A146 /* Main */,
@@ -1075,6 +1098,7 @@
 				8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */,
 				8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */,
 				8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */,
+				8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */,
 				8E0DD7881631B50500DDC4CC /* EPSCMSNotes.m in Sources */,
 				8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */,
 				8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */,
@@ -1105,9 +1129,11 @@
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
+				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
+				8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */,
 				8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,

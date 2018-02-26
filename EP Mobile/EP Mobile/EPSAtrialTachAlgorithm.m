@@ -109,7 +109,7 @@ const int locationRSPV = 1009;
     if (*step == 1)
         *step = aVLStep;
     else
-        [self adjustStepsBackwards:step];
+        [self adjustStepsBackward:step];
     return [self getQuestion:*step];
 }
 
@@ -128,22 +128,26 @@ const int locationRSPV = 1009;
     return [self getQuestion:*step];
 }
 
-- (void)adjustStepsBackwards:(int *)step {
+- (void)adjustStepsBackward:(int *)step {
     switch (*step) {
-		case v24PosStep:
-		case aVLStep:
-		case bifidIIStep:
-			*step = 1;
-			break;
-		case negAllInfStep:
-			*step = v24PosStep;
-			break;
-		case negAllInf2Step:
-		case sinusRhythmPStep:
-			*step = bifidIIStep;
-			break;
+        case v24PosStep:
+        case aVLStep:
+        case bifidIIStep:
+            *step = 1;
+            break;
+        case negAllInfStep:
+            *step = v24PosStep;
+            break;
+        case negAllInf2Step:
+        case sinusRhythmPStep:
+            *step = bifidIIStep;
+            break;
     }
-    
+
+}
+
+- (void)resetSteps:(int *)step {
+    *step = 1;
 }
 
 
