@@ -62,18 +62,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setQuestionLabel:nil];
-    [self setButton1:nil];
-    [self setButton2:nil];
-    [self setButton3:nil];
-    [self setButton4:nil];
-    [self setButton5:nil];
-    [self setButton6:nil];
-    [self setInstructionsButton:nil];
-    [super viewDidUnload];
-}
-
 // his information really should be hidden in the algorithm, not view controller
 - (void) setButtons {
     if (step == 1) {
@@ -185,8 +173,8 @@
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
                                                           handler:^(UIAlertAction * action) {
-                                                              [algorithm resetSteps:&step];
-                                                              self.questionLabel.text = [algorithm step1];
+                                                              [self->algorithm resetSteps:&self->step];
+                                                              self.questionLabel.text = [self->algorithm step1];
                                                               [self setButtons];
                                                           }];
     

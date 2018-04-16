@@ -120,21 +120,6 @@
     self.defaultCreatinineUnit = [defaults objectForKey:@"defaultcreatinineunit"];
 }
 
-- (void)viewDidUnload
-{
-
-    [self setSexSegmentedControl:nil];
-    [self setAgeField:nil];
-    [self setWeightField:nil];
-    [self setWeightUnitsSegmentedControl:nil];
-    [self setCreatinineField:nil];
-    [self setResultLabel:nil];
-    [self setCreatinineUnitsSegmentedControl:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-
-}
-
 - (IBAction)toggleWeightUnits:(id)sender {
     //self.weightField.text  = nil;  this is bad if people enter weight first and then units, so it's gone.
     self.resultLabel.text = nil;

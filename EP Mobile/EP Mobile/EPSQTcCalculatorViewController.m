@@ -92,20 +92,6 @@
         [formulaPicker selectRow:3 inComponent:0 animated:YES];
 }
 
-- (void)viewDidUnload
-{
-    [self setInputField:nil];
-    [self setQtField:nil];
-    [self setResultLabel:nil];
-    [self setIntervalRateSegmentedControl:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    self.formulaPicker = nil;
-    self.formulaData = nil;
-    self.defaultQTcFormula = nil;
-}
-
 - (void)refreshDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.defaultQTcFormula = [defaults objectForKey:DEFAULT_QTC_FORMULA_KEY];

@@ -98,20 +98,6 @@
     self.navigationItem.rightBarButtonItem = editButton;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    self.risks = nil;
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-// for iOS 5
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
-}
-
-
 - (void)calculateScore {
     int score = [riskScore calculateScore:self.risks];
     NSString *message = [riskScore getMessage:score];

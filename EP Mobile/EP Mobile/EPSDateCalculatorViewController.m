@@ -43,15 +43,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setDatePicker:nil];
-    [self setDaysSegmentedControl:nil];
-    [self setNumberOfDaysTextField:nil];
-    [self setSubtractDaysSwitch:nil];
-    [self setResultLabel:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }

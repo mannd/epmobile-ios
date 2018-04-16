@@ -36,13 +36,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EPSDrugDoseCalculatorViewController *vc = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController]; 
     NSString *segueIdentifier = [segue identifier];

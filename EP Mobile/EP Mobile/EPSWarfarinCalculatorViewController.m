@@ -95,18 +95,6 @@
 
 }
 
-- (void)viewDidUnload
-{
-    [self setWeeklyDoseField:nil];
-    [self setInrField:nil];
-    [self setResultLabel:nil];
-    [self setDoseChange:nil];
-    [self setTargetSegmentedControl:nil];
-    [self setTabletSizePickerView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (void)showNotes {
     [self performSegueWithIdentifier:@"WarfarinNotesSegue" sender:nil];
 }

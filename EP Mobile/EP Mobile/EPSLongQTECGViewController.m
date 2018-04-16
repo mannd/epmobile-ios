@@ -33,12 +33,6 @@
     self.automaticallyAdjustsScrollViewInsets = YES;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 // See https://www.natashatherobot.com/ios-autolayout-scrollview/ for details
 // of how to center view in scrollview properly (note comments also).
 - (void)viewDidLayoutSubviews

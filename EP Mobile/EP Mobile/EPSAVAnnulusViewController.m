@@ -70,30 +70,4 @@
 
 }
 
-- (void)viewDidUnload
-{
-    [self setMapImageView:nil];
-    [self setAsapImageView:nil];
-    self.location1 = nil;
-    self.location2 = nil;
-    [self setMapLocationLabel:nil];
-    [self setEpicardialapImageView:nil];
-    [self setLalapImageView:nil];
-    [self setLalapImageView:nil];
-    [self setLlapImageView:nil];
-    [self setLpapImageView:nil];
-    [self setLplapImageView:nil];
-    [self setMsapImageView:nil];
-    [self setPsmaapImageView:nil];
-    [self setPstaapImageView:nil];
-    [self setRaapImageView:nil];
-    [self setRalapImageView:nil];
-    [self setRlapImageView:nil];
-    [self setRplapImageView:nil];
-    [self setRpapImageView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-
 @end

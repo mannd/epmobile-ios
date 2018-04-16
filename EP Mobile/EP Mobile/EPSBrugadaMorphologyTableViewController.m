@@ -70,15 +70,6 @@
     [editButton setAction:@selector(calculateScore)];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    self.list = nil;
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

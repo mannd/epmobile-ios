@@ -89,19 +89,6 @@
     self.questionLabel.text = [algorithm step1];
 }
 
-- (void)viewDidUnload
-{
-    self.algorithmName = nil;
-    [self setBackButton:nil];
-    [self setQuestionLabel:nil];
-    [self setInstructionsButton:nil];
-    [self setYesButton:nil];
-    [self setNoButton:nil];
-    [self setMorphologyCriteriaButton:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (IBAction)yesButtonPushed:(id)sender {
     NSString *question = [algorithm yesResult:&step];
     [self setButtons];
@@ -168,16 +155,16 @@
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
                                                           handler:^(UIAlertAction * action) {
-                                                              [algorithm resetSteps:&step];
+                                                              [self->algorithm resetSteps:&self->step];
                                                               self.backButton.enabled = NO;
-                                                              self.questionLabel.text = [algorithm step1];
+                                                              self.questionLabel.text = [self->algorithm step1];
                                                           }];
     if ([algorithm showMap]) {
         UIAlertAction *showMapAction = [UIAlertAction actionWithTitle:@"Show Map" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [self performSegueWithIdentifier:@"MapSegue" sender:nil];
-            [algorithm resetSteps:&step];
+            [self->algorithm resetSteps:&self->step];
             self.backButton.enabled = NO;
-            self.questionLabel.text = [algorithm step1];
+            self.questionLabel.text = [self->algorithm step1];
         }];
         [alert addAction:showMapAction];
     }

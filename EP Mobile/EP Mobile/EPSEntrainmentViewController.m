@@ -54,18 +54,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)viewDidUnload {
-    [self setTclTextField:nil];
-    [self setPpiTextField:nil];
-    [self setConcealedFusionSwitch:nil];
-    [self setSqrsLabel:nil];
-    [self setSqrsTextField:nil];
-    [self setEgqrsLabel:nil];
-    [self setEgqrsTextField:nil];
-    [self setResultLabel:nil];
-    [super viewDidUnload];
-}
 - (IBAction)calculate:(id)sender {
     NSString *tclString = self.tclTextField.text;
     NSString *ppiString = self.ppiTextField.text;

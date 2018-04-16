@@ -80,16 +80,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setSexSegmentedControl:nil];
-    [self setWeightUnitsSegmentedControl:nil];
-    [self setHeightUnitsSegmentedControl:nil];
-    [self setWeightTextField:nil];
-    [self setHeightTextField:nil];
-    [self setResultLabel:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)calculate:(id)sender {
     NSString *weightText = self.weightTextField.text;
     double weight = [weightText doubleValue];
