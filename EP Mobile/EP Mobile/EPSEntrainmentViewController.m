@@ -37,7 +37,7 @@
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     self.sqrsTextField.enabled = NO;
     self.egqrsTextField.enabled = NO;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     [self registerForKeyboardNotifications];
     
     self.sqrsTextField.delegate = self;

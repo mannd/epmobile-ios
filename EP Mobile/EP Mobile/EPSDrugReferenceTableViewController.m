@@ -95,11 +95,6 @@
         lc.linkTitle = @"Sotalol";
     }
     lc.showToolbar = YES;
-    
-    
-    
-    
-
 }
 
 

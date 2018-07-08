@@ -8,6 +8,7 @@
 
 #import "EPSLinkViewController.h"
 #import "EPSDrugDoseCalculatorViewController.h"
+#import <WebKit/WKNavigationAction.h>
 
 @interface EPSLinkViewController ()
 
@@ -28,7 +29,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.webView setScalesPageToFit:YES];
+//    [self.webView setScalesPageToFit:YES];
     NSString *urlAddress= self.webPage;
     NSURL *url = nil;
     if ([urlAddress hasPrefix:@"http"]) {
@@ -36,7 +37,7 @@
     }
     else {
         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:urlAddress ofType:@"html"] isDirectory:NO];
-        [self.webView setScalesPageToFit:NO];
+//        [self.webView setScalesPageToFit:NO];
     }
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
@@ -106,7 +107,6 @@
 - (void)calculate {
     [self performSegueWithIdentifier:@"calcCreatinineClearanceSegue" sender:nil];
 }
-
 
 - (void)didReceiveMemoryWarning
 {

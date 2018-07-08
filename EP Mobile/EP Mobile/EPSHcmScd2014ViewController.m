@@ -44,7 +44,7 @@ static const int SIZE_OUT_OF_RANGE = 9004;
     NSMutableArray *array = [[NSMutableArray alloc] init];
     self.risks = array;
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self registerForKeyboardNotifications];
     

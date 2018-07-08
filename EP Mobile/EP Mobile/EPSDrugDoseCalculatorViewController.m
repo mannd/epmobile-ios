@@ -91,8 +91,8 @@
     // if called from the drug reference page, need to get rid of the toolbar
     [self.navigationController setToolbarHidden:YES];
     // see http://stackoverflow.com/questions/18967859/ios7-uiscrollview-offset-in-uinavigationcontroller
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+
     ageField.delegate = self;
     weightField.delegate = self;
     creatinineField.delegate = self;
