@@ -8,7 +8,7 @@
 
 #import "EPSAboutViewController.h"
 
-#define VERSION @"3.13"
+#define VERSION @"3.14"
 
 @interface EPSAboutViewController ()
 
@@ -35,14 +35,6 @@
 //                                   initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(doneButtonPressed:)];
     //self.titleBar. = editButton;
     self.aboutTextView.text = [[NSString alloc] initWithFormat:@"\n\nEP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright © 2012 - 2018\nEP Studios, Inc.", VERSION];
-}
-
-- (void)viewDidUnload
-{
-
-    [self setAboutTextView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (IBAction)doneButtonPressed:(id)sender {

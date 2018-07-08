@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WKWebView.h>
+#import <WebKit/WKNavigationDelegate.h>
 
 @interface EPSLinkViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet WKWebView *webView;
 @property (strong, nonatomic) NSString *webPage;
 @property (strong, nonatomic) NSString *linkTitle;
 @property (strong, nonatomic) UILabel *resultLabel;
 @property BOOL showToolbar;
-
 
 @end

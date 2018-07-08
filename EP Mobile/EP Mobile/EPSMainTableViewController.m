@@ -69,13 +69,6 @@
     
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -136,6 +129,10 @@
     else if ([segueIdentifier isEqualToString:@"RvhSegue"]) {
         lc.webPage = @"rvh";
         lc.linkTitle = @"RVH Criteria";
+    }
+    else if ([segueIdentifier isEqualToString:@"LbbbSegue"]) {
+        lc.webPage = @"lbbb";
+        lc.linkTitle = @"LBBB Criteria";
     }
   
     EPSARVC2010TableViewController *arvcVc = (EPSARVC2010TableViewController *)vc;

@@ -8,6 +8,7 @@
 
 #import "EPSLinkViewController.h"
 #import "EPSDrugDoseCalculatorViewController.h"
+#import <WebKit/WKNavigationAction.h>
 
 @interface EPSLinkViewController ()
 
@@ -28,7 +29,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.webView setScalesPageToFit:YES];
+//    [self.webView setScalesPageToFit:YES];
     NSString *urlAddress= self.webPage;
     NSURL *url = nil;
     if ([urlAddress hasPrefix:@"http"]) {
@@ -36,7 +37,7 @@
     }
     else {
         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:urlAddress ofType:@"html"] isDirectory:NO];
-        [self.webView setScalesPageToFit:NO];
+//        [self.webView setScalesPageToFit:NO];
     }
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
@@ -46,15 +47,13 @@
     }
     
     UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, 300, 21.0f)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width - 90, 21.0f)];
     self.resultLabel = label;
     label.backgroundColor = [UIColor clearColor];
     
     UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
     self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
     label.text = @"";
-
-
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -107,16 +106,10 @@
     [self performSegueWithIdentifier:@"calcCreatinineClearanceSegue" sender:nil];
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidUnload {
-    [self setWebView:nil];
-    [super viewDidUnload];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -35,7 +35,7 @@
     //float w = self.internalScrollView.bounds.size.width;
     //scrollView.contentSize = CGSizeMake(w, 990);
     //scrollView.delegate = self;
-    self.automaticallyAdjustsScrollViewInsets = YES;
+//    self.automaticallyAdjustsScrollViewInsets = YES;
     NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
     self.procedureTypeData = array;
     

@@ -35,13 +35,7 @@
     self.scrollView.minimumZoomScale = 0.5;
     self.scrollView.maximumZoomScale = 2.0;
     self.scrollView.delegate = self;
-    self.automaticallyAdjustsScrollViewInsets = NO;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+//    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 // See https://www.natashatherobot.com/ios-autolayout-scrollview/ for details

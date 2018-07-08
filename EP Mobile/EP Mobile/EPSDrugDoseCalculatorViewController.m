@@ -91,8 +91,8 @@
     // if called from the drug reference page, need to get rid of the toolbar
     [self.navigationController setToolbarHidden:YES];
     // see http://stackoverflow.com/questions/18967859/ios7-uiscrollview-offset-in-uinavigationcontroller
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+
     ageField.delegate = self;
     weightField.delegate = self;
     creatinineField.delegate = self;
@@ -118,21 +118,6 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.defaultWeightUnit = [defaults objectForKey:@"defaultweightunit"];
     self.defaultCreatinineUnit = [defaults objectForKey:@"defaultcreatinineunit"];
-}
-
-- (void)viewDidUnload
-{
-
-    [self setSexSegmentedControl:nil];
-    [self setAgeField:nil];
-    [self setWeightField:nil];
-    [self setWeightUnitsSegmentedControl:nil];
-    [self setCreatinineField:nil];
-    [self setResultLabel:nil];
-    [self setCreatinineUnitsSegmentedControl:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-
 }
 
 - (IBAction)toggleWeightUnits:(id)sender {

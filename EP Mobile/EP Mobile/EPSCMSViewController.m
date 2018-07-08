@@ -105,16 +105,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setEfSegmentedControl:nil];
-    [self setHfClassSegmentedControl:nil];
-    [self setCriteriaTableView:nil];
-    self.list = nil;
-    self.headers = nil;
-    self.checkedItems = nil;
-    [super viewDidUnload];
-}
-
 - (void)showNotes {
     [self performSegueWithIdentifier:@"CMSNotesSegue" sender:nil];
 }

@@ -37,15 +37,6 @@
     [self setupCL];
 }
 
-- (void)viewDidUnload
-{
-    [self setInputField:nil];
-    [self setResultLabel:nil];
-    [self setInputLabel:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (int)convertInterval:(int)n {
     // make sure result rounded up to nearest msec
     return (int)round(60000.0 / n);

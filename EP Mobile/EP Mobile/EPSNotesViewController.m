@@ -78,16 +78,6 @@
     [self.notesTextView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
 }
 
-- (void)viewDidUnload
-{
-    self.key = nil;
-    [self setTitleBar:nil];
-    [self setHeaderLabel:nil];
-    [self setNotesTextView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (IBAction)doneButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

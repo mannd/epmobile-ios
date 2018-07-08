@@ -31,7 +31,8 @@
         [self showDialogWithTitle:@"Reference" andMessage:reference inView:view];
     }];
     UIAlertAction *linkAction = [UIAlertAction actionWithTitle:@"Link" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [[UIApplication sharedApplication] openURL:url];
+//        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 
     }];
     

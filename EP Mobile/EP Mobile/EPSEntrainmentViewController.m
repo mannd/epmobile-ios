@@ -37,7 +37,7 @@
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     self.sqrsTextField.enabled = NO;
     self.egqrsTextField.enabled = NO;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     [self registerForKeyboardNotifications];
     
     self.sqrsTextField.delegate = self;
@@ -54,18 +54,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)viewDidUnload {
-    [self setTclTextField:nil];
-    [self setPpiTextField:nil];
-    [self setConcealedFusionSwitch:nil];
-    [self setSqrsLabel:nil];
-    [self setSqrsTextField:nil];
-    [self setEgqrsLabel:nil];
-    [self setEgqrsTextField:nil];
-    [self setResultLabel:nil];
-    [super viewDidUnload];
-}
 - (IBAction)calculate:(id)sender {
     NSString *tclString = self.tclTextField.text;
     NSString *ppiString = self.ppiTextField.text;

@@ -107,32 +107,6 @@
     return [[NSString alloc] initWithFormat:@"%1.1f tab", dose];
 }
 
-- (void)viewDidUnload
-{
-    [self setSunDose1:nil];
-    [self setSunDose2:nil];
-    [self setMonDose1:nil];
-    [self setMonDose2:nil];
-    [self setTueDose1:nil];
-    [self setTueDose2:nil];
-    [self setWedDose1:nil];
-    [self setWedDose2:nil];
-    [self setThuDose1:nil];
-    [self setThuDose2:nil];
-    [self setFriDose1:nil];
-    [self setFriDose2:nil];
-    [self setSatDose1:nil];
-    [self setSatDose2:nil];
-    [self setTitleLabel:nil];
-    [self setTitleBar:nil];
-    [self setLowChangeLabel:nil];
-    [self setHighChangeLabel:nil];
-    [self setTotalWeeklyLowDose:nil];
-    [self setTotalWeeklyHighDose:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (IBAction)doneButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

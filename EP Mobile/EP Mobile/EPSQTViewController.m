@@ -73,15 +73,6 @@
     
 }
 
-- (void)viewDidUnload
-{
-    [self setQtcSegmentedControl:nil];
-
-    [self setRiskTableView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (void)calculateScore {
     int score = 0;
     // ECG criteria

@@ -56,15 +56,6 @@
     self.navigationItem.rightBarButtonItem = editButton;
 }
 
-- (void)viewDidUnload
-{
-    [self setQtcSegmentedControl:nil];
-    [self setSexSegmentedControl:nil];
-    [self setRiskTableView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (void) calculateScore {
     // since this score uses 0.5, we will multiply points by 10, e.g.
     // 1 = 10, to avoid using non-integer arithmetic
