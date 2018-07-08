@@ -130,6 +130,10 @@
         lc.webPage = @"rvh";
         lc.linkTitle = @"RVH Criteria";
     }
+    else if ([segueIdentifier isEqualToString:@"LbbbSegue"]) {
+        lc.webPage = @"lbbb";
+        lc.linkTitle = @"LBBB Criteria";
+    }
   
     EPSARVC2010TableViewController *arvcVc = (EPSARVC2010TableViewController *)vc;
     if ([segueIdentifier isEqualToString:@"ARVC2010Segue"])

@@ -170,6 +170,8 @@
 		8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33E1AAA8997005BDAFD /* dofetilide.org */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
+		8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFCF20F23FD600B2696A /* lbbb.org */; };
+		8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFD120F2404C00B2696A /* lbbb.html */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
 		8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */; };
@@ -440,6 +442,8 @@
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
 		8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorNotes.m; sourceTree = "<group>"; };
+		8ECAFFCF20F23FD600B2696A /* lbbb.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = lbbb.org; sourceTree = "<group>"; };
+		8ECAFFD120F2404C00B2696A /* lbbb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lbbb.html; sourceTree = "<group>"; };
 		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
 		8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014ViewController.h; sourceTree = "<group>"; };
@@ -814,6 +818,7 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8ECAFFD120F2404C00B2696A /* lbbb.html */,
 				8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */,
 				8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */,
 				8EFBFBDA1AAE0672004374C3 /* rvh.org */,
@@ -867,6 +872,7 @@
 				8EC19C34159FE0FA00975E2B /* InfoPlist.strings */,
 				8EC19C37159FE0FA00975E2B /* main.m */,
 				8EC19C39159FE0FA00975E2B /* EP Mobile-Prefix.pch */,
+				8ECAFFCF20F23FD600B2696A /* lbbb.org */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -978,6 +984,7 @@
 				8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
+				8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */,
 				8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 				8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */,
@@ -1011,6 +1018,7 @@
 				8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */,
 				8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */,
 				8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */,
+				8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */,
 				8E4B27BF1633459400BF1F2C /* msap.png in Resources */,
 				8E4B27C01633459400BF1F2C /* psmaap.png in Resources */,
 				8E4B27C11633459400BF1F2C /* pstaap.png in Resources */,
