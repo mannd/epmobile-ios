@@ -8,7 +8,7 @@
 
 #import "EPSAboutViewController.h"
 
-#define VERSION @"3.13"
+#define VERSION @"3.14"
 
 @interface EPSAboutViewController ()
 
