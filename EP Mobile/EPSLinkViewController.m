@@ -47,15 +47,13 @@
     }
     
     UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, 300, 21.0f)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width - 80, 21.0f)];
     self.resultLabel = label;
     label.backgroundColor = [UIColor clearColor];
     
     UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
     self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
     label.text = @"";
-
-
 }
 
 - (void)viewDidAppear:(BOOL)animated
