@@ -112,6 +112,8 @@
         vc.scoreType = @"ICDMortalityRisk";
     else if ([segueIdentifier isEqualToString:@"ERSSegue"])
         vc.scoreType = @"ERSRisk";
+    else if ([segueIdentifier isEqualToString:@"TamponadeSegue"])
+        vc.scoreType = @"TamponadeRisk";
     
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
