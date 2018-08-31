@@ -26,6 +26,7 @@
 #import "EPSIcdMortalityRiskScore.h"
 #import "EPSBrugadaRiskScore.h"
 #import "EPSErsRiskScore.h"
+#import "EPSTamponadeRiskScore.h"
 #import "EPSSharedMethods.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
@@ -89,6 +90,8 @@
         riskScore = [[EPSBrugadaRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"ERSRisk"])
         riskScore = [[EPSErsRiskScore alloc] init];
+    else if ([scoreType isEqualToString:@"TamponadeRisk"])
+        riskScore = [[EPSTamponadeRiskScore alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;

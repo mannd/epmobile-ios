@@ -44,4 +44,11 @@
     [view presentViewController:alert animated:YES completion:nil];
 }
 
++ (NSString *)trimmedZerosFromNumber:(double) value {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.minimumFractionDigits = 0;
+    formatter.maximumFractionDigits = 1;
+    return [formatter stringFromNumber:[NSNumber numberWithDouble:value]];
+}
+
 @end

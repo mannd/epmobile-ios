@@ -173,6 +173,7 @@
 		8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFCF20F23FD600B2696A /* lbbb.org */; };
 		8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFD120F2404C00B2696A /* lbbb.html */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
+		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
 		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
 		8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */; };
@@ -447,6 +448,8 @@
 		8ECAFFD120F2404C00B2696A /* lbbb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lbbb.html; sourceTree = "<group>"; };
 		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
+		8EDD2D47212F0C2B00C3397C /* EPSTamponadeRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSTamponadeRiskScore.h; sourceTree = "<group>"; };
+		8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSTamponadeRiskScore.m; sourceTree = "<group>"; };
 		8EDF8E5B20F2508F0072C409 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014ViewController.h; sourceTree = "<group>"; };
 		8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014ViewController.m; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 				8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */,
 				8EF902F51F7B0A4E00D2B6C6 /* EPSErsRiskScore.h */,
 				8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */,
+				8EDD2D47212F0C2B00C3397C /* EPSTamponadeRiskScore.h */,
+				8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */,
 			);
 			name = RiskScores;
 			sourceTree = "<group>";
@@ -1079,6 +1084,7 @@
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
+				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
 				8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */,
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
 				8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */,
