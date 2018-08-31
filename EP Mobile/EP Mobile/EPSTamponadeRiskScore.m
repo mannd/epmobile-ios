@@ -8,6 +8,7 @@
 
 #import "EPSTamponadeRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EPSSharedMethods.h"
 
 @implementation EPSTamponadeRiskScore
 
@@ -34,13 +35,13 @@
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Recent viral infection" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Recurrent PE, previous pericardiocentesis" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Chronic terminal renal failure" withValue:10]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Immunodeficiency or immunosupression" withValue:10]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Immunodeficiency or immunosuppression" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Hypo- or hyperthyroidism" withValue:-10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Systemic autoimmune disease" withValue:-10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Dyspnea/Tachypnea" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Orthopnea (NO rales on lung auscultation" withValue:30]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Hypotension (SBP < 95 mmHg" withValue:5]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Progressive sinus tachycardia*" withValue:10]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Progressive sinus tachycardia (no meds affecting HR, hypothyroidism or uremia)" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Oliguria" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Pulsus paradoxus > 10 mmHg" withValue:20]];
     [array addObject:[[EPSRiskFactor alloc] initWithDetailsOnly:@"Pericardial chest pain" withValue:5]];
@@ -82,9 +83,9 @@
 
 - (NSString *)getMessage:(int)score {
     double riskScore = score / 10.0;
-    NSString *message = [NSString stringWithFormat:@"Risk score = %.1f\n", riskScore];
+    NSString *message = [NSString stringWithFormat:@"Risk score = %@\n", [EPSSharedMethods trimmedZerosFromNumber:riskScore]];
     if (riskScore >= 6) {
-        message = [message stringByAppendingString:@"Urgent pericardiocentis is indicated (risk score ≥ 6) immediately after contraindications are ruled-out."];
+        message = [message stringByAppendingString:[NSString stringWithFormat:@"Urgent pericardiocentesis is indicated (risk score ≥ 6) immediately after contraindications are ruled-out.  Contraindications include uncorrected coagulopathy, anticoagulant therapy with INR > 1.5, thrombocytopenia < 50%@000/mm³, small, posterior, and loculated effusions, or effusions resolving under anti-inflammatory treatment.", [NSLocale currentLocale].groupingSeparator]];
     }
     else {
         message = [message stringByAppendingString:@"Pericardiocentesis can be postponed for up to 12/48 hours (risk score < 6)."];

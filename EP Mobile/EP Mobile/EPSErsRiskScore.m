@@ -8,6 +8,7 @@
 
 #import "EPSErsRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EPSSharedMethods.h"
 #import "EPSLogging.h"
 
 #define NO_ECG_RISK_SCORE 1000
@@ -96,7 +97,7 @@
         return @"Score requires at least 1 ECG finding.";
     }
     double riskScore = score / 10.0;
-    NSString *message = [NSString stringWithFormat:@"Risk score = %.1f\n", riskScore];
+    NSString *message = [NSString stringWithFormat:@"Risk score = %@\n", [EPSSharedMethods trimmedZerosFromNumber:riskScore]];
     if (riskScore >= 5) {
       message = [message stringByAppendingString:@"Probable/definite Early Repolarization Syndrome"];
     }

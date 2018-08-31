@@ -12,4 +12,6 @@
 
 + (void)showDialogWithTitle:(NSString *)title andMessage:(NSString *)message inView:(UIViewController *)view;
 + (void)showRiskDialogWithMessage:(NSString *)message riskResult:(NSString *)result reference:(NSString *)reference url:(NSURL *)link inView:(UIViewController *)view;
++ (NSString *)trimmedZerosFromNumber:(double) value;
+
 @end
