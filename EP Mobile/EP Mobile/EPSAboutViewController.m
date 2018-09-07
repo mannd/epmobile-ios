@@ -8,8 +8,6 @@
 
 #import "EPSAboutViewController.h"
 
-#define VERSION @"3.15"
-
 @interface EPSAboutViewController ()
 
 @end
@@ -30,11 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-//    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-//                                   initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(doneButtonPressed:)];
-    //self.titleBar. = editButton;
-    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"\n\nEP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright © 2012 - 2018\nEP Studios, Inc.", VERSION];
+    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"\n\nEP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright © 2012 - 2018\nEP Studios, Inc.", [self getVersion]];
+}
+
+- (NSString *)getVersion {
+    NSDictionary *dictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = dictionary[@"CFBundleShortVersionString"];
+#ifdef DEBUG // Get build number, if you want it. Cleaner to leave out of release version.
+    NSString *build = dictionary[@"CFBundleVersion"];
+    // the version+build format is recommended by https://semver.org
+    NSString *versionBuild = [NSString stringWithFormat:@"%@+%@", version, build];
+    return versionBuild;
+#else
+    return version;
+#endif
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
