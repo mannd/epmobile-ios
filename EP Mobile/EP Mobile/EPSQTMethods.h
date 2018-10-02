@@ -22,6 +22,7 @@ typedef enum {
 + (NSInteger)jtCorrectedFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs;
 + (NSInteger)jtFromQTInMsec:(double)qt andQRSInMsec:(double)qrs;
 + (NSInteger)qtCorrectedForIVCDAndSexFromQTInMsec:(double)qt AndHR:(double)hr AndQRS:(double)qrs IsMale:(BOOL)isMale;
++ (NSInteger)prelbbbqtcFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs isMale:(BOOL)isMale;
 
 
 @end

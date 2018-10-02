@@ -124,7 +124,6 @@
 		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
 		8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */; };
 		8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */; };
-		8EAC5EAE2142EA170025B495 /* testimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC5EAD2142EA160025B495 /* testimage.png */; };
 		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
@@ -381,7 +380,6 @@
 		8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSameTtrRiskScore.m; sourceTree = "<group>"; };
 		8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaStrokeRiskScore.h; sourceTree = "<group>"; };
 		8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaStrokeRiskScore.m; sourceTree = "<group>"; };
-		8EAC5EAD2142EA160025B495 /* testimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testimage.png; sourceTree = "<group>"; };
 		8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskScore.h; sourceTree = "<group>"; };
 		8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskScore.m; sourceTree = "<group>"; };
 		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
@@ -829,7 +827,6 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8EAC5EAD2142EA160025B495 /* testimage.png */,
 				8ECAFFD120F2404C00B2696A /* lbbb.html */,
 				8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */,
 				8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */,
@@ -1013,7 +1010,6 @@
 				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
 				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
 				8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */,
-				8EAC5EAE2142EA170025B495 /* testimage.png in Resources */,
 				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
 				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
@@ -1359,10 +1355,12 @@
 		8EC19C58159FE0FA00975E2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
@@ -1370,22 +1368,28 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
 		8EC19C59159FE0FA00975E2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
+				USE_HEADERMAP = YES;
 			};
 			name = Release;
 		};

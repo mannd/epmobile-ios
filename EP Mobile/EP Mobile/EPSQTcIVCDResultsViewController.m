@@ -8,13 +8,15 @@
 
 #import "EPSQTcIVCDResultsViewController.h"
 
-#define DETAILS @"Details"
 #define NO_QTM @"QTm only defined for LBBB"
 #define NO_QTMC @"QTmc only defined for LBBB"
+#define NO_PRELBBBQTC @"preLBBBQTc only defined for LBBB"
 #define QTM_REFERENCE @"Bogossian H et al. New formula for evaluation of the QT interval in patients with left bundle branch block. Heart Rhythm 2004;11:2273-2277."
 #define QTRRQRS_FORMULA @"QTrr,qrs = QT - 155 x (60/HR - 1) - 0.93 x (QRS - 139) + k, k = -22 ms for men and -34 ms for women"
 #define QTRRQRS_REFERENCE @"Rautaharju P et al. Assessment of prolonged QT and JT intervals in ventricular conduction defects.  Amer J Cardio 2003;93:1017-1021."
 #define QTC_REFERENCE @"Rautaharju P et al. Circulation. 2009;119:e241-e250."
+#define PRELBBBQTC_FORMULA @"preLBBBQTc = postLBBBQTc(Bazett) - postLBBBQRS + c, where c = 95 msec in males, 88 msec in females"
+#define PRELBBBQTC_REFERENCE @"Yankelson L, Hochstadt A, Sadeh B, et al. New formula for defining “normal” and “prolonged” QT in patients with bundle branch block. Journal of Electrocardiology. 2018;51(3):481-486. doi:10.1016/j.jelectrocard.2017.12.039"
 
 @interface EPSQTcIVCDResultsViewController ()
 
@@ -34,6 +36,7 @@
     self.qtmResult.delegate = self;
     self.qtmcResult.delegate = self;
     self.qtrrqrsResult.delegate = self;
+    self.prelbbbqtcResult.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,6 +48,7 @@
     self.qtmResult.text = self.isLBBB ? [NSString stringWithFormat:@"QTm = %ld msec", (long)self.qtm] : NO_QTM;
     self.qtmcResult.text = self.isLBBB ? [NSString stringWithFormat:@"QTmc = %ld msec", (long)self.qtmc] : NO_QTMC;
     self.qtrrqrsResult.text = [NSString stringWithFormat:@"QTrr,qrs = %ld msec", (long)self.qtrrqrs];
+    self.prelbbbqtcResult.text = self.isLBBB? [NSString stringWithFormat:@"preLBBBQTc = %ld msec", (long)self.prelbbbqtc] : NO_PRELBBBQTC;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,13 +92,18 @@
     // link is http://www.ajconline.org/article/S0002-9149(04)00025-6/abstract
 }
 
+- (IBAction)prelbbbqtcInfoButton:(id)sender {
+    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"PreLBBBQTc = %ld msec.\n\nUse: Corrects QT for rate, QRS duration and sex.\n\nFormula: %@\n\nNormal values: Presumably the same as QTc.\n\nReference: %@", (long)self.prelbbbqtc, PRELBBBQTC_FORMULA, PRELBBBQTC_REFERENCE] : NO_PRELBBBQTC;
+    [self showInfo:info withTitle:@"preLBBBQTc"];
+}
+
+
 - (void)showInfo:(NSString *)info withTitle:(NSString *)title {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:info preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:nil];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
-    
 }
 
 #pragma mark - TextField Delegate

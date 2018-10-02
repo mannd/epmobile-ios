@@ -96,8 +96,8 @@
         self.qtmc = [EPSQTMethods qtcFromQtInMsec:self.qtm AndIntervalInMsec:interval UsingFormula:kBazett];
     }
     self.qtrrqrs = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:qt AndHR:rate AndQRS:qrs IsMale:[self isMale]];
+    self.prelbbbqtc = [EPSQTMethods prelbbbqtcFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs isMale:[self isMale]];
     [self performSegueWithIdentifier:@"QTcIVCDResultsSegue" sender:nil];
-
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
@@ -152,6 +152,7 @@
     vc.qtm = self.qtm;
     vc.qtmc = self.qtmc;
     vc.qtrrqrs = self.qtrrqrs;
+    vc.prelbbbqtc = self.prelbbbqtc;
 }
 
 

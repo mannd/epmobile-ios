@@ -153,6 +153,13 @@
     XCTAssertTrue(result == 421, MESSAGE_L, result);
 }
 
+- (void)testPreLbbbQtc {
+    long result = [EPSQTMethods prelbbbqtcFromQTInMsec:333 andIntervalInMsec:789 withQRS:166 isMale:YES];
+    XCTAssertTrue(result == 304, MESSAGE_L, result);
+    result = [EPSQTMethods prelbbbqtcFromQTInMsec:333 andIntervalInMsec:789 withQRS:166 isMale:NO];
+    XCTAssertTrue(result == 297, MESSAGE_L, result);
+}
+
 - (void)testCMSModel {
     EPSCMSModel *model = [[EPSCMSModel alloc] init];
     struct Result result = [model getResult];
