@@ -72,6 +72,10 @@
         [self showError];
         return;
     }
+    else if (qrs < 120) {
+        [self showShortQrsError];
+        return;
+    }
     double interval;
     double rate;
     if (inputIsRate) {
@@ -129,6 +133,9 @@
     [EPSSharedMethods showDialogWithTitle:@"Input Error" andMessage:@"One or more values are incorrect or missing." inView:self];
 }
 
+- (void)showShortQrsError {
+    [EPSSharedMethods showDialogWithTitle:@"Input Error" andMessage:@"QRS duration must be at least 120 msec." inView:self];
+}
 
 #pragma mark - Navigation
 
