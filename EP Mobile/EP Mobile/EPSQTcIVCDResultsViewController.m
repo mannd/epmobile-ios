@@ -93,7 +93,7 @@
 }
 
 - (IBAction)prelbbbqtcInfoButton:(id)sender {
-    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"PreLBBBQTc = %ld msec.\n\nUse: Corrects QT for rate, QRS duration and sex.\n\nFormula: %@\n\nNormal values: Presumably the same as QTc.\n\nReference: %@", (long)self.prelbbbqtc, PRELBBBQTC_FORMULA, PRELBBBQTC_REFERENCE] : NO_PRELBBBQTC;
+    NSString *info = self.isLBBB ? [NSString stringWithFormat:@"preLBBBQTc = %ld msec.\n\nUse: Corrects QT for rate, QRS duration and sex.\n\nFormula: %@\n\nNormal values: Presumably the same as QTc.\n\nReference: %@", (long)self.prelbbbqtc, PRELBBBQTC_FORMULA, PRELBBBQTC_REFERENCE] : NO_PRELBBBQTC;
     [self showInfo:info withTitle:@"preLBBBQTc"];
 }
 
