@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *qtmResult;
 @property (weak, nonatomic) IBOutlet UITextField *qtmcResult;
 @property (weak, nonatomic) IBOutlet UITextField *qtrrqrsResult;
+@property (weak, nonatomic) IBOutlet UITextField *prelbbbqtcResult;
+
 
 @property NSInteger qt;
 @property NSInteger jt;
@@ -25,6 +27,7 @@
 @property NSInteger qtm;
 @property NSInteger qtmc;
 @property NSInteger qtrrqrs;
+@property NSInteger prelbbbqtc;
 @property BOOL isLBBB;
 
 - (IBAction)qtInfoButton:(id)sender;

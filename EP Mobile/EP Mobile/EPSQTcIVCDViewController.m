@@ -72,6 +72,10 @@
         [self showError];
         return;
     }
+    else if (qrs < 120) {
+        [self showShortQrsError];
+        return;
+    }
     double interval;
     double rate;
     if (inputIsRate) {
@@ -92,8 +96,8 @@
         self.qtmc = [EPSQTMethods qtcFromQtInMsec:self.qtm AndIntervalInMsec:interval UsingFormula:kBazett];
     }
     self.qtrrqrs = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:qt AndHR:rate AndQRS:qrs IsMale:[self isMale]];
+    self.prelbbbqtc = [EPSQTMethods prelbbbqtcFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs isMale:[self isMale]];
     [self performSegueWithIdentifier:@"QTcIVCDResultsSegue" sender:nil];
-
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
@@ -129,6 +133,9 @@
     [EPSSharedMethods showDialogWithTitle:@"Input Error" andMessage:@"One or more values are incorrect or missing." inView:self];
 }
 
+- (void)showShortQrsError {
+    [EPSSharedMethods showDialogWithTitle:@"Input Error" andMessage:@"QRS duration must be at least 120 msec." inView:self];
+}
 
 #pragma mark - Navigation
 
@@ -145,6 +152,7 @@
     vc.qtm = self.qtm;
     vc.qtmc = self.qtmc;
     vc.qtrrqrs = self.qtrrqrs;
+    vc.prelbbbqtc = self.prelbbbqtc;
 }
 
 

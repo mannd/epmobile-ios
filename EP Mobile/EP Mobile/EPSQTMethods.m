@@ -60,6 +60,12 @@
     return (NSInteger)round(qt - 155 * (60/hr -1) - 0.93 * (qrs -139) + k);
 }
 
++ (NSInteger)prelbbbqtcFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs isMale:(BOOL)isMale {
+    double k = isMale ? 95 : 88;
+    double qtc = [self qtcFromQtInMsec:qt AndIntervalInMsec:rr UsingFormula:kBazett];
+    return (NSInteger)round(qtc - qrs + k);
+}
+
 + (NSInteger)roundValueInSecs:(double)value {
     return (NSInteger)round(value * 1000);
 }

@@ -25,6 +25,7 @@
 @property NSInteger qtm;
 @property NSInteger qtmc;
 @property NSInteger qtrrqrs;
+@property NSInteger prelbbbqtc;
 
 - (IBAction)calculateButtonPressed:(id)sender;
 - (IBAction)clearButtonPressed:(id)sender;
