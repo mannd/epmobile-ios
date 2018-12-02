@@ -1,4 +1,9 @@
-## Description
+EP Mobile
+=========
+
+[![Build Status](https://travis-ci.org/mannd/epmobile-ios.svg?branch=master)](https://travis-ci.org/mannd/epmobile-ios)
+
+## Tools for electrophysiologists and cardiologists
 EP Mobile is an Apple iOS application
 that provides a set of tools for electrophysiologists and other health care
 workers who deal with cardiac arrhythmias.  The program includes EP calculators, drug dose calculators, risk scores, diagnostic tools, ECG figures, and more. 
