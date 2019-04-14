@@ -37,6 +37,8 @@
 		8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */; };
 		8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A6240165E7B7200230EF7 /* epmobile_icon_1024.png */; };
 		8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A6243165E7B9000230EF7 /* epmobile_icon_1024-2.png */; };
+		8E0C13C72262CCEB000892CC /* ArvcRiskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */; };
+		8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C13C92262DBB0000892CC /* ArvcTests.swift */; };
 		8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */; };
 		8E0DD7881631B50500DDC4CC /* EPSCMSNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */; };
 		8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */; };
@@ -244,6 +246,9 @@
 		8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLQTSViewController.m; sourceTree = "<group>"; };
 		8E0A6240165E7B7200230EF7 /* epmobile_icon_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon_1024.png; sourceTree = "<group>"; };
 		8E0A6243165E7B9000230EF7 /* epmobile_icon_1024-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile_icon_1024-2.png"; sourceTree = "<group>"; };
+		8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvcRiskModel.swift; sourceTree = "<group>"; };
+		8E0C13C82262CFA5000892CC /* EP Mobile-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EP Mobile-Bridging-Header.h"; path = "EP Mobile/EP Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E0C13C92262DBB0000892CC /* ArvcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvcTests.swift; sourceTree = "<group>"; };
 		8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAboutViewController.h; sourceTree = "<group>"; };
 		8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAboutViewController.m; sourceTree = "<group>"; };
 		8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCMSNotes.h; sourceTree = "<group>"; };
@@ -604,6 +609,7 @@
 				8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */,
 				8E399509204328520079E391 /* EPSCMSStrings.h */,
 				8E39950A204328520079E391 /* EPSCMSStrings.m */,
+				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -770,6 +776,7 @@
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
+				8E0C13C82262CFA5000892CC /* EP Mobile-Bridging-Header.h */,
 				8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */,
 				8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */,
 				8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */,
@@ -891,6 +898,7 @@
 			children = (
 				8EC19C4F159FE0FA00975E2B /* EP_MobileTests.h */,
 				8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */,
+				8E0C13C92262DBB0000892CC /* ArvcTests.swift */,
 				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
 			);
 			path = "EP MobileTests";
@@ -952,7 +960,7 @@
 				CLASSPREFIX = EPS;
 				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C26159FE0FA00975E2B = {
@@ -962,10 +970,11 @@
 			};
 			buildConfigurationList = 8EC19C21159FE0FA00975E2B /* Build configuration list for PBXProject "EP Mobile" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8EC19C1C159FE0FA00975E2B;
 			productRefGroup = 8EC19C28159FE0FA00975E2B /* Products */;
@@ -1159,6 +1168,7 @@
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
 				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,
 				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
+				8E0C13C72262CCEB000892CC /* ArvcRiskModel.swift in Sources */,
 				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
@@ -1175,6 +1185,7 @@
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
 				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
+				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,6 +1223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1266,6 +1278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1325,6 +1338,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP Mobile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1347,6 +1361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP Mobile-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1355,6 +1370,7 @@
 		8EC19C58159FE0FA00975E2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				CLANG_ENABLE_MODULES = YES;
@@ -1367,6 +1383,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "";
 				USE_HEADERMAP = YES;
@@ -1376,6 +1393,7 @@
 		8EC19C59159FE0FA00975E2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				CLANG_ENABLE_MODULES = YES;
@@ -1387,6 +1405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "";
 				USE_HEADERMAP = YES;
