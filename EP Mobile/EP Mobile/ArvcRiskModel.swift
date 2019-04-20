@@ -41,7 +41,6 @@ public class ArvcRiskModel: NSObject {
         self.rvef = rvef
     }
 
-
     // linear predictor
     private func linearPredictor() -> Double {
         return 0.4879 * Double(sex) - 0.0218 * Double(age) + 0.6573 * Double(hxSyncope) + 0.8112 * Double(hxNSVT) + 0.1701 * (pvcCount > 0 ? log(Double(pvcCount)) : 0) + 0.1131 * Double(twiCount) - 0.0252 * Double(rvef)
@@ -59,6 +58,7 @@ public class ArvcRiskModel: NSObject {
     private func calculateRisk(baselineSurvival: Double, linearPredictor: Double) -> Double {
         return roundToOnePlace( 100 * (1.0 - pow(baselineSurvival, exp(linearPredictor))))
     }
+
     private func calculateRisk(baselineSurvival: Double) -> Double {
         print(linearPredictor())
         print(1.0 - pow(baselineSurvival, exp(linearPredictor())))
