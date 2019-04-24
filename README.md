@@ -12,7 +12,7 @@ EP Mobile for iOS is open source, and licensed under the
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## Copyright
-Copyright © 2012, 2013, 2014, 2015, 2016, 2017 [EP Studios, Inc.](http://www.epstudiossoftware.com)
+Copyright © 2012-2019 [EP Studios, Inc.](http://www.epstudiossoftware.com)
 
 ## Sources
 The [AV annulus figure](http://en.wikipedia.org/wiki/File:Gray495.png)
@@ -27,6 +27,10 @@ It is licensed under the
 [Creative Commons Attribution 2.0 Generic License](http://creativecommons.org/licenses/by/2.0/deed.en).
 
 Due to screen size limitations, all references are not included in the iOS version.  Complete references will be available on the [EP Studios website](http://www/epstudiossoftware.com).
+
+The ARVC risk calculator is based on a similar calculator
+[on the web](https://arvcrisk.com).  It is based on
+[this paper](https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehz103/5419784) and is used with the kind permission of the investigators.
 
 ## Author
 David Mann
