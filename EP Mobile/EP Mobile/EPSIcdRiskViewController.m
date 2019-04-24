@@ -241,7 +241,7 @@
 }
 
 - (IBAction)openReferenceLink:(id)sender {
-    SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:@"https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehz103/5419784"]];
+    SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:@"https://www.sciencedirect.com/science/article/pii/S0735109713062840?via%3Dihubd"]];
     svc.delegate = self;
     [self presentViewController:svc animated:YES completion:nil];
 }
