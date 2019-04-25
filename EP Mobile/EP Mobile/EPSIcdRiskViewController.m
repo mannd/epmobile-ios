@@ -56,6 +56,7 @@
 
     self.referenceLabel.text = @"Reference: Dodson JA, Reynolds MR, Bao H, et al. Developing a Risk Model for In-Hospital Adverse Events Following Implantable Cardioverter-Defibrillator Implantation. Journal of the American College of Cardiology. 2014;63(8):788-796. doi:10.1016/j.jacc.2013.09.079";
 
+    self.title = @"ICD Implantation Risk";
 }
 
 - (void)didReceiveMemoryWarning
