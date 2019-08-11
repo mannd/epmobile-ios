@@ -61,7 +61,7 @@
 // default assumes just add points of risk scores
     int score = 0;
     for (int i = 0; i < [risks count]; ++i)
-        if ([[risks objectAtIndex:i] selected] == YES)
+        if ([(EPSRiskFactor *)[risks objectAtIndex:i] isSelected] == YES)
             score += [[risks objectAtIndex:i] points];
     return score;
 }
@@ -80,7 +80,7 @@
     }
     NSMutableArray *selected = [[NSMutableArray alloc] init];
     for (int i = 0; i < [risks count]; ++i) {
-        if ([[risks objectAtIndex:i] selected] == YES) {
+        if ([(EPSRiskFactor *)[risks objectAtIndex:i] isSelected] == YES) {
             [selected addObject:[[risks objectAtIndex:i] name]];
         }
     }

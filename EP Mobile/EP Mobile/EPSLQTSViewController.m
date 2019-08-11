@@ -81,7 +81,7 @@
     else if ([self.qtcSegmentedControl selectedSegmentIndex] == MARKED_QTC_PROLONGATION)
         score += 30;
     for (int i = 0; i < [self.risks count]; ++i)
-        if ([[self.risks objectAtIndex:i] selected] == YES)
+        if ([[self.risks objectAtIndex:i] isSelected] == YES)
             score += [[self.risks objectAtIndex:i] points];
     
 
@@ -163,7 +163,7 @@
     NSString *risk = [[self.risks objectAtIndex:indexPath.row + offset] name];
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
-    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+    if ([[self.risks objectAtIndex:(indexPath.row + offset)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;

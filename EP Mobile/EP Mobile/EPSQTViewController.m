@@ -163,7 +163,7 @@
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
     //cell.detailTextLabel.text = details;
-    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+    if ([[self.risks objectAtIndex:(indexPath.row + offset)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;

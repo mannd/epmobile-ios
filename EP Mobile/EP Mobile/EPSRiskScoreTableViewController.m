@@ -148,7 +148,7 @@
 
     cell.detailTextLabel.text = details;
     cell.detailTextLabel.numberOfLines = [riskScore detailTextNumberOfLines];
-    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+    if ([(EPSRiskFactor *)[self.risks objectAtIndex:(indexPath.row + offset)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;

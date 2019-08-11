@@ -207,7 +207,7 @@
     NSString *risk = [[self.risks objectAtIndex:indexPath.row] name];
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
-    if ([[self.risks objectAtIndex:(indexPath.row)] selected] == YES)
+    if ([[self.risks objectAtIndex:(indexPath.row)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
