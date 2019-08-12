@@ -12,7 +12,6 @@
 @synthesize name=name_;
 @synthesize points=points_;
 @synthesize details=details_;
-@synthesize isSelected=selected_;
 @synthesize isMajor=isMajor_;
 @synthesize sectionNumber=sectionNumber_;
 

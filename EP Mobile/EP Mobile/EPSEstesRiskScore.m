@@ -41,7 +41,7 @@
 }
 
 - (int)calculateScore:(NSMutableArray *)risks {
-    if ([[risks objectAtIndex:ESTES_STRAIN_WITH_DIG] selected] && [[risks objectAtIndex:ESTES_STRAIN_WITHOUT_DIG] selected]) 
+    if ([[risks objectAtIndex:ESTES_STRAIN_WITH_DIG] isSelected] && [[risks objectAtIndex:ESTES_STRAIN_WITHOUT_DIG] isSelected])
         return ESTES_ERROR;
     else
         return [super calculateScore:risks];

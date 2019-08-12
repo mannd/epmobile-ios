@@ -53,8 +53,8 @@
 - (int)calculateScore:(NSMutableArray *)risks {
     int result = 0;
     // cardiac arrest and VT treated specially
-    if ([[risks objectAtIndex:SCD_RISK_SCORE] selected]
-        || [[risks objectAtIndex:SUSTAINED_VT_RISK_SCORE] selected])
+    if ([[risks objectAtIndex:SCD_RISK_SCORE] isSelected]
+        || [[risks objectAtIndex:SUSTAINED_VT_RISK_SCORE] isSelected])
         result = HIGHEST_RISK_SCORE;
     else
         result = [super calculateScore:risks];
