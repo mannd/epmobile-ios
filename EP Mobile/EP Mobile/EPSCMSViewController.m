@@ -86,7 +86,7 @@
     self.list = risks;
     
     [self.efSegmentedControl setTitle:@">35"forSegmentAtIndex:0];
-        [self.efSegmentedControl setTitle:@">30&≤35"forSegmentAtIndex:1];
+        [self.efSegmentedControl setTitle:@">30 & ≤35"forSegmentAtIndex:1];
         [self.efSegmentedControl setTitle:@"≤30"forSegmentAtIndex:2];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
@@ -121,7 +121,7 @@
     [self.checkedItems removeAllObjects];
     for (id object in self.list) {
         for (id criteria in object)
-            if ([criteria selected]) {
+            if ([criteria isSelected]) {
                 NSNumber *value = [NSNumber numberWithInteger:[criteria points]];
                 [self.checkedItems addObject:value];
             }
