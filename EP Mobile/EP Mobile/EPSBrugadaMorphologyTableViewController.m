@@ -80,7 +80,7 @@
     
     int count = 0;
     for (int i = 0; i < [self.list count]; ++i)
-        if ([[self.list objectAtIndex:i] selected])
+        if ([[self.list objectAtIndex:i] isSelected])
             count += [[self.list objectAtIndex:i] points];
     BOOL inV1 = count % 100 > 0;
     BOOL inV6 = count / 100 > 0;
@@ -126,7 +126,7 @@
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
-    BOOL selected = [[self.list objectAtIndex:row] selected];
+    BOOL selected = [[self.list objectAtIndex:row] isSelected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);    
     return cell;
 }
@@ -141,11 +141,11 @@
     NSUInteger row = indexPath.row;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.list objectAtIndex:row] setSelected:NO];
+        [[self.list objectAtIndex:row] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[self.list objectAtIndex:row] setSelected:YES];
+        [[self.list objectAtIndex:row] setIsSelected:YES];
         
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

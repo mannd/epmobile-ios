@@ -173,11 +173,11 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark; 
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

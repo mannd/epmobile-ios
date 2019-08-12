@@ -86,7 +86,7 @@
     for (int i = 0; i < [self.list count]; ++i) {
         int tmp = 0;
         for (int j = 0; j < [[self.list objectAtIndex:i] count]; ++j) {
-            if ([[[self.list objectAtIndex:i] objectAtIndex:j] selected]) {
+            if ([[[self.list objectAtIndex:i] objectAtIndex:j] isSelected]) {
                 tmp += [[[self.list objectAtIndex:i] objectAtIndex:j] points];
             }
         }
@@ -177,7 +177,7 @@
         cell.textLabel.text = @"MAJOR";
     else
         cell.textLabel.text = @"MINOR";
-    BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] selected];
+    BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] isSelected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
 }
@@ -214,11 +214,11 @@
     NSUInteger section = indexPath.section;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[[self.list objectAtIndex:section] objectAtIndex:row] setSelected:NO];
+        [[[self.list objectAtIndex:section] objectAtIndex:row] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[[self.list objectAtIndex:section] objectAtIndex:row] setSelected:YES];
+        [[[self.list objectAtIndex:section] objectAtIndex:row] setIsSelected:YES];
 
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

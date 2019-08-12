@@ -77,7 +77,7 @@
     int score = 0;
     // ECG criteria
     // one of the short QT intervals must be selected to get other points
-    if (self.qtcSegmentedControl.selectedSegmentIndex == 0 && ![[self.risks objectAtIndex:SQTS_SHORT_JT] selected]) {
+    if (self.qtcSegmentedControl.selectedSegmentIndex == 0 && ![[self.risks objectAtIndex:SQTS_SHORT_JT] isSelected]) {
         [self displayResult:score];
         return;
     }
@@ -91,7 +91,7 @@
     if ([[self.risks objectAtIndex:SQTS_SHORT_JT] isSelected ])
         ++score;
     // Clinical history points can only be received for one of next 3 selections
-    if ([[self.risks objectAtIndex:SQTS_ARREST] selected] ||[[self.risks objectAtIndex:SQTS_VT] isSelected])
+    if ([[self.risks objectAtIndex:SQTS_ARREST] isSelected] ||[[self.risks objectAtIndex:SQTS_VT] isSelected])
         score += 2;
     else if ([[self.risks objectAtIndex:SQTS_SYNCOPE] isSelected])
         ++score;

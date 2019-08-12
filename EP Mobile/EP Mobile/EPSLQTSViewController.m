@@ -87,15 +87,15 @@
 
     // Torsade and syncope are mutually exclusive, so don't count syncope
     // if has torsade.
-	if ([[self.risks objectAtIndex:HAS_TORSADE_INDEX] selected] && ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] || [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])) {
-        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected])
+	if ([[self.risks objectAtIndex:HAS_TORSADE_INDEX] isSelected] && ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] isSelected] || [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] isSelected])) {
+        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] isSelected])
             score -= 20;
-        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+        if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] isSelected])
             score -= 10;
     }  
     // Not allowed to have syncope with and without stress, count it as syncope with stress
     // (radio buttons would fix this, but not available in iOS)
-    else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] selected] && [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] selected])
+    else if ([[self.risks objectAtIndex:HAS_SYNCOPE_WITH_STRESS_INDEX] isSelected] && [[self.risks objectAtIndex:HAS_SYNCOPE_WITHOUT_STRESS_INDEX] isSelected])
         // subtract the points for syncope without stress
         score -= 10;
         
@@ -190,11 +190,11 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
