@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v7F-Ni-Oso">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v7F-Ni-Oso">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,26 +16,25 @@
                         <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-OS-WIE">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rwpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
-                                        <rect key="frame" x="40" y="8" width="688" height="501.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rwpt" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
+                                        <rect key="frame" x="40" y="8" width="334" height="243.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9Mw-vh-A5V" secondAttribute="height" multiplier="129:94" id="O2u-u9-v1F"/>
                                         </constraints>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-bo-OZD">
-                                        <rect key="frame" x="20" y="517.5" width="728" height="125.5"/>
+                                        <rect key="frame" x="20" y="259.5" width="374" height="125.5"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <string key="text">R wave peak time in lead II (RWPT).
 Measure the onset of the QRS in ECG lead II to the first change in polarity (nadir Q or peak R). RWPT ≥ 50 msec strongly suggests VT (positive likelihood ratio 34.8). Reference: Pava LF, et al. Heart Rhythm 2010;7:922.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -51,7 +50,7 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="VCC-OS-WIE" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" id="eiy-rk-yzf"/>
                             <constraint firstItem="VCC-OS-WIE" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leadingMargin" constant="-20" id="fM8-4O-Q21"/>
@@ -68,6 +67,6 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
         </scene>
     </scenes>
     <resources>
-        <image name="rwpt.png" width="357" height="282"/>
+        <image name="rwpt" width="357" height="282"/>
     </resources>
 </document>

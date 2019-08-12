@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,22 +14,21 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
                             <tableViewSection id="8A3-4i-xlu">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YtH-wy-IX4" style="IBUITableViewCellStyleDefault" id="Xky-X8-SF0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xky-X8-SF0" id="v4G-ON-2qm">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Anatomy of AV Annulus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YtH-wy-IX4">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
@@ -42,17 +38,16 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3fL-sW-Ock" style="IBUITableViewCellStyleDefault" id="Y0H-RR-a6e">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y0H-RR-a6e" id="npq-MV-RLZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Arruda Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3fL-sW-Ock">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
@@ -62,17 +57,16 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NCt-G2-tIw" style="IBUITableViewCellStyleDefault" id="UFQ-kS-z0U">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UFQ-kS-z0U" id="2PG-Yv-zvv">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="D'Avila Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NCt-G2-tIw">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
@@ -82,17 +76,16 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M26-3b-beC" style="IBUITableViewCellStyleDefault" id="IdX-G4-Nag">
-                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IdX-G4-Nag" id="lf8-Ck-UaF">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Milstein Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M26-3b-beC">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
@@ -102,17 +95,16 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5Zy-nJ-FWL" style="IBUITableViewCellStyleDefault" id="eMv-Oo-REm">
-                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="204" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eMv-Oo-REm" id="qnE-WK-bMw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Modified Arruda Algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Zy-nJ-FWL">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
@@ -144,95 +136,95 @@
                         <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gWp-Vz-OiS" secondAttribute="height" multiplier="320:289" id="laE-o7-7fs"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RrO-cy-PwH" secondAttribute="height" multiplier="320:289" id="JZv-Mw-ycV"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fVz-e0-JTT" secondAttribute="height" multiplier="320:289" id="LOF-b6-6cH"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0rb-g4-jki" secondAttribute="height" multiplier="320:289" id="DFO-wB-J0h"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mIa-S1-Y7q" secondAttribute="height" multiplier="320:289" id="zQQ-eD-mdR"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AHB-u6-JtR" secondAttribute="height" multiplier="320:289" id="Nfe-0N-SSm"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SEs-Ji-GrW" secondAttribute="height" multiplier="320:289" id="yEv-6t-Bvu"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9I9-Uu-U8T" secondAttribute="height" multiplier="320:289" id="ZNb-vG-7DJ"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sff-vt-pYQ" secondAttribute="height" multiplier="320:289" id="fxU-M2-bXx"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gco-M8-5yJ" secondAttribute="height" multiplier="320:289" id="xFf-ib-lTS"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fc8-nj-Uaz" secondAttribute="height" multiplier="320:289" id="b8A-OD-UVk"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xHX-bV-EvX" secondAttribute="height" multiplier="320:289" id="IVx-9k-zp6"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QBL-OF-jfK" secondAttribute="height" multiplier="320:289" id="x88-o9-4Wi"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IWU-ux-lqO" secondAttribute="height" multiplier="320:289" id="5lZ-hf-57q"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
-                                <rect key="frame" x="20" y="182" width="335" height="303"/>
+                                <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
                                 </constraints>
@@ -245,7 +237,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="mIa-S1-Y7q" secondAttribute="centerX" id="0yk-yx-Oag"/>
                             <constraint firstItem="RrO-cy-PwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="3AV-Vm-hxK"/>
@@ -343,13 +335,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="asap.png" width="452" height="400"/>
+        <image name="asap" width="452" height="400"/>
         <image name="epicardialap.png" width="452" height="400"/>
-        <image name="lalap.png" width="452" height="400"/>
+        <image name="lalap" width="452" height="400"/>
         <image name="llap.png" width="452" height="400"/>
         <image name="lpap.png" width="452" height="400"/>
         <image name="lplap.png" width="452" height="400"/>
-        <image name="modgrayavannulus.png" width="452" height="400"/>
+        <image name="modgrayavannulus" width="452" height="400"/>
         <image name="msap.png" width="452" height="400"/>
         <image name="psmaap.png" width="452" height="400"/>
         <image name="pstaap.png" width="452" height="400"/>
