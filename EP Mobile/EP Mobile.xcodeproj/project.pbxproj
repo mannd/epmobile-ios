@@ -134,6 +134,8 @@
 		8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */; };
 		8EB4190717EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */; };
 		8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */; };
+		8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB79F64230394C100CBB056 /* LQTTableViewController.swift */; };
+		8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB79F662303986900CBB056 /* LQTTableViewCell.swift */; };
 		8EBFBBD8162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFBBD7162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m */; };
 		8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFBBDA162CA96100D3B964 /* EPSAnnularVTAlgorithm.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
@@ -393,6 +395,8 @@
 		8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon5settings.png; sourceTree = "<group>"; };
 		8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-2x.png"; sourceTree = "<group>"; };
 		8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-R4.png"; sourceTree = "<group>"; };
+		8EB79F64230394C100CBB056 /* LQTTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQTTableViewController.swift; sourceTree = "<group>"; };
+		8EB79F662303986900CBB056 /* LQTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQTTableViewCell.swift; sourceTree = "<group>"; };
 		8EBCB46E19DB672F001A8DA3 /* EPSLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLogging.h; sourceTree = "<group>"; };
 		8EBFBBD5162CA6ED00D3B964 /* EPSStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSStepAlgorithmProtocol.h; sourceTree = "<group>"; };
 		8EBFBBD6162CA7DD00D3B964 /* EPSOutflowVTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOutflowVTAlgorithm.h; sourceTree = "<group>"; };
@@ -775,6 +779,15 @@
 			name = "Image Views";
 			sourceTree = "<group>";
 		};
+		8EB79F632303943E00CBB056 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
+				8EB79F662303986900CBB056 /* LQTTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +831,7 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8EB79F632303943E00CBB056 /* Views */,
 				8E24EDB8203F36DE00C49B66 /* Models */,
 				8E71C2BA1F77546C00D198BD /* Storyboards */,
 				8E00E96817BC48710007A146 /* Headers */,
@@ -1135,6 +1149,7 @@
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
 				8E37A59E16FF46FF004E66B2 /* EPSDateCalculatorViewController.m in Sources */,
+				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
 				8E37A5A116FF6016004E66B2 /* EPSDateCalculatorNotes.m in Sources */,
 				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
@@ -1157,6 +1172,7 @@
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
+				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,

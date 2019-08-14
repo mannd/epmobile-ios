@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LQT 1-->
+        <!--LQT1-->
         <scene sceneID="hEf-rr-Rr2">
             <objects>
                 <tableViewController id="g7a-XK-NAh" customClass="EPSLQTSDetailsTableViewController" sceneMemberID="viewController">
@@ -164,13 +164,13 @@
                             <outlet property="delegate" destination="g7a-XK-NAh" id="FuD-Ce-3pa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT 1" id="vTW-3w-0sQ"/>
+                    <tabBarItem key="tabBarItem" title="LQT1" id="vTW-3w-0sQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Fl-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7838" y="-681"/>
         </scene>
-        <!--LQT 2-->
+        <!--LQT2-->
         <scene sceneID="Mgx-ZU-nDB">
             <objects>
                 <tableViewController id="8yg-ey-fv3" sceneMemberID="viewController">
@@ -327,7 +327,7 @@
                             <outlet property="delegate" destination="8yg-ey-fv3" id="o30-O4-Zhx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT 2" id="G4A-6U-PrN"/>
+                    <tabBarItem key="tabBarItem" title="LQT2" id="G4A-6U-PrN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,46 +350,78 @@
                         <segue destination="8yg-ey-fv3" kind="relationship" relationship="viewControllers" id="vod-t5-0OG"/>
                         <segue destination="Oqu-Qb-RBM" kind="relationship" relationship="viewControllers" id="q9l-a6-Cn8"/>
                         <segue destination="dbO-Dt-ozE" kind="relationship" relationship="viewControllers" id="xdo-s4-8N7"/>
-                        <segue destination="hqb-9C-9fN" kind="relationship" relationship="viewControllers" id="XEQ-ks-wt5"/>
+                        <segue destination="KE9-EM-qZq" kind="relationship" relationship="viewControllers" id="ABu-Oa-C2X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufU-3U-yOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6474" y="-1728"/>
         </scene>
-        <!--LQT 5-17+-->
-        <scene sceneID="9ko-Jl-hmG">
+        <!--All-->
+        <scene sceneID="VCb-Dm-JGE">
             <objects>
-                <viewController id="hqb-9C-9fN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bk3-Fa-8UD"/>
-                        <viewControllerLayoutGuide type="bottom" id="SvN-fK-CzK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cgn-ix-R6J">
+                <tableViewController id="KE9-EM-qZq" customClass="LQTTableViewController" customModule="EP_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O51-Zz-GNJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-yo-Op1">
-                                <rect key="frame" x="47.5" y="262.5" width="280" height="142.5"/>
-                                <string key="text">Remaining subtypes all &lt;1% frequency (some just single families) without distinguishing features.  One exception is LQT 8 which affects the ICaL channel, has alternating T waves on ECG, and is associated with Timothy Syndrome.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="mS7-yo-Op1" secondAttribute="centerY" id="xyI-EP-VQp"/>
-                            <constraint firstAttribute="centerX" secondItem="mS7-yo-Op1" secondAttribute="centerX" id="yMJ-iI-Ks1"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="LQT 5-17+" id="IFA-tI-TRG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uld-V7-BgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="longQtsCell" rowHeight="76" id="VJk-FD-NO0" customClass="LQTTableViewCell" customModule="EP_Mobile" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJk-FD-NO0" id="QUj-Ra-LGT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-Un-Dim">
+                                            <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8L-fb-AJJ">
+                                            <rect key="frame" x="317" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeS-7C-wig">
+                                            <rect key="frame" x="16" y="44.5" width="343" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aeS-7C-wig" firstAttribute="trailing" secondItem="QUj-Ra-LGT" secondAttribute="trailingMargin" id="CHQ-wv-7jw"/>
+                                        <constraint firstItem="B8L-fb-AJJ" firstAttribute="trailing" secondItem="QUj-Ra-LGT" secondAttribute="trailingMargin" id="NNF-7k-Jx9"/>
+                                        <constraint firstItem="B8L-fb-AJJ" firstAttribute="top" secondItem="QUj-Ra-LGT" secondAttribute="topMargin" id="d91-O2-9dC"/>
+                                        <constraint firstItem="1iy-Un-Dim" firstAttribute="top" secondItem="QUj-Ra-LGT" secondAttribute="topMargin" id="dU3-jB-hJN"/>
+                                        <constraint firstItem="aeS-7C-wig" firstAttribute="top" secondItem="1iy-Un-Dim" secondAttribute="bottom" constant="12.5" id="ibi-Yt-kIu"/>
+                                        <constraint firstItem="aeS-7C-wig" firstAttribute="leading" secondItem="QUj-Ra-LGT" secondAttribute="leadingMargin" id="lSa-oO-hKd"/>
+                                        <constraint firstItem="1iy-Un-Dim" firstAttribute="leading" secondItem="QUj-Ra-LGT" secondAttribute="leadingMargin" id="rrf-92-LND"/>
+                                        <constraint firstItem="aeS-7C-wig" firstAttribute="bottom" secondItem="QUj-Ra-LGT" secondAttribute="bottomMargin" id="vtn-De-cg9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="channelLabel" destination="B8L-fb-AJJ" id="FqO-iZ-0yM"/>
+                                    <outlet property="detailsLabel" destination="aeS-7C-wig" id="qXT-an-B9o"/>
+                                    <outlet property="subtypeLabel" destination="1iy-Un-Dim" id="xQT-fn-tYj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KE9-EM-qZq" id="aAB-VE-sVJ"/>
+                            <outlet property="delegate" destination="KE9-EM-qZq" id="OcA-Ev-A77"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="All" id="nyf-vO-IQp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bD-q2-iaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5119" y="-681"/>
+            <point key="canvasLocation" x="-5063.1999999999998" y="-681.40929535232385"/>
         </scene>
-        <!--LQT 4-->
+        <!--LQT4-->
         <scene sceneID="IpH-dg-zvm">
             <objects>
                 <tableViewController id="dbO-Dt-ozE" sceneMemberID="viewController">
@@ -546,13 +578,13 @@
                             <outlet property="delegate" destination="dbO-Dt-ozE" id="z2P-FG-9rp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT 4" id="dkJ-ZZ-QZX"/>
+                    <tabBarItem key="tabBarItem" title="LQT4" id="dkJ-ZZ-QZX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umm-np-Lbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5790" y="-681"/>
         </scene>
-        <!--LQT 3-->
+        <!--LQT3-->
         <scene sceneID="NkL-gw-vQK">
             <objects>
                 <tableViewController id="Oqu-Qb-RBM" sceneMemberID="viewController">
@@ -709,7 +741,7 @@
                             <outlet property="delegate" destination="Oqu-Qb-RBM" id="Tt9-cv-u8h"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT 3" id="8bV-qI-Q8a"/>
+                    <tabBarItem key="tabBarItem" title="LQT3" id="8bV-qI-Q8a"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
