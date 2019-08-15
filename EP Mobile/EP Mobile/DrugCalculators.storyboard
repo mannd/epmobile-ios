@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Drug Dose Calculator View Controller-->
@@ -38,12 +37,12 @@
                                     </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age (yr)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-5m-lcW">
                                         <rect key="frame" x="105.5" y="53" width="89" height="34"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
-                                        <rect key="frame" x="222.5" y="98.5" width="115" height="32"/>
+                                        <rect key="frame" x="214.5" y="98.5" width="123" height="32"/>
                                         <segments>
                                             <segment title="lb"/>
                                             <segment title="kg"/>
@@ -54,7 +53,7 @@
                                     </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (lb)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11h-mp-an5">
                                         <rect key="frame" x="105.5" y="97" width="89" height="34"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="89" id="lei-QO-Fmr"/>
                                         </constraints>
@@ -63,23 +62,22 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cr (mg/dL)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-6k-nzO">
                                         <rect key="frame" x="105.5" y="141" width="89" height="34"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-wR-tqp">
-                                        <rect key="frame" x="222.5" y="60" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="214.5" y="60" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="SvF-Ho-s7V">
                                         <rect key="frame" x="37.5" y="214.5" width="300" height="137"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="137" id="VjA-hq-p2W"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-NA-HB9">
@@ -122,7 +120,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OYK-i5-cZ2">
-                                        <rect key="frame" x="222.5" y="142.5" width="115" height="32"/>
+                                        <rect key="frame" x="214.5" y="142.5" width="123" height="32"/>
                                         <segments>
                                             <segment title="mg/dL"/>
                                             <segment title="µmol/L"/>
@@ -169,7 +167,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="v4C-Vc-7or" firstAttribute="leading" secondItem="AfC-EP-iLu" secondAttribute="leading" id="2Ws-QV-zZU"/>
                             <constraint firstAttribute="trailing" secondItem="v4C-Vc-7or" secondAttribute="trailing" id="9bu-PD-Gyt"/>

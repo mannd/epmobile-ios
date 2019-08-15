@@ -80,7 +80,7 @@
 
 // Detailed text label not big enough on iPhone 4s
 - (CGFloat)rowHeight:(CGFloat)defaultHeight {
-    return defaultHeight + 75.0;
+    return defaultHeight + 60.0;
 }
 
 - (int)detailTextNumberOfLines {

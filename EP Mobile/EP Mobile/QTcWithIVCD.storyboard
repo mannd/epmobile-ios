@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mhq-KQ-Sd1">
-    <device id="retina4_0" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mhq-KQ-Sd1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--QTc With IVCD-->
@@ -17,16 +16,16 @@
                         <viewControllerLayoutGuide type="bottom" id="1Id-Z0-5rY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cBe-UR-y3h" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QT (msec)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="091-I8-1Fh">
-                                <rect key="frame" x="16" y="82" width="140" height="20.5"/>
+                                <rect key="frame" x="20" y="126" width="140" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UdK-vK-rjc">
-                                <rect key="frame" x="16" y="31" width="140" height="32"/>
+                                <rect key="frame" x="20" y="75" width="140" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="X4r-aU-AAz"/>
                                 </constraints>
@@ -39,8 +38,8 @@
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QT (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-F3-lDe">
-                                <rect key="frame" x="162" y="76.5" width="142" height="34"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                <rect key="frame" x="252" y="120.5" width="142" height="34"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -48,8 +47,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QRS (msec)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-pi-TfV">
-                                <rect key="frame" x="162" y="117" width="142" height="34"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                <rect key="frame" x="252" y="161" width="142" height="34"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -57,27 +56,27 @@
                                 </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-K0-vbU">
-                                <rect key="frame" x="162" y="158" width="51" height="31"/>
+                                <rect key="frame" x="252" y="202" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBBB?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrP-rC-DMu">
-                                <rect key="frame" x="16" y="163" width="50" height="20.5"/>
+                                <rect key="frame" x="20" y="207" width="50" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kUC-Uw-tei">
-                                <rect key="frame" x="162" y="199" width="142" height="32"/>
+                                <rect key="frame" x="252" y="243" width="142" height="32"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-mG-fJY">
-                                <rect key="frame" x="16" y="203.5" width="28" height="20.5"/>
+                                <rect key="frame" x="20" y="247.5" width="28" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTP-1N-Jtd">
-                                <rect key="frame" x="16" y="538" width="69" height="30"/>
+                                <rect key="frame" x="20" y="832" width="69" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="fSW-Xs-8lj"/>
                                 </constraints>
@@ -87,7 +86,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrb-Lt-HS2">
-                                <rect key="frame" x="268" y="538" width="36" height="30"/>
+                                <rect key="frame" x="358" y="832" width="36" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="eXc-1u-8OC"/>
                                 </constraints>
@@ -97,8 +96,8 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-jx-bNd">
-                                <rect key="frame" x="162" y="30" width="142" height="34"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                <rect key="frame" x="252" y="74" width="142" height="34"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="nSW-b5-3Fd"/>
                                 </constraints>
@@ -109,7 +108,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afA-A6-qbK">
-                                <rect key="frame" x="16" y="464" width="288" height="0.0"/>
+                                <rect key="frame" x="20" y="758" width="374" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="560" id="gvX-w5-ahy"/>
                                 </constraints>
@@ -117,12 +116,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRS (msec)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR0-dn-Avj">
-                                <rect key="frame" x="16" y="122.5" width="92" height="20.5"/>
+                                <rect key="frame" x="20" y="166.5" width="92" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nrb-Lt-HS2" firstAttribute="baseline" secondItem="aTP-1N-Jtd" secondAttribute="baseline" id="4Ao-3N-R08"/>
                             <constraint firstItem="afA-A6-qbK" firstAttribute="trailing" secondItem="Nix-jx-bNd" secondAttribute="trailing" id="6wK-c6-gmQ"/>
@@ -195,78 +194,78 @@
                         <viewControllerLayoutGuide type="bottom" id="Q3f-ZA-sUB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MqH-9V-7eB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wo1-t7-g3w">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-7E-mTn">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QT" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTW-5L-Is5">
-                                                <rect key="frame" x="20" y="28" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="28" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-yE-M23">
-                                                <rect key="frame" x="275" y="75" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="75" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="jtInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="vzA-ew-MlW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0m-V7-rt1">
-                                                <rect key="frame" x="275" y="201" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="201" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="qtmInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="fIM-Bz-5qt"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QTmc" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbT-19-Wkm">
-                                                <rect key="frame" x="20" y="238" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="238" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QTrr,qrs" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTk-4e-Zyb">
-                                                <rect key="frame" x="20" y="280" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="280" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVs-ae-Ya9">
-                                                <rect key="frame" x="275" y="285" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="285" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="qtrrqrsInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="FQi-Z5-kmJ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH2-ZI-cii">
-                                                <rect key="frame" x="275" y="327" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="327" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="prelbbbqtcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="nFe-Ac-VXm"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0l-wi-anq">
-                                                <rect key="frame" x="275" y="159" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="159" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="jtcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="sRA-fk-uUS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKz-gr-egE">
-                                                <rect key="frame" x="275" y="243" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="243" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="qtmcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="7nL-Sz-AKK"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QTm" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bht-rv-JOP">
-                                                <rect key="frame" x="20" y="196" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="196" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="preLBBBQTc" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4s0-jp-ntw">
-                                                <rect key="frame" x="20" y="322" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="322" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-Hn-cCz">
-                                                <rect key="frame" x="278" y="33" width="22" height="24"/>
+                                                <rect key="frame" x="372" y="33" width="22" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="TmM-Z3-uxW"/>
                                                 </constraints>
@@ -275,28 +274,28 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JTc" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVl-rE-L9w">
-                                                <rect key="frame" x="20" y="154" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="154" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkR-ep-E0y">
-                                                <rect key="frame" x="275" y="117" width="25" height="24"/>
+                                                <rect key="frame" x="369" y="117" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="qtcInfoButton:" destination="dCL-Fq-3Ro" eventType="touchUpInside" id="Zno-UC-8Kp"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JT" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-yt-tuu">
-                                                <rect key="frame" x="20" y="70" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="70" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="QTc" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-7J-VRx">
-                                                <rect key="frame" x="20" y="112" width="250" height="34"/>
+                                                <rect key="frame" x="20" y="112" width="344" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="DbT-19-Wkm" firstAttribute="leading" secondItem="dTW-5L-Is5" secondAttribute="leading" id="2Ax-OY-Lm4"/>
                                             <constraint firstItem="KKz-gr-egE" firstAttribute="centerY" secondItem="DbT-19-Wkm" secondAttribute="centerY" id="6GS-ec-RY2"/>
@@ -350,7 +349,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Wo1-t7-g3w" firstAttribute="top" secondItem="PK7-2q-S8W" secondAttribute="bottom" id="Iif-jo-7FQ"/>
                             <constraint firstItem="Wo1-t7-g3w" firstAttribute="leading" secondItem="MqH-9V-7eB" secondAttribute="leading" id="LBB-he-LjD"/>
