@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +14,7 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GHh-HK-X8f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
                             <tableViewSection id="8A3-4i-xlu">
                                 <cells>
@@ -151,7 +151,7 @@
                                     <constraint firstAttribute="width" secondItem="RrO-cy-PwH" secondAttribute="height" multiplier="320:289" id="JZv-Mw-ycV"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fVz-e0-JTT" secondAttribute="height" multiplier="320:289" id="LOF-b6-6cH"/>
@@ -163,67 +163,67 @@
                                     <constraint firstAttribute="width" secondItem="0rb-g4-jki" secondAttribute="height" multiplier="320:289" id="DFO-wB-J0h"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mIa-S1-Y7q" secondAttribute="height" multiplier="320:289" id="zQQ-eD-mdR"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AHB-u6-JtR" secondAttribute="height" multiplier="320:289" id="Nfe-0N-SSm"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SEs-Ji-GrW" secondAttribute="height" multiplier="320:289" id="yEv-6t-Bvu"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap.png" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9I9-Uu-U8T" secondAttribute="height" multiplier="320:289" id="ZNb-vG-7DJ"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sff-vt-pYQ" secondAttribute="height" multiplier="320:289" id="fxU-M2-bXx"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap.png" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gco-M8-5yJ" secondAttribute="height" multiplier="320:289" id="xFf-ib-lTS"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fc8-nj-Uaz" secondAttribute="height" multiplier="320:289" id="b8A-OD-UVk"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xHX-bV-EvX" secondAttribute="height" multiplier="320:289" id="IVx-9k-zp6"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QBL-OF-jfK" secondAttribute="height" multiplier="320:289" id="x88-o9-4Wi"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap.png" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IWU-ux-lqO" secondAttribute="height" multiplier="320:289" id="5lZ-hf-57q"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
                                 <rect key="frame" x="20" y="172" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
@@ -237,7 +237,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="mIa-S1-Y7q" secondAttribute="centerX" id="0yk-yx-Oag"/>
                             <constraint firstItem="RrO-cy-PwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I41-KR-L7q" secondAttribute="leading" constant="20" symbolic="YES" id="3AV-Vm-hxK"/>
@@ -336,20 +336,20 @@
     </scenes>
     <resources>
         <image name="asap" width="452" height="400"/>
-        <image name="epicardialap.png" width="452" height="400"/>
+        <image name="epicardialap" width="452" height="400"/>
         <image name="lalap" width="452" height="400"/>
-        <image name="llap.png" width="452" height="400"/>
-        <image name="lpap.png" width="452" height="400"/>
-        <image name="lplap.png" width="452" height="400"/>
+        <image name="llap" width="452" height="400"/>
+        <image name="lpap" width="452" height="400"/>
+        <image name="lplap" width="452" height="400"/>
         <image name="modgrayavannulus" width="452" height="400"/>
-        <image name="msap.png" width="452" height="400"/>
-        <image name="psmaap.png" width="452" height="400"/>
-        <image name="pstaap.png" width="452" height="400"/>
-        <image name="raap.png" width="452" height="400"/>
-        <image name="ralap.png" width="452" height="400"/>
-        <image name="rlap.png" width="452" height="400"/>
-        <image name="rpap.png" width="452" height="400"/>
-        <image name="rplap.png" width="452" height="400"/>
+        <image name="msap" width="452" height="400"/>
+        <image name="psmaap" width="452" height="400"/>
+        <image name="pstaap" width="452" height="400"/>
+        <image name="raap" width="452" height="400"/>
+        <image name="ralap" width="452" height="400"/>
+        <image name="rlap" width="452" height="400"/>
+        <image name="rpap" width="452" height="400"/>
+        <image name="rplap" width="452" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rd3-Ia-06S"/>

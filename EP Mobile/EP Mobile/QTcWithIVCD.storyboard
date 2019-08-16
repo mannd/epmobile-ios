@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mhq-KQ-Sd1">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
@@ -20,12 +20,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QT (msec)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="091-I8-1Fh">
-                                <rect key="frame" x="16" y="117.99999999999999" width="140" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="119.99999999999999" width="140" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UdK-vK-rjc">
-                                <rect key="frame" x="16" y="75" width="140" height="32"/>
+                                <rect key="frame" x="16" y="75" width="140" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="X4r-aU-AAz"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QT (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-F3-lDe">
-                                <rect key="frame" x="217" y="113" width="142" height="34"/>
+                                <rect key="frame" x="217" y="115" width="142" height="34"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QRS (msec)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-pi-TfV">
-                                <rect key="frame" x="217" y="153.66666666666666" width="142" height="34"/>
+                                <rect key="frame" x="217" y="155.66666666666666" width="142" height="34"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -56,22 +56,22 @@
                                 </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-K0-vbU">
-                                <rect key="frame" x="217" y="193.66666666666666" width="51" height="31"/>
+                                <rect key="frame" x="217" y="195.66666666666666" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBBB?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrP-rC-DMu">
-                                <rect key="frame" x="16" y="199" width="50" height="20.333333333333343"/>
+                                <rect key="frame" x="16" y="201" width="50" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kUC-Uw-tei">
-                                <rect key="frame" x="217" y="235.66666666666666" width="142" height="31.999999999999972"/>
+                                <rect key="frame" x="217" y="237.66666666666666" width="142" height="31.999999999999972"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-mG-fJY">
-                                <rect key="frame" x="16" y="239.33333333333334" width="28" height="20.666666666666657"/>
+                                <rect key="frame" x="16" y="241.33333333333334" width="28" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-jx-bNd">
-                                <rect key="frame" x="217" y="72" width="142" height="34"/>
+                                <rect key="frame" x="217" y="75" width="142" height="34"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="nSW-b5-3Fd"/>
@@ -116,7 +116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRS (msec)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR0-dn-Avj">
-                                <rect key="frame" x="16" y="158.33333333333334" width="92" height="20.666666666666657"/>
+                                <rect key="frame" x="16" y="160.33333333333334" width="92" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -141,6 +141,7 @@
                             </constraint>
                             <constraint firstItem="091-I8-1Fh" firstAttribute="leading" secondItem="UdK-vK-rjc" secondAttribute="leading" id="Kzh-p3-iqf"/>
                             <constraint firstItem="nrb-Lt-HS2" firstAttribute="top" secondItem="afA-A6-qbK" secondAttribute="bottom" constant="74" id="Lsz-yR-NMD"/>
+                            <constraint firstItem="UdK-vK-rjc" firstAttribute="centerY" secondItem="Nix-jx-bNd" secondAttribute="centerY" id="OBm-xT-DwF"/>
                             <constraint firstItem="UdK-vK-rjc" firstAttribute="centerX" secondItem="091-I8-1Fh" secondAttribute="centerX" id="QAg-ax-ywD"/>
                             <constraint firstItem="vN0-K0-vbU" firstAttribute="centerY" secondItem="yrP-rC-DMu" secondAttribute="centerY" id="TvE-A1-5p5"/>
                             <constraint firstItem="kUC-Uw-tei" firstAttribute="baseline" secondItem="s5X-mG-fJY" secondAttribute="baseline" id="UqQ-rb-ea4"/>
@@ -150,7 +151,7 @@
                                 <variation key="heightClass=compact" constant="12"/>
                             </constraint>
                             <constraint firstItem="afA-A6-qbK" firstAttribute="leading" secondItem="UdK-vK-rjc" secondAttribute="leading" id="efe-GA-dTe"/>
-                            <constraint firstItem="091-I8-1Fh" firstAttribute="top" secondItem="UdK-vK-rjc" secondAttribute="bottom" constant="12" id="eoy-1a-H0O">
+                            <constraint firstItem="091-I8-1Fh" firstAttribute="top" secondItem="UdK-vK-rjc" secondAttribute="bottom" constant="11" id="eoy-1a-H0O">
                                 <variation key="heightClass=compact" constant="7"/>
                             </constraint>
                             <constraint firstItem="s5X-mG-fJY" firstAttribute="top" secondItem="yrP-rC-DMu" secondAttribute="bottom" constant="20" id="gDW-KF-36S">
