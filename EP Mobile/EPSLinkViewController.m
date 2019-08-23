@@ -49,9 +49,12 @@
     UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width - 90, 21.0f)];
     self.resultLabel = label;
-    // TODO: see what happens here with dark mode
-    label.backgroundColor = [UIColor clearColor];
-    
+    if (@available(iOS 13.0, *)) {
+        label.textColor = [UIColor labelColor];
+    } else {
+        label.textColor = [UIColor darkTextColor];
+    }
+
     UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
     self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
     label.text = @"";
