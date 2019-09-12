@@ -86,7 +86,7 @@
     self.list = risks;
     
     [self.efSegmentedControl setTitle:@">35"forSegmentAtIndex:0];
-        [self.efSegmentedControl setTitle:@">30&≤35"forSegmentAtIndex:1];
+        [self.efSegmentedControl setTitle:@">30 & ≤35"forSegmentAtIndex:1];
         [self.efSegmentedControl setTitle:@"≤30"forSegmentAtIndex:2];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
@@ -121,7 +121,7 @@
     [self.checkedItems removeAllObjects];
     for (id object in self.list) {
         for (id criteria in object)
-            if ([criteria selected]) {
+            if ([criteria isSelected]) {
                 NSNumber *value = [NSNumber numberWithInteger:[criteria points]];
                 [self.checkedItems addObject:value];
             }
@@ -234,7 +234,7 @@
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
-    BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] selected];
+    BOOL selected = [[[self.list objectAtIndex:section] objectAtIndex:row] isSelected];
     cell.accessoryType = (selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
     return cell;
 }
@@ -258,11 +258,11 @@
     NSUInteger section = indexPath.section;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[[self.list objectAtIndex:section] objectAtIndex:row] setSelected:NO];
+        [[[self.list objectAtIndex:section] objectAtIndex:row] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[[self.list objectAtIndex:section] objectAtIndex:row] setSelected:YES];
+        [[[self.list objectAtIndex:section] objectAtIndex:row] setIsSelected:YES];
         
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

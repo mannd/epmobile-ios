@@ -12,7 +12,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) NSInteger points;
 @property (strong, nonatomic) NSString *details;
-@property (assign, nonatomic) BOOL selected;
+@property (assign, nonatomic) BOOL isSelected;
 @property (assign, nonatomic) BOOL isMajor;
 @property (assign, nonatomic) NSUInteger sectionNumber;
 

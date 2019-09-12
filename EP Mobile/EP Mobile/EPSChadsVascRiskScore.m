@@ -45,8 +45,8 @@
 
 - (int)calculateScore:(NSMutableArray *)risks {
     int score = [super calculateScore:risks];
-    self.isFemale = [[risks objectAtIndex:CHADS_VASC_FEMALE] selected];
-    if ([[risks objectAtIndex:CHADS_VASC_AGE_65] selected] && [[risks objectAtIndex:CHADS_VASC_AGE_75] selected])
+    self.isFemale = [[risks objectAtIndex:CHADS_VASC_FEMALE] isSelected];
+    if ([[risks objectAtIndex:CHADS_VASC_AGE_65] isSelected] && [[risks objectAtIndex:CHADS_VASC_AGE_75] isSelected])
         --score;
     return score;
 }

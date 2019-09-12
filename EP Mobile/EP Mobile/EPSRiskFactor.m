@@ -12,7 +12,6 @@
 @synthesize name=name_;
 @synthesize points=points_;
 @synthesize details=details_;
-@synthesize selected=selected_;
 @synthesize isMajor=isMajor_;
 @synthesize sectionNumber=sectionNumber_;
 
@@ -22,7 +21,7 @@
         self.name = name;
         self.points = value;
         self.details = @"";
-        self.selected = NO;
+        self.isSelected = NO;
     }
     return self;
 }

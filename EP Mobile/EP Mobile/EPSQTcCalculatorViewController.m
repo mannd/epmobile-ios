@@ -126,7 +126,11 @@
     NSInteger qtNumber = [qt intValue];
     EPSLog(@"The value of qtNumber is %ld", (long)qtNumber);
     if (inputNumber <= 0 || qtNumber <= 0) {
-        self.resultLabel.textColor = [UIColor darkTextColor];
+        if (@available(iOS 13.0, *)) {
+            self.resultLabel.textColor = [UIColor labelColor];
+        } else {
+            self.resultLabel.textColor = [UIColor darkTextColor];
+        }
         self.resultLabel.text = INVALID_ENTRY;
         return;
     }
@@ -142,14 +146,22 @@
 
     EPSLog(@"QTc = %ld", (long)qtc);
     if (qtc == 0.0) {
-        self.resultLabel.textColor = [UIColor darkTextColor];
+        if (@available(iOS 13.0, *)) {
+            self.resultLabel.textColor = [UIColor labelColor];
+        } else {
+            self.resultLabel.textColor = [UIColor darkTextColor];
+        }
         self.resultLabel.text = INVALID_ENTRY;
     }
     else {
         if (qtc > self.maxQTc)
-            self.resultLabel.textColor = [UIColor redColor];
+            self.resultLabel.textColor = [UIColor systemRedColor];
         else
-            self.resultLabel.textColor = [UIColor darkTextColor];
+            if (@available(iOS 13.0, *)) {
+                self.resultLabel.textColor = [UIColor labelColor];
+            } else {
+                self.resultLabel.textColor = [UIColor darkTextColor];
+            }
         self.resultLabel.text = [[NSString alloc] initWithFormat:@"QTc is %li msec (%@ formula)", (long)qtc, formula];
         // result text color
     }

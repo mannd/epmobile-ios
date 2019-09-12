@@ -93,7 +93,7 @@
             break;
     }
     for (int i = 0; i < [self.risks count]; ++i) {
-        if ([self.risks[i] selected]) {
+        if ([self.risks[i] isSelected]) {
             score += [self.risks[i] points];
         }
     }
@@ -207,7 +207,7 @@
     NSString *risk = [[self.risks objectAtIndex:indexPath.row] name];
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
-    if ([[self.risks objectAtIndex:(indexPath.row)] selected] == YES)
+    if ([[self.risks objectAtIndex:(indexPath.row)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -223,11 +223,11 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[self.risks objectAtIndex:indexPath.row] setSelected:YES];
+        [[self.risks objectAtIndex:indexPath.row] setIsSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

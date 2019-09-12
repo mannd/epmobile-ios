@@ -70,7 +70,7 @@
     int agesSelected = 0;
     BOOL priorStrokeSelected = NO;
     for (int i = 0; i < [risks count]; ++i) {
-        if ([[risks objectAtIndex:i] selected] == YES) {
+        if ([[risks objectAtIndex:i] isSelected] == YES) {
             if (i <= 3) {
                 agesSelected++;
             }
@@ -92,7 +92,7 @@
     // adjust points for prior stroke (only affects age points)
     if (priorStrokeSelected) {
         for (int i = 0; i < 4; i++) {
-            if ([[risks objectAtIndex:i] selected] == YES) {
+            if ([[risks objectAtIndex:i] isSelected] == YES) {
                 switch (i) {
                     case 0:
                         score += 3;

@@ -23,15 +23,10 @@
 		8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96517BC46EF0007A146 /* EPSNavigationController.m */; };
 		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E02998817EE07BC00A7FC6F /* Images.xcassets */; };
-		8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
-		8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0600DF15D1FF1500BB7550 /* rwpt.png */; };
 		8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */; };
 		8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011A15DB39B100BB7550 /* lbbbicon.png */; };
 		8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011C15DB39C200BB7550 /* rbbbicon.png */; };
-		8E06011F15DB39CF00BB7550 /* lbbbmorphology.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */; };
-		8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06012015DB39D800BB7550 /* rbbbmorphology.png */; };
-		8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E09D05F15DC69E600756EA1 /* longqtecg.png */; };
 		8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */; };
 		8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D06D15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m */; };
 		8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */; };
@@ -63,20 +58,6 @@
 		8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E39950A204328520079E391 /* EPSCMSStrings.m */; };
 		8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */; };
 		8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */; };
-		8E4B27AC1633449100BF1F2C /* asap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AB1633449100BF1F2C /* asap.png */; };
-		8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AD1633459300BF1F2C /* epicardialap.png */; };
-		8E4B27BB1633459400BF1F2C /* lalap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AE1633459300BF1F2C /* lalap.png */; };
-		8E4B27BC1633459400BF1F2C /* llap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27AF1633459300BF1F2C /* llap.png */; };
-		8E4B27BD1633459400BF1F2C /* lpap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B01633459300BF1F2C /* lpap.png */; };
-		8E4B27BE1633459400BF1F2C /* lplap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B11633459300BF1F2C /* lplap.png */; };
-		8E4B27BF1633459400BF1F2C /* msap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B21633459300BF1F2C /* msap.png */; };
-		8E4B27C01633459400BF1F2C /* psmaap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B31633459300BF1F2C /* psmaap.png */; };
-		8E4B27C11633459400BF1F2C /* pstaap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B41633459300BF1F2C /* pstaap.png */; };
-		8E4B27C21633459400BF1F2C /* raap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B51633459300BF1F2C /* raap.png */; };
-		8E4B27C31633459400BF1F2C /* ralap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B61633459300BF1F2C /* ralap.png */; };
-		8E4B27C41633459400BF1F2C /* rlap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B71633459400BF1F2C /* rlap.png */; };
-		8E4B27C51633459400BF1F2C /* rpap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B81633459400BF1F2C /* rpap.png */; };
-		8E4B27C61633459400BF1F2C /* rplap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B27B91633459400BF1F2C /* rplap.png */; };
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
@@ -86,7 +67,6 @@
 		8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */; };
 		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
 		8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */; };
-		8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93C815C7580C00ACBA4F /* brugadaecg.png */; };
 		8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */; };
 		8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */; };
 		8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVC2010TableViewController.m */; };
@@ -114,7 +94,6 @@
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
 		8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */; };
-		8E97559E1617C79D00EAFD10 /* epivt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E97559D1617C79D00EAFD10 /* epivt.png */; };
 		8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */; };
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
 		8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */; };
@@ -135,6 +114,8 @@
 		8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */; };
 		8EB4190717EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */; };
 		8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */; };
+		8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB79F64230394C100CBB056 /* LQTTableViewController.swift */; };
+		8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB79F662303986900CBB056 /* LQTTableViewCell.swift */; };
 		8EBFBBD8162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFBBD7162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m */; };
 		8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFBBDA162CA96100D3B964 /* EPSAnnularVTAlgorithm.m */; };
 		8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC19C2B159FE0FA00975E2B /* UIKit.framework */; };
@@ -228,17 +209,12 @@
 		8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSTabBarViewController.h; sourceTree = "<group>"; };
 		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E02998817EE07BC00A7FC6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modgrayavannulus.png; sourceTree = "<group>"; };
 		8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAVAnnulusViewController.h; sourceTree = "<group>"; };
 		8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAVAnnulusViewController.m; sourceTree = "<group>"; };
-		8E0600DF15D1FF1500BB7550 /* rwpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rwpt.png; sourceTree = "<group>"; };
 		8E0600E115D32BBF00BB7550 /* EPSLVHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLVHTableViewController.h; sourceTree = "<group>"; };
 		8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLVHTableViewController.m; sourceTree = "<group>"; };
 		8E06011A15DB39B100BB7550 /* lbbbicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lbbbicon.png; sourceTree = "<group>"; };
 		8E06011C15DB39C200BB7550 /* rbbbicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rbbbicon.png; sourceTree = "<group>"; };
-		8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lbbbmorphology.png; sourceTree = "<group>"; };
-		8E06012015DB39D800BB7550 /* rbbbmorphology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rbbbmorphology.png; sourceTree = "<group>"; };
-		8E09D05F15DC69E600756EA1 /* longqtecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longqtecg.png; sourceTree = "<group>"; };
 		8E09D06215DC6A7A00756EA1 /* EPSLongQTECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLongQTECGViewController.h; sourceTree = "<group>"; };
 		8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLongQTECGViewController.m; sourceTree = "<group>"; };
 		8E09D06C15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLQTSDetailsTableViewController.h; sourceTree = "<group>"; };
@@ -294,20 +270,6 @@
 		8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinCalculatorViewController.m; sourceTree = "<group>"; };
 		8E44006015BC4B22009169DC /* EPSWarfarinDosingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDosingTableViewController.h; sourceTree = "<group>"; };
 		8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDosingTableViewController.m; sourceTree = "<group>"; };
-		8E4B27AB1633449100BF1F2C /* asap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asap.png; path = ../asap.png; sourceTree = "<group>"; };
-		8E4B27AD1633459300BF1F2C /* epicardialap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epicardialap.png; sourceTree = "<group>"; };
-		8E4B27AE1633459300BF1F2C /* lalap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lalap.png; sourceTree = "<group>"; };
-		8E4B27AF1633459300BF1F2C /* llap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = llap.png; sourceTree = "<group>"; };
-		8E4B27B01633459300BF1F2C /* lpap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lpap.png; sourceTree = "<group>"; };
-		8E4B27B11633459300BF1F2C /* lplap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lplap.png; sourceTree = "<group>"; };
-		8E4B27B21633459300BF1F2C /* msap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msap.png; sourceTree = "<group>"; };
-		8E4B27B31633459300BF1F2C /* psmaap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psmaap.png; sourceTree = "<group>"; };
-		8E4B27B41633459300BF1F2C /* pstaap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pstaap.png; sourceTree = "<group>"; };
-		8E4B27B51633459300BF1F2C /* raap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raap.png; sourceTree = "<group>"; };
-		8E4B27B61633459300BF1F2C /* ralap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ralap.png; sourceTree = "<group>"; };
-		8E4B27B71633459400BF1F2C /* rlap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rlap.png; sourceTree = "<group>"; };
-		8E4B27B81633459400BF1F2C /* rpap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rpap.png; sourceTree = "<group>"; };
-		8E4B27B91633459400BF1F2C /* rplap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rplap.png; sourceTree = "<group>"; };
 		8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAccessoryPathwayLocations.h; sourceTree = "<group>"; };
 		8E511E5915BC527300CF83B5 /* EPSRiskScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskScoreTableViewController.h; sourceTree = "<group>"; };
 		8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskScoreTableViewController.m; sourceTree = "<group>"; };
@@ -323,7 +285,6 @@
 		8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvapexvsbasepacing.html; sourceTree = "<group>"; };
 		8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaECGViewController.h; sourceTree = "<group>"; };
 		8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaECGViewController.m; sourceTree = "<group>"; };
-		8E5D93C815C7580C00ACBA4F /* brugadaecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brugadaecg.png; sourceTree = "<group>"; };
 		8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNotesViewController.h; sourceTree = "<group>"; };
 		8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSNotesViewController.m; sourceTree = "<group>"; };
 		8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTViewController.h; sourceTree = "<group>"; };
@@ -363,7 +324,6 @@
 		8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWCTTableViewController.m; sourceTree = "<group>"; };
 		8E815D42162F448B001025ED /* EPSBrugadaMorphologyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaMorphologyTableViewController.h; sourceTree = "<group>"; };
 		8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaMorphologyTableViewController.m; sourceTree = "<group>"; };
-		8E97559D1617C79D00EAFD10 /* epivt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epivt.png; sourceTree = "<group>"; };
 		8E97559F16188AFD00EAFD10 /* EPSVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVTViewController.h; sourceTree = "<group>"; };
 		8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVTViewController.m; sourceTree = "<group>"; };
 		8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSimpleAlgorithmViewController.h; sourceTree = "<group>"; };
@@ -395,6 +355,8 @@
 		8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon5settings.png; sourceTree = "<group>"; };
 		8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-2x.png"; sourceTree = "<group>"; };
 		8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-R4.png"; sourceTree = "<group>"; };
+		8EB79F64230394C100CBB056 /* LQTTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQTTableViewController.swift; sourceTree = "<group>"; };
+		8EB79F662303986900CBB056 /* LQTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQTTableViewCell.swift; sourceTree = "<group>"; };
 		8EBCB46E19DB672F001A8DA3 /* EPSLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLogging.h; sourceTree = "<group>"; };
 		8EBFBBD5162CA6ED00D3B964 /* EPSStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSStepAlgorithmProtocol.h; sourceTree = "<group>"; };
 		8EBFBBD6162CA7DD00D3B964 /* EPSOutflowVTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOutflowVTAlgorithm.h; sourceTree = "<group>"; };
@@ -461,6 +423,7 @@
 		8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014ViewController.m; sourceTree = "<group>"; };
 		8EEDA7141CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcIVCDResultsViewController.h; sourceTree = "<group>"; };
 		8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDResultsViewController.m; sourceTree = "<group>"; };
+		8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EP MobileTests-Bridging-Header.h"; path = "EP Mobile/EP MobileTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvcRiskViewController.swift; sourceTree = "<group>"; };
 		8EF902F21F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaRiskScore.h; sourceTree = "<group>"; };
 		8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaRiskScore.m; sourceTree = "<group>"; };
@@ -776,9 +739,19 @@
 			name = "Image Views";
 			sourceTree = "<group>";
 		};
+		8EB79F632303943E00CBB056 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
+				8EB79F662303986900CBB056 /* LQTTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
+				8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */,
 				8E0C13C82262CFA5000892CC /* EP Mobile-Bridging-Header.h */,
 				8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */,
 				8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */,
@@ -818,6 +791,7 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8EB79F632303943E00CBB056 /* Views */,
 				8E24EDB8203F36DE00C49B66 /* Models */,
 				8E71C2BA1F77546C00D198BD /* Storyboards */,
 				8E00E96817BC48710007A146 /* Headers */,
@@ -860,33 +834,12 @@
 				8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */,
 				8E0A6243165E7B9000230EF7 /* epmobile_icon_1024-2.png */,
 				8E0A6240165E7B7200230EF7 /* epmobile_icon_1024.png */,
-				8E4B27AD1633459300BF1F2C /* epicardialap.png */,
-				8E4B27AE1633459300BF1F2C /* lalap.png */,
-				8E4B27AF1633459300BF1F2C /* llap.png */,
-				8E4B27B01633459300BF1F2C /* lpap.png */,
-				8E4B27B11633459300BF1F2C /* lplap.png */,
-				8E4B27B21633459300BF1F2C /* msap.png */,
-				8E4B27B31633459300BF1F2C /* psmaap.png */,
-				8E4B27B41633459300BF1F2C /* pstaap.png */,
-				8E4B27B51633459300BF1F2C /* raap.png */,
-				8E4B27B61633459300BF1F2C /* ralap.png */,
-				8E4B27B71633459400BF1F2C /* rlap.png */,
-				8E4B27B81633459400BF1F2C /* rpap.png */,
-				8E4B27B91633459400BF1F2C /* rplap.png */,
 				8E9755B2161F71B900EAFD10 /* Settings.bundle */,
-				8E97559D1617C79D00EAFD10 /* epivt.png */,
-				8E4B27AB1633449100BF1F2C /* asap.png */,
-				8E09D05F15DC69E600756EA1 /* longqtecg.png */,
-				8E06012015DB39D800BB7550 /* rbbbmorphology.png */,
-				8E06011E15DB39CF00BB7550 /* lbbbmorphology.png */,
 				8E06011C15DB39C200BB7550 /* rbbbicon.png */,
 				8E06011A15DB39B100BB7550 /* lbbbicon.png */,
-				8E0600DF15D1FF1500BB7550 /* rwpt.png */,
-				8E0600DA15D1FAD300BB7550 /* modgrayavannulus.png */,
 				8E5D93E815CF5B1A00ACBA4F /* Data.plist */,
 				8EC19C5A159FE11900975E2B /* epmobile_icon.png */,
 				8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */,
-				8E5D93C815C7580C00ACBA4F /* brugadaecg.png */,
 				8EC19C33159FE0FA00975E2B /* EP Mobile-Info.plist */,
 				8EC19C34159FE0FA00975E2B /* InfoPlist.strings */,
 				8EC19C37159FE0FA00975E2B /* main.m */,
@@ -963,7 +916,7 @@
 				CLASSPREFIX = EPS;
 				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C26159FE0FA00975E2B = {
@@ -1008,55 +961,34 @@
 				8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */,
 				8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
-				8E5D93C915C7580C00ACBA4F /* brugadaecg.png in Resources */,
 				8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
-				8E0600DB15D1FAD300BB7550 /* modgrayavannulus.png in Resources */,
 				8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */,
-				8E0600E015D1FF1500BB7550 /* rwpt.png in Resources */,
 				8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */,
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
-				8E06011F15DB39CF00BB7550 /* lbbbmorphology.png in Resources */,
 				8EC5C3341AAA72BE005BDAFD /* dabigatran.org in Resources */,
 				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
 				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
-				8E06012115DB39D800BB7550 /* rbbbmorphology.png in Resources */,
 				8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */,
-				8E09D06015DC69E600756EA1 /* longqtecg.png in Resources */,
-				8E97559E1617C79D00EAFD10 /* epivt.png in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
-				8E4B27AC1633449100BF1F2C /* asap.png in Resources */,
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
-				8E4B27BA1633459400BF1F2C /* epicardialap.png in Resources */,
 				8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */,
 				8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */,
-				8E4B27BB1633459400BF1F2C /* lalap.png in Resources */,
-				8E4B27BC1633459400BF1F2C /* llap.png in Resources */,
-				8E4B27BD1633459400BF1F2C /* lpap.png in Resources */,
 				8EB4190717EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png in Resources */,
 				8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */,
-				8E4B27BE1633459400BF1F2C /* lplap.png in Resources */,
 				8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */,
 				8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */,
 				8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */,
 				8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */,
-				8E4B27BF1633459400BF1F2C /* msap.png in Resources */,
-				8E4B27C01633459400BF1F2C /* psmaap.png in Resources */,
-				8E4B27C11633459400BF1F2C /* pstaap.png in Resources */,
-				8E4B27C21633459400BF1F2C /* raap.png in Resources */,
 				8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */,
-				8E4B27C31633459400BF1F2C /* ralap.png in Resources */,
 				8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */,
-				8E4B27C41633459400BF1F2C /* rlap.png in Resources */,
 				8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */,
 				8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */,
-				8E4B27C51633459400BF1F2C /* rpap.png in Resources */,
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
 				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
 				8E71C2CA1F7764C900D198BD /* DrugCalculators.storyboard in Resources */,
 				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
 				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
-				8E4B27C61633459400BF1F2C /* rplap.png in Resources */,
 				8E71C2B91F77532F00D198BD /* QTcWithIVCD.storyboard in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
@@ -1137,6 +1069,7 @@
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
 				8E37A59E16FF46FF004E66B2 /* EPSDateCalculatorViewController.m in Sources */,
+				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
 				8E37A5A116FF6016004E66B2 /* EPSDateCalculatorNotes.m in Sources */,
 				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
@@ -1159,6 +1092,7 @@
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
+				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
@@ -1320,6 +1254,7 @@
 				PROVISIONING_PROFILE = "6c0b78ed-8ad2-4e55-9041-6cbe809835c1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1328,15 +1263,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 34;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.18;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1352,15 +1288,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 34;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.18;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

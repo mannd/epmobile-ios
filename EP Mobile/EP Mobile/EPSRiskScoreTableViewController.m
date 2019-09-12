@@ -148,7 +148,7 @@
 
     cell.detailTextLabel.text = details;
     cell.detailTextLabel.numberOfLines = [riskScore detailTextNumberOfLines];
-    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+    if ([(EPSRiskFactor *)[self.risks objectAtIndex:(indexPath.row + offset)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -173,11 +173,11 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark; 
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

@@ -77,7 +77,7 @@
     int score = 0;
     // ECG criteria
     // one of the short QT intervals must be selected to get other points
-    if (self.qtcSegmentedControl.selectedSegmentIndex == 0 && ![[self.risks objectAtIndex:SQTS_SHORT_JT] selected]) {
+    if (self.qtcSegmentedControl.selectedSegmentIndex == 0 && ![[self.risks objectAtIndex:SQTS_SHORT_JT] isSelected]) {
         [self displayResult:score];
         return;
     }
@@ -88,26 +88,26 @@
     else if (self.qtcSegmentedControl.selectedSegmentIndex ==3) // QTc < 330
         score += 3;
     // short JT very specific for SQTS
-    if ([[self.risks objectAtIndex:SQTS_SHORT_JT] selected ])
+    if ([[self.risks objectAtIndex:SQTS_SHORT_JT] isSelected ])
         ++score;
     // Clinical history points can only be received for one of next 3 selections
-    if ([[self.risks objectAtIndex:SQTS_ARREST] selected] ||[[self.risks objectAtIndex:SQTS_VT] selected])
+    if ([[self.risks objectAtIndex:SQTS_ARREST] isSelected] ||[[self.risks objectAtIndex:SQTS_VT] isSelected])
         score += 2;
-    else if ([[self.risks objectAtIndex:SQTS_SYNCOPE] selected])
+    else if ([[self.risks objectAtIndex:SQTS_SYNCOPE] isSelected])
         ++score;
-    if ([[self.risks objectAtIndex:SQTS_AFB] selected])
+    if ([[self.risks objectAtIndex:SQTS_AFB] isSelected])
         ++score;
     // Family history
     // points can only be received once in this section
-    if ([[self.risks objectAtIndex:SQTS_FH_SQTS] selected])
+    if ([[self.risks objectAtIndex:SQTS_FH_SQTS] isSelected])
         score += 2;
-    else if ([[self.risks objectAtIndex:SQTS_FH_SCD] selected] || 
-             [[self.risks objectAtIndex:SQTS_SIDS] selected])
+    else if ([[self.risks objectAtIndex:SQTS_FH_SCD] isSelected] ||
+             [[self.risks objectAtIndex:SQTS_SIDS] isSelected])
         ++score;
     // Genotype
-    if ([[self.risks objectAtIndex:SQTS_GENOTYPE] selected])
+    if ([[self.risks objectAtIndex:SQTS_GENOTYPE] isSelected])
         score += 2;
-    if ([[self.risks objectAtIndex:SQTS_MUTATION] selected])
+    if ([[self.risks objectAtIndex:SQTS_MUTATION] isSelected])
         ++score;
     
     [self displayResult:score];
@@ -163,7 +163,7 @@
     //NSString *details = [[self.risks objectAtIndex:indexPath.row ] details];
     cell.textLabel.text = risk;
     //cell.detailTextLabel.text = details;
-    if ([[self.risks objectAtIndex:(indexPath.row + offset)] selected] == YES)
+    if ([[self.risks objectAtIndex:(indexPath.row + offset)] isSelected] == YES)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -201,11 +201,11 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:NO];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:NO];
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark; 
-        [[self.risks objectAtIndex:indexPath.row + offset] setSelected:YES];
+        [[self.risks objectAtIndex:indexPath.row + offset] setIsSelected:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

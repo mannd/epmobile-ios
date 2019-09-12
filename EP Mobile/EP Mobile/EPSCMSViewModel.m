@@ -68,16 +68,16 @@
 - (NSString *)getMessageFromResult:(struct Result)result {
     NSString *message = @"";
     
-    NSString *indicationString = [indications objectForKey:[NSNumber numberWithInt:result.indication]];
+    NSString *indicationString = [indications objectForKey:[NSNumber numberWithInt:(int)result.indication]];
     if (indicationString != nil) {
         message = [message stringByAppendingString:indicationString];
     }
-    NSString *approvalString = [approvals objectForKey:[NSNumber numberWithInt:result.approval]];
+    NSString *approvalString = [approvals objectForKey:[NSNumber numberWithInt:(int)result.approval]];
     if (approvalString != nil) {
         message = [message stringByAppendingString:@"\n"];
         message = [message stringByAppendingString:approvalString];
     }
-    NSString *detailsString = [details objectForKey:[NSNumber numberWithInt:result.details]];
+    NSString *detailsString = [details objectForKey:[NSNumber numberWithInt:(int)result.details]];
     if (detailsString != nil) {
         message = [message stringByAppendingString:@"\n"];
         message = [message stringByAppendingString:detailsString];

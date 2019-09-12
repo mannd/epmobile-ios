@@ -79,7 +79,11 @@
         
     // ...
     // disabled buttons aren't automatically grayed out in iOS
-    [self.backButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    if (@available(iOS 13.0, *)) {
+        [self.backButton setTitleColor:[UIColor quaternaryLabelColor] forState:UIControlStateDisabled];
+    } else {
+        [self.backButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    }
     self.instructionsButton.hidden = ![algorithm showInstructionsButton];
     if (!self.instructionsButton.hidden)
         [self.instructionsButton setTitle:@"Instructions" forState:UIControlStateNormal];

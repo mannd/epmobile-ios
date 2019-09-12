@@ -74,7 +74,7 @@
     }
     NSMutableArray *selected = [[NSMutableArray alloc] init];
     for (int i = 0; i < [risks count]; ++i) {
-        if ([[risks objectAtIndex:i] selected] == YES) {
+        if ([(EPSRiskFactor *)[risks objectAtIndex:i] isSelected] == YES) {
             [selected addObject:[[risks objectAtIndex:i] details]];
         }
     }

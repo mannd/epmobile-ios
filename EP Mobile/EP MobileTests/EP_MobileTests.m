@@ -90,9 +90,9 @@
     NSString *riskString = [EPSRiskScore formatRisks:risksSelected];
     XCTAssertTrue([riskString isEqualToString:@"None"]);
     EPSRiskFactor *risk0 = [risks objectAtIndex:0];
-    risk0.selected = YES;
+    risk0.isSelected = YES;
     EPSRiskFactor *risk2 = [risks objectAtIndex:2];
-    risk2.selected = YES;
+    risk2.isSelected = YES;
     risksSelected = [riskScore risksSelected:risks];
     riskString = [EPSRiskScore formatRisks:risksSelected];
     XCTAssertTrue([riskString isEqualToString:@"Congestive heart failure, Age ≥ 75 years"]);

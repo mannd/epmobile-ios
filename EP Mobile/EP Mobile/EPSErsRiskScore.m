@@ -70,7 +70,7 @@
 - (int)findMaxPoints:(NSArray *)risks {
     int result = 0;
     for (EPSRiskFactor *risk in risks) {
-        if (risk.selected && (risk.points > result)) {
+        if (risk.isSelected && (risk.points > result)) {
             result = (int)risk.points;
         }
     }
@@ -82,13 +82,13 @@
     if ([risks count] == 0) {
         return nil;
     }
-    NSMutableArray *selected = [[NSMutableArray alloc] init];
+    NSMutableArray *selectedRisks = [[NSMutableArray alloc] init];
     for (int i = 0; i < [risks count]; ++i) {
-        if ([[risks objectAtIndex:i] selected] == YES) {
-            [selected addObject:[[risks objectAtIndex:i] details]];
+        if ([(EPSRiskFactor *)[risks objectAtIndex:i] isSelected] == YES) {
+            [selectedRisks addObject:[[risks objectAtIndex:i] details]];
         }
     }
-    return selected;
+    return selectedRisks;
 }
 
 

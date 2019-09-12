@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ntH-d0-hOl">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ntH-d0-hOl">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,14 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
                                 <rect key="frame" x="20" y="144" width="335" height="379"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QFC-cs-lDR" secondAttribute="height" multiplier="160:181" id="x8K-Ly-hcX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="QFC-cs-lDR" secondAttribute="centerX" id="NGp-QI-Ow2"/>
                             <constraint firstItem="QFC-cs-lDR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AGZ-Tn-qml" secondAttribute="leading" constant="20" symbolic="YES" id="XTq-dQ-kwC"/>
@@ -55,14 +52,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology.png" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
                                 <rect key="frame" x="20" y="150" width="335" height="367"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0bo-DH-ke2" secondAttribute="height" multiplier="320:351" id="KMH-cx-yCO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0bo-DH-ke2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qMw-Wp-VKo" secondAttribute="leading" constant="20" symbolic="YES" id="Dd0-we-csF"/>
                             <constraint firstAttribute="centerY" secondItem="0bo-DH-ke2" secondAttribute="centerY" id="mFs-Kp-1YC"/>
@@ -99,8 +96,8 @@
     </scenes>
     <resources>
         <image name="lbbbicon.png" width="25" height="24"/>
-        <image name="lbbbmorphology.png" width="800" height="651"/>
+        <image name="lbbbmorphology" width="800" height="651"/>
         <image name="rbbbicon.png" width="25" height="24"/>
-        <image name="rbbbmorphology.png" width="800" height="600"/>
+        <image name="rbbbmorphology" width="800" height="600"/>
     </resources>
 </document>
