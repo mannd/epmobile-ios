@@ -27,6 +27,7 @@
 #import "EPSBrugadaRiskScore.h"
 #import "EPSErsRiskScore.h"
 #import "EPSTamponadeRiskScore.h"
+#import "EPSQTProlongationRisk.h"
 #import "EPSSharedMethods.h"
 
 #define COPY_RESULT_BUTTON_NUMBER 1
@@ -92,6 +93,9 @@
         riskScore = [[EPSErsRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"TamponadeRisk"])
         riskScore = [[EPSTamponadeRiskScore alloc] init];
+    // FIXME:
+    else if ([scoreType isEqualToString:@"QTProlongationRisk"])
+        riskScore = [[EPSQTProlongationRisk alloc] init];
     self.title = [riskScore getTitle];
     array = [riskScore getArray];
     self.risks = array;
