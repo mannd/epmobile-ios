@@ -47,7 +47,7 @@
 @synthesize creatinineField;
 @synthesize resultLabel;
 @synthesize drug;
-
+@synthesize scrollView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -98,6 +98,8 @@
     creatinineField.delegate = self;
     
     [self registerForKeyboardNotifications];
+
+    scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     
  
  }
@@ -422,11 +424,21 @@
     }
     return @"";
 }
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+}
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
+
+- (IBAction)backgroundTap:(id)sender {
+    [ageField resignFirstResponder];
+    [weightField resignFirstResponder];
+    [creatinineField resignFirstResponder];
+}
+
 
 - (void)registerForKeyboardNotifications
 {

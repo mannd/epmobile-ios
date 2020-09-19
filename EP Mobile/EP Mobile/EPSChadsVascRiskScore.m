@@ -22,11 +22,11 @@
 }
 
 - (NSString *)getReference {
-    return @"Lip GY, Frison L, Halperin JL, Lane DA. Identifying patients at high risk for stroke despite anticoagulation: a comparison of contemporary stroke risk stratification schemes in an anticoagulated atrial fibrillation cohort. Stroke [Internet]. 2010 Oct 21 [cited 2014 Jun 6];41:2731-8. Available from: http://stroke.ahajournals.org/content/41/12/2731.full.pdf";
+    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510. doi:10.1093/eurheartj/ehr488";
 }
 
 - (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://stroke.ahajournals.org/content/41/12/2731.full.pdf"];
+    return [[NSURL alloc] initWithString:@"https://academic.oup.com/eurheartj/article/33/12/1500/473502"];
 }
 
 
@@ -52,8 +52,9 @@
 }
 
 - (NSString *)getMessage:(int)score {
-    float risk = [self getRisk:score];
-    NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", risk];
+    float *risks = [self getRisk:score];
+    NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", *risks];
+    NSString *neuroRisk = [[NSString alloc] initWithFormat:@"Annual stroke/TIA/peripheral emboli risk is %1.1f%%", *(risks + 1)];
     NSString *message = @"";
     if (score < 1) {
         message = [message stringByAppendingString:@"\nIt is reasonable to omit antithrombotic therapy."];
@@ -69,48 +70,58 @@
     }
     else
         message = [message stringByAppendingString:@"\nOral anticoagulation (warfarin, dabigatran, rivaroxaban, apixaban or edoxaban) is recommended."];
-    
-    return [NSString stringWithFormat:@"%@ score = %d\n%@\n%@", [self getTitle], score, strokeRisk, message];
-}
 
+    return [NSString stringWithFormat:@"%@ score = %d\n%@\n%@\n%@", [self getTitle], score, strokeRisk, neuroRisk, message];}
 
-
-
-- (float)getRisk:(int)score {
+- (float *)getRisk:(int)score {
     float risk = 0.0f;
+    float neuroRisk = 0.0f;
+    static float result[2];
     switch (score) {
         case 0:
-            risk = 0;
+            risk = 0.2;
+            neuroRisk = 0.3;
             break;
         case 1:
-            risk = 1.3;
+            risk = 0.6;
+            neuroRisk = 0.9;
             break;
         case 2:
             risk = 2.2;
+            neuroRisk = 2.9;
             break;
         case 3:
             risk = 3.2;
+            neuroRisk = 4.6;
             break;
         case 4:
-            risk = 4.0;
+            risk = 4.8;
+            neuroRisk = 6.7;
             break;
         case 5:
-            risk = 6.7;
+            risk = 7.2;
+            neuroRisk = 10.0;
             break;
         case 6:
-            risk = 9.8;
+            risk = 9.7;
+            neuroRisk = 13.6;
             break;
         case 7:
-            risk = 9.6;
+            risk = 11.2;
+            neuroRisk = 15.7;
             break;
         case 8:
-            risk = 6.7;
+            risk = 10.8;
+            neuroRisk = 15.2;
             break;
         case 9:
-            risk = 15.2;
+            risk = 12.23;
+            neuroRisk = 17.4;
             break;
     }
-    return risk;
+    result[0] = risk;
+    result[1] = neuroRisk;
+    return result;
 }
 
 

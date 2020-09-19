@@ -34,7 +34,9 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
-
+    [_numberOfDaysTextField addTarget:self
+                  action:@selector(textFieldDidChange)
+        forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,12 +45,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)textFieldDidChange {
+    [self clearResult];
+}
+
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }
 
 - (IBAction)backgroundTap:(id)sender {
     [self.numberOfDaysTextField resignFirstResponder];
+}
+- (IBAction)subtractDaysValueChanged:(id)sender {
+    [self clearResult];
+}
+- (IBAction)startingDateValueChanged:(id)sender {
+    [self clearResult];
 }
 
 - (IBAction)changeNumberOfDays:(id)sender {
@@ -64,6 +76,7 @@
             [self.numberOfDaysTextField setText:@"30"];
             break;
     }
+    [self clearResult];
 }
 
 - (IBAction)calculate:(id)sender {
@@ -92,9 +105,13 @@
 }
 
 - (IBAction)clear:(id)sender {
-    self.resultLabel.text = @"Date";
+    [self clearResult];
     self.numberOfDaysTextField.text = @"90";
     self.daysSegmentedControl.selectedSegmentIndex = 0;
+}
+
+- (void)clearResult {
+    self.resultLabel.text = @"Date";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

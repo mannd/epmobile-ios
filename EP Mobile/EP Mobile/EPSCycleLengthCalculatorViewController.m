@@ -64,8 +64,6 @@
     self.resultLabel.text = nil;
 }
 
-
-
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }
