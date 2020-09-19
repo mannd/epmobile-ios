@@ -1782,8 +1782,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6o-7c-OaX">
-                                        <rect key="frame" x="57" y="432" width="69" height="30"/>
-                                        <state key="normal" title="Calculate!">
+                                        <rect key="frame" x="57" y="432" width="64" height="30"/>
+                                        <state key="normal" title="Calculate">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -2562,17 +2562,8 @@
                                     <constraint firstAttribute="trailing" secondItem="mJ0-gN-YFQ" secondAttribute="trailing" constant="20" symbolic="YES" id="nxt-Lp-id7"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
-                                <rect key="frame" x="66" y="829" width="31" height="30"/>
-                                <state key="normal" title="Calc">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-ot-ijf">
-                                <rect key="frame" x="317" y="829" width="36" height="30"/>
+                                <rect key="frame" x="358" y="829" width="36" height="30"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -2580,15 +2571,24 @@
                                     <action selector="clear:" destination="hSz-kY-OPb" eventType="touchUpInside" id="454-Nk-D2N"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
+                                <rect key="frame" x="20" y="829" width="64" height="30"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VqT-dm-h14" firstAttribute="centerY" secondItem="d0h-Lg-Guf" secondAttribute="centerY" id="7ar-C1-qda"/>
-                            <constraint firstItem="xqu-ot-ijf" firstAttribute="leading" secondItem="ttx-uS-cbo" secondAttribute="trailing" constant="20" id="DnA-zm-FLM"/>
+                            <constraint firstItem="fn8-Pt-FLw" firstAttribute="leading" secondItem="d0h-Lg-Guf" secondAttribute="leadingMargin" id="Jg0-5V-jzx"/>
                             <constraint firstItem="jWV-Zt-7xw" firstAttribute="top" secondItem="ttx-uS-cbo" secondAttribute="bottom" constant="8" symbolic="YES" id="LF5-8T-OIH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xqu-ot-ijf" secondAttribute="trailing" id="QrH-OA-MCC"/>
                             <constraint firstAttribute="centerX" secondItem="ttx-uS-cbo" secondAttribute="centerX" id="WWY-8O-kHR"/>
                             <constraint firstItem="fn8-Pt-FLw" firstAttribute="centerY" secondItem="xqu-ot-ijf" secondAttribute="centerY" id="YQw-oF-s3O"/>
-                            <constraint firstItem="ttx-uS-cbo" firstAttribute="leading" secondItem="fn8-Pt-FLw" secondAttribute="trailing" constant="20" id="cIb-PP-dNr"/>
                             <constraint firstItem="VqT-dm-h14" firstAttribute="centerX" secondItem="d0h-Lg-Guf" secondAttribute="centerX" id="e7O-gq-SSl"/>
                             <constraint firstItem="xqu-ot-ijf" firstAttribute="centerY" secondItem="ttx-uS-cbo" secondAttribute="centerY" id="egg-wc-7AO"/>
                             <constraint firstItem="fn8-Pt-FLw" firstAttribute="centerY" secondItem="ttx-uS-cbo" secondAttribute="centerY" id="tcs-yL-TpN"/>
@@ -2609,7 +2609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br2-3y-1zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1122" y="-1299"/>
+            <point key="canvasLocation" x="-1317.3913043478262" y="-1339.2857142857142"/>
         </scene>
         <!--Link View Controller-->
         <scene sceneID="wuk-kW-8mj">
