@@ -35,7 +35,7 @@
 - (NSString *)getMessage:(int)score {
     float *risks = [self getRisk:score];
     NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", *risks];
-    NSString *neuroRisk = [[NSString alloc] initWithFormat:@"Annual stroke/TIA/peripheral emboli risk is %1.1f%%%", *(risks + 1)];
+    NSString *neuroRisk = [[NSString alloc] initWithFormat:@"Annual stroke/TIA/peripheral emboli risk is %1.1f%%", *(risks + 1)];
     NSString *message = @"";
     if (score < 1) {
         message = [message stringByAppendingString:@"\nAnti-platelet drug (e.g. aspirin) or no antithrombic therapy recommended.\n\nCurrent guidelines suggest using CHA\u2082DS\u2082-VASc score to define stroke risk better."];

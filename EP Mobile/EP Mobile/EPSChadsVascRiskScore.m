@@ -54,7 +54,7 @@
 - (NSString *)getMessage:(int)score {
     float *risks = [self getRisk:score];
     NSString *strokeRisk = [[NSString alloc] initWithFormat:@"Annual stroke risk is %1.1f%%", *risks];
-    NSString *neuroRisk = [[NSString alloc] initWithFormat:@"Annual stroke/TIA/peripheral emboli risk is %1.1f%%%", *(risks + 1)];
+    NSString *neuroRisk = [[NSString alloc] initWithFormat:@"Annual stroke/TIA/peripheral emboli risk is %1.1f%%", *(risks + 1)];
     NSString *message = @"";
     if (score < 1) {
         message = [message stringByAppendingString:@"\nIt is reasonable to omit antithrombotic therapy."];
