@@ -31,4 +31,7 @@
 - (double)lbsToKgs:(double)weight;
 - (double)creatinineFromMicroMolUnits:(double)creatinine;
 
+- (IBAction)textFieldDoneEditing:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
+
 @end
