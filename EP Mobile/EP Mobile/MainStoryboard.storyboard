@@ -3301,93 +3301,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-dD-kIV">
-                                <rect key="frame" x="67" y="108" width="280" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="VBw-bw-r11"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Interval"/>
-                                    <segment title="Rate"/>
-                                </segments>
-                                <connections>
-                                    <action selector="toggleSwitch:" destination="eJm-HL-6uf" eventType="valueChanged" id="dPJ-68-ema"/>
-                                </connections>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CL (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-N2-R0a">
-                                <rect key="frame" x="224" y="154.5" width="123" height="30"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="58u-Vd-iBX"/>
-                                    <constraint firstAttribute="width" constant="123" id="bpo-Ur-26C"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="textFieldDoneEditing:" destination="eJm-HL-6uf" eventType="editingDidEndOnExit" id="a9A-0m-q2p"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saO-to-SDQ">
-                                <rect key="frame" x="67" y="193" width="123" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="Moc-Fz-uH9"/>
-                                    <constraint firstAttribute="height" constant="37" id="e8p-q7-X15"/>
-                                </constraints>
-                                <state key="normal" title="Calculate!">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="backgroundTap:" destination="eJm-HL-6uf" eventType="touchDown" id="48n-9z-IzX"/>
-                                    <action selector="calculateButton:" destination="eJm-HL-6uf" eventType="touchUpInside" id="uAA-UX-nSA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U7N-7y-LLP">
-                                <rect key="frame" x="67" y="238" width="280" height="40"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="LZM-yU-7QH"/>
-                                    <constraint firstAttribute="height" constant="40" id="mQL-Cj-5Et"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x94-1P-igt">
-                                <rect key="frame" x="224" y="193" width="123" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="AHr-ae-3XP"/>
-                                    <constraint firstAttribute="width" constant="123" id="Idj-E0-k16"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearButton:" destination="eJm-HL-6uf" eventType="touchUpInside" id="689-hi-bzL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="u3u-Mb-TNY">
-                                <rect key="frame" x="67" y="159" width="149" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="6O5-3H-s6J"/>
-                                    <constraint firstAttribute="width" constant="149" id="iPZ-OM-8Xe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="y9h-uW-63K">
+                                <rect key="frame" x="67" y="359.5" width="280" height="177"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-dD-kIV">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="VBw-bw-r11"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Interval"/>
+                                            <segment title="Rate"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="toggleSwitch:" destination="eJm-HL-6uf" eventType="valueChanged" id="dPJ-68-ema"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y7y-AB-fhw">
+                                        <rect key="frame" x="0.0" y="44" width="280" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="u3u-Mb-TNY">
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="149" id="iPZ-OM-8Xe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CL (msec)" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-N2-R0a">
+                                                <rect key="frame" x="157" y="0.0" width="123" height="30"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="58u-Vd-iBX"/>
+                                                    <constraint firstAttribute="width" constant="123" id="bpo-Ur-26C"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditing:" destination="eJm-HL-6uf" eventType="editingDidEndOnExit" id="a9A-0m-q2p"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="VtP-Xb-UfT">
+                                        <rect key="frame" x="0.0" y="87" width="280" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saO-to-SDQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="123" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="123" id="Moc-Fz-uH9"/>
+                                                    <constraint firstAttribute="height" constant="37" id="e8p-q7-X15"/>
+                                                </constraints>
+                                                <state key="normal" title="Calculate">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backgroundTap:" destination="eJm-HL-6uf" eventType="touchDown" id="48n-9z-IzX"/>
+                                                    <action selector="calculateButton:" destination="eJm-HL-6uf" eventType="touchUpInside" id="uAA-UX-nSA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x94-1P-igt">
+                                                <rect key="frame" x="157" y="0.0" width="123" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="AHr-ae-3XP"/>
+                                                    <constraint firstAttribute="width" constant="123" id="Idj-E0-k16"/>
+                                                </constraints>
+                                                <state key="normal" title="Clear">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearButton:" destination="eJm-HL-6uf" eventType="touchUpInside" id="689-hi-bzL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U7N-7y-LLP">
+                                        <rect key="frame" x="0.0" y="137" width="280" height="40"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="LZM-yU-7QH"/>
+                                            <constraint firstAttribute="height" constant="40" id="mQL-Cj-5Et"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="U7N-7y-LLP" secondAttribute="centerX" id="2yc-aR-P9O"/>
-                            <constraint firstItem="saO-to-SDQ" firstAttribute="top" secondItem="u3u-Mb-TNY" secondAttribute="bottom" constant="13" id="61O-He-tAB"/>
-                            <constraint firstItem="6ds-dD-kIV" firstAttribute="leading" secondItem="saO-to-SDQ" secondAttribute="leading" id="93q-9Z-k81"/>
-                            <constraint firstItem="u3u-Mb-TNY" firstAttribute="top" secondItem="6ds-dD-kIV" secondAttribute="bottom" constant="20" id="EJ8-BY-weH"/>
-                            <constraint firstItem="ISU-N2-R0a" firstAttribute="leading" secondItem="u3u-Mb-TNY" secondAttribute="trailing" constant="8" id="Vtr-g1-XvD"/>
-                            <constraint firstAttribute="centerX" secondItem="6ds-dD-kIV" secondAttribute="centerX" id="ZeG-xm-1xk"/>
-                            <constraint firstItem="6ds-dD-kIV" firstAttribute="top" secondItem="7xu-ny-Xro" secondAttribute="bottom" constant="20" id="elL-xX-1yV"/>
-                            <constraint firstItem="u3u-Mb-TNY" firstAttribute="centerY" secondItem="ISU-N2-R0a" secondAttribute="centerY" id="jYh-5N-ZLE"/>
-                            <constraint firstItem="saO-to-SDQ" firstAttribute="centerY" secondItem="x94-1P-igt" secondAttribute="centerY" id="kbd-DE-KyK"/>
-                            <constraint firstItem="x94-1P-igt" firstAttribute="leading" secondItem="saO-to-SDQ" secondAttribute="trailing" constant="34" id="n5b-4F-XXd"/>
-                            <constraint firstItem="U7N-7y-LLP" firstAttribute="top" secondItem="x94-1P-igt" secondAttribute="bottom" constant="8" id="rie-7q-fqB"/>
-                            <constraint firstItem="6ds-dD-kIV" firstAttribute="leading" secondItem="u3u-Mb-TNY" secondAttribute="leading" id="wXq-VW-FkH"/>
+                            <constraint firstItem="y9h-uW-63K" firstAttribute="centerY" secondItem="Qc1-Hs-d2Q" secondAttribute="centerY" id="V9d-TZ-rDL"/>
+                            <constraint firstItem="y9h-uW-63K" firstAttribute="centerX" secondItem="Qc1-Hs-d2Q" secondAttribute="centerX" id="dlB-pv-cWq"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="eJm-HL-6uf" eventType="touchDown" id="qgb-3A-4QK"/>

@@ -41,6 +41,9 @@
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEndOnExit" id="vbk-cU-eTh"/>
+                                        </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-49-c9s">
                                         <rect key="frame" x="187" y="106.5" width="123" height="32"/>
@@ -60,12 +63,18 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEnd" id="ceT-NU-mOq"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cr (mg/dL)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-6k-nzO">
                                         <rect key="frame" x="78" y="149" width="89" height="34"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldDoneEditing:" destination="gDm-AP-yUd" eventType="editingDidEnd" id="Kg1-SA-Uyi"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-wR-tqp">
                                         <rect key="frame" x="187" y="68" width="41.5" height="20.5"/>
@@ -90,6 +99,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="backgroundTap:" destination="gDm-AP-yUd" eventType="touchUpInside" id="g6I-jJ-ISK"/>
                                             <action selector="calculate:" destination="gDm-AP-yUd" eventType="touchUpInside" id="e72-KW-4aZ"/>
                                         </connections>
                                     </button>
@@ -175,6 +185,9 @@
                             <constraint firstItem="v4C-Vc-7or" firstAttribute="bottom" secondItem="m6f-1n-GSk" secondAttribute="top" id="aVp-iZ-1WS"/>
                             <constraint firstItem="v4C-Vc-7or" firstAttribute="top" secondItem="t22-Qh-JeM" secondAttribute="bottom" id="ioF-9c-JW0"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="gDm-AP-yUd" eventType="touchDown" id="Rvo-qS-qMA"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="pbU-Sa-gko"/>
                     <connections>
