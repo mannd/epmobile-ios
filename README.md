@@ -12,7 +12,7 @@ EP Mobile for iOS is open source, and licensed under the
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## Copyright
-Copyright © 2012-2019 [EP Studios, Inc.](http://www.epstudiossoftware.com)
+Copyright © 2012-2022 [EP Studios, Inc.](http://www.epstudiossoftware.com)
 
 ## Sources
 The [AV annulus figure](http://en.wikipedia.org/wiki/File:Gray495.png)
