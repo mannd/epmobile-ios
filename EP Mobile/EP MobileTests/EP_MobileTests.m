@@ -7,7 +7,6 @@
 //
 
 #import "EP_MobileTests.h"
-#import "EPSCycleLengthCalculatorViewController.h"
 #import "EPSQTcCalculatorViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSWarfarinCalculatorViewController.h"
@@ -18,6 +17,7 @@
 #import "EPSQTMethods.h"
 #import "EPSCMSModel.h"
 #import "EPSCMSViewModel.h"
+//#import "EP_Mobile-Swift.h"
 
 #define MESSAGE_L @"Actual result was %ld"
 
@@ -35,16 +35,6 @@
     // Tear-down code here.
     
     [super tearDown];
-}
-
-- (void)testCycleLengthCalculator {
-    EPSCycleLengthCalculatorViewController *c = [[EPSCycleLengthCalculatorViewController alloc] init];
-    int result = [c convertInterval:60];
-    XCTAssertTrue(result == 1000, @"Test failed");
-    result = [c convertInterval:1000];
-    XCTAssertTrue(result == 60, @"Test failed");
-    result = [c convertInterval:733];
-    XCTAssertTrue(result == 82, @"Test failed.  Result was %i", result);
 }
 
 - (void)testActualWeeklyDose {

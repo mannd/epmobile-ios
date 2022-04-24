@@ -91,18 +91,13 @@ struct IntervalRateCalculator: View {
             result = "INVALID ENTRY"
             return
         }
-        let convertedValue = convertValue(value: value)
+        let convertedValue = IntervalRateConversion.convert(value: value)
         switch conversionType {
         case .intervalToRate:
             result = "Rate is \(convertedValue) bpm"
         case .rateToInterval:
             result = "Interval is \(convertedValue) msec"
         }
-    }
-
-    private func convertValue(value: Int) -> String {
-        guard value > 0 else { return "ERROR" }
-        return String(Int(round(60_000.0 / Double(value))))
     }
 
     func clear() {

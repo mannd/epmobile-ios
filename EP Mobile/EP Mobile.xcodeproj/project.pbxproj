@@ -42,6 +42,8 @@
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
 		8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */; };
 		8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */; };
+		8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */; };
+		8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */; };
 		8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */; };
 		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
 		8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */; };
@@ -155,6 +157,9 @@
 		8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33E1AAA8997005BDAFD /* dofetilide.org */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
+		8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA41592815A9A900CFAC18 /* DateMath.swift */; };
+		8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */; };
+		8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */; };
 		8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFCF20F23FD600B2696A /* lbbb.org */; };
 		8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFD120F2404C00B2696A /* lbbb.html */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
@@ -243,6 +248,8 @@
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
 		8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculator.swift; sourceTree = "<group>"; };
 		8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculatorController.swift; sourceTree = "<group>"; };
+		8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateConversion.swift; sourceTree = "<group>"; };
+		8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateConversionTests.swift; sourceTree = "<group>"; };
 		8E1956B1243B762E000D80C0 /* EPSQTProlongationRisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSQTProlongationRisk.h; sourceTree = "<group>"; };
 		8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSQTProlongationRisk.m; sourceTree = "<group>"; };
 		8E24EDB9203F375300C49B66 /* EPSCMSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSModel.h; sourceTree = "<group>"; };
@@ -417,6 +424,9 @@
 		8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC6E94E178509F000B76C38 /* EPSWeightCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeightCalculatorNotes.h; sourceTree = "<group>"; };
 		8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeightCalculatorNotes.m; sourceTree = "<group>"; };
+		8ECA41592815A9A900CFAC18 /* DateMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMath.swift; sourceTree = "<group>"; };
+		8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMathTests.swift; sourceTree = "<group>"; };
+		8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
 		8ECAFFCF20F23FD600B2696A /* lbbb.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = lbbb.org; sourceTree = "<group>"; };
 		8ECAFFD120F2404C00B2696A /* lbbb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lbbb.html; sourceTree = "<group>"; };
 		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
@@ -577,9 +587,49 @@
 			isa = PBXGroup;
 			children = (
 				8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */,
-				8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */,
+				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
 			);
 			name = SwiftUI;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8E18B36D281503510043FD00 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				8E18B372281504F90043FD00 /* Views */,
+				8E18B371281504AF0043FD00 /* ViewControllers */,
+				8E18B36E2815036F0043FD00 /* Models */,
+				8E18B3682814C2D70043FD00 /* SwiftUI */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		8E18B36E2815036F0043FD00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
+				8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */,
+				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E18B371281504AF0043FD00 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
+				8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */,
+				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8E18B372281504F90043FD00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EB79F662303986900CBB056 /* LQTTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8E24EDB8203F36DE00C49B66 /* Models */ = {
@@ -591,7 +641,6 @@
 				8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */,
 				8E399509204328520079E391 /* EPSCMSStrings.h */,
 				8E39950A204328520079E391 /* EPSCMSStrings.m */,
-				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -704,7 +753,6 @@
 				8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */,
 				8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */,
 				8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */,
-				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -754,15 +802,6 @@
 			name = "Image Views";
 			sourceTree = "<group>";
 		};
-		8EB79F632303943E00CBB056 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
-				8EB79F662303986900CBB056 /* LQTTableViewCell.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		8EC19C1C159FE0FA00975E2B = {
 			isa = PBXGroup;
 			children = (
@@ -806,8 +845,7 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				8E18B3682814C2D70043FD00 /* SwiftUI */,
-				8EB79F632303943E00CBB056 /* Views */,
+				8E18B36D281503510043FD00 /* Swift */,
 				8E24EDB8203F36DE00C49B66 /* Models */,
 				8E71C2BA1F77546C00D198BD /* Storyboards */,
 				8E00E96817BC48710007A146 /* Headers */,
@@ -873,6 +911,8 @@
 				8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */,
 				8E0C13C92262DBB0000892CC /* ArvcTests.swift */,
 				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
+				8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */,
+				8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -938,6 +978,9 @@
 				TargetAttributes = {
 					8EC19C26159FE0FA00975E2B = {
 						DevelopmentTeam = W74NPJXYEG;
+					};
+					8EC19C41159FE0FA00975E2B = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1055,6 +1098,7 @@
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
 				8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */,
+				8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
 				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,
@@ -1065,6 +1109,7 @@
 				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
 				8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */,
 				8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */,
+				8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */,
@@ -1083,6 +1128,7 @@
 				8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */,
 				8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */,
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
+				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
 				8E37A59E16FF46FF004E66B2 /* EPSDateCalculatorViewController.m in Sources */,
@@ -1139,8 +1185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */,
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
+				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
@@ -1337,13 +1385,21 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1360,13 +1416,21 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EP Mobile.app/EP Mobile";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EP Mobile/EP MobileTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
