@@ -40,6 +40,8 @@
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
+		8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */; };
+		8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */; };
 		8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */; };
 		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
 		8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */; };
@@ -131,7 +133,6 @@
 		8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */; };
 		8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5A159FE11900975E2B /* epmobile_icon.png */; };
 		8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */; };
-		8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */; };
 		8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */; };
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
 		8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */; };
@@ -240,6 +241,8 @@
 		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
+		8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculator.swift; sourceTree = "<group>"; };
+		8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculatorController.swift; sourceTree = "<group>"; };
 		8E1956B1243B762E000D80C0 /* EPSQTProlongationRisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSQTProlongationRisk.h; sourceTree = "<group>"; };
 		8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSQTProlongationRisk.m; sourceTree = "<group>"; };
 		8E24EDB9203F375300C49B66 /* EPSCMSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSModel.h; sourceTree = "<group>"; };
@@ -384,8 +387,6 @@
 		8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EP_MobileTests.m; sourceTree = "<group>"; };
 		8EC19C5A159FE11900975E2B /* epmobile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epmobile_icon.png; path = ../epmobile_icon.png; sourceTree = "<group>"; };
 		8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epmobile_icon2.png; path = ../epmobile_icon2.png; sourceTree = "<group>"; };
-		8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSCycleLengthCalculatorViewController.h; sourceTree = "<group>"; };
-		8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSCycleLengthCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseCalculatorViewController.h; sourceTree = "<group>"; };
 		8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDrugDoseCalculatorViewController.m; sourceTree = "<group>"; };
 		8EC19C7015B2BD8E00975E2B /* EPSDrugDoseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDrugDoseTableViewController.h; sourceTree = "<group>"; };
@@ -572,6 +573,15 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		8E18B3682814C2D70043FD00 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */,
+				8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */,
+			);
+			name = SwiftUI;
+			sourceTree = "<group>";
+		};
 		8E24EDB8203F36DE00C49B66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,8 +713,6 @@
 			isa = PBXGroup;
 			children = (
 				8E815D3E162EE5AF001025ED /* Warfarin */,
-				8EC19C6015A11E5700975E2B /* EPSCycleLengthCalculatorViewController.h */,
-				8EC19C6115A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m */,
 				8EC19C6315B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.h */,
 				8EC19C6415B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m */,
 				8E31CEBC15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.h */,
@@ -798,6 +806,7 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				8E18B3682814C2D70043FD00 /* SwiftUI */,
 				8EB79F632303943E00CBB056 /* Views */,
 				8E24EDB8203F36DE00C49B66 /* Models */,
 				8E71C2BA1F77546C00D198BD /* Storyboards */,
@@ -1031,7 +1040,6 @@
 			files = (
 				8EC19C38159FE0FA00975E2B /* main.m in Sources */,
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
-				8EC19C6215A11E5700975E2B /* EPSCycleLengthCalculatorViewController.m in Sources */,
 				8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */,
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
@@ -1090,11 +1098,13 @@
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
 				8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */,
+				8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */,
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
 				8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */,
 				8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */,
 				8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */,
 				8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */,
+				8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */,
 				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
 				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
@@ -1282,7 +1292,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 3.20.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
@@ -1307,7 +1317,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 3.20.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";

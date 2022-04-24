@@ -70,7 +70,6 @@
     if (index == NSNotFound)
         index = DEFAULT_TABLET_INDEX;
     [self.tabletSizePickerView selectRow:index inComponent:0 animated:NO];
-    [self.tabletSizePickerView setShowsSelectionIndicator:YES];
     if ([self.defaultINR isEqualToString:@"2"]) {
         [targetSegmentedControl setSelectedSegmentIndex:0];
         minINR = 2.0;

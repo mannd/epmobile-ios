@@ -12,10 +12,13 @@
 #import "EPSDrugDoseCalculatorViewController.h"
 #import "EPSARVC2010TableViewController.h"
 
+#import "EP_Mobile-Swift.h"
+
 // Sigh!
 #define ALLOW_DRUG_CALCULATORS NO
 
 #define DRUG_CALCULATORS_ROW 2
+#define INTERVAL_RATE_ROW 3
 
 @interface EPSMainTableViewController ()
 
@@ -71,15 +74,22 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
-  
+
     if (section == 0 && row == DRUG_CALCULATORS_ROW && !allowDrugCalculators)
         return 0; //set the hidden cell's height to 0
     else
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == INTERVAL_RATE_ROW) {
+        [IntervalRateCalculatorController showWithVc:self];
+    }
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -145,7 +155,6 @@
     else if ([segueIdentifier isEqualToString:@"ARVC1994Segue"])
         arvcVc.criteria = @"ARVC1994";
 
-    
 }
 
 
