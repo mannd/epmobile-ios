@@ -53,7 +53,7 @@ struct IntervalRateCalculator: View {
                     Section(header: Text(valueLabel())) {
                         HStack {
                             TextField(valueLabel(), value: $value, formatter: Self.numberFormatter)
-                                .keyboardType(.numberPad)
+                                .keyboardType(.numbersAndPunctuation)
                             Stepper("", value: $value, in: 10...2000, step: 1).labelsHidden()
                         }
                         .onChange(of: value) { _ in
@@ -61,7 +61,7 @@ struct IntervalRateCalculator: View {
                         }
                     }
                     Section(header: Text("Result")) {
-                        TextField("Result", text: $result)
+                        Text(result)
                     }
 
                 }
