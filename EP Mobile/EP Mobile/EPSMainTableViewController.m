@@ -17,6 +17,8 @@
 // Sigh!
 #define ALLOW_DRUG_CALCULATORS NO
 
+// Update as needed.  Remember row 2 is invisible (the banned drug calculators).
+#define DATE_CALCULATOR_ROW 1
 #define DRUG_CALCULATORS_ROW 2
 #define INTERVAL_RATE_ROW 3
 
@@ -86,8 +88,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == INTERVAL_RATE_ROW) {
+    if (indexPath.section == 0 && indexPath.row == INTERVAL_RATE_ROW) {
         [IntervalRateCalculatorController showWithVc:self];
+    }
+    if (indexPath.section == 0 && indexPath.row == DATE_CALCULATOR_ROW) {
+        [DateCalculatorController showWithVc:self];
     }
 
 }

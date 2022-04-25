@@ -12,7 +12,6 @@
 #import "EPSAnnularVTNotes.h"
 #import "EPSWarfarinNotes.h"
 #import "EPSCMSNotes.h"
-#import "EPSDateCalculatorNotes.h"
 #import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
 #import "EPSWeightCalculatorNotes.h"
@@ -55,8 +54,6 @@
         notes = [[EPSWarfarinNotes alloc] init];
     else if ([self.key isEqualToString:@"CMSNotes"])
         notes = [[EPSCMSNotes alloc] init];
-    else if ([self.key isEqualToString:@"DateCalculatorNotes"])
-        notes = [[EPSDateCalculatorNotes alloc] init];
     else if ([self.key isEqualToString:@"EntrainmentNotes"])
         notes = [[EPSEntrainmentNotes alloc] init];
     else if ([self.key isEqualToString:@"AtrialTachNotes"])

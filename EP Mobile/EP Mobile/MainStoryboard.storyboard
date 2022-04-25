@@ -913,9 +913,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="hSz-kY-OPb" kind="show" id="haK-7t-E3C"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Mpb-BA-cZM" style="IBUITableViewCellStyleDefault" id="7Na-dY-HhQ">
                                         <rect key="frame" x="0.0" y="137.5" width="414" height="44"/>
@@ -2470,144 +2467,6 @@
             </objects>
             <point key="canvasLocation" x="-1667" y="-2398"/>
         </scene>
-        <!--Date Calculator-->
-        <scene sceneID="kv5-Xr-G9v">
-            <objects>
-                <viewController id="hSz-kY-OPb" customClass="EPSDateCalculatorViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8pH-nu-FxG"/>
-                        <viewControllerLayoutGuide type="bottom" id="jWV-Zt-7xw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="d0h-Lg-Guf" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-uS-cbo">
-                                <rect key="frame" x="117" y="833.5" width="180" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="vLj-oA-YKg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="VqT-dm-h14">
-                                <rect key="frame" x="47" y="254" width="320" height="388.5"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-gN-YFQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
-                                        <segments>
-                                            <segment title="90 days"/>
-                                            <segment title="40 days"/>
-                                            <segment title="30 days"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="changeNumberOfDays:" destination="hSz-kY-OPb" eventType="valueChanged" id="OGl-CQ-Kne"/>
-                                        </connections>
-                                    </segmentedControl>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="MRO-zj-flT">
-                                        <rect key="frame" x="0.0" y="45" width="197" height="34"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-AZ-076">
-                                                <rect key="frame" x="0.0" y="6.5" width="123" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" placeholder="Days" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7du-d7-6cx">
-                                                <rect key="frame" x="137" y="0.0" width="60" height="34"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="fGa-Wf-wwO"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
-                                                <connections>
-                                                    <action selector="textFieldDoneEditing:" destination="hSz-kY-OPb" eventType="editingDidEndOnExit" id="4tm-xX-Dgr"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-9r-HSo">
-                                        <rect key="frame" x="0.0" y="93" width="100.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-et-TmX">
-                                        <rect key="frame" x="0.0" y="127.5" width="320" height="216"/>
-                                        <connections>
-                                            <action selector="startingDateValueChanged:" destination="hSz-kY-OPb" eventType="valueChanged" id="vxk-FL-5gm"/>
-                                        </connections>
-                                    </datePicker>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-n6-Plc">
-                                        <rect key="frame" x="0.0" y="357.5" width="171" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Subtract Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-vb-cmM">
-                                                <rect key="frame" x="0.0" y="5" width="108" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-Om-7eu">
-                                                <rect key="frame" x="122" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="subtractDaysValueChanged:" destination="hSz-kY-OPb" eventType="valueChanged" id="dwZ-RT-4ZT"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="mJ0-gN-YFQ" secondAttribute="trailing" constant="20" symbolic="YES" id="nxt-Lp-id7"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-ot-ijf">
-                                <rect key="frame" x="358" y="829" width="36" height="30"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="clear:" destination="hSz-kY-OPb" eventType="touchUpInside" id="454-Nk-D2N"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Pt-FLw">
-                                <rect key="frame" x="20" y="829" width="64" height="30"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculate:" destination="hSz-kY-OPb" eventType="touchUpInside" id="u4E-x8-qEq"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="VqT-dm-h14" firstAttribute="centerY" secondItem="d0h-Lg-Guf" secondAttribute="centerY" id="7ar-C1-qda"/>
-                            <constraint firstItem="fn8-Pt-FLw" firstAttribute="leading" secondItem="d0h-Lg-Guf" secondAttribute="leadingMargin" id="Jg0-5V-jzx"/>
-                            <constraint firstItem="jWV-Zt-7xw" firstAttribute="top" secondItem="ttx-uS-cbo" secondAttribute="bottom" constant="8" symbolic="YES" id="LF5-8T-OIH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xqu-ot-ijf" secondAttribute="trailing" id="QrH-OA-MCC"/>
-                            <constraint firstAttribute="centerX" secondItem="ttx-uS-cbo" secondAttribute="centerX" id="WWY-8O-kHR"/>
-                            <constraint firstItem="fn8-Pt-FLw" firstAttribute="centerY" secondItem="xqu-ot-ijf" secondAttribute="centerY" id="YQw-oF-s3O"/>
-                            <constraint firstItem="VqT-dm-h14" firstAttribute="centerX" secondItem="d0h-Lg-Guf" secondAttribute="centerX" id="e7O-gq-SSl"/>
-                            <constraint firstItem="xqu-ot-ijf" firstAttribute="centerY" secondItem="ttx-uS-cbo" secondAttribute="centerY" id="egg-wc-7AO"/>
-                            <constraint firstItem="fn8-Pt-FLw" firstAttribute="centerY" secondItem="ttx-uS-cbo" secondAttribute="centerY" id="tcs-yL-TpN"/>
-                        </constraints>
-                        <connections>
-                            <action selector="backgroundTap:" destination="hSz-kY-OPb" eventType="touchDown" id="NLP-zS-KF1"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" title="Date Calculator" id="I0G-Ri-oPK"/>
-                    <connections>
-                        <outlet property="datePicker" destination="K5t-et-TmX" id="8IJ-A5-841"/>
-                        <outlet property="daysSegmentedControl" destination="mJ0-gN-YFQ" id="c28-l9-DyZ"/>
-                        <outlet property="numberOfDaysTextField" destination="7du-d7-6cx" id="riZ-1e-Bch"/>
-                        <outlet property="resultLabel" destination="ttx-uS-cbo" id="3Eo-2m-pd4"/>
-                        <outlet property="subtractDaysSwitch" destination="TFs-Om-7eu" id="7j5-vP-Igh"/>
-                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="DateCalculatorNotesSegue" modalTransitionStyle="flipHorizontal" id="wO3-53-DBV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="br2-3y-1zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1317.3913043478262" y="-1339.2857142857142"/>
-        </scene>
         <!--Link View Controller-->
         <scene sceneID="wuk-kW-8mj">
             <objects>
@@ -3687,7 +3546,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="FLw-vY-8Wq"/>
         <segue reference="I7k-dt-UVf"/>
-        <segue reference="wO3-53-DBV"/>
+        <segue reference="Ldo-Fs-y6z"/>
         <segue reference="tuo-Ni-Xiv"/>
         <segue reference="Nwd-vW-tfz"/>
     </inferredMetricsTieBreakers>

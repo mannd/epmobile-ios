@@ -55,14 +55,13 @@
 		8E37A59716FF40C3004E66B2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59616FF40C3004E66B2 /* Default.png */; };
 		8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59816FF41BD004E66B2 /* Default@2x.png */; };
 		8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */; };
-		8E37A59E16FF46FF004E66B2 /* EPSDateCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A59D16FF46FF004E66B2 /* EPSDateCalculatorViewController.m */; };
-		8E37A5A116FF6016004E66B2 /* EPSDateCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A016FF6016004E66B2 /* EPSDateCalculatorNotes.m */; };
 		8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */; };
 		8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */; };
 		8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */; };
 		8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E39950A204328520079E391 /* EPSCMSStrings.m */; };
 		8E44005A15BA4571009169DC /* EPSWarfarinCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */; };
 		8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */; };
+		8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */; };
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
@@ -268,10 +267,6 @@
 		8E37A59616FF40C3004E66B2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8E37A59816FF41BD004E66B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8E37A59C16FF46FF004E66B2 /* EPSDateCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDateCalculatorViewController.h; sourceTree = "<group>"; };
-		8E37A59D16FF46FF004E66B2 /* EPSDateCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDateCalculatorViewController.m; sourceTree = "<group>"; };
-		8E37A59F16FF6016004E66B2 /* EPSDateCalculatorNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDateCalculatorNotes.h; sourceTree = "<group>"; };
-		8E37A5A016FF6016004E66B2 /* EPSDateCalculatorNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDateCalculatorNotes.m; sourceTree = "<group>"; };
 		8E37A5A216FF8C8D004E66B2 /* EPSEntrainmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEntrainmentViewController.h; sourceTree = "<group>"; };
 		8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEntrainmentViewController.m; sourceTree = "<group>"; };
 		8E37A5A516FFD540004E66B2 /* EPSEntrainmentNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEntrainmentNotes.h; sourceTree = "<group>"; };
@@ -284,6 +279,7 @@
 		8E44005915BA4571009169DC /* EPSWarfarinCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinCalculatorViewController.m; sourceTree = "<group>"; };
 		8E44006015BC4B22009169DC /* EPSWarfarinDosingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDosingTableViewController.h; sourceTree = "<group>"; };
 		8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDosingTableViewController.m; sourceTree = "<group>"; };
+		8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorController.swift; sourceTree = "<group>"; };
 		8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAccessoryPathwayLocations.h; sourceTree = "<group>"; };
 		8E511E5915BC527300CF83B5 /* EPSRiskScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskScoreTableViewController.h; sourceTree = "<group>"; };
 		8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskScoreTableViewController.m; sourceTree = "<group>"; };
@@ -556,8 +552,6 @@
 				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
 				8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */,
 				8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */,
-				8E37A59F16FF6016004E66B2 /* EPSDateCalculatorNotes.h */,
-				8E37A5A016FF6016004E66B2 /* EPSDateCalculatorNotes.m */,
 				8E37A5A516FFD540004E66B2 /* EPSEntrainmentNotes.h */,
 				8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */,
 				8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */,
@@ -620,6 +614,7 @@
 				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 				8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */,
 				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
+				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -771,8 +766,6 @@
 				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
 				8EC343E31630A188008938F6 /* EPSCMSViewController.h */,
 				8EC343E41630A188008938F6 /* EPSCMSViewController.m */,
-				8E37A59C16FF46FF004E66B2 /* EPSDateCalculatorViewController.h */,
-				8E37A59D16FF46FF004E66B2 /* EPSDateCalculatorViewController.m */,
 				8E37A5A216FF8C8D004E66B2 /* EPSEntrainmentViewController.h */,
 				8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */,
 				8EC6E948177F301D00B76C38 /* EPSWeightCalculatorViewController.h */,
@@ -1084,6 +1077,7 @@
 				8EC19C38159FE0FA00975E2B /* main.m in Sources */,
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
 				8EC19C6515B1B1E600975E2B /* EPSDrugDoseCalculatorViewController.m in Sources */,
+				8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */,
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8E31CEBE15B4EDFC00A49D75 /* EPSQTcCalculatorViewController.m in Sources */,
@@ -1131,11 +1125,9 @@
 				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
-				8E37A59E16FF46FF004E66B2 /* EPSDateCalculatorViewController.m in Sources */,
 				8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */,
 				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
-				8E37A5A116FF6016004E66B2 /* EPSDateCalculatorNotes.m in Sources */,
 				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
 				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
 				8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */,
