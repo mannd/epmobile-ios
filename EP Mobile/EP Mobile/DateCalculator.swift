@@ -29,13 +29,12 @@ struct DateCalculator: View {
     var body: some View {
         NavigationView {
             VStack {
-                // Using List here instead of Form since the DatePicker in a Form
-                // gives a warning message about ambiguous constraints.
-                List() {
+                // Using Form here gives a warning message about ambiguous constraints.
+                // This is avoided by using List, but this seems to be an Apple bug
+                // related to the embedded DatePicker.
+                Form() {
                     Section(header: Text("Starting date")) {
-
                         DatePicker(selection: $startingDate, displayedComponents: [.date], label: { Text("Starting date") })
-
                     }
                     Section(header: Text("Number of days")) {
                         HStack {
@@ -52,7 +51,6 @@ struct DateCalculator: View {
                     Section(header: Text("Result")) {
                         Text(result)
                     }
-
                 }
                 HStack() {
                     Group() {
@@ -99,10 +97,6 @@ struct DateCalculator: View {
     func clearResult() {
         result = ""
     }
-
-    func showInfo() {
-         //
-    }
 }
 
 private struct Info: View {
@@ -114,15 +108,15 @@ private struct Info: View {
                 Form {
                     Section(header: Text("How to Use")) {
                         Text("Use this calculator to do date arithmetic.").bold()
-                        Text("Set the starting date wheel to the index date (such as today) and then enter the number of days in the future or past that you are calculating.  Turn ") + Text("Subtract days").bold() + Text(" on to subtract days from the index date.")
+                        Text("Set the starting date to the index date (such as today) and then enter the number of days in the future or past that you are adding or subtracting.  Turn ") + Text("Subtract days").bold() + Text(" on to subtract days from the index date.")
                     }
                     Section(header: Text("Examples")) {
                         Text("90 Days").bold()
-                        Text("Number of days after revascularization (e.g. stent or CAGB) before ICD can be implanted.  Note the CMS NCD states 3 months, but this can vary between 90 and 92 days, so 90 days is often quoted as the number of days to wait.  Similarly the guidelines state waiting 90 days after diagnosis of non-ischemic cardiomyopathy before ICD implantation.")
+                        Text("The number of days after revascularization (e.g. stent or CAGB) before ICD can be implanted.  Note the CMS NCD states 3 months, but this can vary between 90 and 92 days, so 90 days is often quoted as the number of days to wait.  Similarly the guidelines state waiting 90 days after diagnosis of non-ischemic cardiomyopathy before ICD implantation.")
                         Text("40 Days").bold()
-                             Text("Number of days to wait after acute myocardial infarction before ICD implantation.")
+                             Text("The number of days to wait after acute myocardial infarction before ICD implantation.")
                         Text("30 Days").bold()
-                        Text("Number of days an H&P is valid prior to a procedure.")
+                        Text("The number of days an H&P is valid prior to a procedure.")
                     }
                 }
                 Button("Done") {
@@ -130,7 +124,7 @@ private struct Info: View {
                 }
                 .frame(width: 140, height: 40)
                 .foregroundColor(.white)
-                .background(Color.blue)
+                .background(Color.accentColor)
                 .cornerRadius(15)
                 .padding()
             }
@@ -144,6 +138,7 @@ struct DateCalculator_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             DateCalculator()
+            Info()
             Info()
         }
     }
