@@ -98,8 +98,10 @@
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
 		8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */; };
-		8E8FAAE32817297600789746 /* DoseMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE22817297600789746 /* DoseMath.swift */; };
-		8E8FAAE528172D0800789746 /* DoseMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE428172D0800789746 /* DoseMathTests.swift */; };
+		8E8FAAE32817297600789746 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE22817297600789746 /* Patient.swift */; };
+		8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE428172D0800789746 /* PatientTests.swift */; };
+		8E8FAAE72817806000789746 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE62817806000789746 /* Drug.swift */; };
+		8E8FAAE928178EF200789746 /* DrugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE828178EF200789746 /* DrugTests.swift */; };
 		8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */; };
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
 		8E9755A8161A5A3900EAFD10 /* EPSBrugadaNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */; };
@@ -336,8 +338,10 @@
 		8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWCTTableViewController.m; sourceTree = "<group>"; };
 		8E815D42162F448B001025ED /* EPSBrugadaMorphologyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaMorphologyTableViewController.h; sourceTree = "<group>"; };
 		8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaMorphologyTableViewController.m; sourceTree = "<group>"; };
-		8E8FAAE22817297600789746 /* DoseMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseMath.swift; sourceTree = "<group>"; };
-		8E8FAAE428172D0800789746 /* DoseMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseMathTests.swift; sourceTree = "<group>"; };
+		8E8FAAE22817297600789746 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		8E8FAAE428172D0800789746 /* PatientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTests.swift; sourceTree = "<group>"; };
+		8E8FAAE62817806000789746 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		8E8FAAE828178EF200789746 /* DrugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugTests.swift; sourceTree = "<group>"; };
 		8E97559F16188AFD00EAFD10 /* EPSVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVTViewController.h; sourceTree = "<group>"; };
 		8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVTViewController.m; sourceTree = "<group>"; };
 		8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSimpleAlgorithmViewController.h; sourceTree = "<group>"; };
@@ -608,7 +612,8 @@
 				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
 				8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */,
 				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
-				8E8FAAE22817297600789746 /* DoseMath.swift */,
+				8E8FAAE22817297600789746 /* Patient.swift */,
+				8E8FAAE62817806000789746 /* Drug.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -911,7 +916,8 @@
 				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
 				8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */,
 				8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */,
-				8E8FAAE428172D0800789746 /* DoseMathTests.swift */,
+				8E8FAAE428172D0800789746 /* PatientTests.swift */,
+				8E8FAAE828178EF200789746 /* DrugTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1141,6 +1147,7 @@
 				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */,
+				8E8FAAE72817806000789746 /* Drug.swift in Sources */,
 				8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */,
 				8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */,
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
@@ -1156,7 +1163,7 @@
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
-				8E8FAAE32817297600789746 /* DoseMath.swift in Sources */,
+				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
@@ -1190,8 +1197,9 @@
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
-				8E8FAAE528172D0800789746 /* DoseMathTests.swift in Sources */,
+				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
+				8E8FAAE928178EF200789746 /* DrugTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

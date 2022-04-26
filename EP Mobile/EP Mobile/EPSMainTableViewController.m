@@ -15,7 +15,8 @@
 #import "EP_Mobile-Swift.h"
 
 // Sigh!
-#define ALLOW_DRUG_CALCULATORS NO
+// TODO: Switch back to NO!!!! for release version
+#define ALLOW_DRUG_CALCULATORS YES
 
 // Update as needed.  Remember row 2 is invisible (the banned drug calculators).
 #define DATE_CALCULATOR_ROW 1
