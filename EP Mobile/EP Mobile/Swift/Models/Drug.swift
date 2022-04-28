@@ -15,6 +15,26 @@ enum DrugName {
     case edoxaban
     case rivaroxaban
     case sotalol
+    case crCl // Not a drug, but used to just calculate crCl
+
+    var description: String {
+        switch self {
+        case .apixaban:
+            return "Apixaban"
+        case .dabigatran:
+            return "Dabigatran"
+        case .dofetilide:
+            return "Dofetilide"
+        case .edoxaban:
+            return "Edoxaban"
+        case .rivaroxaban:
+            return "Rivaroxaban"
+        case .sotalol:
+            return "Sotalol"
+        case .crCl:
+            return "Creatinine Clearance"
+        }
+    }
 }
 
 protocol Drug {
@@ -24,8 +44,10 @@ protocol Drug {
 }
 
 final class DrugFactory {
-    static func create(drugName: DrugName, patient: Patient) -> Drug {
+    static func create(drugName: DrugName, patient: Patient) -> Drug? {
         switch drugName {
+        case .crCl:
+            return nil
         case .apixaban:
             return Apixaban(patient: patient)
 //        case .dabigatran:
@@ -84,6 +106,8 @@ final class Apixaban: Drug {
         return ""
     }
 }
+
+
 
 //final class Dabigatran: Drug {
 //    var hasWarning: Bool

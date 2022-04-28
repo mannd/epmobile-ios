@@ -10,16 +10,18 @@ import SwiftUI
 
 struct DateCalculator: View {
     @State private var startingDate: Date = Date()
-    @State private var numberOfDays = 90
-    @State private var subtractDays = false
+    @State private var numberOfDays = Self.defaultNumberOfDays
+    @State private var subtractDays = Self.defaultSubtractDays
     @State private var result = ""
     @State private var showingInfo = false
+
+    private static let defaultNumberOfDays = 90
+    private static let defaultSubtractDays = false
 
     private static let minimumDays = 1
     private static let maximumDays = 1000
     private static let dayRange: ClosedRange<Int> = minimumDays...maximumDays
-
-    static var numberFormatter: NumberFormatter = {
+    private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.minimum = minimumDays as NSNumber
         formatter.maximum = maximumDays as NSNumber
@@ -89,8 +91,8 @@ struct DateCalculator: View {
 
     func clear() {
         startingDate = Date()
-        numberOfDays = 90
-        subtractDays = false
+        numberOfDays = Self.defaultNumberOfDays
+        subtractDays = Self.defaultSubtractDays
         clearResult()
     }
 

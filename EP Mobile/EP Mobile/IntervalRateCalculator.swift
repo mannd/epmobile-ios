@@ -24,14 +24,19 @@ enum ConversionType: Int, CaseIterable, Identifiable, Equatable {
 }
 
 struct IntervalRateCalculator: View {
-    @State private var value = 600
+    @State private var value = 0
     @State private var result = ""
     @State private var conversionType: ConversionType = .intervalToRate
 
-    static var numberFormatter: NumberFormatter = {
+
+    private static let minimumValue = 10
+    private static let maximumValue = 3000
+    private static let valueRange: ClosedRange<Int> = minimumValue...maximumValue
+    private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.minimum = 10
-        formatter.maximum = 2000
+        formatter.zeroSymbol = ""
+        formatter.minimum = minimumValue as NSNumber
+        formatter.maximum = maximumValue as NSNumber
         return formatter
     }()
 
@@ -54,7 +59,8 @@ struct IntervalRateCalculator: View {
                         HStack {
                             TextField(valueLabel(), value: $value, formatter: Self.numberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
-                            Stepper("", value: $value, in: 10...2000, step: 1).labelsHidden()
+                            // TODO: refactor these ranges like in DateCalculator
+                            Stepper("", value: $value, in: Self.valueRange, step: 1).labelsHidden()
                         }
                         .onChange(of: value) { _ in
                             clearResult()
@@ -101,12 +107,7 @@ struct IntervalRateCalculator: View {
     }
 
     func clear() {
-        switch conversionType {
-        case .intervalToRate:
-            value = 600
-        case .rateToInterval:
-            value = 100
-        }
+        value = 0
         clearResult()
     }
 

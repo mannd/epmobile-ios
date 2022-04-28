@@ -8,14 +8,34 @@
 
 import Foundation
 
-enum Sex {
+enum Sex: Int, CaseIterable, Identifiable, Equatable {
     case male
     case female
+
+    var id: Sex { self }
+    var description: String {
+        switch self {
+        case .male:
+            return "Male"
+        case .female:
+            return "Female"
+        }
+    }
 }
 
-enum MassUnit {
+enum MassUnit: Int, CaseIterable, Identifiable, Equatable {
     case kg
     case lb
+
+    var id: MassUnit { self }
+    var description: String {
+        switch self {
+        case .kg:
+            return "kg"
+        case .lb:
+            return "lb"
+        }
+    }
 
     private static let lbToKgConversionFactor = 0.45359237
 
@@ -28,9 +48,19 @@ enum MassUnit {
     }
 }
 
-enum ConcentrationUnit {
+enum ConcentrationUnit: Int, CaseIterable, Identifiable, Equatable {
     case mgDL
     case mmolL
+
+    var id: ConcentrationUnit { self }
+    var description: String {
+        switch self {
+        case .mgDL:
+            return "mg/dL"
+        case .mmolL:
+            return "µmol/L"
+        }
+    }
 
     private static let conversionFactor = 88.42
 
@@ -43,31 +73,50 @@ enum ConcentrationUnit {
     }
 }
 
-enum CrClFormula {
+enum CrClFormula: Int, CaseIterable, Identifiable, Equatable {
     case cockcroftGault
     // consider add other formulas in future
+    var id: CrClFormula { self }
+    var description: String {
+        switch self {
+        case .cockcroftGault:
+            return "Cockcroft-Gault"
+        }
+    }
 }
 
 enum DoseError: Error {
+    case ageTooLow
     case creatinineIsZero
+    case weightTooLow
+    case creatinineTooLow
 }
 
 
 final class Patient {
-    var age: Double
+    var age: Int
     var sex: Sex
     var weightKg: Double
     var creatinineMgDL: Double
 
     // ? throwable init or init?()
     init(
-        age: Double,
+        age: Int,
         sex: Sex,
         weightKg: Double,
         creatinineMgDL: Double
     ) throws {
+        guard age > 0 else {
+            throw DoseError.ageTooLow
+        }
         guard creatinineMgDL > 0 else {
             throw DoseError.creatinineIsZero
+        }
+        guard weightKg > 10 else {
+            throw DoseError.weightTooLow
+        }
+        guard creatinineMgDL > 0 else {
+            throw DoseError.creatinineTooLow
         }
         self.age = age
         self.sex = sex
@@ -93,7 +142,7 @@ final class Patient {
 //    }
 
     convenience init(
-        age: Double,
+        age: Int,
         sex: Sex,
         weight: Double,
         massUnits: MassUnit,
@@ -111,21 +160,10 @@ final class Patient {
         try self.init(age: age, sex: sex, weightKg: convertedWeight, creatinineMgDL: convertedCr)
     }
 
-//    // Cockcroft-Gault formula
-//    // CrCl = (140−Age) * WeightKg [* 0.85(if female)] / 72 * SCr
-//    func creatinineClearance() -> Int {
-//        var crCl = ((140.0 - age) * weightKg) / (72.0 * creatinineMgDL)
-//        if sex == .female {
-//            crCl *= 0.85
-//        }
-//        // Don't allow crCl < 1
-//        return Int(round(crCl < 1 ? 1 : crCl))
-//    }
-
     // Cockcroft-Gault formula
     // CrCl = (140−Age) * WeightKg [* 0.85(if female)] / 72 * SCr
     lazy var crCl: Int = {
-        var crCl = ((140.0 - age) * weightKg) / (72.0 * creatinineMgDL)
+        var crCl = ((140.0 - Double(age)) * weightKg) / (72.0 * creatinineMgDL)
         if sex == .female {
             crCl *= 0.85
         }
