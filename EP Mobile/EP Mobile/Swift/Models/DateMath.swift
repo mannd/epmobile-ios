@@ -16,7 +16,16 @@ enum DateMath {
         return formatter
     }()
 
-    static func addDays(startingDate: Date, days: Int, subtractDays: Bool) -> String {
+    /// Add or subtract days to a date
+    ///
+    /// Days parameter must be positive.  Subtraction handled by subtractDays flag.
+    /// - Parameters:
+    ///   - startingDate: Date that days will be added to.
+    ///   - days: Number of days to add/subtract.  Must be non-negative.
+    ///   - subtractDays: If true will subtract days from startingDate.
+    /// - Returns: Date as formatted string.
+    static func addDays(startingDate: Date, days: Int, subtractDays: Bool) -> String? {
+        guard days > 0 else { return nil }
         var dayDifference: Double  = Double(days)
         if subtractDays {
             dayDifference = -dayDifference

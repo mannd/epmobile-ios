@@ -16,8 +16,9 @@ class DateMathTests: XCTestCase {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         let startDate = formatter.date(from: "2022/01/01")!
+        // adding zero days returns nil.
         let result1 = DateMath.addDays(startingDate: startDate, days: 0, subtractDays: false)
-        XCTAssertEqual(result1, "Jan 1, 2022")
+        XCTAssertNil(result1)
         let result2 = DateMath.addDays(startingDate: startDate, days: 365, subtractDays: false)
         XCTAssertEqual(result2, "Jan 1, 2023")
         let result3 = DateMath.addDays(startingDate: startDate, days: 1, subtractDays: false)
@@ -28,6 +29,9 @@ class DateMathTests: XCTestCase {
         XCTAssertEqual(result5, "Apr 1, 2022")
         let result6 = DateMath.addDays(startingDate: startDate, days: 90, subtractDays: true)
         XCTAssertEqual(result6, "Oct 3, 2021")
+        // days parameter must be positive.
+        let result7 = DateMath.addDays(startingDate: startDate, days: -1, subtractDays: false)
+        XCTAssertNil(result7)
     }
 
 }

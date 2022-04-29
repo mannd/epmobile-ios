@@ -18,6 +18,7 @@ struct DrugDoseCalculator: View {
     @State private var drugDose = ""
     @State private var crClResult = ""
     @State private var showWarning = false
+    @FocusState private var textFieldIsFocused: Bool
 
     @State var drugName: DrugName = .crCl
 

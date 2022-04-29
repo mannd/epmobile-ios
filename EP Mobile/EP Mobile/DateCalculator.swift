@@ -14,8 +14,9 @@ struct DateCalculator: View {
     @State private var subtractDays = Self.defaultSubtractDays
     @State private var result = ""
     @State private var showingInfo = false
+    @FocusState private var textFieldIsFocused: Bool
 
-    private static let defaultNumberOfDays = 90
+    private static let defaultNumberOfDays = 0
     private static let defaultSubtractDays = false
 
     private static let minimumDays = 1
@@ -23,6 +24,7 @@ struct DateCalculator: View {
     private static let dayRange: ClosedRange<Int> = minimumDays...maximumDays
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
+        formatter.zeroSymbol = ""
         formatter.minimum = minimumDays as NSNumber
         formatter.maximum = maximumDays as NSNumber
         return formatter
@@ -40,9 +42,11 @@ struct DateCalculator: View {
                     }
                     Section(header: Text("Number of days")) {
                         HStack {
-                            TextField("", value: $numberOfDays         , formatter: Self.numberFormatter)
+                            Text("Number of days")
+                            TextField("Number of days", value: $numberOfDays, formatter: Self.numberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
-                            Stepper("", value: $numberOfDays, in: Self.dayRange, step: 1).labelsHidden()
+                                .multilineTextAlignment(.trailing)
+                                .focused($textFieldIsFocused)
                         }
                     }
                     Section(header: Text("Subtract days")) {
@@ -86,10 +90,17 @@ struct DateCalculator: View {
     }
 
     func calculate() {
-        result = DateMath.addDays(startingDate: startingDate, days: numberOfDays, subtractDays: subtractDays)
+        textFieldIsFocused = false
+        if let rawResult = DateMath.addDays(startingDate: startingDate, days: numberOfDays, subtractDays: subtractDays) {
+            result = rawResult
+        } else {
+            result = "INVALID INPUT"
+        }
+
     }
 
     func clear() {
+        textFieldIsFocused = false
         startingDate = Date()
         numberOfDays = Self.defaultNumberOfDays
         subtractDays = Self.defaultSubtractDays
@@ -102,7 +113,7 @@ struct DateCalculator: View {
 }
 
 private struct Info: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         NavigationView {
@@ -122,7 +133,7 @@ private struct Info: View {
                     }
                 }
                 Button("Done") {
-                    presentationMode.wrappedValue.dismiss()
+                    dismiss()
                 }
                 .frame(width: 140, height: 40)
                 .foregroundColor(.white)
@@ -140,7 +151,6 @@ struct DateCalculator_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             DateCalculator()
-            Info()
             Info()
         }
     }
