@@ -22,7 +22,7 @@ class DrugTests: XCTestCase {
 
     func testDrugs() {
         let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.5)
-        let drug = DrugFactory.create(drugName: .apixaban, patient: patient)
+        let drug = DrugFactory.create(drugName: .apixaban, patient: patient)!
         XCTAssertEqual(drug.getDoseMessage(), "Dose = 5 mg BID. Use 2.5 mg twice daily when administered with strong dual inhibitors of CYP3A4 and P-gp (e.g. ketoconazole, itraconazole, ritonavir, clarithromycin).")
     }
 }

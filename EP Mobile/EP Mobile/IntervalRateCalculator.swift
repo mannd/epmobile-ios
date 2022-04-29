@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum ConversionType: Int, CaseIterable, Identifiable, Equatable {
+enum ConversionType: Int, CaseIterable, Identifiable {
     case intervalToRate
     case rateToInterval
 
@@ -27,10 +27,10 @@ struct IntervalRateCalculator: View {
     @State private var value = 0
     @State private var result = ""
     @State private var conversionType: ConversionType = .intervalToRate
+    @FocusState private var textFieldIsFocused: Bool
 
-
-    private static let minimumValue = 10
-    private static let maximumValue = 3000
+    private static let minimumValue = 5
+    private static let maximumValue = 6000
     private static let valueRange: ClosedRange<Int> = minimumValue...maximumValue
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -57,10 +57,11 @@ struct IntervalRateCalculator: View {
                     }
                     Section(header: Text(valueLabel())) {
                         HStack {
-                            TextField(valueLabel(), value: $value, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                            // TODO: refactor these ranges like in DateCalculator
-                            Stepper("", value: $value, in: Self.valueRange, step: 1).labelsHidden()
+                            Text(valueLabel())
+                            TextField(valueLabel(), value: $value, formatter: Self.numberFormatter)                            .keyboardType(.numberPad)
+                                .focused($textFieldIsFocused)
+                                .multilineTextAlignment(.trailing)
+
                         }
                         .onChange(of: value) { _ in
                             clearResult()
@@ -93,20 +94,23 @@ struct IntervalRateCalculator: View {
     }
 
     func calculate() {
+        textFieldIsFocused = false
         guard value > 0 else {
             result = "INVALID ENTRY"
             return
         }
-        let convertedValue = IntervalRateConversion.convert(value: value)
-        switch conversionType {
-        case .intervalToRate:
-            result = "Rate is \(convertedValue) bpm"
-        case .rateToInterval:
-            result = "Interval is \(convertedValue) msec"
+        if let convertedValue = IntervalRateConversion.convert(value: value) {
+            switch conversionType {
+            case .intervalToRate:
+                result = "Rate is \(convertedValue) bpm"
+            case .rateToInterval:
+                result = "Interval is \(convertedValue) msec"
+            }
         }
     }
 
     func clear() {
+        textFieldIsFocused = false
         value = 0
         clearResult()
     }
@@ -118,9 +122,9 @@ struct IntervalRateCalculator: View {
     func valueLabel() -> String {
         switch conversionType {
         case .intervalToRate:
-            return "interval in msec"
+            return "Interval in msec"
         case .rateToInterval:
-            return "rate in bpm"
+            return "Rate in bpm"
         }
     }
 }

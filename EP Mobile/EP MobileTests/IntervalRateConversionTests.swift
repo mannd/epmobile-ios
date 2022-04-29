@@ -22,11 +22,15 @@ class IntervalRateConversionTests: XCTestCase {
 
     func testConvertValue() {
         var result = IntervalRateConversion.convert(value: 60)
-        XCTAssertTrue(result == "1000", "Test failed")
+        XCTAssertTrue(result == "1000")
         result = IntervalRateConversion.convert(value: 1000)
-        XCTAssertTrue(result == "60", "Test failed")
+        XCTAssertTrue(result == "60")
         result = IntervalRateConversion.convert(value: 733)
-        XCTAssertTrue(result == "82", "Test failed.  Result was \(result)")
+        XCTAssertTrue(result == "82")
+        result = IntervalRateConversion.convert(value: 0)
+        XCTAssertNil(result)
+        result = IntervalRateConversion.convert(value: -1)
+        XCTAssertNil(result)
     }
 
 }

@@ -9,8 +9,8 @@
 import Foundation
 
 enum IntervalRateConversion {
-    static func convert(value: Int) -> String {
-        guard value > 0 else { return "ERROR" }
+    static func convert(value: Int) -> String? {
+        guard value > 0 else { return nil }
         return String(Int(round(60_000.0 / Double(value))))
     }
 }
