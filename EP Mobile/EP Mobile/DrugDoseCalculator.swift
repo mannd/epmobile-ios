@@ -101,7 +101,7 @@ struct DrugDoseCalculator: View {
                         HStack {
                             TextField("Age (yrs)", value: $age, formatter: Self.ageNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
-//                            Stepper("", value: $age, in: Self.ageRange, step: 1).labelsHidden()
+                                .focused($textFieldIsFocused)
                         }
 
                     }
@@ -109,6 +109,7 @@ struct DrugDoseCalculator: View {
                         HStack {
                             TextField(weightLabel, value: $weight, formatter: Self.weightNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
+                                .focused($textFieldIsFocused)
                             Picker(selection: $massUnit, label: Text("Units")) {
                                 ForEach(MassUnit.allCases) {
                                     unit in Text(unit.description)
@@ -121,13 +122,13 @@ struct DrugDoseCalculator: View {
                         HStack {
                             TextField(creatinineLabel, value: $creatinine, formatter: Self.creatinineNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
+                                .focused($textFieldIsFocused)
                             Picker(selection: $concentrationUnit, label: Text("Units")) {
                                 ForEach(ConcentrationUnit.allCases) {
                                     unit in Text(unit.description)
                                 }
                             }
                             .pickerStyle(.segmented)
-//                            Stepper("", value: $creatinine, in: Self.creatinineRange, step: getCrStep()).labelsHidden()
                         }
                     }
                     Section(header: Text("Creatinine Clearance")) {
@@ -158,15 +159,6 @@ struct DrugDoseCalculator: View {
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: age, perform: { _ in  clearResult() })
             .onChange(of: weight, perform: { _ in  clearResult() })
-            // TODO: consider convert value on changing massUnit and concentrationUnit
-            // TODO: consider whether this is good design or just aggravating.
-            .onChange(of: massUnit, perform: { _ in
-                clearResult()
-                convertWeight()
-            })
-            .onChange(of: creatinine, perform: { _ in  clearResult() })
-            // TODO: consider convert value on changing massUnit and concentrationUnit
-            .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -188,12 +180,13 @@ struct DrugDoseCalculator: View {
     }
 
     func calculate() {
+        textFieldIsFocused = false
         do {
             let patient = try Patient(age: age, sex: sex, weight: weight, massUnits: massUnit, creatinine: creatinine, concentrationUnits: concentrationUnit)
             crClResult = patient.crClResult(concentrationUnit: concentrationUnit)
             // handle drugs
             if let drug = DrugFactory.create(drugName: drugName, patient: patient) {
-                drugDose = drug.getDoseMessage() + "\n" + drug.getDetails()
+                drugDose = drug.getDose()
                 showWarning = drug.hasWarning()
             }
             saveResults(crCl: Int(round(patient.crCl)))
@@ -213,6 +206,7 @@ struct DrugDoseCalculator: View {
     }
 
     func clear() {
+        textFieldIsFocused = false
         clearResult()
         // reset fields
         age = 0
