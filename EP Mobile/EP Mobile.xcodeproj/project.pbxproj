@@ -47,6 +47,7 @@
 		8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */; };
 		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
 		8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */; };
+		8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */; };
 		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
@@ -261,6 +262,7 @@
 		8E24EDBA203F375300C49B66 /* EPSCMSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSModel.m; sourceTree = "<group>"; };
 		8E24EDBC203F3D2100C49B66 /* EPSCMSViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewModel.h; sourceTree = "<group>"; };
 		8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewModel.m; sourceTree = "<group>"; };
+		8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCalculatorController.swift; sourceTree = "<group>"; };
 		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
 		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
@@ -631,6 +633,7 @@
 				8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */,
 				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
+				8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1119,6 +1122,7 @@
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
 				8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */,
 				8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */,
+				8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
 				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EC5C3281A9D132C005BDAFD /* EPSDrugCalculatorNotes.m in Sources */,

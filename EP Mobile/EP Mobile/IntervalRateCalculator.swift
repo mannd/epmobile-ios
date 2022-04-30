@@ -57,10 +57,8 @@ struct IntervalRateCalculator: View {
                     }
                     Section(header: Text(valueLabel())) {
                         HStack {
-                            Text(valueLabel())
                             TextField(valueLabel(), value: $value, formatter: Self.numberFormatter)                            .keyboardType(.numberPad)
                                 .focused($textFieldIsFocused)
-                                .multilineTextAlignment(.trailing)
 
                         }
                         .onChange(of: value) { _ in

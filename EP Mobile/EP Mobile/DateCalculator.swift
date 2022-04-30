@@ -94,7 +94,7 @@ struct DateCalculator: View {
         if let rawResult = DateMath.addDays(startingDate: startingDate, days: numberOfDays, subtractDays: subtractDays) {
             result = rawResult
         } else {
-            result = "INVALID INPUT"
+            result = "INVALID ENTRY"
         }
 
     }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum DrugName {
+@objc
+enum DrugName: Int {
     case apixaban
     case dabigatran
     case dofetilide
@@ -37,6 +38,10 @@ enum DrugName {
     }
 }
 
+enum DrugWarning: String {
+    case doNotUse = "DO NOT USE!"
+}
+
 protocol Drug {
     func hasWarning() -> Bool
     func getDoseMessage() -> String
@@ -50,16 +55,12 @@ final class DrugFactory {
             return nil
         case .apixaban:
             return Apixaban(patient: patient)
-//        case .dabigatran:
-//            return Dabigatran()
-//        case .dofetilide:
-//            return Dofetilide()
-//        case .edoxaban:
-//            return Edoxaban()
-//        case .rivaroxaban:
-//            return Rivaroxaban()
-//        case .sotalol:
-//            return Sotalol()
+        case .dabigatran:
+            return Dabigatran(patient: patient)
+        case .edoxaban:
+            return Edoxaban(patient: patient)
+        case .sotalol:
+            return Sotalol(patient: patient)
         default:
             print("Drug Factory incomplete")
             return Apixaban(patient: patient)
@@ -107,75 +108,208 @@ final class Apixaban: Drug {
     }
 }
 
+final class Dabigatran: Drug {
+    let patient: Patient
+
+    init(patient: Patient) {
+        self.patient = patient
+    }
+
+    func hasWarning() -> Bool {
+        return patient.crCl <= 50
+    }
+
+    func getDoseMessage() -> String {
+        let dose: Int
+        let crCl = patient.crCl
+        if (crCl > 30) {
+            dose = 150
+        }
+        else if (crCl >= 15) {
+            dose = 75
+        }
+        else {
+            dose = 0
+        }
+        if (dose == 0) {
+            return DrugWarning.doNotUse.rawValue
+        }
+        return "Dose = \(dose) mg BID. "
+    }
+
+    func getDetails() -> String {
+        let crCl = patient.crCl
+        var message = ""
+        if (crCl < 15) {
+            return message
+        }
+        if (crCl <= 30) {
+            message = "Avoid concomitant use of P-gp inhibitors (e.g. dronedarone)."
+        }
+        else if (crCl <= 50) {
+            message = "Consider reducing dose to 75 mg BID when using with dronedarone or systemic ketoconazole."
+        }
+        if (patient.age >= 75) {
+            message += " Possible increased bleeding risk (age > 75 y)."
+        }
+        return message;
+    }
 
 
-//final class Dabigatran: Drug {
-//    var hasWarning: Bool
-//
-//    func getDose(patient: Patient) {
-//        <#code#>
-//    }
-//
-//    func getDetails(patient: Patient) {
-//        <#code#>
-//    }
-//
-//
-//}
-//
-//final class Dofetilide: Drug {
-//    var hasWarning: Bool
-//
-//    func getDose(patient: Patient) {
-//        <#code#>
-//    }
-//
-//    func getDetails(patient: Patient) {
-//        <#code#>
-//    }
-//
-//
-//}
-//
-//final class Edoxaban: Drug {
-//    var hasWarning: Bool
-//
-//    func getDose(patient: Patient) {
-//        <#code#>
-//    }
-//
-//    func getDetails(patient: Patient) {
-//        <#code#>
-//    }
-//
-//
-//}
-//
-//final class Rivaroxaban: Drug {
-//    var hasWarning: Bool
-//
-//    func getDose(patient: Patient) {
-//        <#code#>
-//    }
-//
-//    func getDetails(patient: Patient) {
-//        <#code#>
-//    }
-//
-//
-//}
-//
-//final class Sotalol: Drug {
-//    var hasWarning: Bool
-//
-//    func getDose(patient: Patient) {
-//        <#code#>
-//    }
-//
-//    func getDetails(patient: Patient) {
-//        <#code#>
-//    }
+}
 
+final class Dofetilide: Drug {
+    let patient: Patient
 
-//}
+    init(patient: Patient) {
+        self.patient = patient
+    }
 
+    func hasWarning() -> Bool {
+        patient.crCl < 20
+    }
+
+    func getDoseMessage() -> String {
+        let dose: Int
+        let crCl = patient.crCl
+        if crCl > 60 {
+            dose = 500
+        }
+        else if crCl >= 40 {
+            dose = 250
+        }
+        else if crCl >= 20 {
+            dose = 125
+        }
+        else {
+            dose = 0
+        }
+        if dose == 0 {
+            return DrugWarning.doNotUse.rawValue
+        }
+        return "Dose = \(dose) mcg BID."
+    }
+
+    func getDetails() -> String {
+        return ""
+    }
+}
+
+final class Edoxaban: Drug {
+    let patient: Patient
+
+    init(patient: Patient) {
+        self.patient = patient
+    }
+
+    func hasWarning() -> Bool {
+        return patient.crCl < 15 || patient.crCl > 95
+    }
+
+    func getDoseMessage() -> String {
+        var stringDose = ""
+        let crCl = patient.crCl
+        if crCl < 15 || crCl > 95 {
+            stringDose = "0"
+        } else {
+            if crCl <= 50 && crCl >= 15 {
+                stringDose = "30"
+            } else {
+                stringDose = "60"
+            }
+        }
+        if stringDose == "0" {
+            return DrugWarning.doNotUse.rawValue
+        }
+        return "Dose = \(stringDose) mg daily."
+    }
+
+    func getDetails() -> String {
+        if patient.crCl > 95 {
+            return "Edoxaban should not be used in patients with CrCl > 95 mL/min"
+        }
+        return ""
+    }
+}
+
+final class Rivaroxaban: Drug {
+    let patient: Patient
+
+    init(patient: Patient) {
+        self.patient = patient
+    }
+
+    func hasWarning() -> Bool {
+        return patient.crCl < 15
+    }
+
+    func getDoseMessage() -> String {
+        let crCl = patient.crCl
+        var dose: Int
+        if crCl > 50 {
+            dose = 20
+        }
+        else if crCl >= 15 {
+            dose = 15
+        }
+        else {
+            dose = 0
+        }
+        if dose == 0 {
+            return DrugWarning.doNotUse.rawValue
+        }
+        return "Dose = \(dose) mg daily. "
+    }
+
+    func getDetails() -> String {
+        if patient.crCl >= 15 {
+            return "Take dose with evening meal."
+        }
+        return ""
+    }
+}
+
+final class Sotalol: Drug {
+    let patient: Patient
+
+    init(patient: Patient) {
+        self.patient = patient
+    }
+
+    func hasWarning() -> Bool {
+        return patient.crCl < 40
+    }
+
+    func getDoseMessage() -> String {
+        let crCl = patient.crCl
+        var dose: Int
+        if crCl >= 40 {
+            dose = 80
+        } else {
+            dose = 0
+        }
+        if dose == 0 {
+            return DrugWarning.doNotUse.rawValue
+        }
+        if crCl > 60 {
+            return "Dose = \(dose) mg BID. "
+        }
+        if crCl >= 40 {
+            return "Dose = \(dose) mg daily. "
+        }
+        return DrugWarning.doNotUse.rawValue
+    }
+
+    func getDetails() -> String {
+        if patient.crCl < 40 {
+            return ""
+        } else {
+            let message = "Recommended starting dose for treatment of atrial fibrillation. Initial QT should be < 450 msec. If QT remains < 500 msec dose can be increased to 120 mg or 160 mg "
+            if patient.crCl > 60 {
+                return message + "BID."
+            } else {
+                return message + "daily."
+            }
+        }
+    }
+}

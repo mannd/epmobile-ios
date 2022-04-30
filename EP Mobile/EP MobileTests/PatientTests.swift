@@ -32,12 +32,12 @@ class PatientTests: XCTestCase {
 
     func testCreatineClearance() {
         let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.0)
-        XCTAssertEqual(patient.crCl, 97)
+        XCTAssertEqual(patient.crCl, 97.2, accuracy: 0.1)
         let patient2 = try! Patient(age: 40, sex: .male, weight: 70, massUnits: .kg, creatinine: 1.0, concentrationUnits: .mgDL)
-        XCTAssertEqual(patient2.crCl, 97)
+        XCTAssertEqual(patient2.crCl, 97.2, accuracy: 0.1)
         let patient3 = try! Patient(age: 50, sex: .female, weight: 170, massUnits: .lb, creatinine: 100, concentrationUnits: .mmolL)
-        XCTAssertEqual(patient3.crCl, 72)
+        XCTAssertEqual(patient3.crCl, 72.4, accuracy: 0.1)
         let patient4 = try! Patient(age: 40, sex: .female, weightKg: 70, creatinineMgDL: 1.0)
-        XCTAssertEqual(patient4.crCl, 83)
+        XCTAssertEqual(patient4.crCl, 82.6, accuracy: 0.1)
     }
 }

@@ -162,14 +162,30 @@ final class Patient {
 
     // Cockcroft-Gault formula
     // CrCl = (140−Age) * WeightKg [* 0.85(if female)] / 72 * SCr
-    lazy var crCl: Int = {
+    lazy var crCl: Double = {
         var crCl = ((140.0 - Double(age)) * weightKg) / (72.0 * creatinineMgDL)
         if sex == .female {
             crCl *= 0.85
         }
-        // Don't allow crCl < 1
-        return Int(round(crCl < 1 ? 1 : crCl))
+        return crCl
     }()
+
+    func crCl(concentrationUnit: ConcentrationUnit) -> Double {
+        switch concentrationUnit {
+        case .mgDL:
+            return crCl
+        case .mmolL:
+            return ConcentrationUnit.mgDLToMmolL(crCl)
+        }
+    }
+
+    func crClResult(concentrationUnit: ConcentrationUnit) -> String {
+        let roundedCrCl = Int(round(crCl(concentrationUnit: concentrationUnit)))
+        return  "Creatine clearance = \(roundedCrCl) \(concentrationUnit.description)"
+    }
+
+
+
     // need more than just crCl for Apixaban dosing
 //    - (NSString *)getDose:(int)crCl forWeightInKgs:(double)weight forCreatinine:(double)creatinine forAge:(double)age {
 //        int dose;

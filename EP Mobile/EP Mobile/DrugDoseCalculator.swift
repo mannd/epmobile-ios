@@ -20,7 +20,10 @@ struct DrugDoseCalculator: View {
     @State private var showWarning = false
     @FocusState private var textFieldIsFocused: Bool
 
-    @State var drugName: DrugName = .crCl
+    @Binding var drugName: DrugName
+
+    var weightLabel: String { "Weight (\(massUnit.description))" }
+    var creatinineLabel: String { "Creatine (\(concentrationUnit.description))"}
 
     private static let defaultMassUnit: MassUnit = {
         let unit = UserDefaults.standard.string(forKey: "defaultweightunit")
@@ -56,6 +59,7 @@ struct DrugDoseCalculator: View {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.zeroSymbol = ""
+        formatter.maximumFractionDigits = 1
         formatter.minimum = minimumWeight as NSNumber
         formatter.maximum = maximumWeight as NSNumber
         return formatter
@@ -72,6 +76,7 @@ struct DrugDoseCalculator: View {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.zeroSymbol = ""
+        formatter.maximumFractionDigits = 2
         formatter.minimum = minimumCreatinine as NSNumber
         formatter.maximum = maximumCreatinine as NSNumber
         return formatter
@@ -85,7 +90,7 @@ struct DrugDoseCalculator: View {
                 // related to the embedded DatePicker.
                 Form() {
                     Section(header: Text("Sex")) {
-                        Picker(selection: $sex, label: Text("Interval/Rate")) {
+                        Picker(selection: $sex, label: Text("Sex")) {
                             ForEach(Sex.allCases) {
                                 sex in Text(sex.description)
                             }
@@ -96,13 +101,13 @@ struct DrugDoseCalculator: View {
                         HStack {
                             TextField("Age (yrs)", value: $age, formatter: Self.ageNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
-                            Stepper("", value: $age, in: Self.ageRange, step: 1).labelsHidden()
+//                            Stepper("", value: $age, in: Self.ageRange, step: 1).labelsHidden()
                         }
 
                     }
-                    Section(header: Text("Weight (\(massUnit.description))")) {
+                    Section(header: Text(weightLabel)) {
                         HStack {
-                            TextField("Weight", value: $weight, formatter: Self.weightNumberFormatter)
+                            TextField(weightLabel, value: $weight, formatter: Self.weightNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
                             Picker(selection: $massUnit, label: Text("Units")) {
                                 ForEach(MassUnit.allCases) {
@@ -110,13 +115,11 @@ struct DrugDoseCalculator: View {
                                 }
                             }
                             .pickerStyle(.segmented)
-                            Stepper("", value: $weight, in: Self.weightRange, step: 1).labelsHidden()
-
                         }
                     }
-                    Section(header: Text("Creatinine (\(concentrationUnit.description))")) {
+                    Section(header: Text(creatinineLabel)) {
                         HStack {
-                            TextField("Creatine", value: $creatinine, formatter: Self.creatinineNumberFormatter)
+                            TextField(creatinineLabel, value: $creatinine, formatter: Self.creatinineNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
                             Picker(selection: $concentrationUnit, label: Text("Units")) {
                                 ForEach(ConcentrationUnit.allCases) {
@@ -124,7 +127,7 @@ struct DrugDoseCalculator: View {
                                 }
                             }
                             .pickerStyle(.segmented)
-                            Stepper("", value: $creatinine, in: Self.creatinineRange, step: getCrStep()).labelsHidden()
+//                            Stepper("", value: $creatinine, in: Self.creatinineRange, step: getCrStep()).labelsHidden()
                         }
                     }
                     Section(header: Text("Creatinine Clearance")) {
@@ -155,8 +158,14 @@ struct DrugDoseCalculator: View {
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: age, perform: { _ in  clearResult() })
             .onChange(of: weight, perform: { _ in  clearResult() })
-            .onChange(of: massUnit, perform: { _ in  clearResult() })
+            // TODO: consider convert value on changing massUnit and concentrationUnit
+            // TODO: consider whether this is good design or just aggravating.
+            .onChange(of: massUnit, perform: { _ in
+                clearResult()
+                convertWeight()
+            })
             .onChange(of: creatinine, perform: { _ in  clearResult() })
+            // TODO: consider convert value on changing massUnit and concentrationUnit
             .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
         }
@@ -181,13 +190,13 @@ struct DrugDoseCalculator: View {
     func calculate() {
         do {
             let patient = try Patient(age: age, sex: sex, weight: weight, massUnits: massUnit, creatinine: creatinine, concentrationUnits: concentrationUnit)
-            crClResult = "Creatine clearance = \(patient.crCl) \(concentrationUnit.description)"
+            crClResult = patient.crClResult(concentrationUnit: concentrationUnit)
             // handle drugs
             if let drug = DrugFactory.create(drugName: drugName, patient: patient) {
-                drugDose = drug.getDoseMessage()
+                drugDose = drug.getDoseMessage() + "\n" + drug.getDetails()
                 showWarning = drug.hasWarning()
             }
-            saveResults(crCl: patient.crCl)
+            saveResults(crCl: Int(round(patient.crCl)))
         } catch {
             crClResult = "INVALID RESULT"
         }
@@ -203,7 +212,6 @@ struct DrugDoseCalculator: View {
         defaults.set(crCl, forKey: Keys.creatinineClearance)
     }
 
-    // TODO: should clear just leave entries the same instead of going back to original entries?  Should we try to blank out these fields?
     func clear() {
         clearResult()
         // reset fields
@@ -219,10 +227,20 @@ struct DrugDoseCalculator: View {
         crClResult = ""
         drugDose = ""
     }
+
+    func convertWeight() {
+        print("convert weight")
+        switch massUnit {
+        case .kg:
+            weight = MassUnit.lbToKg(weight)
+        case .lb:
+            weight = MassUnit.kgToLb(weight)
+        }
+    }
 }
 
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
-        DrugDoseCalculator()
+        DrugDoseCalculator(drugName: .constant(DrugName.crCl))
     }
 }

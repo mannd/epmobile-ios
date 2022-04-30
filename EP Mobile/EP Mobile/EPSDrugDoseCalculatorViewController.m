@@ -197,7 +197,7 @@
         NSString *alertTitle = @"Warning";
         [EPSSharedMethods showDialogWithTitle:alertTitle andMessage:details inView:self];
     }
-    
+    EPSLog(@"Printed result = %@", details);
     [self saveResultsWithAge:age isMale:isMale weightInKgs:weight creatinine:creatinine creatinineClearance:cc];
 }
 
