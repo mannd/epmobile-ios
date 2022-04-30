@@ -14,4 +14,10 @@ struct Keys {
     static let weight = "CC_weight_in_kgs"
     static let creatinine = "CC_creatinine"
     static let creatinineClearance = "CC_creatinine_clearance"
+    static let defaultMassUnit = "defaultweightunit"
+    static let defaultConcentrationUnit = "defaultcreatinineunit"
+    static let kg = "kg"
+    static let lb = "lb"
+    static let mgdL = "mg"
+    static let mmolL = "micromol"
 }

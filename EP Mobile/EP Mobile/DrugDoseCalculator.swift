@@ -13,34 +13,20 @@ struct DrugDoseCalculator: View {
     @State private var age: Int = 0
     @State private var weight: Double = 0.0
     @State private var creatinine: Double = 0.0
-    @State private var massUnit: MassUnit = defaultMassUnit
-    @State private var concentrationUnit: ConcentrationUnit = defaultConcentrationUnit
+    @State private var massUnit: MassUnit = .kg
+    @State private var concentrationUnit: ConcentrationUnit = .mgDL
     @State private var drugDose = ""
     @State private var crClResult = ""
     @State private var showWarning = false
     @FocusState private var textFieldIsFocused: Bool
 
+    @AppStorage(Keys.defaultMassUnit) var defaultMassUnit: String = Keys.kg
+    @AppStorage(Keys.defaultConcentrationUnit) var defaultConcentrationUnit: String = Keys.mgdL
+
     @Binding var drugName: DrugName
 
     var weightLabel: String { "Weight (\(massUnit.description))" }
     var creatinineLabel: String { "Creatine (\(concentrationUnit.description))"}
-
-    private static let defaultMassUnit: MassUnit = {
-        let unit = UserDefaults.standard.string(forKey: "defaultweightunit")
-        if unit == "lb" {
-            return MassUnit.lb
-        } else {
-            return MassUnit.kg
-        }
-    }()
-    private static let defaultConcentrationUnit: ConcentrationUnit = {
-        let unit = UserDefaults.standard.string(forKey: "defaultcreatinineunit")
-        if unit == "mg" {
-            return ConcentrationUnit.mgDL
-        } else {
-            return ConcentrationUnit.mmolL
-        }
-    }()
 
     private static let minimumAge = 16
     private static let maximumAge = 120
@@ -161,6 +147,18 @@ struct DrugDoseCalculator: View {
             .onChange(of: weight, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
         }
+        .onAppear() {
+            if defaultMassUnit == Keys.kg {
+                massUnit = .kg
+            } else {
+                massUnit = .lb
+            }
+            if defaultConcentrationUnit == Keys.mgdL {
+                concentrationUnit = .mgDL
+            } else {
+                concentrationUnit = .mmolL
+            }
+        }
         .navigationViewStyle(StackNavigationViewStyle())
         .alert(isPresented: $showWarning) {
                    Alert(
@@ -213,8 +211,6 @@ struct DrugDoseCalculator: View {
         sex = .male
         weight = 0
         creatinine = 0
-//        massUnit = Self.defaultMassUnit
-//        concentrationUnit = Self.defaultConcentrationUnit
     }
 
     func clearResult() {

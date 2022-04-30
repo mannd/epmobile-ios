@@ -46,6 +46,13 @@ protocol Drug {
     func hasWarning() -> Bool
     func getDoseMessage() -> String
     func getDetails() -> String
+    func getDose() -> String
+}
+
+extension Drug {
+    func getDose() -> String {
+        return getDoseMessage() + "\n" + getDetails()
+    }
 }
 
 final class DrugFactory {
@@ -59,6 +66,10 @@ final class DrugFactory {
             return Dabigatran(patient: patient)
         case .edoxaban:
             return Edoxaban(patient: patient)
+        case .dofetilide:
+            return Dofetilide(patient: patient)
+        case .rivaroxaban:
+            return Rivaroxaban(patient: patient)
         case .sotalol:
             return Sotalol(patient: patient)
         default:
