@@ -18,6 +18,7 @@ struct DrugDoseCalculator: View {
     @State private var drugDose = ""
     @State private var crClResult = ""
     @State private var showWarning = false
+    @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultMassUnit) var defaultMassUnit: String = Keys.kg
@@ -145,7 +146,14 @@ struct DrugDoseCalculator: View {
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: age, perform: { _ in  clearResult() })
             .onChange(of: weight, perform: { _ in  clearResult() })
+            .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
+            .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
+            .navigationBarItems(trailing: drugName != .crCl ? AnyView(Button(action: { showInfo.toggle() }) {
+                Image(systemName: "info.circle")
+            }.sheet(isPresented: $showInfo) {
+                Info()
+            }) : AnyView(EmptyView()))
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -229,8 +237,35 @@ struct DrugDoseCalculator: View {
     }
 }
 
+private struct Info: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                Form {
+                    Section(header: Text("Caution")) {
+                        Text("Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage.")
+                    }
+                }
+                Button("Done") {
+                    dismiss()
+                }
+                .frame(width: 140, height: 40)
+                .foregroundColor(.white)
+                .background(Color.accentColor)
+                .cornerRadius(15)
+                .padding()
+            }
+            .navigationBarTitle(Text("Drug Calculator"), displayMode: .inline)
+        }
+    }
+
+}
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
         DrugDoseCalculator(drugName: .constant(DrugName.crCl))
+        DrugDoseCalculator(drugName: .constant(DrugName.apixaban))
+        Info()
     }
 }

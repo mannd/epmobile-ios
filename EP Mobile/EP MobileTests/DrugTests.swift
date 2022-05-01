@@ -182,7 +182,6 @@ class DrugTests: XCTestCase {
     func testSotalol() {
         let d68 = DrugFactory.create(drugName: .sotalol, patient: ptCC68)
         let d45 = DrugFactory.create(drugName: .sotalol, patient: ptCC45)
-        let d15 = DrugFactory.create(drugName: .sotalol, patient: ptCC15)
         let d14 = DrugFactory.create(drugName: .sotalol, patient: ptCC14)
 
         XCTAssertTrue(d14!.hasWarning())

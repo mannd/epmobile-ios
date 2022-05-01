@@ -181,7 +181,7 @@ final class Patient {
 
     func crClResult(concentrationUnit: ConcentrationUnit) -> String {
         let roundedCrCl = Int(round(crCl(concentrationUnit: concentrationUnit)))
-        return  "Creatine clearance = \(roundedCrCl) \(concentrationUnit.description)"
+        return  "Creatine clearance = \(roundedCrCl) mL/min"
     }
 
 
