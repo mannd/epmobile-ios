@@ -90,6 +90,7 @@ enum DoseError: Error {
     case creatinineIsZero
     case weightTooLow
     case creatinineTooLow
+    case pediatricAge
 }
 
 
@@ -117,6 +118,10 @@ final class Patient {
         }
         guard creatinineMgDL > 0 else {
             throw DoseError.creatinineTooLow
+        }
+        // TODO: original EP Mobile drug calculator was for 18 and over.
+        guard age > 12 else {
+            throw DoseError.pediatricAge
         }
         self.age = age
         self.sex = sex
@@ -181,113 +186,6 @@ final class Patient {
 
     func crClResult(concentrationUnit: ConcentrationUnit) -> String {
         let roundedCrCl = Int(round(crCl(concentrationUnit: concentrationUnit)))
-        return  "Creatine clearance = \(roundedCrCl) mL/min"
+        return  "Creatinine clearance = \(roundedCrCl) mL/min"
     }
-
-
-
-    // need more than just crCl for Apixaban dosing
-//    - (NSString *)getDose:(int)crCl forWeightInKgs:(double)weight forCreatinine:(double)creatinine forAge:(double)age {
-//        int dose;
-//        NSString *message = [[NSString alloc] init];
-//        if ([drug isEqualToString:CREATININE_CLEARNCE_ONLY]) {
-//            message = @"";
-//            return message;
-//
-//        }
-//        if ([drug isEqualToString:DABIGATRAN]) {
-//            if (crCl > 30)
-//                dose = 150;
-//            else if (crCl >= 15)
-//                dose = 75;
-//            else {
-//                dose = 0;
-//            }
-//            if (dose == 0)
-//                return [message stringByAppendingString:DO_NOT_USE];
-//            return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg BID. ", dose]];
-//
-//        }
-//        if ([drug isEqualToString:DOFETILIDE]) {
-//             if (crCl > 60)
-//                dose = 500;
-//            else if (crCl >= 40)
-//                dose = 250;
-//            else if (crCl >= 20)
-//                dose = 125;
-//            else
-//                dose = 0;
-//            if (dose == 0)
-//                return [message stringByAppendingString:DO_NOT_USE];
-//            return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mcg BID. ", dose]];
-//        }
-//        if ([drug isEqualToString:RIVAROXABAN]) {
-//            if (crCl > 50)
-//                dose = 20;
-//            else if (crCl >= 15)
-//                dose = 15;
-//            else
-//                dose = 0;
-//            if (dose == 0)
-//                return [message stringByAppendingString:DO_NOT_USE];
-//            return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg daily. ", dose]];
-//            }
-//        if ([drug isEqualToString:SOTALOL]) {
-//            if (crCl >= 40)
-//                dose = 80;
-//            else
-//                dose = 0;
-//            if (dose == 0)
-//                return [message stringByAppendingString:DO_NOT_USE];
-//            if (crCl > 60)
-//                return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg BID. ", dose]];
-//            if (crCl >= 40)
-//                return [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %i mg daily. ", dose]];
-//        }
-//        if ([drug isEqualToString:APIXABAN]) {
-//            NSString* stringDose = @"";
-//
-//                EPSLog(@"Creatine = %f", creatinine);
-//                if ((creatinine >= 1.5 && (age >= 80 || weight <= 60))
-//                        || (age >= 80 && weight <= 60))
-//                    stringDose = @"2.5";
-//                else
-//                    stringDose = @"5";
-//
-//            if ([stringDose isEqualToString:@"0"])
-//                return [message stringByAppendingString:DO_NOT_USE];
-//            message = [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg BID. ", stringDose]];
-//            if ([stringDose isEqualToString:@"2.5"])
-//                message = [message stringByAppendingString:APIXABAN_2_5_CAUTION];
-//            else
-//                message = [message stringByAppendingString:APIXABAN_5_CAUTION];
-//
-//            message = [message stringByAppendingString:INHIBITORS];
-//            if (crCl < 15) {
-//                message = [message stringByAppendingString:APIXABAN_ESRD_CAUTION];
-//            }
-//            return message;
-//        }
-//        if ([drug isEqualToString:EDOXABAN]) {
-//            NSString* stringDose = @"";
-//            if (crCl < 15 || crCl > 95)
-//                stringDose = @"0";
-//            else {
-//                EPSLog(@"Creatine = %f", creatinine);
-//                if (crCl <= 50 && crCl >= 15)
-//                    stringDose = @"30";
-//                else
-//                    stringDose = @"60";
-//            }
-//            if ([stringDose isEqualToString:@"0"])
-//                return [message stringByAppendingString:DO_NOT_USE];
-//            message = [message stringByAppendingString:[NSString stringWithFormat:@"Dose = %@ mg daily. ", stringDose]];
-//            return message;
-//            //return [message stringByAppendingString:AFB_DOSING_ONLY_WARNING];
-//        }
-//        return @"Unknown Dose";
-//    }
-
-
-
 }

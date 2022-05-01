@@ -7,7 +7,6 @@
 //
 
 #import "EPSDrugDoseTableViewController.h"
-#import "EPSDrugDoseCalculatorViewController.h"
 #import "EP_Mobile-Swift.h"
 
 #define APIXABAN_ROW 0
@@ -67,23 +66,6 @@
         return;
     }
     [DrugCalculatorController showWithVc:self drugName: drugName];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSDrugDoseCalculatorViewController *vc = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController]; 
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"DabigatranSegue"])
-        vc.drug = @"Dabigatran";
-    else if ([segueIdentifier isEqualToString:@"DofetilideSegue"])
-        vc.drug = @"Dofetilide";
-    else if ([segueIdentifier isEqualToString:@"RivaroxabanSegue"])
-        vc.drug = @"Rivaroxaban";
-    else if ([segueIdentifier isEqualToString:@"SotalolSegue"])
-        vc.drug = @"Sotalol";
-    else if ([segueIdentifier isEqualToString:@"ApixabanSegue"])
-        vc.drug = @"Apixaban";
-    else if ([segueIdentifier isEqualToString:@"EdoxabanSegue"])
-        vc.drug = @"Edoxaban";
 }
 
 @end

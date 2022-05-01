@@ -40,4 +40,11 @@ class PatientTests: XCTestCase {
         let patient4 = try! Patient(age: 40, sex: .female, weightKg: 70, creatinineMgDL: 1.0)
         XCTAssertEqual(patient4.crCl, 82.6, accuracy: 0.1)
     }
+
+    func testCrClResult() {
+        let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.0)
+        XCTAssertEqual(patient.crClResult(concentrationUnit: .mgDL), "Creatinine clearance = 97 mL/min")
+        let patient4 = try! Patient(age: 40, sex: .female, weightKg: 70, creatinineMgDL: 1.0)
+        XCTAssertEqual(patient4.crClResult(concentrationUnit: .mgDL), "Creatinine clearance = 83 mL/min")
+    }
 }

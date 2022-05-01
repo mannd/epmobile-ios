@@ -15,7 +15,6 @@
 #import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
 #import "EPSWeightCalculatorNotes.h"
-#import "EPSDrugCalculatorNotes.h"
 #import "EPSHcmScd2014Notes.h"
 #import "EPSLogging.h"
 
@@ -60,8 +59,6 @@
         notes = [[EPSAtrialTachNotes alloc] init];
     else if ([self.key isEqualToString:@"WeightCalculatorNotes"])
         notes = [[EPSWeightCalculatorNotes alloc] init];
-    else if ([self.key isEqualToString:@"DrugCalculatorNotes"])
-        notes = [[EPSDrugCalculatorNotes alloc] init];
     else if ([self.key isEqualToString:@"HcmScd2014"])
         notes = [[EPSHcmScd2014Notes alloc] init];
     [self.notesTextView setText:[notes noteText]];

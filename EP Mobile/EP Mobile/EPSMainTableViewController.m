@@ -9,7 +9,6 @@
 #import "EPSMainTableViewController.h"
 #import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
-#import "EPSDrugDoseCalculatorViewController.h"
 #import "EPSARVC2010TableViewController.h"
 
 #import "EP_Mobile-Swift.h"
@@ -105,12 +104,9 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSDrugDoseCalculatorViewController *drugDoseViewController = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"CreatinineClearanceSegue"])
-        drugDoseViewController.drug = @"Creatinine Clearance";
     
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)drugDoseViewController;
+    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
 
     if ([segueIdentifier isEqualToString:@"Chads2Segue"])
         vc.scoreType = @"Chads2";

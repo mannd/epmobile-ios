@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kBV-s3-VWz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -894,9 +893,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="58m-i0-Uaa" kind="show" identifier="CreatinineClearanceSegue" id="FLw-vY-8Wq"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="iUr-MS-opc" style="IBUITableViewCellStyleDefault" id="AB2-Gc-Vce">
                                         <rect key="frame" x="0.0" y="93.5" width="414" height="44"/>
@@ -2499,12 +2495,11 @@
                     <navigationItem key="navigationItem" id="0S6-y4-ASA"/>
                     <connections>
                         <outlet property="webView" destination="mN5-L6-YZp" id="fw2-aR-bmz"/>
-                        <segue destination="58m-i0-Uaa" kind="show" identifier="calcCreatinineClearanceSegue" id="oVK-G4-7QX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-UU-GMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8789" y="171"/>
+            <point key="canvasLocation" x="-9525" y="260"/>
         </scene>
         <!--ARVC/D 2010-->
         <scene sceneID="BbD-fk-Zg1">
@@ -2548,7 +2543,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFl-fg-FOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6662" y="-278"/>
+            <point key="canvasLocation" x="-5851" y="-71"/>
         </scene>
         <!--Simple Algorithm View Controller-->
         <scene sceneID="ZHr-QH-jRc">
@@ -3502,14 +3497,6 @@
             </objects>
             <point key="canvasLocation" x="-8329" y="-1012"/>
         </scene>
-        <!--DrugCalculator-->
-        <scene sceneID="A1m-Lg-oZA">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="DrugCalculator" storyboardName="DrugCalculators" referencedIdentifier="DrugCalculator" id="58m-i0-Uaa" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wiZ-jg-0oX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4097" y="-514"/>
-        </scene>
         <!--UITableViewController-eRb-uZ-GP2-->
         <scene sceneID="ir0-Ds-D3c">
             <objects>
@@ -3544,11 +3531,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FLw-vY-8Wq"/>
         <segue reference="I7k-dt-UVf"/>
         <segue reference="Ldo-Fs-y6z"/>
         <segue reference="tuo-Ni-Xiv"/>
-        <segue reference="Nwd-vW-tfz"/>
+        <segue reference="hMb-ve-5a8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brugadaecg" width="400" height="255"/>

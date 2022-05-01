@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSDrugDoseTableViewController : UITableViewController
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 @end
