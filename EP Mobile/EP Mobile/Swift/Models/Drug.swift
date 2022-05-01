@@ -51,6 +51,9 @@ protocol Drug {
 
 extension Drug {
     func getDose() -> String {
+        if getDetails().isEmpty {
+            return getDoseMessage()
+        }
         return getDoseMessage() + "\n" + getDetails()
     }
 }
@@ -72,9 +75,6 @@ final class DrugFactory {
             return Rivaroxaban(patient: patient)
         case .sotalol:
             return Sotalol(patient: patient)
-        default:
-            print("Drug Factory incomplete")
-            return Apixaban(patient: patient)
         }
     }
 }
@@ -145,7 +145,7 @@ final class Dabigatran: Drug {
         if (dose == 0) {
             return DrugWarning.doNotUse.rawValue
         }
-        return "Dose = \(dose) mg BID. "
+        return "Dose = \(dose) mg BID."
     }
 
     func getDetails() -> String {
