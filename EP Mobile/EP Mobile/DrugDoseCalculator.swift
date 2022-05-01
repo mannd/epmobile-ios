@@ -27,7 +27,7 @@ struct DrugDoseCalculator: View {
     @Binding var drugName: DrugName
 
     var weightLabel: String { "Weight (\(massUnit.description))" }
-    var creatinineLabel: String { "Creatine (\(concentrationUnit.description))"}
+    var creatinineLabel: String { "Creatinine (\(concentrationUnit.description))"}
 
     // TODO: original drug calculator age cutoff was 18 and over?
     private static let minimumAge = 10
