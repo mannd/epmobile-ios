@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96517BC46EF0007A146 /* EPSNavigationController.m */; };
 		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E02998817EE07BC00A7FC6F /* Images.xcassets */; };
+		8E05062D2820879D0059DACB /* MiniQTc in Frameworks */ = {isa = PBXBuildFile; productRef = 8E05062C2820879D0059DACB /* MiniQTc */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
 		8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */; };
 		8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011A15DB39B100BB7550 /* lbbbicon.png */; };
@@ -120,7 +121,6 @@
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
 		8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
 		8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */; };
-		8EB36C32281F8989006D8DF2 /* QTc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C31281F8989006D8DF2 /* QTc.swift */; };
 		8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C33281F93D8006D8DF2 /* QTcTests.swift */; };
 		8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FB17EFA533006FE65F /* epmobile_icon3.png */; };
 		8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */; };
@@ -374,7 +374,6 @@
 		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
 		8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskViewController.m; sourceTree = "<group>"; };
 		8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDoseCalculator.swift; sourceTree = "<group>"; };
-		8EB36C31281F8989006D8DF2 /* QTc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTc.swift; sourceTree = "<group>"; };
 		8EB36C33281F93D8006D8DF2 /* QTcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcTests.swift; sourceTree = "<group>"; };
 		8EB418FB17EFA533006FE65F /* epmobile_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon3.png; sourceTree = "<group>"; };
 		8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon4spotlight.png; sourceTree = "<group>"; };
@@ -463,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */,
+				8E05062D2820879D0059DACB /* MiniQTc in Frameworks */,
 				8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */,
 				8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */,
 				8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */,
@@ -618,7 +618,6 @@
 				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
 				8E8FAAE22817297600789746 /* Patient.swift */,
 				8E8FAAE62817806000789746 /* Drug.swift */,
-				8EB36C31281F8989006D8DF2 /* QTc.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -960,6 +959,9 @@
 			dependencies = (
 			);
 			name = "EP Mobile";
+			packageProductDependencies = (
+				8E05062C2820879D0059DACB /* MiniQTc */,
+			);
 			productName = "EP Mobile";
 			productReference = 8EC19C27159FE0FA00975E2B /* EP Mobile.app */;
 			productType = "com.apple.product-type.application";
@@ -1011,6 +1013,9 @@
 				Base,
 			);
 			mainGroup = 8EC19C1C159FE0FA00975E2B;
+			packageReferences = (
+				8E05062B2820879D0059DACB /* XCRemoteSwiftPackageReference "MiniQTc" */,
+			);
 			productRefGroup = 8EC19C28159FE0FA00975E2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1111,7 +1116,6 @@
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
 				8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
-				8EB36C32281F8989006D8DF2 /* QTc.swift in Sources */,
 				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
@@ -1365,7 +1369,10 @@
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 3.20.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1390,7 +1397,10 @@
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 3.20.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1418,7 +1428,11 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1449,7 +1463,11 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1494,6 +1512,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E05062B2820879D0059DACB /* XCRemoteSwiftPackageReference "MiniQTc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mannd/MiniQTc";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E05062C2820879D0059DACB /* MiniQTc */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E05062B2820879D0059DACB /* XCRemoteSwiftPackageReference "MiniQTc" */;
+			productName = MiniQTc;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EC19C1E159FE0FA00975E2B /* Project object */;
 }
