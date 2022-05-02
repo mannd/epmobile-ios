@@ -10,7 +10,6 @@
 #import "EPSQTcCalculatorViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSWarfarinCalculatorViewController.h"
-#import "EPSDrugDoseCalculatorViewController.h"
 #import "EPSRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSChadsRiskScore.h"
@@ -64,13 +63,6 @@
     XCTAssertTrue(round(1.2) == 1);
     XCTAssertTrue(round(1.6) == 2);
     XCTAssertTrue(round(1.5) == 2);
-}
-
-- (void)testCreatinineConversion {
-    EPSDrugDoseCalculatorViewController *vc = [[EPSDrugDoseCalculatorViewController alloc] init];
-    XCTAssertEqualWithAccuracy([vc creatinineFromMicroMolUnits:150.0], 1.696, 0.01);
-    XCTAssertEqualWithAccuracy([vc creatinineFromMicroMolUnits:87.5], 0.98981, 0.01);
-
 }
 
 - (void)testRiskFactor {

@@ -33,4 +33,16 @@ class IntervalRateConversionTests: XCTestCase {
         XCTAssertNil(result)
     }
 
+    func testConvertDoubleValue() {
+        let result = IntervalRateConversion.convert(value: 387.123)
+        XCTAssertEqual(result, 154.9894, accuracy: 0.001)
+        let inverseResult = IntervalRateConversion.convert(value: 154.9894)
+        XCTAssertEqual(inverseResult, 387.123, accuracy: 0.001)
+    }
+
+    func testConvertMsecsToSecs() {
+        XCTAssertEqual(IntervalRateConversion.msecToSecs(1234.56), 1.23456, accuracy: 0.001)
+        XCTAssertEqual(IntervalRateConversion.secsToMsec(1.23456), 1234.56, accuracy: 0.001)
+    }
+
 }

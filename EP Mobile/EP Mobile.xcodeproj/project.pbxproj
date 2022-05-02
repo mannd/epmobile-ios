@@ -120,6 +120,8 @@
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
 		8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
 		8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */; };
+		8EB36C32281F8989006D8DF2 /* QTc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C31281F8989006D8DF2 /* QTc.swift */; };
+		8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C33281F93D8006D8DF2 /* QTcTests.swift */; };
 		8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FB17EFA533006FE65F /* epmobile_icon3.png */; };
 		8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */; };
 		8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */; };
@@ -372,6 +374,8 @@
 		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
 		8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskViewController.m; sourceTree = "<group>"; };
 		8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDoseCalculator.swift; sourceTree = "<group>"; };
+		8EB36C31281F8989006D8DF2 /* QTc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTc.swift; sourceTree = "<group>"; };
+		8EB36C33281F93D8006D8DF2 /* QTcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcTests.swift; sourceTree = "<group>"; };
 		8EB418FB17EFA533006FE65F /* epmobile_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon3.png; sourceTree = "<group>"; };
 		8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon4spotlight.png; sourceTree = "<group>"; };
 		8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon5settings.png; sourceTree = "<group>"; };
@@ -614,6 +618,7 @@
 				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
 				8E8FAAE22817297600789746 /* Patient.swift */,
 				8E8FAAE62817806000789746 /* Drug.swift */,
+				8EB36C31281F8989006D8DF2 /* QTc.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -925,6 +930,7 @@
 				8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */,
 				8E8FAAE428172D0800789746 /* PatientTests.swift */,
 				8E8FAAE828178EF200789746 /* DrugTests.swift */,
+				8EB36C33281F93D8006D8DF2 /* QTcTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1105,6 +1111,7 @@
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
 				8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
+				8EB36C32281F8989006D8DF2 /* QTc.swift in Sources */,
 				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
@@ -1203,6 +1210,7 @@
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
+				8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */,
 				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
