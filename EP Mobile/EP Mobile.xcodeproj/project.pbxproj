@@ -24,6 +24,9 @@
 		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E02998817EE07BC00A7FC6F /* Images.xcassets */; };
 		8E05062D2820879D0059DACB /* MiniQTc in Frameworks */ = {isa = PBXBuildFile; productRef = 8E05062C2820879D0059DACB /* MiniQTc */; };
+		8E05062F2820926D0059DACB /* QTcCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05062E2820926D0059DACB /* QTcCalculator.swift */; };
+		8E050631282099660059DACB /* QTcCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E050630282099660059DACB /* QTcCalculatorController.swift */; };
+		8E0506332820B6CD0059DACB /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0506322820B6CD0059DACB /* ErrorMessages.swift */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
 		8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */; };
 		8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E06011A15DB39B100BB7550 /* lbbbicon.png */; };
@@ -223,6 +226,9 @@
 		8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSTabBarViewController.h; sourceTree = "<group>"; };
 		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E02998817EE07BC00A7FC6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8E05062E2820926D0059DACB /* QTcCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculator.swift; sourceTree = "<group>"; };
+		8E050630282099660059DACB /* QTcCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorController.swift; sourceTree = "<group>"; };
+		8E0506322820B6CD0059DACB /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAVAnnulusViewController.h; sourceTree = "<group>"; };
 		8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAVAnnulusViewController.m; sourceTree = "<group>"; };
 		8E0600E115D32BBF00BB7550 /* EPSLVHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLVHTableViewController.h; sourceTree = "<group>"; };
@@ -593,6 +599,7 @@
 				8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
+				8E05062E2820926D0059DACB /* QTcCalculator.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -630,6 +637,7 @@
 				8EB79F64230394C100CBB056 /* LQTTableViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
 				8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */,
+				8E050630282099660059DACB /* QTcCalculatorController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -659,6 +667,7 @@
 			isa = PBXGroup;
 			children = (
 				8E59E968281A4071003C485F /* Keys.swift */,
+				8E0506322820B6CD0059DACB /* ErrorMessages.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1152,6 +1161,7 @@
 				8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */,
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
 				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
+				8E05062F2820926D0059DACB /* QTcCalculator.swift in Sources */,
 				8E59E969281A4071003C485F /* Keys.swift in Sources */,
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
@@ -1193,6 +1203,7 @@
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
+				8E050631282099660059DACB /* QTcCalculatorController.swift in Sources */,
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,
 				8E00E96217BB1E8A0007A146 /* EPSLQTSTableViewController.m in Sources */,
 				8E00E96617BC46EF0007A146 /* EPSNavigationController.m in Sources */,
@@ -1200,6 +1211,7 @@
 				8E0C13C72262CCEB000892CC /* ArvcRiskModel.swift in Sources */,
 				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
+				8E0506332820B6CD0059DACB /* ErrorMessages.swift in Sources */,
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
 				8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,

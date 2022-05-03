@@ -22,6 +22,7 @@
 #define DATE_CALCULATOR_ROW 1
 #define DRUG_CALCULATORS_ROW 2
 #define INTERVAL_RATE_ROW 3
+#define QTC_CALCULATOR_ROW 4
 
 @interface EPSMainTableViewController ()
 
@@ -98,6 +99,9 @@
         }
         if (indexPath.row == DATE_CALCULATOR_ROW) {
             [DateCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == QTC_CALCULATOR_ROW) {
+            [QTcCalculatorController showWithVc:self];
         }
     }
 

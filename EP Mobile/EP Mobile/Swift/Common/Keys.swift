@@ -20,4 +20,15 @@ struct Keys {
     static let lb = "lb"
     static let mgdL = "mg"
     static let mmolL = "micromol"
+
+    static let defaultQtcFormula = "defaultqtcformula"
+    static let maximumQtc = "maximumqtc"
+    static let intervalOrRate = "intervalorrate"
+    static let bazett = "Bazett"
+    static let fridericia = "Fridericia"
+    static let framingham = "Framingham"
+    static let hodges = "Hodges"
+    static let interval = "interval"
+    static let rate = "rate"
+    static let qtc440 = "440"
 }
