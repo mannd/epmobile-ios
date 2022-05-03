@@ -13,7 +13,7 @@ final class QTcCalculatorController: NSObject {
 
     @objc
     static func show(vc: UIViewController) {
-        let qtcCalculator = QTcCalculator()
+        let qtcCalculator = QTcCalculatorView()
         let hostingVC = UIHostingController(rootView: qtcCalculator)
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }

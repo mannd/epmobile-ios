@@ -30,4 +30,10 @@ class QTcTests: XCTestCase {
         XCTAssertEqual(result, 400, accuracy: 0.0001)
     }
 
+    func testFormattedQTcResult() {
+        let qtcCalculator = QTcCalculatorView()
+        XCTAssertEqual(qtcCalculator.formattedQTcResult(rawResult: 111.50), "QTc = 112 msec")
+        XCTAssertEqual(qtcCalculator.formattedQTcResult(rawResult: 111.49), "QTc = 111 msec")
+    }
+
 }

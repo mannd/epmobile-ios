@@ -24,7 +24,7 @@
 		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E02998817EE07BC00A7FC6F /* Images.xcassets */; };
 		8E05062D2820879D0059DACB /* MiniQTc in Frameworks */ = {isa = PBXBuildFile; productRef = 8E05062C2820879D0059DACB /* MiniQTc */; };
-		8E05062F2820926D0059DACB /* QTcCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05062E2820926D0059DACB /* QTcCalculator.swift */; };
+		8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05062E2820926D0059DACB /* QTcCalculatorView.swift */; };
 		8E050631282099660059DACB /* QTcCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E050630282099660059DACB /* QTcCalculatorController.swift */; };
 		8E0506332820B6CD0059DACB /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0506322820B6CD0059DACB /* ErrorMessages.swift */; };
 		8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0600DD15D1FD6400BB7550 /* EPSAVAnnulusViewController.m */; };
@@ -226,7 +226,7 @@
 		8E00E96C17BC55EC0007A146 /* EPSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSTabBarViewController.h; sourceTree = "<group>"; };
 		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E02998817EE07BC00A7FC6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8E05062E2820926D0059DACB /* QTcCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculator.swift; sourceTree = "<group>"; };
+		8E05062E2820926D0059DACB /* QTcCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorView.swift; sourceTree = "<group>"; };
 		8E050630282099660059DACB /* QTcCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorController.swift; sourceTree = "<group>"; };
 		8E0506322820B6CD0059DACB /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		8E0600DC15D1FD6400BB7550 /* EPSAVAnnulusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAVAnnulusViewController.h; sourceTree = "<group>"; };
@@ -599,7 +599,7 @@
 				8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
-				8E05062E2820926D0059DACB /* QTcCalculator.swift */,
+				8E05062E2820926D0059DACB /* QTcCalculatorView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -1161,7 +1161,7 @@
 				8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */,
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
 				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
-				8E05062F2820926D0059DACB /* QTcCalculator.swift in Sources */,
+				8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */,
 				8E59E969281A4071003C485F /* Keys.swift in Sources */,
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
