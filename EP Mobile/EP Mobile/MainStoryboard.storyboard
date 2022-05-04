@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-cy-u4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8721" y="-1939"/>
+            <point key="canvasLocation" x="-8501" y="-1795"/>
         </scene>
         <!--Syncope-->
         <scene sceneID="v1d-vr-UE4">
@@ -960,9 +960,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="isk-zH-Tuy" kind="show" id="yHw-DJ-Wct"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MZM-IJ-XGD" style="IBUITableViewCellStyleDefault" id="ANI-zK-rg6">
                                         <rect key="frame" x="0.0" y="269.5" width="414" height="44"/>
@@ -2122,7 +2119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wus-K6-qU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6551" y="-2748"/>
+            <point key="canvasLocation" x="-7094" y="-2988"/>
         </scene>
         <!--Atrial Tach Location-->
         <scene sceneID="AL5-ZZ-YO7">
@@ -2950,151 +2947,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-XR-pkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7841" y="-2718"/>
-        </scene>
-        <!--QTc Calculator-->
-        <scene sceneID="kiq-6q-8Xe">
-            <objects>
-                <viewController id="isk-zH-Tuy" customClass="EPSQTcCalculatorViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FZD-Ky-F1q"/>
-                        <viewControllerLayoutGuide type="bottom" id="yiE-xJ-H9r"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Okz-dr-M1J" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-vL-WEo">
-                                <rect key="frame" x="247" y="108.5" width="135" height="30"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="G2d-9F-6Ux"/>
-                                    <constraint firstAttribute="width" constant="135" id="tdt-dj-d9a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="textFieldDoneEditing:" destination="isk-zH-Tuy" eventType="editingDidEndOnExit" id="KTF-ya-CuE"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QT Interval (msec)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tRG-dW-1ao">
-                                <rect key="frame" x="32" y="159" width="140.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fFd-Ms-mnW">
-                                <rect key="frame" x="32" y="108" width="140" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="fSH-3g-9vh"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Rate"/>
-                                    <segment title="RR"/>
-                                </segments>
-                                <connections>
-                                    <action selector="toggleInputType:" destination="isk-zH-Tuy" eventType="valueChanged" id="KyJ-Ju-6i9"/>
-                                </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wE-CI-ZhZ">
-                                <rect key="frame" x="32" y="187.5" width="138" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="138" id="NlH-u1-QMG"/>
-                                </constraints>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculateButtonPressed:" destination="isk-zH-Tuy" eventType="touchUpInside" id="uJZ-aI-o5C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-63-tYu">
-                                <rect key="frame" x="263" y="187.5" width="119" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="119" id="kQY-ln-euE"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearButtonPressed:" destination="isk-zH-Tuy" eventType="touchUpInside" id="xPc-Xm-IYe"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="h8J-Bz-HiA">
-                                <rect key="frame" x="32" y="225.5" width="350" height="36"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="HBU-rr-MIk"/>
-                                    <constraint firstAttribute="height" constant="36" id="jzo-80-2pB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtU-vr-R3h">
-                                <rect key="frame" x="47" y="269.5" width="320" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="isk-zH-Tuy" id="tCQ-c9-ROB"/>
-                                    <outlet property="delegate" destination="isk-zH-Tuy" id="Jb6-Q5-aFp"/>
-                                </connections>
-                            </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QT Interval (msec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-4W-sJW">
-                                <rect key="frame" x="247" y="154.5" width="135" height="30"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="A4R-73-RMx"/>
-                                    <constraint firstAttribute="height" constant="30" id="mwc-E5-eeK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="textFieldDoneEditing:" destination="isk-zH-Tuy" eventType="editingDidEndOnExit" id="12R-fa-UwB"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="fFd-Ms-mnW" firstAttribute="top" secondItem="FZD-Ky-F1q" secondAttribute="bottom" constant="20" id="2un-Wk-tF4">
-                                <variation key="heightClass=compact" constant="8" symbolic="YES"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="wtU-vr-R3h" secondAttribute="centerX" id="4Ik-Bb-R3K"/>
-                            <constraint firstItem="4wE-CI-ZhZ" firstAttribute="leading" secondItem="tRG-dW-1ao" secondAttribute="leading" id="7Xe-Jo-PvN"/>
-                            <constraint firstItem="h8J-Bz-HiA" firstAttribute="leading" secondItem="Okz-dr-M1J" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="GH5-XC-FG8"/>
-                            <constraint firstItem="h8J-Bz-HiA" firstAttribute="top" secondItem="hEJ-63-tYu" secondAttribute="bottom" constant="8" symbolic="YES" id="IXP-3d-TZW">
-                                <variation key="heightClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="G3r-vL-WEo" firstAttribute="trailing" secondItem="fFm-4W-sJW" secondAttribute="trailing" id="JRN-8e-Ccl"/>
-                            <constraint firstItem="4wE-CI-ZhZ" firstAttribute="centerY" secondItem="hEJ-63-tYu" secondAttribute="centerY" id="ME5-UT-i2u"/>
-                            <constraint firstItem="4wE-CI-ZhZ" firstAttribute="leading" secondItem="fFd-Ms-mnW" secondAttribute="leading" id="Vmz-OP-Ppd"/>
-                            <constraint firstItem="G3r-vL-WEo" firstAttribute="trailing" secondItem="h8J-Bz-HiA" secondAttribute="trailing" id="bQF-po-veY"/>
-                            <constraint firstItem="tRG-dW-1ao" firstAttribute="top" secondItem="fFd-Ms-mnW" secondAttribute="bottom" constant="20" id="bjK-DA-YUw">
-                                <variation key="heightClass=compact" constant="8" symbolic="YES"/>
-                            </constraint>
-                            <constraint firstItem="G3r-vL-WEo" firstAttribute="trailing" secondItem="hEJ-63-tYu" secondAttribute="trailing" id="fOz-cS-9O0"/>
-                            <constraint firstAttribute="trailing" secondItem="h8J-Bz-HiA" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="isi-VM-mPE"/>
-                            <constraint firstItem="4wE-CI-ZhZ" firstAttribute="leading" secondItem="h8J-Bz-HiA" secondAttribute="leading" id="lwv-nd-1pc"/>
-                            <constraint firstItem="4wE-CI-ZhZ" firstAttribute="top" secondItem="tRG-dW-1ao" secondAttribute="bottom" constant="8" symbolic="YES" id="rXO-JZ-VTq"/>
-                            <constraint firstItem="fFm-4W-sJW" firstAttribute="centerY" secondItem="tRG-dW-1ao" secondAttribute="centerY" id="shO-jt-32d"/>
-                            <constraint firstItem="G3r-vL-WEo" firstAttribute="centerY" secondItem="fFd-Ms-mnW" secondAttribute="centerY" id="t5m-xt-UYz"/>
-                            <constraint firstAttribute="centerX" secondItem="h8J-Bz-HiA" secondAttribute="centerX" id="tgf-ib-N29"/>
-                            <constraint firstItem="wtU-vr-R3h" firstAttribute="top" secondItem="h8J-Bz-HiA" secondAttribute="bottom" constant="8" symbolic="YES" id="tvH-YB-CTy">
-                                <variation key="heightClass=compact" constant="0.0"/>
-                            </constraint>
-                        </constraints>
-                        <connections>
-                            <action selector="backgroundTap:" destination="isk-zH-Tuy" eventType="touchDown" id="m8H-oj-wex"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" title="QTc Calculator" id="3Of-fk-uZY"/>
-                    <connections>
-                        <outlet property="formulaPicker" destination="wtU-vr-R3h" id="L7d-7L-83Q"/>
-                        <outlet property="inputField" destination="G3r-vL-WEo" id="aP1-Ai-Bp0"/>
-                        <outlet property="intervalRateSegmentedControl" destination="fFd-Ms-mnW" id="plY-Om-PSA"/>
-                        <outlet property="qtField" destination="fFm-4W-sJW" id="c7o-Om-QYK"/>
-                        <outlet property="resultLabel" destination="h8J-Bz-HiA" id="HhN-lg-H7K"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgu-il-7Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5706" y="-2762"/>
+            <point key="canvasLocation" x="-8117" y="-2750"/>
         </scene>
         <!--Title-->
         <scene sceneID="kti-NI-1xN">
@@ -3532,7 +3385,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="I7k-dt-UVf"/>
-        <segue reference="Ldo-Fs-y6z"/>
+        <segue reference="9Dj-9f-rbx"/>
         <segue reference="tuo-Ni-Xiv"/>
         <segue reference="hMb-ve-5a8"/>
     </inferredMetricsTieBreakers>

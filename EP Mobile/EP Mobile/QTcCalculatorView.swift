@@ -10,10 +10,10 @@ import SwiftUI
 import MiniQTc
 
 struct QTcCalculatorView: View {
-    @State private var rr: Int = 0
+    @State private var intervalRate: Int = 0
     @State private var qt: Int = 0
     @State private var formula: Formula = .qtcBzt
-    @State private var intervalRate: IntervalRateType = .interval
+    @State private var intervalRateType: IntervalRateType = .interval
     @State private var result: String = ""
     @State private var maximumQTc: Double = 440.0
     @State private var flagResult = false
@@ -41,9 +41,9 @@ struct QTcCalculatorView: View {
                 Form {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {
-                            TextField(intervalRateLabel(), value: $rr, formatter: Self.numberFormatter)
+                            TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
                                 .focused($textFieldIsFocused)
-                            Picker(selection: $intervalRate, label: Text("Interval/Rate")) {
+                            Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
                                 Text("Interval").tag(IntervalRateType.interval)
                                 Text("Heart rate").tag(IntervalRateType.rate)
                             }
@@ -83,9 +83,9 @@ struct QTcCalculatorView: View {
                     .padding()
                 }
             }
-            .onChange(of: rr, perform: { _ in  clearResult() })
-            .onChange(of: qt, perform: { _ in  clearResult() })
             .onChange(of: intervalRate, perform: { _ in  clearResult() })
+            .onChange(of: qt, perform: { _ in  clearResult() })
+            .onChange(of: intervalRateType, perform: { _ in  clearResult() })
             .onChange(of: formula, perform: { _ in  clearResult() })
             .navigationBarTitle(Text("QTc Calculator"), displayMode: .inline)
         }
@@ -104,38 +104,24 @@ struct QTcCalculatorView: View {
                 maximumQTc = maxQTc
             }
             if defaultIntervalOrRate == Keys.interval {
-                intervalRate = .interval
+                intervalRateType = .interval
             } else if defaultIntervalOrRate == Keys.rate {
-                intervalRate = .rate
+                intervalRateType = .rate
             }
         }
     }
 
     func calculate() {
         textFieldIsFocused = false
-        guard qt > 0 && rr > 0 else {
-            result = ErrorMessages.invalidEntry
-            return
-        }
-        let calculator = QTc.qtcCalculator(formula: formula)
-        let qtMeasurement = QtMeasurement(qt: Double(qt), intervalRate: Double(rr), units: .msec, intervalRateType: intervalRate )
-        do {
-            let rawResult = try calculator.calculate(qtMeasurement: qtMeasurement)
-            flagResult = rawResult > maximumQTc
-            result = formattedQTcResult(rawResult: rawResult)
-        } catch {
-            // all errors handled as invalid entry
-            flagResult = false
-            result = ErrorMessages.invalidEntry
-        }
-    }
-
-    func formattedQTcResult(rawResult: Double) -> String {
-        return "QTc = \(String(Int(round(rawResult)))) msec"
+        let qtMeasurement = QtMeasurement(qt: Double(qt), intervalRate: Double(intervalRate), units: .msec, intervalRateType: intervalRateType )
+        let calculatorViewModel = QTcCalculatorViewModel(qtMeasurement: qtMeasurement, formula: formula, maximumQTc: maximumQTc)
+       (result, flagResult) = calculatorViewModel.calculate()
     }
 
     func clear() {
         textFieldIsFocused = false
+        qt = 0
+        intervalRate = 0
         clearResult()
     }
 
@@ -145,7 +131,7 @@ struct QTcCalculatorView: View {
     }
 
     func intervalRateLabel() -> String {
-        switch intervalRate {
+        switch intervalRateType {
         case .rate:
             return "Heart rate (bpm)"
         case .interval:

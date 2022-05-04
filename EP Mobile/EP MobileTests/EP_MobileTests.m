@@ -7,7 +7,6 @@
 //
 
 #import "EP_MobileTests.h"
-#import "EPSQTcCalculatorViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
 #import "EPSWarfarinCalculatorViewController.h"
 #import "EPSRiskScore.h"
