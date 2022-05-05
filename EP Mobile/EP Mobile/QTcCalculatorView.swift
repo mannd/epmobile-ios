@@ -76,11 +76,7 @@ struct QTcCalculatorView: View {
                             clear()
                         }
                     }
-                    .frame(width: 140, height: 40)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(15)
-                    .padding()
+                    .roundedButton()
                 }
             }
             .onChange(of: intervalRate, perform: { _ in  clearResult() })

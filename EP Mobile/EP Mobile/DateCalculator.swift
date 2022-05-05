@@ -135,11 +135,7 @@ private struct Info: View {
                 Button("Done") {
                     dismiss()
                 }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
+                .roundedButton()
             }
             .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
         }

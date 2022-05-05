@@ -79,11 +79,7 @@ struct IntervalRateCalculator: View {
                             clear()
                         }
                     }
-                    .frame(width: 140, height: 40)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(15)
-                    .padding()
+                    .roundedButton()
                 }
             }
             .navigationBarTitle(Text(conversionType.description), displayMode: .inline)

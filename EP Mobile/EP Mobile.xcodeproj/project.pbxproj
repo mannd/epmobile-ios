@@ -49,6 +49,8 @@
 		8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */; };
 		8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */; };
 		8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */; };
+		8E2394912824400800B6E8B7 /* QTcIvcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2394902824400800B6E8B7 /* QTcIvcd.swift */; };
+		8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23949328244D1800B6E8B7 /* View+roundedButton.swift */; };
 		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
 		8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */; };
 		8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */; };
@@ -97,7 +99,6 @@
 		8E71C2C41F775F0700D198BD /* Warfarin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C31F775F0700D198BD /* Warfarin.storyboard */; };
 		8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C51F7760A100D198BD /* VT.storyboard */; };
 		8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C71F77634A00D198BD /* WCT.storyboard */; };
-		8E71C2CA1F7764C900D198BD /* DrugCalculators.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */; };
 		8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CB1F7766A200D198BD /* WPW.storyboard */; };
 		8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CD1F77686500D198BD /* LVH.storyboard */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
@@ -264,6 +265,8 @@
 		8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateConversionTests.swift; sourceTree = "<group>"; };
 		8E1956B1243B762E000D80C0 /* EPSQTProlongationRisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSQTProlongationRisk.h; sourceTree = "<group>"; };
 		8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSQTProlongationRisk.m; sourceTree = "<group>"; };
+		8E2394902824400800B6E8B7 /* QTcIvcd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcIvcd.swift; sourceTree = "<group>"; };
+		8E23949328244D1800B6E8B7 /* View+roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+roundedButton.swift"; sourceTree = "<group>"; };
 		8E24EDB9203F375300C49B66 /* EPSCMSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSModel.h; sourceTree = "<group>"; };
 		8E24EDBA203F375300C49B66 /* EPSCMSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSModel.m; sourceTree = "<group>"; };
 		8E24EDBC203F3D2100C49B66 /* EPSCMSViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSViewModel.h; sourceTree = "<group>"; };
@@ -337,7 +340,6 @@
 		8E71C2C31F775F0700D198BD /* Warfarin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Warfarin.storyboard; sourceTree = "<group>"; };
 		8E71C2C51F7760A100D198BD /* VT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VT.storyboard; sourceTree = "<group>"; };
 		8E71C2C71F77634A00D198BD /* WCT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WCT.storyboard; sourceTree = "<group>"; };
-		8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrugCalculators.storyboard; sourceTree = "<group>"; };
 		8E71C2CB1F7766A200D198BD /* WPW.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WPW.storyboard; sourceTree = "<group>"; };
 		8E71C2CD1F77686500D198BD /* LVH.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LVH.storyboard; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 		8E18B36D281503510043FD00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8E23949228244CE400B6E8B7 /* Extensions */,
 				8E28243F2821B94200DD9571 /* ViewModels */,
 				8E59E967281A4060003C485F /* Common */,
 				8E18B372281504F90043FD00 /* Views */,
@@ -625,6 +628,7 @@
 				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
 				8E8FAAE22817297600789746 /* Patient.swift */,
 				8E8FAAE62817806000789746 /* Drug.swift */,
+				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -648,6 +652,14 @@
 				8EB79F662303986900CBB056 /* LQTTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8E23949228244CE400B6E8B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E23949328244D1800B6E8B7 /* View+roundedButton.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8E24EDB8203F36DE00C49B66 /* Models */ = {
@@ -686,7 +698,6 @@
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
 				8E71C2CD1F77686500D198BD /* LVH.storyboard */,
 				8E71C2CB1F7766A200D198BD /* WPW.storyboard */,
-				8E71C2C91F7764C900D198BD /* DrugCalculators.storyboard */,
 				8E71C2C71F77634A00D198BD /* WCT.storyboard */,
 				8E71C2C51F7760A100D198BD /* VT.storyboard */,
 				8E71C2C31F775F0700D198BD /* Warfarin.storyboard */,
@@ -1085,7 +1096,6 @@
 				8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */,
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
 				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
-				8E71C2CA1F7764C900D198BD /* DrugCalculators.storyboard in Resources */,
 				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
 				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
 				8E71C2B91F77532F00D198BD /* QTcWithIVCD.storyboard in Resources */,
@@ -1205,6 +1215,7 @@
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
 				8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */,
+				8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */,
 				8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
@@ -1216,6 +1227,7 @@
 				8EF29289226AA43C00F15B99 /* ArvcRiskViewController.swift in Sources */,
 				8E0C13C72262CCEB000892CC /* ArvcRiskModel.swift in Sources */,
 				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
+				8E2394912824400800B6E8B7 /* QTcIvcd.swift in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8E0506332820B6CD0059DACB /* ErrorMessages.swift in Sources */,
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
