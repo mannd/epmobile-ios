@@ -6,7 +6,6 @@
 //  Copyright © 2022 EP Studios. All rights reserved.
 //
 
-import Foundation
 import XCTest
 @testable import EP_Mobile
 @testable import MiniQTc

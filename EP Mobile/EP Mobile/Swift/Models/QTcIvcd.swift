@@ -9,49 +9,85 @@
 import MiniQTc
 
 struct QTcIvcd {
-    private static let noQTm = "QTm only defined for LBBB"
-    private static let noQTmc = "QTmc only defined for LBBB"
-    private static let noPreLbbbQTc = "preLBBBQTc only defined for LBBB"
-    private static let qtm_Reference = "Bogossian H et al. New formula for evaluation of the QT interval in patients with left bundle branch block. Heart Rhythm 2004;11:2273-2277."
-    private static let qtRRQrsFormula = "QTrr,qrs = QT - 155 x (60/HR - 1) - 0.93 x (QRS - 139) + k, k = -22 ms for men and -34 ms for women"
-    private static let qtRRQrsReference = "Rautaharju P et al. Assessment of prolonged QT and JT intervals in ventricular conduction defects.  Amer J Cardio 2003;93:1017-1021."
-    private static let qtcReference = "Rautaharju P et al. Circulation. 2009;119:e241-e250."
-    private static let preLbbbQtcFormula = "preLBBBQTc = postLBBBQTc(Bazett) - postLBBBQRS + c, where c = 95 msec in males, 88 msec in females"
-    private static let preLbbbQtcReference = "Yankelson L, Hochstadt A, Sadeh B, et al. New formula for defining “normal” and “prolonged” QT in patients with bundle branch block. Journal of Electrocardiology. 2018;51(3):481-486. doi:10.1016/j.jelectrocard.2017.12.039"
+    var qt: Double
+    var qrs: Double
+    var rr: Double
+    var sex: EP_Mobile.Sex
+    var formula: Formula
 
-    private var qt: Double
-    private var qrs: Double
-    private var hr: Double
-    private var sex: Sex
+    init(qt: Double, qrs: Double, rr: Double, sex: EP_Mobile.Sex, formula: Formula = .qtcBzt) {
+        self.qt = qt
+        self.qrs = qrs
+        self.rr = rr
+        self.sex = sex
+        self.formula = formula
+    }
 
-//+ (NSInteger)qtCorrectedForLBBBFromQTInMSec:(double)qt andQRSInMsec:(double)qrs{
-//    double result = qt - (qrs * 0.485);
-//    return (NSInteger)round(result);
-//}
-//
-//+ (NSInteger)jtFromQTInMsec:(double)qt andQRSInMsec:(double)qrs {
-//    return (NSInteger)round(qt - qrs);
-//
-//}
-//
-//+ (NSInteger)jtCorrectedFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs {
-//    double result = [self qtcFromQtInMsec:qt AndIntervalInMsec:rr UsingFormula:kBazett];
-//    result -= qrs;
-//    return (NSInteger)round(result);
-//}
-//
-//+ (NSInteger)qtCorrectedForIVCDAndSexFromQTInMsec:(double)qt AndHR:(double)hr AndQRS:(double)qrs IsMale:(BOOL)isMale {
-//    double k = isMale ? -22 : - 34;
-//    return (NSInteger)round(qt - 155 * (60/hr -1) - 0.93 * (qrs -139) + k);
-//}
-//
-//+ (NSInteger)prelbbbqtcFromQTInMsec:(double)qt andIntervalInMsec:(double)rr withQRS:(double)qrs isMale:(BOOL)isMale {
-//    double k = isMale ? 95 : 88;
-//    double qtc = [self qtcFromQtInMsec:qt AndIntervalInMsec:rr UsingFormula:kBazett];
-//    return (NSInteger)round(qtc - qrs + k);
-//}
-//
-//+ (NSInteger)roundValueInSecs:(double)value {
-//    return (NSInteger)round(value * 1000);
-//}
+    init(qt: Double, qrs: Double, intervalRate: Double, intervalRateType: IntervalRateType, sex: EP_Mobile.Sex, formula: Formula = .qtcBzt) {
+        let rr = intervalRateType == .interval ? intervalRate : QTc.bpmToMsec(intervalRate)
+        self.init(qt: qt, qrs: qrs, rr: rr, sex: sex, formula: formula)
+    }
+
+    func qtc() -> Double? {
+        let calculator = QTc.qtcCalculator(formula: formula)
+        guard let result = try? calculator.calculate(qtInMsec: qt, rrInMsec: rr) else {
+            return nil
+        }
+        return result
+    }
+
+    func jt() -> Double {
+        return qt - qrs
+    }
+
+    func jtc() -> Double? {
+        guard var result = qtc() else {
+            return nil
+        }
+        result -= qrs
+        return result
+    }
+
+    func qtCorrectedForLBBB() -> Double {
+        return qt - (qrs * 0.485)
+    }
+
+    func qtCorrectedForIvcdAndSex() -> Double {
+        var k: Double
+        switch sex {
+        case .male:
+           k = -22
+
+        case .female:
+           k = -34
+        }
+        let hr = QTc.msecToBpm(rr)
+        return qt - 155 * (60 / hr - 1) - 0.93 * (qrs - 139) + k
+    }
+
+    func preLbbbQtc() -> Double? {
+        var k: Double
+        switch sex {
+        case .male:
+            k = 95.0
+        case .female:
+            k = 88.0
+        }
+        guard let qtc = qtc() else {
+            return nil
+        }
+        return qtc - qrs + k
+    }
+
+    func qtm() -> Double {
+        return qtCorrectedForLBBB()
+    }
+
+    func qtmc() -> Double? {
+        let calculator = QTc.qtcCalculator(formula: formula)
+        guard let result = try? calculator.calculate(qtInMsec: qtm(), rrInMsec: rr) else {
+            return nil
+        }
+        return result
+    }
 }

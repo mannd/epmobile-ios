@@ -925,9 +925,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="T3D-Cq-qYe" kind="show" id="979-j6-MO8"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="l68-T6-y6G" style="IBUITableViewCellStyleDefault" id="3Ee-hV-RK5">
                                         <rect key="frame" x="0.0" y="181.5" width="414" height="44"/>
@@ -3349,14 +3346,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrJ-x9-I4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8329" y="-1012"/>
-        </scene>
-        <!--UITableViewController-eRb-uZ-GP2-->
-        <scene sceneID="ir0-Ds-D3c">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DrugCalculators" referencedIdentifier="UITableViewController-eRb-uZ-GP2" id="T3D-Cq-qYe" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TN5-bv-Pp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5653" y="-882"/>
         </scene>
         <!--UITableViewController-qaF-mx-6rF-->
         <scene sceneID="5Ue-j2-kO5">
