@@ -63,6 +63,11 @@ class QTcIvcdTests: XCTestCase {
         let qtcIvcdViewModel5 = QTcIvcdViewModel(qt: 300, qrs: 119, intervalRate: 500, intervalRateType: .interval, sex: .male, formula: .qtcBzt, isLBBB: false)
         XCTAssertThrowsError(try qtcIvcdViewModel5.calculate())
 
+        // QRS too long
+        let qtcIvcdViewModel6 = QTcIvcdViewModel(qt: 300, qrs: 301, intervalRate: 500, intervalRateType: .interval, sex: .male, formula: .qtcBzt, isLBBB: false)
+        XCTAssertThrowsError(try qtcIvcdViewModel6.calculate())
+
+
     }
 
 

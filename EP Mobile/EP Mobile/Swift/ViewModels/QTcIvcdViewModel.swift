@@ -12,6 +12,7 @@ import MiniQTc
 enum QTcIvcdError: Error {
     case invalidParameter
     case tooShortQRS
+    case longQRS
 }
 
 struct QTcIvcdViewModel {
@@ -37,6 +38,9 @@ struct QTcIvcdViewModel {
         guard intervalRate > 0 && qt > 0 && qrs > 0 else {
             throw QTcIvcdError.invalidParameter
         }
+        guard qrs < qt else {
+            throw QTcIvcdError.longQRS
+        }
         guard qrs >= 120 else {
             throw QTcIvcdError.tooShortQRS
         }
@@ -46,25 +50,25 @@ struct QTcIvcdViewModel {
         if let qtc = qtcIvcd.qtc() {
             qtcIvcdResult.qtc = format(name: "QTc", value: qtc)
         } else {
-            qtcIvcdResult.qtc = "QTc = " + ErrorMessages.calculationError
+            qtcIvcdResult.qtc = "QTc = " + ErrorMessage.calculationError
         }
         qtcIvcdResult.jt = format(name: "JT", value: qtcIvcd.jt())
         if let jtc = qtcIvcd.jtc() {
             qtcIvcdResult.jtc = format(name: "JTc", value: jtc)
         } else {
-            qtcIvcdResult.qtc = "JTc = " + ErrorMessages.calculationError
+            qtcIvcdResult.qtc = "JTc = " + ErrorMessage.calculationError
         }
         if isLBBB {
             qtcIvcdResult.qtm = format(name: "QTm", value: qtcIvcd.qtm())
             if let qtmc = qtcIvcd.qtmc() {
                 qtcIvcdResult.qtmc = format(name: "QTmc", value: qtmc)
             } else {
-                qtcIvcdResult.qtmc = "QTmc = " + ErrorMessages.calculationError
+                qtcIvcdResult.qtmc = "QTmc = " + ErrorMessage.calculationError
             }
             if let preLbbbQtc = qtcIvcd.preLbbbQtc() {
                 qtcIvcdResult.prelbbbqc = format(name: "preLBBBQTc", value: preLbbbQtc)
             } else {
-                qtcIvcdResult.prelbbbqc = "preLBBBQTc = " + ErrorMessages.calculationError
+                qtcIvcdResult.prelbbbqc = "preLBBBQTc = " + ErrorMessage.calculationError
             }
         } else {
             qtcIvcdResult.qtm = Self.noQTm

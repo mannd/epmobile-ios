@@ -42,13 +42,13 @@ struct QTcCalculatorViewModel {
 
     func calculate() -> (qtc: String, flagResult: Bool) {
         guard let qt = qtMeasurement.qt else {
-            return (ErrorMessages.invalidEntry, false)
+            return (ErrorMessage.invalidEntry, false)
         }
         guard qt > 0 && qtMeasurement.intervalRate > 0 else {
-            return (ErrorMessages.invalidEntry, false)
+            return (ErrorMessage.invalidEntry, false)
         }
         guard !valuesOutOfRange() else {
-            return (ErrorMessages.outOfRange, false)
+            return (ErrorMessage.outOfRange, false)
         }
         let calculator = QTc.qtcCalculator(formula: formula)
         var flagResult: Bool = false
@@ -59,7 +59,7 @@ struct QTcCalculatorViewModel {
         } catch {
             // all errors handled as invalid entry
             flagResult = false
-            return (ErrorMessages.invalidEntry, false)
+            return (ErrorMessage.invalidEntry, false)
         }
     }
 

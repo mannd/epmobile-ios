@@ -23,6 +23,7 @@
 #define DRUG_CALCULATORS_ROW 2
 #define INTERVAL_RATE_ROW 3
 #define QTC_CALCULATOR_ROW 4
+#define QTC_IVCD_CALCULATOR_ROW 5
 
 @interface EPSMainTableViewController ()
 
@@ -102,6 +103,9 @@
         }
         if (indexPath.row == QTC_CALCULATOR_ROW) {
             [QTcCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == QTC_IVCD_CALCULATOR_ROW) {
+            [QTcIvcdCalculatorController showWithVc:self];
         }
     }
 

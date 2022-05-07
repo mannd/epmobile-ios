@@ -37,10 +37,10 @@ class QTcTests: XCTestCase {
     func testQTcCalculatorViewModel() {
         let qtMeasurement1 = QtMeasurement(qt: nil, intervalRate: 100, units: .msec, intervalRateType: .interval)
         let qtcVM1 = QTcCalculatorViewModel(qtMeasurement: qtMeasurement1, formula: .qtcBzt, maximumQTc: 440)
-        XCTAssertEqual(qtcVM1.calculate().qtc, ErrorMessages.invalidEntry)
+        XCTAssertEqual(qtcVM1.calculate().qtc, ErrorMessage.invalidEntry)
         let qtMeasurement2 = QtMeasurement(qt: 0, intervalRate: 100, units: .msec, intervalRateType: .interval)
         let qtcVM2 = QTcCalculatorViewModel(qtMeasurement: qtMeasurement2, formula: .qtcBzt, maximumQTc: 440)
-        XCTAssertEqual(qtcVM2.calculate().qtc, ErrorMessages.invalidEntry)
+        XCTAssertEqual(qtcVM2.calculate().qtc, ErrorMessage.invalidEntry)
         let qtMeasurement3 = QtMeasurement(qt: 400, intervalRate: 600, units: .msec, intervalRateType: .interval)
         let qtcVM3 = QTcCalculatorViewModel(qtMeasurement: qtMeasurement3, formula: .qtcBzt, maximumQTc: 440)
         XCTAssertEqual(qtcVM3.calculate().qtc, "QTc = 516 msec")
