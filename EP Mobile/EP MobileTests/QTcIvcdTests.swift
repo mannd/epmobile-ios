@@ -43,13 +43,13 @@ class QTcIvcdTests: XCTestCase {
         XCTAssertEqual(result.qtm, "QTm = 297 msec")
         XCTAssertEqual(result.qtmc, "QTmc = 317 msec")
         XCTAssertEqual(result.qtrrqrs, "QTrr,qrs = 365 msec")
-        XCTAssertEqual(result.prelbbbqc, "preLBBBQTc = 349 msec")
+        XCTAssertEqual(result.prelbbbqtc, "preLBBBQTc = 349 msec")
 
         let qtcIvcdViewModel1 = QTcIvcdViewModel(qt: 360, qrs: 130, intervalRate: 880, intervalRateType: .interval, sex: .male, formula: .qtcBzt, isLBBB: false)
         let result1 = try! qtcIvcdViewModel1.calculate()
         XCTAssertEqual(result1.qtm, "QTm only defined for LBBB")
         XCTAssertEqual(result1.qtmc, "QTmc only defined for LBBB")
-        XCTAssertEqual(result1.prelbbbqc, "preLBBBQTc only defined for LBBB")
+        XCTAssertEqual(result1.prelbbbqtc, "preLBBBQTc only defined for LBBB")
 
 
         let qtcIvcdViewModel2 = QTcIvcdViewModel(qt: 0, qrs: 150, intervalRate: 500, intervalRateType: .interval, sex: .male, formula: .qtcBzt, isLBBB: false)

@@ -15,11 +15,12 @@ struct QTcIvcdCalculatorView: View {
     @State private var qrs: Int = 0
     @State private var formula: Formula = .qtcBzt
     @State private var intervalRateType: IntervalRateType = .interval
-    @State private var result: String = ""
+    @State private var result: QTcIvcdResult = QTcIvcdResult()
     @State private var isLbbb: Bool = false
     @State private var sex: EP_Mobile.Sex = .male
     @State private var errorMessage = ""
     @State private var showErrorMessage = false
+    @State private var showResults = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultQtcFormula) var defaultQtcFormula: String = Keys.bazett
@@ -41,6 +42,7 @@ struct QTcIvcdCalculatorView: View {
     var body: some View {
         NavigationView {
             VStack {
+                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResult: $result), isActive: $showResults) { EmptyView() }
                 Form {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {
@@ -67,6 +69,12 @@ struct QTcIvcdCalculatorView: View {
                         }
 
                     }
+                    Section(header: Text("Sex")) {
+                        Picker(selection: $sex, label: Text("")) {
+                            Text("Male").tag(EP_Mobile.Sex.male)
+                            Text("Female").tag(EP_Mobile.Sex.female)
+                        }.pickerStyle(.segmented)
+                    }
                     Section(header: Text("QTc Formula")) {
                         Picker(selection: $formula, label: Text(formulaName())) {
                             Text("Bazett").tag(Formula.qtcBzt)
@@ -74,15 +82,6 @@ struct QTcIvcdCalculatorView: View {
                             Text("Framingham").tag(Formula.qtcFrm)
                             Text("Hodges").tag(Formula.qtcHdg)
                         }
-                    }
-                    Section(header: Text("Sex")) {
-                        Picker(selection: $sex, label: Text("")) {
-                            Text("Male").tag(EP_Mobile.Sex.male)
-                            Text("Female").tag(EP_Mobile.Sex.female)
-                        }.pickerStyle(.segmented)
-                    }
-                    Section(header: Text("Result")) {
-                        Text(result)
                     }
                 }
                 HStack {
@@ -97,10 +96,6 @@ struct QTcIvcdCalculatorView: View {
                     .roundedButton()
                 }
             }
-            .onChange(of: intervalRate, perform: { _ in  clearResult() })
-            .onChange(of: qt, perform: { _ in  clearResult() })
-            .onChange(of: intervalRateType, perform: { _ in  clearResult() })
-            .onChange(of: formula, perform: { _ in  clearResult() })
             .navigationBarTitle(Text("QTc IVCD Calculator"), displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -133,7 +128,8 @@ struct QTcIvcdCalculatorView: View {
         showErrorMessage = false
         let qtIvcdViewModel = QTcIvcdViewModel(qt: Double(qt), qrs: Double(qrs), intervalRate: Double(intervalRate), intervalRateType: intervalRateType, sex: sex, formula: formula, isLBBB: isLbbb)
         do {
-        let result = try qtIvcdViewModel.calculate()
+            let result = try qtIvcdViewModel.calculate()
+            showResults = true
         } catch {
             if let error = error as? QTcIvcdError {
                 switch error {
@@ -157,11 +153,6 @@ struct QTcIvcdCalculatorView: View {
         qrs = 0
         intervalRate = 0
         isLbbb = false
-        clearResult()
-    }
-
-    func clearResult() {
-        result = ""
     }
 
     func intervalRateLabel() -> String {

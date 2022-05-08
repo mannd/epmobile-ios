@@ -46,12 +46,15 @@ struct QTcIvcdViewModel {
         }
         let qtcIvcd = QTcIvcd(qt: qt, qrs: qrs, intervalRate: intervalRate, intervalRateType: intervalRateType, sex: sex, formula: formula)
         var qtcIvcdResult = QTcIvcdResult()
+        var qtcIvcdResultList = QTcIvcdResultList()
         qtcIvcdResult.qt = format(name: "QT", value: qtcIvcd.qt)
+        qtcIvcdResultList[.qt] = qtcIvcdResult.qt
         if let qtc = qtcIvcd.qtc() {
             qtcIvcdResult.qtc = format(name: "QTc", value: qtc)
         } else {
             qtcIvcdResult.qtc = "QTc = " + ErrorMessage.calculationError
         }
+        qtcIvcdResultList[.qtc] = qtcIvcdResult.qtc
         qtcIvcdResult.jt = format(name: "JT", value: qtcIvcd.jt())
         if let jtc = qtcIvcd.jtc() {
             qtcIvcdResult.jtc = format(name: "JTc", value: jtc)
@@ -66,14 +69,14 @@ struct QTcIvcdViewModel {
                 qtcIvcdResult.qtmc = "QTmc = " + ErrorMessage.calculationError
             }
             if let preLbbbQtc = qtcIvcd.preLbbbQtc() {
-                qtcIvcdResult.prelbbbqc = format(name: "preLBBBQTc", value: preLbbbQtc)
+                qtcIvcdResult.prelbbbqtc = format(name: "preLBBBQTc", value: preLbbbQtc)
             } else {
-                qtcIvcdResult.prelbbbqc = "preLBBBQTc = " + ErrorMessage.calculationError
+                qtcIvcdResult.prelbbbqtc = "preLBBBQTc = " + ErrorMessage.calculationError
             }
         } else {
             qtcIvcdResult.qtm = Self.noQTm
             qtcIvcdResult.qtmc = Self.noQTmc
-            qtcIvcdResult.prelbbbqc = Self.noPreLbbbQTc
+            qtcIvcdResult.prelbbbqtc = Self.noPreLbbbQTc
         }
         qtcIvcdResult.qtrrqrs = format(name: "QTrr,qrs", value:  qtcIvcd.qtCorrectedForIvcdAndSex())
         return qtcIvcdResult
@@ -85,6 +88,19 @@ struct QTcIvcdViewModel {
     
 }
 
+enum QTCIvcdFormula {
+    case qt
+    case qtc
+    case jt
+    case jtc
+    case qtm
+    case qtmc
+    case qtrrqrs
+    case prelbbbqtc
+}
+
+typealias QTcIvcdResultList = Dictionary<QTCIvcdFormula, String>
+
 /// Just a dumb container for the results of the QTc IVCD calculation
 struct QTcIvcdResult {
     var qt: String = ""
@@ -94,7 +110,7 @@ struct QTcIvcdResult {
     var qtm: String = ""
     var qtmc: String = ""
     var qtrrqrs: String = ""
-    var prelbbbqc: String = ""
+    var prelbbbqtc: String = ""
 }
 
 //double rateInterval = [self.rateIntervalField.text doubleValue];
