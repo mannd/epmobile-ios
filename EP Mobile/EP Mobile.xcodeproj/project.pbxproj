@@ -49,6 +49,7 @@
 		8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */; };
 		8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */; };
 		8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */; };
+		8E1B27202827500D003AD237 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8E1B271F2827500D003AD237 /* OrderedCollections */; };
 		8E2394912824400800B6E8B7 /* QTcIvcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2394902824400800B6E8B7 /* QTcIvcd.swift */; };
 		8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23949328244D1800B6E8B7 /* View+roundedButton.swift */; };
 		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
@@ -480,6 +481,7 @@
 			files = (
 				8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */,
 				8E05062D2820879D0059DACB /* MiniQTc in Frameworks */,
+				8E1B27202827500D003AD237 /* OrderedCollections in Frameworks */,
 				8EC19C2C159FE0FA00975E2B /* UIKit.framework in Frameworks */,
 				8EC19C2E159FE0FA00975E2B /* Foundation.framework in Frameworks */,
 				8EC19C30159FE0FA00975E2B /* CoreGraphics.framework in Frameworks */,
@@ -1002,6 +1004,7 @@
 			name = "EP Mobile";
 			packageProductDependencies = (
 				8E05062C2820879D0059DACB /* MiniQTc */,
+				8E1B271F2827500D003AD237 /* OrderedCollections */,
 			);
 			productName = "EP Mobile";
 			productReference = 8EC19C27159FE0FA00975E2B /* EP Mobile.app */;
@@ -1056,6 +1059,7 @@
 			mainGroup = 8EC19C1C159FE0FA00975E2B;
 			packageReferences = (
 				8E05062B2820879D0059DACB /* XCRemoteSwiftPackageReference "MiniQTc" */,
+				8E1B271E2827500D003AD237 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 8EC19C28159FE0FA00975E2B /* Products */;
 			projectDirPath = "";
@@ -1572,6 +1576,14 @@
 				kind = branch;
 			};
 		};
+		8E1B271E2827500D003AD237 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1579,6 +1591,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E05062B2820879D0059DACB /* XCRemoteSwiftPackageReference "MiniQTc" */;
 			productName = MiniQTc;
+		};
+		8E1B271F2827500D003AD237 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E1B271E2827500D003AD237 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -15,7 +15,7 @@ struct QTcIvcdCalculatorView: View {
     @State private var qrs: Int = 0
     @State private var formula: Formula = .qtcBzt
     @State private var intervalRateType: IntervalRateType = .interval
-    @State private var result: QTcIvcdResult = QTcIvcdResult()
+    @State private var result = QTcIvcdResultList()
     @State private var isLbbb: Bool = false
     @State private var sex: EP_Mobile.Sex = .male
     @State private var errorMessage = ""
@@ -42,7 +42,7 @@ struct QTcIvcdCalculatorView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResult: $result), isActive: $showResults) { EmptyView() }
+                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResultList: result), isActive: $showResults) { EmptyView() }
                 Form {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {
@@ -128,7 +128,7 @@ struct QTcIvcdCalculatorView: View {
         showErrorMessage = false
         let qtIvcdViewModel = QTcIvcdViewModel(qt: Double(qt), qrs: Double(qrs), intervalRate: Double(intervalRate), intervalRateType: intervalRateType, sex: sex, formula: formula, isLBBB: isLbbb)
         do {
-            let result = try qtIvcdViewModel.calculate()
+            result = try qtIvcdViewModel.calculate()
             showResults = true
         } catch {
             if let error = error as? QTcIvcdError {

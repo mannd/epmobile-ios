@@ -7,7 +7,22 @@
 //
 
 import Foundation
+import OrderedCollections
 import MiniQTc
+
+enum QTcIvcdFormula {
+    case qt
+    case qtc
+    case jt
+    case jtc
+    case qtm
+    case qtmc
+    case qtrrqrs
+    case prelbbbqtc
+}
+
+typealias QTcIvcdResultList = OrderedDictionary<QTcIvcdFormula, String>
+typealias QTCIvcdResultDetailList = OrderedDictionary<QTcIvcdFormula, String>
 
 enum QTcIvcdError: Error {
     case invalidParameter
@@ -34,7 +49,10 @@ struct QTcIvcdViewModel {
     let formula: Formula
     let isLBBB: Bool
 
-    func calculate() throws -> QTcIvcdResult {
+    static var qtcIvcdResultDetails: QTCIvcdResultDetailList = [.qt: "\n\nUse: The QT varies with heart rate, QRS and sex, and so is usually not a good measure of repolarization independent of these other factors.\n\nFormula: This is the uncorrected QT interval.\n\nNormal values: Not defined."]
+
+
+    func calculate() throws -> QTcIvcdResultList {
         guard intervalRate > 0 && qt > 0 && qrs > 0 else {
             throw QTcIvcdError.invalidParameter
         }
@@ -45,41 +63,38 @@ struct QTcIvcdViewModel {
             throw QTcIvcdError.tooShortQRS
         }
         let qtcIvcd = QTcIvcd(qt: qt, qrs: qrs, intervalRate: intervalRate, intervalRateType: intervalRateType, sex: sex, formula: formula)
-        var qtcIvcdResult = QTcIvcdResult()
         var qtcIvcdResultList = QTcIvcdResultList()
-        qtcIvcdResult.qt = format(name: "QT", value: qtcIvcd.qt)
-        qtcIvcdResultList[.qt] = qtcIvcdResult.qt
+        qtcIvcdResultList[.qt] = format(name: "QT", value: qtcIvcd.qt)
         if let qtc = qtcIvcd.qtc() {
-            qtcIvcdResult.qtc = format(name: "QTc", value: qtc)
+            qtcIvcdResultList[.qtc] = format(name: "QTc", value: qtc)
         } else {
-            qtcIvcdResult.qtc = "QTc = " + ErrorMessage.calculationError
+            qtcIvcdResultList[.qtc] = "QTc = " + ErrorMessage.calculationError
         }
-        qtcIvcdResultList[.qtc] = qtcIvcdResult.qtc
-        qtcIvcdResult.jt = format(name: "JT", value: qtcIvcd.jt())
+        qtcIvcdResultList[.jt] = format(name: "JT", value: qtcIvcd.jt())
         if let jtc = qtcIvcd.jtc() {
-            qtcIvcdResult.jtc = format(name: "JTc", value: jtc)
+            qtcIvcdResultList[.jtc] = format(name: "JTc", value: jtc)
         } else {
-            qtcIvcdResult.qtc = "JTc = " + ErrorMessage.calculationError
+            qtcIvcdResultList[.jtc] = "JTc = " + ErrorMessage.calculationError
         }
         if isLBBB {
-            qtcIvcdResult.qtm = format(name: "QTm", value: qtcIvcd.qtm())
+            qtcIvcdResultList[.qtm] = format(name: "QTm", value: qtcIvcd.qtm())
             if let qtmc = qtcIvcd.qtmc() {
-                qtcIvcdResult.qtmc = format(name: "QTmc", value: qtmc)
+                qtcIvcdResultList[.qtmc] = format(name: "QTmc", value: qtmc)
             } else {
-                qtcIvcdResult.qtmc = "QTmc = " + ErrorMessage.calculationError
+                qtcIvcdResultList[.qtmc] = "QTmc = " + ErrorMessage.calculationError
             }
             if let preLbbbQtc = qtcIvcd.preLbbbQtc() {
-                qtcIvcdResult.prelbbbqtc = format(name: "preLBBBQTc", value: preLbbbQtc)
+                qtcIvcdResultList[.prelbbbqtc] = format(name: "preLBBBQTc", value: preLbbbQtc)
             } else {
-                qtcIvcdResult.prelbbbqtc = "preLBBBQTc = " + ErrorMessage.calculationError
+                qtcIvcdResultList[.prelbbbqtc] = "preLBBBQTc = " + ErrorMessage.calculationError
             }
         } else {
-            qtcIvcdResult.qtm = Self.noQTm
-            qtcIvcdResult.qtmc = Self.noQTmc
-            qtcIvcdResult.prelbbbqtc = Self.noPreLbbbQTc
+            qtcIvcdResultList[.qtm] = Self.noQTm
+            qtcIvcdResultList[.qtmc] = Self.noQTmc
+            qtcIvcdResultList[.prelbbbqtc] = Self.noPreLbbbQTc
         }
-        qtcIvcdResult.qtrrqrs = format(name: "QTrr,qrs", value:  qtcIvcd.qtCorrectedForIvcdAndSex())
-        return qtcIvcdResult
+        qtcIvcdResultList[.qtrrqrs] = format(name: "QTrr,qrs", value:  qtcIvcd.qtCorrectedForIvcdAndSex())
+        return qtcIvcdResultList
     }
 
     private func format(name: String, value: Double) -> String {
@@ -88,61 +103,3 @@ struct QTcIvcdViewModel {
     
 }
 
-enum QTCIvcdFormula {
-    case qt
-    case qtc
-    case jt
-    case jtc
-    case qtm
-    case qtmc
-    case qtrrqrs
-    case prelbbbqtc
-}
-
-typealias QTcIvcdResultList = Dictionary<QTCIvcdFormula, String>
-
-/// Just a dumb container for the results of the QTc IVCD calculation
-struct QTcIvcdResult {
-    var qt: String = ""
-    var qtc: String = ""
-    var jt: String =  ""
-    var jtc: String = ""
-    var qtm: String = ""
-    var qtmc: String = ""
-    var qtrrqrs: String = ""
-    var prelbbbqtc: String = ""
-}
-
-//double rateInterval = [self.rateIntervalField.text doubleValue];
-//    double qt = [self.qtField.text doubleValue];
-//    double qrs = [self.qrsField.text doubleValue];
-//    if (rateInterval <= 0 || qt <= 0 || qrs <= 0 || qrs >= qt) {
-//        [self showError];
-//        return;
-//    }
-//    else if (qrs < 120) {
-//        [self showShortQrsError];
-//        return;
-//    }
-//    double interval;
-//    double rate;
-//    if (inputIsRate) {
-//        interval = 60000.0 / rateInterval;
-//        rate = rateInterval;
-//    }
-//    else {
-//        interval = rateInterval;
-//        rate = 60000.0 / rateInterval;
-//    }
-//    // qtc uses Bazett in this module
-//    self.qt = (NSInteger)round(qt);
-//    self.qtc = [EPSQTMethods qtcFromQtInMsec:qt AndIntervalInMsec:interval UsingFormula:kBazett];
-//    self.jt = [EPSQTMethods jtFromQTInMsec:qt andQRSInMsec:qrs];
-//    self.jtc = [EPSQTMethods jtCorrectedFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs];
-//    if (self.lbbbSwitch.on) {
-//        self.qtm = [EPSQTMethods qtCorrectedForLBBBFromQTInMSec:qt andQRSInMsec:qrs];
-//        self.qtmc = [EPSQTMethods qtcFromQtInMsec:self.qtm AndIntervalInMsec:interval UsingFormula:kBazett];
-//    }
-//    self.qtrrqrs = [EPSQTMethods qtCorrectedForIVCDAndSexFromQTInMsec:qt AndHR:rate AndQRS:qrs IsMale:[self isMale]];
-//    self.prelbbbqtc = [EPSQTMethods prelbbbqtcFromQTInMsec:qt andIntervalInMsec:interval withQRS:qrs isMale:[self isMale]];
-//    [self performSegueWithIdentifier:@"QTcIVCDResultsSegue" sender:nil];

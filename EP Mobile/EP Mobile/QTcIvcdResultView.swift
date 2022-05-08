@@ -9,23 +9,28 @@
 import SwiftUI
 
 struct QTcIvcdResultView: View {
-    @Binding var qtcIvcdResult: QTcIvcdResult
+    var qtcIvcdResultList: QTcIvcdResultList
+    let test = "test"
     
     var body: some View {
         NavigationView {
             List {
-                    HStack {
-                        Text(qtcIvcdResult.qt)
-
+                ForEach(qtcIvcdResultList.keys, id: \.self) { key in
+                    if let value: String = qtcIvcdResultList[key], let detail = QTcIvcdViewModel.qtcIvcdResultDetails[key] {
+                        NavigationLink(destination: Text(value) + Text(detail)) {
+                            Text(value)
+                        }
                     }
+                }
             }
+            .navigationBarTitle("QT IVCD Results", displayMode: .inline )
         }
     }
 }
 
 struct QTcIvcdResult_Previews: PreviewProvider {
-    static let qtcIvcdResult: QTcIvcdResult = QTcIvcdResult(qt: "QT", qtc: "QTc", jt: "JT", jtc: "JTc", qtm: "QTm", qtmc: "QTmc", qtrrqrs: "QTrr,qrs", prelbbbqtc: "preLBBBQTc")
+    static let qtcIvcdResultList: QTcIvcdResultList = [.qt: "QT = 440 msec", .qtc: "QTc = 540 msec"]
     static var previews: some View {
-        QTcIvcdResultView(qtcIvcdResult: .constant(qtcIvcdResult))
+        QTcIvcdResultView(qtcIvcdResultList: qtcIvcdResultList)
     }
 }
