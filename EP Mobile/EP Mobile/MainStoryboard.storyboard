@@ -973,9 +973,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="kG3-7v-ixe" kind="show" identifier="QTcIVCDSegue" id="IEd-ah-tN1"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Dtp-nb-8RS" style="IBUITableViewCellStyleDefault" id="zJC-n9-ygc">
                                         <rect key="frame" x="0.0" y="313.5" width="414" height="44"/>
@@ -3298,14 +3295,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-AF-fbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4932" y="-957"/>
-        </scene>
-        <!--QTcWithIVCD-->
-        <scene sceneID="O3Z-Qm-Gn4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="QTcWithIVCD" id="kG3-7v-ixe" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D1h-PR-uKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-8249" y="-861"/>
         </scene>
         <!--BrugadaWCTMorphology-->
         <scene sceneID="SzH-io-2gO">

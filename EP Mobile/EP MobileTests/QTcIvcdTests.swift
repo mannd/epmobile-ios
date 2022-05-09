@@ -70,5 +70,47 @@ class QTcIvcdTests: XCTestCase {
 
     }
 
+    // These are the old QTc IVCD calculator objc tests transcribed to Swift.
+    func testCorrectQTForBBB() {
+        let m1 = QTcIvcd(qt: 360, qrs: 144, intervalRate: 800, intervalRateType: .interval, sex: .male)
+        let result1 = m1.qtCorrectedForLBBB()
+        XCTAssertEqual(result1, 290.16, accuracy: 0.01)
+        let m2 = QTcIvcd(qt: 444, qrs: 197, intervalRate: 800, intervalRateType: .interval, sex: .male)
+        let result2 = m2.qtCorrectedForLBBB()
+        XCTAssertEqual(result2, 348.45, accuracy: 0.01)
+        let m3 = QTcIvcd(qt: 400, qrs: 0, intervalRate: 800, intervalRateType: .interval, sex: .male)
+        let result3 = m3.qtCorrectedForLBBB()
+        XCTAssertEqual(result3, 400, accuracy: 0.01)
+    }
 
+    func testCorrectJT() {
+        let m1 = QTcIvcd(qt: 360, qrs: 135, intervalRate: 550, intervalRateType: .interval, sex: .male)
+        let result1 = m1.jtc()!
+        let qtc = m1.qtc()!
+        XCTAssertEqual(result1, qtc - 135.0, accuracy: 0.01)
+    }
+
+    func testJT() {
+        let m1 = QTcIvcd(qt: 398.4, qrs: 99.0, intervalRate: 800, intervalRateType: .interval, sex: .male)
+        let result1 = m1.jt()
+        XCTAssertEqual(result1, 398.4 - 99.0, accuracy: 0.01)
+    }
+
+    func testCorrectQTForBBBandSex() {
+        let m1 = QTcIvcd(qt: 379, qrs: 155, intervalRate: 77, intervalRateType: .rate, sex: .male)
+        let result1 = m1.qtCorrectedForIvcdAndSex()
+        XCTAssertEqual(result1, 376.34, accuracy: 0.01)
+        let m2 = QTcIvcd(qt: 442, qrs: 110, intervalRate: 55, intervalRateType: .rate, sex: .female)
+        let result2 = m2.qtCorrectedForIvcdAndSex()
+        XCTAssertEqual(result2, 420.87, accuracy: 0.01)
+    }
+
+    func testPreLbbbQTc() {
+        let m1 = QTcIvcd(qt: 333, qrs: 166, intervalRate: 789, intervalRateType: .interval, sex: .male)
+        let result1 = m1.preLbbbQtc()!
+        XCTAssertEqual(result1, 303.89, accuracy: 0.01)
+        let m2 = QTcIvcd(qt: 333, qrs: 166, intervalRate: 789, intervalRateType: .interval, sex: .female)
+        let result2 = m2.preLbbbQtc()!
+        XCTAssertEqual(result2, 296.89, accuracy: 0.01)
+    }
 }

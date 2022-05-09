@@ -88,13 +88,9 @@
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
-		8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */; };
 		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
-		8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
-		8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E676B751CA093A60035244E /* EPSQTMethods.m */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
-		8E71C2B91F77532F00D198BD /* QTcWithIVCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */; };
 		8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */; };
 		8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */; };
 		8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */; };
@@ -183,7 +179,6 @@
 		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
 		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
-		8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */; };
 		8EF29289226AA43C00F15B99 /* ArvcRiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */; };
 		8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */; };
 		8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */; };
@@ -332,15 +327,10 @@
 		8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachAlgorithm.h; sourceTree = "<group>"; };
 		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexStepAlgorithmProtocol.h; sourceTree = "<group>"; };
-		8E63D0741CA3241B0053C079 /* EPSQTcIVCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcIVCDViewController.h; sourceTree = "<group>"; };
-		8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDViewController.m; sourceTree = "<group>"; };
 		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		8E676B741CA093A60035244E /* EPSQTMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTMethods.h; sourceTree = "<group>"; };
-		8E676B751CA093A60035244E /* EPSQTMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTMethods.m; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
 		8E71C2B61F77523900D198BD /* VTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VTMorphology.storyboard; sourceTree = "<group>"; };
-		8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QTcWithIVCD.storyboard; sourceTree = "<group>"; };
 		8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQTSSubtypes.storyboard; sourceTree = "<group>"; };
 		8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RWavePeakTime.storyboard; sourceTree = "<group>"; };
 		8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrugadaWCTMorphology.storyboard; sourceTree = "<group>"; };
@@ -462,8 +452,6 @@
 		8EDF8E5B20F2508F0072C409 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014ViewController.h; sourceTree = "<group>"; };
 		8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014ViewController.m; sourceTree = "<group>"; };
-		8EEDA7141CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTcIVCDResultsViewController.h; sourceTree = "<group>"; };
-		8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTcIVCDResultsViewController.m; sourceTree = "<group>"; };
 		8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EP MobileTests-Bridging-Header.h"; path = "EP Mobile/EP MobileTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvcRiskViewController.swift; sourceTree = "<group>"; };
 		8EF902F21F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaRiskScore.h; sourceTree = "<group>"; };
@@ -721,7 +709,6 @@
 				8E71C2BF1F77583300D198BD /* BrugadaWCTMorphology.storyboard */,
 				8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */,
 				8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */,
-				8E71C2B81F77532F00D198BD /* QTcWithIVCD.storyboard */,
 				8E71C2B61F77523900D198BD /* VTMorphology.storyboard */,
 				8E676B6D1CA07F740035244E /* Launch Screen.storyboard */,
 			);
@@ -835,12 +822,6 @@
 				8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */,
 				8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */,
 				8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */,
-				8E676B741CA093A60035244E /* EPSQTMethods.h */,
-				8E676B751CA093A60035244E /* EPSQTMethods.m */,
-				8E63D0741CA3241B0053C079 /* EPSQTcIVCDViewController.h */,
-				8E63D0751CA3241B0053C079 /* EPSQTcIVCDViewController.m */,
-				8EEDA7141CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.h */,
-				8EEDA7151CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m */,
 			);
 			name = Calculators;
 			sourceTree = "<group>";
@@ -1117,7 +1098,6 @@
 				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
 				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
 				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
-				8E71C2B91F77532F00D198BD /* QTcWithIVCD.storyboard in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
@@ -1164,7 +1144,6 @@
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
-				8E63D0761CA3241B0053C079 /* EPSQTcIVCDViewController.m in Sources */,
 				8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */,
 				8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
@@ -1239,7 +1218,6 @@
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
 				8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */,
 				8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */,
-				8E676B761CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
@@ -1254,7 +1232,6 @@
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8E0506332820B6CD0059DACB /* ErrorMessage.swift in Sources */,
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
-				8EEDA7161CA6F26A003EF964 /* EPSQTcIVCDResultsViewController.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,7 +1245,6 @@
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */,
-				8E676B771CA093A60035244E /* EPSQTMethods.m in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
