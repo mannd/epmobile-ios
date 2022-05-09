@@ -139,6 +139,7 @@ private struct Info: View {
             }
             .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
 }

@@ -42,11 +42,12 @@ struct QTcIvcdCalculatorView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResultList: result), isActive: $showResults) { EmptyView() }
+                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResultList: result, lbbb: $isLbbb), isActive: $showResults) { EmptyView() }
                 Form {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {
                             TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
+                                .keyboardType(.numbersAndPunctuation)
                                 .focused($textFieldIsFocused)
                             Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
                                 Text("Interval").tag(IntervalRateType.interval)
@@ -57,10 +58,12 @@ struct QTcIvcdCalculatorView: View {
                     }
                     Section(header: Text("QT interval (msec)")) {
                         TextField("QT interval (msec)", value: $qt, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
                             .focused($textFieldIsFocused)
                     }
                     Section(header: Text("QRS (msec)")) {
                         TextField("QRS interval (msec)", value: $qrs, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
                             .focused($textFieldIsFocused)
                     }
                     Section(header: Text("LBBB")) {

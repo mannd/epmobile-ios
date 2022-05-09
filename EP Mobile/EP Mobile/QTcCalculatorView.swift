@@ -42,6 +42,7 @@ struct QTcCalculatorView: View {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {
                             TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
+                                .keyboardType(.numbersAndPunctuation)
                                 .focused($textFieldIsFocused)
                             Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
                                 Text("Interval").tag(IntervalRateType.interval)
@@ -52,6 +53,7 @@ struct QTcCalculatorView: View {
                     }
                     Section(header: Text("QT interval (msec)")) {
                         TextField("QT interval (msec)", value: $qt, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
                             .focused($textFieldIsFocused)
                     }
                     Section(header: Text("QTc Formula")) {
