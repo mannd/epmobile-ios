@@ -76,8 +76,6 @@
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
 		8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54237D1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m */; };
-		8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */; };
-		8E54A56119F6E37F00EFF001 /* rvapexvsbasepacing.org in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */; };
 		8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */; };
 		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
 		8E59E969281A4071003C485F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59E968281A4071003C485F /* Keys.swift */; };
@@ -150,29 +148,21 @@
 		8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5A159FE11900975E2B /* epmobile_icon.png */; };
 		8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC19C5C159FE11C00975E2B /* epmobile_icon2.png */; };
 		8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC19C7115B2BD8E00975E2B /* EPSDrugDoseTableViewController.m */; };
-		8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A71F78612300F46734 /* brugadadiagnosis.org */; };
 		8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */; };
 		8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1D2AC1F78A36F00F46734 /* EPSSharedMethods.m */; };
 		8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC343E41630A188008938F6 /* EPSCMSViewController.m */; };
 		8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C3241A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m */; };
-		8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3291AA0E302005BDAFD /* edoxaban.org */; };
 		8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32B1AA0E407005BDAFD /* edoxaban.html */; };
 		8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32D1AA8E246005BDAFD /* apixaban.html */; };
-		8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C32E1AA8E246005BDAFD /* apixaban.org */; };
 		8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3311AAA72BE005BDAFD /* dabigatran.html */; };
-		8EC5C3341AAA72BE005BDAFD /* dabigatran.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3321AAA72BE005BDAFD /* dabigatran.org */; };
 		8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3351AAA7718005BDAFD /* rivaroxaban.html */; };
-		8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3361AAA7718005BDAFD /* rivaroxaban.org */; };
 		8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C3391AAA8134005BDAFD /* sotalol.html */; };
-		8EC5C33C1AAA8134005BDAFD /* sotalol.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33A1AAA8134005BDAFD /* sotalol.org */; };
 		8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33D1AAA8997005BDAFD /* dofetilide.html */; };
-		8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5C33E1AAA8997005BDAFD /* dofetilide.org */; };
 		8EC6E94A177F301D00B76C38 /* EPSWeightCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E949177F301D00B76C38 /* EPSWeightCalculatorViewController.m */; };
 		8EC6E950178509F000B76C38 /* EPSWeightCalculatorNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6E94F178509F000B76C38 /* EPSWeightCalculatorNotes.m */; };
 		8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA41592815A9A900CFAC18 /* DateMath.swift */; };
 		8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */; };
 		8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */; };
-		8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFCF20F23FD600B2696A /* lbbb.org */; };
 		8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFD120F2404C00B2696A /* lbbb.html */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
 		8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */ = {isa = PBXBuildFile; fileRef = 8ED8A8EC25168CA600ACE6F8 /* org.css */; };
@@ -182,7 +172,6 @@
 		8EF29289226AA43C00F15B99 /* ArvcRiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */; };
 		8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */; };
 		8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */; };
-		8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDA1AAE0672004374C3 /* rvh.org */; };
 		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
 /* End PBXBuildFile section */
 
@@ -1060,23 +1049,18 @@
 				8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */,
 				8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */,
 				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
-				8EC5C32A1AA0E302005BDAFD /* edoxaban.org in Resources */,
 				8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */,
-				8EC5C33C1AAA8134005BDAFD /* sotalol.org in Resources */,
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
 				8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
-				8ECAFFD020F23FD600B2696A /* lbbb.org in Resources */,
 				8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */,
 				8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 				8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
-				8EC5C3401AAA8997005BDAFD /* dofetilide.org in Resources */,
 				8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */,
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
-				8EC5C3341AAA72BE005BDAFD /* dabigatran.org in Resources */,
 				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
 				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
 				8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */,
@@ -1088,28 +1072,22 @@
 				8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */,
 				8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */,
 				8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */,
-				8EC1D2A91F78612300F46734 /* brugadadiagnosis.org in Resources */,
 				8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */,
 				8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */,
 				8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */,
 				8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */,
 				8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */,
 				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
-				8EC5C3301AA8E246005BDAFD /* apixaban.org in Resources */,
-				8EFBFBDC1AAE0672004374C3 /* rvh.org in Resources */,
-				8EC5C3381AAA7718005BDAFD /* rivaroxaban.org in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
 				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
-				8E54A55F19F6E35B00EFF001 /* parahisianpacinginstructions.org in Resources */,
 				8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */,
 				8E71C2C41F775F0700D198BD /* Warfarin.storyboard in Resources */,
 				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
 				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
 				8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */,
 				8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */,
-				8E54A56119F6E37F00EFF001 /* rvapexvsbasepacing.org in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
