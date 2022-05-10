@@ -86,6 +86,10 @@
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
+		8E6381B9282982C400249E87 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381B8282982C400249E87 /* Weight.swift */; };
+		8E6381BB282983CF00249E87 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381BA282983CF00249E87 /* Units.swift */; };
+		8E6381BD2829DD9B00249E87 /* WeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381BC2829DD9B00249E87 /* WeightTests.swift */; };
+		8E6381BF282A016000249E87 /* WeightCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */; };
 		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
@@ -316,6 +320,10 @@
 		8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachAlgorithm.h; sourceTree = "<group>"; };
 		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexStepAlgorithmProtocol.h; sourceTree = "<group>"; };
+		8E6381B8282982C400249E87 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		8E6381BA282983CF00249E87 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		8E6381BC2829DD9B00249E87 /* WeightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTests.swift; sourceTree = "<group>"; };
+		8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorViewModel.swift; sourceTree = "<group>"; };
 		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
@@ -620,6 +628,7 @@
 				8E8FAAE22817297600789746 /* Patient.swift */,
 				8E8FAAE62817806000789746 /* Drug.swift */,
 				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
+				8E6381B8282982C400249E87 /* Weight.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -672,6 +681,7 @@
 			children = (
 				8E2824402821B96300DD9571 /* QTcCalculatorViewModel.swift */,
 				8E321C6C28257AB50017EDB0 /* QTcIvcdViewModel.swift */,
+				8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -681,6 +691,7 @@
 			children = (
 				8E59E968281A4071003C485F /* Keys.swift */,
 				8E0506322820B6CD0059DACB /* ErrorMessage.swift */,
+				8E6381BA282983CF00249E87 /* Units.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -943,6 +954,7 @@
 				8E321C6A2824A0310017EDB0 /* QTcIvcdTests.swift */,
 				8EB36C33281F93D8006D8DF2 /* QTcTests.swift */,
 				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
+				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1193,6 +1205,8 @@
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8EBCC8102826CCFF001ABD9E /* QTcIvcdCalculatorController.swift in Sources */,
+				8E6381BB282983CF00249E87 /* Units.swift in Sources */,
+				8E6381B9282982C400249E87 /* Weight.swift in Sources */,
 				8E00E95217B7F89E0007A146 /* EPSSfRuleRiskScore.m in Sources */,
 				8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */,
 				8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */,
@@ -1208,6 +1222,7 @@
 				8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E2394912824400800B6E8B7 /* QTcIvcd.swift in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
+				8E6381BF282A016000249E87 /* WeightCalculatorViewModel.swift in Sources */,
 				8E0506332820B6CD0059DACB /* ErrorMessage.swift in Sources */,
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
@@ -1221,6 +1236,7 @@
 				8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */,
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
+				8E6381BD2829DD9B00249E87 /* WeightTests.swift in Sources */,
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,

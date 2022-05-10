@@ -25,6 +25,4 @@ enum IntervalRateConversion {
     static func msecToSecs(_ msecs: Double) -> Double {
         return msecs / 1000.0
     }
-
-
 }
