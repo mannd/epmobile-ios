@@ -55,12 +55,25 @@ class WeightTests: XCTestCase {
     }
 
     func testWeightCalculatorViewModel() {
-        let w1 = Weight(weight: Measurement(value: 100, unit: .kilograms), height: Measurement(value: 80, unit: .inches), sex: .male)
-        let vm1 = WeightCalculatorViewModel(model: w1)
+        let vm1 = WeightCalculatorViewModel(weight: Measurement(value: 100, unit: .kilograms), height: Measurement(value: 80, unit: .inches), sex: .male)
+        XCTAssertEqual(vm1.actualBodyWeight(), "Actual Body Weight = 100 kg")
         XCTAssertEqual(vm1.idealBodyWeight(), "Ideal Body Weight = 96 kg")
-        let w2 = Weight(weight: Measurement(value: 143, unit: .pounds), height: Measurement(value: 65, unit: .inches), sex: .male)
-        let vm2 = WeightCalculatorViewModel(model: w2)
+        XCTAssertEqual(vm1.adjustedBodyWeight(), "Adjusted Body Weight = 97.6 kg")
+        XCTAssertEqual(vm1.rawIdealBodyWeight(), "96")
+        XCTAssertEqual(vm1.rawAdjustedBodyWeight(), "97.6")
+        XCTAssertEqual(vm1.rawActualBodyWeight(), "100")
+        XCTAssertEqual(vm1.recommendedBodyWeight(), "Recommended Weight = Ideal Body Weight (96 kg)")
+        let vm2 = WeightCalculatorViewModel(weight: Measurement(value: 143, unit: .pounds), height: Measurement(value: 65, unit: .inches), sex: .male)
+        XCTAssertEqual(vm2.actualBodyWeight(), "Actual Body Weight = 143 lb")
         XCTAssertEqual(vm2.idealBodyWeight(), "Ideal Body Weight = 135.6 lb")
+        XCTAssertEqual(vm2.adjustedBodyWeight(), "Adjusted Body Weight = 138.6 lb")
+        XCTAssertEqual(vm2.rawIdealBodyWeight(), "135.6")
+        XCTAssertEqual(vm2.rawAdjustedBodyWeight(), "138.6")
+        XCTAssertEqual(vm2.rawActualBodyWeight(), "143")
+        XCTAssertEqual(vm2.recommendedBodyWeight(), "Recommended Weight = Ideal Body Weight (135.6 lb)")
 
+
+        let vm3 = WeightCalculatorViewModel(weight: Measurement(value: 300, unit: .kilograms), height: Measurement(value: 70, unit: .inches), sex: .male)
+        XCTAssertEqual(vm3.recommendedBodyWeight(), "Recommended Weight = Adjusted Body Weight (163.8 kg)")
     }
 }

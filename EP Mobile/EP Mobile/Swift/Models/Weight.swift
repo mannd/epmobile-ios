@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum WeightType {
+    case ideal
+    case adjusted
+    case actual
+    case recommended
+}
+
 // Trying out Swift units, rather than my own here...
 struct Weight {
     var weight: Measurement<UnitMass>

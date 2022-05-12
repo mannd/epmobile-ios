@@ -24,6 +24,8 @@
 #define INTERVAL_RATE_ROW 3
 #define QTC_CALCULATOR_ROW 4
 #define QTC_IVCD_CALCULATOR_ROW 5
+#define WARFARIN_CLINIC_ROW 6
+#define WEIGHT_CALCULATOR_ROW 7
 
 @interface EPSMainTableViewController ()
 
@@ -106,6 +108,10 @@
         }
         if (indexPath.row == QTC_IVCD_CALCULATOR_ROW) {
             [QTcIvcdCalculatorController showWithVc:self];
+        }
+
+        if (indexPath.row == WEIGHT_CALCULATOR_ROW) {
+            [WeightCalculatorCalculatorController showWithVc:self];
         }
     }
 

@@ -9,78 +9,112 @@
 import Foundation
 
 struct WeightCalculatorViewModel {
-    var model: Weight
+    private let model: Weight
 
-    func idealBodyWeight() -> String {
-        let ibw = model.idealBodyWeight()
+    let underHeightMessage = "These measurements might not be useful when height < 60 inches."
+    let overweightMessage = "Recommended Weight = Adjusted Body Weight (%@)"
+    let underweightMessage = "Recommended Weight = Actual Body Weight (%@)"
+    let normalWeightMessage = "Recommended Weight = Ideal Body Weight (%@)"
+
+    static let measurementFormatter: MeasurementFormatter = {
         let formatter = MeasurementFormatter()
         formatter.unitOptions = .providedUnit
-        let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 1
         formatter.numberFormatter = numberFormatter
-        return "Ideal Body Weight = \(formatter.string(from: ibw))"
+        return formatter
+    }()
+
+    static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 1
+        return formatter
+    }()
+
+
+    init(weight: Measurement<UnitMass>, height: Measurement<UnitLength>, sex: EP_Mobile.Sex) {
+        model = Weight(weight: weight, height: height, sex: sex)
     }
-}
+
+    func actualBodyWeight() -> String {
+        if !checkMeasurements() {
+            return ErrorMessage.invalidEntry
+        }
+        return "Actual Body Weight = \(formattedActualBodyWeight())"
+    }
+
+    func formattedActualBodyWeight() -> String {
+        return Self.measurementFormatter.string(from: model.weight)
+    }
+
+    func rawActualBodyWeight() -> String? {
+        return Self.numberFormatter.string(from: NSNumber(value: model.weight.value))
+
+    }
+    
+    func idealBodyWeight() -> String {
+        if !checkMeasurements() {
+            return ErrorMessage.invalidEntry
+        }
+        return "Ideal Body Weight = \(formattedIdealBodyWeight())"
+    }
+
+    func formattedIdealBodyWeight() -> String {
+        return Self.measurementFormatter.string(from: model.idealBodyWeight())
+    }
+
+    func rawIdealBodyWeight() -> String? {
+        return Self.numberFormatter.string(from: NSNumber(value: model.idealBodyWeight().value))
+    }
+
+    func adjustedBodyWeight() -> String {
+        if !checkMeasurements() {
+            return ErrorMessage.invalidEntry
+        }
+        return "Adjusted Body Weight = \(formattedAdjustedBodyWeight())"
+    }
+
+    func formattedAdjustedBodyWeight() -> String {
+        return Self.measurementFormatter.string(from: model.adjustedBodyWeight())
+    }
+
+    func rawAdjustedBodyWeight() -> String? {
+        return Self.numberFormatter.string(from: NSNumber(value: model.adjustedBodyWeight().value))
+    }
+
+    func recommendedBodyWeight() -> String {
+        if !checkMeasurements() {
+            return ErrorMessage.invalidEntry
+        }
+        if model.isOverweight() {
+            return "Recommended Weight = Adjusted Body Weight (\(formattedAdjustedBodyWeight()))"
+        } else if model.isUnderweight() {
+            return "Recommended Weight = Actual Body Weight (\(formattedActualBodyWeight()))"
+        } else {
+            return "Recommended Weight = Ideal Body Weight (\(formattedIdealBodyWeight()))"
+        }
+    }
 
 
+    func rawRecommendedBodyWeight() -> String? {
+        if model.isOverweight() {
+            return rawAdjustedBodyWeight()
+        } else if model.isUnderweight() {
+            return rawActualBodyWeight()
+        } else {
+            return rawIdealBodyWeight()
+        }
+    }
 
 
-//NSString *weightText = self.weightTextField.text;
-//    double weight = [weightText doubleValue];
-//    NSString *heightText = self.heightTextField.text;
-//    double height = [heightText doubleValue];
-//    if (weight <= 0.0 || height <= 0.0) {
-//        self.resultLabel.text = @"INVALID ENTRY";
-//        return;
-//    }
-//    double weightInPounds = 0;
-//    if (weightIsPounds) {
-//        EPSLog(@"Weight is in pounds (%f lb)", weight);
-//        weightInPounds = weight;
-//        weight = [self lbsToKgs:weight];
-//        EPSLog(@"Converted weight in kgs is %f", weight);
-//    }
-//    if (! heightIsInches) {
-//        height = [self cmsToIns:height];
-//    }
-//    BOOL isMale = ([self.sexSegmentedControl selectedSegmentIndex] == 0);
-//    calculatedIbw = [self idealBodyWeightForHeight:height forIsMale:isMale];
-//    calculatedAbw = [self adjustedBodyWeight:calculatedIbw forActualWeight:weight];
-//    if (weightIsPounds) {
-//        calculatedIbw = [self kgsToLbs:calculatedIbw];
-//        calculatedAbw = [self kgsToLbs:calculatedAbw];
-//        // change actual weight back to pounds for determining overweight and underweight
-//        weight = weightInPounds;
-//    }
-//    NSString *formattedIbw = [NSString stringWithFormat:@"%.1f", calculatedIbw];
-//    NSString *formattedAbw = [NSString stringWithFormat:@"%.1f", calculatedAbw];
-//    NSString *formattedWeight = [NSString stringWithFormat:@"%.1f", weight];
-//    // these are the string pasted to the clipboard
-//    roundedIbw = formattedIbw;
-//    roundedAbw = formattedAbw;
-//
-//    if (weightIsPounds) {
-//        formattedIbw = [formattedIbw stringByAppendingString:@" lbs"];
-//        formattedAbw = [formattedAbw stringByAppendingString:@" lbs"];
-//        formattedWeight = [formattedWeight stringByAppendingString:@" lbs"];
-//    }
-//    else {
-//        formattedIbw = [formattedIbw stringByAppendingString:@" kgs"];
-//        formattedAbw = [formattedAbw stringByAppendingString:@" kgs"];
-//        formattedWeight = [formattedWeight stringByAppendingString:@" kgs"];
-//
-//    }
-//
-//    NSString *result = @"";
-//    result = [result stringByAppendingString:[NSString stringWithFormat:@"Ideal Body Weight = %@\nAdjusted Body Weight = %@", formattedIbw, formattedAbw]];
-//    if ([self isUnderHeight:height])
-//        result = [result stringByAppendingString:@"\nThese measurements might not be useful when height < 60 inches."];
+    
+
 //    else if ([self isOverweight:calculatedIbw forActualWeight:weight])
 //        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended Weight = Adjusted Body Weight (%@)", formattedAbw]];
 //    else if ([self isUnderWeight:weight forIbw:calculatedIbw])
 //        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended Weight = Actual Body Weight (%@)", formattedWeight]];
 //    else // normal weight
 //        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended Weight = Ideal Body Weight (%@)", formattedIbw]];
-//    self.resultLabel.text = result;
-//}
-//
+
+    private func checkMeasurements() -> Bool {
+        return model.weight.value > 0 && model.height.value > 0
+    }
+}

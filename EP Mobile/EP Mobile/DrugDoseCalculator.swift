@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct DrugDoseCalculator: View {
-    @State private var sex: Sex = .male
+    @State private var sex: EP_Mobile.Sex = .male
     @State private var age: Int = 0
     @State private var weight: Double = 0.0
     @State private var creatinine: Double = 0.0

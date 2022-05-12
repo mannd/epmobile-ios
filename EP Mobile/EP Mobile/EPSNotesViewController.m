@@ -14,7 +14,6 @@
 #import "EPSCMSNotes.h"
 #import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
-#import "EPSWeightCalculatorNotes.h"
 #import "EPSHcmScd2014Notes.h"
 #import "EPSLogging.h"
 
@@ -57,8 +56,6 @@
         notes = [[EPSEntrainmentNotes alloc] init];
     else if ([self.key isEqualToString:@"AtrialTachNotes"])
         notes = [[EPSAtrialTachNotes alloc] init];
-    else if ([self.key isEqualToString:@"WeightCalculatorNotes"])
-        notes = [[EPSWeightCalculatorNotes alloc] init];
     else if ([self.key isEqualToString:@"HcmScd2014"])
         notes = [[EPSHcmScd2014Notes alloc] init];
     [self.notesTextView setText:[notes noteText]];
