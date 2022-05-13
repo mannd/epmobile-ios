@@ -105,6 +105,8 @@
 		8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CB1F7766A200D198BD /* WPW.storyboard */; };
 		8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CD1F77686500D198BD /* LVH.storyboard */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
+		8E808363282DC62100E88A4E /* Warfarin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E808362282DC62100E88A4E /* Warfarin.swift */; };
+		8E808365282DE88B00E88A4E /* WarfarinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E808364282DE88B00E88A4E /* WarfarinTests.swift */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
 		8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */; };
@@ -341,6 +343,8 @@
 		8E71C2CD1F77686500D198BD /* LVH.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LVH.storyboard; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
+		8E808362282DC62100E88A4E /* Warfarin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warfarin.swift; sourceTree = "<group>"; };
+		8E808364282DE88B00E88A4E /* WarfarinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarfarinTests.swift; sourceTree = "<group>"; };
 		8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaWCTAlgorithm.h; sourceTree = "<group>"; };
 		8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaWCTAlgorithm.m; sourceTree = "<group>"; };
 		8E815D3A162EE2F0001025ED /* EPSWCTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWCTTableViewController.h; sourceTree = "<group>"; };
@@ -626,6 +630,7 @@
 				8E8FAAE62817806000789746 /* Drug.swift */,
 				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
 				8E6381B8282982C400249E87 /* Weight.swift */,
+				8E808362282DC62100E88A4E /* Warfarin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -951,6 +956,7 @@
 				8EB36C33281F93D8006D8DF2 /* QTcTests.swift */,
 				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
 				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
+				8E808364282DE88B00E88A4E /* WarfarinTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1136,6 +1142,7 @@
 				8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */,
 				8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVC2010TableViewController.m in Sources */,
+				8E808363282DC62100E88A4E /* Warfarin.swift in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
 				8E2824412821B96300DD9571 /* QTcCalculatorViewModel.swift in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
@@ -1232,6 +1239,7 @@
 				8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */,
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
+				8E808365282DE88B00E88A4E /* WarfarinTests.swift in Sources */,
 				8E6381BD2829DD9B00249E87 /* WeightTests.swift in Sources */,
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */,

@@ -104,16 +104,6 @@ struct WeightCalculatorViewModel {
         }
     }
 
-
-    
-
-//    else if ([self isOverweight:calculatedIbw forActualWeight:weight])
-//        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended Weight = Adjusted Body Weight (%@)", formattedAbw]];
-//    else if ([self isUnderWeight:weight forIbw:calculatedIbw])
-//        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended Weight = Actual Body Weight (%@)", formattedWeight]];
-//    else // normal weight
-//        result = [result stringByAppendingString:[NSString stringWithFormat:@"\nRecommended Weight = Ideal Body Weight (%@)", formattedIbw]];
-
     private func checkMeasurements() -> Bool {
         return model.weight.value > 0 && model.height.value > 0
     }
