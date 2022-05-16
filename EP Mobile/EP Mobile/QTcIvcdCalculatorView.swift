@@ -85,6 +85,7 @@ struct QTcIvcdCalculatorView: View {
                             Text("Framingham").tag(Formula.qtcFrm)
                             Text("Hodges").tag(Formula.qtcHdg)
                         }
+                        .pickerStyle(.menu)
                     }
                 }
                 HStack {

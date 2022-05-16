@@ -8,17 +8,44 @@
 
 import Foundation
 
+enum InrTarget: Int, CaseIterable, Identifiable {
+    case low
+    case high
+
+    var id: InrTarget { self }
+
+    var description: String {
+        switch self {
+        case .low:
+            return "2.0 to 3.0"
+        case .high:
+            return "2.5 to 3.5"
+        }
+    }
+}
+
 struct Warfarin {
 
-    let holdWarfarinMessage = "Hold warfarin until INR back in therapeutic range."
-    let inrTherapeuticMessage = "INR is therapeutic. No change in warfarin dose."
     let lowInrRange: ClosedRange = 2.0...3.0
     let highInrRange: ClosedRange = 2.5...3.5
 
     var inr: Double
     var weeklyDose: Double
     var tabletSize: Double
-    var doseRange: ClosedRange<Double>
+
+    private let doseRange: ClosedRange<Double>
+
+    init(inr: Double, weeklyDose: Double, tabletSize: Double, inrTarget: InrTarget) {
+        self.inr = inr
+        self.weeklyDose = weeklyDose
+        self.tabletSize = tabletSize
+        switch inrTarget {
+        case .low:
+            doseRange = lowInrRange
+        case .high:
+            doseRange = highInrRange
+        }
+    }
 
 
     func getDoseChange() -> DoseChange {
@@ -87,6 +114,12 @@ struct Warfarin {
     func weeklyDoseIsSane() -> Bool {
         // dose calculator algorithm should handle from about 3 half tabs a week to 2 tabs daily
         return (weeklyDose > (4 * 0.5 * tabletSize)) && (weeklyDose < (2 * tabletSize * 7));
+    }
+
+    func getNewDoseFrom(percent: Double,
+                        oldDose: Double,
+                        doseChangeDirection: DoseChangeDirection) -> Double {
+        return round(oldDose + (doseChangeDirection == .increase ? oldDose * percent : -oldDose * percent))
     }
 }
 

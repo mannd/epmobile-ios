@@ -20,14 +20,15 @@ class WarfarinTests: XCTestCase {
     }
 
     func testInrIsTherapeutic() {
-        var w1 = Warfarin(inr: 2.0, weeklyDose: 150, tabletSize: 5, doseRange: 1...1.9)
+        let w1 = Warfarin(inr: 2.0, weeklyDose: 150, tabletSize: 5, inrTarget: .high)
         XCTAssertFalse(w1.inrIsTherapeutic())
-        w1.doseRange = 1...2.0
-        XCTAssert(w1.inrIsTherapeutic())
+
+        let w2 = Warfarin(inr: 2.0, weeklyDose: 150, tabletSize: 5, inrTarget: .low)
+        XCTAssert(w2.inrIsTherapeutic())
     }
 
     func testDoseChangeLowInrRange() {
-        var w1 = Warfarin(inr: 3.7, weeklyDose: 150, tabletSize: 5, doseRange: 2...3)
+        var w1 = Warfarin(inr: 3.7, weeklyDose: 150, tabletSize: 5, inrTarget: .low)
         XCTAssertEqual(w1.getDoseChangeLowInrRange().instruction, .holdOneDose)
         XCTAssertEqual(w1.getDoseChangeLowInrRange().range, 10...15)
         XCTAssertEqual(w1.getDoseChangeLowInrRange().direction, DoseChangeDirection.decrease)
@@ -54,7 +55,7 @@ class WarfarinTests: XCTestCase {
     }
 
     func testDoseChangeHighInrRange() {
-        var w1 = Warfarin(inr: 3.7, weeklyDose: 150, tabletSize: 5, doseRange: 2.5...3.5)
+        var w1 = Warfarin(inr: 3.7, weeklyDose: 150, tabletSize: 5, inrTarget: .high)
         XCTAssertNil(w1.getDoseChangeHighInrRange().instruction)
         XCTAssertEqual(w1.getDoseChangeHighInrRange().range, 5...15)
         XCTAssertEqual(w1.getDoseChangeHighInrRange().direction, DoseChangeDirection.decrease)
@@ -85,9 +86,47 @@ class WarfarinTests: XCTestCase {
     }
 
     func testDoseChange() {
-        var w1 = Warfarin(inr: 6.1, weeklyDose: 150, tabletSize: 5, doseRange: 2.5...3.5)
+        var w1 = Warfarin(inr: 6.1, weeklyDose: 150, tabletSize: 5, inrTarget: .high)
         XCTAssertEqual(w1.getDoseChange().instruction, .holdWarfarin)
         w1.inr = 3.0
         XCTAssertEqual(w1.getDoseChange().instruction, .therapeutic)
+    }
+
+    func testWarfarinViewModel() {
+        let wvm1 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 2, inrTarget: .low)
+        XCTAssertEqual(wvm1.calculate(), "INR is therapeutic. No change in warfarin dose.")
+        XCTAssertFalse(wvm1.showDoseTable())
+        let wvm2 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 3, inrTarget: .low)
+        XCTAssertEqual(wvm2.calculate(), "INR is therapeutic. No change in warfarin dose.")
+        XCTAssertFalse(wvm2.showDoseTable())
+        let wvm3 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 2.5, inrTarget: .high)
+        XCTAssertEqual(wvm3.calculate(), "INR is therapeutic. No change in warfarin dose.")
+        XCTAssertFalse(wvm3.showDoseTable())
+        let wvm4 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 3.5, inrTarget: .high)
+        XCTAssertEqual(wvm4.calculate(), "INR is therapeutic. No change in warfarin dose.")
+        XCTAssertFalse(wvm4.showDoseTable())
+
+        let wvm5 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 6.01, inrTarget: .high)
+        XCTAssertEqual(wvm5.calculate(), "Hold warfarin until INR back in therapeutic range.")
+        XCTAssertFalse(wvm5.showDoseTable())
+        let wvm6 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 6.01, inrTarget: .low)
+        XCTAssertEqual(wvm6.calculate(), "Hold warfarin until INR back in therapeutic range.")
+        XCTAssertFalse(wvm6.showDoseTable())
+
+        let wvm7 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 5.01, inrTarget: .high)
+        XCTAssertEqual(wvm7.calculate(), "Consider holding one dose.\nDecrease weekly dose by 10% (90.0 mg/wk) to 20% (80.0 mg/wk).")
+        XCTAssertFalse(wvm7.showDoseTable())
+        let wvm8 = WarfarinViewModel(tabletSize: 1, weeklyDose: 7, inr: 3.2, inrTarget: .low)
+        XCTAssertEqual(wvm8.calculate(), "Decrease weekly dose by 5% (7.0 mg/wk) to 15% (6.0 mg/wk).")
+        XCTAssert(wvm8.showDoseTable())
+        let wvm9 = WarfarinViewModel(tabletSize: 2.5, weeklyDose: 155, inr: 4.1, inrTarget: .low)
+        XCTAssertEqual(wvm9.calculate(), "Consider holding one dose.\nDecrease weekly dose by 10% (140.0 mg/wk) to 20% (124.0 mg/wk).")
+        XCTAssertFalse(wvm9.showDoseTable())
+        let wvm10 = WarfarinViewModel(tabletSize: 5, weeklyDose: 100, inr: 1.5, inrTarget: .high)
+        XCTAssertEqual(wvm10.calculate(), "Give additional dose.\nIncrease weekly dose by 10% (110.0 mg/wk) to 20% (120.0 mg/wk).")
+        XCTAssertFalse(wvm10.showDoseTable())
+        let wvm11 = WarfarinViewModel(tabletSize: 10, weeklyDose: 200, inr: 4.5, inrTarget: .low)
+        XCTAssertEqual(wvm11.calculate(), "Consider holding one dose.\nDecrease weekly dose by 10% (180.0 mg/wk) to 20% (160.0 mg/wk).")
+        XCTAssertFalse(wvm11.showDoseTable())
     }
 }

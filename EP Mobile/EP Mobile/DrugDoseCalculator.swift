@@ -262,8 +262,8 @@ private struct Info: View {
             .navigationBarTitle(Text("Drug Calculator"), displayMode: .inline)
         }
     }
-
 }
+
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
         DrugDoseCalculator(drugName: .constant(DrugName.crCl))

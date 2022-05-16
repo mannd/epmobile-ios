@@ -63,6 +63,7 @@ struct QTcCalculatorView: View {
                             Text("Framingham").tag(Formula.qtcFrm)
                             Text("Hodges").tag(Formula.qtcHdg)
                         }
+                        .pickerStyle(.menu)
                     }
                     Section(header: Text("Result")) {
                         Text(result)

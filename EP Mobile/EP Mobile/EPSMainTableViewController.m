@@ -109,7 +109,9 @@
         if (indexPath.row == QTC_IVCD_CALCULATOR_ROW) {
             [QTcIvcdCalculatorController showWithVc:self];
         }
-
+        if (indexPath.row == WARFARIN_CLINIC_ROW) {
+            [WarfarinClinicController showWithVc:self];
+        }
         if (indexPath.row == WEIGHT_CALCULATOR_ROW) {
             [WeightCalculatorCalculatorController showWithVc:self];
         }

@@ -55,12 +55,6 @@ struct QTcIvcdViewModel {
     private static let noQTm = "QTm only defined for LBBB"
     private static let noQTmc = "QTmc only defined for LBBB"
     private static let noPreLbbbQTc = "preLBBBQTc only defined for LBBB"
-    private static let qtm_Reference = "Bogossian H et al. New formula for evaluation of the QT interval in patients with left bundle branch block. Heart Rhythm 2004;11:2273-2277."
-    private static let qtRRQrsFormula = "QTrr,qrs = QT - 155 x (60/HR - 1) - 0.93 x (QRS - 139) + k, k = -22 ms for men and -34 ms for women"
-    private static let qtRRQrsReference = "Rautaharju P et al. Assessment of prolonged QT and JT intervals in ventricular conduction defects.  Amer J Cardio 2003;93:1017-1021."
-    private static let qtcReference = "Rautaharju P et al. Circulation. 2009;119:e241-e250."
-    private static let preLbbbQtcFormula = "preLBBBQTc = postLBBBQTc(Bazett) - postLBBBQRS + c, where c = 95 msec in males, 88 msec in females"
-    private static let preLbbbQtcReference = "Yankelson L, Hochstadt A, Sadeh B, et al. New formula for defining “normal” and “prolonged” QT in patients with bundle branch block. Journal of Electrocardiology. 2018;51(3):481-486. doi:10.1016/j.jelectrocard.2017.12.039"
 
     let qt: Double
     let qrs: Double
