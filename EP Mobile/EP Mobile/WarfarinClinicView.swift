@@ -75,8 +75,11 @@ struct WarfarinClinicView: View {
     @State private var inrTarget: InrTarget = .low
     @State private var result: String = ""
     @State private var showInfo = false
-    @State private var showDosing = false
+    @State private var showDosingAlert = false
+    @State private var showDosingTable = false
     @State private var viewModel: WarfarinViewModel? = nil
+    @State private var doseChange: DoseChange? = nil
+    @State private var dosingTableData: DosingTableData? = nil
 
     @FocusState private var textFieldIsFocused: Bool
 
@@ -112,6 +115,7 @@ struct WarfarinClinicView: View {
     var body: some View {
         NavigationView {
             VStack {
+                NavigationLink(destination: UIWarfarinDosingTableView(dosingTableData: dosingTableData), isActive: $showDosingTable) { EmptyView() }
                 Form() {
                     Section(header: Text("Tablet Size")) {
                         Picker(selection: $tabletSize, label: Text("Tablet size")) {
@@ -174,13 +178,13 @@ struct WarfarinClinicView: View {
             }.sheet(isPresented: $showInfo) {
                 Info()
             })
-            .alert(isPresented: $showDosing) {
+            .alert(isPresented: $showDosingAlert) {
                 Alert(
                     title: Text("Result"),
                     message: Text(result),
                     primaryButton: .destructive(
                         Text("Show Dose Table"),
-                        action: { showDoseTable() }
+                        action: { calculateDosingTable() }
                     ),
                     secondaryButton: .default(
                         Text("Cancel"),
@@ -201,7 +205,10 @@ struct WarfarinClinicView: View {
         viewModel = WarfarinViewModel(tabletSize: tabletSize.value, weeklyDose: weeklyDose, inr: inr, inrTarget: inrTarget)
         if let viewModel = viewModel {
             result = viewModel.calculate()
-            showDosing = viewModel.showDoseTable()
+            if viewModel.showDoseTable() {
+                dosingTableData = viewModel.dosingTableData
+                showDosingAlert = true
+            }
         }
     }
 
@@ -216,10 +223,33 @@ struct WarfarinClinicView: View {
         result = ""
     }
 
-    func showDoseTable() {
+    func calculateDosingTable() {
+        showDosingTable = true
+    }
 
+    struct UIWarfarinDosingTableView: UIViewControllerRepresentable {
+        var dosingTableData: DosingTableData?
+        typealias UIViewControllerType = EPSWarfarinDosingTableViewController
+
+        func makeUIViewController(context: Context) -> EPSWarfarinDosingTableViewController {
+            let sb = UIStoryboard(name: "Warfarin", bundle: nil)
+            let viewController = sb.instantiateViewController(identifier: "WarfarinDosingTable") as! EPSWarfarinDosingTableViewController
+            if let data = dosingTableData {
+                viewController.weeklyDose = data.weeklyDose ?? 0
+                viewController.lowEnd = data.lowEndDose ?? 0
+                viewController.highEnd = data.highEndDose ?? 0
+                viewController.tabletSize = data.tabletSize ?? 0
+                viewController.increase = data.increaseDose ?? false
+            }
+            return viewController
+        }
+
+        func updateUIViewController(_ uiViewController: EPSWarfarinDosingTableViewController, context: Context) {
+
+        }
     }
 }
+
 
 private struct Info: View {
     @Environment(\.dismiss) private var dismiss
@@ -253,5 +283,6 @@ struct WarfarinCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         WarfarinClinicView()
         Info()
+        WarfarinClinicView.UIWarfarinDosingTableView()
     }
 }

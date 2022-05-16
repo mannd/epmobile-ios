@@ -24,3 +24,15 @@ extension View {
         modifier(RoundedButton())
     }
 }
+
+class UIKitRoundedButton: NSObject {
+    @objc
+    static func roundedButtonConfiguration() -> UIButton.Configuration {
+        var config = UIButton.Configuration.filled()
+        config.buttonSize = .medium
+        config.background.cornerRadius = 15
+        config.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50)
+        return config
+    }
+
+}

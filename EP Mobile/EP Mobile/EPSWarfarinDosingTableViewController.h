@@ -38,5 +38,6 @@
 @property (assign, nonatomic) NSInteger highEnd;
 @property (assign, nonatomic) BOOL increase;
 @property (assign, nonatomic) float weeklyDose;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @end

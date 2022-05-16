@@ -8,6 +8,7 @@
 
 #import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
+#import "EP_Mobile-Swift.h"
 
 #define NUM_DAYS 7
 #define SUN 0
@@ -94,6 +95,8 @@
     total = [self totalDose:array tabletDose:tabletSize];
     NSString *totalHighDose = [[NSString alloc] initWithFormat:@"%1.1f mg/wk", total];
     self.totalWeeklyHighDose.text = totalHighDose;
+
+    self.doneButton.configuration = [UIKitRoundedButton roundedButtonConfiguration];
 }
 
 - (float)totalDose:(NSMutableArray *)doses tabletDose:(float)tabletDose {
