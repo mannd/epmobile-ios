@@ -9,6 +9,7 @@
 #import "EPSMainTableViewController.h"
 #import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
+#import "EPSDrugDoseTableViewController.h"
 #import "EPSARVC2010TableViewController.h"
 
 #import "EP_Mobile-Swift.h"

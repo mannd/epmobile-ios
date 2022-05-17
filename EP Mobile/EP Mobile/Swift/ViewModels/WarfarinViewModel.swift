@@ -42,21 +42,21 @@ class WarfarinViewModel {
         let lowEndDose = model.getNewDoseFrom(percent: Double(range.lowerBound) / 100.0, oldDose: model.weeklyDose, doseChangeDirection: direction)
         let highEndDose = model.getNewDoseFrom(percent: Double(range.upperBound) / 100.0, oldDose: model.weeklyDose, doseChangeDirection: direction)
         result += "weekly dose by \(range.lowerBound)% (\(lowEndDose) mg/wk) to \(range.upperBound)% (\(highEndDose) mg/wk)."
-        if showDoseTable() {
-            dosingTableData = calculateDosingTable(lowEndDose: lowEndDose, highEndDose: highEndDose, direction: direction)
+        if weeklyDoseIsSane() {
+            dosingTableData = createDosingTableData(lowEndDose: range.lowerBound, highEndDose: range.upperBound, direction: direction)
         }
         return result
     }
 
-    func showDoseTable() -> Bool {
+    func weeklyDoseIsSane() -> Bool {
         return model.weeklyDoseIsSane()
     }
 
-    func calculateDosingTable(lowEndDose: Double, highEndDose: Double, direction: DoseChangeDirection) -> DosingTableData {
+    func createDosingTableData(lowEndDose: Int, highEndDose: Int, direction: DoseChangeDirection) -> DosingTableData {
         var dosingTableData = DosingTableData()
         dosingTableData.weeklyDose = Float(model.weeklyDose)
-        dosingTableData.lowEndDose = Int(lowEndDose)
-        dosingTableData.highEndDose = Int(highEndDose)
+        dosingTableData.lowEndDose = lowEndDose
+        dosingTableData.highEndDose = highEndDose
         dosingTableData.tabletSize = Float(model.tabletSize)
         dosingTableData.increaseDose = direction == .increase
         return dosingTableData

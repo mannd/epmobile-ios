@@ -205,7 +205,7 @@ struct WarfarinClinicView: View {
         viewModel = WarfarinViewModel(tabletSize: tabletSize.value, weeklyDose: weeklyDose, inr: inr, inrTarget: inrTarget)
         if let viewModel = viewModel {
             result = viewModel.calculate()
-            if viewModel.showDoseTable() {
+            if viewModel.weeklyDoseIsSane() {
                 dosingTableData = viewModel.dosingTableData
                 showDosingAlert = true
             }
@@ -236,8 +236,8 @@ struct WarfarinClinicView: View {
             let viewController = sb.instantiateViewController(identifier: "WarfarinDosingTable") as! EPSWarfarinDosingTableViewController
             if let data = dosingTableData {
                 viewController.weeklyDose = data.weeklyDose ?? 0
-                viewController.lowEnd = data.lowEndDose ?? 0
-                viewController.highEnd = data.highEndDose ?? 0
+                viewController.lowEndPercentChange = data.lowEndDose ?? 0
+                viewController.highEndPercentChange = data.highEndDose ?? 0
                 viewController.tabletSize = data.tabletSize ?? 0
                 viewController.increase = data.increaseDose ?? false
             }
