@@ -8,7 +8,6 @@
 
 #import "EP_MobileTests.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
-#import "EPSWarfarinCalculatorViewController.h"
 #import "EPSRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSChadsRiskScore.h"
@@ -47,13 +46,6 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     XCTAssertNoThrow(array = [calculator weeklyDoses], @"It threw!");
     
-}
-
-- (void)testIsDoseSane {
-    EPSWarfarinCalculatorViewController *vc = [[EPSWarfarinCalculatorViewController alloc] init];
-    XCTAssertTrue([vc weeklyDoseIsSane:40 forTabletSize:5]);
-    XCTAssertTrue([vc weeklyDoseIsSane:50 forTabletSize:5]);
-    XCTAssertTrue([vc weeklyDoseIsSane:30 forTabletSize:5]);
 }
 
 - (void)testRound {
