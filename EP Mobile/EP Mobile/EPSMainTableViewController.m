@@ -16,7 +16,7 @@
 
 // Sigh!
 // TODO: Switch back to NO!!!! for release version
-#define ALLOW_DRUG_CALCULATORS YES
+#define ALLOW_DRUG_CALCULATORS NO
 
 // Update as needed.  Remember row 2 is invisible (the banned drug calculators).
 #define CRCL_CALCULATOR_ROW 0
