@@ -19,6 +19,7 @@
 #import "EPSVereckeiAlgorithm.h"
 #import "EPSDavilaAlgorithm.h"
 #import "EPSLogging.h"
+#import "EP_Mobile-Swift.h"
 
 #define OUTFLOW_VT @"OutflowVT"
 #define ANNULAR_VT @"AnnularVT"
@@ -91,6 +92,11 @@
     step = 1;
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
+
+    self.yesButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.noButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.backButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.morphologyCriteriaButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
 }
 
 - (IBAction)yesButtonPushed:(id)sender {

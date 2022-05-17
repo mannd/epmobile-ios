@@ -35,4 +35,12 @@ class UIKitRoundedButton: NSObject {
         return config
     }
 
+    @objc
+    static func smallRoundedButtonConfiguration() -> UIButton.Configuration {
+        var config = UIButton.Configuration.filled()
+        config.cornerStyle = .capsule
+        config.buttonSize = .medium
+        return config
+    }
+
 }
