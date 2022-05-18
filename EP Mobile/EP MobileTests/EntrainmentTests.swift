@@ -32,6 +32,24 @@ class EntrainmentTests: XCTestCase {
         XCTAssertEqual(try e4.calculate(), .remoteSite)
         let e5 = Entrainment(tcl: 200, ppi: 231, concealedFusion: true, sQrs: nil, egQrs: nil)
         XCTAssertEqual(try e5.calculate(), .adjacentBystander)
+        let e6 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 80, egQrs: nil)
+        XCTAssertEqual(try e6.calculate(), .isthmusExit)
+        let e7 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 100, egQrs: nil)
+        XCTAssertEqual(try e7.calculate(), .isthmusCentral)
+        let e8 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 151, egQrs: nil)
+        XCTAssertEqual(try e8.calculate(), .isthmusProximal)
+        let e9 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 299, egQrs: nil)
+        XCTAssertEqual(try e9.calculate(), .innerLoop)
+        let e10 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 301, egQrs: nil)
+        XCTAssertThrowsError(try e10.calculate())
     }
 
+    func testSimilarSQrsEgQrs() {
+        let e1 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 301, egQrs: 321)
+        XCTAssert(e1.similarSQrsEgQrs() == nil)
+        let e2 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 280, egQrs: 259)
+        XCTAssertFalse(e2.similarSQrsEgQrs()!)
+        let e3 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 280, egQrs: 260)
+        XCTAssert(e3.similarSQrsEgQrs()!)
+    }
 }

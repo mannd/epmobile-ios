@@ -36,7 +36,7 @@ struct Entrainment {
         }
         // concealed fusion and short ppiMinusTcl present
         if let sQrs = sQrs {
-            let sQrsFraction = sQrs / tcl
+            let sQrsFraction = sQrsFraction(sQrs: sQrs)
             if sQrsFraction < 0.3 {
                 return .isthmusExit
             } else if sQrsFraction <= 0.5 {
@@ -49,20 +49,29 @@ struct Entrainment {
                 throw EntrainmentError.invalidSQrs
             }
         }
-        if let egQrs = egQrs, let sQrs = sQrs {
-            let egMinusQrs = egQrs - sQrs
-            if abs(egMinusQrs) <= 20 {
-                return .similarStimEgm
-            } else {
-                return .dissimilarStimEgm
-            }
-        }
         // ? return an error.  Shouldn't be able to get here...
         return .none
     }
 
+    func sQrsFraction(sQrs: Double) -> Double {
+        return sQrs / tcl
+    }
+
     func ppiMinusTcl() -> Double {
         return ppi - tcl
+    }
+
+    func similarSQrsEgQrs() -> Bool? {
+        guard concealedFusion else { return nil }
+        guard let sQrs = sQrs, let egQrs = egQrs else {
+            return nil
+        }
+        let sQrsFraction = sQrsFraction(sQrs: sQrs)
+        guard sQrsFraction <= 1.0 else {
+            return nil
+        }
+        let egMinusQrs = egQrs - sQrs
+        return abs(egMinusQrs) <= 20.0
     }
 }
 
