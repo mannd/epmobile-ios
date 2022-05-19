@@ -89,8 +89,8 @@ enum EntrainmentResult {
     case isthmusCentral
     case isthmusProximal
     case innerLoop
-    case similarStimEgm
-    case dissimilarStimEgm
+//    case similarStimEgm
+//    case dissimilarStimEgm
 
     case none
 

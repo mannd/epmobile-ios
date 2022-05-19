@@ -76,6 +76,7 @@
 		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
+		8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */; };
 		8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54237D1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m */; };
 		8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */; };
 		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
@@ -305,6 +306,7 @@
 		8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskFactor.m; sourceTree = "<group>"; };
 		8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDailyDoseCalculator.h; sourceTree = "<group>"; };
 		8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWarfarinDailyDoseCalculator.m; sourceTree = "<group>"; };
+		8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrainmentViewModel.swift; sourceTree = "<group>"; };
 		8E54237C1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014Notes.h; sourceTree = "<group>"; };
 		8E54237D1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014Notes.m; sourceTree = "<group>"; };
 		8E54A55E19F6E35B00EFF001 /* parahisianpacinginstructions.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parahisianpacinginstructions.org; sourceTree = "<group>"; };
@@ -696,6 +698,7 @@
 				8E321C6C28257AB50017EDB0 /* QTcIvcdViewModel.swift */,
 				8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */,
 				8E808366282DF55400E88A4E /* WarfarinViewModel.swift */,
+				8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1157,6 +1160,7 @@
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
 				8E2824412821B96300DD9571 /* QTcCalculatorViewModel.swift in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
+				8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */,
 				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
 				8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */,
 				8EBCC80E2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift in Sources */,

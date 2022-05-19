@@ -52,4 +52,13 @@ class EntrainmentTests: XCTestCase {
         let e3 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 280, egQrs: 260)
         XCTAssert(e3.similarSQrsEgQrs()!)
     }
+
+    func testEntrainmentViewModel() {
+        let vm1 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: false, sQrs: nil, egQrs: nil)
+        XCTAssertEqual(vm1.calculate(), "PPI-TCL = 20. Outer loop of reentry circuit.")
+        let vm2 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: true, sQrs: nil, egQrs: nil)
+        XCTAssertEqual(vm2.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit.")
+        let vm3 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: true, sQrs: 100, egQrs: 100)
+        XCTAssertEqual(vm3.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit. Isthmus central site. Similar S-QRS and EG-QRS intervals suggest site in isthmus of reentry circuit.")
+    }
 }

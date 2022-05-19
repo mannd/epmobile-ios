@@ -16,4 +16,6 @@ struct ErrorMessage {
     static let calculationError = "CALCULATION ERROR"
     static let inputError = "One or more values are incorrect or missing."
     static let unknownError = "UNKNOWN ERROR"
+    static let ppiTooShort = "PPI less than TCL"
+    static let invalidSQrs = "Invalid S-QRS (<TCL) ignored!"
 }
