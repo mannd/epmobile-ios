@@ -88,6 +88,8 @@
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E6106FF170B6B6300A5B9CE /* EPSAtrialTachNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6106FE170B6B6300A5B9CE /* EPSAtrialTachNotes.m */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
+		8E63411A283739EB00178D0C /* EntrainmentCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */; };
+		8E63411C28373A1F00178D0C /* EntrainmentCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63411B28373A1F00178D0C /* EntrainmentCalculatorViewController.swift */; };
 		8E6381B9282982C400249E87 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381B8282982C400249E87 /* Weight.swift */; };
 		8E6381BB282983CF00249E87 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381BA282983CF00249E87 /* Units.swift */; };
 		8E6381BD2829DD9B00249E87 /* WeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381BC2829DD9B00249E87 /* WeightTests.swift */; };
@@ -328,6 +330,8 @@
 		8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtrialTachAlgorithm.h; sourceTree = "<group>"; };
 		8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtrialTachAlgorithm.m; sourceTree = "<group>"; };
 		8E610703170DE49E00A5B9CE /* EPSComplexStepAlgorithmProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexStepAlgorithmProtocol.h; sourceTree = "<group>"; };
+		8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrainmentCalculatorView.swift; sourceTree = "<group>"; };
+		8E63411B28373A1F00178D0C /* EntrainmentCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrainmentCalculatorViewController.swift; sourceTree = "<group>"; };
 		8E6381B8282982C400249E87 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		8E6381BA282983CF00249E87 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		8E6381BC2829DD9B00249E87 /* WeightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTests.swift; sourceTree = "<group>"; };
@@ -611,6 +615,7 @@
 				8EBCC8112826D90D001ABD9E /* QTcIvcdResultView.swift */,
 				8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */,
 				8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */,
+				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -658,6 +663,7 @@
 				8EBCC80F2826CCFF001ABD9E /* QTcIvcdCalculatorController.swift */,
 				8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */,
 				8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */,
+				8E63411B28373A1F00178D0C /* EntrainmentCalculatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1137,6 +1143,7 @@
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
 				8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */,
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
+				8E63411C28373A1F00178D0C /* EntrainmentCalculatorViewController.swift in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
 				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
@@ -1229,6 +1236,7 @@
 				8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */,
 				8E00E95517B83CF60007A146 /* EPSEgsysRiskScore.m in Sources */,
 				8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */,
+				8E63411A283739EB00178D0C /* EntrainmentCalculatorView.swift in Sources */,
 				8E00E95817B84EC10007A146 /* EPSMartinRiskScore.m in Sources */,
 				8E050631282099660059DACB /* QTcCalculatorController.swift in Sources */,
 				8E00E95B17B851E50007A146 /* EPSOesilScore.m in Sources */,

@@ -28,6 +28,8 @@
 #define WARFARIN_CLINIC_ROW 6
 #define WEIGHT_CALCULATOR_ROW 7
 
+#define ENTRAINMENT_CALCULATOR_ROW 2
+
 @interface EPSMainTableViewController ()
 
 @end
@@ -94,7 +96,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0) { // Calculators
         if (indexPath.row == CRCL_CALCULATOR_ROW) {
             [DrugCalculatorController showWithVc:self drugName:DrugNameCrCl];
         }
@@ -115,6 +117,10 @@
         }
         if (indexPath.row == WEIGHT_CALCULATOR_ROW) {
             [WeightCalculatorCalculatorController showWithVc:self];
+        }
+    } else if (indexPath.section == 2) { // Reference & Tools
+        if (indexPath.row == ENTRAINMENT_CALCULATOR_ROW) {
+            [EntrainmentCalculatorViewController showWithVc:self];
         }
     }
 

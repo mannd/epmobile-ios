@@ -24,7 +24,7 @@ struct EntrainmentViewModel {
             }
             switch entrainmentResult {
             case .remoteSite:
-                result += "Remote site from reentry circuit"
+                result += "Remote site from reentry circuit."
             case .outerLoop:
                 result += "Outer loop of reentry circuit."
             case .adjacentBystander:
