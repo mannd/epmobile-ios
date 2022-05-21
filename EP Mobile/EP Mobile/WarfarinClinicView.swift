@@ -128,8 +128,8 @@ struct WarfarinClinicView: View {
                             clearResult()
                         }
                     }
-                    Section(header: Text("Weekly Dose (mg)")) {
-                        TextField("Weekly Dose", value: $weeklyDose, formatter: Self.numberFormatter)                            .keyboardType(.numberPad)
+                    Section(header: Text("Total Weekly Dose (mg)")) {
+                        TextField("Weekly Dose (mg)", value: $weeklyDose, formatter: Self.numberFormatter)                            .keyboardType(.numberPad)
                             .focused($textFieldIsFocused)
                             .keyboardType(.numbersAndPunctuation)
                             .onChange(of: weeklyDose) { _ in

@@ -65,8 +65,6 @@
 		8E37A59716FF40C3004E66B2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59616FF40C3004E66B2 /* Default.png */; };
 		8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59816FF41BD004E66B2 /* Default@2x.png */; };
 		8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */; };
-		8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */; };
-		8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */; };
 		8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */; };
 		8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E39950A204328520079E391 /* EPSCMSStrings.m */; };
 		8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */; };
@@ -288,10 +286,6 @@
 		8E37A59616FF40C3004E66B2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8E37A59816FF41BD004E66B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8E37A5A216FF8C8D004E66B2 /* EPSEntrainmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEntrainmentViewController.h; sourceTree = "<group>"; };
-		8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEntrainmentViewController.m; sourceTree = "<group>"; };
-		8E37A5A516FFD540004E66B2 /* EPSEntrainmentNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEntrainmentNotes.h; sourceTree = "<group>"; };
-		8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEntrainmentNotes.m; sourceTree = "<group>"; };
 		8E37A5A8170126FA004E66B2 /* EPSComplexAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexAlgorithmViewController.h; sourceTree = "<group>"; };
 		8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSComplexAlgorithmViewController.m; sourceTree = "<group>"; };
 		8E399509204328520079E391 /* EPSCMSStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSStrings.h; sourceTree = "<group>"; };
@@ -583,8 +577,6 @@
 				8E9755A7161A5A3900EAFD10 /* EPSBrugadaNotes.m */,
 				8E0DD7861631B50500DDC4CC /* EPSCMSNotes.h */,
 				8E0DD7871631B50500DDC4CC /* EPSCMSNotes.m */,
-				8E37A5A516FFD540004E66B2 /* EPSEntrainmentNotes.h */,
-				8E37A5A616FFD540004E66B2 /* EPSEntrainmentNotes.m */,
 				8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */,
 				8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */,
 				8E9755AF161D11E500EAFD10 /* EPSWarfarinNotes.h */,
@@ -837,8 +829,6 @@
 				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
 				8EC343E31630A188008938F6 /* EPSCMSViewController.h */,
 				8EC343E41630A188008938F6 /* EPSCMSViewController.m */,
-				8E37A5A216FF8C8D004E66B2 /* EPSEntrainmentViewController.h */,
-				8E37A5A316FF8C8D004E66B2 /* EPSEntrainmentViewController.m */,
 				8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */,
 				8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */,
 			);
@@ -1200,8 +1190,6 @@
 				8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */,
 				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
-				8E37A5A416FF8C8D004E66B2 /* EPSEntrainmentViewController.m in Sources */,
-				8E37A5A716FFD540004E66B2 /* EPSEntrainmentNotes.m in Sources */,
 				8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */,
 				8E54237E1B1B7FA800E7C4AA /* EPSHcmScd2014Notes.m in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,

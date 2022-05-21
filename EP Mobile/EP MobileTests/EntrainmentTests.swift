@@ -76,5 +76,7 @@ class EntrainmentTests: XCTestCase {
         XCTAssertEqual(vm10.calculate(), "Invalid S-QRS (<TCL) ignored!")
         let vm11 = EntrainmentViewModel(tcl: 0, ppi: 329, concealedFusion: true, sQrs: 301, egQrs: nil)
         XCTAssertEqual(vm11.calculate(), "INVALID ENTRY")
+        let vm12 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: true, sQrs: 0, egQrs: 200)
+        XCTAssertEqual(vm12.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit.")
     }
 }

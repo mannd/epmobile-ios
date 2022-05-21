@@ -35,7 +35,7 @@ struct Entrainment {
             return .adjacentBystander
         }
         // concealed fusion and short ppiMinusTcl present
-        if let sQrs = sQrs {
+        if let sQrs = sQrs, sQrs > 0 {
             let sQrsFraction = sQrsFraction(sQrs: sQrs)
             if sQrsFraction < 0.3 {
                 return .isthmusExit
@@ -63,9 +63,8 @@ struct Entrainment {
 
     func similarSQrsEgQrs() -> Bool? {
         guard concealedFusion else { return nil }
-        guard let sQrs = sQrs, let egQrs = egQrs else {
-            return nil
-        }
+        guard let sQrs = sQrs, let egQrs = egQrs else { return nil }
+        guard sQrs > 0, egQrs > 0 else { return nil }
         let sQrsFraction = sQrsFraction(sQrs: sQrs)
         guard sQrsFraction <= 1.0 else {
             return nil
@@ -89,9 +88,6 @@ enum EntrainmentResult {
     case isthmusCentral
     case isthmusProximal
     case innerLoop
-//    case similarStimEgm
-//    case dissimilarStimEgm
-
     case none
 
 }
