@@ -30,7 +30,7 @@ struct EntrainmentCalculatorView: View {
         NavigationView {
             VStack {
                 Form() {
-                    Section(header: Text("Tachycardia CL")) {
+                    Section(header: Text("Tachycardia CL and PPI")) {
                         HStack {
                             Text("Tachycardia CL")
                             TextField("TCL (msec)", value: $tcl, formatter: Self.numberFormatter)
@@ -38,8 +38,6 @@ struct EntrainmentCalculatorView: View {
                                 .multilineTextAlignment(.trailing)
                                 .focused($textFieldIsFocused)
                         }
-                    }
-                    Section(header: Text("Post-pacing interval")) {
                         HStack {
                             Text("Post-pacing interval")
                             TextField("PPI (msec)", value: $ppi, formatter: Self.numberFormatter)
@@ -52,27 +50,25 @@ struct EntrainmentCalculatorView: View {
                         Toggle(isOn: $concealedFusion) {
                             Text("Concealed fusion")
                         }
-                    }
-                    Section(header: Text("Stim-QRS")) {
                         HStack {
                             Text("Stim-QRS")
+                                .foregroundColor(concealedFusion ? .primary : Color.secondary)
                             TextField("S-QRS (msec)", value: $sQrs, formatter: Self.numberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
                                 .multilineTextAlignment(.trailing)
                                 .focused($textFieldIsFocused)
                         }
-                    }
-                    .disabled(!concealedFusion)
-                    Section(header: Text("EG-QRS")) {
+                        .disabled(!concealedFusion)
                         HStack {
                             Text("EG-QRS")
+                                .foregroundColor(concealedFusion ? .primary : Color.secondary)
                             TextField("EG-QRS (msec)", value: $egQrs, formatter: Self.numberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
                                 .multilineTextAlignment(.trailing)
                                 .focused($textFieldIsFocused)
                         }
+                        .disabled(!concealedFusion)
                     }
-                    .disabled(!concealedFusion)
                     Section(header: Text("Result")) {
                         Text(result)
                     }
