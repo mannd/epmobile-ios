@@ -19,7 +19,7 @@ struct EntrainmentViewModel {
         var result = "PPI-TCL = \(Int(model.ppiMinusTcl())). "
         do {
             let entrainmentResult = try model.calculate()
-            if model.concealedFusion &&  entrainmentResult != EntrainmentResult.adjacentBystander {
+            if model.concealedFusion && entrainmentResult != EntrainmentResult.adjacentBystander {
                 result += "Inner loop or isthmus site of reentry circuit. "
             }
             switch entrainmentResult {
@@ -47,6 +47,9 @@ struct EntrainmentViewModel {
                 } else {
                     result += " Dissimilar S-QRS and EG-QRS intervals suggest site may be an adjacent bystander."
                 }
+            }
+            if model.hasHighChanceOfSuccessfulAblation() {
+                result += " Site has high chance of ablation success, if ablating VT."
             }
             return result.trimmingCharacters(in: .whitespacesAndNewlines)
         } catch {

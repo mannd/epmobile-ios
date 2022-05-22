@@ -78,5 +78,7 @@ class EntrainmentTests: XCTestCase {
         XCTAssertEqual(vm11.calculate(), "INVALID ENTRY")
         let vm12 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: true, sQrs: 0, egQrs: 200)
         XCTAssertEqual(vm12.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit.")
+        let vm13 = EntrainmentViewModel(tcl: 300, ppi: 310, concealedFusion: true, sQrs: 100, egQrs: 110)
+        XCTAssertEqual(vm13.calculate(), "PPI-TCL = 10. Inner loop or isthmus site of reentry circuit. Isthmus central site. Similar S-QRS and EG-QRS intervals suggest site in isthmus of reentry circuit. Site has high chance of ablation success, if ablating VT.")
     }
 }

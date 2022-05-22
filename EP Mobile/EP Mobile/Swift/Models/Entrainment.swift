@@ -69,8 +69,21 @@ struct Entrainment {
         guard sQrsFraction <= 1.0 else {
             return nil
         }
-        let egMinusQrs = egQrs - sQrs
-        return abs(egMinusQrs) <= 20.0
+        guard let egMinusQrs = egMinusQrs() else { return nil}
+        return egMinusQrs <= 20.0
+    }
+
+    private func egMinusQrs() -> Double? {
+        guard let sQrs = sQrs, let egQrs = egQrs else {
+            return nil
+        }
+        guard sQrs > 0 && egQrs > 0 else { return nil }
+        return abs(egQrs - sQrs)
+    }
+
+    func hasHighChanceOfSuccessfulAblation() -> Bool {
+        guard let egQrs = egQrs, let egMinusQrs = egMinusQrs() else { return false }
+        return concealedFusion && ppiMinusTcl() <= 10 && egQrs / tcl <= 0.7 && egMinusQrs <= 10
     }
 }
 
