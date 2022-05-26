@@ -30,6 +30,8 @@
 
 #define ENTRAINMENT_CALCULATOR_ROW 2
 
+#define HCM_2014_ROW 8
+
 @interface EPSMainTableViewController ()
 
 @end
@@ -121,6 +123,10 @@
     } else if (indexPath.section == 2) { // Reference & Tools
         if (indexPath.row == ENTRAINMENT_CALCULATOR_ROW) {
             [EntrainmentCalculatorViewController showWithVc:self];
+        }
+    } else if (indexPath.section == 3) { // Risk scores
+        if (indexPath.row == HCM_2014_ROW) {
+            [HcmViewController showWithVc:self];
         }
     }
 

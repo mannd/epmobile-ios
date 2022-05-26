@@ -182,6 +182,9 @@
 		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
 		8EE007421B1A00E80080207D /* EPSHcmScd2014ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */; };
+		8EEE9BB5283D5055005AB875 /* HcmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */; };
+		8EEE9BB7283D8565005AB875 /* HcmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB6283D8565005AB875 /* HcmView.swift */; };
+		8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB8283D8819005AB875 /* HcmViewController.swift */; };
 		8EF29289226AA43C00F15B99 /* ArvcRiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */; };
 		8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */; };
 		8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */; };
@@ -462,6 +465,9 @@
 		8EDF8E5B20F2508F0072C409 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8EE007401B1A00E80080207D /* EPSHcmScd2014ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHcmScd2014ViewController.h; sourceTree = "<group>"; };
 		8EE007411B1A00E80080207D /* EPSHcmScd2014ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHcmScd2014ViewController.m; sourceTree = "<group>"; };
+		8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewModel.swift; sourceTree = "<group>"; };
+		8EEE9BB6283D8565005AB875 /* HcmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmView.swift; sourceTree = "<group>"; };
+		8EEE9BB8283D8819005AB875 /* HcmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewController.swift; sourceTree = "<group>"; };
 		8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EP MobileTests-Bridging-Header.h"; path = "EP Mobile/EP MobileTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvcRiskViewController.swift; sourceTree = "<group>"; };
 		8EF902F21F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaRiskScore.h; sourceTree = "<group>"; };
@@ -612,6 +618,7 @@
 				8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */,
 				8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
+				8EEE9BB6283D8565005AB875 /* HcmView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -661,6 +668,7 @@
 				8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */,
 				8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */,
 				8E63411B28373A1F00178D0C /* EntrainmentCalculatorViewController.swift */,
+				8EEE9BB8283D8819005AB875 /* HcmViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -702,6 +710,7 @@
 				8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */,
 				8E808366282DF55400E88A4E /* WarfarinViewModel.swift */,
 				8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */,
+				8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1214,6 +1223,7 @@
 				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
 				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
+				8EEE9BB7283D8565005AB875 /* HcmView.swift in Sources */,
 				8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */,
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
@@ -1221,6 +1231,8 @@
 				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
+				8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */,
+				8EEE9BB5283D5055005AB875 /* HcmViewModel.swift in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8EBCC8102826CCFF001ABD9E /* QTcIvcdCalculatorController.swift in Sources */,

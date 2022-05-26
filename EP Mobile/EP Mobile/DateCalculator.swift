@@ -67,11 +67,7 @@ struct DateCalculator: View {
                             clear()
                         }
                     }
-                    .frame(width: 140, height: 40)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(15)
-                    .padding()
+                    .roundedButton()
                 }
             }
             .onChange(of: numberOfDays, perform: { _ in clearResult() })
