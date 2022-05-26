@@ -8,6 +8,7 @@
 
 #import "EPSWarfarinDosingTableViewController.h"
 #import "EPSWarfarinDailyDoseCalculator.h"
+#import "EP_Mobile-Swift.h"
 
 #define NUM_DAYS 7
 #define SUN 0
@@ -44,8 +45,8 @@
 @synthesize monDose1;
 @synthesize monDose2;
 @synthesize tabletSize;
-@synthesize lowEnd;
-@synthesize highEnd;
+@synthesize lowEndPercentChange;
+@synthesize highEndPercentChange;
 @synthesize increase;
 @synthesize weeklyDose;
 
@@ -64,12 +65,12 @@
 	// Do any additional setup after loading the view.
     NSString *title = [[NSString alloc] initWithFormat:@"Warfarin Dosing (%g mg tab)", self.tabletSize];
     self.titleBar.title = title;
-    self.lowChangeLabel.text = [[NSString alloc] initWithFormat:@"%ld%% %@", (long)self.lowEnd,
+    self.lowChangeLabel.text = [[NSString alloc] initWithFormat:@"%ld%% %@", (long)self.lowEndPercentChange,
     self.increase ? @"Increase" : @"Decrease"];
-    self.highChangeLabel.text = [[NSString alloc] initWithFormat:@"%ld%% %@", (long)self.highEnd, self.increase ? @"Increase" : @"Decrease"];
+    self.highChangeLabel.text = [[NSString alloc] initWithFormat:@"%ld%% %@", (long)self.highEndPercentChange, self.increase ? @"Increase" : @"Decrease"];
     
-    float newLowEndWeeklyDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(self.lowEnd / 100.0) fromOldDose:self.weeklyDose isIncrease:self.increase];
-    float newHighEndWeeklyDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(self.highEnd / 100.0) fromOldDose:self.weeklyDose isIncrease:self.increase];
+    float newLowEndWeeklyDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(self.lowEndPercentChange / 100.0) fromOldDose:self.weeklyDose isIncrease:self.increase];
+    float newHighEndWeeklyDose = [EPSWarfarinDailyDoseCalculator getNewDoseFromPercentage:(self.highEndPercentChange / 100.0) fromOldDose:self.weeklyDose isIncrease:self.increase];
     EPSWarfarinDailyDoseCalculator *calculator = [[EPSWarfarinDailyDoseCalculator alloc] initWithTabletDose:tabletSize andWeeklyDose:newLowEndWeeklyDose];
     NSMutableArray *array = [calculator weeklyDoses];
     sunDose1.text = [self formatDose:[[array objectAtIndex:SUN] floatValue]];
@@ -107,7 +108,4 @@
     return [[NSString alloc] initWithFormat:@"%1.1f tab", dose];
 }
 
-- (IBAction)doneButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end

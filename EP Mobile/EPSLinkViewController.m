@@ -7,8 +7,8 @@
 //
 
 #import "EPSLinkViewController.h"
-#import "EPSDrugDoseCalculatorViewController.h"
 #import <WebKit/WKNavigationAction.h>
+#import "EP_Mobile-Swift.h"
 
 @interface EPSLinkViewController ()
 
@@ -107,7 +107,7 @@
 }
     
 - (void)calculate {
-    [self performSegueWithIdentifier:@"calcCreatinineClearanceSegue" sender:nil];
+    [DrugCalculatorController showWithVc:self drugName: DrugNameCrCl];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,10 +116,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSDrugDoseCalculatorViewController *drugDoseViewController = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController];
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"calcCreatinineClearanceSegue"])
-        drugDoseViewController.drug = @"Creatinine Clearance";
-}
 @end

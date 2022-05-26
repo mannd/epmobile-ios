@@ -151,6 +151,9 @@
     return 3;
 }
 
+- (void)formatCell:(UITableViewCell *)cell {
+    cell.detailTextLabel.textColor = UIColor.labelColor;
+}
 
 - (NSString *)getTitleForHeaderSection:(NSInteger)section {
     if (section == 0)

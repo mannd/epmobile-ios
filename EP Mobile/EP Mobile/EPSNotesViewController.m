@@ -12,12 +12,7 @@
 #import "EPSAnnularVTNotes.h"
 #import "EPSWarfarinNotes.h"
 #import "EPSCMSNotes.h"
-#import "EPSDateCalculatorNotes.h"
-#import "EPSEntrainmentNotes.h"
 #import "EPSAtrialTachNotes.h"
-#import "EPSWeightCalculatorNotes.h"
-#import "EPSDrugCalculatorNotes.h"
-#import "EPSHcmScd2014Notes.h"
 #import "EPSLogging.h"
 
 @interface EPSNotesViewController ()
@@ -55,18 +50,8 @@
         notes = [[EPSWarfarinNotes alloc] init];
     else if ([self.key isEqualToString:@"CMSNotes"])
         notes = [[EPSCMSNotes alloc] init];
-    else if ([self.key isEqualToString:@"DateCalculatorNotes"])
-        notes = [[EPSDateCalculatorNotes alloc] init];
-    else if ([self.key isEqualToString:@"EntrainmentNotes"])
-        notes = [[EPSEntrainmentNotes alloc] init];
     else if ([self.key isEqualToString:@"AtrialTachNotes"])
         notes = [[EPSAtrialTachNotes alloc] init];
-    else if ([self.key isEqualToString:@"WeightCalculatorNotes"])
-        notes = [[EPSWeightCalculatorNotes alloc] init];
-    else if ([self.key isEqualToString:@"DrugCalculatorNotes"])
-        notes = [[EPSDrugCalculatorNotes alloc] init];
-    else if ([self.key isEqualToString:@"HcmScd2014"])
-        notes = [[EPSHcmScd2014Notes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
