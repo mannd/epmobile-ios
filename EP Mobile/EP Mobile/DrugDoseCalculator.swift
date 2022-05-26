@@ -196,7 +196,7 @@ struct DrugDoseCalculator: View {
         } catch  {
             // TODO: original drug calculator age cutoff was 18 and over?
             if let error = error as? DoseError, error == .pediatricAge {
-                crClResult = "Minimum age is 12"
+                crClResult = "Minimum age is \(Patient.pediatricAgeCutoff)"
             } else {
                 crClResult = "INVALID ENTRY"
             }

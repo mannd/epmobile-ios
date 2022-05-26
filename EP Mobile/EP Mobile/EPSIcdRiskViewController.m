@@ -49,7 +49,7 @@
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
     self.navigationItem.rightBarButtonItem = editButton;
-    
+
     self.procedureTypePickerView.delegate = self;
     self.otherRisksTableView.delegate = self;
     self.otherRisksTableView.dataSource = self;

@@ -56,6 +56,11 @@ class DrugTests: XCTestCase {
         ptAge90Wt50 = nil
     }
 
+    func testAgeRange() {
+        XCTAssertThrowsError(try Patient(age: 11, sex: .male, weightKg: 30, creatinineMgDL: 1))
+        XCTAssertNoThrow(try Patient(age: Patient.pediatricAgeCutoff, sex: .female, weightKg: 30, creatinineMgDL: 1))
+    }
+
     func testCreatinineClearances() {
         XCTAssertEqual(ptCC136.crCl, 136, accuracy: 1)
         XCTAssertEqual(ptCC68.crCl, 68, accuracy: 1)
@@ -65,6 +70,8 @@ class DrugTests: XCTestCase {
         XCTAssertEqual(ptCC19.crCl, 19, accuracy: 1)
         XCTAssertEqual(ptCC15.crCl, 15, accuracy: 1)
         XCTAssertEqual(ptCC14.crCl, 14, accuracy: 1)
+
+
     }
 
 

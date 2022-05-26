@@ -80,10 +80,10 @@ struct QTcIvcdCalculatorView: View {
                     }
                     Section(header: Text("QTc Formula")) {
                         Picker(selection: $formula, label: Text(formulaName())) {
-                            Text("Bazett").tag(Formula.qtcBzt)
-                            Text("Fridericia").tag(Formula.qtcFrd)
-                            Text("Framingham").tag(Formula.qtcFrm)
                             Text("Hodges").tag(Formula.qtcHdg)
+                            Text("Framingham").tag(Formula.qtcFrm)
+                            Text("Fridericia").tag(Formula.qtcFrd)
+                            Text("Bazett").tag(Formula.qtcBzt)
                         }
                         .pickerStyle(.menu)
                     }

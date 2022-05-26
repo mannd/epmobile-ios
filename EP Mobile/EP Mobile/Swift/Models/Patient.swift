@@ -51,7 +51,13 @@ final class Patient {
     var weightKg: Double
     var creatinineMgDL: Double
 
-    // ? throwable init or init?()
+    // TODO: Make final decision re pediatric age cutoff: 12 or 18?
+    // Ideally base this on what online calculators use, if anything, and the
+    // literature on creatine clearance calculation.
+    
+    /// Ages **below** this cutoff are considered pediatric age group
+    static let pediatricAgeCutoff = 12
+
     init(
         age: Int,
         sex: Sex,
@@ -71,7 +77,7 @@ final class Patient {
             throw DoseError.creatinineTooLow
         }
         // TODO: original EP Mobile drug calculator was for 18 and over.
-        guard age > 12 else {
+        guard age >= Self.pediatricAgeCutoff else {
             throw DoseError.pediatricAge
         }
         self.age = age
@@ -79,23 +85,6 @@ final class Patient {
         self.weightKg = weightKg
         self.creatinineMgDL = creatinineMgDL
     }
-
-    // failable init -- might be all needed for error handling
-    // rather than throwing errors.
-    //    init?(
-//        age: Double,
-//        sex: Sex,
-//        weightKg: Double,
-//        creatinineMgDL: Double
-//    ) {
-//        guard creatinineMgDL > 0 else {
-//            return nil
-//        }
-//        self.age = age
-//        self.sex = sex
-//        self.weightKg = weightKg
-//        self.creatinineMgDL = creatinineMgDL
-//    }
 
     convenience init(
         age: Int,
