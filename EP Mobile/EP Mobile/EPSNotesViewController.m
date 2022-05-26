@@ -13,7 +13,6 @@
 #import "EPSWarfarinNotes.h"
 #import "EPSCMSNotes.h"
 #import "EPSAtrialTachNotes.h"
-#import "EPSHcmScd2014Notes.h"
 #import "EPSLogging.h"
 
 @interface EPSNotesViewController ()
@@ -53,8 +52,6 @@
         notes = [[EPSCMSNotes alloc] init];
     else if ([self.key isEqualToString:@"AtrialTachNotes"])
         notes = [[EPSAtrialTachNotes alloc] init];
-    else if ([self.key isEqualToString:@"HcmScd2014"])
-        notes = [[EPSHcmScd2014Notes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
