@@ -20,7 +20,6 @@
     return @"Risti AD, Imazio M, Adler Y, et al. Triage strategy for urgent management of cardiac tamponade: a position statement of the European Society of Cardiology Working Group on Myocardial and Pericardial Diseases. European Heart Journal. 2014;35(34):2279-2284. doi:10.1093/eurheartj/ehu217";
 }
 
-// TODO: confirm this link
 - (NSURL *)getReferenceLink {
     return [[NSURL alloc] initWithString:@"https://doi.org/10.1093/eurheartj/ehu217"];
 }
@@ -126,6 +125,10 @@
 
 - (int)detailTextNumberOfLines {
     return 3;
+}
+
+- (void)formatCell:(UITableViewCell *)cell {
+    cell.detailTextLabel.textColor = UIColor.labelColor;
 }
 
 - (NSString *)getTitleForHeaderSection:(NSInteger)section {

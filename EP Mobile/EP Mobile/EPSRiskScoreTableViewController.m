@@ -93,7 +93,6 @@
         riskScore = [[EPSErsRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"TamponadeRisk"])
         riskScore = [[EPSTamponadeRiskScore alloc] init];
-    // FIXME:
     else if ([scoreType isEqualToString:@"QTProlongationRisk"])
         riskScore = [[EPSQTProlongationRisk alloc] init];
     self.title = [riskScore getTitle];

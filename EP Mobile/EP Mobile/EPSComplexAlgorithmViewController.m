@@ -12,6 +12,7 @@
 #import "EPSComplexStepAlgorithmProtocol.h"
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"
+#import "EP_Mobile-Swift.h"
 
 #define v24PosStep 2
 #define aVLStep 3
@@ -54,6 +55,14 @@
     self.step = 1;
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
+
+    self.button1.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button2.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button3.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button4.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button5.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button6.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.instructionsButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
 }
 
 - (void)didReceiveMemoryWarning

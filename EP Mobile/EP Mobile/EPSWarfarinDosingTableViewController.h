@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EPSWarfarinDosingTableViewController : UIViewController
-- (IBAction)doneButtonPressed:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lowChangeLabel;
@@ -34,8 +33,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalWeeklyHighDose;
 
 @property (assign, nonatomic) float tabletSize;
-@property (assign, nonatomic) NSInteger lowEnd;
-@property (assign, nonatomic) NSInteger highEnd;
+@property (assign, nonatomic) NSInteger lowEndPercentChange;
+@property (assign, nonatomic) NSInteger highEndPercentChange;
 @property (assign, nonatomic) BOOL increase;
 @property (assign, nonatomic) float weeklyDose;
 

@@ -90,6 +90,9 @@
     return selected;
 }
 
+- (void)formatCell:(UITableViewCell *)cell {
+    cell.detailTextLabel.textColor = UIColor.labelColor;
+}
 
 - (NSString *)getMessage:(int)score {
     if (score == NO_ECG_RISK_SCORE) {

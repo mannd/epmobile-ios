@@ -9,13 +9,32 @@
 #import "EPSMainTableViewController.h"
 #import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
-#import "EPSDrugDoseCalculatorViewController.h"
+#import "EPSDrugDoseTableViewController.h"
 #import "EPSARVC2010TableViewController.h"
 
+#import "EP_Mobile-Swift.h"
+
 // Sigh!
+// TODO: Switch back to NO!!!! for release version
 #define ALLOW_DRUG_CALCULATORS NO
 
+// NB: These defines are all hard-coded, and any changes, additions, or deletions
+// to the main table view controller entries will require changing these values.
+// Also remember row 2 is invisible (the banned drug calculators).
+
+// Calculators section
+#define CRCL_CALCULATOR_ROW 0
+#define DATE_CALCULATOR_ROW 1
 #define DRUG_CALCULATORS_ROW 2
+#define INTERVAL_RATE_ROW 3
+#define QTC_CALCULATOR_ROW 4
+#define QTC_IVCD_CALCULATOR_ROW 5
+#define WARFARIN_CLINIC_ROW 6
+#define WEIGHT_CALCULATOR_ROW 7
+// References and tools section
+#define ENTRAINMENT_CALCULATOR_ROW 2
+// Risk scores section
+#define HCM_2014_ROW 8
 
 @interface EPSMainTableViewController ()
 
@@ -71,24 +90,56 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
-  
+
     if (section == 0 && row == DRUG_CALCULATORS_ROW && !allowDrugCalculators)
         return 0; //set the hidden cell's height to 0
     else
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) { // Calculators
+        if (indexPath.row == CRCL_CALCULATOR_ROW) {
+            [DrugCalculatorController showWithVc:self drugName:DrugNameCrCl];
+        }
+        if (indexPath.row == INTERVAL_RATE_ROW) {
+            [IntervalRateCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == DATE_CALCULATOR_ROW) {
+            [DateCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == QTC_CALCULATOR_ROW) {
+            [QTcCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == QTC_IVCD_CALCULATOR_ROW) {
+            [QTcIvcdCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == WARFARIN_CLINIC_ROW) {
+            [WarfarinClinicController showWithVc:self];
+        }
+        if (indexPath.row == WEIGHT_CALCULATOR_ROW) {
+            [WeightCalculatorCalculatorController showWithVc:self];
+        }
+    } else if (indexPath.section == 2) { // Reference & Tools
+        if (indexPath.row == ENTRAINMENT_CALCULATOR_ROW) {
+            [EntrainmentCalculatorViewController showWithVc:self];
+        }
+    } else if (indexPath.section == 3) { // Risk scores
+        if (indexPath.row == HCM_2014_ROW) {
+            [HcmViewController showWithVc:self];
+        }
+    }
+
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSDrugDoseCalculatorViewController *drugDoseViewController = (EPSDrugDoseCalculatorViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"CreatinineClearanceSegue"])
-        drugDoseViewController.drug = @"Creatinine Clearance";
     
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)drugDoseViewController;
+    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
 
     if ([segueIdentifier isEqualToString:@"Chads2Segue"])
         vc.scoreType = @"Chads2";
@@ -145,7 +196,6 @@
     else if ([segueIdentifier isEqualToString:@"ARVC1994Segue"])
         arvcVc.criteria = @"ARVC1994";
 
-    
 }
 
 

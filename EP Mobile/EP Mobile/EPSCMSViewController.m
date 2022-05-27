@@ -92,7 +92,10 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *buttonCalculate = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResult:)];
-    self.toolbarItems = [ NSArray arrayWithObjects: buttonCalculate, nil ];
+//    let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+
+    self.toolbarItems = [ NSArray arrayWithObjects: spacer, buttonCalculate, spacer, nil ];
 
 
     [self.navigationController setToolbarHidden:NO];
