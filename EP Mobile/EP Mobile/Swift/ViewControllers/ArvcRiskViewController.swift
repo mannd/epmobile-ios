@@ -41,7 +41,7 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
         rvefLabel.text = "50"
         ageTextField.delegate = self
         pvcCountTextField.delegate = self
-        disclaimerLabel.text = "Limitations: The calculator should not be used in patients with prior sustained ventricular arrhythmia or sudden cardiac arrest. It is designed to provide predictions based on the clinical characteristics of ARVC patients at time of their diagnosis.\n\nReference: Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2019. doi:10.1093/eurheartj/ehz103"
+        disclaimerLabel.text = "Limitations: The calculator should not be used in patients with prior sustained ventricular arrhythmia or sudden cardiac arrest. It is designed to provide predictions based on the clinical characteristics of ARVC patients at time of their diagnosis.\n\nReference: Cardrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180. doi:10.1093/eurheartj/ehac180"
 
         registerForKeyboardNotifications()
     }
@@ -53,7 +53,8 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func showReference(_ sender: Any) {
-        let svc = SFSafariViewController(url: NSURL(string: "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehz103/5419784")! as URL)
+        // Updated reference, original article was retracted and resubmitted.
+        let svc = SFSafariViewController(url: NSURL(string: "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehac180/6569858")! as URL)
         present(svc, animated: true, completion: nil)
     }
 
