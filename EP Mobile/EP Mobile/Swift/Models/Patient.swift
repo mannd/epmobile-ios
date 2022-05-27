@@ -38,7 +38,6 @@ enum CrClFormula: Int, CaseIterable, Identifiable, Equatable {
 
 enum DoseError: Error {
     case ageTooLow
-    case creatinineIsZero
     case weightTooLow
     case creatinineTooLow
     case pediatricAge
@@ -66,9 +65,6 @@ final class Patient {
     ) throws {
         guard age > 0 else {
             throw DoseError.ageTooLow
-        }
-        guard creatinineMgDL > 0 else {
-            throw DoseError.creatinineIsZero
         }
         guard weightKg > 10 else {
             throw DoseError.weightTooLow

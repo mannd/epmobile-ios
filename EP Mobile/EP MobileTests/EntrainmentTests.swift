@@ -51,6 +51,10 @@ class EntrainmentTests: XCTestCase {
         XCTAssertFalse(e2.similarSQrsEgQrs()!)
         let e3 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 280, egQrs: 260)
         XCTAssert(e3.similarSQrsEgQrs()!)
+        let e4 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: -1, egQrs: 260)
+        XCTAssertNil(e4.similarSQrsEgQrs())
+        let e5 = Entrainment(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 1, egQrs: -1)
+        XCTAssertNil(e5.similarSQrsEgQrs())
     }
 
     func testEntrainmentViewModel() {
@@ -73,12 +77,16 @@ class EntrainmentTests: XCTestCase {
         let vm9 = EntrainmentViewModel(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 299, egQrs: nil)
         XCTAssertEqual(vm9.calculate(), "PPI-TCL = 29. Inner loop or isthmus site of reentry circuit. Inner loop site.")
         let vm10 = EntrainmentViewModel(tcl: 300, ppi: 329, concealedFusion: true, sQrs: 301, egQrs: nil)
-        XCTAssertEqual(vm10.calculate(), "Invalid S-QRS (<TCL) ignored!")
+        XCTAssertEqual(vm10.calculate(), "Invalid S-QRS (>TCL) ignored!")
         let vm11 = EntrainmentViewModel(tcl: 0, ppi: 329, concealedFusion: true, sQrs: 301, egQrs: nil)
         XCTAssertEqual(vm11.calculate(), "INVALID ENTRY")
         let vm12 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: true, sQrs: 0, egQrs: 200)
-        XCTAssertEqual(vm12.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit.")
+        XCTAssertEqual(vm12.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit. Isthmus exit site. Dissimilar S-QRS and EG-QRS intervals suggest site may be an adjacent bystander.")
         let vm13 = EntrainmentViewModel(tcl: 300, ppi: 310, concealedFusion: true, sQrs: 100, egQrs: 110)
         XCTAssertEqual(vm13.calculate(), "PPI-TCL = 10. Inner loop or isthmus site of reentry circuit. Isthmus central site. Similar S-QRS and EG-QRS intervals suggest site in isthmus of reentry circuit. Site has high chance of ablation success, if ablating VT.")
+        let vm14 = EntrainmentViewModel(tcl: 300, ppi: 320, concealedFusion: true, sQrs: 1, egQrs: 200)
+        XCTAssertEqual(vm14.calculate(), "PPI-TCL = 20. Inner loop or isthmus site of reentry circuit. Isthmus exit site. Dissimilar S-QRS and EG-QRS intervals suggest site may be an adjacent bystander.")
+        let vm15 = EntrainmentViewModel(tcl: 300, ppi: 299, concealedFusion: true, sQrs: 1, egQrs: 200)
+        XCTAssertEqual(vm15.calculate(), "PPI less than TCL.")
     }
 }

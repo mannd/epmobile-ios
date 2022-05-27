@@ -70,8 +70,11 @@ class DrugTests: XCTestCase {
         XCTAssertEqual(ptCC19.crCl, 19, accuracy: 1)
         XCTAssertEqual(ptCC15.crCl, 15, accuracy: 1)
         XCTAssertEqual(ptCC14.crCl, 14, accuracy: 1)
+    }
 
-
+    func testCrClDrugFactory() {
+        let drug = DrugFactory.create(drugName: .crCl, patient: ptCC14)
+        XCTAssertNil(drug)
     }
 
 
@@ -124,6 +127,7 @@ class DrugTests: XCTestCase {
         let d19 = DrugFactory.create(drugName: .dabigatran, patient: ptCC19)
         let d15 = DrugFactory.create(drugName: .dabigatran, patient: ptCC15)
         let d14 = DrugFactory.create(drugName: .dabigatran, patient: ptCC14)
+        let d80 = DrugFactory.create(drugName: .dabigatran, patient: ptAge80Wt60Cr1)
 
         XCTAssertTrue(d45!.hasWarning())
         XCTAssertFalse(d68!.hasWarning())
@@ -135,6 +139,7 @@ class DrugTests: XCTestCase {
         XCTAssertEqual(d19?.getDose(), "Dose = 75 mg BID.\nAvoid concomitant use of P-gp inhibitors (e.g. dronedarone).")
         XCTAssertEqual(d15?.getDose(), "Dose = 75 mg BID.\nAvoid concomitant use of P-gp inhibitors (e.g. dronedarone).")
         XCTAssertEqual(d14?.getDose(), "DO NOT USE!")
+        XCTAssertEqual(d80?.getDose(), "Dose = 150 mg BID.\nConsider reducing dose to 75 mg BID when using with dronedarone or systemic ketoconazole. Possible increased bleeding risk (age > 75 y).")
     }
 
     func testDofetilide() {

@@ -128,5 +128,9 @@ class WarfarinTests: XCTestCase {
         let wvm11 = WarfarinViewModel(tabletSize: 10, weeklyDose: 200, inr: 4.5, inrTarget: .low)
         XCTAssertEqual(wvm11.calculate(), "Consider holding one dose.\nDecrease weekly dose by 10% (180.0 mg/wk) to 20% (160.0 mg/wk).")
         XCTAssertFalse(wvm11.weeklyDoseIsSane())
+
+
+        let wvm12 = WarfarinViewModel(tabletSize: 5, weeklyDose: 150, inr: 5.3, inrTarget: .high)
+        XCTAssertEqual(wvm12.calculate(), "Consider holding up to two doses.\nDecrease weekly dose by 10% (135.0 mg/wk) to 20% (120.0 mg/wk).")
     }
 }

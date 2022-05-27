@@ -24,6 +24,8 @@ class WeightTests: XCTestCase {
         XCTAssertEqual(w1.idealBodyWeight(), Measurement(value:50, unit: .kilograms))
         let w2 = Weight(weight: Measurement(value: 143, unit: .pounds), height: Measurement(value: 80, unit: .inches), sex: .male)
         XCTAssertEqual(w2.idealBodyWeight().converted(to: .pounds).value, Measurement(value:211.64, unit: UnitMass.pounds).value, accuracy: 0.01)
+        let w3 = Weight(weight: Measurement(value: 143, unit: .pounds), height: Measurement(value: 80, unit: .inches), sex: .female)
+        XCTAssertEqual(w3.idealBodyWeight().converted(to: .pounds).value, Measurement(value:201.72, unit: UnitMass.pounds).value, accuracy: 0.01)
     }
 
     func testAdjustedBodyWeight() {
@@ -75,5 +77,18 @@ class WeightTests: XCTestCase {
 
         let vm3 = WeightCalculatorViewModel(weight: Measurement(value: 300, unit: .kilograms), height: Measurement(value: 70, unit: .inches), sex: .male)
         XCTAssertEqual(vm3.recommendedBodyWeight(), "Recommended Weight = Adjusted Body Weight (163.8 kg)")
+        XCTAssertEqual(vm3.rawRecommendedBodyWeight(), "163.8")
+        let vm4 = WeightCalculatorViewModel(weight: Measurement(value: 0, unit: .kilograms), height: Measurement(value: 70, unit: .inches), sex: .male)
+        XCTAssertEqual(vm4.recommendedBodyWeight(), ErrorMessage.invalidEntry)
+        let vm5 = WeightCalculatorViewModel(weight: Measurement(value: 30, unit: .kilograms), height: Measurement(value: 0, unit: .inches), sex: .male)
+        XCTAssertEqual(vm5.recommendedBodyWeight(), ErrorMessage.invalidEntry)
+
+
+        let vm6 = WeightCalculatorViewModel(weight: Measurement(value: 170, unit: .pounds), height: Measurement(value: 70, unit: .inches), sex: .male)
+        XCTAssertEqual(vm6.recommendedBodyWeight(), "Recommended Weight = Ideal Body Weight (160.9 lb)")
+        XCTAssertEqual(vm6.rawRecommendedBodyWeight(), "160.9")
+        let vm7 = WeightCalculatorViewModel(weight: Measurement(value: 100, unit: .pounds), height: Measurement(value: 70, unit: .inches), sex: .male)
+        XCTAssertEqual(vm7.recommendedBodyWeight(), "Recommended Weight = Actual Body Weight (100 lb)")
+        XCTAssertEqual(vm7.rawRecommendedBodyWeight(), "100")
     }
 }

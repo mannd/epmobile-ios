@@ -297,30 +297,22 @@ final class Sotalol: Drug {
         if crCl >= 40 {
             dose = 80
         } else {
-            dose = 0
-        }
-        if dose == 0 {
             return DrugWarning.doNotUse.rawValue
         }
         if crCl > 60 {
             return "Dose = \(dose) mg BID. "
         }
-        if crCl >= 40 {
-            return "Dose = \(dose) mg daily. "
-        }
-        return DrugWarning.doNotUse.rawValue
+        return "Dose = \(dose) mg daily. "
     }
 
     func getDetails() -> String {
         if patient.crCl < 40 {
             return ""
-        } else {
-            let message = "Recommended starting dose for treatment of atrial fibrillation. Initial QT should be < 450 msec. If QT remains < 500 msec dose can be increased to 120 mg or 160 mg "
-            if patient.crCl > 60 {
-                return message + "BID."
-            } else {
-                return message + "daily."
-            }
         }
+        let message = "Recommended starting dose for treatment of atrial fibrillation. Initial QT should be < 450 msec. If QT remains < 500 msec dose can be increased to 120 mg or 160 mg "
+        if patient.crCl > 60 {
+            return message + "BID."
+        }
+        return message + "daily."
     }
 }

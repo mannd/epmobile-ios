@@ -88,9 +88,8 @@ struct WeightCalculatorViewModel {
             return "Recommended Weight = Adjusted Body Weight (\(formattedAdjustedBodyWeight()))"
         } else if model.isUnderweight() {
             return "Recommended Weight = Actual Body Weight (\(formattedActualBodyWeight()))"
-        } else {
-            return "Recommended Weight = Ideal Body Weight (\(formattedIdealBodyWeight()))"
         }
+        return "Recommended Weight = Ideal Body Weight (\(formattedIdealBodyWeight()))"
     }
 
 
@@ -99,9 +98,8 @@ struct WeightCalculatorViewModel {
             return rawAdjustedBodyWeight()
         } else if model.isUnderweight() {
             return rawActualBodyWeight()
-        } else {
-            return rawIdealBodyWeight()
         }
+        return rawIdealBodyWeight()
     }
 
     private func checkMeasurements() -> Bool {

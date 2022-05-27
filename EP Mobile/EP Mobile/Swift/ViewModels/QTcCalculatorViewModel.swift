@@ -57,7 +57,7 @@ struct QTcCalculatorViewModel {
             flagResult = rawResult > maximumQTc
             return (Self.formattedQTcResult(rawResult: rawResult), flagResult)
         } catch {
-            // all errors handled as invalid entry
+            // all errors handled as invalid entry, though this is probably unreachable code.
             flagResult = false
             return (ErrorMessage.invalidEntry, false)
         }
@@ -81,8 +81,7 @@ struct QTcCalculatorViewModel {
             if qt < minQT || qt > maxQT {
                 outOfRange = true
             }
-        }
-        else {
+        } else {
             outOfRange = true
         }
         return outOfRange

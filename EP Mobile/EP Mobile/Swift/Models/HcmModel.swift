@@ -26,7 +26,7 @@ enum HcmError: Error {
         case .laDiameterOutOfRange:
             return "Maximum LA diameter must be between 28 and 67 mm."
         case .gradientOutOfRange:
-            return "Maximum LV outflow tract gradient must be between 2 and 15.4 mmHg"
+            return "Maximum LV outflow tract gradient must be between 2 and 154 mmHg"
         }
     }
 }
