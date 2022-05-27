@@ -12,8 +12,7 @@ struct HcmViewModel {
     private let model: HcmModel
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        // TODO: Consider lower precision to 1 decimal place.
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = 1
         return formatter
     }()
 

@@ -78,14 +78,14 @@ class HcmTests: XCTestCase {
         XCTAssertEqual(h11.calculate(), "Maximum LA diameter must be between 28 and 67 mm.")
 
         let h12 = HcmViewModel(age: 30, thickness: 30, laDiameter: 30, gradient: 30, familyHxScd: false, hxNsvt: false, hxSyncope: false)
-        XCTAssertEqual(h12.calculate(), "5 year SCD Risk = 2.42%\nICD generally not indicated.")
+        XCTAssertEqual(h12.calculate(), "5 year SCD Risk = 2.4%\nICD generally not indicated.")
         let h13 = HcmViewModel(age: 30, thickness: 30, laDiameter: 30, gradient: 30, familyHxScd: true, hxNsvt: false, hxSyncope: false)
         XCTAssertEqual(h13.calculate(), "5 year SCD Risk = 3.8%\nICD generally not indicated.")
         let h14 = HcmViewModel(age: 30, thickness: 30, laDiameter: 30, gradient: 30, familyHxScd: true, hxNsvt: true, hxSyncope: false)
-        XCTAssertEqual(h14.calculate(), "5 year SCD Risk = 8.47%\nICD should be considered.")
+        XCTAssertEqual(h14.calculate(), "5 year SCD Risk = 8.5%\nICD should be considered.")
         let h15 = HcmViewModel(age: 30, thickness: 30, laDiameter: 30, gradient: 30, familyHxScd: true, hxNsvt: true, hxSyncope: true)
-        XCTAssertEqual(h15.calculate(), "5 year SCD Risk = 16.58%\nICD should be considered.")
-        XCTAssertEqual(h15.getDetails(), "Risk score: HCM SCD 2014\nRisks:\nAge = 30 yrs\nMax LV wall thickness = 30 mm\nMax LA diameter = 30 mm\nMax LVOT gradient = 30 mmHg\nFamily hx of SCD\nHx of NSVT\nHx of unexplained syncope\n5 year SCD Risk = 16.58%\nICD should be considered.\nReference: O’Mahony C., Jichi F., Pavlou M., Monserrat L., Anastasakis A., Rapezzi C.  A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J [Internet] 2014 Aug [cited 2015 May 29];35(30):2010–2020. Available from: http://doi.org/10.1093/eurheartj/eht439")
+        XCTAssertEqual(h15.calculate(), "5 year SCD Risk = 16.6%\nICD should be considered.")
+        XCTAssertEqual(h15.getDetails(), "Risk score: HCM SCD 2014\nRisks:\nAge = 30 yrs\nMax LV wall thickness = 30 mm\nMax LA diameter = 30 mm\nMax LVOT gradient = 30 mmHg\nFamily hx of SCD\nHx of NSVT\nHx of unexplained syncope\n5 year SCD Risk = 16.6%\nICD should be considered.\nReference: O’Mahony C., Jichi F., Pavlou M., Monserrat L., Anastasakis A., Rapezzi C.  A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J [Internet] 2014 Aug [cited 2015 May 29];35(30):2010–2020. Available from: http://doi.org/10.1093/eurheartj/eht439")
         let h16 = HcmViewModel(age: 115, thickness: 30, laDiameter: 51, gradient: 155, familyHxScd: true, hxNsvt: true, hxSyncope: true)
         XCTAssertEqual(h16.calculate(), "Maximum LV outflow tract gradient must be between 2 and 154 mmHg")
     }
