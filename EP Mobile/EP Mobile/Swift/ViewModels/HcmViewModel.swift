@@ -65,7 +65,6 @@ struct HcmViewModel {
         }
         result += "\n"
         result += calculate()
-        // TODO: Why only one reference?
         result += "\nReference: "
         result += getReference()
         return result

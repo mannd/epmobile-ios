@@ -50,11 +50,7 @@ final class Patient {
     var weightKg: Double
     var creatinineMgDL: Double
 
-    // TODO: Make final decision re pediatric age cutoff: 12 or 18?
-    // Ideally base this on what online calculators use, if anything, and the
-    // literature on creatine clearance calculation.
-    
-    /// Ages **below** this cutoff are considered pediatric age group
+    /// Ages **below** this cutoff are considered pediatric age group.  Cockcroft-Gault formula valid for age >= 12.
     static let pediatricAgeCutoff = 12
 
     init(
@@ -72,7 +68,6 @@ final class Patient {
         guard creatinineMgDL > 0 else {
             throw DoseError.creatinineTooLow
         }
-        // TODO: original EP Mobile drug calculator was for 18 and over.
         guard age >= Self.pediatricAgeCutoff else {
             throw DoseError.pediatricAge
         }

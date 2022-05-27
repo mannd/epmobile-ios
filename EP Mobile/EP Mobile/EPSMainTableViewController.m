@@ -18,7 +18,11 @@
 // TODO: Switch back to NO!!!! for release version
 #define ALLOW_DRUG_CALCULATORS NO
 
-// Update as needed.  Remember row 2 is invisible (the banned drug calculators).
+// NB: These defines are all hard-coded, and any changes, additions, or deletions
+// to the main table view controller entries will require changing these values.
+// Also remember row 2 is invisible (the banned drug calculators).
+
+// Calculators section
 #define CRCL_CALCULATOR_ROW 0
 #define DATE_CALCULATOR_ROW 1
 #define DRUG_CALCULATORS_ROW 2
@@ -27,9 +31,9 @@
 #define QTC_IVCD_CALCULATOR_ROW 5
 #define WARFARIN_CLINIC_ROW 6
 #define WEIGHT_CALCULATOR_ROW 7
-
+// References and tools section
 #define ENTRAINMENT_CALCULATOR_ROW 2
-
+// Risk scores section
 #define HCM_2014_ROW 8
 
 @interface EPSMainTableViewController ()

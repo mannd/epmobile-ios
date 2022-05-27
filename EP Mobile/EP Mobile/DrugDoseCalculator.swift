@@ -29,7 +29,6 @@ struct DrugDoseCalculator: View {
     var weightLabel: String { "Weight (\(massUnit.description))" }
     var creatinineLabel: String { "Creatinine (\(concentrationUnit.description))"}
 
-    // TODO: original drug calculator age cutoff was 18 and over?
     private static let minimumAge = 10
     private static let maximumAge = 120
     private static let ageRange: ClosedRange<Int> = minimumAge...maximumAge
@@ -194,7 +193,6 @@ struct DrugDoseCalculator: View {
             }
             saveResults(crCl: Int(round(patient.crCl)))
         } catch  {
-            // TODO: original drug calculator age cutoff was 18 and over?
             if let error = error as? DoseError, error == .pediatricAge {
                 crClResult = "Minimum age is \(Patient.pediatricAgeCutoff)"
             } else {

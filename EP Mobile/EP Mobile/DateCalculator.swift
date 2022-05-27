@@ -74,7 +74,6 @@ struct DateCalculator: View {
             .onChange(of: startingDate, perform: { _ in clearResult() })
             .onChange(of: subtractDays, perform: { _ in clearResult() })
             .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
-            // TODO change destination to the Note you want to show.
             .navigationBarItems(trailing:
                                     Button(action: { showingInfo.toggle() }) {
                 Image(systemName: "info.circle")

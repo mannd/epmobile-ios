@@ -9,7 +9,6 @@
 import UIKit
 import SafariServices
 
-// TODO: Handle dismissing keyboard
 class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ageTextField: UITextField!
