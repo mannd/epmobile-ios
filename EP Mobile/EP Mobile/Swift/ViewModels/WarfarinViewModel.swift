@@ -16,22 +16,22 @@ class WarfarinViewModel {
         model = Warfarin(inr: inr, weeklyDose: weeklyDose, tabletSize: tabletSize, inrTarget: inrTarget)
     }
 
-    func calculate() -> String {
+    func calculate() -> (String, Bool) {
         guard model.inr > 0 && model.weeklyDose > 0 else {
-            return ErrorMessage.invalidEntry
+            return (ErrorMessage.invalidEntry, false)
         }
         var result = ""
         let doseChange = model.getDoseChange()
         if let instruction = doseChange.instruction {
             if instruction == .holdWarfarin || instruction == .therapeutic {
-                return instruction.description
+                return (instruction.description, false)
             } else {
                 result = "\(instruction.description)\n"
             }
         }
         // At this point, doseChange.range and direction should be non-nil
         guard let range = doseChange.range, let direction = doseChange.direction else {
-            return ErrorMessage.invalidEntry
+            return (ErrorMessage.invalidEntry, false)
         }
         switch direction {
         case .increase:
@@ -45,7 +45,7 @@ class WarfarinViewModel {
         if weeklyDoseIsSane() {
             dosingTableData = createDosingTableData(lowEndDose: range.lowerBound, highEndDose: range.upperBound, direction: direction)
         }
-        return result
+        return (result, true)
     }
 
     func weeklyDoseIsSane() -> Bool {
