@@ -129,7 +129,7 @@ struct WarfarinClinicView: View {
                         }
                     }
                     Section(header: Text("Total Weekly Dose (mg)")) {
-                        TextField("Weekly Dose (mg)", value: $weeklyDose, formatter: Self.numberFormatter)                            .keyboardType(.numberPad)
+                        TextField("Weekly Dose (mg)", value: $weeklyDose, formatter: Self.numberFormatter)
                             .focused($textFieldIsFocused)
                             .keyboardType(.numbersAndPunctuation)
                             .onChange(of: weeklyDose) { _ in
@@ -137,7 +137,7 @@ struct WarfarinClinicView: View {
                             }
                     }
                     Section(header: Text("Current INR")) {
-                        TextField("Current INR", value: $inr, formatter: Self.numberFormatter)                            .keyboardType(.numberPad)
+                        TextField("Current INR", value: $inr, formatter: Self.numberFormatter)
                             .focused($textFieldIsFocused)
                             .keyboardType(.numbersAndPunctuation)
                             .onChange(of: inr) { _ in
@@ -204,8 +204,9 @@ struct WarfarinClinicView: View {
         textFieldIsFocused = false
         viewModel = WarfarinViewModel(tabletSize: tabletSize.value, weeklyDose: weeklyDose, inr: inr, inrTarget: inrTarget)
         if let viewModel = viewModel {
-            result = viewModel.calculate()
-            if viewModel.weeklyDoseIsSane() {
+            var showMessage: Bool = false
+            (result, showMessage) = viewModel.calculate()
+            if viewModel.weeklyDoseIsSane() && showMessage {
                 dosingTableData = viewModel.dosingTableData
                 showDosingAlert = true
             }

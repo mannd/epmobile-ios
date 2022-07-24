@@ -70,10 +70,10 @@ struct Warfarin {
         if inr < 2.0 {
             doseChange.range = 5...20
             doseChange.direction = .increase
-        } else if inr >= 3.0 && inr < 3.6 {
+        } else if inr > 3.0 && inr < 3.6 {
             doseChange.range = 5...15
             doseChange.direction = .decrease
-        } else if inr >= 3.6 && inr < 4 {
+        } else if inr >= 3.6 && inr <= 4 {
             doseChange.range = 10...15
             doseChange.direction = .decrease
         } else if inr > 4 {
@@ -92,10 +92,10 @@ struct Warfarin {
         } else if inr >= 2.0 && inr < 2.5 {
             doseChange.range = 5...15
             doseChange.direction = .increase
-        } else if inr > 3.6 && inr < 4.6 {
+        } else if inr > 3.5 && inr <= 4.6 {
             doseChange.range = 5...15
             doseChange.direction = .decrease
-        } else if inr >= 4.6 && inr < 5.2 {
+        } else if inr > 4.6 && inr <= 5.2 {
             doseChange.range = 10...20
             doseChange.direction = .decrease
             doseChange.instruction = .holdOneDose
