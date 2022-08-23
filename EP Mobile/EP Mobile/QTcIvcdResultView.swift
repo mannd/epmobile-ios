@@ -52,7 +52,7 @@ struct QTcIvcdResultDetail: View {
     }
 
     func getDetail() -> String {
-        let lbbbDependentFormulas: Set<QTcIvcdFormula> = [.qtm, .qtmc, .prelbbbqtc]
+        let lbbbDependentFormulas: Set<QTcIvcdFormula> = [.prelbbbqtc]
         if lbbbDependentFormulas.contains(formula) && !lbbb {
             return ""
         } else {

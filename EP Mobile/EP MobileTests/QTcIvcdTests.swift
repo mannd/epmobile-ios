@@ -25,11 +25,11 @@ class QTcIvcdTests: XCTestCase {
         XCTAssertEqual(qtcIvcd.qt, 360.0, accuracy: 0.01)
         XCTAssertEqual(qtcIvcd.jt(), 230.0, accuracy: 0.01)
         XCTAssertEqual(qtcIvcd.jtc()!, 253.76, accuracy: 0.01)
-        XCTAssertEqual(qtcIvcd.qtCorrectedForLBBB(), 296.95, accuracy: 0.01)
+        XCTAssertEqual(qtcIvcd.qtCorrectedForLBBB(), 295.0, accuracy: 0.01)
         XCTAssertEqual(qtcIvcd.preLbbbQtc()!, 348.76, accuracy: 0.01)
         XCTAssertEqual(qtcIvcd.qtc()!, 383.76, accuracy: 0.01)
-        XCTAssertEqual(qtcIvcd.qtm(), 296.95, accuracy: 0.01)
-        XCTAssertEqual(qtcIvcd.qtmc()!, 316.54, accuracy: 0.01)
+        XCTAssertEqual(qtcIvcd.qtm(), 295.0, accuracy: 0.01)
+        XCTAssertEqual(qtcIvcd.qtmc()!, 314.47, accuracy: 0.01)
         XCTAssertEqual(qtcIvcd.qtCorrectedForIvcdAndSex(), 364.97, accuracy: 0.01)
     }
 
@@ -40,15 +40,13 @@ class QTcIvcdTests: XCTestCase {
         XCTAssertEqual(result[.jt], "JT = 230 msec")
         XCTAssertEqual(result[.qtc], "QTc = 384 msec")
         XCTAssertEqual(result[.jtc], "JTc = 254 msec")
-        XCTAssertEqual(result[.qtm], "QTm = 297 msec")
-        XCTAssertEqual(result[.qtmc], "QTmc = 317 msec")
+        XCTAssertEqual(result[.qtm], "QTm = 295 msec")
+        XCTAssertEqual(result[.qtmc], "QTmc = 314 msec")
         XCTAssertEqual(result[.qtrrqrs], "QTrr,qrs = 365 msec")
         XCTAssertEqual(result[.prelbbbqtc], "preLBBBQTc = 349 msec")
 
         let qtcIvcdViewModel1 = QTcIvcdViewModel(qt: 360, qrs: 130, intervalRate: 880, intervalRateType: .interval, sex: .male, formula: .qtcBzt, isLBBB: false)
         let result1 = try! qtcIvcdViewModel1.calculate()
-        XCTAssertEqual(result1[.qtm], "QTm only defined for LBBB")
-        XCTAssertEqual(result1[.qtmc], "QTmc only defined for LBBB")
         XCTAssertEqual(result1[.prelbbbqtc], "preLBBBQTc only defined for LBBB")
 
 
@@ -74,10 +72,10 @@ class QTcIvcdTests: XCTestCase {
     func testCorrectQTForBBB() {
         let m1 = QTcIvcd(qt: 360, qrs: 144, intervalRate: 800, intervalRateType: .interval, sex: .male)
         let result1 = m1.qtCorrectedForLBBB()
-        XCTAssertEqual(result1, 290.16, accuracy: 0.01)
+        XCTAssertEqual(result1, 288.0, accuracy: 0.01)
         let m2 = QTcIvcd(qt: 444, qrs: 197, intervalRate: 800, intervalRateType: .interval, sex: .male)
         let result2 = m2.qtCorrectedForLBBB()
-        XCTAssertEqual(result2, 348.45, accuracy: 0.01)
+        XCTAssertEqual(result2, 345.5, accuracy: 0.01)
         let m3 = QTcIvcd(qt: 400, qrs: 0, intervalRate: 800, intervalRateType: .interval, sex: .male)
         let result3 = m3.qtCorrectedForLBBB()
         XCTAssertEqual(result3, 400, accuracy: 0.01)
