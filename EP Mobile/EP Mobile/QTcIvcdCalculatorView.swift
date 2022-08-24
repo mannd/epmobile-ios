@@ -42,7 +42,7 @@ struct QTcIvcdCalculatorView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResultList: result, lbbb: $isLbbb), isActive: $showResults) { EmptyView() }
+                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResultList: result, qtcFormula: formula, lbbb: $isLbbb), isActive: $showResults) { EmptyView() }
                 Form {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {

@@ -11,13 +11,16 @@ import MiniQTc
 
 struct QTcIvcdResultView: View {
     var qtcIvcdResultList: QTcIvcdResultList
+    var qtcFormula: Formula = .qtcBzt
     @Binding var lbbb: Bool
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(qtcIvcdResultList.keys, id: \.self) { key in
-                    if let value: String = qtcIvcdResultList[key], let detail = QTcIvcdViewModel.qtcIvcdResultDetails[key] {
+                    if let value: String = qtcIvcdResultList[key], let detail = //QTcIvcdViewModel.qtcIvcdResultDetails[key]
+                        QTcIvcdViewModel.getDetails(formula: qtcFormula, qtIvcdFormula: key)
+                    {
                         NavigationLink(destination: QTcIvcdResultDetail(formula: key, value: value, detail: detail, lbbb: $lbbb)) {
                             Text(value)
                         }
@@ -52,7 +55,7 @@ struct QTcIvcdResultDetail: View {
     }
 
     func getDetail() -> String {
-        let lbbbDependentFormulas: Set<QTcIvcdFormula> = [.qtm, .qtmc, .prelbbbqtc]
+        let lbbbDependentFormulas: Set<QTcIvcdFormula> = [.prelbbbqtc]
         if lbbbDependentFormulas.contains(formula) && !lbbb {
             return ""
         } else {

@@ -48,8 +48,10 @@ struct QTcIvcd {
         return result
     }
 
+    // Updated to use Bogossian 2020
     func qtCorrectedForLBBB() -> Double {
-        return qt - (qrs * 0.485)
+        //return qt - (qrs * 0.485) // Bogossian 2014
+        return qt - (qrs * 0.5) // Bogossian 2020
     }
 
     func qtCorrectedForIvcdAndSex() -> Double {
