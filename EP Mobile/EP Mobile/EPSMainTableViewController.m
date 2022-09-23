@@ -15,7 +15,8 @@
 #import "EP_Mobile-Swift.h"
 
 // Sigh!
-// TODO: Switch back to NO!!!! for release version
+// TODO: Switch back to NO!!!! for release version.
+// Apple won't allow drug calculators in apps.
 #define ALLOW_DRUG_CALCULATORS NO
 
 // NB: These defines are all hard-coded, and any changes, additions, or deletions

@@ -145,11 +145,15 @@ struct DrugDoseCalculator: View {
             .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
-            .navigationBarItems(trailing: drugName != .crCl ? AnyView(Button(action: { showInfo.toggle() }) {
+            .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
-                Info()
-            }) : AnyView(EmptyView()))
+                if drugName == .crCl {
+                    CrClInfo()
+                } else {
+                    Info()
+                }
+            }))
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -165,11 +169,11 @@ struct DrugDoseCalculator: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .alert(isPresented: $showWarning) {
-                   Alert(
-                       title: Text("Warning"),
-                       message: Text(drugDose)
-                   )
-               }
+            Alert(
+                title: Text("Warning"),
+                message: Text(drugDose)
+            )
+        }
     }
 
     func getCrStep() -> Double {
@@ -237,6 +241,34 @@ struct DrugDoseCalculator: View {
     }
 }
 
+private struct CrClInfo: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                Form {
+                    Section(header: Text("Instructions")) {
+                        Text("This calculator uses the Cockcroft-Gault formula, which is the recommended formula for calculating creatinine clearance for determining drug doses.  You can consider using the Weight Calculator to adjust body weight for determining creatinine clearance.\n\nIf you wish to calculate a normalized GFR to estimate renal function, use the GFR Calculator instead")
+                    }
+                    Section(header: Text("Reference")) {
+                            Text("Cockcroft DW, Gault H. Prediction of Creatinine Clearance from Serum Creatinine. NEF. 1976;16(1):31-41.\n[doi:10.1159/000180580](https://doi.org/10.1159/000180580)")
+                        }
+                }
+                Button("Done") {
+                    dismiss()
+                }
+                .frame(width: 140, height: 40)
+                .foregroundColor(.white)
+                .background(Color.accentColor)
+                .cornerRadius(15)
+                .padding()
+            }
+            .navigationBarTitle(Text("Creatinine Clearance"), displayMode: .inline)
+        }
+    }
+}
+
 private struct Info: View {
     @Environment(\.dismiss) private var dismiss
 
@@ -245,8 +277,8 @@ private struct Info: View {
             VStack {
                 Form {
                     Section(header: Text("Caution")) {
-                        Text("Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage.")
-                    }
+                            Text("Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage.")
+                        }
                 }
                 Button("Done") {
                     dismiss()
@@ -261,6 +293,14 @@ private struct Info: View {
         }
     }
 }
+
+//This calculator and all the drug
+//        calculators (except Warfarin) use the Cockcroft-Gault formula, which is the recommended
+//        formula for calculating creatinine clearance for determining drug doses.  You can consider
+//        using the Weight Calculator to adjust body weight for determining
+//        creatinine clearance.\n\nIf you wish to calculate a normalized GFR to estimate
+//        renal function, use the GFR Calculator instead.
+
 
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
