@@ -10,6 +10,7 @@ import SwiftUI
 import MiniQTc
 
 struct QTcIvcdResultView: View {
+    @State private var showInfo = false
     var qtcIvcdResultList: QTcIvcdResultList
     var qtcFormula: Formula = .qtcBzt
     @Binding var lbbb: Bool
@@ -28,30 +29,43 @@ struct QTcIvcdResultView: View {
                 }
             }
             .navigationBarTitle("QTc with IVCD Results", displayMode: .inline )
+            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
+                Image(systemName: "info.circle")
+            }.sheet(isPresented: $showInfo) {
+                QTcIvcdInfo()
+            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct QTcIvcdResultDetail: View {
+    @State private var showInfo = false
     var formula: QTcIvcdFormula = .qt
     var value: String
     var detail: String
     @Binding var lbbb: Bool
 
     var body: some View {
-        Form {
-            Section(header: Text(formula.description)) {
-                VStack {
-                    Text(formula.description).bold().frame(maxWidth: .infinity, alignment: .center)
-                    Spacer()
-                    Text(value).frame(maxWidth: .infinity, alignment: .center)
-                    Spacer()
-                    Text(getDetail()).multilineTextAlignment(.leading)
-                }.padding()
+        NavigationView {
+            Form {
+                Section(header: Text(formula.description)) {
+                    VStack {
+                        Text(formula.description).bold().frame(maxWidth: .infinity, alignment: .center)
+                        Spacer()
+                        Text(value).frame(maxWidth: .infinity, alignment: .center)
+                        Spacer()
+                        Text(getDetail()).multilineTextAlignment(.leading)
+                    }.padding()
+                }
             }
+            .navigationBarTitle("Details", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
+                Image(systemName: "info.circle")
+            }.sheet(isPresented: $showInfo) {
+                QTcIvcdInfo()
+        })
         }
-        .navigationBarTitle("Details", displayMode: .inline)
     }
 
     func getDetail() -> String {
@@ -63,6 +77,9 @@ struct QTcIvcdResultDetail: View {
         }
     }
 }
+
+
+
 
 struct QTcIvcdResult_Previews: PreviewProvider {
     static let qtcIvcdResultList: QTcIvcdResultList = [.qt: "QT = 440 msec", .qtc: "QTc = 540 msec"]

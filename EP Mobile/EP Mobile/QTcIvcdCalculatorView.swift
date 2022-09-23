@@ -21,6 +21,7 @@ struct QTcIvcdCalculatorView: View {
     @State private var errorMessage = ""
     @State private var showErrorMessage = false
     @State private var showResults = false
+    @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultQtcFormula) var defaultQtcFormula: String = Keys.bazett
@@ -101,6 +102,11 @@ struct QTcIvcdCalculatorView: View {
                 }
             }
             .navigationBarTitle(Text("QTc IVCD Calculator"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
+                Image(systemName: "info.circle")
+            }.sheet(isPresented: $showInfo) {
+                QTcIvcdInfo()
+            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
@@ -174,8 +180,40 @@ struct QTcIvcdCalculatorView: View {
     }
 }
 
+struct QTcIvcdInfo: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                Form {
+                    Section(header: Text("Usage")) {
+                        Text("Use this calculator to estimate the QTc when there is an intraventricular conduction delay.")
+                    }
+                    Section(header: Text("References")) {
+                        Text("Rautaharju PM, Zhang ZM, Prineas R, Heiss G. Assessment of prolonged QT and JT intervals in ventricular conduction defects. American Journal of Cardiology. 2004;93(8):1017-1021.\n[doi:10.1016/j.amjcard.2003.12.055](https://doi.org/10.1016/j.amjcard.2003.12.055)")
+                        Text("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\n[doi:10.1161/CIRCULATIONAHA.108.191096](https://doi.org/10.1161/CIRCULATIONAHA.108.191096)")
+                        Text("Yankelson L, Hochstadt A, Sadeh B, et al. New formula for defining “normal” and “prolonged” QT in patients with bundle branch block. Journal of Electrocardiology. 2018;51(3):481-486.\n[doi:10.1016/j.jelectrocard.2017.12.039](https://doi.org/10.1016/j.jelectrocard.2017.12.039)")
+                        Text("Bogossian H, Linz D, Heijman J, et al. QTc evaluation in patients with bundle branch block. Int J Cardiol Heart Vasc. 2020;30:100636.\n[doi:10.1016/j.ijcha.2020.100636](https://doi.org/10.1016/j.ijcha.2020.100636)")
+                    }
+                }
+                Button("Done") {
+                    dismiss()
+                }
+                .frame(width: 140, height: 40)
+                .foregroundColor(.white)
+                .background(Color.accentColor)
+                .cornerRadius(15)
+                .padding()
+            }
+            .navigationBarTitle(Text("QTc IVCD"), displayMode: .inline)
+        }
+    }
+}
+
 struct QTcIvcdCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         QTcIvcdCalculatorView()
+        QTcIvcdInfo()
     }
 }

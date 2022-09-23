@@ -248,7 +248,7 @@ private struct CrClInfo: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Instructions")) {
+                    Section(header: Text("Notes")) {
                         Text("This calculator uses the Cockcroft-Gault formula, which is the recommended formula for calculating creatinine clearance for determining drug doses.  You can consider using the Weight Calculator to adjust body weight for determining creatinine clearance.\n\nIf you wish to calculate a normalized GFR to estimate renal function, use the GFR Calculator instead")
                     }
                     Section(header: Text("Reference")) {

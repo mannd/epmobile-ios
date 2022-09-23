@@ -253,7 +253,7 @@ private struct Info: View {
 
                     }
                     Section(header: Text("Reference")) {
-                        Text("Reference: Winter MA et al.  Pharmacotherapy 2012;32:604.\nhttp://www.ncbi.nlm.nih.gov/pubmed/22576791")
+                        Text("Winter MA, Guhr KN, Berg GM. Impact of various body weights and serum creatinine concentrations on the bias and accuracy of the Cockcroft-Gault equation. Pharmacotherapy. 2012;32(7):604-612.\n[doi:10.1002/j.1875-9114.2012.01098.x](https://doi.org/10.1002/j.1875-9114.2012.01098.x)")
                     }
                 }
                 Button("Done") {
