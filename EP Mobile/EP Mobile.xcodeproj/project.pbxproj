@@ -45,6 +45,8 @@
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
 		8E0DF87A283C522D00367D4A /* HcmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DF879283C522D00367D4A /* HcmModel.swift */; };
+		8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */; };
+		8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */; };
 		8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */; };
 		8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */; };
 		8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */; };
@@ -264,6 +266,8 @@
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
 		8E0DF879283C522D00367D4A /* HcmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmModel.swift; sourceTree = "<group>"; };
+		8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreView.swift; sourceTree = "<group>"; };
+		8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreViewController.swift; sourceTree = "<group>"; };
 		8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculator.swift; sourceTree = "<group>"; };
 		8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculatorController.swift; sourceTree = "<group>"; };
 		8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateConversion.swift; sourceTree = "<group>"; };
@@ -611,6 +615,7 @@
 				8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8EEE9BB6283D8565005AB875 /* HcmView.swift */,
+				8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -661,6 +666,7 @@
 				8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */,
 				8E63411B28373A1F00178D0C /* EntrainmentCalculatorViewController.swift */,
 				8EEE9BB8283D8819005AB875 /* HcmViewController.swift */,
+				8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1134,6 +1140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */,
 				8EC19C38159FE0FA00975E2B /* main.m in Sources */,
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
 				8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */,
@@ -1216,6 +1223,7 @@
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
+				8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */,
 				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
