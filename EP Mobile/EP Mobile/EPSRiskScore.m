@@ -70,6 +70,11 @@
     return nil;
 }
 
+- (NSString *)getInstructions {
+    return nil;
+}
+
+
 - (NSString *)getReference {
     return nil;
 }

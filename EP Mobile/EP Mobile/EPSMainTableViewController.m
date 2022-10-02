@@ -11,6 +11,8 @@
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseTableViewController.h"
 #import "EPSARVC2010TableViewController.h"
+#import "EPSChadsRiskScore.h"
+#import "EPSChadsVascRiskScore.h"
 
 #import "EP_Mobile-Swift.h"
 
@@ -36,6 +38,7 @@
 #define ENTRAINMENT_CALCULATOR_ROW 2
 // Risk scores section
 #define CHADS_ROW 3
+#define CHADS_VASC_ROW 4
 #define HCM_2014_ROW 8
 
 @interface EPSMainTableViewController ()
@@ -58,14 +61,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    //self.automaticallyAdjustsScrollViewInsets = NO;
 
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
@@ -132,7 +127,10 @@
         }
     } else if (indexPath.section == 3) { // Risk scores
         if (indexPath.row == CHADS_ROW) {
-            [ChadsViewController showWithVc:self];
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSChadsRiskScore alloc] init]];
+        }
+        if (indexPath.row == CHADS_VASC_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSChadsVascRiskScore alloc] init]];
         }
         if (indexPath.row == HCM_2014_ROW) {
             [HcmViewController showWithVc:self];
@@ -146,11 +144,7 @@
     
     EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
 
-    if ([segueIdentifier isEqualToString:@"Chads2Segue"])
-        vc.scoreType = @"Chads2";
-    else if ([segueIdentifier isEqualToString:@"ChadsVascSegue"])
-        vc.scoreType = @"ChadsVasc";
-    else if ([segueIdentifier isEqualToString:@"HasBledSegue"])
+    if ([segueIdentifier isEqualToString:@"HasBledSegue"])
         vc.scoreType = @"HasBled";
     else if ([segueIdentifier isEqualToString:@"HemorrhagesSegue"])
         vc.scoreType = @"Hemorrhages";

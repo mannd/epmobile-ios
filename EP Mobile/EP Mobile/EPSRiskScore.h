@@ -18,6 +18,7 @@
 - (int)numberOfRowsInSection:(NSInteger)section;
 - (int)calculateScore:(NSMutableArray *)risks;
 - (NSString *)getMessage:(int)score;
+- (NSString *)getInstructions;
 - (CGFloat)rowHeight:(CGFloat)defaultHeight;
 - (void)formatCell:(UITableViewCell *)cell;
 - (NSString *)getReference;

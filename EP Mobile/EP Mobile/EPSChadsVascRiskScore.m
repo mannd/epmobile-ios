@@ -21,14 +21,17 @@
     return @"CHA\u2082DS\u2082-VASc";
 }
 
+- (NSString *)getInstructions {
+    return @"Use this score to assess the risk of stroke in patients with atrial fibrillation.";
+}
+
 - (NSString *)getReference {
-    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510. doi:10.1093/eurheartj/ehr488";
+    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.\nhttps://doi.org/10.1093/eurheartj/ehr488";
 }
 
 - (NSURL *)getReferenceLink {
     return [[NSURL alloc] initWithString:@"https://academic.oup.com/eurheartj/article/33/12/1500/473502"];
 }
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
