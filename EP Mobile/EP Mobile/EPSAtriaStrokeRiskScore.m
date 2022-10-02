@@ -18,14 +18,13 @@
     return @"ATRIA Stroke Risk";
 }
 
+- (NSString *)getInstructions {
+    return @"Use this score to predict the risk of thromboembolic events in patients with atrial fibrillation.";
+}
+
 - (NSString *)getReference {
-    return @"Singer DE, Chang Y, Borowsky LH, Fang MC, Pomernacki NK, Udaltsova N, Reynolds K, Go AS.  A new risk scheme to predict ischemic stroke and other thromboembolism in atrial fibrillation: the ATRIA study stroke risk score. J Am Heart Assoc [Internet]. 2013 Jun 19 [cited 2015 Nov 29];2:3000250.  Available from: http://jaha.ahajournals.org/content/2/3/e000250";
+    return @"Singer DE, Chang Y, Borowsky LH, et al. A new risk scheme to predict ischemic stroke and other thromboembolism in atrial fibrillation: the ATRIA study stroke risk score. J Am Heart Assoc. 2013;2(3):e000250.\nhttps://doi.org/10.1161/JAHA.113.000250";
 }
-
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://jaha.ahajournals.org/content/2/3/e000250"];
-}
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

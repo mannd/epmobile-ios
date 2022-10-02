@@ -11,6 +11,8 @@
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseTableViewController.h"
 #import "EPSARVC2010TableViewController.h"
+#import "EPSAtriaBleedRiskScore.h"
+#import "EPSAtriaStrokeRiskScore.h"
 #import "EPSChadsRiskScore.h"
 #import "EPSChadsVascRiskScore.h"
 
@@ -37,6 +39,8 @@
 // References and tools section
 #define ENTRAINMENT_CALCULATOR_ROW 2
 // Risk scores section
+#define ATRIA_BLEED_ROW 1
+#define ATRIA_STROKE_ROW 2
 #define CHADS_ROW 3
 #define CHADS_VASC_ROW 4
 #define HCM_2014_ROW 8
@@ -69,8 +73,6 @@
     allowDrugCalculators = ALLOW_DRUG_CALCULATORS;
     
     [self.drugCalculatorCell setHidden:!allowDrugCalculators];
-
-    
 }
 
 - (void)showAbout {
@@ -126,6 +128,12 @@
             [EntrainmentCalculatorViewController showWithVc:self];
         }
     } else if (indexPath.section == 3) { // Risk scores
+        if (indexPath.row == ATRIA_BLEED_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSAtriaBleedRiskScore alloc] init]];
+        }
+        if (indexPath.row == ATRIA_STROKE_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSAtriaStrokeRiskScore alloc] init]];
+        }
         if (indexPath.row == CHADS_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSChadsRiskScore alloc] init]];
         }
@@ -150,12 +158,8 @@
         vc.scoreType = @"Hemorrhages";
     else if ([segueIdentifier isEqualToString:@"HcmSegue"])
         vc.scoreType = @"HCM";
-    else if ([segueIdentifier isEqualToString:@"AtriaBleedSegue"])
-        vc.scoreType = @"AtriaBleed";
     else if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
         vc.scoreType = @"SameTtr";
-    else if ([segueIdentifier isEqualToString:@"AtriaStrokeSegue"])
-        vc.scoreType = @"AtriaStroke";
     else if ([segueIdentifier isEqualToString:@"OrbitSegue"])
         vc.scoreType = @"Orbit";
     else if ([segueIdentifier isEqualToString:@"ICDMortalityRiskSegue"])

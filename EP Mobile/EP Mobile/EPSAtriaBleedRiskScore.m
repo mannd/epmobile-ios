@@ -14,8 +14,12 @@
     return @"ATRIA Bleeding Risk";
 }
 
+- (NSString *)getInstructions {
+    return @"Use this score to predict the risk of bleeding occurring on wafarin for treatment of atrial fibrillation.";
+}
+
 - (NSString *)getReference {
-    return @"Fang MC, Go, AS, Chang Y, Borowsky LH, Pomernacki NK,    Udaltsova N, Singer DE.  A new risk scheme to predict warfarin-associated hemorrhage.  The ATRIA Study.  J Am Coll Cardiol [Internet]. 2011 Jul 2011 [cited 2015 Nov 29];58(4):395-401.  Available from: http://content.onlinejacc.org/article.aspx?articleid=1146658";
+    return @"Fang MC, Go AS, Chang Y, et al. A New Risk Scheme to Predict Warfarin-Associated Hemorrhage. Journal of the American College of Cardiology. 2011;58(4):395-401.\nhttps://doi.org/10.1016/j.jacc.2011.03.031";
 }
 
 - (NSURL *)getReferenceLink {

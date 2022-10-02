@@ -1433,9 +1433,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="AtriaBleedSegue" id="qT5-oC-bQ8"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0Yt-Le-ZbZ" style="IBUITableViewCellStyleDefault" id="bli-US-HBU">
                                         <rect key="frame" x="0.0" y="1543.5" width="414" height="44"/>
@@ -1452,9 +1449,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="AtriaStrokeSegue" id="N6T-w8-ifw"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JzV-4e-i9q" style="IBUITableViewCellStyleDefault" id="rvh-St-Shc">
                                         <rect key="frame" x="0.0" y="1587.5" width="414" height="44"/>
@@ -2868,7 +2862,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="N6T-w8-ifw"/>
+        <segue reference="zBw-yW-yh2"/>
         <segue reference="sIb-ay-0FY"/>
         <segue reference="tuo-Ni-Xiv"/>
         <segue reference="Nwd-vW-tfz"/>
