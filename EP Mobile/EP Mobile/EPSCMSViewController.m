@@ -13,6 +13,7 @@
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"
 #import "EPSCMSViewModel.h"
+#import "EP_Mobile-Swift.h"
 
 // these magic numbers are in Data.plist
 #define SUS_VT 0
@@ -95,7 +96,13 @@
 //    let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
     UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 
-    self.toolbarItems = [ NSArray arrayWithObjects: spacer, buttonCalculate, spacer, nil ];
+    UIButtonConfiguration *configuration = [UIKitRoundedButton roundedButtonConfiguration];
+    configuration.buttonSize = UIButtonConfigurationSizeLarge;
+    configuration.title = @"Calculate";
+    UIButton *button = [UIButton buttonWithConfiguration:configuration primaryAction:NULL];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+
+    self.toolbarItems = [ NSArray arrayWithObjects: spacer, barButton, spacer, nil ];
 
 
     [self.navigationController setToolbarHidden:NO];
