@@ -119,17 +119,7 @@ struct WeightCalculatorView: View {
                         }
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: weight, perform: { _ in  clearResult() })

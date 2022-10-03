@@ -89,17 +89,7 @@ struct QTcIvcdCalculatorView: View {
                         .pickerStyle(.menu)
                     }
                 }
-                HStack {
-                    Group {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text("QTc IVCD Calculator"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {

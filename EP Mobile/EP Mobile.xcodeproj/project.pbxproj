@@ -47,6 +47,7 @@
 		8E0DF87A283C522D00367D4A /* HcmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DF879283C522D00367D4A /* HcmModel.swift */; };
 		8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */; };
 		8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */; };
+		8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */; };
 		8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */; };
 		8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */; };
 		8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */; };
@@ -268,6 +269,7 @@
 		8E0DF879283C522D00367D4A /* HcmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmModel.swift; sourceTree = "<group>"; };
 		8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreView.swift; sourceTree = "<group>"; };
 		8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreViewController.swift; sourceTree = "<group>"; };
+		8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonsView.swift; sourceTree = "<group>"; };
 		8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculator.swift; sourceTree = "<group>"; };
 		8E18B36B2814DAFA0043FD00 /* IntervalRateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateCalculatorController.swift; sourceTree = "<group>"; };
 		8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateConversion.swift; sourceTree = "<group>"; };
@@ -615,6 +617,7 @@
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8EEE9BB6283D8565005AB875 /* HcmView.swift */,
 				8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */,
+				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -1257,6 +1260,7 @@
 				8E0506332820B6CD0059DACB /* ErrorMessage.swift in Sources */,
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
+				8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

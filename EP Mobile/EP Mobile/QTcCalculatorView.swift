@@ -71,17 +71,7 @@ struct QTcCalculatorView: View {
                             .foregroundColor(flagResult ? .red : .primary)
                     }
                 }
-                HStack {
-                    Group {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: intervalRate, perform: { _ in  clearResult() })
             .onChange(of: qt, perform: { _ in  clearResult() })

@@ -127,17 +127,7 @@ struct DrugDoseCalculator: View {
                         }
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: age, perform: { _ in  clearResult() })

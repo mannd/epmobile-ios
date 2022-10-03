@@ -73,21 +73,7 @@ struct EntrainmentCalculatorView: View {
                         Text(result)
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .frame(width: 140, height: 40)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(15)
-                    .padding()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: tcl, perform: { _ in clearResult() })
             .onChange(of: ppi, perform: { _ in clearResult() })

@@ -58,17 +58,7 @@ struct DateCalculator: View {
                         Text(result)
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: numberOfDays, perform: { _ in clearResult() })
             .onChange(of: startingDate, perform: { _ in clearResult() })

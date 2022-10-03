@@ -84,17 +84,7 @@ struct HcmView: View {
                         }
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: age, perform: { _ in clearResult() })
             .onChange(of: thickness, perform: { _ in clearResult() })

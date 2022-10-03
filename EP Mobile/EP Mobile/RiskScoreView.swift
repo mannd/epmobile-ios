@@ -36,17 +36,7 @@ struct RiskScoreView: View {
                     }
                 }
                 .environment(\.editMode, .constant(EditMode.active))
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
             .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
@@ -87,6 +77,7 @@ struct RiskScoreView: View {
         selectKeeper.removeAll()
     }
 }
+
 
 private struct InfoView: View {
     @Environment(\.dismiss) private var dismiss
