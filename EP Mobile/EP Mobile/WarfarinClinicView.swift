@@ -178,20 +178,12 @@ struct WarfarinClinicView: View {
             }.sheet(isPresented: $showInfo) {
                 Info()
             })
-            .alert(isPresented: $showDosingAlert) {
-                Alert(
-                    title: Text("Result"),
-                    message: Text(result),
-                    primaryButton: .destructive(
-                        Text("Show Dose Table"),
-                        action: { calculateDosingTable() }
-                    ),
-                    secondaryButton: .default(
-                        Text("Cancel"),
-                        action: { }
-                    )
-                )
-            }
+            .alert("Result", isPresented: $showDosingAlert, actions: {
+                Button("Show Dose Table", role: .destructive, action: {
+                   calculateDosingTable()
+                })
+                // Cancel button automatically added when we have a destructive button.
+            }, message: { Text(result) })
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {

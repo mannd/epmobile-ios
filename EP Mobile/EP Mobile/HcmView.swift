@@ -19,7 +19,6 @@ struct HcmView: View {
     @State private var result: String = ""
     @State private var detailedResult: String = ""
     @State private var showInfo: Bool = false
-    @State private var showAlert = false
 
     @FocusState private var textFieldIsFocused: Bool
 

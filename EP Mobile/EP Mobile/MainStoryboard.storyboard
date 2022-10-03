@@ -1497,9 +1497,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="HasBledSegue" id="pGj-ye-BDw"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Jsu-qK-3o9" style="IBUITableViewCellStyleDefault" id="D5d-Q7-wsB">
                                         <rect key="frame" x="0.0" y="1719.5" width="414" height="44"/>
@@ -1516,9 +1513,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="HemorrhagesSegue" id="9RH-WQ-qQ2"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nak-Eu-smJ" style="IBUITableViewCellStyleDefault" id="Ldh-M8-v5H">
                                         <rect key="frame" x="0.0" y="1763.5" width="414" height="44"/>
@@ -2865,7 +2859,7 @@
         <segue reference="zBw-yW-yh2"/>
         <segue reference="sIb-ay-0FY"/>
         <segue reference="tuo-Ni-Xiv"/>
-        <segue reference="Nwd-vW-tfz"/>
+        <segue reference="yyd-qN-wqh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brugadaecg" width="400" height="255"/>

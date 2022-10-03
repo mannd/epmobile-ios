@@ -125,12 +125,7 @@ struct QTcIvcdCalculatorView: View {
                 intervalRateType = .rate
             }
         }
-        .alert(isPresented: $showErrorMessage) {
-                   Alert(
-                       title: Text("Input Error"),
-                       message: Text(errorMessage)
-                   )
-               }
+        .alert("Input Error", isPresented: $showErrorMessage, actions: {}, message: { Text(errorMessage) })
     }
 
     func calculate() {

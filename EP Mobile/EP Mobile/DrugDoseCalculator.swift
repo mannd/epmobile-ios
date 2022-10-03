@@ -168,12 +168,7 @@ struct DrugDoseCalculator: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .alert(isPresented: $showWarning) {
-            Alert(
-                title: Text("Warning"),
-                message: Text(drugDose)
-            )
-        }
+        .alert("Warning", isPresented: $showWarning, actions: {}, message: { Text(drugDose) })
     }
 
     func getCrStep() -> Double {
