@@ -4,7 +4,4 @@
 #import "EPSRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSChadsRiskScore.h"
-#import "EPSChadsVascRiskScore.h"
-#import "EPSAtriaBleedRiskScore.h"
-#import "EPSAtriaStrokeRiskScore.h"
 

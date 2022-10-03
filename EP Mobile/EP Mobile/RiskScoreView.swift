@@ -21,21 +21,10 @@ struct RiskScoreView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(selection: $selectKeeper) {
-                    ForEach(0..<riskScore.getArray().count, id: \.self) { x in
-                        if let riskFactor = riskScore.getArray().object(at: x) as? EPSRiskFactor {
-                            if riskFactor.details == "" {
-                                Text("\(riskFactor.name)").font(.headline)
-                            } else {
-                                VStack(alignment: .leading) {
-                                    Text("\(riskFactor.name)").font(.headline)
-                                    Text("\(riskFactor.details)").font(.subheadline)
-                                }
-                            }
-                        }
-                    }
-                }
-                .environment(\.editMode, .constant(EditMode.active))
+                riskScore.numberOfSections() == 1 ?
+                AnyView(RiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
+                :
+                AnyView(GroupedRiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
@@ -78,6 +67,49 @@ struct RiskScoreView: View {
     }
 }
 
+private struct RiskScoreList: View {
+    @Binding var selectKeeper: Set<Int>
+    var array: NSMutableArray
+    var body: some View {
+        List(selection: $selectKeeper) {
+            ForEach(0..<array.count, id: \.self) { x in
+                if let riskFactor = array.object(at: x) as? EPSRiskFactor {
+                    if riskFactor.details == "" {
+                        Text("\(riskFactor.name)").font(.headline)
+                    } else {
+                        VStack(alignment: .leading) {
+                            Text("\(riskFactor.name)").font(.headline)
+                            Text("\(riskFactor.details)").font(.subheadline)
+                        }
+                    }
+                }
+            }
+        }
+        .environment(\.editMode, .constant(EditMode.active))
+    }
+}
+
+private struct GroupedRiskScoreList: View {
+    @Binding var selectKeeper: Set<Int>
+    var array: NSMutableArray
+    var body: some View {
+        List(selection: $selectKeeper) {
+            ForEach(0..<array.count, id: \.self) { x in
+                if let riskFactor = array.object(at: x) as? EPSRiskFactor {
+                    if riskFactor.details == "" {
+                        Text("\(riskFactor.name)").font(.headline)
+                    } else {
+                        VStack(alignment: .leading) {
+                            Text("\(riskFactor.name)").font(.headline)
+                            Text("\(riskFactor.details)").font(.subheadline)
+                        }
+                    }
+                }
+            }
+        }
+        .environment(\.editMode, .constant(EditMode.active))
+    }
+}
 
 private struct InfoView: View {
     @Environment(\.dismiss) private var dismiss
