@@ -56,13 +56,13 @@
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
 
-    self.button1.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button2.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button3.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button4.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button5.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button6.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.instructionsButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button1.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button2.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button3.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button4.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button5.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button6.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.instructionsButton.configuration = [UIButton smallRoundedButtonConfiguration];
 }
 
 - (void)didReceiveMemoryWarning

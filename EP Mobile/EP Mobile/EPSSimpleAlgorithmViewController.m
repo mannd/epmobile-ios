@@ -93,10 +93,10 @@
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
 
-    self.yesButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.noButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.backButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.morphologyCriteriaButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.yesButton.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.noButton.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.backButton.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.morphologyCriteriaButton.configuration = [UIButton smallRoundedButtonConfiguration];
 }
 
 - (IBAction)yesButtonPushed:(id)sender {

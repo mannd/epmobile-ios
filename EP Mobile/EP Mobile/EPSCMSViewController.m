@@ -92,15 +92,16 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *buttonCalculate = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResult:)];
-//    let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
     UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 
-    UIButtonConfiguration *configuration = [UIKitRoundedButton roundedButtonConfiguration];
+    UIButtonConfiguration *configuration = [UIButton roundedButtonConfiguration];
     configuration.buttonSize = UIButtonConfigurationSizeLarge;
     configuration.title = @"Calculate";
-    UIButton *button = [UIButton buttonWithConfiguration:configuration primaryAction:NULL];
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIAction *action = [UIAction actionWithHandler:^(UIAction* action){
+        [self calculate];
+    }];
+    UIButton *calculateButton = [UIButton buttonWithConfiguration:configuration primaryAction:action];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:calculateButton];
 
     self.toolbarItems = [ NSArray arrayWithObjects: spacer, barButton, spacer, nil ];
 
@@ -143,6 +144,12 @@
 }
 
 - (IBAction)calculateResult:(id)sender {
+    [self createViewModel];
+    NSString *message = viewModel.getMessage;
+    [self showResults:message];
+}
+
+- (void)calculate {
     [self createViewModel];
     NSString *message = viewModel.getMessage;
     [self showResults:message];

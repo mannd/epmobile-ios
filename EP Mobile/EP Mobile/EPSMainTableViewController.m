@@ -17,6 +17,7 @@
 #import "EPSChadsVascRiskScore.h"
 #import "EPSHasBledRiskScore.h"
 #import "EPSHemorrhagesRiskScore.h"
+#import "EPSHcmRiskScore.h"
 
 #import "EP_Mobile-Swift.h"
 
@@ -47,6 +48,7 @@
 #define CHADS_VASC_ROW 4
 #define HAS_BLED_ROW 5
 #define HEMORRHAGES_ROW 6
+#define HCM_2002_ROW 7
 #define HCM_2014_ROW 8
 
 @interface EPSMainTableViewController ()
@@ -150,6 +152,9 @@
         if (indexPath.row == HEMORRHAGES_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSHemorrhagesRiskScore alloc] init]];
         }
+        if (indexPath.row == HCM_2002_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSHcmRiskScore alloc] init]];
+        }
         if (indexPath.row == HCM_2014_ROW) {
             [HcmViewController showWithVc:self];
         }
@@ -162,9 +167,7 @@
     
     EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
 
-    if ([segueIdentifier isEqualToString:@"HcmSegue"])
-        vc.scoreType = @"HCM";
-    else if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
+    if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
         vc.scoreType = @"SameTtr";
     else if ([segueIdentifier isEqualToString:@"OrbitSegue"])
         vc.scoreType = @"Orbit";

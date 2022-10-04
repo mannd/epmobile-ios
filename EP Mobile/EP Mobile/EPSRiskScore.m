@@ -74,6 +74,10 @@
     return nil;
 }
 
+- (NSString *)getKey {
+    return nil;
+}
+
 
 - (NSString *)getReference {
     return nil;

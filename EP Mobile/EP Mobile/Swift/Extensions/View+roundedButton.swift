@@ -25,7 +25,7 @@ extension View {
     }
 }
 
-class UIKitRoundedButton: NSObject {
+extension UIButton {
     @objc
     static func roundedButtonConfiguration() -> UIButton.Configuration {
         var config = UIButton.Configuration.filled()

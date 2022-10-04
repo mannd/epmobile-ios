@@ -4,4 +4,5 @@
 #import "EPSRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSChadsRiskScore.h"
+#import "EPSHcmRiskScore.h"
 

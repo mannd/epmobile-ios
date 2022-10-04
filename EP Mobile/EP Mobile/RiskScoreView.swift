@@ -16,7 +16,7 @@ struct RiskScoreView: View {
     @State private var result: String? = nil
     @State private var detailedResult: String? = nil
 
-    var riskScore: EPSRiskScore = EPSChadsRiskScore()
+    var riskScore: EPSRiskScore = EPSHcmRiskScore()
 
     var body: some View {
         NavigationView {
@@ -24,9 +24,11 @@ struct RiskScoreView: View {
                 riskScore.numberOfSections() == 1 ?
                 AnyView(RiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
                 :
-                AnyView(GroupedRiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
+                AnyView(GroupedRiskScoreList(selectKeeper: $selectKeeper, riskScore: riskScore, array: riskScore.getArray(), numSections: Int(riskScore.numberOfSections())))
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
+            .listStyle(.grouped)
+//            .headerProminence(.increased)
             .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
             .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
@@ -72,14 +74,16 @@ private struct RiskScoreList: View {
     var array: NSMutableArray
     var body: some View {
         List(selection: $selectKeeper) {
-            ForEach(0..<array.count, id: \.self) { x in
-                if let riskFactor = array.object(at: x) as? EPSRiskFactor {
-                    if riskFactor.details == "" {
-                        Text("\(riskFactor.name)").font(.headline)
-                    } else {
-                        VStack(alignment: .leading) {
+            Section(header: Text("RISKS")) {
+                ForEach(0..<array.count, id: \.self) { x in
+                    if let riskFactor = array.object(at: x) as? EPSRiskFactor {
+                        if riskFactor.details == "" {
                             Text("\(riskFactor.name)").font(.headline)
-                            Text("\(riskFactor.details)").font(.subheadline)
+                        } else {
+                            VStack(alignment: .leading) {
+                                Text("\(riskFactor.name)").font(.headline)
+                                Text("\(riskFactor.details)").font(.subheadline)
+                            }
                         }
                     }
                 }
@@ -91,21 +95,40 @@ private struct RiskScoreList: View {
 
 private struct GroupedRiskScoreList: View {
     @Binding var selectKeeper: Set<Int>
+    var riskScore: EPSRiskScore
     var array: NSMutableArray
+    let numSections: Int
+
     var body: some View {
         List(selection: $selectKeeper) {
-            ForEach(0..<array.count, id: \.self) { x in
-                if let riskFactor = array.object(at: x) as? EPSRiskFactor {
-                    if riskFactor.details == "" {
-                        Text("\(riskFactor.name)").font(.headline)
-                    } else {
-                        VStack(alignment: .leading) {
-                            Text("\(riskFactor.name)").font(.headline)
-                            Text("\(riskFactor.details)").font(.subheadline)
+            ForEach(0..<numSections, id: \.self) { sectionNumber in
+                Section(header: Text(riskScore.getTitleForHeaderSection(sectionNumber))) {
+                    ForEach(Int(riskScore.getOffset(sectionNumber))..<Int(riskScore.getOffset(sectionNumber) + riskScore.numberOfRows(inSection: sectionNumber)), id: \.self) { x in
+                        if let riskFactor = array.object(at: x) as? EPSRiskFactor {
+                            if riskFactor.details == "" {
+                                Text("\(riskFactor.name)").font(.headline)
+                            } else {
+                                VStack(alignment: .leading) {
+                                    Text("\(riskFactor.name)").font(.headline)
+                                    Text("\(riskFactor.details)").font(.subheadline)
+                                }
+                            }
                         }
                     }
                 }
             }
+//            ForEach(0..<array.count, id: \.self) { x in
+//                if let riskFactor = array.object(at: x) as? EPSRiskFactor {
+//                    if riskFactor.details == "" {
+//                        Text("\(riskFactor.name)").font(.headline)
+//                    } else {
+//                        VStack(alignment: .leading) {
+//                            Text("\(riskFactor.name)").font(.headline)
+//                            Text("\(riskFactor.details)").font(.subheadline)
+//                        }
+//                    }
+//                }
+//            }
         }
         .environment(\.editMode, .constant(EditMode.active))
     }
@@ -113,7 +136,7 @@ private struct GroupedRiskScoreList: View {
 
 private struct InfoView: View {
     @Environment(\.dismiss) private var dismiss
-    var riskScore: EPSRiskScore = EPSChadsRiskScore()
+    var riskScore: EPSRiskScore
 
     var body: some View {
         NavigationView {
@@ -122,6 +145,11 @@ private struct InfoView: View {
                     if let instructions = riskScore.getInstructions() {
                         Section(header: Text("Instructions")) {
                             Text(instructions)
+                        }
+                    }
+                    if let key = riskScore.getKey() {
+                        Section(header: Text("Key")) {
+                            Text(key)
                         }
                     }
                     // Note that hyperlinks don't appear when Text is used with a variable, unless you do this...
@@ -145,7 +173,9 @@ private struct InfoView: View {
 
 struct RiskScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        RiskScoreView()
-        InfoView()
+        RiskScoreView(riskScore: EPSChadsRiskScore())
+        RiskScoreView(riskScore: EPSHcmRiskScore())
+        InfoView(riskScore: EPSChadsRiskScore())
+        InfoView(riskScore: EPSHcmRiskScore())
     }
 }
