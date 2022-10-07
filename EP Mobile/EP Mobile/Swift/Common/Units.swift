@@ -45,7 +45,7 @@ enum HeightUnit: Int, CaseIterable, Identifiable, Equatable {
         case .inch:
             return "in"
         }
-    }
+   }
 }
 
 enum ConcentrationUnit: Int, CaseIterable, Identifiable, Equatable {

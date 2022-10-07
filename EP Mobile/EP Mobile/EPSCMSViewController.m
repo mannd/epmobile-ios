@@ -92,21 +92,25 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-
-    UIButtonConfiguration *configuration = [UIButton roundedButtonConfiguration];
-    configuration.buttonSize = UIButtonConfigurationSizeLarge;
-    configuration.title = @"Calculate";
-    UIAction *action = [UIAction actionWithHandler:^(UIAction* action){
-        [self calculate];
-    }];
-    UIButton *calculateButton = [UIButton buttonWithConfiguration:configuration primaryAction:action];
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:calculateButton];
-
-    self.toolbarItems = [ NSArray arrayWithObjects: spacer, barButton, spacer, nil ];
-
-
-    [self.navigationController setToolbarHidden:NO];
+//    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+//
+//    UIButtonConfiguration *configuration = [UIButton roundedButtonConfiguration];
+//    configuration.title = @"Calculate";
+//    UIAction *calculateAction = [UIAction actionWithHandler:^(UIAction* action){
+//        [self calculate];
+//    }];
+//    UIButton *calculateButton = [UIButton buttonWithConfiguration:configuration primaryAction:calculateAction];
+//    UIBarButtonItem *calculateBarButton = [[UIBarButtonItem alloc] initWithCustomView:calculateButton];
+//
+//    configuration.title = @"   Clear   ";
+//    UIAction *clearAction = [UIAction actionWithHandler:^(UIAction* action){
+//        [self clear];
+//    }];
+//    UIButton *clearButton = [UIButton buttonWithConfiguration:configuration primaryAction:clearAction];
+//    UIBarButtonItem *clearBarButton = [[UIBarButtonItem alloc] initWithCustomView:clearButton];
+//    self.toolbarItems = [ NSArray arrayWithObjects: spacer, calculateBarButton, spacer, clearBarButton, spacer, nil ];
+//
+//    [self.navigationController setToolbarHidden:NO];
     
 }
 
@@ -153,6 +157,9 @@
     [self createViewModel];
     NSString *message = viewModel.getMessage;
     [self showResults:message];
+}
+
+- (void)clear {
 }
 
 - (void)showResults:(NSString *)message {
