@@ -279,14 +279,6 @@ private struct Info: View {
     }
 }
 
-//This calculator and all the drug
-//        calculators (except Warfarin) use the Cockcroft-Gault formula, which is the recommended
-//        formula for calculating creatinine clearance for determining drug doses.  You can consider
-//        using the Weight Calculator to adjust body weight for determining
-//        creatinine clearance.\n\nIf you wish to calculate a normalized GFR to estimate
-//        renal function, use the GFR Calculator instead.
-
-
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
         DrugDoseCalculator(drugName: .constant(DrugName.crCl))

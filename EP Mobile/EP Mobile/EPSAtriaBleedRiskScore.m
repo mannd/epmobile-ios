@@ -19,7 +19,7 @@
 }
 
 - (NSString *)getReference {
-    return @"Fang MC, Go AS, Chang Y, et al. A New Risk Scheme to Predict Warfarin-Associated Hemorrhage. Journal of the American College of Cardiology. 2011;58(4):395-401.\nhttps://doi.org/10.1016/j.jacc.2011.03.031";
+    return @"Fang MC, Go AS, Chang Y, et al. A New Risk Scheme to Predict Warfarin-Associated Hemorrhage. Journal of the American College of Cardiology. 2011;58(4):395-401.\n[doi:10.1016/j.jacc.2011.03.031](https://doi.org/10.1016/j.jacc.2011.03.031)";
 }
 
 - (NSURL *)getReferenceLink {

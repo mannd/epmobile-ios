@@ -14,6 +14,7 @@ struct InformationView: View {
     var key: String?
     var reference: String
     var name: String = "TITLE"
+    var multipleReferences = false
 
     var body: some View {
         NavigationView {
@@ -30,7 +31,7 @@ struct InformationView: View {
                         }
                     }
                     // Note that hyperlinks don't appear when Text is used with a variable, unless you do this...
-                    Section(header: Text("Reference")) {
+                    Section(header: Text(multipleReferences ? "References" : "Reference")) {
                         Text(LocalizedStringKey(reference))
                     }
                 }

@@ -78,9 +78,12 @@
     return nil;
 }
 
-
 - (NSString *)getReference {
     return nil;
+}
+
+- (BOOL)multipleReferences {
+    return NO;
 }
 
 - (NSArray *)risksSelected:(NSArray *)risks {

@@ -29,13 +29,8 @@
 }
 
 - (NSString *)getReference {
-    return @"McKenna WJ. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart. 2002;87(2):169-176.\nhttps://doi.org/10.1136/heart.87.2.169";
+    return @"McKenna WJ. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart. 2002;87(2):169-176.\n[doi:10.1136/heart.87.2.169](https://doi.org/10.1136/heart.87.2.169)";
 }
-
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://heart.bmj.com/content/87/2/169.full"];
-}
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

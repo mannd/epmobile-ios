@@ -104,7 +104,7 @@ private struct Info: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("How to Use")) {
+                    Section(header: Text("Instructions")) {
                         Text("Use this calculator to do date arithmetic.").bold()
                         Text("Set the starting date to the index date (such as today) and then enter the number of days in the future or past that you are adding or subtracting.  Turn ") + Text("Subtract days").bold() + Text(" on to subtract days from the index date.")
                     }

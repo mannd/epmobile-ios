@@ -26,11 +26,7 @@
 }
 
 - (NSString *)getReference {
-    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.\nhttps://doi.org/10.1093/eurheartj/ehr488";
-}
-
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"https://academic.oup.com/eurheartj/article/33/12/1500/473502"];
+    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.\n[doi:10.1093/eurheartj/ehr488](https://doi.org/10.1093/eurheartj/ehr488)";
 }
 
 - (NSMutableArray *)getArray {

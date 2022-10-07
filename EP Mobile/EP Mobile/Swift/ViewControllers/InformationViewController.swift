@@ -13,8 +13,8 @@ final class InformationViewController: NSObject {
 
     @objc
     static func show(vc: UIViewController,
-                     instructions: String?,
-                     key: String?,
+                     instructions: String? = nil,
+                     key: String? = nil,
                      reference: String,
                      name: String ) {
         let informationView = InformationView(instructions: instructions, key: key, reference: reference, name: name)

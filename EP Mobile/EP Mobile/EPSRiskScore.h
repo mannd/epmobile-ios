@@ -20,6 +20,7 @@
 - (NSString *)getMessage:(int)score;
 - (NSString *)getInstructions;
 - (NSString *)getKey;
+- (BOOL)multipleReferences;
 - (CGFloat)rowHeight:(CGFloat)defaultHeight;
 - (void)formatCell:(UITableViewCell *)cell;
 - (NSString *)getReference;

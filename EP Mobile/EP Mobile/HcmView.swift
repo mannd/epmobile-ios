@@ -149,10 +149,10 @@ private struct Info: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("How to Use")) {
+                    Section(header: Text("Instructions")) {
                         Text("Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.")
                     }
-                    Section(header: Text("Definitions")) {
+                    Section(header: Text("Key")) {
                         Text("HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation:") + Text("\nGradient = 4V\u{00B2}").italic().bold() + Text("\nwhere V is the peak aortic outflow velocity.\n\nFamily hx of SCD = history of sudden cardiac death in 1 or more first degree relatives under 40 years old or in a first degree relative with confirmed HCM at any age.\n\nNSVT = nonsustained ventricular tachycardia: 3 consecutive ventricular beats at a rate of 120 bpm or more and <30 sec duration on Holter monitoring (minimum 24 hrs) at or prior to evaluation.\n\nHx syncope = history of unexplained syncope at or prior to evaluation")
                     }
                     Section(header: Text("References")) {

@@ -172,7 +172,7 @@ struct QTcIvcdInfo: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Usage")) {
+                    Section(header: Text("Instructions")) {
                         Text("Use this calculator to estimate the QTc when there is an intraventricular conduction delay.")
                     }
                     Section(header: Text("References")) {
