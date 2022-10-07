@@ -28,12 +28,11 @@ struct RiskScoreView: View {
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .listStyle(.grouped)
-//            .headerProminence(.increased)
             .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
             .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
-               InfoView(riskScore: riskScore)
+                InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), reference: riskScore.getReference(), name: riskScore.getName())
             }))
             .navigationViewStyle(StackNavigationViewStyle())
             .alert("Result", isPresented: $showResult, actions: {
@@ -117,57 +116,8 @@ private struct GroupedRiskScoreList: View {
                     }
                 }
             }
-//            ForEach(0..<array.count, id: \.self) { x in
-//                if let riskFactor = array.object(at: x) as? EPSRiskFactor {
-//                    if riskFactor.details == "" {
-//                        Text("\(riskFactor.name)").font(.headline)
-//                    } else {
-//                        VStack(alignment: .leading) {
-//                            Text("\(riskFactor.name)").font(.headline)
-//                            Text("\(riskFactor.details)").font(.subheadline)
-//                        }
-//                    }
-//                }
-//            }
         }
         .environment(\.editMode, .constant(EditMode.active))
-    }
-}
-
-private struct InfoView: View {
-    @Environment(\.dismiss) private var dismiss
-    var riskScore: EPSRiskScore
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    if let instructions = riskScore.getInstructions() {
-                        Section(header: Text("Instructions")) {
-                            Text(instructions)
-                        }
-                    }
-                    if let key = riskScore.getKey() {
-                        Section(header: Text("Key")) {
-                            Text(key)
-                        }
-                    }
-                    // Note that hyperlinks don't appear when Text is used with a variable, unless you do this...
-                    Section(header: Text("Reference")) {
-                        Text(LocalizedStringKey(riskScore.getReference()))
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
-        }
     }
 }
 
@@ -175,7 +125,5 @@ struct RiskScoreView_Previews: PreviewProvider {
     static var previews: some View {
         RiskScoreView(riskScore: EPSChadsRiskScore())
         RiskScoreView(riskScore: EPSHcmRiskScore())
-        InfoView(riskScore: EPSChadsRiskScore())
-        InfoView(riskScore: EPSHcmRiskScore())
     }
 }

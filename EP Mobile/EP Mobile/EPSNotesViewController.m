@@ -11,7 +11,6 @@
 #import "EPSOutFlowTractVTNotes.h"
 #import "EPSAnnularVTNotes.h"
 #import "EPSWarfarinNotes.h"
-#import "EPSCMSNotes.h"
 #import "EPSAtrialTachNotes.h"
 #import "EPSLogging.h"
 
@@ -48,8 +47,6 @@
         notes = [[EPSBrugadaNotes alloc] init];
     else if ([self.key isEqualToString:@"WarfarinNotes"])
         notes = [[EPSWarfarinNotes alloc] init];
-    else if ([self.key isEqualToString:@"CMSNotes"])
-        notes = [[EPSCMSNotes alloc] init];
     else if ([self.key isEqualToString:@"AtrialTachNotes"])
         notes = [[EPSAtrialTachNotes alloc] init];
     [self.notesTextView setText:[notes noteText]];

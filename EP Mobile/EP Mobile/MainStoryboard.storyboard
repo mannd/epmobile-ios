@@ -2052,28 +2052,55 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-Q4-P68">
-                                <rect key="frame" x="20" y="235" width="374" height="619"/>
+                                <rect key="frame" x="20" y="235" width="374" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5Lf-aF-glM" id="ed7-gw-n4d"/>
                                     <outlet property="delegate" destination="5Lf-aF-glM" id="oUG-3v-kFw"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="b3i-3j-9qj">
+                                <rect key="frame" x="20" y="831" width="374" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d2-2u-QRJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculate" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="calculate:" destination="5Lf-aF-glM" eventType="touchUpInside" id="iNo-q5-PSn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSM-xu-i68">
+                                        <rect key="frame" x="197.5" y="0.0" width="176.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="5Lf-aF-glM" eventType="touchUpInside" id="INT-Ne-uAj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7EO-wl-ChX"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="OEo-32-WW9" secondAttribute="trailing" constant="20" symbolic="YES" id="0Hv-aC-kBo"/>
                             <constraint firstItem="kZJ-84-YQm" firstAttribute="top" secondItem="8GY-Fb-5Hm" secondAttribute="bottom" constant="8" symbolic="YES" id="0p2-Rk-irL"/>
-                            <constraint firstItem="6eX-aG-0BF" firstAttribute="top" secondItem="Cyb-Q4-P68" secondAttribute="bottom" constant="8" symbolic="YES" id="8K3-uo-AxH"/>
+                            <constraint firstAttribute="trailing" secondItem="b3i-3j-9qj" secondAttribute="trailing" constant="20" symbolic="YES" id="30r-Nj-jrR"/>
                             <constraint firstAttribute="trailing" secondItem="5sX-AV-8s6" secondAttribute="trailing" constant="20" symbolic="YES" id="IKb-NK-aSY"/>
                             <constraint firstAttribute="trailing" secondItem="cjk-t1-GJ8" secondAttribute="trailing" constant="20" symbolic="YES" id="Qmp-eA-slo"/>
                             <constraint firstItem="cjk-t1-GJ8" firstAttribute="top" secondItem="kZJ-84-YQm" secondAttribute="bottom" constant="8" symbolic="YES" id="Slc-Wb-a3a"/>
                             <constraint firstItem="5sX-AV-8s6" firstAttribute="top" secondItem="OEo-32-WW9" secondAttribute="bottom" constant="8" symbolic="YES" id="WZg-9V-T86"/>
                             <constraint firstItem="5sX-AV-8s6" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="XBB-40-3rW"/>
                             <constraint firstAttribute="trailing" secondItem="Cyb-Q4-P68" secondAttribute="trailing" constant="20" symbolic="YES" id="coG-Db-Pet"/>
+                            <constraint firstItem="b3i-3j-9qj" firstAttribute="top" secondItem="Cyb-Q4-P68" secondAttribute="bottom" constant="8" symbolic="YES" id="dZ6-Bh-0n6"/>
                             <constraint firstItem="OEo-32-WW9" firstAttribute="top" secondItem="cjk-t1-GJ8" secondAttribute="bottom" constant="8" symbolic="YES" id="gSM-aF-rUp"/>
                             <constraint firstItem="kZJ-84-YQm" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="gjE-df-1up"/>
                             <constraint firstItem="cjk-t1-GJ8" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="izr-Ma-I12"/>
+                            <constraint firstAttribute="bottom" secondItem="b3i-3j-9qj" secondAttribute="bottom" constant="20" symbolic="YES" id="mFW-qf-ypc"/>
+                            <constraint firstItem="b3i-3j-9qj" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="n0f-4R-CCD"/>
                             <constraint firstItem="OEo-32-WW9" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="onM-IZ-00q"/>
                             <constraint firstItem="Cyb-Q4-P68" firstAttribute="leading" secondItem="S3d-hE-9E9" secondAttribute="leading" constant="20" symbolic="YES" id="pHw-E7-nrW"/>
                             <constraint firstAttribute="trailing" secondItem="kZJ-84-YQm" secondAttribute="trailing" constant="20" symbolic="YES" id="t4B-Jl-RxK"/>
@@ -2085,12 +2112,11 @@
                         <outlet property="criteriaTableView" destination="Cyb-Q4-P68" id="W2k-wd-fiQ"/>
                         <outlet property="efSegmentedControl" destination="cjk-t1-GJ8" id="BX3-AB-UA4"/>
                         <outlet property="hfClassSegmentedControl" destination="5sX-AV-8s6" id="YfD-mp-8G1"/>
-                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="CMSNotesSegue" modalTransitionStyle="flipHorizontal" id="sIb-ay-0FY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhe-NH-Dng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="-1564"/>
+            <point key="canvasLocation" x="179.71014492753625" y="-1564.2857142857142"/>
         </scene>
         <!--SQTS-->
         <scene sceneID="ptk-VO-6fT">
@@ -2854,7 +2880,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zBw-yW-yh2"/>
-        <segue reference="sIb-ay-0FY"/>
+        <segue reference="VLv-ky-ss1"/>
         <segue reference="tuo-Ni-Xiv"/>
         <segue reference="yyd-qN-wqh"/>
     </inferredMetricsTieBreakers>
