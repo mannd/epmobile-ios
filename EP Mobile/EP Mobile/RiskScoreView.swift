@@ -38,7 +38,7 @@ struct RiskScoreView: View {
             .alert("Result", isPresented: $showResult, actions: {
                 Button("OK", role: .cancel, action: {})
                 Button("Copy result") {
-                    let pasteboard = UIPasteboard()
+                    let pasteboard = UIPasteboard.general
                     pasteboard.string = detailedResult
                     resultCopied = true
                 }
@@ -57,7 +57,8 @@ struct RiskScoreView: View {
             let score = riskScore.calculate(mutableRiskArray)
             let message = riskScore.getMessage(score)
             result = message
-            detailedResult = riskScore.getFullRiskReport(fromMessage: message, andRisks: riskArray)
+            let risksSelected = riskScore.risksSelected(riskArray)
+            detailedResult = riskScore.getFullRiskReport(fromMessage: message, andRisks: risksSelected)
             showResult = true
         }
 

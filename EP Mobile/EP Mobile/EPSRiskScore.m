@@ -82,7 +82,7 @@
     return nil;
 }
 
-- (BOOL)multipleReferences {
+-(BOOL)multipleReferences {
     return NO;
 }
 

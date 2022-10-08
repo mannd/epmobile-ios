@@ -18,6 +18,7 @@
 #import "EPSHasBledRiskScore.h"
 #import "EPSHemorrhagesRiskScore.h"
 #import "EPSHcmRiskScore.h"
+#import "EPSIcdMortalityRiskScore.h"
 
 #import "EP_Mobile-Swift.h"
 
@@ -31,6 +32,7 @@
 // Also remember row 2 is invisible (the banned drug calculators).
 
 // Calculators section
+#define CALCULATOR_SECTION 0
 #define CRCL_CALCULATOR_ROW 0
 #define DATE_CALCULATOR_ROW 1
 #define DRUG_CALCULATORS_ROW 2
@@ -39,9 +41,13 @@
 #define QTC_IVCD_CALCULATOR_ROW 5
 #define WARFARIN_CLINIC_ROW 6
 #define WEIGHT_CALCULATOR_ROW 7
+// Diagnosis section
+#define DIAGNOSIS_SECTION 1
 // References and tools section
+#define REFERENCES_TOOLS_SECTION 2
 #define ENTRAINMENT_CALCULATOR_ROW 2
 // Risk scores section
+#define RISK_SCORES_SECTION 3
 #define ATRIA_BLEED_ROW 1
 #define ATRIA_STROKE_ROW 2
 #define CHADS_ROW 3
@@ -50,6 +56,8 @@
 #define HEMORRHAGES_ROW 6
 #define HCM_2002_ROW 7
 #define HCM_2014_ROW 8
+#define ICD_IMPLANTATION_RISK_ROW 9
+#define ICD_MORTALITY_RISK_ROW 10
 
 @interface EPSMainTableViewController ()
 
@@ -85,7 +93,6 @@
     [self performSegueWithIdentifier:@"AboutSegue" sender:nil];
 }
 
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -95,19 +102,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    // Configure the cell...
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
 
-    if (section == 0 && row == DRUG_CALCULATORS_ROW && !allowDrugCalculators)
+    // Hide Drug calculator row, per Apple request.
+    if (section == CALCULATOR_SECTION && row == DRUG_CALCULATORS_ROW && !allowDrugCalculators)
         return 0; //set the hidden cell's height to 0
     else
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) { // Calculators
+    if (indexPath.section == CALCULATOR_SECTION) { // Calculators
         if (indexPath.row == CRCL_CALCULATOR_ROW) {
             [DrugCalculatorController showWithVc:self drugName:DrugNameCrCl];
         }
@@ -129,11 +135,11 @@
         if (indexPath.row == WEIGHT_CALCULATOR_ROW) {
             [WeightCalculatorCalculatorController showWithVc:self];
         }
-    } else if (indexPath.section == 2) { // Reference & Tools
+    } else if (indexPath.section == REFERENCES_TOOLS_SECTION) { // Reference & Tools
         if (indexPath.row == ENTRAINMENT_CALCULATOR_ROW) {
             [EntrainmentCalculatorViewController showWithVc:self];
         }
-    } else if (indexPath.section == 3) { // Risk scores
+    } else if (indexPath.section == RISK_SCORES_SECTION) { // Risk scores
         if (indexPath.row == ATRIA_BLEED_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSAtriaBleedRiskScore alloc] init]];
         }
@@ -158,6 +164,9 @@
         if (indexPath.row == HCM_2014_ROW) {
             [HcmViewController showWithVc:self];
         }
+        if (indexPath.row == ICD_MORTALITY_RISK_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSIcdMortalityRiskScore alloc] init]];
+        }
     }
 
 }
@@ -171,8 +180,6 @@
         vc.scoreType = @"SameTtr";
     else if ([segueIdentifier isEqualToString:@"OrbitSegue"])
         vc.scoreType = @"Orbit";
-    else if ([segueIdentifier isEqualToString:@"ICDMortalityRiskSegue"])
-        vc.scoreType = @"ICDMortalityRisk";
     else if ([segueIdentifier isEqualToString:@"ERSSegue"])
         vc.scoreType = @"ERSRisk";
     else if ([segueIdentifier isEqualToString:@"TamponadeSegue"])
@@ -181,11 +188,7 @@
         vc.scoreType = @"QTProlongationRisk";
     
     EPSLinkViewController *lc = (EPSLinkViewController *)vc;
-    if ([segueIdentifier isEqualToString:@"BrugadaDrugsSegue"])
-        lc.webPage = @"http://www.brugadadrugs.org";
-    else if ([segueIdentifier isEqualToString:@"LongQTDrugsSegue"])
-        lc.webPage = @"https://www.crediblemeds.org";
-    else if ([segueIdentifier isEqualToString:@"ParaHisSegue"]) {
+    if ([segueIdentifier isEqualToString:@"ParaHisSegue"]) {
         lc.webPage = @"parahisianpacinginstructions";
         lc.linkTitle = @"Para-Hisian Pacing";
     }

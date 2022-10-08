@@ -29,12 +29,12 @@ struct RiskResult {
     return @"ICD mortality risk";
 }
 
-- (NSString *)getReference {
-    return @"Goldenberg I, Vyas AK, Hall WJ, Moss AJ, Wang H, He H, Zareba W, McNitt S, Andrews ML, MADIT-II Investigators.  Risk stratification for primary implantation of a cardioverter-defibrillator in patients with ischemic left ventricular dysfunction.  J Am Coll Cardiol [Internet] 2008 Jan [cited 2016 Sep 1];51(3):288-296.  Available from http://content.onlinejacc.org/article.aspx?articleid=1187155";
+- (NSString *)getInstructions {
+    return @"Use this score to determine the mortality with and without ICD implantation in MADIT-II type patients.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://content.onlinejacc.org/article.aspx?articleid=1187155"];
+- (NSString *)getReference {
+    return @"Goldenberg I, Vyas AK, Hall WJ, et al. Risk Stratification for Primary Implantation of a Cardioverter-Defibrillator in Patients With Ischemic Left Ventricular Dysfunction. Journal of the American College of Cardiology. 2008;51(3):288-296.\n[doi:10.1016/j.jacc.2007.08.058](https://doi.org/10.1016/j.jacc.2007.08.058)";
 }
 
 - (NSMutableArray *)getArray {

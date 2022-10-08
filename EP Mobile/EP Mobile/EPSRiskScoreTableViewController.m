@@ -57,6 +57,7 @@
 {
     [super viewDidLoad];
     NSMutableArray *array;
+    // TODO: remove risk scores converted to SwiftUI.
     if ([scoreType isEqualToString:@"Chads2"]) 
         riskScore = [[EPSChadsRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"ChadsVasc"])
