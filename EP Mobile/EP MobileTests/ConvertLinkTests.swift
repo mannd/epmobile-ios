@@ -25,17 +25,17 @@ final class ConvertLinkTests: XCTestCase {
 
     func testConvertDoiToLink() {
         let s1 = "xxxx"
-        XCTAssertNil(s1.convertDoiToLink())
+        XCTAssertNil(s1.convertDoiToUri())
         let s2 = "doi:xxx.yyy/zzz"
-        XCTAssertEqual(s2.convertDoiToLink(), "https://doi.org/xxx.yyy/zzz")
+        XCTAssertEqual(s2.convertDoiToUri(), "https://doi.org/xxx.yyy/zzz")
         let s3 = "https://XXXXX.com"
-        XCTAssertEqual(s3.convertDoiToLink(), s3)
+        XCTAssertEqual(s3.convertDoiToUri(), s3)
         let s4 = "doi:"
-        XCTAssertNil(s4.convertDoiToLink())
+        XCTAssertNil(s4.convertDoiToUri())
         let s5 = "HTTP://XXXXX.com"
-        XCTAssertEqual(s5.convertDoiToLink(), s5)
+        XCTAssertEqual(s5.convertDoiToUri(), s5)
         let s6 = "DOI:xxx.YYY/zzz"
-        XCTAssertEqual(s6.convertDoiToLink(), "https://doi.org/xxx.YYY/zzz")
+        XCTAssertEqual(s6.convertDoiToUri(), "https://doi.org/xxx.YYY/zzz")
     }
 
     func testGetMarkdownLink() {

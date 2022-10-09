@@ -39,7 +39,7 @@ extension String {
 
     /// Converts a DOI citation to a UIR, returns URI citations unchanged.
     /// - Returns: URI style link, nil if string is not a URI or DOI citation.
-    func convertDoiToLink() -> String? {
+    func convertDoiToUri() -> String? {
         if isHttp() {
             return self
         }
@@ -56,7 +56,7 @@ extension String {
     /// Converts DOI citation to Markdown clickable link, returns URI unchanged.
     /// - Returns: Markdown style URI link, nil if not a URI or DOI citation
     func getMarkdownLink() -> String? {
-        if isDoi(), let link = convertDoiToLink() {
+        if isDoi(), let link = convertDoiToUri() {
             return "[" + self + "](" + link + ")"
         }
         if isHttp() {

@@ -71,6 +71,8 @@
 		8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */; };
 		8E38A07828F1DE7400F1F723 /* String+convertDoiToLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07728F1DE7400F1F723 /* String+convertDoiToLink.swift */; };
 		8E38A07A28F1F4BC00F1F723 /* ConvertLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */; };
+		8E38A07C28F2597A00F1F723 /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07B28F2597A00F1F723 /* Reference.swift */; };
+		8E38A07E28F377AD00F1F723 /* ReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */; };
 		8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E39950A204328520079E391 /* EPSCMSStrings.m */; };
 		8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */; };
 		8E3A3BF528300CED0071C23F /* WarfarinClinicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */; };
@@ -301,6 +303,8 @@
 		8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSComplexAlgorithmViewController.m; sourceTree = "<group>"; };
 		8E38A07728F1DE7400F1F723 /* String+convertDoiToLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+convertDoiToLink.swift"; sourceTree = "<group>"; };
 		8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertLinkTests.swift; sourceTree = "<group>"; };
+		8E38A07B28F2597A00F1F723 /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
+		8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceTests.swift; sourceTree = "<group>"; };
 		8E399509204328520079E391 /* EPSCMSStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSStrings.h; sourceTree = "<group>"; };
 		8E39950A204328520079E391 /* EPSCMSStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSStrings.m; sourceTree = "<group>"; };
 		8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarfarinClinicView.swift; sourceTree = "<group>"; };
@@ -727,6 +731,7 @@
 				8E59E968281A4071003C485F /* Keys.swift */,
 				8E0506322820B6CD0059DACB /* ErrorMessage.swift */,
 				8E6381BA282983CF00249E87 /* Units.swift */,
+				8E38A07B28F2597A00F1F723 /* Reference.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -975,18 +980,19 @@
 				8EC19C4F159FE0FA00975E2B /* EP_MobileTests.h */,
 				8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */,
 				8E0C13C92262DBB0000892CC /* ArvcTests.swift */,
+				8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */,
 				8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */,
 				8E8FAAE828178EF200789746 /* DrugTests.swift */,
+				8E8C89E6283340BF0057B237 /* EntrainmentTests.swift */,
+				8E503318283D408C0008A614 /* HcmTests.swift */,
 				8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */,
 				8E8FAAE428172D0800789746 /* PatientTests.swift */,
 				8E321C6A2824A0310017EDB0 /* QTcIvcdTests.swift */,
 				8EB36C33281F93D8006D8DF2 /* QTcTests.swift */,
-				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
-				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
 				8E808364282DE88B00E88A4E /* WarfarinTests.swift */,
-				8E8C89E6283340BF0057B237 /* EntrainmentTests.swift */,
-				8E503318283D408C0008A614 /* HcmTests.swift */,
-				8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */,
+				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
+				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
+				8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1167,6 +1173,7 @@
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
 				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
+				8E38A07C28F2597A00F1F723 /* Reference.swift in Sources */,
 				8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */,
 				8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */,
 				8E8C89E5283339FE0057B237 /* Entrainment.swift in Sources */,
@@ -1278,6 +1285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */,
+				8E38A07E28F377AD00F1F723 /* ReferenceTests.swift in Sources */,
 				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
 				8E808365282DE88B00E88A4E /* WarfarinTests.swift in Sources */,
