@@ -32,7 +32,7 @@ struct RiskScoreView: View {
             .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
-                InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), reference: riskScore.getReference(), name: riskScore.getName(), multipleReferences: riskScore.multipleReferences())
+                InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName())
             }))
             .navigationViewStyle(StackNavigationViewStyle())
             .alert("Result", isPresented: $showResult, actions: {

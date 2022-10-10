@@ -120,8 +120,11 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     @objc
     func showNotes() {
         let instructions = "This calculator should not be used in patients with prior sustained ventricular arrhythmia or sudden cardiac arrest. It is designed to provide predictions based on the clinical characteristics of ARVC patients at time of their diagnosis."
-        let reference = "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180.\n[doi:10.1093/eurheartj/ehac180](https://doi.org/10.1093/eurheartj/ehac180)"
-        InformationViewController.show(vc: self, instructions: instructions, reference: reference, name: riskScoreTitle)
+        var references: [Reference] = []
+        if let reference = Reference("Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180.\ndoi:10.1093/eurheartj/ehac180") {
+            references.append(reference)
+        }
+        InformationViewController.show(vc: self, instructions: instructions, references: references, name: riskScoreTitle)
     }
 
     // Respond to pressing Done button on keyboard.

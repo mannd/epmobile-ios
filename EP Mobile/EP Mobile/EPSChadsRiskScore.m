@@ -12,13 +12,6 @@
 
 @implementation EPSChadsRiskScore
 
-- (instancetype)init {
-    self = [super init];
-    Reference *ref1 = [[Reference alloc] initWithText:@"" link:@""];
-    self.references = [NSArray arrayWithObjects:ref1, nil];
-    return self;
-}
-
 - (NSString *)getTitle {
     return @"CHADS\u2082";
 }
@@ -27,28 +20,11 @@
     return @"Use this score to assess the risk of stroke in patients with atrial fibrillation.";
 }
 
-- (NSString *)getReference {
-    return @"TEMP";
-}
-
-- (NSString *)getRawReference1 {
-    return @"Gage BF, Waterman AD, Shannon W, Boechler M, Rich MW, Radford MJ. Validation of Clinical Classification Schemes for Predicting StrokeResults From the National Registry of Atrial Fibrillation. JAMA. 2001;285(22):2864-2870.";
-}
-
-- (NSString *)getRawReference2 {
-    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.";
-}
-
-- (NSString *)getLink1 {
-    return @"doi:10.1001/jama.285.22.2864";
-}
-
-- (NSString *)getLink2 {
-    return @"doi:10.1093/eurheartj/ehr488";
-}
-
-- (BOOL)multipleReferences {
-    return YES;
+- (NSArray *)getReferences {
+    Reference *ref1 = [[Reference alloc] init: @"Gage BF, Waterman AD, Shannon W, Boechler M, Rich MW, Radford MJ. Validation of Clinical Classification Schemes for Predicting StrokeResults From the National Registry of Atrial Fibrillation. JAMA. 2001;285(22):2864-2870. doi:10.1001/jama.285.22.2864"];
+    Reference *ref2 = [[Reference alloc] init: @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510. doi:10.1093/eurheartj/ehr488"];
+    NSArray *references = [NSArray arrayWithObjects:ref1, ref2, nil];
+    return references;
 }
 
 - (NSMutableArray *)getArray {

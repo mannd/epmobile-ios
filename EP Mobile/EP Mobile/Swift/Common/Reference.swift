@@ -67,4 +67,9 @@ final class Reference: NSObject {
     func getReferenceWithMarkdownLink() -> String? {
         return text + "\n" + (getMarkdownLink() ?? "") 
     }
+
+    @objc
+    func getPlainTextReference() -> String {
+        return text + "\n" + link
+    }
 }

@@ -20,10 +20,9 @@
 - (NSString *)getMessage:(int)score;
 - (NSString *)getInstructions;
 - (NSString *)getKey;
-- (BOOL)multipleReferences;
 - (CGFloat)rowHeight:(CGFloat)defaultHeight;
 - (void)formatCell:(UITableViewCell *)cell;
-- (NSString *)getReference;
+- (NSArray *)getReferences;
 - (NSArray *)risksSelected:(NSArray *)risks;
 - (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks;
 - (int)detailTextNumberOfLines;

@@ -8,6 +8,7 @@
 
 #import "EPSRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSRiskScore
 // This is essentially an abstract class with some default methods
@@ -78,12 +79,8 @@
     return nil;
 }
 
-- (NSString *)getReference {
-    return nil;
-}
-
--(BOOL)multipleReferences {
-    return NO;
+- (NSArray *)getReferences {
+    return [[NSArray alloc] init]; // default is empty array
 }
 
 - (NSArray *)risksSelected:(NSArray *)risks {
@@ -108,7 +105,9 @@
     report = [report stringByAppendingString:@"\n"];
     report = [report stringByAppendingString:message];
     report = [report stringByAppendingString:@"\nReference: "];
-    report = [report stringByAppendingString:[self getReference]];
+    for (Reference *ref in [self getReferences]) {
+        report = [report stringByAppendingString:[ref getPlainTextReference]];
+    }
     report = [report stringByAppendingString:@"\n"];
     // eliminate blank lines
     report = [report stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];

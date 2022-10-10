@@ -12,9 +12,8 @@ struct InformationView: View {
     @Environment(\.dismiss) private var dismiss
     var instructions: String?
     var key: String?
-    var reference: String
-    var name: String = "TITLE"
-    var multipleReferences = false
+    var references: [Reference]
+    var name: String
 
     var body: some View {
         NavigationView {
@@ -30,9 +29,12 @@ struct InformationView: View {
                             Text(key)
                         }
                     }
-                    // Note that hyperlinks don't appear when Text is used with a variable, unless you do this...
-                    Section(header: Text(multipleReferences ? "References" : "Reference")) {
-                        Text(LocalizedStringKey(reference))
+                    if references.count > 0 {
+                        Section(header: Text(references.count > 1 ? "References" : "Reference")) {
+                            ForEach (0..<references.count, id: \.self) { i in
+                                Text(LocalizedStringKey(references[i].getReferenceWithMarkdownLink() ?? "Missing ref"))
+                            }
+                        }
                     }
                 }
                 Button("Done") {
@@ -51,6 +53,7 @@ struct InformationView: View {
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationView(reference: "Test Reference\nhttps://www.google.com")
+        InformationView(references: [Reference("Test Reference\ndoi://www.google.com")!], name: "Test Title")
+        InformationView(instructions: "Test instructions", key: "Test key", references: [Reference("Test Reference\nhttps://www.google.com")!], name: "Test Title")
     }
 }
