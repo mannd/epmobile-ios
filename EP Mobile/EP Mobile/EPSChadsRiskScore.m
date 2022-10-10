@@ -7,8 +7,8 @@
 //
 
 #import "EPSChadsRiskScore.h"
-#import "EPSRiskFactor.h"
 #import "EP_Mobile-Swift.h"
+#import "EPSRiskFactor.h"
 
 @implementation EPSChadsRiskScore
 

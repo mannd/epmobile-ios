@@ -111,7 +111,7 @@
     NSArray *risksSelected = [riskScore risksSelected:risks];
     NSString* result = [riskScore getFullRiskReportFromMessage:message andRisks:risksSelected];
     
-    [EPSSharedMethods showRiskDialogWithMessage:message riskResult:result] inView:self];
+    [EPSSharedMethods showRiskDialogWithMessage:message riskResult:result inView:self];
 }
 
 #pragma mark - Table view data source

@@ -26,8 +26,10 @@ final class ReferenceTests: XCTestCase {
         let ref4 = Reference("Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.\ndoi:10.1093/eurheartj/ehr488")
         XCTAssertEqual(ref4!.text, "Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.")
         XCTAssertEqual(ref4!.link, "doi:10.1093/eurheartj/ehr488")
+        XCTAssertEqual(ref4!.getPlainTextReference(), "Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.\ndoi:10.1093/eurheartj/ehr488")
         XCTAssertEqual(ref4!.getReferenceWithMarkdownLink(), "Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510.\n[doi:10.1093/eurheartj/ehr488](https://doi.org/10.1093/eurheartj/ehr488)")
         let ref5 = Reference("Horton J, Bushwick B: American Family Physician. Feb 1, 1999. https://www.aafp.org/afp/1999/0201/p635.html")
+        XCTAssertEqual(ref5!.getReferenceWithMarkdownLink(), ref5!.getPlainTextReference())
     }
 
 }

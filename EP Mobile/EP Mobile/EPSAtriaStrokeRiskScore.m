@@ -8,6 +8,7 @@
 
 #import "EPSAtriaStrokeRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 #define PRIOR_STROKE_ITEM 10
 #define NO_AGE_SELECTED -1
@@ -22,8 +23,9 @@
     return @"Use this score to predict the risk of thromboembolic events in patients with atrial fibrillation.";
 }
 
-- (NSString *)getReference {
-    return @"Singer DE, Chang Y, Borowsky LH, et al. A new risk scheme to predict ischemic stroke and other thromboembolism in atrial fibrillation: the ATRIA study stroke risk score. J Am Heart Assoc. 2013;2(3):e000250.\n[doi:10.1161/JAHA.113.000250](https://doi.org/10.1161/JAHA.113.000250)";
+- (NSArray *)getReferences {
+    Reference *ref = [[Reference alloc] init: @"Singer DE, Chang Y, Borowsky LH, et al. A new risk scheme to predict ischemic stroke and other thromboembolism in atrial fibrillation: the ATRIA study stroke risk score. J Am Heart Assoc. 2013;2(3):e000250.\ndoi:10.1161/JAHA.113.000250"];
+    return [NSArray arrayWithObject:ref];
 }
 
 - (NSMutableArray *)getArray {

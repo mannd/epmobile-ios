@@ -8,6 +8,7 @@
 
 #import "EPSAtriaBleedRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSAtriaBleedRiskScore
 - (NSString *)getTitle {
@@ -18,12 +19,9 @@
     return @"Use this score to predict the risk of bleeding occurring on wafarin for treatment of atrial fibrillation.";
 }
 
-- (NSString *)getReference {
-    return @"Fang MC, Go AS, Chang Y, et al. A New Risk Scheme to Predict Warfarin-Associated Hemorrhage. Journal of the American College of Cardiology. 2011;58(4):395-401.\n[doi:10.1016/j.jacc.2011.03.031](https://doi.org/10.1016/j.jacc.2011.03.031)";
-}
-
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://content.onlinejacc.org/article.aspx?articleid=1146658"];
+- (NSArray *)getReferences {
+    Reference *ref = [[Reference alloc] init: @"Fang MC, Go AS, Chang Y, et al. A New Risk Scheme to Predict Warfarin-Associated Hemorrhage. Journal of the American College of Cardiology. 2011;58(4):395-401.\ndoi:10.1016/j.jacc.2011.03.031"];
+    return [NSArray arrayWithObject:ref];
 }
 
 

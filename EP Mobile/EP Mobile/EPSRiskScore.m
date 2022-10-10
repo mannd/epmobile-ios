@@ -122,9 +122,4 @@
     return riskString;
 }
 
-- (NSURL *)getReferenceLink {
-    return nil;
-}
-
-
 @end

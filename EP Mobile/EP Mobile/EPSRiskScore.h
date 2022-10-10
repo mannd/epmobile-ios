@@ -27,7 +27,6 @@
 - (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks;
 - (int)detailTextNumberOfLines;
 + (NSString *)formatRisks:(NSArray *)risks;
-- (NSURL *)getReferenceLink;
 
 @property (strong, nonatomic) NSArray *references;
 
