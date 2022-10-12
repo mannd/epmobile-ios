@@ -73,6 +73,7 @@
 		8E38A07A28F1F4BC00F1F723 /* ConvertLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */; };
 		8E38A07C28F2597A00F1F723 /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07B28F2597A00F1F723 /* Reference.swift */; };
 		8E38A07E28F377AD00F1F723 /* ReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */; };
+		8E38A08128F4B3BB00F1F723 /* InformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A08028F4B3BB00F1F723 /* InformationProvider.swift */; };
 		8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E39950A204328520079E391 /* EPSCMSStrings.m */; };
 		8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */; };
 		8E3A3BF528300CED0071C23F /* WarfarinClinicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */; };
@@ -305,6 +306,7 @@
 		8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertLinkTests.swift; sourceTree = "<group>"; };
 		8E38A07B28F2597A00F1F723 /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
 		8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceTests.swift; sourceTree = "<group>"; };
+		8E38A08028F4B3BB00F1F723 /* InformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProvider.swift; sourceTree = "<group>"; };
 		8E399509204328520079E391 /* EPSCMSStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSStrings.h; sourceTree = "<group>"; };
 		8E39950A204328520079E391 /* EPSCMSStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSStrings.m; sourceTree = "<group>"; };
 		8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarfarinClinicView.swift; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 		8E18B36D281503510043FD00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8E38A07F28F4A69F00F1F723 /* Protocols */,
 				8E23949228244CE400B6E8B7 /* Extensions */,
 				8E28243F2821B94200DD9571 /* ViewModels */,
 				8E59E967281A4060003C485F /* Common */,
@@ -723,6 +726,14 @@
 				8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8E38A07F28F4A69F00F1F723 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E38A08028F4B3BB00F1F723 /* InformationProvider.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8E59E967281A4060003C485F /* Common */ = {
@@ -1277,6 +1288,7 @@
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 				8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */,
 				8EB3D38028EFCBFE00023F29 /* InformationViewController.swift in Sources */,
+				8E38A08128F4B3BB00F1F723 /* InformationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

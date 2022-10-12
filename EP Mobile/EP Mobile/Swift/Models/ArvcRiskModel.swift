@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ArvcRiskModel: NSObject {
+struct ArvcRiskModel: InformationProvider {
     // baseline survival from sustained VAs at time...
     // Reference: https://doi.org/10.1093/eurheartj/ehac180
     // Note these baseline risks are NOT from the source article, but are from
@@ -97,5 +97,24 @@ public class ArvcRiskModel: NSObject {
     private func roundToOnePlace(_ value: Double) -> Double {
         return round(value * 10) / 10
     }
+
+    // MARK: - InformationProvider
+
+    static func getReferences() -> [Reference] {
+        var references: [Reference] = []
+        if let reference = Reference("Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180.\ndoi:10.1093/eurheartj/ehac180") {
+            references.append(reference)
+        }
+        return references
+    }
+
+    static func getInstructions() -> String? {
+        return "This calculator should not be used in patients with prior sustained ventricular arrhythmia or sudden cardiac arrest. It is designed to provide predictions based on the clinical characteristics of ARVC patients at time of their diagnosis."
+    }
+
+    static func getKeys() -> String? {
+        return nil
+    }
+
 }
 
