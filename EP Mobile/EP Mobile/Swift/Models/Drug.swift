@@ -42,21 +42,54 @@ enum DrugWarning: String {
     case doNotUse = "DO NOT USE!"
 }
 
-protocol Drug {
+protocol DrugDoseProvider{
     func hasWarning() -> Bool
     func getDoseMessage() -> String
     func getDetails() -> String
     func getDose() -> String
 }
 
-extension Drug {
+class Drug: DrugDoseProvider, InformationProvider {
+    func hasWarning() -> Bool {
+         return false
+    }
+
+    func getDoseMessage() -> String {
+        return ""
+    }
+
+    func getDetails() -> String {
+        return ""
+    }
+
     func getDose() -> String {
         if getDetails().isEmpty {
             return getDoseMessage()
         }
         return getDoseMessage() + "\n" + getDetails()
     }
+
+    static func getInstructions() -> String? {
+        return nil
+    }
+
+    static func getKeys() -> String? {
+        return nil
+    }
+
+    static func getReferences() -> [Reference] {
+        return []
+    }
+
+    static func getCustomSectionText() -> String? {
+        return "Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage."
+    }
+
+    static func getCustomSectionTitle() -> String? {
+        return "Caution"
+    }
 }
+
 
 final class DrugFactory {
     static func create(drugName: DrugName, patient: Patient) -> Drug? {
@@ -90,11 +123,11 @@ final class Apixaban: Drug {
     init(patient: Patient) {
         self.patient = patient
     }
-    func hasWarning() -> Bool {
+    override func hasWarning() -> Bool {
         return patient.crCl < 15
     }
 
-    func getDoseMessage() -> String {
+    override func getDoseMessage() -> String {
         var dose: String = ""
         var message: String = ""
         var caution: String = ""
@@ -114,7 +147,7 @@ final class Apixaban: Drug {
         return message
     }
 
-    func getDetails() -> String {
+    override func getDetails() -> String {
         return ""
     }
 }
@@ -126,11 +159,11 @@ final class Dabigatran: Drug {
         self.patient = patient
     }
 
-    func hasWarning() -> Bool {
+    override func hasWarning() -> Bool {
         return patient.crCl <= 50
     }
 
-    func getDoseMessage() -> String {
+    override func getDoseMessage() -> String {
         let dose: Int
         let crCl = patient.crCl
         if (crCl > 30) {
@@ -148,7 +181,7 @@ final class Dabigatran: Drug {
         return "Dose = \(dose) mg BID."
     }
 
-    func getDetails() -> String {
+    override func getDetails() -> String {
         let crCl = patient.crCl
         var message = ""
         if (crCl < 15) {
@@ -176,11 +209,11 @@ final class Dofetilide: Drug {
         self.patient = patient
     }
 
-    func hasWarning() -> Bool {
+    override func hasWarning() -> Bool {
         patient.crCl < 20
     }
 
-    func getDoseMessage() -> String {
+    override func getDoseMessage() -> String {
         let dose: Int
         let crCl = patient.crCl
         if crCl > 60 {
@@ -201,7 +234,7 @@ final class Dofetilide: Drug {
         return "Dose = \(dose) mcg BID."
     }
 
-    func getDetails() -> String {
+    override func getDetails() -> String {
         return ""
     }
 }
@@ -213,11 +246,11 @@ final class Edoxaban: Drug {
         self.patient = patient
     }
 
-    func hasWarning() -> Bool {
+    override func hasWarning() -> Bool {
         return patient.crCl < 15 || patient.crCl > 95
     }
 
-    func getDoseMessage() -> String {
+    override func getDoseMessage() -> String {
         var stringDose = ""
         let crCl = patient.crCl
         if crCl < 15 || crCl > 95 {
@@ -235,7 +268,7 @@ final class Edoxaban: Drug {
         return "Dose = \(stringDose) mg daily."
     }
 
-    func getDetails() -> String {
+    override func getDetails() -> String {
         if patient.crCl > 95 {
             return "Edoxaban should not be used in patients with CrCl > 95 mL/min"
         }
@@ -250,11 +283,11 @@ final class Rivaroxaban: Drug {
         self.patient = patient
     }
 
-    func hasWarning() -> Bool {
+    override func hasWarning() -> Bool {
         return patient.crCl < 15
     }
 
-    func getDoseMessage() -> String {
+    override func getDoseMessage() -> String {
         let crCl = patient.crCl
         var dose: Int
         if crCl > 50 {
@@ -272,7 +305,7 @@ final class Rivaroxaban: Drug {
         return "Dose = \(dose) mg daily. "
     }
 
-    func getDetails() -> String {
+    override func getDetails() -> String {
         if patient.crCl >= 15 {
             return "Take dose with evening meal."
         }
@@ -287,11 +320,11 @@ final class Sotalol: Drug {
         self.patient = patient
     }
 
-    func hasWarning() -> Bool {
+    override func hasWarning() -> Bool {
         return patient.crCl < 40
     }
 
-    func getDoseMessage() -> String {
+    override func getDoseMessage() -> String {
         let crCl = patient.crCl
         var dose: Int
         if crCl >= 40 {
@@ -305,7 +338,7 @@ final class Sotalol: Drug {
         return "Dose = \(dose) mg daily. "
     }
 
-    func getDetails() -> String {
+    override func getDetails() -> String {
         if patient.crCl < 40 {
             return ""
         }

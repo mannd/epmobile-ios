@@ -139,9 +139,9 @@ struct DrugDoseCalculator: View {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
                 if drugName == .crCl {
-                    CrClInfo()
+                    InformationView(references: Patient.getCrClReferences(), name: "Creatinine Clearance", optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
                 } else {
-                    Info()
+                    InformationView(references: Drug.getReferences(), name: "Drug Calculators", optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
                 }
             }))
         }
@@ -226,63 +226,9 @@ struct DrugDoseCalculator: View {
     }
 }
 
-private struct CrClInfo: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("Notes")) {
-                        Text("This calculator uses the Cockcroft-Gault formula, which is the recommended formula for calculating creatinine clearance for determining drug doses.  You can consider using the Weight Calculator to adjust body weight for determining creatinine clearance.\n\nIf you wish to calculate a normalized GFR to estimate renal function, use the GFR Calculator instead")
-                    }
-                    Section(header: Text("Reference")) {
-                            Text("Cockcroft DW, Gault H. Prediction of Creatinine Clearance from Serum Creatinine. NEF. 1976;16(1):31-41.\n[doi:10.1159/000180580](https://doi.org/10.1159/000180580)")
-                        }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("Creatinine Clearance"), displayMode: .inline)
-        }
-    }
-}
-
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("Caution")) {
-                            Text("Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage.")
-                        }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("Drug Calculator"), displayMode: .inline)
-        }
-    }
-}
-
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
         DrugDoseCalculator(drugName: .constant(DrugName.crCl))
         DrugDoseCalculator(drugName: .constant(DrugName.apixaban))
-        Info()
     }
 }
