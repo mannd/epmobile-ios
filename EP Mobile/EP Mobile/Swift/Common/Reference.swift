@@ -24,39 +24,33 @@ final class Reference: NSObject {
 
     @objc
     /// Create a Reference using an AMA style reference
-    /// - Parameter fullReference: String in AMA style format.
-    init?(_ fullReference: String) {
+    /// - Parameter fullReference: String in AMA style format.  If there is no valid link, link is empty and text contains original string.
+    init(_ fullReference: String) {
         let textPlusLink = Self.parseFullReference(fullReference: fullReference)
-        if let textPlusLink {
-            self.text = textPlusLink.text
-            self.link = textPlusLink.link
-        } else {
-            return nil
-        }
+        self.text = textPlusLink.text
+        self.link = textPlusLink.link
     }
 
     /// Parse an AMA style reference into text and link components.
     /// - Parameter fullReference: AMA style reference string
     /// - Returns: tuple with text and link components, nil if string doesn't contain a link
-    static func parseFullReference(fullReference: String) -> (text: String, link: String)? {
+    static func parseFullReference(fullReference: String) -> (text: String, link: String) {
         let lowerCaseRef = fullReference.lowercased()
         var range: Range<String.Index>?
         if lowerCaseRef.contains("doi:") {
             range = lowerCaseRef.range(of: "doi:")
         } else if lowerCaseRef.contains("http") {
             range = lowerCaseRef.range(of: "http")
-        } else { // No link attached.  That's ok, just leave the link empty.
-            let text = fullReference
-            let link = ""
-            return (text, link)
         }
         if let range {
             let text = String(fullReference[..<range.lowerBound]).trimmingCharacters(in: .whitespacesAndNewlines)
             let link = String(fullReference[range.lowerBound...]).trimmingCharacters(in: .whitespacesAndNewlines)
             return (text, link)
+        } else { // No link attached.  That's ok, just leave the link empty.
+            let text = fullReference
+            let link = ""
+            return (text, link)
         }
-        // TODO: Can we avoid returning nil, and get rid of the optional initializer?
-        return nil
     }
 
     func getUri() -> String? {

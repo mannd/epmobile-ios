@@ -12,11 +12,11 @@ import MiniQTc
 extension QTcCalculator: InformationProvider {
     static func getReferences() -> [Reference] {
         var references: [Reference] = []
-        references.append(Reference(QTc.qtcCalculator(formula: .qtcBzt).reference)!)
-        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrd).reference)!)
-        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrm).reference)!)
-        references.append(Reference(QTc.qtcCalculator(formula: .qtcHdg).reference)!)
-        references.append(Reference("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\ndoi:10.1161/CIRCULATIONAHA.108.191096")!)
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcBzt).reference))
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrd).reference))
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrm).reference))
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcHdg).reference))
+        references.append(Reference("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\ndoi:10.1161/CIRCULATIONAHA.108.191096"))
         return references
     }
 

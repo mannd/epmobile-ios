@@ -62,8 +62,8 @@ struct InformationView: View {
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationView(references: [Reference("Test Reference\ndoi://www.google.com")!], name: "Test Title")
-        InformationView(instructions: "Test instructions", key: "Test key", references: [Reference("Test Reference\nhttps://www.google.com")!], name: "Test Title")
-        InformationView(references: [Reference("Test Reference\nhttps://www.google.com")!], name: "Test Title", optionalSectionTitle: "Special Notes", optionalSectionText: "Here are some special notes.")
+        InformationView(references: [Reference("Test Reference\ndoi://www.google.com")], name: "Test Title")
+        InformationView(instructions: "Test instructions", key: "Test key", references: [Reference("Test Reference\nhttps://www.google.com")], name: "Test Title")
+        InformationView(references: [Reference("Test Reference\nhttps://www.google.com")], name: "Test Title", optionalSectionTitle: "Special Notes", optionalSectionText: "Here are some special notes.")
     }
 }

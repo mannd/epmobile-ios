@@ -102,9 +102,8 @@ struct ArvcRiskModel: InformationProvider {
 
     static func getReferences() -> [Reference] {
         var references: [Reference] = []
-        if let reference = Reference("Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180.\ndoi:10.1093/eurheartj/ehac180") {
-            references.append(reference)
-        }
+        let reference = Reference("Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180.\ndoi:10.1093/eurheartj/ehac180")
+        references.append(reference)
         return references
     }
 

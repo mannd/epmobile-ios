@@ -56,10 +56,8 @@ final class Patient {
     static let crClNotes = "This calculator uses the Cockcroft-Gault formula, which is the recommended formula for calculating creatinine clearance for determining drug doses.  You can consider using the Weight Calculator to adjust body weight for determining creatinine clearance.\n\nIf you wish to calculate a normalized GFR to estimate renal function, use the GFR Calculator instead"
 
     static func getCrClReferences() -> [Reference] {
-        if let reference = Reference("Cockcroft DW, Gault H. Prediction of Creatinine Clearance from Serum Creatinine. NEF. 1976;16(1):31-41.\ndoi:10.1159/000180580") {
-            return [reference]
-        }
-        return []
+        let reference = Reference("Cockcroft DW, Gault H. Prediction of Creatinine Clearance from Serum Creatinine. NEF. 1976;16(1):31-41.\ndoi:10.1159/000180580")
+        return [reference]
     }
 
     init(
