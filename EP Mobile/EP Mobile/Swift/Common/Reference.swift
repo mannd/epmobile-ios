@@ -45,14 +45,17 @@ final class Reference: NSObject {
             range = lowerCaseRef.range(of: "doi:")
         } else if lowerCaseRef.contains("http") {
             range = lowerCaseRef.range(of: "http")
-        } else {
-            return nil
+        } else { // No link attached.  That's ok, just leave the link empty.
+            let text = fullReference
+            let link = ""
+            return (text, link)
         }
         if let range {
             let text = String(fullReference[..<range.lowerBound]).trimmingCharacters(in: .whitespacesAndNewlines)
             let link = String(fullReference[range.lowerBound...]).trimmingCharacters(in: .whitespacesAndNewlines)
             return (text, link)
         }
+        // TODO: Can we avoid returning nil, and get rid of the optional initializer?
         return nil
     }
 

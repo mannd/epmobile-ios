@@ -9,6 +9,28 @@
 import SwiftUI
 import MiniQTc
 
+extension QTcCalculator: InformationProvider {
+    static func getReferences() -> [Reference] {
+        var references: [Reference] = []
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcBzt).reference)!)
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrd).reference)!)
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrm).reference)!)
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcHdg).reference)!)
+        references.append(Reference("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\ndoi:10.1161/CIRCULATIONAHA.108.191096")!)
+        return references
+    }
+
+    static func getInstructions() -> String? {
+        nil
+    }
+
+    static func getKeys() -> String? {
+        nil
+    }
+
+
+}
+
 struct QTcCalculatorView: View {
     @State private var intervalRate: Int = 0
     @State private var qt: Int = 0
@@ -82,7 +104,7 @@ struct QTcCalculatorView: View {
                                     Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }).sheet(isPresented: $showInfo) {
-                Info()
+                InformationView(references: QTcCalculator.getReferences(), name: "QTc Calculator")
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -141,38 +163,8 @@ struct QTcCalculatorView: View {
     }
 }
 
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("References")) {
-                        Text("Bazett H. C. An analysis of the time‐relations of electrocardiograms. Annals of Noninvasive Electrocardiology. 2006;2(2):177-194.\n[doi:10.1111/j.1542-474X.1997.tb00325.x](https://doi.org/10.1111/j.1542-474X.1997.tb00325.x)")
-                        Text("Fridericia LS. Die Systolendauer im Elektrokardiogramm bei normalen Menschen und bei Herzkranken. Acta Medica Scandinavica. 1920;53(1):469-486.\n[doi:10.1111/j.0954-6820.1920.tb18266.x](https://doi.org/10.1111/j.0954-6820.1920.tb18266.x)")
-                        Text("Sagie A, Larson MG, Goldberg RJ, Bengtson JR, Levy D. An improved method for adjusting the QT interval for heart rate (the Framingham Heart Study). American Journal of Cardiology. 1992;70(7):797-801.\n[doi:10.1016/0002-9149(92)90562-D](https://doi.org/10.1016/0002-9149(92)90562-D)")
-                        Text("Hodges M, Salerno D, Erlinen D. Bazett’s QT correction reviewed: evidence that a linear QT correction for heart rate is better. J Am Coll Cardiol. 1983;1:694.\n*No link available*")
-                        Text("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\n[doi:10.1161/CIRCULATIONAHA.108.191096](https://doi.org/10.1161/CIRCULATIONAHA.108.191096)")
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("QTc Calculator"), displayMode: .inline)
-        }
-    }
-}
-
 struct QTcCalculator_Previews: PreviewProvider {
     static var previews: some View {
         QTcCalculatorView()
-        Info()
     }
 }

@@ -97,6 +97,7 @@ struct DateCalculator: View {
     }
 }
 
+// DateCalculator has a customized information view, without references.
 private struct Info: View {
     @Environment(\.dismiss) private var dismiss
 
