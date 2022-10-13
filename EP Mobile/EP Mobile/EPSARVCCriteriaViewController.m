@@ -39,42 +39,11 @@
 @synthesize headers;
 @synthesize criteria;
 
-//- (id)initWithStyle:(UITableViewStyle)style
-//{
-//    self = [super initWithStyle:style];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSDictionary *arvcDictionary = [[NSDictionary alloc] initWithDictionary:[dictionary objectForKey:@"ARVC"]];
-    NSArray *headerArray = [[NSArray alloc] initWithArray:[arvcDictionary objectForKey:@"SectionHeaders"]] ;
-    self.headers = headerArray;
+    [self initCriteria];
 
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-    NSArray *arvcCriteriaArray = [[NSArray alloc] initWithArray:[dictionary objectForKey:self.criteria]];
-    NSMutableArray *risks = [[NSMutableArray alloc] init];
-
-    for (int i = 0; i < [arvcCriteriaArray count]; ++i) {
-        // init each section
-        NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
-        for (int j = 0; j < [[arvcCriteriaArray objectAtIndex:i] count]; ++j) {
-            EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWithDetails:[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:[[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1] integerValue]  withDetails:@""];
-            [tmpArray addObject:risk];
-        }
-        [risks addObject:tmpArray];
-    }
-
-    self.list = risks;
-    
     if ([self.criteria isEqualToString:ARVC1994]) {
         cellHeight = ARVC_1994_CELL_HEIGHT;
         self.navigationItem.title = ARVC1994_TITLE;
@@ -89,12 +58,39 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
+- (void)initCriteria {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSDictionary *arvcDictionary = [[NSDictionary alloc] initWithDictionary:[dictionary objectForKey:@"ARVC"]];
+    NSArray *headerArray = [[NSArray alloc] initWithArray:[arvcDictionary objectForKey:@"SectionHeaders"]] ;
+    self.headers = headerArray;
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+
+    NSArray *arvcCriteriaArray = [[NSArray alloc] initWithArray:[dictionary objectForKey:self.criteria]];
+    NSMutableArray *risks = [[NSMutableArray alloc] init];
+
+    for (int i = 0; i < [arvcCriteriaArray count]; ++i) {
+        // init each section
+        NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
+        for (int j = 0; j < [[arvcCriteriaArray objectAtIndex:i] count]; ++j) {
+            EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWithDetails:[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:[[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1] integerValue]  withDetails:@""];
+            [tmpArray addObject:risk];
+        }
+        [risks addObject:tmpArray];
+    }
+
+    self.list = risks;
+}
+
 - (IBAction)calculate:(id)sender {
     [self calculateScore];
 }
 
 - (IBAction)clear:(id)sender {
-    // TODO: implement
+    [self initCriteria];
+    [self.tableView reloadData];
 }
 
 - (void)calculateScore {
@@ -156,13 +152,22 @@
     return message;
 }
 
-// TODO: fixup
 - (void)showNotes {
     if ([self.criteria isEqualToString:ARVC1994]) {
-        [InformationViewController showWithVc:self instructions:@"instruction" key:NULL references:[NSArray arrayWithObject:[[Reference alloc] init:@"referencs"]] name:ARVC1994_TITLE];
+        [InformationViewController
+         showWithVc:self
+         instructions:NULL
+         key:NULL
+         references:[NSArray arrayWithObject:[[Reference alloc] init:@"McKenna WJ, Thiene G, Nava A, et al. Diagnosis of arrhythmogenic right ventricular dysplasia/cardiomyopathy. Task Force of the Working Group Myocardial and Pericardial Disease of the European Society of Cardiology and of the Scientific Council on Cardiomyopathies of the International Society and Federation of Cardiology. Br Heart J. 1994;71(3):215-218.\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC483655/"]]
+         name:ARVC1994_TITLE];
     }
     if ([self.criteria isEqualToString:ARVC2010]) {
-        [InformationViewController showWithVc:self instructions:@"instruction" key:NULL references:[NSArray arrayWithObject:[[Reference alloc] init:@"referencs"]] name:ARVC2010_TITLE];
+        [InformationViewController
+         showWithVc:self
+         instructions:NULL
+         key:@"BSA = body surface area.\nPLAX = parasternal long axis view.\nPSAX = parasternal short axis view.\nRVOT = RV outflow tract."
+         references:[NSArray arrayWithObject:[[Reference alloc] init:@"Marcus FI, McKenna WJ, Sherrill D, et al. Diagnosis of arrhythmogenic right ventricular cardiomyopathy/dysplasia: Proposed Modification of the Task Force Criteria. European Heart Journal. 2010;31(7):806-814.\ndoi:10.1093/eurheartj/ehq025"]]
+         name:ARVC2010_TITLE];
     }
 }
 
@@ -212,23 +217,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return cellHeight;
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    NSString *result = nil;
-    if ([criteria isEqualToString:ARVC2010] && section == 0) {
-        result = @"BSA = body surface area. PLAX = parasternal long axis view. PSAX = parasternal short axis view. RVOT = RV outflow tract.";
-    }
-    if (section == 5) {
-        if ([criteria isEqualToString:ARVC2010])
-            result = @"Reference: Marcus FI et al. Circulation 2010;121:1533.";
-        else
-            result = @"Reference: McKenna WJ et al. Br Heart J 1994;71:215.";
-            
-    }
-    
-    return result;
-}
-
 
 #pragma mark - Table view delegate
 
