@@ -24,8 +24,7 @@ enum InrTarget: Int, CaseIterable, Identifiable {
     }
 }
 
-struct Warfarin {
-
+struct Warfarin: InformationProvider {
     let lowInrRange: ClosedRange = 2.0...3.0
     let highInrRange: ClosedRange = 2.5...3.5
 
@@ -121,6 +120,20 @@ struct Warfarin {
                         doseChangeDirection: DoseChangeDirection) -> Double {
         return round(oldDose + (doseChangeDirection == .increase ? oldDose * percent : -oldDose * percent))
     }
+    
+    static func getReferences() -> [Reference] {
+        let references = [Reference("Horton JD, Bushwick BM. Warfarin Therapy: Evolving Strategies in Anticoagulation. afp. 1999;59(3):635-646.\nhttps://www.aafp.org/pubs/afp/issues/1999/0201/p635.html")]
+        return references
+    }
+
+    static func getInstructions() -> String? {
+        return "This calculator can be used to adjust the warfarin dose when a patient is on a stable weekly dosing schedule. It should not be used when first starting warfarin. Select the tablet size the patient uses and the target INR.  Enter the measured INR and the total number of mg the patient is taking per week (e.g. a patient taking 5 mg daily takes 5 x 7 = 35 mg of warfarin per week).  The calculator will determine the percentage weekly dose increase or decrease that is likely to bring the INR back into the target range.  When it is feasible, the calculator will suggest the number of tablets to take each day of the week to achieve the INR goal. An upper and lower range of dosing will be given; in some cases, when dosing changes are small, the upper and lower range will be identical. When there is a range of doses, you might decide to use the higher or lower dose depending on other factors, such as the patient\'s previous response to dosing changes or the patient\'s age.  Warfarin dosing is not an exact science!"
+    }
+
+    static func getKeys() -> String? {
+        return nil
+    }
+
 }
 
 enum DoseChangeDirection {
@@ -149,6 +162,7 @@ enum DoseInstruction {
             return "INR is therapeutic. No change in warfarin dose."
         }
     }
+
 }
 
 struct DoseChange {

@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+fileprivate let crClCalculatorName = "Creatinine Clearance"
+fileprivate let drugCalculatorName = "Drug Calculators"
+
 struct DrugDoseCalculator: View {
     @State private var sex: EP_Mobile.Sex = .male
     @State private var age: Int = 0
@@ -139,9 +142,9 @@ struct DrugDoseCalculator: View {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
                 if drugName == .crCl {
-                    InformationView(references: Patient.getCrClReferences(), name: "Creatinine Clearance", optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
+                    InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
                 } else {
-                    InformationView(references: Drug.getReferences(), name: "Drug Calculators", optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
+                    InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
                 }
             }))
         }

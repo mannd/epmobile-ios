@@ -9,6 +9,8 @@
 import SwiftUI
 import MiniQTc
 
+fileprivate let calculatorName = "QTc Calculator"
+
 extension QTcCalculator: InformationProvider {
     static func getReferences() -> [Reference] {
         var references: [Reference] = []
@@ -27,8 +29,6 @@ extension QTcCalculator: InformationProvider {
     static func getKeys() -> String? {
         nil
     }
-
-
 }
 
 struct QTcCalculatorView: View {
@@ -99,12 +99,12 @@ struct QTcCalculatorView: View {
             .onChange(of: qt, perform: { _ in  clearResult() })
             .onChange(of: intervalRateType, perform: { _ in  clearResult() })
             .onChange(of: formula, perform: { _ in  clearResult() })
-            .navigationBarTitle(Text("QTc Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing:
                                     Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }).sheet(isPresented: $showInfo) {
-                InformationView(references: QTcCalculator.getReferences(), name: "QTc Calculator")
+                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())

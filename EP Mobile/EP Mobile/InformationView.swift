@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// TODO: make more flexible, each section has default title, etc.
 /// Display information like instructions, keys, references, and optional sections.
 /// Optional sections are always first in the view.
 struct InformationView: View {
@@ -18,6 +19,8 @@ struct InformationView: View {
     var name: String
     var optionalSectionTitle: String?
     var optionalSectionText: String?
+    var instructionsTitle: String = "Instructions"
+    var keyTitle: String = "Key"
 
     var body: some View {
         NavigationView {
@@ -29,12 +32,12 @@ struct InformationView: View {
                         }
                     }
                     if let instructions = instructions {
-                        Section(header: Text("Instructions")) {
+                        Section(header: Text(instructionsTitle)) {
                             Text(instructions)
                         }
                     }
                     if let key = key {
-                        Section(header: Text("Key")) {
+                        Section(header: Text(keyTitle)) {
                             Text(key)
                         }
                     }
@@ -49,11 +52,7 @@ struct InformationView: View {
                 Button("Done") {
                     dismiss()
                 }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
+                .roundedButton()
             }
             .navigationBarTitle(Text(name), displayMode: .inline)
         }

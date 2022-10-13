@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+fileprivate let calculatorName = "Weight Calculator"
+
 struct WeightCalculatorView: View {
     @State private var sex: EP_Mobile.Sex = .male
     @State private var weight: Double = 0.0
@@ -126,11 +128,11 @@ struct WeightCalculatorView: View {
             .onChange(of: height, perform: { _ in  clearResult() })
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .onChange(of: heightUnit, perform:  { _ in clearResult() })
-            .navigationBarTitle(Text("Weight Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
-                Info()
+                InformationView(instructions: Weight.getInstructions(), key: Weight.getKeys(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights")
             })
         }
         .onAppear() {
@@ -228,41 +230,8 @@ struct WeightCalculatorView: View {
     }
 }
 
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("Instructions")) {
-                        Text("Although the package inserts for the drugs included in the drug dose calculators recommend using actual uncorrected body weight and the Cockcroft-Gault formula for Creatinine Clearance, some authorities feel that using a corrected body weight may be more accurate.\n\nThis calculator determines the Ideal Body Weight and Adjusted Body Weight from the height, sex, and actual body weight. The Adjusted Body Weight formula here uses a correction factor of 0.4, which may give a more accurate measurement of Creatinine Clearance than other factors.  The formulas are not accurate if the height is less than 60 inches.\n\nPatients who are underweight (weight < Ideal Body Weight) should use actual weight for Creatinine Clearance determination.  Normal weight patients can use Ideal Body Weight, and overweight (defined in this calculator as weight 30% or more over Ideal Body Weight) should use the Adjusted Body Weight.")
-                    }
-                    Section(header: Text("Copy and Paste Weights")) {
-                        Text("These weights can be copied to the clipboard and pasted into the creatinine clearance calculator weight field using the Copy buttons.")
-
-                    }
-                    Section(header: Text("Reference")) {
-                        Text("Winter MA, Guhr KN, Berg GM. Impact of various body weights and serum creatinine concentrations on the bias and accuracy of the Cockcroft-Gault equation. Pharmacotherapy. 2012;32(7):604-612.\n[doi:10.1002/j.1875-9114.2012.01098.x](https://doi.org/10.1002/j.1875-9114.2012.01098.x)")
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("Weight Calculator"), displayMode: .inline)
-        }
-    }
-
-}
 struct WeightCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         WeightCalculatorView()
-        Info()
     }
 }

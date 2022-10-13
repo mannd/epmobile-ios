@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+fileprivate let calculatorName = "Date Calculator"
+
 struct DateCalculator: View {
     @State private var startingDate: Date = Date()
     @State private var numberOfDays = Self.defaultNumberOfDays
@@ -63,12 +65,12 @@ struct DateCalculator: View {
             .onChange(of: numberOfDays, perform: { _ in clearResult() })
             .onChange(of: startingDate, perform: { _ in clearResult() })
             .onChange(of: subtractDays, perform: { _ in clearResult() })
-            .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing:
                                     Button(action: { showingInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }).sheet(isPresented: $showingInfo) {
-                Info()
+                DateInformationView()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -97,8 +99,8 @@ struct DateCalculator: View {
     }
 }
 
-// DateCalculator has a customized information view, without references.
-private struct Info: View {
+// DateCalculator has a customized information view.
+private struct DateInformationView: View {
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -123,7 +125,7 @@ private struct Info: View {
                 }
                 .roundedButton()
             }
-            .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -134,7 +136,7 @@ struct DateCalculator_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             DateCalculator()
-            Info()
+            DateInformationView()
         }
     }
 }

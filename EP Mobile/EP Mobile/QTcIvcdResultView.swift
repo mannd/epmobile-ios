@@ -9,6 +9,8 @@
 import SwiftUI
 import MiniQTc
 
+fileprivate let calculatorName = "QTc with IVCD Results"
+
 struct QTcIvcdResultView: View {
     @State private var showInfo = false
     var qtcIvcdResultList: QTcIvcdResultList
@@ -28,11 +30,11 @@ struct QTcIvcdResultView: View {
                     }
                 }
             }
-            .navigationBarTitle("QTc with IVCD Results", displayMode: .inline )
+            .navigationBarTitle(calculatorName, displayMode: .inline )
             .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
-                QTcIvcdInfo()
+                QTcIvcdCalculatorView.getQTcIvcdInformationView()
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -63,8 +65,8 @@ struct QTcIvcdResultDetail: View {
             .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
                 Image(systemName: "info.circle")
             }.sheet(isPresented: $showInfo) {
-                QTcIvcdInfo()
-        })
+                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+            })
         }
     }
 
@@ -77,8 +79,6 @@ struct QTcIvcdResultDetail: View {
         }
     }
 }
-
-
 
 
 struct QTcIvcdResult_Previews: PreviewProvider {
