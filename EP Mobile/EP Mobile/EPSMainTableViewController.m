@@ -10,7 +10,7 @@
 #import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseTableViewController.h"
-#import "EPSARVC2010TableViewController.h"
+#import "EPSARVCCriteriaViewController.h"
 #import "EPSAtriaBleedRiskScore.h"
 #import "EPSAtriaStrokeRiskScore.h"
 #import "EPSChadsRiskScore.h"
@@ -205,7 +205,7 @@
         lc.linkTitle = @"LBBB Criteria";
     }
   
-    EPSARVC2010TableViewController *arvcVc = (EPSARVC2010TableViewController *)vc;
+    EPSARVCCriteriaViewController *arvcVc = (EPSARVCCriteriaViewController *)vc;
     if ([segueIdentifier isEqualToString:@"ARVC2010Segue"])
         arvcVc.criteria = @"ARVC2010";
     else if ([segueIdentifier isEqualToString:@"ARVC1994Segue"])
