@@ -10,7 +10,6 @@
 
 @implementation EPSAtrialTachAlgorithm
 
-
 const int step1 = 1;
 const int v24PosStep = 2;
 const int aVLStep = 3;
@@ -38,7 +37,7 @@ const int locationRSPV = 1009;
 }
 
 - (BOOL)showInstructionsButton {
-    return YES;
+    return NO;
 }
 
 - (NSString *)resultDialogTitle {
