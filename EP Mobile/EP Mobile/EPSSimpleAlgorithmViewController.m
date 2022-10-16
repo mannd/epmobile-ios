@@ -143,13 +143,14 @@
 }
 
 
+// TODO: Check if NotesSegue ever happens
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"NotesSegue"]) {
         EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
         vc.key = self.algorithmName;
     }
-    else if ([segueIdentifier isEqualToString:@"MapSegue"]) {
+    if ([segueIdentifier isEqualToString:@"MapSegue"]) {
         EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];
         vc.showPathway = YES;
         vc.location1 = [(EPSArrudaAlgorithm *)algorithm outcomeLocation1:step];

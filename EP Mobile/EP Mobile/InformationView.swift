@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-// TODO: make more flexible, each section has default title, etc.
 /// Display information like instructions, keys, references, and optional sections.
 /// Optional sections are always first in the view.
 struct InformationView: View {

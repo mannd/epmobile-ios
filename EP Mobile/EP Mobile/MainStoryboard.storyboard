@@ -2243,7 +2243,6 @@
                     <connections>
                         <outlet property="imageView" destination="0MF-LX-8WT" id="006-QW-swU"/>
                         <outlet property="scrollView" destination="MKL-yT-bs1" id="NOZ-NW-9WP"/>
-                        <segue destination="PQv-Iu-QYe" kind="presentation" identifier="BrugadaNotesSegue" modalTransitionStyle="flipHorizontal" id="gzd-ih-l4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2906,7 +2905,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="I7k-dt-UVf"/>
-        <segue reference="oIL-n2-cNM"/>
         <segue reference="k3E-zN-ktT"/>
         <segue reference="Nwd-vW-tfz"/>
     </inferredMetricsTieBreakers>

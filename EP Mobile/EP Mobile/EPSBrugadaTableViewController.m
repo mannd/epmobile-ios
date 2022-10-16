@@ -9,7 +9,13 @@
 #import "EPSBrugadaTableViewController.h"
 #import "EPSLinkViewController.h"
 #import "EPSRiskScoreTableViewController.h"
+#import "EPSBrugadaRiskScore.h"
 
+#import "EP_Mobile-Swift.h"
+
+// NB: This is hard-wired.  If the Brugada table changes, this will
+// need to be changed too.
+#define BRUGADA_RISK_ROW 2
 
 @interface EPSBrugadaTableViewController ()
 
@@ -40,6 +46,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 3;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == BRUGADA_RISK_ROW {
+        [RiskScoreViewController showWithVc:self riskScore:[[EPSBrugadaRiskScore alloc] init]];
+    }
 }
 
 

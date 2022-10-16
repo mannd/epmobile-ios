@@ -170,7 +170,8 @@
      instructions:@"This algorithm applies only to focal atrial tachycardia. To be accurate, the P wave must have a discrete isoelectric segment before its start, i.e. don\'t use a P wave that is fused onto the end of a T wave.  Iso means isoelectric, defined as a < 0.05 mV deviation from the baseline.  The algorithm sensitivity in the original study was 93%."
      key:NULL
      references:[NSArray arrayWithObject:[[Reference alloc] init:@"Kistler PM, Roberts-Thomson Kurt C., Haqqani HM, et al. P-Wave Morphology in Focal Atrial Tachycardia. Journal of the American College of Cardiology. 2006;48(5):1010-1017.\ndoi:/10.1016/j.jacc.2006.03.058"]]
-     name:[algorithm name]];
+     name:[algorithm name]
+    ];
 }
 
 - (void)showResults {

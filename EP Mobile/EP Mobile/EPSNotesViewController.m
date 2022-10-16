@@ -7,7 +7,6 @@
 //
 
 #import "EPSNotesViewController.h"
-#import "EPSBrugadaNotes.h"
 #import "EPSOutFlowTractVTNotes.h"
 #import "EPSAnnularVTNotes.h"
 #import "EPSLogging.h"
@@ -41,8 +40,6 @@
         notes = [[EPSOutFlowTractVTNotes alloc] init];
     else if ([self.key isEqualToString:@"AnnularVT"])
         notes = [[EPSAnnularVTNotes alloc] init];
-    else if ([self.key isEqualToString:@"BrugadaECG"])
-        notes = [[EPSBrugadaNotes alloc] init];
     [self.notesTextView setText:[notes noteText]];
     self.titleBar.topItem.title = [notes titleText];
     self.headerLabel.text = [notes labelText];
