@@ -436,9 +436,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="BrugadaRiskSegue" id="zBw-yW-yh2"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1121,9 +1118,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="ERSSegue" id="97S-gk-tzd"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="rOU-xJ-hCy" style="IBUITableViewCellStyleDefault" id="Tvv-V7-dQ3">
                                         <rect key="frame" x="0.0" y="727.5" width="414" height="44"/>
@@ -1854,7 +1848,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rZm-5w-a1a">
-                                <rect key="frame" x="-1" y="-1" width="414" height="797"/>
+                                <rect key="frame" x="-2" y="-1" width="414" height="797"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -2412,7 +2406,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-G5-ryY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8587" y="-417"/>
+            <point key="canvasLocation" x="-8848" y="-524"/>
         </scene>
         <!--Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
@@ -2904,9 +2898,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I7k-dt-UVf"/>
+        <segue reference="yCM-Gp-tSo"/>
         <segue reference="k3E-zN-ktT"/>
-        <segue reference="Nwd-vW-tfz"/>
+        <segue reference="MAd-5A-Xlz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brugadaecg" width="400" height="255"/>

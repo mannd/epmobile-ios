@@ -19,6 +19,8 @@
 #import "EPSHemorrhagesRiskScore.h"
 #import "EPSHcmRiskScore.h"
 #import "EPSIcdMortalityRiskScore.h"
+#import "EPSTamponadeRiskScore.h"
+#import "EPSErsRiskScore.h"
 
 #import "EP_Mobile-Swift.h"
 
@@ -43,6 +45,8 @@
 #define WEIGHT_CALCULATOR_ROW 7
 // Diagnosis section
 #define DIAGNOSIS_SECTION 1
+#define TAMPONADE_ROW 4
+#define EARLY_REPOL_ROW 5
 // References and tools section
 #define REFERENCES_TOOLS_SECTION 2
 #define ENTRAINMENT_CALCULATOR_ROW 2
@@ -135,6 +139,13 @@
         if (indexPath.row == WEIGHT_CALCULATOR_ROW) {
             [WeightCalculatorCalculatorController showWithVc:self];
         }
+    } else if (indexPath.section == DIAGNOSIS_SECTION) { // Diagnosis
+        if (indexPath.row == TAMPONADE_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSTamponadeRiskScore alloc] init]];
+        }
+        if (indexPath.row == EARLY_REPOL_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSErsRiskScore alloc] init]];
+        }
     } else if (indexPath.section == REFERENCES_TOOLS_SECTION) { // Reference & Tools
         if (indexPath.row == ENTRAINMENT_CALCULATOR_ROW) {
             [EntrainmentCalculatorViewController showWithVc:self];
@@ -180,10 +191,6 @@
         vc.scoreType = @"SameTtr";
     else if ([segueIdentifier isEqualToString:@"OrbitSegue"])
         vc.scoreType = @"Orbit";
-    else if ([segueIdentifier isEqualToString:@"ERSSegue"])
-        vc.scoreType = @"ERSRisk";
-    else if ([segueIdentifier isEqualToString:@"TamponadeSegue"])
-        vc.scoreType = @"TamponadeRisk";
     else if ([segueIdentifier isEqualToString:@"QTProlongationSegue"])
         vc.scoreType = @"QTProlongationRisk";
     
@@ -203,6 +210,7 @@
     else if ([segueIdentifier isEqualToString:@"LbbbSegue"]) {
         lc.webPage = @"lbbb";
         lc.linkTitle = @"LBBB Criteria";
+        lc.references = [NSArray arrayWithObject:[[Reference alloc] init:@"Strauss DG, Selvester RH, Wagner GS. Defining Left Bundle Branch Block in the Era of Cardiac Resynchronization Therapy. American Journal of Cardiology. 2011;107(6):927-934.\ndoi:10.1016/j.amjcard.2010.11.010"]];
     }
   
     EPSARVCCriteriaViewController *arvcVc = (EPSARVCCriteriaViewController *)vc;

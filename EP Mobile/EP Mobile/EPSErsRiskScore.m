@@ -11,6 +11,8 @@
 #import "EPSSharedMethods.h"
 #import "EPSLogging.h"
 
+#import "EP_Mobile-Swift.h"
+
 #define NO_ECG_RISK_SCORE 1000
 
 @implementation EPSErsRiskScore
@@ -19,12 +21,13 @@
     return @"ERS Shanghai Score";
 }
 
-- (NSString *)getReference {
-    return @"Antzelevitch C, Yan GX, Ackerman MJ, Borggrefe M, Corrado D, Guo J, et al. J-wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. J Arrhythmia. [Internet] 2016 Oct [cited 2017 Sep 28];32(5):315-339. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5063270/";
+- (NSString *)getKey {
+    return @"ER = Early repolarization.\nPVCs = Premature ventricular complexes \nVF = ventricular fibrillation.\nVT = ventricular tachycardia.\nSCD = sudden cardiac death.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5063270/"];
+// Note reference is identical to Brugada risk score reference.
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[[Reference alloc] init:@"Antzelevitch C, Yan GX, Ackerman MJ, et al. J-Wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. J Arrhythm. 2016;32(5):315-339.\ndoi:/10.1016/j.joa.2016.07.002"]];
 }
 
 - (NSMutableArray *)getArray {

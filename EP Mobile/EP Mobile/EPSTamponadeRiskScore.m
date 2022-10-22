@@ -10,18 +10,26 @@
 #import "EPSRiskFactor.h"
 #import "EPSSharedMethods.h"
 
+#import "EP_Mobile-Swift.h"
+
 @implementation EPSTamponadeRiskScore
 
 -(NSString *)getTitle {
     return @"Cardiac Tamponade";
 }
 
-- (NSString *)getReference {
-    return @"Risti AD, Imazio M, Adler Y, et al. Triage strategy for urgent management of cardiac tamponade: a position statement of the European Society of Cardiology Working Group on Myocardial and Pericardial Diseases. European Heart Journal. 2014;35(34):2279-2284. doi:10.1093/eurheartj/ehu217";
+- (NSString *)getInstructions {
+    return @"Use this scoring system to triage a patient with pericardial tamponade.\n\nContraindications to pericardiocentesis include uncorrected coagulopathy, INR > 1.5, thrombocytopenia < 50,000/mm², small, posterior, and loculated effusions, or effusions resolving under anti-inflammatory treatment.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"https://doi.org/10.1093/eurheartj/ehu217"];
+- (NSString *)getKey {
+    return @"IVC = inferior vena cava\nPE = pericardial effusion\nSBP = systolic blood pressure.";
+}
+
+- (NSArray *)getReferences {
+    Reference *ref = [[Reference alloc] init: @"Ristić AD, Imazio M, Adler Y, et al. Triage strategy for urgent management of cardiac tamponade: a position statement of the European Society of Cardiology Working Group on Myocardial and Pericardial Diseases. European Heart Journal. 2014;35(34):2279-2284.\ndoi:10.1093/eurheartj/ehu217"];
+    NSArray *references = [NSArray arrayWithObjects:ref, nil];
+    return references;
 }
 
 - (NSMutableArray *)getArray {

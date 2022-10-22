@@ -24,7 +24,6 @@
 #import "EPSAtriaStrokeRiskScore.h"
 #import "EPSOrbitRiskScore.h"
 #import "EPSIcdMortalityRiskScore.h"
-#import "EPSBrugadaRiskScore.h"
 #import "EPSErsRiskScore.h"
 #import "EPSTamponadeRiskScore.h"
 #import "EPSQTProlongationRisk.h"
@@ -88,8 +87,6 @@
         riskScore = [[EPSOrbitRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"ICDMortalityRisk"])
         riskScore = [[EPSIcdMortalityRiskScore alloc] init];
-    else if ([scoreType isEqualToString:@"BrugadaRisk"])
-        riskScore = [[EPSBrugadaRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"ERSRisk"])
         riskScore = [[EPSErsRiskScore alloc] init];
     else if ([scoreType isEqualToString:@"TamponadeRisk"])
