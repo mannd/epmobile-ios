@@ -23,37 +23,31 @@ struct InformationView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                Form {
-                    if let optionalSectionTitle, let optionalSectionText {
-                        Section(header: Text(optionalSectionTitle)){
-                            Text(optionalSectionText)
-                        }
+            Form {
+                if let optionalSectionTitle, let optionalSectionText {
+                    Section(header: Text(optionalSectionTitle)){
+                        Text(optionalSectionText)
                     }
-                    if let instructions = instructions {
-                        Section(header: Text(instructionsTitle)) {
-                            Text(instructions)
-                        }
+                }
+                if let instructions = instructions {
+                    Section(header: Text(instructionsTitle)) {
+                        Text(instructions)
                     }
-                    if let key = key {
-                        Section(header: Text(keyTitle)) {
-                            Text(key)
-                        }
+                }
+                if let key = key {
+                    Section(header: Text(keyTitle)) {
+                        Text(key)
                     }
-                    if references.count > 0 {
-                        Section(header: Text(references.count > 1 ? "References" : "Reference")) {
-                            ForEach (0..<references.count, id: \.self) { i in
-                                Text(LocalizedStringKey(references[i].getReferenceWithMarkdownLink() ?? "Missing ref"))
-                            }
+                }
+                if references.count > 0 {
+                    Section(header: Text(references.count > 1 ? "References" : "Reference")) {
+                        ForEach (0..<references.count, id: \.self) { i in
+                            Text(LocalizedStringKey(references[i].getReferenceWithMarkdownLink() ?? "Missing ref"))
                         }
                     }
                 }
-                Button("Done") {
-                    dismiss()
-                }
-                .roundedButton()
             }
-            .navigationBarTitle(Text(name), displayMode: .inline)
+            .navigationBarTitle(Text(name + " Information"), displayMode: .inline)
         }
     }
 }

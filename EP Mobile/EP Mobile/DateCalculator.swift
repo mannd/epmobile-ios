@@ -123,12 +123,12 @@ private struct DateInformationView: View {
                         Text("The number of days an H&P is valid prior to a procedure.")
                     }
                 }
-                Button("Done") {
-                    dismiss()
-                }
-                .roundedButton()
+//                Button("Done") {
+//                    dismiss()
+//                }
+//                .roundedButton()
             }
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName + " Information"), displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

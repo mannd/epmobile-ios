@@ -31,11 +31,16 @@ struct QTcIvcdResultView: View {
                 }
             }
             .navigationBarTitle(calculatorName, displayMode: .inline )
-            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+            .navigationBarItems(trailing: NavigationLink(destination: QTcIvcdCalculatorView.getQTcIvcdInformationView(), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
             })
+//            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
+//                Image(systemName: "info.circle")
+//            }.sheet(isPresented: $showInfo) {
+//                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+//            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -62,11 +67,16 @@ struct QTcIvcdResultDetail: View {
                 }
             }
             .navigationBarTitle("Details", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+            .navigationBarItems(trailing: NavigationLink(destination: QTcIvcdCalculatorView.getQTcIvcdInformationView(), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
             })
+//            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
+//                Image(systemName: "info.circle")
+//            }.sheet(isPresented: $showInfo) {
+//                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+//            })
         }
     }
 

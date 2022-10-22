@@ -129,10 +129,10 @@ struct WeightCalculatorView: View {
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .onChange(of: heightUnit, perform:  { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                InformationView(instructions: Weight.getInstructions(), key: Weight.getKeys(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights")
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: Weight.getInstructions(),key: Weight.getKeys(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights"), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
             })
         }
         .onAppear() {

@@ -163,10 +163,10 @@ struct WarfarinClinicView: View {
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text("Warfarin Clinic"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                InformationView(instructions: Warfarin.getInstructions(), references: Warfarin.getReferences(), name: "Warfarin Clinic")
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: Warfarin.getInstructions(), references: Warfarin.getReferences(), name: "Warfarin Clinic"), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
             })
             .alert("Result", isPresented: $showDosingAlert, actions: {
                 Button("Show Dose Table", role: .destructive, action: {

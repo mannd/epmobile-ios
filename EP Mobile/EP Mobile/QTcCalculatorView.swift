@@ -100,12 +100,15 @@ struct QTcCalculatorView: View {
             .onChange(of: intervalRateType, perform: { _ in  clearResult() })
             .onChange(of: formula, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing:
-                                    Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }).sheet(isPresented: $showInfo) {
-                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
-            }
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(references: QTcCalculator.getReferences(), name: calculatorName), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
+
+//                .sheet(isPresented: $showInfo) {
+//                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
+//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {

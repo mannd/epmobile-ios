@@ -94,10 +94,10 @@ struct QTcIvcdCalculatorView: View {
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                Self.getQTcIvcdInformationView()
+            .navigationBarItems(trailing: NavigationLink(destination: Self.getQTcIvcdInformationView(), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())

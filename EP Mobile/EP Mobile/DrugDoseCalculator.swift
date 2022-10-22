@@ -138,15 +138,12 @@ struct DrugDoseCalculator: View {
             .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
-            .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                if drugName == .crCl {
-                    InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
-                } else {
-                    InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
-                }
-            }))
+            .navigationBarItems(
+                trailing: NavigationLink(destination: isCrClCalculator() ? crClInformationView() : drugDoseInformationView(), isActive: $showInfo) {
+                    Button(action: { showInfo.toggle() }) {
+                        Image(systemName: "info.circle")
+                    }
+                })
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -162,6 +159,18 @@ struct DrugDoseCalculator: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .alert("Warning", isPresented: $showWarning, actions: {}, message: { Text(drugDose) })
+    }
+
+    private func isCrClCalculator() -> Bool {
+        return drugName == .crCl
+    }
+
+    private func crClInformationView() -> InformationView {
+        return InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
+    }
+
+    private func drugDoseInformationView() -> InformationView {
+        return InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
     }
 
     func getCrStep() -> Double {
