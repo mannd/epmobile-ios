@@ -59,6 +59,7 @@
 		8E24EDBE203F3D2100C49B66 /* EPSCMSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */; };
 		8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */; };
 		8E2824412821B96300DD9571 /* QTcCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2824402821B96300DD9571 /* QTcCalculatorViewModel.swift */; };
+		8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */; };
 		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
@@ -285,6 +286,7 @@
 		8E24EDBD203F3D2100C49B66 /* EPSCMSViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCMSViewModel.m; sourceTree = "<group>"; };
 		8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCalculatorController.swift; sourceTree = "<group>"; };
 		8E2824402821B96300DD9571 /* QTcCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorViewModel.swift; sourceTree = "<group>"; };
+		8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVHVoltageTableViewController.swift; sourceTree = "<group>"; };
 		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
 		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 				8EEE9BB8283D8819005AB875 /* HcmViewController.swift */,
 				8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */,
 				8EB3D37F28EFCBFE00023F29 /* InformationViewController.swift */,
+				8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1188,6 +1191,7 @@
 				8EBCC80E2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift in Sources */,
 				8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */,
 				8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */,
+				8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8E9755AB161A643400EAFD10 /* EPSOutFlowTractVTNotes.m in Sources */,

@@ -33,6 +33,10 @@ final class InformationViewController: NSObject {
                      optionalSectionText: String?
     ) {
         let informationView = InformationView(instructions: instructions, key: key, references: references, name: name, optionalSectionTitle: optionalSectionTitle, optionalSectionText: optionalSectionText)
+        Self.show(vc: vc, informationView: informationView)
+    }
+
+    static func show(vc: UIViewController, informationView: InformationView) {
         let hostingVC = UIHostingController(rootView: informationView)
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }

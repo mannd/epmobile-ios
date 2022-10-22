@@ -9,6 +9,8 @@
 #import "EPSEstesRiskScore.h"
 #import "EPSRiskFactor.h"
 
+#import "EP_Mobile-Swift.h"
+
 // the 2 mutually exclusive ESTES risks
 #define ESTES_STRAIN_WITH_DIG 1
 #define ESTES_STRAIN_WITHOUT_DIG 2
@@ -19,14 +21,9 @@
     return @"Estes LVH Score";
 }
 
-- (NSString *)getReference {
-    return @"Romhilt DW, Estes EH Jr. A point-score system for the ECG diagnosis of left ventricular hypertrophy. Am Heart J. 1968 Jun;75(6):752-8.";
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[[Reference alloc] init:@"Romhilt DW, Estes EH. A point-score system for the ECG diagnosis of left ventricular hypertrophy. Am Heart J. 1968;75(6):752-758. doi:10.1016/0002-8703(68)90035-5"]];
 }
-
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://www.ncbi.nlm.nih.gov/pubmed/4231231"];
-}
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
