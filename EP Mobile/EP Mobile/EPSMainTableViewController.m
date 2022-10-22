@@ -206,6 +206,7 @@
     else if ([segueIdentifier isEqualToString:@"RvhSegue"]) {
         lc.webPage = @"rvh";
         lc.linkTitle = @"RVH Criteria";
+        lc.references = [NSArray arrayWithObjects:[[Reference alloc] init:@"Lewis T. Observations upon ventricular hypertrophy with special reference to preponderance of one or the other chamber. Heart. 1914;5:367-402." ], [[Reference alloc] init:@"Myers GB, Klein HA, Stofer BE. The electrocardiographic diagnosis of right ventricular hypertrophy. Am Heart J. 1948;35(1):1-40. doi:10.1016/0002-8703(48)90182-3"], [[Reference alloc] init: @"Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J. 1949;37(2):161-186. doi:10.1016/0002-8703(49)90562-1"], [[Reference alloc] init:@"Butler PM, Leggett SI, Howe CM, Freye CJ, Hindman NB, Wagner GS. Identification of electrocardiographic criteria for diagnosis of right ventricular hypertrophy due to mitral stenosis. Am J Cardiol. 1986;57(8):639-643. doi:10.1016/0002-9149(86)90850-7"], [[Reference alloc] init:@"Hancock EW, Deal BJ, Mirvis DM, Okin P, Kligfield P, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram. Journal of the American College of Cardiology. 2009;53(11):992-1002. doi:10.1016/j.jacc.2008.12.015"], nil];
     }
     else if ([segueIdentifier isEqualToString:@"LbbbSegue"]) {
         lc.webPage = @"lbbb";
