@@ -67,11 +67,14 @@ struct DateCalculator: View {
             .onChange(of: subtractDays, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing:
-                                    Button(action: { showingInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }).sheet(isPresented: $showingInfo) {
-                DateInformationView()
-            }
+                                    NavigationLink(destination: DateInformationView(), isActive: $showingInfo) {
+                Button(action: { showingInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
+//            .sheet(isPresented: $showingInfo) {
+//                DateInformationView()
+//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

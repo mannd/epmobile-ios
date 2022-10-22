@@ -11,6 +11,8 @@
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"
 
+#import "EP_Mobile-Swift.h"
+
 @interface EPSLQTSViewController ()
 
 @end
@@ -37,7 +39,17 @@
     [self.qtcSegmentedControl setTitle:@"450" forSegmentAtIndex:1];
     [self.qtcSegmentedControl setTitle:@"≥ 460" forSegmentAtIndex:2];
     [self.qtcSegmentedControl setTitle:@"≥ 480" forSegmentAtIndex:3];
+
+    [self initRisks];
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
+
+    self.title = @"LQTS Diagnosis";
+}
+
+- (void)initRisks {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"QTc 4 min post-ex test ≥ 480 msec" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Torsade de pointes" withValue:20]];
@@ -49,12 +61,28 @@
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Congenital deafness" withValue:5]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Family member with definite LQTS" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained SCD immediate family < 30 y/o" withValue:5]];
- 
+
     self.risks = array;
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
-    self.navigationItem.rightBarButtonItem = editButton;
 }
+
+- (IBAction)calculate:(id)sender {
+    [self calculateScore];
+}
+
+- (IBAction)clear:(id)sender {
+    [self.sexSegmentedControl setSelectedSegmentIndex:0];
+    [self.qtcSegmentedControl setSelectedSegmentIndex:0];
+    [self initRisks];
+    [self.riskTableView reloadData];
+}
+
+
+- (void)showInformationView {
+    NSArray *references = [NSArray arrayWithObject:[[Reference alloc] init:@"Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. doi:10.1161/CIRCULATIONAHA.111.062182"]];
+    [InformationViewController showWithVc:self instructions:NULL key:NULL references:references name:self.title];
+}
+
+
 
 - (void) calculateScore {
     // since this score uses 0.5, we will multiply points by 10, e.g.

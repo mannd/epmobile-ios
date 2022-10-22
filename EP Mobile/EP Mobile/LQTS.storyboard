@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nEp-iW-oAh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nEp-iW-oAh">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,34 +19,15 @@
                         <sections>
                             <tableViewSection id="4dO-JT-5cj">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wYa-Vr-qO9" style="IBUITableViewCellStyleDefault" id="Seq-pL-fhT">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Seq-pL-fhT" id="nff-TH-yTW">
-                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="LQTS ECG Patterns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wYa-Vr-qO9">
-                                                    <rect key="frame" x="16" y="0.0" width="326.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Xwt-iy-wz5" kind="show" id="8cu-Hb-IL0"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="c8j-AN-Crx" style="IBUITableViewCellStyleDefault" id="QBn-5V-bGw">
-                                        <rect key="frame" x="0.0" y="88.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QBn-5V-bGw" id="a5g-5z-gHd">
-                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="LQTS Diagnosis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c8j-AN-Crx">
-                                                    <rect key="frame" x="16" y="0.0" width="326.5" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,15 +38,34 @@
                                             <segue destination="yXh-DH-lMg" kind="show" id="wFY-UI-DZO"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wYa-Vr-qO9" style="IBUITableViewCellStyleDefault" id="Seq-pL-fhT">
+                                        <rect key="frame" x="0.0" y="94" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Seq-pL-fhT" id="nff-TH-yTW">
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="LQTS ECG Patterns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wYa-Vr-qO9">
+                                                    <rect key="frame" x="16" y="0.0" width="324.5" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Xwt-iy-wz5" kind="show" id="8cu-Hb-IL0"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dQV-un-dCN" style="IBUITableViewCellStyleDefault" id="s0o-Uw-roo">
-                                        <rect key="frame" x="0.0" y="132.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="138" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s0o-Uw-roo" id="Ojw-4p-8CY">
-                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="LQTS Subtypes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQV-un-dCN">
-                                                    <rect key="frame" x="16" y="0.0" width="326.5" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,25 +126,52 @@
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-RR-HzT">
-                                <rect key="frame" x="20" y="126.5" width="335" height="500.5"/>
+                                <rect key="frame" x="20" y="126.5" width="335" height="459.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yXh-DH-lMg" id="53W-L9-wsz"/>
                                     <outlet property="delegate" destination="yXh-DH-lMg" id="a5t-LG-OZI"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="DFz-T0-Ogk">
+                                <rect key="frame" x="16" y="594" width="343" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dV-ds-qt6">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculate" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="calculate:" destination="yXh-DH-lMg" eventType="touchUpInside" id="hv6-w2-pyi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jC-Gw-DHZ">
+                                        <rect key="frame" x="186.5" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="clear:" destination="yXh-DH-lMg" eventType="touchUpInside" id="YWa-gk-Wex"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Abc-cV-s3r"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JcZ-D6-p5P" secondAttribute="trailing" constant="20" symbolic="YES" id="2Oj-Hu-cVv"/>
                             <constraint firstItem="pWE-wA-ke3" firstAttribute="trailing" secondItem="Id6-RR-HzT" secondAttribute="trailing" id="2pK-tN-0Rd"/>
+                            <constraint firstItem="fGd-zb-Hqv" firstAttribute="top" secondItem="DFz-T0-Ogk" secondAttribute="bottom" constant="8" symbolic="YES" id="2st-sP-PDK"/>
                             <constraint firstItem="pWE-wA-ke3" firstAttribute="top" secondItem="Gyt-Vl-6qm" secondAttribute="bottom" constant="14" id="CjI-15-pNh"/>
                             <constraint firstItem="Gyt-Vl-6qm" firstAttribute="trailing" secondItem="JcZ-D6-p5P" secondAttribute="trailing" id="Dhh-5l-SbL"/>
                             <constraint firstItem="JcZ-D6-p5P" firstAttribute="top" secondItem="P7y-ZL-1b2" secondAttribute="bottom" constant="14" id="Imf-3d-Nby"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DFz-T0-Ogk" secondAttribute="trailing" id="J8G-ho-97J"/>
                             <constraint firstItem="pWE-wA-ke3" firstAttribute="leading" secondItem="Gyt-Vl-6qm" secondAttribute="leading" id="O24-qm-ib7"/>
+                            <constraint firstItem="DFz-T0-Ogk" firstAttribute="leading" secondItem="3Zq-Fn-EkL" secondAttribute="leadingMargin" id="QAO-Zb-2b6"/>
                             <constraint firstItem="Gyt-Vl-6qm" firstAttribute="top" secondItem="JcZ-D6-p5P" secondAttribute="bottom" constant="8" symbolic="YES" id="U8o-aN-nvG"/>
+                            <constraint firstItem="DFz-T0-Ogk" firstAttribute="top" secondItem="Id6-RR-HzT" secondAttribute="bottom" constant="8" symbolic="YES" id="X2F-2X-wPM"/>
                             <constraint firstItem="pWE-wA-ke3" firstAttribute="leading" secondItem="Id6-RR-HzT" secondAttribute="leading" id="h03-oG-4H7"/>
-                            <constraint firstAttribute="bottom" secondItem="Id6-RR-HzT" secondAttribute="bottom" constant="20" symbolic="YES" id="hFM-V8-uAg"/>
                             <constraint firstItem="Gyt-Vl-6qm" firstAttribute="leading" secondItem="JcZ-D6-p5P" secondAttribute="leading" id="qmQ-Hf-oR6"/>
                             <constraint firstItem="pWE-wA-ke3" firstAttribute="trailing" secondItem="Gyt-Vl-6qm" secondAttribute="trailing" id="sw0-Pw-hm7"/>
                             <constraint firstItem="Id6-RR-HzT" firstAttribute="top" secondItem="pWE-wA-ke3" secondAttribute="bottom" constant="8" symbolic="YES" id="wZp-VZ-eR6"/>
