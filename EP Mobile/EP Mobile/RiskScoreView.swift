@@ -29,11 +29,11 @@ struct RiskScoreView: View {
             }
             .listStyle(.grouped)
             .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
-            .navigationBarItems(trailing:  AnyView(Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName())
-            }))
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName()), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
             .navigationViewStyle(StackNavigationViewStyle())
             .alert("Result", isPresented: $showResult, actions: {
                 Button("OK", role: .cancel, action: {})
