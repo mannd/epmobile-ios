@@ -16,26 +16,31 @@ final class Reference: NSObject {
     var text: String // The reference not including the link.
     var link: String // The link in URI or DOI format.
 
-    @objc
-    init(text: String, link: String) {
+    @objc init(text: String, link: String) {
         self.text = text.trimmingCharacters(in: .whitespacesAndNewlines)
         self.link = link.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    @objc
     /// Create a Reference using an AMA style reference
-    /// - Parameter fullReference: String in AMA style format.  If there is no valid link, link is empty and text contains original string.
-    init(_ fullReference: String) {
-        let textPlusLink = Self.parseFullReference(fullReference: fullReference)
+    /// - Parameter citation: String in AMA style citation format.  If there is no valid link, link is empty and text contains original string.
+    @objc init(_ citation: String) {
+        let textPlusLink = Self.parseCitation(citation: citation)
         self.text = textPlusLink.text
         self.link = textPlusLink.link
     }
 
+    /// Factory method to create references from full citation, as alternative to init
+    /// - Parameter citation: citation in AMA format, with DOI or URI
+    /// - Returns: Reference object
+    @objc static func referenceFromCitation(_ citation: String) -> Reference {
+        return Reference(citation)
+    }
+
     /// Parse an AMA style reference into text and link components.
-    /// - Parameter fullReference: AMA style reference string
+    /// - Parameter citation: AMA style reference string
     /// - Returns: tuple with text and link components, nil if string doesn't contain a link
-    static func parseFullReference(fullReference: String) -> (text: String, link: String) {
-        let lowerCaseRef = fullReference.lowercased()
+    static func parseCitation(citation: String) -> (text: String, link: String) {
+        let lowerCaseRef = citation.lowercased()
         var range: Range<String.Index>?
         if lowerCaseRef.contains("doi:") {
             range = lowerCaseRef.range(of: "doi:")
@@ -43,11 +48,11 @@ final class Reference: NSObject {
             range = lowerCaseRef.range(of: "http")
         }
         if let range {
-            let text = String(fullReference[..<range.lowerBound]).trimmingCharacters(in: .whitespacesAndNewlines)
-            let link = String(fullReference[range.lowerBound...]).trimmingCharacters(in: .whitespacesAndNewlines)
+            let text = String(citation[..<range.lowerBound]).trimmingCharacters(in: .whitespacesAndNewlines)
+            let link = String(citation[range.lowerBound...]).trimmingCharacters(in: .whitespacesAndNewlines)
             return (text, link)
         } else { // No link attached.  That's ok, just leave the link empty.
-            let text = fullReference
+            let text = citation
             let link = ""
             return (text, link)
         }

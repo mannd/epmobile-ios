@@ -9,6 +9,7 @@
 #import "EPSQTViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSSharedMethods.h"
+#import "EP_Mobile-Swift.h"
 
 // defines for SQTS indexes
 #define SQTS_SHORT_JT 0
@@ -51,6 +52,14 @@
     [self.qtcSegmentedControl setTitle:@"< 350" forSegmentAtIndex:2];
     [self.qtcSegmentedControl setTitle:@"< 330" forSegmentAtIndex:3];
        
+    [self initCriteria];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
+
+- (void)initCriteria {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"< 120 msec" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sudden cardiac arrest" withValue:1]];
@@ -62,16 +71,20 @@
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Sudden Infant Death Syndrome" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Genotype positive" withValue:1]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Mutation in culprit gene" withValue:1]];
-    
-
 
     self.risks = array;
-    
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
-    self.navigationItem.rightBarButtonItem = editButton;
-    
 }
+
+- (IBAction)calculate:(id)sender {
+    [self calculateScore];
+}
+
+- (IBAction)clear:(id)sender {
+    [self.qtcSegmentedControl setSelectedSegmentIndex:0];
+    [self initCriteria];
+    [self.riskTableView reloadData];
+}
+
 
 - (void)calculateScore {
     int score = 0;
@@ -123,7 +136,15 @@
         message = [message stringByAppendingString:@"Low probability"];
     message = [message stringByAppendingString:@" of Short QT Syndrome"];
     [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:message inView:self];
-    
+}
+
+- (void)showNotes {
+    [InformationViewController
+     showWithVc:self
+     instructions:@"Electrocardiogram must be recorded in the absence of modifiers known to shorten the QT.  Jpoint-Tpeak interval must be measured in the precordial lead with the greatest amplitude T-wave.  Clinical history: events must occur in the absence of an identifiable etiology, including structural heart disease.  Note that at least one ECG manifestation must be present in order to get additional points."
+     key:NULL
+     references:[NSArray arrayWithObject:[Reference referenceFromCitation:@"Gollob MH, Redpath CJ, Roberts JD. The short QT syndrome: proposed diagnostic criteria. J Am Coll Cardiol. 2011;57(7):802-812. doi:10.1016/j.jacc.2010.09.048"]]
+     name:@"SQTS"];
 }
 
 #pragma mark - Table view data source
