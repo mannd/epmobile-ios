@@ -32,7 +32,6 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,9 +41,7 @@
 }
 
 - (void)showInformationView {
-    NSArray *references = [NSArray arrayWithObject:[[Reference alloc] init:@"Adler A, Novelli V, Amin AS, et al. An International, Multicentered, Evidence-Based Reappraisal of Genes Reported to Cause Congenital Long QT Syndrome. Circulation. 2020;141(6):418-428. doi:10.1161/CIRCULATIONAHA.119.043132"]];
-    [InformationViewController showWithVc:self instructions:NULL key:NULL references:references name:@"LQTS Subtypes"];
+    [InformationViewController showWithVc:self instructions:NULL key:NULL references:self.references name:@"LQTS Subtypes"];
 }
-
 
 @end

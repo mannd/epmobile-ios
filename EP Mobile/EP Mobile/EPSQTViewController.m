@@ -23,6 +23,8 @@
 #define SQTS_GENOTYPE 8
 #define SQTS_MUTATION 9
 
+#define SQTS_TITLE @"SQTS Diagnosis"
+
 @interface EPSQTViewController ()
 
 @end
@@ -57,6 +59,8 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+
+    [self setTitle:SQTS_TITLE];
 }
 
 - (void)initCriteria {
@@ -144,7 +148,7 @@
      instructions:@"Electrocardiogram must be recorded in the absence of modifiers known to shorten the QT.  Jpoint-Tpeak interval must be measured in the precordial lead with the greatest amplitude T-wave.  Clinical history: events must occur in the absence of an identifiable etiology, including structural heart disease.  Note that at least one ECG manifestation must be present in order to get additional points."
      key:NULL
      references:[NSArray arrayWithObject:[Reference referenceFromCitation:@"Gollob MH, Redpath CJ, Roberts JD. The short QT syndrome: proposed diagnostic criteria. J Am Coll Cardiol. 2011;57(7):802-812. doi:10.1016/j.jacc.2010.09.048"]]
-     name:@"SQTS"];
+     name:SQTS_TITLE];
 }
 
 #pragma mark - Table view data source

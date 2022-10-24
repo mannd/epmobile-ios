@@ -73,7 +73,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Or2-d0-iK6" kind="show" id="F6C-Uf-6Cm"/>
+                                            <segue destination="Or2-d0-iK6" kind="show" identifier="LQTSSubtypesSegue" id="F6C-Uf-6Cm"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
