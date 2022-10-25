@@ -2,42 +2,42 @@
 //  InformationViewController.swift
 //  EP Mobile
 //
-//  Created by David Mann on 10/6/22.
+//  Created by David Mann on 10/24/22.
 //  Copyright © 2022 EP Studios. All rights reserved.
 //
 
-import SwiftUI
+import UIKit
 
 @objc
-final class InformationViewController: NSObject {
+class InformationViewController: UIViewController {
+    @objc var instructions: String?
+    @objc var key: String?
+    @objc var name: String = ""
+    @objc var references: [Reference] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(showNotes), for: .touchUpInside)
+        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+        navigationItem.rightBarButtonItem = infoBarButtonItem
+    }
 
     @objc
-    static func show(vc: UIViewController,
-                     instructions: String?,
-                     key: String?,
-                     references: [Reference],
-                     name: String
-    ) {
+    func showNotes() {
         let informationView = InformationView(instructions: instructions, key: key, references: references, name: name)
-        let hostingVC = UIHostingController(rootView: informationView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
-    }
-    
-    @objc
-    static func show(vc: UIViewController,
-                     instructions: String?,
-                     key: String?,
-                     references: [Reference],
-                     name: String,
-                     optionalSectionTitle: String?,
-                     optionalSectionText: String?
-    ) {
-        let informationView = InformationView(instructions: instructions, key: key, references: references, name: name, optionalSectionTitle: optionalSectionTitle, optionalSectionText: optionalSectionText)
-        Self.show(vc: vc, informationView: informationView)
+        InformationViewPresenter.show(vc: self, informationView: informationView)
     }
 
-    static func show(vc: UIViewController, informationView: InformationView) {
-        let hostingVC = UIHostingController(rootView: informationView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }

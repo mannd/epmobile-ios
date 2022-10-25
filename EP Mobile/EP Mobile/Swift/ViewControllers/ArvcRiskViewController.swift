@@ -122,7 +122,7 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     func showNotes() {
         let instructions = ArvcRiskModel.getInstructions()
         let references = ArvcRiskModel.getReferences()
-        InformationViewController.show(vc: self, instructions: instructions, key: nil, references: references, name: riskScoreTitle)
+        InformationViewPresenter.show(vc: self, instructions: instructions, key: nil, references: references, name: riskScoreTitle)
     }
 
     // Respond to pressing Done button on keyboard.

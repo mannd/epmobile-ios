@@ -154,7 +154,7 @@
 
 - (void)showNotes {
     if ([self.criteria isEqualToString:ARVC1994]) {
-        [InformationViewController
+        [InformationViewPresenter
          showWithVc:self
          instructions:NULL
          key:NULL
@@ -162,7 +162,7 @@
          name:ARVC1994_TITLE];
     }
     if ([self.criteria isEqualToString:ARVC2010]) {
-        [InformationViewController
+        [InformationViewPresenter
          showWithVc:self
          instructions:NULL
          key:@"BSA = body surface area.\nPLAX = parasternal long axis view.\nPSAX = parasternal short axis view.\nRVOT = RV outflow tract."

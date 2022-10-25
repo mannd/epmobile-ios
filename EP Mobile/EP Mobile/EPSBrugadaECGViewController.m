@@ -65,7 +65,7 @@
 }
 
 - (void)showNotes {
-        [InformationViewController
+        [InformationViewPresenter
          showWithVc:self
          instructions:NULL
          key:NULL

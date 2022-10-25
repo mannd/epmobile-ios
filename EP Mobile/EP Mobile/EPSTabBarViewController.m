@@ -41,7 +41,7 @@
 }
 
 - (void)showInformationView {
-    [InformationViewController showWithVc:self instructions:NULL key:NULL references:self.references name:@"LQTS Subtypes"];
+    [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:self.references name:@"LQTS Subtypes"];
 }
 
 @end

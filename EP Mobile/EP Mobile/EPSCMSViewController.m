@@ -107,7 +107,7 @@
     if (reference != NULL) {
         [references addObject:reference];
     }
-    [InformationViewController showWithVc:self instructions:instructions key:key references:references name:self.viewTitle];
+    [InformationViewPresenter showWithVc:self instructions:instructions key:key references:references name:self.viewTitle];
 }
 
 - (void)calculateCheckedItems {

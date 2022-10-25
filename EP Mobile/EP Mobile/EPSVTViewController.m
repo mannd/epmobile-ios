@@ -8,6 +8,7 @@
 
 #import "EPSVTViewController.h"
 #import "EPSSimpleAlgorithmViewController.h"
+#import "EP_Mobile-Swift.h"
 
 @interface EPSVTViewController ()
 
@@ -36,8 +37,13 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"EpiEndoVTSegue"]) {
+        InformationViewController *infoVC = (InformationViewController *)[segue destinationViewController];
+        infoVC.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Berruezo A, Mont L, Nava S, Chueca E, Bartholomay E, Brugada J. Electrocardiographic Recognition of the Epicardial Origin of Ventricular Tachycardias. Circulation. 2004;109(15):1842-1847. doi:10.1161/01.CIR.0000125525.04081.4B"]];
+        infoVC.name = @"Epi vs Endo VT";
+    }
+    EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
     if ([segueIdentifier isEqualToString:@"OutflowVTSegue"])
         vc.algorithmName = @"OutflowVT";
     else if ([segueIdentifier isEqualToString:@"AnnularVTSegue"])

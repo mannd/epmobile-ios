@@ -79,7 +79,7 @@
 
 - (void)showInformationView {
     NSArray *references = [NSArray arrayWithObject:[[Reference alloc] init:@"Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. doi:10.1161/CIRCULATIONAHA.111.062182"]];
-    [InformationViewController showWithVc:self instructions:NULL key:NULL references:references name:self.title];
+    [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:references name:self.title];
 }
 
 

@@ -77,7 +77,7 @@
 }
 
 - (void)showInformationView {
-    [InformationViewController showWithVc:self instructions:NULL key:NULL references:self.references name:self.linkTitle];
+    [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:self.references name:self.linkTitle];
 }
 
 - (NSString *)getStoredCreatinineClearance {

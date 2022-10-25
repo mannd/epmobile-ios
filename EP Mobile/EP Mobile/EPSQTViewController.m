@@ -143,7 +143,7 @@
 }
 
 - (void)showNotes {
-    [InformationViewController
+    [InformationViewPresenter
      showWithVc:self
      instructions:@"Electrocardiogram must be recorded in the absence of modifiers known to shorten the QT.  Jpoint-Tpeak interval must be measured in the precordial lead with the greatest amplitude T-wave.  Clinical history: events must occur in the absence of an identifiable etiology, including structural heart disease.  Note that at least one ECG manifestation must be present in order to get additional points."
      key:NULL
