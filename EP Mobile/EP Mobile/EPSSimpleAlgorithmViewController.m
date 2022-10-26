@@ -77,7 +77,7 @@
     else if ([self.algorithmName isEqualToString:DAVILA_WPW])
         algorithm = [[EPSDavilaAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
-        
+
     // ...
     // disabled buttons aren't automatically grayed out in iOS
     if (@available(iOS 13.0, *)) {
@@ -97,6 +97,10 @@
     self.noButton.configuration = [UIButton smallRoundedButtonConfiguration];
     self.backButton.configuration = [UIButton smallRoundedButtonConfiguration];
     self.morphologyCriteriaButton.configuration = [UIButton smallRoundedButtonConfiguration];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
 - (IBAction)yesButtonPushed:(id)sender {
@@ -157,6 +161,16 @@
         vc.location2 = [(EPSArrudaAlgorithm *)algorithm outcomeLocation2:step];
         vc.message = [algorithm outcome:step];
     }
+}
+
+- (void)showNotes {
+    [InformationViewPresenter
+     showWithVc:self
+     instructions:self.instructions
+     key:NULL
+     references:self.references
+     name:[algorithm name]
+    ];
 }
 
 - (void)showResults {
