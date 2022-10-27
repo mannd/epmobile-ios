@@ -120,7 +120,7 @@
 		8E808367282DF55400E88A4E /* WarfarinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E808366282DF55400E88A4E /* WarfarinViewModel.swift */; };
 		8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */; };
 		8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */; };
-		8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */; };
+		8E815D44162F448B001025ED /* EPSBrugadaMorphologyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E815D43162F448B001025ED /* EPSBrugadaMorphologyViewController.m */; };
 		8E8C89E5283339FE0057B237 /* Entrainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C89E4283339FE0057B237 /* Entrainment.swift */; };
 		8E8C89E7283340BF0057B237 /* EntrainmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C89E6283340BF0057B237 /* EntrainmentTests.swift */; };
 		8E8FAAE32817297600789746 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE22817297600789746 /* Patient.swift */; };
@@ -370,8 +370,8 @@
 		8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaWCTAlgorithm.m; sourceTree = "<group>"; };
 		8E815D3A162EE2F0001025ED /* EPSWCTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWCTTableViewController.h; sourceTree = "<group>"; };
 		8E815D3B162EE2F0001025ED /* EPSWCTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWCTTableViewController.m; sourceTree = "<group>"; };
-		8E815D42162F448B001025ED /* EPSBrugadaMorphologyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaMorphologyTableViewController.h; sourceTree = "<group>"; };
-		8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaMorphologyTableViewController.m; sourceTree = "<group>"; };
+		8E815D42162F448B001025ED /* EPSBrugadaMorphologyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaMorphologyViewController.h; sourceTree = "<group>"; };
+		8E815D43162F448B001025ED /* EPSBrugadaMorphologyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaMorphologyViewController.m; sourceTree = "<group>"; };
 		8E8C89E4283339FE0057B237 /* Entrainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrainment.swift; sourceTree = "<group>"; };
 		8E8C89E6283340BF0057B237 /* EntrainmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrainmentTests.swift; sourceTree = "<group>"; };
 		8E8FAAE22817297600789746 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
@@ -776,8 +776,8 @@
 				8E0DD78D16320E0E00DDC4CC /* EPSArrudaAlgorithm.m */,
 				8E610700170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.h */,
 				8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */,
-				8E815D42162F448B001025ED /* EPSBrugadaMorphologyTableViewController.h */,
-				8E815D43162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m */,
+				8E815D42162F448B001025ED /* EPSBrugadaMorphologyViewController.h */,
+				8E815D43162F448B001025ED /* EPSBrugadaMorphologyViewController.m */,
 				8E815D36162EE10E001025ED /* EPSBrugadaWCTAlgorithm.h */,
 				8E815D37162EE10E001025ED /* EPSBrugadaWCTAlgorithm.m */,
 				8E37A5A8170126FA004E66B2 /* EPSComplexAlgorithmViewController.h */,
@@ -1204,7 +1204,7 @@
 				8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */,
 				8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */,
 				8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */,
-				8E815D44162F448B001025ED /* EPSBrugadaMorphologyTableViewController.m in Sources */,
+				8E815D44162F448B001025ED /* EPSBrugadaMorphologyViewController.m in Sources */,
 				8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */,
 				8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */,
 				8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */,
