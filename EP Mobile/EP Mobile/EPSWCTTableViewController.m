@@ -46,6 +46,7 @@
     if ([segueIdentifier isEqualToString:@"BrugadaAlgorithmSegue"]) {
         EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];
         vc.algorithmName = @"BrugadaWCT";
+        vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
     }
     else if ([segueIdentifier isEqualToString:@"VereckeiAlgorithmSegue"]) {
         EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];

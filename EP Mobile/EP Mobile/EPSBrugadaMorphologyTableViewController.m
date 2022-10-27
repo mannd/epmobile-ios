@@ -11,6 +11,8 @@
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"
 
+#import "EP_Mobile-Swift.h"
+
 #define LBBB_TAG 0
 #define RBBB_TAG 1
 
@@ -37,11 +39,6 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     NSMutableArray *lbbbRisks = [[NSMutableArray alloc] initWithObjects:
                                  [[EPSRiskFactor alloc] initWith:@"R > 30 msec in V1 or V2" withValue:IN_V1],
                                  [[EPSRiskFactor alloc] initWith:@"Onset to nadir S > 60 msec in V1 or V2" withValue:IN_V1],
@@ -60,7 +57,7 @@
         self.list = lbbbRisks;
     else
         self.list = rbbbRisks;
-    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {

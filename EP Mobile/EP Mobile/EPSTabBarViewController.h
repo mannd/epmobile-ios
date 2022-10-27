@@ -12,5 +12,6 @@
 @interface EPSTabBarViewController : UITabBarController
 
 @property (strong, nonatomic) NSArray *references;
+@property (strong, nonatomic) NSString *name;
 
 @end
