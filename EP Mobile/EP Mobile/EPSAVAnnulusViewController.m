@@ -8,6 +8,7 @@
 
 #import "EPSAVAnnulusViewController.h"
 #import "EPSAccessoryPathwayLocations.h"
+#import "EP_Mobile-Swift.h"
 
 @interface EPSAVAnnulusViewController ()
 
@@ -67,7 +68,13 @@
         self.rplapImageView.hidden = !([self.location1 isEqualToString:RPL] || [self.location2 isEqualToString:RPL]);
         self.rpapImageView.hidden = !([self.location1 isEqualToString:RP] || [self.location2 isEqualToString:RP]);
     }
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
 
+- (void)showNotes {
+    [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:[NSArray arrayWithObject:[Reference referenceFromCitation:@"The AV annulus map is modified from Gray's Anatomy 20th edition. https://en.wikipedia.org/wiki/File:Gray495.png"]] name:@"AV Annulus Map"];
 }
 
 @end
