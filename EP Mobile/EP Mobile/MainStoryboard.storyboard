@@ -1345,7 +1345,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="QEg-8T-H7h" kind="show" id="Ra3-V2-5j7"/>
+                                            <segue destination="QEg-8T-H7h" kind="show" identifier="NormalEPValuesSegue" id="Ra3-V2-5j7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1oS-6q-IaU" style="IBUITableViewCellStyleDefault" id="tbo-Uw-XzN">
@@ -2442,7 +2442,7 @@
         <!--Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
             <objects>
-                <tableViewController title="Normal EP Values" id="QEg-8T-H7h" sceneMemberID="viewController">
+                <tableViewController title="Normal EP Values" id="QEg-8T-H7h" customClass="InformationTableViewController" customModule="EP_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v9X-oc-aBr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2594,10 +2594,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Refractoriness" footerTitle="Source: Josephson ME. Clinical Cardiac Electrophysiology.  2nd edition. 1993." id="veX-3y-qrk">
+                            <tableViewSection headerTitle="Refractoriness" id="veX-3y-qrk">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="uC5-Lv-KhR" detailTextLabel="Jh1-ed-BJs" style="IBUITableViewCellStyleValue1" id="TmR-rI-QAk">
-                                        <rect key="frame" x="0.0" y="423" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="415.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TmR-rI-QAk" id="hdh-iI-LEc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2620,7 +2620,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="i0c-d7-Llc" detailTextLabel="sgR-k2-Quy" style="IBUITableViewCellStyleValue1" id="VxS-Ww-cBf">
-                                        <rect key="frame" x="0.0" y="467" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="459.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VxS-Ww-cBf" id="SMm-RF-5Xu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2643,7 +2643,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="69G-DR-WvH" detailTextLabel="Iqm-P0-DLi" style="IBUITableViewCellStyleValue1" id="bKY-Hf-Ugb">
-                                        <rect key="frame" x="0.0" y="511" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="503.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bKY-Hf-Ugb" id="FOD-Yx-jwe">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2666,7 +2666,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YCU-9w-gGH" detailTextLabel="qTH-e3-5hM" style="IBUITableViewCellStyleValue1" id="zU4-yR-2vm">
-                                        <rect key="frame" x="0.0" y="555" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="547.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zU4-yR-2vm" id="Mlw-wI-eeb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2689,7 +2689,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bX6-uT-Ai1" detailTextLabel="hQe-rb-lA6" style="IBUITableViewCellStyleValue1" id="6mk-OA-gxD">
-                                        <rect key="frame" x="0.0" y="599" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="591.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6mk-OA-gxD" id="Uaa-qX-aQn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2712,7 +2712,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sPT-KU-Ceh" detailTextLabel="raA-NY-Hwu" style="IBUITableViewCellStyleValue1" id="tp2-hX-MZW">
-                                        <rect key="frame" x="0.0" y="643" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="635.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tp2-hX-MZW" id="v7O-RI-HY9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2931,7 +2931,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="yCM-Gp-tSo"/>
         <segue reference="k3E-zN-ktT"/>
-        <segue reference="MAd-5A-Xlz"/>
+        <segue reference="yyd-qN-wqh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brugadaecg" width="400" height="255"/>

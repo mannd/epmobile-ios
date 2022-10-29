@@ -77,7 +77,11 @@
 }
 
 - (void)showInformationView {
-    [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:self.references name:self.linkTitle];
+    NSString *name = self.informationName;
+    if (name == NULL) {
+        name = self.linkTitle;
+    }
+    [InformationViewPresenter showWithVc:self instructions:self.instructions key:NULL references:self.references name:name];
 }
 
 - (NSString *)getStoredCreatinineClearance {

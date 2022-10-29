@@ -1,15 +1,15 @@
 //
-//  InformationViewController.swift
+//  InformationTableViewController.swift
 //  EP Mobile
 //
-//  Created by David Mann on 10/24/22.
+//  Created by David Mann on 10/29/22.
 //  Copyright © 2022 EP Studios. All rights reserved.
 //
 
 import UIKit
 
 @objc
-class InformationViewController: UIViewController {
+class InformationTableViewController: UITableViewController {
     @objc var instructions: String?
     @objc var key: String?
     @objc var name: String = ""

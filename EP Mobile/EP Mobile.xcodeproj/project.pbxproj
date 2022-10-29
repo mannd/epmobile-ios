@@ -103,6 +103,7 @@
 		8E6381C1282AE53E00249E87 /* WeightCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */; };
 		8E6381C3282C16F900249E87 /* WeightCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */; };
 		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
+		8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
 		8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */; };
@@ -349,6 +350,7 @@
 		8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorView.swift; sourceTree = "<group>"; };
 		8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorViewController.swift; sourceTree = "<group>"; };
 		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
 		8E71C2B61F77523900D198BD /* VTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VTMorphology.storyboard; sourceTree = "<group>"; };
@@ -671,6 +673,7 @@
 				8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */,
 				8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */,
 				8EF22160290782F6000EF617 /* InformationViewController.swift */,
+				8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1204,6 +1207,7 @@
 				8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */,
 				8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */,
 				8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */,
+				8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */,
 				8E815D44162F448B001025ED /* EPSBrugadaMorphologyViewController.m in Sources */,
 				8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */,
 				8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */,

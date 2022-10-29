@@ -198,10 +198,12 @@
     if ([segueIdentifier isEqualToString:@"ParaHisSegue"]) {
         lc.webPage = @"parahisianpacinginstructions";
         lc.linkTitle = @"Para-Hisian Pacing";
+        lc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Hirao K, Otomo K, Wang X, et al. Para-Hisian pacing. A new method for differentiating retrograde conduction over an accessory AV pathway from conduction over the AV node. Circulation. 1996;94(5):1027-1035. doi:10.1161/01.cir.94.5.1027"]];
     }
     else if ([segueIdentifier isEqualToString:@"RVPaceSegue"]) {
         lc.webPage = @"rvapexvsbasepacing";
         lc.linkTitle = @"RV Apex vs Base Pacing";
+        lc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Martínez-Alday JD, Almendral J, Arenal A, et al. Identification of concealed posteroseptal Kent pathways by comparison of ventriculoatrial intervals from apical and posterobasal right ventricular sites. Circulation. 1994;89(3):1060-1067. doi:10.1161/01.cir.89.3.1060"]];
     }
     else if ([segueIdentifier isEqualToString:@"RvhSegue"]) {
         lc.webPage = @"rvh";
@@ -219,6 +221,16 @@
         arvcVc.criteria = @"ARVC2010";
     else if ([segueIdentifier isEqualToString:@"ARVC1994Segue"])
         arvcVc.criteria = @"ARVC1994";
+
+    InformationTableViewController *infoTableVC = (InformationTableViewController *)vc;
+    if ([segueIdentifier isEqualToString:@"NormalEPValuesSegue"]) {
+        infoTableVC.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Josephson ME. Clinical Cardiac Electrophysiology: Techniques and Interpretations. 4th edition. Lippincott Williams & Wilkins; 2008. https://www.amazon.com/Clinical-Cardiac-Electrophysiology-Techniques-Interpretations/dp/0781777399"]];
+        infoTableVC.name = @"Normal EP Values";
+
+    }
+    
+
+
 
 }
 
