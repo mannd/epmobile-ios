@@ -9,6 +9,7 @@
 #import "EPSHcmRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
+#import "EP_Mobile-Swift.h"
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
@@ -28,8 +29,8 @@
     return @"Use this score to determine risk of sudden cardiac death and consideration for ICD implant in patients with hypertrophic cardiomyopathy.";
 }
 
-- (NSString *)getReference {
-    return @"McKenna WJ. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart. 2002;87(2):169-176.\n[doi:10.1136/heart.87.2.169](https://doi.org/10.1136/heart.87.2.169)";
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"McKenna WJ. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart. 2002;87(2):169-176. doi:10.1136/heart.87.2.169"]];
 }
 
 - (NSMutableArray *)getArray {

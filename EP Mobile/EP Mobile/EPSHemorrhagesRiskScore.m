@@ -8,6 +8,7 @@
 
 #import "EPSHemorrhagesRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSHemorrhagesRiskScore
 - (NSString *)getTitle {
@@ -18,8 +19,8 @@
     return @"Use this score to determine the risk of bleeding in patients on warfarin for atrial fibrillation.";
 }
 
-- (NSString *)getReference {
-    return @"Gage BF, Yan Y, Milligan PE, et al. Clinical classification schemes for predicting hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J. 2006;151(3):713-719.\n[doi:10.1016/j.ahj.2005.04.017](https://doi.org/10.1016/j.ahj.2005.04.017)";
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Gage BF, Yan Y, Milligan PE, et al. Clinical classification schemes for predicting hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J. 2006;151(3):713-719. doi:10.1016/j.ahj.2005.04.017"]];
 }
 
 - (NSMutableArray *)getArray {
