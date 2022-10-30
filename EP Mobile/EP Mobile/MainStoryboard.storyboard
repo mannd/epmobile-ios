@@ -1589,9 +1589,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="OrbitSegue" id="9WT-Qa-0m1"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Yqk-Q4-BJn" style="IBUITableViewCellStyleDefault" id="HJp-bQ-UfS">
                                         <rect key="frame" x="0.0" y="1983.5" width="414" height="44"/>

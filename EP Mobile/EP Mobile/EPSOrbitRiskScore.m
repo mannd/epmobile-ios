@@ -8,20 +8,16 @@
 
 #import "EPSOrbitRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSOrbitRiskScore
 - (NSString *)getTitle {
     return @"ORBIT";
 }
 
-- (NSString *)getReference {
-    return @"O'Brien EC, Simon DN, Thomas LE, Hylek EM, Gersh BJ, Ansell JE, Kowey PR, Mahaffey KW, Chang P, Fonarow GC, Pencina MJ, Piccini JP, Peterson ED. The ORBIT Bleeding Score: A Simple Bedside Score to Assess Bleeding Risk in Atrial Fibrillation.  Eur Heart J [Internet].  2015 [cited 2016 Mar 13] 36(46):3258-64.  Available from: http://www.medscape.com/viewarticle/855941_1";
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"O’Brien EC, Simon DN, Thomas LE, et al. The ORBIT bleeding score: a simple bedside score to assess bleeding risk in atrial fibrillation. Eur Heart J. 2015;36(46):3258-3264. doi:10.1093/eurheartj/ehv476"]];
 }
-
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://www.medscape.com/viewarticle/855941_1"];
-}
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

@@ -21,6 +21,7 @@
 #import "EPSIcdMortalityRiskScore.h"
 #import "EPSTamponadeRiskScore.h"
 #import "EPSErsRiskScore.h"
+#import "EPSOrbitRiskScore.h"
 
 #import "EP_Mobile-Swift.h"
 
@@ -62,6 +63,7 @@
 #define HCM_2014_ROW 8
 #define ICD_IMPLANTATION_RISK_ROW 9
 #define ICD_MORTALITY_RISK_ROW 10
+#define ORBIT_RISK_ROW 11
 
 @interface EPSMainTableViewController ()
 
@@ -178,6 +180,9 @@
         if (indexPath.row == ICD_MORTALITY_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSIcdMortalityRiskScore alloc] init]];
         }
+        if (indexPath.row == ORBIT_RISK_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSOrbitRiskScore alloc] init]];
+        }
     }
 
 }
@@ -189,8 +194,6 @@
 
     if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
         vc.scoreType = @"SameTtr";
-    else if ([segueIdentifier isEqualToString:@"OrbitSegue"])
-        vc.scoreType = @"Orbit";
     else if ([segueIdentifier isEqualToString:@"QTProlongationSegue"])
         vc.scoreType = @"QTProlongationRisk";
     
