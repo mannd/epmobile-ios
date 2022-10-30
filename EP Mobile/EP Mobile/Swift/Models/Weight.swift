@@ -64,7 +64,7 @@ struct Weight: InformationProvider {
     }
 
     // Weight calculator substitutes copy and paste instructions for keys
-    static func getKeys() -> String? {
+    static func getKey() -> String? {
         return "These weights can be copied to the clipboard and pasted into the creatinine clearance calculator weight field using the Copy buttons."
     }
 

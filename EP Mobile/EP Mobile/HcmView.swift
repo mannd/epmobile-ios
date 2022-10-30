@@ -96,7 +96,7 @@ struct HcmView: View {
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: hxSyncope, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKeys(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKey(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
                 Button(action: { showInfo.toggle() }) {
                     Image(systemName: "info.circle")
                 }

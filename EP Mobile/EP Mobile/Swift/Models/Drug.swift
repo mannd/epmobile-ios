@@ -73,7 +73,7 @@ class Drug: DrugDoseProvider, InformationProvider {
         return nil
     }
 
-    static func getKeys() -> String? {
+    static func getKey() -> String? {
         return nil
     }
 

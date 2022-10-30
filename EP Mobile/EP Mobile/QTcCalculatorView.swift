@@ -26,7 +26,7 @@ extension QTcCalculator: InformationProvider {
         nil
     }
 
-    static func getKeys() -> String? {
+    static func getKey() -> String? {
         nil
     }
 }

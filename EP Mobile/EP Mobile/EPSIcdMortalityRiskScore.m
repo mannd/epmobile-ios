@@ -8,6 +8,7 @@
 
 #import "EPSIcdMortalityRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 #define WARNING_MSG @"Results based on MADIT-II study population, in brief, EF ≤ 30%, prior MI, excluding NYHA class IV, recent MI/CABG, renal failure and others.  See Reference for details."
 
@@ -33,8 +34,8 @@ struct RiskResult {
     return @"Use this score to determine the mortality with and without ICD implantation in MADIT-II type patients.";
 }
 
-- (NSString *)getReference {
-    return @"Goldenberg I, Vyas AK, Hall WJ, et al. Risk Stratification for Primary Implantation of a Cardioverter-Defibrillator in Patients With Ischemic Left Ventricular Dysfunction. Journal of the American College of Cardiology. 2008;51(3):288-296.\n[doi:10.1016/j.jacc.2007.08.058](https://doi.org/10.1016/j.jacc.2007.08.058)";
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Goldenberg I, Vyas AK, Hall WJ, et al. Risk Stratification for Primary Implantation of a Cardioverter-Defibrillator in Patients With Ischemic Left Ventricular Dysfunction. Journal of the American College of Cardiology. 2008;51(3):288-296. doi:10.1016/j.jacc.2007.08.058"]];
 }
 
 - (NSMutableArray *)getArray {

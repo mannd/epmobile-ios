@@ -111,7 +111,7 @@ struct ArvcRiskModel: InformationProvider {
         return "This calculator should not be used in patients with prior sustained ventricular arrhythmia or sudden cardiac arrest. It is designed to provide predictions based on the clinical characteristics of ARVC patients at time of their diagnosis."
     }
 
-    static func getKeys() -> String? {
+    static func getKey() -> String? {
         return nil
     }
 

@@ -66,7 +66,6 @@
         EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
         lc.webPage = @"brugadadiagnosis";
         lc.linkTitle = @"Brugada Diagnosis";
-        lc.references = [NSArray arrayWithObject:[[Reference alloc] init:@"Strauss DG, Selvester RH, Wagner GS. Defining Left Bundle Branch Block in the Era of Cardiac Resynchronization Therapy. American Journal of Cardiology. 2011;107(6):927-934.\ndoi:10.1016/j.amjcard.2010.11.010"]];
         lc.references = [NSArray arrayWithObject:[[Reference alloc] init:@"Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS Expert Consensus Statement on the Diagnosis and Management of Patients with Inherited Primary Arrhythmia Syndromes: Document endorsed by HRS, EHRA, and APHRS in May 2013 and by ACCF, AHA, PACES, and AEPC in June 2013. Heart Rhythm. 2013;10(12):1932-1963.\ndoi:10.1016/j.hrthm.2013.05.014"]];
     }
 }

@@ -107,7 +107,7 @@ struct QTcIvcd: InformationProvider {
         "Use this calculator to estimate the QTc when there is an intraventricular conduction delay "
     }
 
-    static func getKeys() -> String? {
+    static func getKey() -> String? {
         return nil
     }
 }

@@ -77,7 +77,7 @@ struct HcmModel: InformationProvider {
         return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias."
     }
 
-    static func getKeys() -> String? {
+    static func getKey() -> String? {
         return "HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation:"
 
     }

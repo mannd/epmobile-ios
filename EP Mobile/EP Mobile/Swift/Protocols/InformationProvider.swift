@@ -11,7 +11,7 @@ import Foundation
 protocol InformationProvider {
     static func getReferences() -> [Reference]
     static func getInstructions() -> String?
-    static func getKeys() -> String?
+    static func getKey() -> String?
     static func getCustomSectionTitle() -> String?
     static func getCustomSectionText() -> String?
 }
