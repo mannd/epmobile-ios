@@ -88,7 +88,6 @@
 		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
 		8E59E969281A4071003C485F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59E968281A4071003C485F /* Keys.swift */; };
 		8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */; };
-		8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */; };
 		8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */; };
 		8E5D93D515CCABF500ACBA4F /* EPSARVCCriteriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVCCriteriaViewController.m */; };
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
@@ -129,8 +128,6 @@
 		8E8FAAE928178EF200789746 /* DrugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE828178EF200789746 /* DrugTests.swift */; };
 		8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */; };
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
-		8E9755AB161A643400EAFD10 /* EPSOutFlowTractVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */; };
-		8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */; };
 		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
 		8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */; };
 		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
@@ -327,8 +324,6 @@
 		8E59E968281A4071003C485F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaECGViewController.h; sourceTree = "<group>"; };
 		8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaECGViewController.m; sourceTree = "<group>"; };
-		8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNotesViewController.h; sourceTree = "<group>"; };
-		8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSNotesViewController.m; sourceTree = "<group>"; };
 		8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTViewController.h; sourceTree = "<group>"; };
 		8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTViewController.m; sourceTree = "<group>"; };
 		8E5D93D315CCABF500ACBA4F /* EPSARVCCriteriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCCriteriaViewController.h; sourceTree = "<group>"; };
@@ -380,11 +375,6 @@
 		8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVTViewController.m; sourceTree = "<group>"; };
 		8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSimpleAlgorithmViewController.h; sourceTree = "<group>"; };
 		8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSimpleAlgorithmViewController.m; sourceTree = "<group>"; };
-		8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSNotesProtocol.h; sourceTree = "<group>"; };
-		8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOutFlowTractVTNotes.h; sourceTree = "<group>"; };
-		8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOutFlowTractVTNotes.m; sourceTree = "<group>"; };
-		8E9755AC161A66E900EAFD10 /* EPSAnnularVTNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAnnularVTNotes.h; sourceTree = "<group>"; };
-		8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAnnularVTNotes.m; sourceTree = "<group>"; };
 		8E9755B2161F71B900EAFD10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8E97E4DD1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdMortalityRiskScore.h; sourceTree = "<group>"; };
 		8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdMortalityRiskScore.m; sourceTree = "<group>"; };
@@ -579,13 +569,6 @@
 			children = (
 				8E0CB50B15C579C400A45DFB /* EPSAboutViewController.h */,
 				8E0CB50C15C579C400A45DFB /* EPSAboutViewController.m */,
-				8E5D93CA15C75E2300ACBA4F /* EPSNotesViewController.h */,
-				8E5D93CB15C75E2300ACBA4F /* EPSNotesViewController.m */,
-				8E9755A5161A589F00EAFD10 /* EPSNotesProtocol.h */,
-				8E9755AC161A66E900EAFD10 /* EPSAnnularVTNotes.h */,
-				8E9755AD161A66E900EAFD10 /* EPSAnnularVTNotes.m */,
-				8E9755A9161A643400EAFD10 /* EPSOutFlowTractVTNotes.h */,
-				8E9755AA161A643400EAFD10 /* EPSOutFlowTractVTNotes.m */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -1170,7 +1153,6 @@
 				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
 				8E0CB50D15C579C400A45DFB /* EPSAboutViewController.m in Sources */,
 				8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */,
-				8E5D93CC15C75E2300ACBA4F /* EPSNotesViewController.m in Sources */,
 				8E38A07C28F2597A00F1F723 /* Reference.swift in Sources */,
 				8ECA415A2815A9A900CFAC18 /* DateMath.swift in Sources */,
 				8EF22161290782F6000EF617 /* InformationViewController.swift in Sources */,
@@ -1194,8 +1176,6 @@
 				8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
-				8E9755AB161A643400EAFD10 /* EPSOutFlowTractVTNotes.m in Sources */,
-				8E9755AE161A66E900EAFD10 /* EPSAnnularVTNotes.m in Sources */,
 				8EBFBBD8162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m in Sources */,
 				8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */,
 				8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */,

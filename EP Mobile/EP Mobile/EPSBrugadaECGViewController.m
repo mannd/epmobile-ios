@@ -7,7 +7,6 @@
 //
 
 #import "EPSBrugadaECGViewController.h"
-#import "EPSNotesViewController.h"
 #import "EP_Mobile-Swift.h"
 
 @interface EPSBrugadaECGViewController ()
@@ -57,11 +56,6 @@
     scrollViewInsets.bottom += 1;
     
     self.scrollView.contentInset = scrollViewInsets;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
-    vc.key = @"BrugadaECG";
 }
 
 - (void)showNotes {

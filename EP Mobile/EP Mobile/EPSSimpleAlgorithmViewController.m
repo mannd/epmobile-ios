@@ -7,8 +7,6 @@
 //
 
 #import "EPSSimpleAlgorithmViewController.h"
-#import "EPSNotesViewController.h"
-//#import "EPSStepAlgorithmProtocol.h"
 #import "EPSOutflowVTAlgorithm.h"
 #import "EPSAnnularVTAlgorithm.h"
 #import "EPSBrugadaWCTAlgorithm.h"
@@ -148,17 +146,12 @@
 }
 
 
-// TODO: Check if NotesSegue ever happens
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"BrugadaMorphologySegue"]) {
         EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
         vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
         vc.name = @"Brugada Algorithm";
-    }
-    if ([segueIdentifier isEqualToString:@"NotesSegue"]) {
-        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
-        vc.key = self.algorithmName;
     }
     if ([segueIdentifier isEqualToString:@"MapSegue"]) {
         EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];

@@ -1955,9 +1955,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="PQv-Iu-QYe" kind="presentation" identifier="NotesSegue" id="oIL-n2-cNM"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-JJ-jxK">
                                 <rect key="frame" x="138.5" y="297" width="137" height="30"/>
@@ -2254,68 +2251,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc1-GI-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7937" y="3526"/>
-        </scene>
-        <!--NotesViewController-->
-        <scene sceneID="nM3-Qv-EfQ">
-            <objects>
-                <viewController storyboardIdentifier="Notes" title="NotesViewController" id="PQv-Iu-QYe" customClass="EPSNotesViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="z1x-dQ-5w8"/>
-                        <viewControllerLayoutGuide type="bottom" id="MOr-a8-N1c"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ux0-iJ-jS8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Bv-2Q2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <items>
-                                    <navigationItem title="Brugada ECG Notes" id="eFT-F5-EVn">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uo0-hC-B88">
-                                            <connections>
-                                                <action selector="doneButtonPressed:" destination="PQv-Iu-QYe" id="Lk1-LF-KP2"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" ST-T Abnormalities in V1-V3" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-cj-Io0">
-                                <rect key="frame" x="11" y="76" width="392" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-uc-pdM">
-                                <rect key="frame" x="20" y="104.5" width="374" height="691.5"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="EIn-cj-Io0" firstAttribute="centerX" secondItem="1Vx-uc-pdM" secondAttribute="centerX" id="77H-dV-0aQ"/>
-                            <constraint firstItem="8rj-Bv-2Q2" firstAttribute="leading" secondItem="ux0-iJ-jS8" secondAttribute="leading" id="9vd-ru-Hj8"/>
-                            <constraint firstItem="EIn-cj-Io0" firstAttribute="top" secondItem="8rj-Bv-2Q2" secondAttribute="bottom" constant="20" id="Azv-EB-ta1"/>
-                            <constraint firstItem="8rj-Bv-2Q2" firstAttribute="top" secondItem="z1x-dQ-5w8" secondAttribute="bottom" id="Qqp-5E-TjA"/>
-                            <constraint firstItem="1Vx-uc-pdM" firstAttribute="top" secondItem="EIn-cj-Io0" secondAttribute="bottom" constant="8" symbolic="YES" id="Rsw-kI-PtF"/>
-                            <constraint firstItem="1Vx-uc-pdM" firstAttribute="leading" secondItem="ux0-iJ-jS8" secondAttribute="leading" constant="20" symbolic="YES" id="UOa-Sp-W9Q"/>
-                            <constraint firstItem="MOr-a8-N1c" firstAttribute="top" secondItem="1Vx-uc-pdM" secondAttribute="bottom" constant="8" symbolic="YES" id="dxq-F0-Sq7"/>
-                            <constraint firstAttribute="trailing" secondItem="1Vx-uc-pdM" secondAttribute="trailing" constant="20" symbolic="YES" id="kIE-Df-8U1"/>
-                            <constraint firstItem="EIn-cj-Io0" firstAttribute="centerX" secondItem="8rj-Bv-2Q2" secondAttribute="centerX" id="lbo-Nm-Lrh"/>
-                            <constraint firstItem="EIn-cj-Io0" firstAttribute="leading" secondItem="ux0-iJ-jS8" secondAttribute="leading" constant="11" id="rom-I4-fBB"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="btM-lP-yv8"/>
-                    <connections>
-                        <outlet property="headerLabel" destination="EIn-cj-Io0" id="FgF-m9-hGf"/>
-                        <outlet property="notesTextView" destination="1Vx-uc-pdM" id="bsp-Mc-Bxc"/>
-                        <outlet property="titleBar" destination="8rj-Bv-2Q2" id="JrZ-nx-q4i"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Neu-8s-ZZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7119" y="3526"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="H1j-Fx-dlb">
