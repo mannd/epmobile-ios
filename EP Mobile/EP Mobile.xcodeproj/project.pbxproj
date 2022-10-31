@@ -66,9 +66,6 @@
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
 		8E321C6B2824A0310017EDB0 /* QTcIvcdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E321C6A2824A0310017EDB0 /* QTcIvcdTests.swift */; };
 		8E321C6D28257AB50017EDB0 /* QTcIvcdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E321C6C28257AB50017EDB0 /* QTcIvcdViewModel.swift */; };
-		8E37A59716FF40C3004E66B2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59616FF40C3004E66B2 /* Default.png */; };
-		8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59816FF41BD004E66B2 /* Default@2x.png */; };
-		8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */; };
 		8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */; };
 		8E38A07828F1DE7400F1F723 /* String+convertDoiToLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07728F1DE7400F1F723 /* String+convertDoiToLink.swift */; };
 		8E38A07A28F1F4BC00F1F723 /* ConvertLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */; };
@@ -140,11 +137,6 @@
 		8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C33281F93D8006D8DF2 /* QTcTests.swift */; };
 		8EB3D37E28EFC79800023F29 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB3D37D28EFC79800023F29 /* InformationView.swift */; };
 		8EB3D38028EFCBFE00023F29 /* InformationViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB3D37F28EFCBFE00023F29 /* InformationViewPresenter.swift */; };
-		8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FB17EFA533006FE65F /* epmobile_icon3.png */; };
-		8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */; };
-		8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */; };
-		8EB4190717EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */; };
-		8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */; };
 		8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB79F64230394C100CBB056 /* LQTTableViewController.swift */; };
 		8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB79F662303986900CBB056 /* LQTTableViewCell.swift */; };
 		8EBCC80E2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBCC80D2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift */; };
@@ -293,9 +285,6 @@
 		8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8E321C6A2824A0310017EDB0 /* QTcIvcdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcIvcdTests.swift; sourceTree = "<group>"; };
 		8E321C6C28257AB50017EDB0 /* QTcIvcdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcIvcdViewModel.swift; sourceTree = "<group>"; };
-		8E37A59616FF40C3004E66B2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		8E37A59816FF41BD004E66B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8E37A5A8170126FA004E66B2 /* EPSComplexAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSComplexAlgorithmViewController.h; sourceTree = "<group>"; };
 		8E37A5A9170126FA004E66B2 /* EPSComplexAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSComplexAlgorithmViewController.m; sourceTree = "<group>"; };
 		8E38A07728F1DE7400F1F723 /* String+convertDoiToLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+convertDoiToLink.swift"; sourceTree = "<group>"; };
@@ -392,11 +381,6 @@
 		8EB36C33281F93D8006D8DF2 /* QTcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcTests.swift; sourceTree = "<group>"; };
 		8EB3D37D28EFC79800023F29 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		8EB3D37F28EFCBFE00023F29 /* InformationViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewPresenter.swift; sourceTree = "<group>"; };
-		8EB418FB17EFA533006FE65F /* epmobile_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon3.png; sourceTree = "<group>"; };
-		8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon4spotlight.png; sourceTree = "<group>"; };
-		8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epmobile_icon5settings.png; sourceTree = "<group>"; };
-		8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-2x.png"; sourceTree = "<group>"; };
-		8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "epmobile-launch-portrait-iphone-R4.png"; sourceTree = "<group>"; };
 		8EB79F64230394C100CBB056 /* LQTTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQTTableViewController.swift; sourceTree = "<group>"; };
 		8EB79F662303986900CBB056 /* LQTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQTTableViewCell.swift; sourceTree = "<group>"; };
 		8EBCB46E19DB672F001A8DA3 /* EPSLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLogging.h; sourceTree = "<group>"; };
@@ -858,14 +842,6 @@
 			children = (
 				8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */,
 				8E0C13C82262CFA5000892CC /* EP Mobile-Bridging-Header.h */,
-				8EB4190517EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png */,
-				8EB4190617EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png */,
-				8EB418FF17EFA5D8006FE65F /* epmobile_icon5settings.png */,
-				8EB418FD17EFA5D3006FE65F /* epmobile_icon4spotlight.png */,
-				8EB418FB17EFA533006FE65F /* epmobile_icon3.png */,
-				8E37A59A16FF4284004E66B2 /* Default-568h@2x.png */,
-				8E37A59816FF41BD004E66B2 /* Default@2x.png */,
-				8E37A59616FF40C3004E66B2 /* Default.png */,
 				8EC19C31159FE0FA00975E2B /* EP Mobile */,
 				8EC19C49159FE0FA00975E2B /* EP MobileTests */,
 				8EC19C2A159FE0FA00975E2B /* Frameworks */,
@@ -1081,13 +1057,11 @@
 				8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */,
 				8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */,
 				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
-				8EB4190017EFA5D8006FE65F /* epmobile_icon5settings.png in Resources */,
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
 				8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
 				8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */,
-				8EB418FE17EFA5D3006FE65F /* epmobile_icon4spotlight.png in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 				8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
@@ -1100,26 +1074,20 @@
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
 				8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */,
 				8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */,
-				8EB4190717EFA99C006FE65F /* epmobile-launch-portrait-iphone-2x.png in Resources */,
 				8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */,
-				8EB4190817EFA99C006FE65F /* epmobile-launch-portrait-iphone-R4.png in Resources */,
 				8EC1D2AA1F78612300F46734 /* brugadadiagnosis.html in Resources */,
 				8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */,
 				8E71C2C01F77583300D198BD /* BrugadaWCTMorphology.storyboard in Resources */,
 				8EC5C32F1AA8E246005BDAFD /* apixaban.html in Resources */,
 				8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */,
 				8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */,
-				8EB418FC17EFA533006FE65F /* epmobile_icon3.png in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
 				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
 				8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */,
 				8E71C2C41F775F0700D198BD /* Warfarin.storyboard in Resources */,
-				8E37A59716FF40C3004E66B2 /* Default.png in Resources */,
 				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
-				8E37A59916FF41BD004E66B2 /* Default@2x.png in Resources */,
-				8E37A59B16FF4284004E66B2 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1426,6 +1394,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EP Mobile";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1454,6 +1424,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EP Mobile";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
