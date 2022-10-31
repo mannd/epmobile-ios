@@ -8,6 +8,7 @@
 
 #import "EPSSameTtrRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSSameTtrRiskScore
 
@@ -15,14 +16,13 @@
     return @"SAMe-TT\u2082R\u2082";
 }
 
-- (NSString *)getReference {
-    return @"Apostolakis S, Sullivan RM, Olshansky B, Lip GYH.  Factors affecting quality of anticoagulation control among patients with atrial fibrillation on warfarin.  The SAMe-TT\u2082R\u2082 Score.  Chest [Internet].  2013 Nov [cited 2015 Dec 2] 144(5):155-1563.  Available from: http://journal.publications.chestnet.org/article.aspx?articleid=1686270";
+- (NSString *)getInstructions {
+    return @"This score predicts poor INR control in patients on warfarin.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://journal.publications.chestnet.org/article.aspx?articleid=1686270"];
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Apostolakis S, Sullivan RM, Olshansky B, Lip GYH. Factors affecting quality of anticoagulation control among patients with atrial fibrillation on warfarin: the SAMe-TT₂R₂ score. Chest. 2013;144(5):1555-1563. doi:10.1378/chest.13-0054"]];
 }
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

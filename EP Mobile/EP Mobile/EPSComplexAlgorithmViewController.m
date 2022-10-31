@@ -8,7 +8,6 @@
 
 #import "EPSComplexAlgorithmViewController.h"
 #import "EPSAtrialTachAlgorithm.h"
-#import "EPSNotesViewController.h"
 #import "EPSComplexStepAlgorithmProtocol.h"
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"

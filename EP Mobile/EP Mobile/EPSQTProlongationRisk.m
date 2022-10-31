@@ -8,22 +8,21 @@
 
 #import "EPSQTProlongationRisk.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
+
+#define QT_PROLONGATION_RISK_NAME @"QT Prolongation Risk"
 
 @implementation EPSQTProlongationRisk
 EPSRiskFactor *oneQTcDrug;
 EPSRiskFactor *twoQTcDrugs;
 
 - (NSString *)getTitle {
-    return @"QT prolongation risk";
+    return QT_PROLONGATION_RISK_NAME;
 }
 
-- (NSString *)getReference {
-    return @"Tisdale James E., Jaynes Heather A., Kingery Joanna R., et al. Development and Validation of a Risk Score to Predict QT Interval Prolongation in Hospitalized Patients. Circulation: Cardiovascular Quality and Outcomes. 2013;6(4):479-487. doi:10.1161/CIRCOUTCOMES.113.000152";
-}
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Tisdale JE, Jaynes HA, Kingery JR, et al. Development and Validation of a Risk Score to Predict QT Interval Prolongation in Hospitalized Patients. Circulation: Cardiovascular Quality and Outcomes. 2013;6(4):479-487. doi:10.1161/CIRCOUTCOMES.113.000152"]];
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc]
-            initWithString:@"https://www.ahajournals.org/doi/10.1161/CIRCOUTCOMES.113.000152"];
 }
 
 - (NSMutableArray *)getArray {

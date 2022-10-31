@@ -81,7 +81,6 @@
 		8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */; };
 		8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */; };
 		8E503319283D408C0008A614 /* HcmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E503318283D408C0008A614 /* HcmTests.swift */; };
-		8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
 		8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */; };
@@ -140,7 +139,6 @@
 		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
-		8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
 		8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */; };
 		8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C33281F93D8006D8DF2 /* QTcTests.swift */; };
 		8EB3D37E28EFC79800023F29 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB3D37D28EFC79800023F29 /* InformationView.swift */; };
@@ -317,8 +315,6 @@
 		8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorController.swift; sourceTree = "<group>"; };
 		8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAccessoryPathwayLocations.h; sourceTree = "<group>"; };
 		8E503318283D408C0008A614 /* HcmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmTests.swift; sourceTree = "<group>"; };
-		8E511E5915BC527300CF83B5 /* EPSRiskScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskScoreTableViewController.h; sourceTree = "<group>"; };
-		8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskScoreTableViewController.m; sourceTree = "<group>"; };
 		8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskFactor.h; sourceTree = "<group>"; };
 		8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskFactor.m; sourceTree = "<group>"; };
 		8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDailyDoseCalculator.h; sourceTree = "<group>"; };
@@ -835,8 +831,6 @@
 				8E0600E215D32BBF00BB7550 /* EPSLVHTableViewController.m */,
 				8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */,
 				8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */,
-				8E511E5915BC527300CF83B5 /* EPSRiskScoreTableViewController.h */,
-				8E511E5A15BC527300CF83B5 /* EPSRiskScoreTableViewController.m */,
 				8E00E93E17B30B2E0007A146 /* EPSSyncopeRiskViewController.h */,
 				8E00E93F17B30B2E0007A146 /* EPSSyncopeRiskViewController.m */,
 				8E97559F16188AFD00EAFD10 /* EPSVTViewController.h */,
@@ -1171,7 +1165,6 @@
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
 				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
-				8E511E5B15BC527300CF83B5 /* EPSRiskScoreTableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
 				8EBCC8122826D90D001ABD9E /* QTcIvcdResultView.swift in Sources */,
 				8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */,
@@ -1292,7 +1285,6 @@
 			files = (
 				8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */,
 				8E38A07E28F377AD00F1F723 /* ReferenceTests.swift in Sources */,
-				8EAE5CE518E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
 				8E808365282DE88B00E88A4E /* WarfarinTests.swift in Sources */,
 				8E8C89E7283340BF0057B237 /* EntrainmentTests.swift in Sources */,

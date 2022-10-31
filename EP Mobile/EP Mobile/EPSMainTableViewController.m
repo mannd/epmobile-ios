@@ -8,7 +8,6 @@
 
 #import "EPSMainTableViewController.h"
 #import "EPSLinkViewController.h"
-#import "EPSRiskScoreTableViewController.h"
 #import "EPSDrugDoseTableViewController.h"
 #import "EPSARVCCriteriaViewController.h"
 #import "EPSAtriaBleedRiskScore.h"
@@ -22,7 +21,8 @@
 #import "EPSTamponadeRiskScore.h"
 #import "EPSErsRiskScore.h"
 #import "EPSOrbitRiskScore.h"
-
+#import "EPSQTProlongationRisk.h"
+#import "EPSSameTtrRiskScore.h"
 #import "EP_Mobile-Swift.h"
 
 // Sigh!
@@ -64,6 +64,8 @@
 #define ICD_IMPLANTATION_RISK_ROW 9
 #define ICD_MORTALITY_RISK_ROW 10
 #define ORBIT_RISK_ROW 11
+#define QT_PROLONGATION_RISK_ROW 12
+#define SAME_TTR_ROW 13
 
 @interface EPSMainTableViewController ()
 
@@ -183,58 +185,53 @@
         if (indexPath.row == ORBIT_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSOrbitRiskScore alloc] init]];
         }
+        if (indexPath.row == QT_PROLONGATION_RISK_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[EPSQTProlongationRisk alloc] init]];
+        }
+        if (indexPath.row == SAME_TTR_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[EPSSameTtrRiskScore new]];
+        }
     }
-
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
+    EPSLinkViewController *vc = (EPSLinkViewController *)[segue destinationViewController];
 
-    if ([segueIdentifier isEqualToString:@"SameTtrSegue"])
-        vc.scoreType = @"SameTtr";
-    else if ([segueIdentifier isEqualToString:@"QTProlongationSegue"])
-        vc.scoreType = @"QTProlongationRisk";
-    
-    EPSLinkViewController *lc = (EPSLinkViewController *)vc;
     if ([segueIdentifier isEqualToString:@"ParaHisSegue"]) {
-        lc.webPage = @"parahisianpacinginstructions";
-        lc.linkTitle = @"Para-Hisian Pacing";
-        lc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Hirao K, Otomo K, Wang X, et al. Para-Hisian pacing. A new method for differentiating retrograde conduction over an accessory AV pathway from conduction over the AV node. Circulation. 1996;94(5):1027-1035. doi:10.1161/01.cir.94.5.1027"]];
+        vc.webPage = @"parahisianpacinginstructions";
+        vc.linkTitle = @"Para-Hisian Pacing";
+        vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Hirao K, Otomo K, Wang X, et al. Para-Hisian pacing. A new method for differentiating retrograde conduction over an accessory AV pathway from conduction over the AV node. Circulation. 1996;94(5):1027-1035. doi:10.1161/01.cir.94.5.1027"]];
     }
     else if ([segueIdentifier isEqualToString:@"RVPaceSegue"]) {
-        lc.webPage = @"rvapexvsbasepacing";
-        lc.linkTitle = @"RV Apex vs Base Pacing";
-        lc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Martínez-Alday JD, Almendral J, Arenal A, et al. Identification of concealed posteroseptal Kent pathways by comparison of ventriculoatrial intervals from apical and posterobasal right ventricular sites. Circulation. 1994;89(3):1060-1067. doi:10.1161/01.cir.89.3.1060"]];
+        vc.webPage = @"rvapexvsbasepacing";
+        vc.linkTitle = @"RV Apex vs Base Pacing";
+        vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Martínez-Alday JD, Almendral J, Arenal A, et al. Identification of concealed posteroseptal Kent pathways by comparison of ventriculoatrial intervals from apical and posterobasal right ventricular sites. Circulation. 1994;89(3):1060-1067. doi:10.1161/01.cir.89.3.1060"]];
     }
     else if ([segueIdentifier isEqualToString:@"RvhSegue"]) {
-        lc.webPage = @"rvh";
-        lc.linkTitle = @"RVH Criteria";
-        lc.references = [NSArray arrayWithObjects:[Reference referenceFromCitation:@"Lewis T. Observations upon ventricular hypertrophy with special reference to preponderance of one or the other chamber. Heart. 1914;5:367-402." ], [[Reference alloc] init:@"Myers GB, Klein HA, Stofer BE. The electrocardiographic diagnosis of right ventricular hypertrophy. Am Heart J. 1948;35(1):1-40. doi:10.1016/0002-8703(48)90182-3"], [[Reference alloc] init: @"Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J. 1949;37(2):161-186. doi:10.1016/0002-8703(49)90562-1"], [[Reference alloc] init:@"Butler PM, Leggett SI, Howe CM, Freye CJ, Hindman NB, Wagner GS. Identification of electrocardiographic criteria for diagnosis of right ventricular hypertrophy due to mitral stenosis. Am J Cardiol. 1986;57(8):639-643. doi:10.1016/0002-9149(86)90850-7"], [[Reference alloc] init:@"Hancock EW, Deal BJ, Mirvis DM, Okin P, Kligfield P, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram. Journal of the American College of Cardiology. 2009;53(11):992-1002. doi:10.1016/j.jacc.2008.12.015"], nil];
+        vc.webPage = @"rvh";
+        vc.linkTitle = @"RVH Criteria";
+        vc.references = [NSArray arrayWithObjects:[Reference referenceFromCitation:@"Lewis T. Observations upon ventricular hypertrophy with special reference to preponderance of one or the other chamber. Heart. 1914;5:367-402." ], [[Reference alloc] init:@"Myers GB, Klein HA, Stofer BE. The electrocardiographic diagnosis of right ventricular hypertrophy. Am Heart J. 1948;35(1):1-40. doi:10.1016/0002-8703(48)90182-3"], [[Reference alloc] init: @"Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J. 1949;37(2):161-186. doi:10.1016/0002-8703(49)90562-1"], [[Reference alloc] init:@"Butler PM, Leggett SI, Howe CM, Freye CJ, Hindman NB, Wagner GS. Identification of electrocardiographic criteria for diagnosis of right ventricular hypertrophy due to mitral stenosis. Am J Cardiol. 1986;57(8):639-643. doi:10.1016/0002-9149(86)90850-7"], [[Reference alloc] init:@"Hancock EW, Deal BJ, Mirvis DM, Okin P, Kligfield P, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram. Journal of the American College of Cardiology. 2009;53(11):992-1002. doi:10.1016/j.jacc.2008.12.015"], nil];
     }
     else if ([segueIdentifier isEqualToString:@"LbbbSegue"]) {
-        lc.webPage = @"lbbb";
-        lc.linkTitle = @"LBBB Criteria";
-        lc.references = [NSArray arrayWithObject:[[Reference alloc] init:@"Strauss DG, Selvester RH, Wagner GS. Defining Left Bundle Branch Block in the Era of Cardiac Resynchronization Therapy. American Journal of Cardiology. 2011;107(6):927-934.\ndoi:10.1016/j.amjcard.2010.11.010"]];
+        vc.webPage = @"lbbb";
+        vc.linkTitle = @"LBBB Criteria";
+        vc.references = [NSArray arrayWithObject:[[Reference alloc] init:@"Strauss DG, Selvester RH, Wagner GS. Defining Left Bundle Branch Block in the Era of Cardiac Resynchronization Therapy. American Journal of Cardiology. 2011;107(6):927-934.\ndoi:10.1016/j.amjcard.2010.11.010"]];
     }
   
-    EPSARVCCriteriaViewController *arvcVc = (EPSARVCCriteriaViewController *)vc;
+    EPSARVCCriteriaViewController *arvcVc = (EPSARVCCriteriaViewController *)[segue destinationViewController];
     if ([segueIdentifier isEqualToString:@"ARVC2010Segue"])
         arvcVc.criteria = @"ARVC2010";
     else if ([segueIdentifier isEqualToString:@"ARVC1994Segue"])
         arvcVc.criteria = @"ARVC1994";
 
-    InformationTableViewController *infoTableVC = (InformationTableViewController *)vc;
+    InformationTableViewController *infoTableVC = (InformationTableViewController *)[segue destinationViewController];
     if ([segueIdentifier isEqualToString:@"NormalEPValuesSegue"]) {
         infoTableVC.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Josephson ME. Clinical Cardiac Electrophysiology: Techniques and Interpretations. 4th edition. Lippincott Williams & Wilkins; 2008. https://www.amazon.com/Clinical-Cardiac-Electrophysiology-Techniques-Interpretations/dp/0781777399"]];
         infoTableVC.name = @"Normal EP Values";
 
     }
-    
-
-
-
 }
 
 

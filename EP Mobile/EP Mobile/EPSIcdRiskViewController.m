@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 EP Studios. All rights reserved.
 //
 
-// Reference is http://www.onlinejacc.org/content/63/8/788
-
 #import "EPSIcdRiskViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSSharedMethods.h"

@@ -8,7 +8,6 @@
 
 #import "EPSBrugadaTableViewController.h"
 #import "EPSLinkViewController.h"
-#import "EPSRiskScoreTableViewController.h"
 #import "EPSBrugadaRiskScore.h"
 
 #import "EP_Mobile-Swift.h"

@@ -50,9 +50,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="EgsysScoreSegue" id="fDD-Ze-qxl"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="QB2-I6-4LO" style="IBUITableViewCellStyleDefault" id="AYU-1e-AV8">
                                         <rect key="frame" x="0.0" y="94" width="414" height="44"/>
@@ -69,9 +66,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="MartinScoreSegue" id="N8m-3x-1em"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lQz-BX-A0m" style="IBUITableViewCellStyleDefault" id="j70-OK-zzc">
                                         <rect key="frame" x="0.0" y="138" width="414" height="44"/>
@@ -88,9 +82,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="OesilScoreSegue" id="Cda-nH-838"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="tER-ra-ov2" style="IBUITableViewCellStyleDefault" id="b4h-VH-prj">
                                         <rect key="frame" x="0.0" y="182" width="414" height="44"/>
@@ -107,9 +98,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="SfRuleSegue" id="5yz-gw-x5v"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1605,9 +1593,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="QTProlongationSegue" id="I7k-dt-UVf"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="D2I-gn-Y77" style="IBUITableViewCellStyleDefault" id="GQz-Y3-rsE">
                                         <rect key="frame" x="0.0" y="2027.5" width="414" height="44"/>
@@ -1624,9 +1609,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Jt3-by-I3p" kind="show" identifier="SameTtrSegue" id="yCM-Gp-tSo"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wss-TW-Icg" style="IBUITableViewCellStyleDefault" id="bqP-Zg-Xfy">
                                         <rect key="frame" x="0.0" y="2071.5" width="414" height="44"/>
@@ -2394,50 +2376,6 @@
             </objects>
             <point key="canvasLocation" x="-8693" y="-2838"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="kti-NI-1xN">
-            <objects>
-                <tableViewController storyboardIdentifier="RiskScore" id="Jt3-by-I3p" customClass="EPSRiskScoreTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ho-EI-08a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChadsCell" textLabel="VHg-sq-Jrs" detailTextLabel="CfA-hR-QXc" style="IBUITableViewCellStyleSubtitle" id="8Rp-V1-sst">
-                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Rp-V1-sst" id="IK5-Rm-qIU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VHg-sq-Jrs">
-                                            <rect key="frame" x="20" y="3" width="38.5" height="21.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CfA-hR-QXc">
-                                            <rect key="frame" x="20" y="24.5" width="50" height="17"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Jt3-by-I3p" id="NnC-Cg-pJ9"/>
-                            <outlet property="delegate" destination="Jt3-by-I3p" id="7W5-WU-Ghj"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="5A5-0R-44A"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-G5-ryY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-8848" y="-524"/>
-        </scene>
         <!--Normal EP Values-->
         <scene sceneID="hdk-ja-d6a">
             <objects>
@@ -2928,7 +2866,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yCM-Gp-tSo"/>
         <segue reference="k3E-zN-ktT"/>
         <segue reference="yyd-qN-wqh"/>
     </inferredMetricsTieBreakers>

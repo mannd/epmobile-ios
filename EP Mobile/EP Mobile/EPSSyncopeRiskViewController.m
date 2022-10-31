@@ -7,7 +7,16 @@
 //
 
 #import "EPSSyncopeRiskViewController.h"
-#import "EPSRiskScoreTableViewController.h"
+#import "EPSEgsysRiskScore.h"
+#import "EPSMartinRiskScore.h"
+#import "EPSOesilScore.h"
+#import "EPSSfRuleRiskScore.h"
+#import "EP_Mobile-Swift.h"
+
+#define EGSYS_ROW 0
+#define MARTIN_ROW 1
+#define OESIL_ROW 2
+#define SF_RULE_ROW 3
 
 @interface EPSSyncopeRiskViewController ()
 
@@ -41,19 +50,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"EgsysScoreSegue"])
-        vc.scoreType = @"EgsysScore";
-    else if ([segueIdentifier isEqualToString:@"MartinScoreSegue"])
-        vc.scoreType = @"MartinScore";
-    else if ([segueIdentifier isEqualToString:@"OesilScoreSegue"])
-        vc.scoreType = @"OesilScore";
-    else if ([segueIdentifier isEqualToString:@"SfRuleSegue"])
-        vc.scoreType = @"SfRule";
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case EGSYS_ROW:
+            [RiskScoreViewController showWithVc:self riskScore:[EPSEgsysRiskScore new]];
+            break;
+        case MARTIN_ROW:
+            [RiskScoreViewController showWithVc:self riskScore:[EPSMartinRiskScore new]];
+            break;
+        case OESIL_ROW:
+            [RiskScoreViewController showWithVc:self riskScore:[EPSOesilScore new]];
+            break;
+        case SF_RULE_ROW:
+            [RiskScoreViewController showWithVc:self riskScore:[EPSSfRuleRiskScore new]];
+            break;
+        default:
+            break;
+    }
 }
-
-
 
 @end

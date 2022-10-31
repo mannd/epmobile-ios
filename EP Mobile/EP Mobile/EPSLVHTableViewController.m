@@ -7,7 +7,6 @@
 //
 
 #import "EPSLVHTableViewController.h"
-#import "EPSRiskScoreTableViewController.h"
 #import "EPSEstesRiskScore.h"
 
 #import "EP_Mobile-Swift.h"
