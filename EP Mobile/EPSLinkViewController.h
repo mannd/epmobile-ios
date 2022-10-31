@@ -15,6 +15,9 @@
 @property (strong, nonatomic) NSString *webPage;
 @property (strong, nonatomic) NSString *linkTitle;
 @property (strong, nonatomic) UILabel *resultLabel;
+@property (strong, nonatomic) NSArray *references;
+@property (strong, nonatomic) NSString *instructions;
+@property (strong, nonatomic) NSString *informationName;
 @property BOOL showToolbar;
 
 @end

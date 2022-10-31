@@ -8,7 +8,8 @@
 
 import MiniQTc
 
-struct QTcIvcd {
+struct QTcIvcd: InformationProvider {
+
     var qt: Double
     var qrs: Double
     var rr: Double
@@ -91,5 +92,22 @@ struct QTcIvcd {
             return nil
         }
         return result
+    }
+
+    static func getReferences() -> [Reference] {
+        var references:[Reference] = []
+        references.append(Reference("Rautaharju PM, Zhang ZM, Prineas R, Heiss G. Assessment of prolonged QT and JT intervals in ventricular conduction defects. American Journal of Cardiology. 2004;93(8):1017-1021.\ndoi:10.1016/j.amjcard.2003.12.055"))
+        references.append(Reference("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\ndoi:10.1161/CIRCULATIONAHA.108.191096"))
+        references.append(Reference("Yankelson L, Hochstadt A, Sadeh B, et al. New formula for defining “normal” and “prolonged” QT in patients with bundle branch block. Journal of Electrocardiology. 2018;51(3):481-486.\ndoi:10.1016/j.jelectrocard.2017.12.039"))
+        references.append(Reference("Bogossian H, Linz D, Heijman J, et al. QTc evaluation in patients with bundle branch block. Int J Cardiol Heart Vasc. 2020;30:100636.\ndoi:10.1016/j.ijcha.2020.100636"))
+        return references
+    }
+
+    static func getInstructions() -> String? {
+        "Use this calculator to estimate the QTc when there is an intraventricular conduction delay "
+    }
+
+    static func getKey() -> String? {
+        return nil
     }
 }

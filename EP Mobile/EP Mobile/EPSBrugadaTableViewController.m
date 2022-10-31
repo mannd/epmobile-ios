@@ -8,8 +8,13 @@
 
 #import "EPSBrugadaTableViewController.h"
 #import "EPSLinkViewController.h"
-#import "EPSRiskScoreTableViewController.h"
+#import "EPSBrugadaRiskScore.h"
 
+#import "EP_Mobile-Swift.h"
+
+// NB: This is hard-wired.  If the Brugada table changes, this will
+// need to be changed too.
+#define BRUGADA_RISK_ROW 2
 
 @interface EPSBrugadaTableViewController ()
 
@@ -42,6 +47,12 @@
     return 3;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == BRUGADA_RISK_ROW) {
+        [RiskScoreViewController showWithVc:self riskScore:[[EPSBrugadaRiskScore alloc] init]];
+    }
+}
+
 
 #pragma mark - Navigation
 
@@ -54,12 +65,8 @@
         EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
         lc.webPage = @"brugadadiagnosis";
         lc.linkTitle = @"Brugada Diagnosis";
+        lc.references = [NSArray arrayWithObject:[[Reference alloc] init:@"Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS Expert Consensus Statement on the Diagnosis and Management of Patients with Inherited Primary Arrhythmia Syndromes: Document endorsed by HRS, EHRA, and APHRS in May 2013 and by ACCF, AHA, PACES, and AEPC in June 2013. Heart Rhythm. 2013;10(12):1932-1963.\ndoi:10.1016/j.hrthm.2013.05.014"]];
     }
-    else if ([segueIdentifier isEqualToString:@"BrugadaRiskSegue"]) {
-        EPSRiskScoreTableViewController *rc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
-        rc.scoreType = @"BrugadaRisk";
-    }
-
 }
 
 

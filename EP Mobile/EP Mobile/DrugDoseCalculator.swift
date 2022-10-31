@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+fileprivate let crClCalculatorName = "Creatinine Clearance"
+fileprivate let drugCalculatorName = "Drug Calculators"
+
 struct DrugDoseCalculator: View {
     @State private var sex: EP_Mobile.Sex = .male
     @State private var age: Int = 0
@@ -127,17 +130,7 @@ struct DrugDoseCalculator: View {
                         }
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: age, perform: { _ in  clearResult() })
@@ -145,11 +138,12 @@ struct DrugDoseCalculator: View {
             .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
-            .navigationBarItems(trailing: drugName != .crCl ? AnyView(Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                Info()
-            }) : AnyView(EmptyView()))
+            .navigationBarItems(
+                trailing: NavigationLink(destination: isCrClCalculator() ? crClInformationView() : drugDoseInformationView(), isActive: $showInfo) {
+                    Button(action: { showInfo.toggle() }) {
+                        Image(systemName: "info.circle")
+                    }
+                })
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -164,12 +158,19 @@ struct DrugDoseCalculator: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .alert(isPresented: $showWarning) {
-                   Alert(
-                       title: Text("Warning"),
-                       message: Text(drugDose)
-                   )
-               }
+        .alert("Warning", isPresented: $showWarning, actions: {}, message: { Text(drugDose) })
+    }
+
+    private func isCrClCalculator() -> Bool {
+        return drugName == .crCl
+    }
+
+    private func crClInformationView() -> InformationView {
+        return InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
+    }
+
+    private func drugDoseInformationView() -> InformationView {
+        return InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
     }
 
     func getCrStep() -> Double {
@@ -237,35 +238,9 @@ struct DrugDoseCalculator: View {
     }
 }
 
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("Caution")) {
-                        Text("Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage.")
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("Drug Calculator"), displayMode: .inline)
-        }
-    }
-}
-
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
         DrugDoseCalculator(drugName: .constant(DrugName.crCl))
         DrugDoseCalculator(drugName: .constant(DrugName.apixaban))
-        Info()
     }
 }

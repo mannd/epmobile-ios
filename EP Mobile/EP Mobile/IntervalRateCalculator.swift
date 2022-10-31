@@ -70,17 +70,7 @@ struct IntervalRateCalculator: View {
                     }
 
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text(conversionType.description), displayMode: .inline)
         }

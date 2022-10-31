@@ -160,38 +160,20 @@ struct WarfarinClinicView: View {
                     }
 
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text("Warfarin Clinic"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                Info()
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: Warfarin.getInstructions(), references: Warfarin.getReferences(), name: "Warfarin Clinic"), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
             })
-            .alert(isPresented: $showDosingAlert) {
-                Alert(
-                    title: Text("Result"),
-                    message: Text(result),
-                    primaryButton: .destructive(
-                        Text("Show Dose Table"),
-                        action: { calculateDosingTable() }
-                    ),
-                    secondaryButton: .default(
-                        Text("Cancel"),
-                        action: { }
-                    )
-                )
-            }
+            .alert("Result", isPresented: $showDosingAlert, actions: {
+                Button("Show Dose Table", role: .destructive, action: {
+                   calculateDosingTable()
+                })
+                // Cancel button automatically added when we have a destructive button.
+            }, message: { Text(result) })
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
@@ -251,39 +233,9 @@ struct WarfarinClinicView: View {
     }
 }
 
-
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("Usage")) {
-                        Text("This calculator can be used to adjust the warfarin dose when a patient is on a stable weekly dosing schedule. It should not be used when first starting warfarin. Select the tablet size the patient uses and the target INR.  Enter the measured INR and the total number of mg the patient is taking per week (e.g. a patient taking 5 mg daily takes 5 x 7 = 35 mg of warfarin per week).  The calculator will determine the percentage weekly dose increase or decrease that is likely to bring the INR back into the target range.  When it is feasible, the calculator will suggest the number of tablets to take each day of the week to achieve the INR goal. An upper and lower range of dosing will be given; in some cases, when dosing changes are small, the upper and lower range will be identical. When there is a range of doses, you might decide to use the higher or lower dose depending on other factors, such as the patient\'s previous response to dosing changes or the patient\'s age.  Warfarin dosing is not an exact science!")
-                    }
-                    Section(header: Text("Reference")) {
-                        Text("Reference: Horton J, Bushwick B: American Family Physician. Feb 1, 1999. https://www.aafp.org/afp/1999/0201/p635.html")
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("Warfarin Clinic"), displayMode: .inline)
-        }
-    }
-}
-
 struct WarfarinCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         WarfarinClinicView()
-        Info()
         WarfarinClinicView.UIWarfarinDosingTableView()
     }
 }

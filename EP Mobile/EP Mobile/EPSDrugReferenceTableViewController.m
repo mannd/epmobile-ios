@@ -9,6 +9,7 @@
 #import "EPSDrugReferenceTableViewController.h"
 #import "EPSLinkViewController.h"
 #import "EPSLogging.h"
+#import "EP_Mobile-Swift.h"
 
 @interface EPSDrugReferenceTableViewController ()
 
@@ -69,6 +70,8 @@
     // Pass the selected object to the new view controller.
     EPSLinkViewController *lc = (EPSLinkViewController *)[segue destinationViewController];
     NSString *segueIdentifier = [segue identifier];
+    lc.instructions = @"Each drug reference is summarized from the drug's package insert, which is available online.  You can directly measure creatinine clearance by tapping the CrCl button at the bottom of the screen and calculate the appropriate drug dose based on the information in the drug reference.";
+    lc.informationName = @"Drug Reference";
 
     if ([segueIdentifier isEqualToString:@"apixabanReferenceSegue"]) {
         lc.webPage = @"apixaban";

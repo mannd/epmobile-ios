@@ -58,6 +58,11 @@
     UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
     self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
     label.text = @"";
+
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -69,6 +74,14 @@
         self.resultLabel.text = crClResult;
     }
     
+}
+
+- (void)showInformationView {
+    NSString *name = self.informationName;
+    if (name == NULL) {
+        name = self.linkTitle;
+    }
+    [InformationViewPresenter showWithVc:self instructions:self.instructions key:NULL references:self.references name:name];
 }
 
 - (NSString *)getStoredCreatinineClearance {

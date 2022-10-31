@@ -8,6 +8,7 @@
 
 #import "EPSMartinRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSMartinRiskScore
 
@@ -15,14 +16,13 @@
     return @"Martin Algorithm";
 }
 
-- (NSString *)getReference {
-    return @"Martin TP, Hanusa BH, Kapoor WN.  Risk stratification of patients with syncope. Ann Emerg Med [Internet]. 1997 April [cited 2014 Jun 6];29(4):459-66. Available from: http://www.annemergmed.com/article/S0196-0644(97)70217-8/abstract";
+- (NSString *)getInstructions {
+    return @"Use this algorithm to stratify the risk of arrhythmias or mortality within 1 year in Emergency Department patients presenting with syncope.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://www.annemergmed.com/article/S0196-0644(97)70217-8/abstract"];
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Martin TP, Hanusa BH, Kapoor WN. Risk stratification of patients with syncope. Ann Emerg Med. 1997;29(4):459-466. doi:10.1016/s0196-0644(97)70217-8"]];
 }
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

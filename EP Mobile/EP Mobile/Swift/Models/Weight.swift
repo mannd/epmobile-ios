@@ -16,7 +16,7 @@ enum WeightType {
 }
 
 // Trying out Swift units, rather than my own here...
-struct Weight {
+struct Weight: InformationProvider {
     var weight: Measurement<UnitMass>
     var height: Measurement<UnitLength>
     var sex: EP_Mobile.Sex
@@ -54,5 +54,19 @@ struct Weight {
     func isUnderHeight() -> Bool {
         return height < Measurement(value: 60, unit: UnitLength.inches)
     }
+
+    static func getReferences() -> [Reference] {
+        return [Reference("Winter MA, Guhr KN, Berg GM. Impact of various body weights and serum creatinine concentrations on the bias and accuracy of the Cockcroft-Gault equation. Pharmacotherapy. 2012;32(7):604-612.\ndoi:10.1002/j.1875-9114.2012.01098.x")]
+    }
+
+    static func getInstructions() -> String? {
+        return "Although the package inserts for the drugs included in the drug dose calculators recommend using actual uncorrected body weight and the Cockcroft-Gault formula for Creatinine Clearance, some authorities feel that using a corrected body weight may be more accurate.\n\nThis calculator determines the Ideal Body Weight and Adjusted Body Weight from the height, sex, and actual body weight. The Adjusted Body Weight formula here uses a correction factor of 0.4, which may give a more accurate measurement of Creatinine Clearance than other factors.  The formulas are not accurate if the height is less than 60 inches.\n\nPatients who are underweight (weight < Ideal Body Weight) should use actual weight for Creatinine Clearance determination.  Normal weight patients can use Ideal Body Weight, and overweight (defined in this calculator as weight 30% or more over Ideal Body Weight) should use the Adjusted Body Weight."
+    }
+
+    // Weight calculator substitutes copy and paste instructions for keys
+    static func getKey() -> String? {
+        return "These weights can be copied to the clipboard and pasted into the creatinine clearance calculator weight field using the Copy buttons."
+    }
+
 }
 

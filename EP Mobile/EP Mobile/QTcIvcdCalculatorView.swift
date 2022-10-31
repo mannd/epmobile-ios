@@ -9,6 +9,8 @@
 import SwiftUI
 import MiniQTc
 
+fileprivate let calculatorName = "QTc IVCD Calculator"
+
 struct QTcIvcdCalculatorView: View {
     @State private var intervalRate: Int = 0
     @State private var qt: Int = 0
@@ -21,6 +23,7 @@ struct QTcIvcdCalculatorView: View {
     @State private var errorMessage = ""
     @State private var showErrorMessage = false
     @State private var showResults = false
+    @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultQtcFormula) var defaultQtcFormula: String = Keys.bazett
@@ -88,19 +91,14 @@ struct QTcIvcdCalculatorView: View {
                         .pickerStyle(.menu)
                     }
                 }
-                HStack {
-                    Group {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .navigationBarTitle(Text("QTc IVCD Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+            .navigationBarItems(trailing: NavigationLink(destination: Self.getQTcIvcdInformationView(), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
@@ -119,12 +117,7 @@ struct QTcIvcdCalculatorView: View {
                 intervalRateType = .rate
             }
         }
-        .alert(isPresented: $showErrorMessage) {
-                   Alert(
-                       title: Text("Input Error"),
-                       message: Text(errorMessage)
-                   )
-               }
+        .alert("Input Error", isPresented: $showErrorMessage, actions: {}, message: { Text(errorMessage) })
     }
 
     func calculate() {
@@ -171,6 +164,10 @@ struct QTcIvcdCalculatorView: View {
     func formulaName() -> String {
         let calculator = QTc.qtcCalculator(formula: formula)
         return calculator.longName
+    }
+
+    static func getQTcIvcdInformationView() -> InformationView {
+        return InformationView(instructions: QTcIvcd.getInstructions(), references: QTcIvcd.getReferences(), name: calculatorName)
     }
 }
 

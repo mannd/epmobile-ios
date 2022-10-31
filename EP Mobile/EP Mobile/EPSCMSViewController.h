@@ -16,4 +16,10 @@
 @property (strong, nonatomic) NSMutableArray *list;
 @property (strong, nonatomic) NSArray *headers;
 @property (strong, nonatomic) NSMutableSet *checkedItems;
+@property (strong, nonatomic) NSString *viewTitle;
+- (IBAction)calculate:(id)sender;
+- (IBAction)cancel:(id)sender;
+
+
+
 @end

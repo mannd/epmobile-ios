@@ -9,6 +9,7 @@
 #import "EPSHcmRiskScore.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
+#import "EP_Mobile-Swift.h"
 
 // used to distinguish specially handled risk factor in HCM
 #define HIGHEST_RISK_SCORE 100
@@ -20,14 +21,17 @@
     return @"HCM SCD 2002";
 }
 
-- (NSString *)getReference {
-    return @"McKenna WJ. Behr ER. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart [Internet]. 2002 Feb [cited 2014 Jun 6];87(2):169-176. Available from: http://heart.bmj.com/content/87/2/169.full";
+- (NSString *)getKey {
+    return @"BP = blood pressure.\nVF = ventricular fibrillation.\nVT = ventricular tachycardia.\nSD = unexpected sudden death.\nAbnormal exercise BP = failure to augment and maintain systolic BP > 25 mm Hg with exercise.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://heart.bmj.com/content/87/2/169.full"];
+- (NSString *)getInstructions {
+    return @"Use this score to determine risk of sudden cardiac death and consideration for ICD implant in patients with hypertrophic cardiomyopathy.";
 }
 
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"McKenna WJ. Hypertrophic cardiomyopathy: management, risk stratification, and prevention of sudden death. Heart. 2002;87(2):169-176. doi:10.1136/heart.87.2.169"]];
+}
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -38,7 +42,7 @@
     [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Family history" withValue:10 withDetails:@"of premature sudden death"]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Unexplained syncope" withValue:10]];
     [array addObject:[[EPSRiskFactor alloc] initWith:@"LV thickness ≥ 3 cm" withValue:10]];
-    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnl BP response to exercise" withValue:10 withDetails:@"Failure of BP to rise with exercise"]];
+    [array addObject:[[EPSRiskFactor alloc] initWithDetails:@"Abnormal BP response to exercise" withValue:10 withDetails:@"Failure of BP to rise with exercise"]];
     
     [array addObject:[[EPSRiskFactor alloc] initWith:@"Nonsustained VT" withValue:10]];
     // Minor criteria

@@ -7,19 +7,24 @@
 //
 
 #import "EPSChadsRiskScore.h"
+#import "EP_Mobile-Swift.h"
 #import "EPSRiskFactor.h"
 
 @implementation EPSChadsRiskScore
+
 - (NSString *)getTitle {
     return @"CHADS\u2082";
 }
 
-- (NSString *)getReference {
-    return @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510. doi:10.1093/eurheartj/ehr488";
+- (NSString *)getInstructions {
+    return @"Use this score to assess the risk of stroke in patients with atrial fibrillation.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"https://academic.oup.com/eurheartj/article/33/12/1500/473502"];
+- (NSArray *)getReferences {
+    Reference *ref1 = [[Reference alloc] init: @"Gage BF, Waterman AD, Shannon W, Boechler M, Rich MW, Radford MJ. Validation of Clinical Classification Schemes for Predicting StrokeResults From the National Registry of Atrial Fibrillation. JAMA. 2001;285(22):2864-2870. doi:10.1001/jama.285.22.2864"];
+    Reference *ref2 = [[Reference alloc] init: @"Friberg L, Rosenqvist M, Lip GYH. Evaluation of risk stratification schemes for ischaemic stroke and bleeding in 182 678 patients with atrial fibrillation: the Swedish Atrial Fibrillation cohort study. Eur Heart J. 2012;33(12):1500-1510. doi:10.1093/eurheartj/ehr488"];
+    NSArray *references = [NSArray arrayWithObjects:ref1, ref2, nil];
+    return references;
 }
 
 - (NSMutableArray *)getArray {

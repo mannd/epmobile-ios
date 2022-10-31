@@ -8,7 +8,6 @@
 
 #import "EPSComplexAlgorithmViewController.h"
 #import "EPSAtrialTachAlgorithm.h"
-#import "EPSNotesViewController.h"
 #import "EPSComplexStepAlgorithmProtocol.h"
 #import "EPSLogging.h"
 #import "EPSSharedMethods.h"
@@ -49,20 +48,20 @@
     // if need to use for more than this algorithm.
     algorithm = [[EPSAtrialTachAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
-    self.instructionsButton.hidden = ![algorithm showInstructionsButton];
-    if (!self.instructionsButton.hidden)
-        [self.instructionsButton setTitle:@"Instructions" forState:UIControlStateNormal];
     self.step = 1;
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
 
-    self.button1.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button2.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button3.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button4.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button5.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.button6.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.instructionsButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.button1.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button2.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button3.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button4.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button5.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.button6.configuration = [UIButton smallRoundedButtonConfiguration];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +76,6 @@
         self.button4.hidden = NO;
         self.button5.hidden = NO;
         self.button6.hidden = NO;
-        self.instructionsButton.hidden = NO;
         [self.button1 setTitle:@"Neg" forState:UIControlStateNormal];
         [self.button2 setTitle:@"Pos/Neg" forState:UIControlStateNormal];
         [self.button3 setTitle:@"Neg/Pos" forState:UIControlStateNormal];
@@ -90,7 +88,6 @@
         self.button4.hidden = YES;
         self.button5.hidden = YES;
         self.button6.hidden = YES;
-        self.instructionsButton.hidden = YES;
         [self.button1 setTitle:@"Yes" forState:UIControlStateNormal];
         [self.button2 setTitle:@"No" forState:UIControlStateNormal];
         [self.button3 setTitle:@"Back" forState:UIControlStateNormal];
@@ -166,13 +163,14 @@
     }
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"AtrialTachNotesSegue"]) {
-        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
-        vc.key = @"AtrialTachNotes";
-    }
+- (void)showNotes {
+    [InformationViewPresenter
+     showWithVc:self
+     instructions:@"This algorithm applies only to focal atrial tachycardia. To be accurate, the P wave must have a discrete isoelectric segment before its start, i.e. don\'t use a P wave that is fused onto the end of a T wave.  Iso means isoelectric, defined as a < 0.05 mV deviation from the baseline.  The algorithm sensitivity in the original study was 93%."
+     key:NULL
+     references:[NSArray arrayWithObject:[[Reference alloc] init:@"Kistler PM, Roberts-Thomson Kurt C., Haqqani HM, et al. P-Wave Morphology in Focal Atrial Tachycardia. Journal of the American College of Cardiology. 2006;48(5):1010-1017.\ndoi:/10.1016/j.jacc.2006.03.058"]]
+     name:[algorithm name]
+    ];
 }
 
 - (void)showResults {
@@ -180,17 +178,14 @@
     NSString *title = [algorithm resultDialogTitle];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:details preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
-                                                          handler:^(UIAlertAction * action) {
-                                                              [self->algorithm resetSteps:&self->step];
-                                                              self.questionLabel.text = [self->algorithm step1];
-                                                              [self setButtons];
-                                                          }];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+        [self->algorithm resetSteps:&self->step];
+        self.questionLabel.text = [self->algorithm step1];
+        [self setButtons];
+    }];
     
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
-    
 }
-
 
 @end

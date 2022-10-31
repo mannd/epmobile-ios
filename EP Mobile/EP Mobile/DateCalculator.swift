@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+fileprivate let calculatorName = "Date Calculator"
+
 struct DateCalculator: View {
     @State private var startingDate: Date = Date()
     @State private var numberOfDays = Self.defaultNumberOfDays
@@ -58,28 +60,21 @@ struct DateCalculator: View {
                         Text(result)
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: numberOfDays, perform: { _ in clearResult() })
             .onChange(of: startingDate, perform: { _ in clearResult() })
             .onChange(of: subtractDays, perform: { _ in clearResult() })
-            .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing:
-                                    Button(action: { showingInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }).sheet(isPresented: $showingInfo) {
-                Info()
-            }
+                                    NavigationLink(destination: DateInformationView(), isActive: $showingInfo) {
+                Button(action: { showingInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
+//            .sheet(isPresented: $showingInfo) {
+//                DateInformationView()
+//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -107,14 +102,15 @@ struct DateCalculator: View {
     }
 }
 
-private struct Info: View {
+// DateCalculator has a customized information view.
+private struct DateInformationView: View {
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("How to Use")) {
+                    Section(header: Text("Instructions")) {
                         Text("Use this calculator to do date arithmetic.").bold()
                         Text("Set the starting date to the index date (such as today) and then enter the number of days in the future or past that you are adding or subtracting.  Turn ") + Text("Subtract days").bold() + Text(" on to subtract days from the index date.")
                     }
@@ -127,12 +123,12 @@ private struct Info: View {
                         Text("The number of days an H&P is valid prior to a procedure.")
                     }
                 }
-                Button("Done") {
-                    dismiss()
-                }
-                .roundedButton()
+//                Button("Done") {
+//                    dismiss()
+//                }
+//                .roundedButton()
             }
-            .navigationBarTitle(Text("Date Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName + " Information"), displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -143,7 +139,7 @@ struct DateCalculator_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             DateCalculator()
-            Info()
+            DateInformationView()
         }
     }
 }

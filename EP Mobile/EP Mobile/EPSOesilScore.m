@@ -8,6 +8,7 @@
 
 #import "EPSOesilScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSOesilScore
 
@@ -15,14 +16,13 @@
     return @"OESIL Score";
 }
 
-- (NSString *)getReference {
-    return @"Colivicchi F, Ammirati F, Melina D, Guido V, Imperoli G, Santini M, for the OESIL (Osservatorio Epidemiologico sulla Sincope nel Lazio) Study Investigators. Development and prospective validation of a risk stratification system for patients with syncope in the emergency department: the OESIL risk score. Eur Heart J [Internet]. 2003 [cited 2014 Jun 6];24:811-19. Available from: http://eurheartj.oxfordjournals.org/content/24/9/811.full.pdf";
+- (NSString *)getInstructions {
+    return @"Use this score to assess the one year total mortality risk for patients presenting to the Emergency Department with syncope.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://eurheartj.oxfordjournals.org/content/24/9/811.full.pdf"];
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Colivicchi F, Ammirati F, Melina D, et al. Development and prospective validation of a risk stratification system for patients with syncope in the emergency department: the OESIL risk score. Eur Heart J. 2003;24(9):811-819. doi:10.1016/s0195-668x(02)00827-8"]];
 }
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

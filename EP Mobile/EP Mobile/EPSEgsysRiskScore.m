@@ -8,20 +8,20 @@
 
 #import "EPSEgsysRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSEgsysRiskScore
 - (NSString *)getTitle {
     return @"EGSYS Score";
 }
 
-- (NSString *)getReference {
-    return @"Del Rosso A, Ungar A, Maggi R, Giada F, Petix NR, De Santo T, Menozzi C, Brignole M. Clinical predictors of cardiac syncope at initial evaluation in patients referred urgently to a general hospital: the EGSYS score. Heart [Internet]. 2008 Dec [cited 2014 Jun 6];94(12):1620-6. Available from: http://heart.bmj.com/content/94/12/1620.abstract";
+- (NSString *)getInstructions {
+    return @"Use this score to predict whether a patient presenting with syncope is likely to have a cardiac cause for their syncope.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://heart.bmj.com/content/94/12/1620.abstract"];
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Del Rosso A, Ungar A, Maggi R, et al. Clinical predictors of cardiac syncope at initial evaluation in patients referred urgently to a general hospital: the EGSYS score. Heart. 2008;94(12):1620-1626. doi:10.1136/hrt.2008.143123"]];
 }
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];
