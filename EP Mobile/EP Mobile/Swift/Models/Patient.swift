@@ -169,8 +169,7 @@ final class Patient {
         return gfr;
     }()
 
-
-    func crClResult(concentrationUnit: ConcentrationUnit) -> String {
+    func crClResult() -> String {
         let roundedCrCl = Int(round(crCl))
         return  "Creatinine clearance = \(roundedCrCl) mL/min"
     }
