@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "miniqtc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mannd/MiniQTc",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8bacdf2ea3efe84e0a3e42711388b6c365b6e864"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "48254824bb4248676bf7ce56014ff57b142b77eb",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
