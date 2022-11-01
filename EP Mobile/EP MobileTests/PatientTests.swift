@@ -43,8 +43,8 @@ class PatientTests: XCTestCase {
     func testCrClResult() {
         let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.0)
         XCTAssertEqual(patient.crClResult(concentrationUnit: .mgDL), "Creatinine clearance = 97 mL/min")
-        let patient4 = try! Patient(age: 40, sex: .female, weightKg: 70, creatinineMgDL: 1.0)
-        XCTAssertEqual(patient4.crClResult(concentrationUnit: .mgDL), "Creatinine clearance = 83 mL/min")
+        let patient4 = try! Patient(age: 50, sex: .female, weight: 120, massUnits: .lb, creatinine: 100, concentrationUnits: .mmolL)
+        XCTAssertEqual(patient4.crClResult(concentrationUnit: .mgDL), "Creatinine clearance = 51 mL/min")
     }
 
     func testPatientErrors() {
@@ -56,6 +56,23 @@ class PatientTests: XCTestCase {
         XCTAssertNoThrow(try Patient(age: 20, sex: .female, weightKg: 10.1, creatinineMgDL: 1.0))
         XCTAssertThrowsError(try Patient(age: 20, sex: .female, weightKg: 30, creatinineMgDL: 0))
         XCTAssertNoThrow(try Patient(age: 20, sex: .female, weightKg: 10.1, creatinineMgDL: 0.1))
+    }
 
+    func testGfr() {
+        let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.0)
+        XCTAssertEqual(patient.gfr, 93.7, accuracy: 0.1)
+        let patient2 = try! Patient(age: 40, sex: .male, weight: 70, massUnits: .kg, creatinine: 1.0, concentrationUnits: .mgDL)
+        XCTAssertEqual(patient2.gfr, 93.7, accuracy: 0.1)
+        let patient3 = try! Patient(age: 50, sex: .female, weight: 170, massUnits: .lb, creatinine: 100, concentrationUnits: .mmolL)
+        XCTAssertEqual(patient3.gfr, 56.6, accuracy: 0.1)
+        let patient4 = try! Patient(age: 40, sex: .female, race: Race.black, weightKg: 70, creatinineMgDL: 1.0)
+        XCTAssertEqual(patient4.gfr, 81.6, accuracy: 0.1)
+    }
+
+    func testGfrResult() {
+        let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.0)
+        XCTAssertEqual(patient.gfrResult(concentrationUnit: .mgDL), "GFR = 94 ml/min/1.73m²")
+        let patient4 = try! Patient(age: 40, sex: .female, weightKg: 70, creatinineMgDL: 1.0)
+        XCTAssertEqual(patient4.gfrResult(concentrationUnit: .mgDL), "GFR = 70 ml/min/1.73m²")
     }
 }
