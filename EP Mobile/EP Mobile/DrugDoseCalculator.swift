@@ -185,7 +185,7 @@ struct DrugDoseCalculator: View {
         textFieldIsFocused = false
         do {
             let patient = try Patient(age: age, sex: sex, weight: weight, massUnits: massUnit, creatinine: creatinine, concentrationUnits: concentrationUnit)
-            crClResult = patient.crClResult(concentrationUnit: concentrationUnit)
+            crClResult = patient.crClResult()
             // handle drugs
             if let drug = DrugFactory.create(drugName: drugName, patient: patient) {
                 drugDose = drug.getDose()
