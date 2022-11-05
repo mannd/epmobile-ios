@@ -17,6 +17,7 @@ enum DrugName: Int {
     case rivaroxaban
     case sotalol
     case crCl // Not a drug, but used to just calculate crCl
+    case gfr // calculate GFR
 
     var description: String {
         switch self {
@@ -34,6 +35,8 @@ enum DrugName: Int {
             return "Sotalol"
         case .crCl:
             return "Creatinine Clearance"
+        case .gfr:
+            return "GFR"
         }
     }
 }
@@ -94,7 +97,7 @@ class Drug: DrugDoseProvider, InformationProvider {
 final class DrugFactory {
     static func create(drugName: DrugName, patient: Patient) -> Drug? {
         switch drugName {
-        case .crCl:
+        case .crCl, .gfr:
             return nil
         case .apixaban:
             return Apixaban(patient: patient)

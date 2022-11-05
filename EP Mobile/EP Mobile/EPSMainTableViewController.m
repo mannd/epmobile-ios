@@ -40,10 +40,11 @@
 #define DATE_CALCULATOR_ROW 1
 #define DRUG_CALCULATORS_ROW 2
 #define INTERVAL_RATE_ROW 3
-#define QTC_CALCULATOR_ROW 4
-#define QTC_IVCD_CALCULATOR_ROW 5
-#define WARFARIN_CLINIC_ROW 6
-#define WEIGHT_CALCULATOR_ROW 7
+#define GFR_CALCULATOR_ROW 4
+#define QTC_CALCULATOR_ROW 5
+#define QTC_IVCD_CALCULATOR_ROW 6
+#define WARFARIN_CLINIC_ROW 7
+#define WEIGHT_CALCULATOR_ROW 8
 // Diagnosis section
 #define DIAGNOSIS_SECTION 1
 #define TAMPONADE_ROW 4
@@ -127,6 +128,9 @@
         }
         if (indexPath.row == INTERVAL_RATE_ROW) {
             [IntervalRateCalculatorController showWithVc:self];
+        }
+        if (indexPath.row == GFR_CALCULATOR_ROW) {
+            [DrugCalculatorController showWithVc:self drugName:DrugNameGfr];
         }
         if (indexPath.row == DATE_CALCULATOR_ROW) {
             [DateCalculatorController showWithVc:self];

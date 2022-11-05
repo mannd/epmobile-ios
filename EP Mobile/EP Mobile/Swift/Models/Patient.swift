@@ -24,9 +24,8 @@ enum Sex: Int, CaseIterable, Identifiable, Equatable {
 }
 
 enum Race: Int, CaseIterable, Identifiable, Equatable {
-    case black
     case nonblack
-    case unspecified
+    case black
 
     var id: Race { self }
     var description: String {
@@ -35,12 +34,9 @@ enum Race: Int, CaseIterable, Identifiable, Equatable {
             return "Black"
         case .nonblack:
             return "Non-black"
-        case .unspecified:
-            return "Unspecified"
         }
     }
 }
-
 
 enum CrClFormula: Int, CaseIterable, Identifiable, Equatable {
     case cockcroftGault
@@ -91,18 +87,25 @@ final class Patient {
         return [reference]
     }
 
+    static func getGfrInstructions() -> String {
+        return "Use this calculator to estimate glomerular filtration rate normalized for estimated body surface area.  If you want to estimate creatinine clearance for determining drug dosing, use the Creatinine Clearance Calculator. \n\nThis calculator uses the CKD-EPI equation."
+    }
+
     init(
         age: Int,
         sex: Sex,
-        race: Race = .unspecified,
+        race: Race = .nonblack,
         weightKg: Double,
-        creatinineMgDL: Double
+        creatinineMgDL: Double,
+        requireWeight: Bool
     ) throws {
         guard age > 0 else {
             throw DoseError.ageTooLow
         }
-        guard weightKg > 10 else {
-            throw DoseError.weightTooLow
+        if requireWeight {
+            guard weightKg > 10 else {
+                throw DoseError.weightTooLow
+            }
         }
         guard creatinineMgDL > 0 else {
             throw DoseError.creatinineTooLow
@@ -120,11 +123,12 @@ final class Patient {
     convenience init(
         age: Int,
         sex: Sex,
-        race: Race = .unspecified,
+        race: Race = .nonblack,
         weight: Double,
         massUnits: MassUnit,
         creatinine: Double,
-        concentrationUnits: ConcentrationUnit
+        concentrationUnits: ConcentrationUnit,
+        requiresWeight: Bool = true
     ) throws {
         var convertedWeight = weight
         if massUnits == .lb {
@@ -134,7 +138,7 @@ final class Patient {
         if concentrationUnits == .mmolL {
             convertedCr = ConcentrationUnit.mmolLToMgDL(convertedCr)
         }
-        try self.init(age: age, sex: sex, race: race, weightKg: convertedWeight, creatinineMgDL: convertedCr)
+        try self.init(age: age, sex: sex, race: race, weightKg: convertedWeight, creatinineMgDL: convertedCr, requireWeight: requiresWeight)
     }
 
     // Cockcroft-Gault formula
@@ -174,7 +178,7 @@ final class Patient {
         return  "Creatinine clearance = \(roundedCrCl) mL/min"
     }
 
-    func gfrResult(concentrationUnit: ConcentrationUnit) -> String {
+    func gfrResult() -> String {
         let roundedGfr = Int(round(gfr))
         return  "GFR = \(roundedGfr) ml/min/1.73m\u{00b2}"
     }
