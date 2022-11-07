@@ -172,6 +172,7 @@
 		8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */; };
 		8ECAFFD220F2404C00B2696A /* lbbb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8ECAFFD120F2404C00B2696A /* lbbb.html */; };
 		8ECDDF9D18E1BD090018A0EF /* EPSVereckeiAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */; };
+		8ED018602918462E007E5101 /* AppleScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0185F2918462D007E5101 /* AppleScore.swift */; };
 		8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */ = {isa = PBXBuildFile; fileRef = 8ED8A8EC25168CA600ACE6F8 /* org.css */; };
 		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
@@ -438,6 +439,7 @@
 		8ECAFFD120F2404C00B2696A /* lbbb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lbbb.html; sourceTree = "<group>"; };
 		8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVereckeiAlgorithm.h; sourceTree = "<group>"; };
 		8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVereckeiAlgorithm.m; sourceTree = "<group>"; };
+		8ED0185F2918462D007E5101 /* AppleScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScore.swift; sourceTree = "<group>"; };
 		8ED8A8EC25168CA600ACE6F8 /* org.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = org.css; sourceTree = "<group>"; };
 		8EDD2D47212F0C2B00C3397C /* EPSTamponadeRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSTamponadeRiskScore.h; sourceTree = "<group>"; };
 		8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSTamponadeRiskScore.m; sourceTree = "<group>"; };
@@ -615,6 +617,7 @@
 				8E808362282DC62100E88A4E /* Warfarin.swift */,
 				8E8C89E4283339FE0057B237 /* Entrainment.swift */,
 				8E0DF879283C522D00367D4A /* HcmModel.swift */,
+				8ED0185F2918462D007E5101 /* AppleScore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1224,6 +1227,7 @@
 				8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */,
 				8EB3D38028EFCBFE00023F29 /* InformationViewPresenter.swift in Sources */,
 				8E38A08128F4B3BB00F1F723 /* InformationProvider.swift in Sources */,
+				8ED018602918462E007E5101 /* AppleScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

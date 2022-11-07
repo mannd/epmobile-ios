@@ -54,19 +54,21 @@
 #define ENTRAINMENT_CALCULATOR_ROW 2
 // Risk scores section
 #define RISK_SCORES_SECTION 3
-#define ATRIA_BLEED_ROW 1
-#define ATRIA_STROKE_ROW 2
-#define CHADS_ROW 3
-#define CHADS_VASC_ROW 4
-#define HAS_BLED_ROW 5
-#define HEMORRHAGES_ROW 6
-#define HCM_2002_ROW 7
-#define HCM_2014_ROW 8
-#define ICD_IMPLANTATION_RISK_ROW 9
-#define ICD_MORTALITY_RISK_ROW 10
-#define ORBIT_RISK_ROW 11
-#define QT_PROLONGATION_RISK_ROW 12
-#define SAME_TTR_ROW 13
+#define APPLE_ROW 0
+#define ARVC_RISK_ROW 1
+#define ATRIA_BLEED_ROW 2
+#define ATRIA_STROKE_ROW 3
+#define CHADS_ROW 4
+#define CHADS_VASC_ROW 5
+#define HAS_BLED_ROW 6
+#define HEMORRHAGES_ROW 7
+#define HCM_2002_ROW 8
+#define HCM_2014_ROW 9
+#define ICD_IMPLANTATION_RISK_ROW 10
+#define ICD_MORTALITY_RISK_ROW 11
+#define ORBIT_RISK_ROW 12
+#define QT_PROLONGATION_RISK_ROW 13
+#define SAME_TTR_ROW 14
 
 @interface EPSMainTableViewController ()
 
@@ -159,6 +161,9 @@
             [EntrainmentCalculatorViewController showWithVc:self];
         }
     } else if (indexPath.section == RISK_SCORES_SECTION) { // Risk scores
+        if (indexPath.row == APPLE_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[AppleScore alloc] init]];
+        }
         if (indexPath.row == ATRIA_BLEED_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSAtriaBleedRiskScore alloc] init]];
         }
