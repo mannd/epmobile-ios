@@ -97,7 +97,7 @@ final class Patient {
         race: Race = .nonblack,
         weightKg: Double,
         creatinineMgDL: Double,
-        requireWeight: Bool
+        requireWeight: Bool = true
     ) throws {
         guard age > 0 else {
             throw DoseError.ageTooLow

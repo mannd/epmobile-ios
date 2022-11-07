@@ -77,8 +77,8 @@ class PatientTests: XCTestCase {
 
     func testGfrResult() {
         let patient = try! Patient(age: 40, sex: .male, weightKg: 70, creatinineMgDL: 1.0)
-        XCTAssertEqual(patient.gfrResult(concentrationUnit: .mgDL), "GFR = 94 ml/min/1.73m²")
+        XCTAssertEqual(patient.gfrResult(), "GFR = 94 ml/min/1.73m²")
         let patient4 = try! Patient(age: 40, sex: .female, weightKg: 70, creatinineMgDL: 1.0)
-        XCTAssertEqual(patient4.gfrResult(concentrationUnit: .mgDL), "GFR = 70 ml/min/1.73m²")
+        XCTAssertEqual(patient4.gfrResult(), "GFR = 70 ml/min/1.73m²")
     }
 }
