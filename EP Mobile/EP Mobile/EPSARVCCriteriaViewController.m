@@ -27,6 +27,10 @@
 #define ARVC_2010_CELL_HEIGHT 150
 #define ARVC_1994_CELL_HEIGHT 100
 
+#define ARVC_1994_REFERENCE @"McKenna WJ, Thiene G, Nava A, et al. Diagnosis of arrhythmogenic right ventricular dysplasia/cardiomyopathy. Task Force of the Working Group Myocardial and Pericardial Disease of the European Society of Cardiology and of the Scientific Council on Cardiomyopathies of the International Society and Federation of Cardiology. Br Heart J. 1994;71(3):215-218.\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC483655/"
+
+#define ARVC_2010_REFERENCE @"Marcus FI, McKenna WJ, Sherrill D, et al. Diagnosis of arrhythmogenic right ventricular cardiomyopathy/dysplasia: Proposed Modification of the Task Force Criteria. European Heart Journal. 2010;31(7):806-814.\ndoi:10.1093/eurheartj/ehq025"
+
 @interface EPSARVCCriteriaViewController ()
 
 @end
@@ -84,6 +88,13 @@
     self.list = risks;
 }
 
+- (NSString *)getTitle {
+    if ([self.criteria isEqualToString:ARVC2010])
+        return ARVC2010_TITLE;
+    else
+        return ARVC1994_TITLE;
+}
+
 - (IBAction)calculate:(id)sender {
     [self calculateScore];
 }
@@ -117,8 +128,17 @@
     EPSLog(@"major = %d", major);
     EPSLog(@"minor = %d", minor);
     
-    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:[self getResultMessage:major :minor] inView:self];
-    
+//    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:[self getResultMessage:major :minor] inView:self];
+//    [EPSSharedMethods showCopyResultDialogWithMessage:[self getResultMessage:major :minor] copiedResult:@"Copied result" title:self.title inView:self];
+    [self showCopyResultAlertWithTitle:[self getTitle] message:[self getResultMessage:major :minor] references:[NSArray arrayWithObject:[self getReference]]];
+}
+
+- (Reference *)getReference {
+    if ([self.criteria isEqualToString:ARVC2010]) {
+        return [Reference referenceFromCitation:ARVC_2010_REFERENCE];
+    } else {
+        return [Reference referenceFromCitation:ARVC_1994_REFERENCE];
+    }
 }
 
 - (NSString *)getResultMessage:(int)major :(int)minor {
@@ -128,7 +148,7 @@
         return [self getArvc1994ResultMessage:major :minor];
 }
 
-- (NSString *)getArvc2010ResultMessage:(int) major :(int)minor {
+- (NSString *)getArvc2010ResultMessage:(int)major :(int)minor {
     NSString *message;
     NSString *messageStart = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
     if (major >= 2 || (major == 1 && minor >= 2) || minor >= 4)
@@ -158,7 +178,7 @@
          showWithVc:self
          instructions:NULL
          key:NULL
-         references:[NSArray arrayWithObject:[[Reference alloc] init:@"McKenna WJ, Thiene G, Nava A, et al. Diagnosis of arrhythmogenic right ventricular dysplasia/cardiomyopathy. Task Force of the Working Group Myocardial and Pericardial Disease of the European Society of Cardiology and of the Scientific Council on Cardiomyopathies of the International Society and Federation of Cardiology. Br Heart J. 1994;71(3):215-218.\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC483655/"]]
+         references:[NSArray arrayWithObject:[[Reference alloc] init:ARVC_1994_REFERENCE]]
          name:ARVC1994_TITLE];
     }
     if ([self.criteria isEqualToString:ARVC2010]) {
@@ -166,10 +186,20 @@
          showWithVc:self
          instructions:NULL
          key:@"BSA = body surface area.\nPLAX = parasternal long axis view.\nPSAX = parasternal short axis view.\nRVOT = RV outflow tract."
-         references:[NSArray arrayWithObject:[[Reference alloc] init:@"Marcus FI, McKenna WJ, Sherrill D, et al. Diagnosis of arrhythmogenic right ventricular cardiomyopathy/dysplasia: Proposed Modification of the Task Force Criteria. European Heart Journal. 2010;31(7):806-814.\ndoi:10.1093/eurheartj/ehq025"]]
+         references:[NSArray arrayWithObject:[[Reference alloc] init:ARVC_2010_REFERENCE]]
          name:ARVC2010_TITLE];
     }
 }
+
+//- (NSString *)getCopiedResult {
+//    //    Title: title
+//    //    Risks: N/A
+//    //    Results: results
+//    //    Reference(s):
+//    return @"
+//
+//}
+
 
 #pragma mark - Table view data source
 
