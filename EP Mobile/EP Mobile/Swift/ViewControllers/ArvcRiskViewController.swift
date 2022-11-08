@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SafariServices
 
 // This is a Massive View Controller and should be refactored by extracting the risk score model.
 class ArvcRiskViewController: UIViewController, UITextFieldDelegate {

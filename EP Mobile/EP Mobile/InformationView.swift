@@ -49,6 +49,7 @@ struct InformationView: View {
             }
             .navigationBarTitle(Text(name + " Information"), displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

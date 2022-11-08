@@ -34,7 +34,6 @@ struct RiskScoreView: View {
                     Image(systemName: "info.circle")
                 }
             })
-            .navigationViewStyle(StackNavigationViewStyle())
             .alert("Result", isPresented: $showResult, actions: {
                 Button("OK", role: .cancel, action: {})
                 Button("Copy result") {
@@ -46,6 +45,7 @@ struct RiskScoreView: View {
             }, message: { Text(result ?? "Error") })
             .alert("Result Copied", isPresented: $resultCopied, actions: {}, message: { Text("Result copied to clipboard.")})
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {

@@ -107,6 +107,7 @@
     report = [report stringByAppendingString:@"\nReference: "];
     for (Reference *ref in [self getReferences]) {
         report = [report stringByAppendingString:[ref getPlainTextReference]];
+        report = [report stringByAppendingString:@"\n"];
     }
     report = [report stringByAppendingString:@"\n"];
     // eliminate blank lines

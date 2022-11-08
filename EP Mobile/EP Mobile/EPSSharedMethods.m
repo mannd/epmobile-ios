@@ -34,6 +34,23 @@
     [view presentViewController:alert animated:YES completion:nil];
 }
 
++ (void)showCopyResultDialogWithMessage:(NSString *)message copiedResult:(NSString *)result title:(NSString *)title inView:(UIViewController *)view {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction *action) {}];
+    UIAlertAction *copyResultAction = [UIAlertAction actionWithTitle:@"Copy Result" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = result;
+        [EPSSharedMethods showDialogWithTitle:@"Result Copied" andMessage:@"Result copied to clipboard." inView:view];
+    }];
+
+    [alert addAction:copyResultAction];
+    [alert addAction:defaultAction];
+
+    [view presentViewController:alert animated:YES completion:nil];
+}
+
+
 + (NSString *)trimmedZerosFromNumber:(double) value {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.minimumFractionDigits = 0;
