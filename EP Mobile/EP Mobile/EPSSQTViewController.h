@@ -1,5 +1,5 @@
 //
-//  EPSQTViewController.h
+//  EPSSQTViewController.h
 //  EP Mobile
 //
 //  Created by David Mann on 7/31/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSQTViewController : UIViewController
+@interface EPSSQTViewController : UIViewController
     <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *qtcSegmentedControl;

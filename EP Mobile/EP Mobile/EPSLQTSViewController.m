@@ -13,6 +13,8 @@
 
 #import "EP_Mobile-Swift.h"
 
+#define LQTS_REFERENCE @"Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. doi:10.1161/CIRCULATIONAHA.111.062182"
+
 @interface EPSLQTSViewController ()
 
 @end
@@ -78,7 +80,7 @@
 
 
 - (void)showInformationView {
-    NSArray *references = [NSArray arrayWithObject:[[Reference alloc] init:@"Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. doi:10.1161/CIRCULATIONAHA.111.062182"]];
+    NSArray *references = [NSArray arrayWithObject:[[Reference alloc] init:LQTS_REFERENCE]];
     [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:references name:self.title];
 }
 
@@ -128,7 +130,7 @@
         score -= 10;
         
     NSString *message = [self getResultsMessage:score];
-    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:message inView:self];
+    [self showCopyResultAlertWithTitle:self.title message:message references:[NSArray arrayWithObject:[Reference referenceFromCitation:LQTS_REFERENCE]]];
 }
     
 - (NSString *)getResultsMessage:(int)score {

@@ -33,6 +33,8 @@
 #define DEFAULT_CELL_HEIGHT 80
 #define BIG_CELL_HEIGHT 120
 
+#define CMS_REFERENCE @"CMS: Decision Memo for Implantable Cardioverter Defibrillators (CAG-00157R4) Feb 15, 2018.\nhttps://www.cms.gov/medicare-coverage-database/details/nca-decision-memo.aspx?NCAId=288"
+
 @interface EPSCMSViewController ()
 
 @end
@@ -102,7 +104,7 @@
 - (void)showNotes {
     NSString *instructions = @"Select patient characteristics and then select Calculate to show whether the patient is likely to meet CMS guidelines for Medicare reimbursement. Note the CMS National Coverage Determination (NCD) is quite detailed and you should be very familiar with it before making a decision as to whether a particular patient is covered. This module is only intended as a guide to the NCD and is not definitive. The module has been updated to the latest 2018 CMS guidelines.";
     NSString *key = @"AF = atrial fibrillation.\nCA = cardiac arrest.\nCABG = coronary artery bypass grafting.\nCM = cardiomyopathy.\nCMS = Centers for Medicare and Medicaid Services.\nEF = ejection fraction.\nEPS = electrophysiology study.\nHCM = hypertrophic cardiomyopathy.\nICD = implantable cardioverter defibrillator.\nOMT = optimal medical therapy.\nMI = myocardial infarction.\nNYHA = New York Heart Association.\nPCI = percutaneous coronary intervention.\nSVT = supraventricular tachycardia.\nVT = ventricular tachycardia/tachyarrhythmia.\nVF = ventricular fibrillation.";
-    Reference *reference = [[Reference alloc] init:@"CMS: Decision Memo for Implantable Cardioverter Defibrillators (CAG-00157R4) Feb 15, 2018.\nhttps://www.cms.gov/medicare-coverage-database/details/nca-decision-memo.aspx?NCAId=288"];
+    Reference *reference = [[Reference alloc] init:CMS_REFERENCE];
     NSMutableArray *references = [[NSMutableArray alloc] init];
     if (reference != NULL) {
         [references addObject:reference];
@@ -146,7 +148,7 @@
 
 - (void)showResults:(NSString *)message {
     NSString *title = @"CMS ICD Criteria";
-    [EPSSharedMethods showDialogWithTitle:title andMessage:message inView:self];
+    [self showCopyResultAlertWithTitle:title message:message references:[NSArray arrayWithObject:[Reference referenceFromCitation:CMS_REFERENCE]]];
 }
 
 

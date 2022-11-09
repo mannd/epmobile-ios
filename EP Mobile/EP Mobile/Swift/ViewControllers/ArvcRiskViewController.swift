@@ -110,11 +110,14 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     }
 
     func showResult(_ result: String) {
-        EPSSharedMethods.showDialog(withTitle: resultTitle, andMessage: result, inView: self)
+        showCopyResultAlert(title: resultTitle, message: result, references: ArvcRiskModel.getReferences())
     }
 
     func showError(_ message: String) {
-        EPSSharedMethods.showDialog(withTitle: errorTitle, andMessage: message, inView: self)
+        let errorAlert = UIAlertController(title: errorTitle, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        errorAlert.addAction(okAction)
+        present(errorAlert, animated: true)
     }
 
     @objc

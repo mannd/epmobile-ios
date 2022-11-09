@@ -12,6 +12,7 @@
 #import "EP_Mobile-Swift.h"
 
 #define ICD_RISK_TITLE @"ICD Implantation Risk"
+#define ICD_RISK_REFERENCE @"Dodson JA, Reynolds MR, Bao H, et al. Developing a Risk Model for In-Hospital Adverse Events Following Implantable Cardioverter-Defibrillator Implantation. Journal of the American College of Cardiology. 2014;63(8):788-796. doi:10.1016/j.jacc.2013.09.079"
 
 @implementation EPSIcdRiskViewController
 
@@ -28,16 +29,7 @@
 {
     [super viewDidLoad];
     [self initRisks];
-//    NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
-//    self.procedureTypeData = array;
-//
-//    NSMutableArray *riskArray = [[NSMutableArray alloc] init];
-//    [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"Female sex" withValue:2]];
-//    [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"No prior CABG" withValue:2]];
-//    [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"Current dialysis" withValue:3]];
-//    [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"Chronic lung disease" withValue:2]];
-//    self.risks = riskArray;
-    
+
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
@@ -72,7 +64,7 @@
          showWithVc:self
          instructions:@"Use this risk score to determine the risk of in-hospital complications following ICD implantation."
          key:NULL
-         references:[NSArray arrayWithObject:[[Reference alloc] init:@"Dodson JA, Reynolds MR, Bao H, et al. Developing a Risk Model for In-Hospital Adverse Events Following Implantable Cardioverter-Defibrillator Implantation. Journal of the American College of Cardiology. 2014;63(8):788-796. doi:10.1016/j.jacc.2013.09.079"]]
+         references:[NSArray arrayWithObject:[[Reference alloc] init:ICD_RISK_REFERENCE]]
          name:ICD_RISK_TITLE];
 }
 
@@ -171,9 +163,9 @@
         score += 5;
     }
     
-    
     NSString *message = [self getResultsMessage:score];
-    [EPSSharedMethods showDialogWithTitle:@"Risk of Post-Implant Complications" andMessage:message inView:self];
+    [self showCopyResultAlertWithTitle:@"Risk of Post-Implant Complications" message:message references:[NSArray arrayWithObject:[Reference referenceFromCitation:ICD_RISK_REFERENCE]]];
+
 }
 
 - (NSString *)getResultsMessage:(int)score

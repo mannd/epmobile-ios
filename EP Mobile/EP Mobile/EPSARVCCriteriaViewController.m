@@ -128,8 +128,6 @@
     EPSLog(@"major = %d", major);
     EPSLog(@"minor = %d", minor);
     
-//    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:[self getResultMessage:major :minor] inView:self];
-//    [EPSSharedMethods showCopyResultDialogWithMessage:[self getResultMessage:major :minor] copiedResult:@"Copied result" title:self.title inView:self];
     [self showCopyResultAlertWithTitle:[self getTitle] message:[self getResultMessage:major :minor] references:[NSArray arrayWithObject:[self getReference]]];
 }
 

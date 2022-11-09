@@ -86,7 +86,7 @@
 		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
 		8E59E969281A4071003C485F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59E968281A4071003C485F /* Keys.swift */; };
 		8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */; };
-		8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */; };
+		8E5D93CF15C8AAAA00ACBA4F /* EPSSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSSQTViewController.m */; };
 		8E5D93D515CCABF500ACBA4F /* EPSARVCCriteriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVCCriteriaViewController.m */; };
 		8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D93E815CF5B1A00ACBA4F /* Data.plist */; };
 		8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E610701170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m */; };
@@ -316,8 +316,8 @@
 		8E59E968281A4071003C485F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaECGViewController.h; sourceTree = "<group>"; };
 		8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaECGViewController.m; sourceTree = "<group>"; };
-		8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSQTViewController.h; sourceTree = "<group>"; };
-		8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSQTViewController.m; sourceTree = "<group>"; };
+		8E5D93CD15C8AAAA00ACBA4F /* EPSSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSQTViewController.h; sourceTree = "<group>"; };
+		8E5D93CE15C8AAAA00ACBA4F /* EPSSQTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSQTViewController.m; sourceTree = "<group>"; };
 		8E5D93D315CCABF500ACBA4F /* EPSARVCCriteriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSARVCCriteriaViewController.h; sourceTree = "<group>"; };
 		8E5D93D415CCABF500ACBA4F /* EPSARVCCriteriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSARVCCriteriaViewController.m; sourceTree = "<group>"; };
 		8E5D93E815CF5B1A00ACBA4F /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data.plist; path = ../Data.plist; sourceTree = "<group>"; };
@@ -820,8 +820,8 @@
 			isa = PBXGroup;
 			children = (
 				8E815D3E162EE5AF001025ED /* Warfarin */,
-				8E5D93CD15C8AAAA00ACBA4F /* EPSQTViewController.h */,
-				8E5D93CE15C8AAAA00ACBA4F /* EPSQTViewController.m */,
+				8E5D93CD15C8AAAA00ACBA4F /* EPSSQTViewController.h */,
+				8E5D93CE15C8AAAA00ACBA4F /* EPSSQTViewController.m */,
 				8E09D07215E1C8D900756EA1 /* EPSLQTSViewController.h */,
 				8E09D07315E1C8D900756EA1 /* EPSLQTSViewController.m */,
 				8EC343E31630A188008938F6 /* EPSCMSViewController.h */,
@@ -1133,7 +1133,7 @@
 				8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */,
 				8E8C89E5283339FE0057B237 /* Entrainment.swift in Sources */,
 				8E808367282DF55400E88A4E /* WarfarinViewModel.swift in Sources */,
-				8E5D93CF15C8AAAA00ACBA4F /* EPSQTViewController.m in Sources */,
+				8E5D93CF15C8AAAA00ACBA4F /* EPSSQTViewController.m in Sources */,
 				8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVCCriteriaViewController.m in Sources */,
 				8E808363282DC62100E88A4E /* Warfarin.swift in Sources */,
