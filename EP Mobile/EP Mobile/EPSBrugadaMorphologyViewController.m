@@ -9,8 +9,6 @@
 #import "EPSBrugadaMorphologyViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
-
 #import "EP_Mobile-Swift.h"
 
 #define LBBB_TAG 0
@@ -90,8 +88,7 @@
     message = [message stringByAppendingFormat:@" (Sens=%@, Spec=%@) ", sens, spec];
     
     EPSLog(@"Calculating score...%d", count);
-    [EPSSharedMethods showDialogWithTitle:@"WCT Result" andMessage:message inView:self];
-   
+    [self showSimpleDialogWithTitle:@"WCT Result" message:message];
 }
 
 #pragma mark - Table view data source

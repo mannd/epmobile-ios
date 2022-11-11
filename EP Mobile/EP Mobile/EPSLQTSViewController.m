@@ -9,8 +9,6 @@
 #import "EPSLQTSViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
-
 #import "EP_Mobile-Swift.h"
 
 #define LQTS_REFERENCE @"Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. doi:10.1161/CIRCULATIONAHA.111.062182"

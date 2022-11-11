@@ -72,3 +72,12 @@ enum ConcentrationUnit: Int, CaseIterable, Identifiable, Equatable {
         return mmolL / conversionFactor
     }
 }
+
+extension FloatingPoint {
+    func trimZeros() -> String {
+        let formatter: NumberFormatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 1
+        return formatter.string(for: self) ?? ""
+    }
+}

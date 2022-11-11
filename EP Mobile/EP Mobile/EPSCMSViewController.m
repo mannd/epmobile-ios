@@ -9,7 +9,6 @@
 #import "EPSCMSViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
 #import "EPSCMSViewModel.h"
 #import "EP_Mobile-Swift.h"
 

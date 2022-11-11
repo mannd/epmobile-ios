@@ -10,51 +10,6 @@
 
 @implementation EPSSharedMethods
 
-+ (void)showDialogWithTitle:(NSString *)title andMessage:(NSString *)message inView:(UIViewController *)view {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
-                                                          handler:^(UIAlertAction *action) {}];
-    
-    [alert addAction:defaultAction];
-    [view presentViewController:alert animated:YES completion:nil];
-}
-
-+ (void)showRiskDialogWithMessage:(NSString *)message riskResult:(NSString *)result inView:(UIViewController *)view {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Risk Score" message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
-                                                          handler:^(UIAlertAction *action) {}];
-    UIAlertAction *copyResultAction = [UIAlertAction actionWithTitle:@"Copy Result" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = result;
-    }];
-
-    [alert addAction:copyResultAction];
-    [alert addAction:defaultAction];
-    
-    [view presentViewController:alert animated:YES completion:nil];
-}
-
-+ (void)showCopyResultDialogWithMessage:(NSString *)message copiedResult:(NSString *)result title:(NSString *)title inView:(UIViewController *)view {
-    __block BOOL showCopiedDialog = NO;
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
-                                                          handler:^(UIAlertAction *action) {}];
-    UIAlertAction *copyResultAction = [UIAlertAction actionWithTitle:@"Copy Result" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = result;
-        showCopiedDialog = YES;
-    }];
-
-    [alert addAction:copyResultAction];
-    [alert addAction:defaultAction];
-
-    [view presentViewController:alert animated:YES completion:
-         ^{
-        if (showCopiedDialog)
-            [UIAlertController alertControllerWithTitle:@"Result Copied" message:@"Result copied to clipboard." preferredStyle:UIAlertControllerStyleAlert];
-    }];
-}
-
 
 + (NSString *)trimmedZerosFromNumber:(double) value {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];

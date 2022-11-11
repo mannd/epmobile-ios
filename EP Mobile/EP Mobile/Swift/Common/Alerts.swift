@@ -38,6 +38,13 @@ extension UIViewController {
             return "\(title)\n\(message)\n\(referenceLabel)\n\(referenceList)"
         }
     }
+
+    func showSimpleDialog(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default) { _ in }
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true)
+    }
 }
 
 

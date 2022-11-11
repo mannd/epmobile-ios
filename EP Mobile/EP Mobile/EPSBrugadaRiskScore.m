@@ -8,9 +8,8 @@
 
 #import "EPSBrugadaRiskScore.h"
 #import "EPSRiskFactor.h"
-#import "EPSSharedMethods.h"
 #import "EPSLogging.h"
-
+#import "EPSSharedMethods.h"
 #import "EP_Mobile-Swift.h"
 
 #define NO_ECG_RISK_SCORE 1000

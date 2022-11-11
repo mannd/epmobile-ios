@@ -10,9 +10,6 @@
 
 @interface EPSSharedMethods : NSObject
 
-+ (void)showDialogWithTitle:(NSString *)title andMessage:(NSString *)message inView:(UIViewController *)view;
-+ (void)showRiskDialogWithMessage:(NSString *)message riskResult:(NSString *)result inView:(UIViewController *)view;
-+ (void)showCopyResultDialogWithMessage:(NSString *)message copiedResult:(NSString *)result title:(NSString *)title inView:(UIViewController *)view;
 + (NSString *)trimmedZerosFromNumber:(double) value;
 
 @end

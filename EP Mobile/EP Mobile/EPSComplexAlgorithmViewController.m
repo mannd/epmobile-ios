@@ -10,7 +10,6 @@
 #import "EPSAtrialTachAlgorithm.h"
 #import "EPSComplexStepAlgorithmProtocol.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
 #import "EP_Mobile-Swift.h"
 
 #define v24PosStep 2

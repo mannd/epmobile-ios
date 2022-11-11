@@ -198,21 +198,4 @@
     
 }
 
-
-
-//-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//-    [alert show];
-//+    [EPSSharedMethods showDialogWithTitle:title andMessage:details inView:self];
-//}
-//
-//-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    -    NSLog(@"Button index = %d", buttonIndex);
-//    -    [algorithm resetSteps:&step];
-//    -    [self setButtons];
-//    -    self.questionLabel.text = [algorithm step1];
-//    -}
-//-
-//-
-
-
 @end

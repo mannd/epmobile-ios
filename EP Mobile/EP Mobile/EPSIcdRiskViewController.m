@@ -8,7 +8,6 @@
 
 #import "EPSIcdRiskViewController.h"
 #import "EPSRiskFactor.h"
-#import "EPSSharedMethods.h"
 #import "EP_Mobile-Swift.h"
 
 #define ICD_RISK_TITLE @"ICD Implantation Risk"

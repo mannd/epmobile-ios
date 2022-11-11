@@ -8,7 +8,6 @@
 
 #import "EPSSQTViewController.h"
 #import "EPSRiskFactor.h"
-#import "EPSSharedMethods.h"
 #import "EP_Mobile-Swift.h"
 
 // defines for SQTS indexes

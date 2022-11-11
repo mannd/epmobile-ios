@@ -9,7 +9,6 @@
 #import "EPSARVCCriteriaViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
 #import "EP_Mobile-Swift.h"
 
 #define ARVC1994 @"ARVC1994"
