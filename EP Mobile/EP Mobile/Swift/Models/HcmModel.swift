@@ -31,7 +31,7 @@ enum HcmError: Error {
     }
 }
 
-struct HcmModel {
+struct HcmModel: InformationProvider {
     var age: Double
     var thickness: Double
     var laDiameter: Double
@@ -68,4 +68,18 @@ struct HcmModel {
         let scdProb = 1 - pow(coefficient, exp(prognosticIndex))
         return scdProb
     }
+
+    static func getReferences() -> [Reference] {
+        return [Reference("O’Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). European Heart Journal. 2014;35(30):2010-2020. doi:10.1093/eurheartj/eht439"), Reference("2014 ESC Guidelines on diagnosis and management of hypertrophic cardiomyopathy: The Task Force for the Diagnosis and Management of Hypertrophic Cardiomyopathy of the European Society of Cardiology (ESC). Eur Heart J. 2014;35(39):2733-2779. doi:10.1093/eurheartj/ehu284")]
+    }
+
+    static func getInstructions() -> String? {
+        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias."
+    }
+
+    static func getKey() -> String? {
+        return "HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation:"
+
+    }
+
 }

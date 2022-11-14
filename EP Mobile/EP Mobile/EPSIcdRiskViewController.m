@@ -6,15 +6,12 @@
 //  Copyright (c) 2014 EP Studios. All rights reserved.
 //
 
-// Reference is http://www.onlinejacc.org/content/63/8/788
-
 #import "EPSIcdRiskViewController.h"
 #import "EPSRiskFactor.h"
-#import "EPSSharedMethods.h"
-#import <SafariServices/SafariServices.h>
+#import "EP_Mobile-Swift.h"
 
-@interface EPSIcdRiskViewController() <SFSafariViewControllerDelegate>
-@end
+#define ICD_RISK_TITLE @"ICD Implantation Risk"
+#define ICD_RISK_REFERENCE @"Dodson JA, Reynolds MR, Bao H, et al. Developing a Risk Model for In-Hospital Adverse Events Following Implantable Cardioverter-Defibrillator Implantation. Journal of the American College of Cardiology. 2014;63(8):788-796. doi:10.1016/j.jacc.2013.09.079"
 
 @implementation EPSIcdRiskViewController
 
@@ -30,39 +27,60 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //UIScrollView *scrollView = (UIScrollView *)self.view;
-    //float w = self.internalScrollView.bounds.size.width;
-    //scrollView.contentSize = CGSizeMake(w, 990);
-    //scrollView.delegate = self;
-//    self.automaticallyAdjustsScrollViewInsets = YES;
+    [self initRisks];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+
+    self.procedureTypePickerView.delegate = self;
+    self.otherRisksTableView.delegate = self;
+    self.otherRisksTableView.dataSource = self;
+
+    self.title = ICD_RISK_TITLE;
+}
+
+- (void)initRisks {
     NSArray *array = [[NSArray alloc] initWithObjects:@"Initial implant", @"Gen change for ERI", @"Gen change for infection", @"Gen change for relocation", @"Gen change for upgrade" , @"Gen change for malfunction", @"Gen change other reason", nil];
     self.procedureTypeData = array;
-    
+
     NSMutableArray *riskArray = [[NSMutableArray alloc] init];
     [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"Female sex" withValue:2]];
     [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"No prior CABG" withValue:2]];
     [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"Current dialysis" withValue:3]];
     [riskArray addObject:[[EPSRiskFactor alloc] initWith:@"Chronic lung disease" withValue:2]];
     self.risks = riskArray;
-    
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
-    self.navigationItem.rightBarButtonItem = editButton;
-
-    self.procedureTypePickerView.delegate = self;
-    self.otherRisksTableView.delegate = self;
-    self.otherRisksTableView.dataSource = self;
-
-    self.referenceLabel.text = @"Reference: Dodson JA, Reynolds MR, Bao H, et al. Developing a Risk Model for In-Hospital Adverse Events Following Implantable Cardioverter-Defibrillator Implantation. Journal of the American College of Cardiology. 2014;63(8):788-796. doi:10.1016/j.jacc.2013.09.079";
-
-    self.title = @"ICD Implantation Risk";
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showNotes {
+        [InformationViewPresenter
+         showWithVc:self
+         instructions:@"Use this risk score to determine the risk of in-hospital complications following ICD implantation."
+         key:NULL
+         references:[NSArray arrayWithObject:[[Reference alloc] init:ICD_RISK_REFERENCE]]
+         name:ICD_RISK_TITLE];
+}
+
+- (IBAction)calculate:(id)sender {
+    [self calculateScore];
+}
+
+- (IBAction)clear:(id)sender {
+    [self initRisks];
+    [self.otherRisksTableView reloadData];
+    [self.nyhaClassSegmentedControl setSelectedSegmentIndex:0];
+    [self.reasonForAdmissionSegmentedControl setSelectedSegmentIndex:0];
+    [self.abnormalConductionSegmentedControl setSelectedSegmentIndex:0];
+    [self.sodiumSegmentedControl setSelectedSegmentIndex:0];
+    [self.bunSegmentedControl setSelectedSegmentIndex:0];
+    [self.hgbSegmentedControl setSelectedSegmentIndex:0];
+    [self.procedureTypePickerView selectRow:0 inComponent:0 animated:YES];
 }
 
 - (void)calculateScore
@@ -144,9 +162,9 @@
         score += 5;
     }
     
-    
     NSString *message = [self getResultsMessage:score];
-    [EPSSharedMethods showDialogWithTitle:@"Risk of Post-Implant Complications" andMessage:message inView:self];
+    [self showCopyResultAlertWithTitle:@"Risk of Post-Implant Complications" message:message references:[NSArray arrayWithObject:[Reference referenceFromCitation:ICD_RISK_REFERENCE]]];
+
 }
 
 - (NSString *)getResultsMessage:(int)score
@@ -239,20 +257,6 @@
     else {
         return nil;
     }
-}
-
-- (IBAction)openReferenceLink:(id)sender {
-    SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:@"https://www.sciencedirect.com/science/article/pii/S0735109713062840?via%3Dihubd"]];
-    svc.delegate = self;
-    [self presentViewController:svc animated:YES completion:nil];
-}
-
-#pragma mark - SFSafariViewController delegate methods
--(void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
-    // Load finished
-}
--(void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-    // Done button pressed
 }
 
 @end

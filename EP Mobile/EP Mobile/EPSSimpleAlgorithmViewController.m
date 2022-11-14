@@ -7,8 +7,6 @@
 //
 
 #import "EPSSimpleAlgorithmViewController.h"
-#import "EPSNotesViewController.h"
-//#import "EPSStepAlgorithmProtocol.h"
 #import "EPSOutflowVTAlgorithm.h"
 #import "EPSAnnularVTAlgorithm.h"
 #import "EPSBrugadaWCTAlgorithm.h"
@@ -19,6 +17,7 @@
 #import "EPSVereckeiAlgorithm.h"
 #import "EPSDavilaAlgorithm.h"
 #import "EPSLogging.h"
+#import "EPSTabBarViewController.h"
 #import "EP_Mobile-Swift.h"
 
 #define OUTFLOW_VT @"OutflowVT"
@@ -77,7 +76,7 @@
     else if ([self.algorithmName isEqualToString:DAVILA_WPW])
         algorithm = [[EPSDavilaAlgorithm alloc] init];
     self.navigationItem.title = [algorithm name];
-        
+
     // ...
     // disabled buttons aren't automatically grayed out in iOS
     if (@available(iOS 13.0, *)) {
@@ -93,10 +92,14 @@
     [self setButtons];
     self.questionLabel.text = [algorithm step1];
 
-    self.yesButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.noButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.backButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
-    self.morphologyCriteriaButton.configuration = [UIKitRoundedButton smallRoundedButtonConfiguration];
+    self.yesButton.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.noButton.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.backButton.configuration = [UIButton smallRoundedButtonConfiguration];
+    self.morphologyCriteriaButton.configuration = [UIButton smallRoundedButtonConfiguration];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
 - (IBAction)yesButtonPushed:(id)sender {
@@ -145,17 +148,28 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"NotesSegue"]) {
-        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
-        vc.key = self.algorithmName;
+    if ([segueIdentifier isEqualToString:@"BrugadaMorphologySegue"]) {
+        EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
+        vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
+        vc.name = @"Brugada Algorithm";
     }
-    else if ([segueIdentifier isEqualToString:@"MapSegue"]) {
+    if ([segueIdentifier isEqualToString:@"MapSegue"]) {
         EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];
         vc.showPathway = YES;
         vc.location1 = [(EPSArrudaAlgorithm *)algorithm outcomeLocation1:step];
         vc.location2 = [(EPSArrudaAlgorithm *)algorithm outcomeLocation2:step];
         vc.message = [algorithm outcome:step];
     }
+}
+
+- (void)showNotes {
+    [InformationViewPresenter
+     showWithVc:self
+     instructions:self.instructions
+     key:NULL
+     references:self.references
+     name:[algorithm name]
+    ];
 }
 
 - (void)showResults {
@@ -183,22 +197,5 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
-
-
-
-//-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:details delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//-    [alert show];
-//+    [EPSSharedMethods showDialogWithTitle:title andMessage:details inView:self];
-//}
-//
-//-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    -    NSLog(@"Button index = %d", buttonIndex);
-//    -    [algorithm resetSteps:&step];
-//    -    [self setButtons];
-//    -    self.questionLabel.text = [algorithm step1];
-//    -}
-//-
-//-
-
 
 @end

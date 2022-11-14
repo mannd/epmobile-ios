@@ -8,6 +8,8 @@
 
 #import "EPSTabBarViewController.h"
 
+#import "EP_Mobile-Swift.h"
+
 @interface EPSTabBarViewController ()
 
 @end
@@ -27,7 +29,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,5 +40,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)showInformationView {
+    [InformationViewPresenter showWithVc:self instructions:NULL key:NULL references:self.references name:self.name];
+}
 
 @end

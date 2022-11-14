@@ -9,6 +9,28 @@
 import SwiftUI
 import MiniQTc
 
+fileprivate let calculatorName = "QTc Calculator"
+
+extension QTcCalculator: InformationProvider {
+    static func getReferences() -> [Reference] {
+        var references: [Reference] = []
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcBzt).reference))
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrd).reference))
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcFrm).reference))
+        references.append(Reference(QTc.qtcCalculator(formula: .qtcHdg).reference))
+        references.append(Reference("Rautaharju PM, Surawicz B, Gettes LS. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram Part IV: The ST Segment, T and U Waves, and the QT Interval: A Scientific Statement From the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: Endorsed by the International Society for Computerized Electrocardiology. Circulation. 2009;119(10):e241-e250.\ndoi:10.1161/CIRCULATIONAHA.108.191096"))
+        return references
+    }
+
+    static func getInstructions() -> String? {
+        nil
+    }
+
+    static func getKey() -> String? {
+        nil
+    }
+}
+
 struct QTcCalculatorView: View {
     @State private var intervalRate: Int = 0
     @State private var qt: Int = 0
@@ -17,6 +39,7 @@ struct QTcCalculatorView: View {
     @State private var result: String = ""
     @State private var maximumQTc: Double = 440.0
     @State private var flagResult = false
+    @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultQtcFormula) var defaultQtcFormula: String = Keys.bazett
@@ -70,23 +93,22 @@ struct QTcCalculatorView: View {
                             .foregroundColor(flagResult ? .red : .primary)
                     }
                 }
-                HStack {
-                    Group {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: intervalRate, perform: { _ in  clearResult() })
             .onChange(of: qt, perform: { _ in  clearResult() })
             .onChange(of: intervalRateType, perform: { _ in  clearResult() })
             .onChange(of: formula, perform: { _ in  clearResult() })
-            .navigationBarTitle(Text("QTc Calculator"), displayMode: .inline)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(references: QTcCalculator.getReferences(), name: calculatorName), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
+
+//                .sheet(isPresented: $showInfo) {
+//                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
+//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {

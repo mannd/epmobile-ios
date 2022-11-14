@@ -21,12 +21,9 @@
 @property (strong, nonatomic) IBOutlet UITableView *otherRisksTableView;
 @property (strong, nonatomic) IBOutlet UIPickerView *procedureTypePickerView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *icdTypeSegmentedControl;
-@property (strong, nonatomic) IBOutlet UILabel *referenceLabel;
 
 @property (strong, nonatomic) NSArray* procedureTypeData;
 @property (strong, nonatomic) NSMutableArray *risks;
-
-- (IBAction)openReferenceLink:(id)sender;
 
 
 @end

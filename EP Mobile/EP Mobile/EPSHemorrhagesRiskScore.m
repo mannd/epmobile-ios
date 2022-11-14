@@ -8,20 +8,20 @@
 
 #import "EPSHemorrhagesRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSHemorrhagesRiskScore
 - (NSString *)getTitle {
     return @"HEMORR\u2082HAGES";
 }
 
-- (NSString *)getReference {
-    return @"Gage BF, Yan Y, Milligan PE, Waterman AD, Culverhouse R, Rich MW, Radford MJ. Clinical classification schemes for predicting hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J [Internet]. 2006 [cited 2014 Jun 6];151:713-9. Available from: http://www.hematology.fi/system/files/HEMORRHAGES-score.pdf";
+- (NSString *)getInstructions {
+    return @"Use this score to determine the risk of bleeding in patients on warfarin for atrial fibrillation.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://www.hematology.fi/system/files/HEMORRHAGES-score.pdf"];
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Gage BF, Yan Y, Milligan PE, et al. Clinical classification schemes for predicting hemorrhage: results from the National Registry of Atrial Fibrillation (NRAF). Am Heart J. 2006;151(3):713-719. doi:10.1016/j.ahj.2005.04.017"]];
 }
-
 
 - (NSMutableArray *)getArray {
     NSMutableArray *array = [[NSMutableArray alloc] init];

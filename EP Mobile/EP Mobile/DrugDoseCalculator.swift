@@ -8,15 +8,20 @@
 
 import SwiftUI
 
+fileprivate let crClCalculatorName = "Creatinine Clearance"
+fileprivate let gfrCalculatorName = "GFR"
+fileprivate let drugCalculatorName = "Drug Calculators"
+
 struct DrugDoseCalculator: View {
     @State private var sex: EP_Mobile.Sex = .male
+    @State private var race: Race = .nonblack
     @State private var age: Int = 0
     @State private var weight: Double = 0.0
     @State private var creatinine: Double = 0.0
     @State private var massUnit: MassUnit = .kg
     @State private var concentrationUnit: ConcentrationUnit = .mgDL
     @State private var drugDose = ""
-    @State private var crClResult = ""
+    @State private var renalFunction = ""
     @State private var showWarning = false
     @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
@@ -84,6 +89,14 @@ struct DrugDoseCalculator: View {
                         }
                         .pickerStyle(.segmented)
                     }
+                    drugName == .gfr ? AnyView(Section(header: Text("Race")) {
+                        Picker(selection: $race, label: Text("Race")) {
+                            ForEach(Race.allCases) {
+                                race in Text(race.description)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                    }) : AnyView(EmptyView())
                     Section(header: Text("Age (yrs)")) {
                         HStack {
                             TextField("Age (yrs)", value: $age, formatter: Self.ageNumberFormatter)
@@ -92,7 +105,8 @@ struct DrugDoseCalculator: View {
                         }
 
                     }
-                    Section(header: Text(weightLabel)) {
+                    drugName != .gfr ?
+                    AnyView(Section(header: Text(weightLabel)) {
                         HStack {
                             TextField(weightLabel, value: $weight, formatter: Self.weightNumberFormatter)
                                 .keyboardType(.numbersAndPunctuation)
@@ -104,7 +118,7 @@ struct DrugDoseCalculator: View {
                             }
                             .pickerStyle(.segmented)
                         }
-                    }
+                    }) : AnyView(EmptyView())
                     Section(header: Text(creatinineLabel)) {
                         HStack {
                             TextField(creatinineLabel, value: $creatinine, formatter: Self.creatinineNumberFormatter)
@@ -118,38 +132,30 @@ struct DrugDoseCalculator: View {
                             .pickerStyle(.segmented)
                         }
                     }
-                    Section(header: Text("Creatinine Clearance")) {
-                        Text(crClResult)
+                    Section(header: Text(drugName == .gfr ? "Glomerular Filtration Rate" : "Creatinine Clearance")) {
+                        Text(renalFunction)
                     }
-                    if drugName != .crCl {
+                    if drugName != .crCl && drugName != .gfr {
                         Section(header: Text("Drug Dose")) {
                             Text(drugDose)
                         }
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: sex, perform: { _ in  clearResult() })
             .onChange(of: age, perform: { _ in  clearResult() })
+            .onChange(of: race, perform: { _ in clearResult() })
             .onChange(of: weight, perform: { _ in  clearResult() })
             .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
-            .navigationBarItems(trailing: drugName != .crCl ? AnyView(Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }.sheet(isPresented: $showInfo) {
-                Info()
-            }) : AnyView(EmptyView()))
+            .navigationBarItems(
+                trailing: NavigationLink(destination: getInformationView(), isActive: $showInfo) {
+                    Button(action: { showInfo.toggle() }) {
+                        Image(systemName: "info.circle")
+                    }
+                })
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -164,12 +170,34 @@ struct DrugDoseCalculator: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .alert(isPresented: $showWarning) {
-                   Alert(
-                       title: Text("Warning"),
-                       message: Text(drugDose)
-                   )
-               }
+        .alert("Warning", isPresented: $showWarning, actions: {}, message: { Text(drugDose) })
+    }
+
+    private func isCrClCalculator() -> Bool {
+        return drugName == .crCl
+    }
+
+    private func crClInformationView() -> InformationView {
+        return InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
+    }
+
+    private func gfrInformationView() -> InformationView {
+        return InformationView(instructions: Patient.getGfrInstructions(), references: Patient.getGfrReferences(), name: gfrCalculatorName)
+    }
+
+    private func drugDoseInformationView() -> InformationView {
+        return InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
+    }
+
+    private func getInformationView() -> InformationView {
+        switch drugName {
+        case .crCl:
+            return crClInformationView()
+        case .gfr:
+            return gfrInformationView()
+        default:
+            return drugDoseInformationView()
+        }
     }
 
     func getCrStep() -> Double {
@@ -184,8 +212,12 @@ struct DrugDoseCalculator: View {
     func calculate() {
         textFieldIsFocused = false
         do {
-            let patient = try Patient(age: age, sex: sex, weight: weight, massUnits: massUnit, creatinine: creatinine, concentrationUnits: concentrationUnit)
-            crClResult = patient.crClResult()
+            let patient = try Patient(age: age, sex: sex, race: race, weight: weight, massUnits: massUnit, creatinine: creatinine, concentrationUnits: concentrationUnit, requiresWeight: drugName == .gfr ? false : true)
+            if drugName == .gfr {
+                renalFunction = patient.gfrResult()
+            } else {
+                renalFunction = patient.crClResult()
+            }
             // handle drugs
             if let drug = DrugFactory.create(drugName: drugName, patient: patient) {
                 drugDose = drug.getDose()
@@ -194,9 +226,9 @@ struct DrugDoseCalculator: View {
             saveResults(crCl: Int(round(patient.crCl)))
         } catch  {
             if let error = error as? DoseError, error == .pediatricAge {
-                crClResult = "Minimum age is \(Patient.pediatricAgeCutoff)"
+                renalFunction = "Minimum age is \(Patient.pediatricAgeCutoff)"
             } else {
-                crClResult = "INVALID ENTRY"
+                renalFunction = "INVALID ENTRY"
             }
         }
     }
@@ -217,12 +249,13 @@ struct DrugDoseCalculator: View {
         // reset fields
         age = 0
         sex = .male
+        race = .nonblack
         weight = 0
         creatinine = 0
     }
 
     func clearResult() {
-        crClResult = ""
+        renalFunction = ""
         drugDose = ""
     }
 
@@ -237,35 +270,10 @@ struct DrugDoseCalculator: View {
     }
 }
 
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("Caution")) {
-                        Text("Do not rely on drug dose calculators unless you are fully familiar with these drugs and their dosing.  More detailed information on drug doses can be found in the Reference and Tools | Drug Reference module, which includes a creatinine clearance calculator.  \n\nAlso note that the doses calculated for the oral anticoagulant drugs are only for the treatment of non-valvular atrial fibrillation, not for other indications, such as DVT or PE.  Other factors not included in these calculators, such as pregnancy, nursing, liver dysfunction, concomitant drug use and adverse reactions can affect drug dosage.")
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .frame(width: 140, height: 40)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(15)
-                .padding()
-            }
-            .navigationBarTitle(Text("Drug Calculator"), displayMode: .inline)
-        }
-    }
-}
-
 struct DrugDoseCalculator_Previews: PreviewProvider {
     static var previews: some View {
         DrugDoseCalculator(drugName: .constant(DrugName.crCl))
         DrugDoseCalculator(drugName: .constant(DrugName.apixaban))
-        Info()
+        DrugDoseCalculator(drugName: .constant(DrugName.gfr))
     }
 }

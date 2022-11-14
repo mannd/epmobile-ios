@@ -1,77 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vtm-vW-Qf5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vtm-vW-Qf5">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LBBB in V1-->
-        <scene sceneID="n6J-Ns-GoM">
-            <objects>
-                <tableViewController id="grW-sJ-dLw" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6p7-DV-f9z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrugadaMorphologyCell" id="YVl-pp-0lg">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YVl-pp-0lg" id="evQ-YD-Pvc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="grW-sJ-dLw" id="Jyz-iW-73V"/>
-                            <outlet property="delegate" destination="grW-sJ-dLw" id="Mo7-yv-Eto"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="EmL-ZL-mbi"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E5b-Gs-4ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2676" y="-594"/>
-        </scene>
         <!--RBBB in V1-->
-        <scene sceneID="9NI-hW-HUE">
+        <scene sceneID="Zn0-Sn-fLc">
             <objects>
-                <tableViewController id="UcS-xA-2wF" customClass="EPSBrugadaMorphologyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OGV-Nc-tw7">
+                <viewController id="Zqc-F8-Iqw" customClass="EPSBrugadaMorphologyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fHf-CJ-XdG"/>
+                        <viewControllerLayoutGuide type="bottom" id="UHz-uI-gzD"/>
+                    </layoutGuides>
+                    <view key="view" tag="1" contentMode="scaleToFill" id="Ou9-8v-FOl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-6Q-uBb">
+                                <rect key="frame" x="0.0" y="8" width="375" height="549"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrugadaMorphologyCell" id="T3p-rZ-2Te">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3p-rZ-2Te" id="kGy-Y6-frl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zqc-F8-Iqw" id="z1i-EV-T4O"/>
+                                    <outlet property="delegate" destination="Zqc-F8-Iqw" id="Sfz-eD-zyR"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1hg-cq-eqm">
+                                <rect key="frame" x="16" y="565" width="343" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud7-lk-GiL">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculate" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="calculate:" destination="Zqc-F8-Iqw" eventType="touchUpInside" id="7Df-Ql-Knj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-PR-rnM">
+                                        <rect key="frame" x="186.5" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="clear:" destination="Zqc-F8-Iqw" eventType="touchUpInside" id="Y5R-9u-6ld"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CJL-iP-5tq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrugadaMorphologyCell" id="BWJ-Vh-C1D">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BWJ-Vh-C1D" id="Jhn-rP-LaS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="UcS-xA-2wF" id="fpt-yc-dZg"/>
-                            <outlet property="delegate" destination="UcS-xA-2wF" id="JNJ-rL-caI"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" tag="1" title="RBBB in V1" image="rbbbicon.png" id="a8B-96-ggf"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FVv-tn-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="1hg-cq-eqm" firstAttribute="top" secondItem="KUl-6Q-uBb" secondAttribute="bottom" constant="8" symbolic="YES" id="CIU-Ej-qta"/>
+                            <constraint firstItem="UHz-uI-gzD" firstAttribute="top" secondItem="1hg-cq-eqm" secondAttribute="bottom" constant="8" symbolic="YES" id="HRQ-AN-D4u"/>
+                            <constraint firstAttribute="trailing" secondItem="KUl-6Q-uBb" secondAttribute="trailing" id="Leu-90-m7i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1hg-cq-eqm" secondAttribute="trailing" id="iFw-5J-2ZC"/>
+                            <constraint firstItem="KUl-6Q-uBb" firstAttribute="top" secondItem="fHf-CJ-XdG" secondAttribute="bottom" constant="8" symbolic="YES" id="klV-TT-LN3"/>
+                            <constraint firstItem="KUl-6Q-uBb" firstAttribute="leading" secondItem="Ou9-8v-FOl" secondAttribute="leading" id="lk0-i7-X7P"/>
+                            <constraint firstItem="1hg-cq-eqm" firstAttribute="leading" secondItem="Ou9-8v-FOl" secondAttribute="leadingMargin" id="wa1-2a-alH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="RBBB in V1" image="rbbbicon.png" id="uV0-wb-2VB"/>
+                    <connections>
+                        <outlet property="table" destination="KUl-6Q-uBb" id="XNj-Pe-229"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HR-BP-yX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2634" y="188"/>
+            <point key="canvasLocation" x="-3367" y="162"/>
         </scene>
-        <!--Morphology-->
+        <!--V1 Morphology-->
         <scene sceneID="sG9-FN-jzK">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="vtm-vW-Qf5" customClass="EPSTabBarViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Morphology" id="JEk-9M-20k">
+                    <navigationItem key="navigationItem" title="V1 Morphology" id="JEk-9M-20k">
                         <barButtonItem key="rightBarButtonItem" title="Calc" id="sHB-Ih-Wct"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -81,13 +97,88 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="grW-sJ-dLw" kind="relationship" relationship="viewControllers" id="U6N-se-C6b"/>
-                        <segue destination="UcS-xA-2wF" kind="relationship" relationship="viewControllers" id="5qe-hU-Rf8"/>
+                        <segue destination="E0R-BL-cOl" kind="relationship" relationship="viewControllers" id="DYk-2L-Q77"/>
+                        <segue destination="Zqc-F8-Iqw" kind="relationship" relationship="viewControllers" id="ezs-g0-VL7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CST-Qs-u8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3600" y="-594"/>
+        </scene>
+        <!--LBBB in V1-->
+        <scene sceneID="EDn-4E-Mze">
+            <objects>
+                <viewController id="E0R-BL-cOl" customClass="EPSBrugadaMorphologyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sIH-66-4mM"/>
+                        <viewControllerLayoutGuide type="bottom" id="E8r-EB-fSM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ie-D7-lM2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9ks-8m-of0">
+                                <rect key="frame" x="0.0" y="8" width="375" height="549"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrugadaMorphologyCell" id="Kiu-aP-Bxy">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kiu-aP-Bxy" id="v1B-vo-bWf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="E0R-BL-cOl" id="Id1-hi-FE8"/>
+                                    <outlet property="delegate" destination="E0R-BL-cOl" id="lm4-G7-efj"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="drb-4O-f2i">
+                                <rect key="frame" x="16" y="565" width="343" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-wD-UZi">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculate" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="calculate:" destination="E0R-BL-cOl" eventType="touchUpInside" id="bxZ-1y-DE5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-4Q-kjW">
+                                        <rect key="frame" x="186.5" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="clear:" destination="E0R-BL-cOl" eventType="touchUpInside" id="opT-VI-cdn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1Pi-Ka-mq6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9ks-8m-of0" firstAttribute="leading" secondItem="8ie-D7-lM2" secondAttribute="leading" id="YNv-Ih-mQK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="drb-4O-f2i" secondAttribute="trailing" id="b5E-Nk-TJb"/>
+                            <constraint firstItem="drb-4O-f2i" firstAttribute="top" secondItem="9ks-8m-of0" secondAttribute="bottom" constant="8" symbolic="YES" id="j6a-EC-KhR"/>
+                            <constraint firstAttribute="trailing" secondItem="9ks-8m-of0" secondAttribute="trailing" id="x2C-DD-4tG"/>
+                            <constraint firstItem="9ks-8m-of0" firstAttribute="top" secondItem="sIH-66-4mM" secondAttribute="bottom" constant="8" symbolic="YES" id="xJc-if-9EU"/>
+                            <constraint firstItem="drb-4O-f2i" firstAttribute="leading" secondItem="8ie-D7-lM2" secondAttribute="leadingMargin" id="zGZ-Jk-CAf"/>
+                            <constraint firstItem="E8r-EB-fSM" firstAttribute="top" secondItem="drb-4O-f2i" secondAttribute="bottom" constant="8" symbolic="YES" id="zZj-ub-1bQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="X1o-2D-GgI"/>
+                    <connections>
+                        <outlet property="table" destination="9ks-8m-of0" id="IBr-IO-JIl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxA-Ln-bpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4047" y="131"/>
         </scene>
     </scenes>
     <resources>

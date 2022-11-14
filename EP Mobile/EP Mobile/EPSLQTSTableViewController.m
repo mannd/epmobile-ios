@@ -7,6 +7,7 @@
 //
 
 #import "EPSLQTSTableViewController.h"
+#import "EPSTabBarViewController.h"
 
 @interface EPSLQTSTableViewController ()
 
@@ -38,6 +39,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+
+    EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
+
+    if ([segueIdentifier isEqualToString:@"LQTSSubtypesSegue"]) {
+        vc.references =  [NSArray arrayWithObject:[[Reference alloc] init:@"Adler A, Novelli V, Amin AS, et al. An International, Multicentered, Evidence-Based Reappraisal of Genes Reported to Cause Congenital Long QT Syndrome. Circulation. 2020;141(6):418-428. doi:10.1161/CIRCULATIONAHA.119.043132"]];
+        vc.name = @"LQTS Subtypes";
+    }
+
 }
 
 @end

@@ -7,12 +7,10 @@
 //
 
 #import "EPSCMSViewController.h"
-#import "EPSCMSNotes.h"
-#import "EPSNotesViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
 #import "EPSCMSViewModel.h"
+#import "EP_Mobile-Swift.h"
 
 // these magic numbers are in Data.plist
 #define SUS_VT 0
@@ -34,6 +32,8 @@
 #define DEFAULT_CELL_HEIGHT 80
 #define BIG_CELL_HEIGHT 120
 
+#define CMS_REFERENCE @"CMS: Decision Memo for Implantable Cardioverter Defibrillators (CAG-00157R4) Feb 15, 2018.\nhttps://www.cms.gov/medicare-coverage-database/details/nca-decision-memo.aspx?NCAId=288"
+
 @interface EPSCMSViewController ()
 
 @end
@@ -42,12 +42,6 @@
 {
     EPSCMSViewModel *viewModel;
 }
-@synthesize efSegmentedControl;
-@synthesize hfClassSegmentedControl;
-@synthesize criteriaTableView;
-@synthesize list;
-@synthesize headers;
-@synthesize checkedItems;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,45 +55,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.checkedItems = [[NSMutableSet alloc] init];
-	// Do any additional setup after loading the view.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSDictionary *cmsDictionary = [[NSDictionary alloc] initWithDictionary:[dictionary objectForKey:@"CMS"]];
-    NSArray *headerArray = [[NSArray alloc] initWithArray:[cmsDictionary objectForKey:@"SectionHeaders"]] ;
-    self.headers = headerArray;
-    
-    NSArray *cmsCriteriaArray = [[NSArray alloc] initWithArray:[cmsDictionary objectForKey:@"Sections"]];
-    NSMutableArray *risks = [[NSMutableArray alloc] init];
-    for (int i = 0; i < [cmsCriteriaArray count]; ++i) {
-        // init each section
-        NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
-        for (int j = 0; j < [[cmsCriteriaArray objectAtIndex:i] count]; ++j) {
-            EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWith:[[[cmsCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:[[[[cmsCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1] integerValue]];
-            
-            
-            [tmpArray addObject:risk];
-        }
-        [risks addObject:tmpArray];
-    }
-    
-    self.list = risks;
-    
-    [self.efSegmentedControl setTitle:@">35"forSegmentAtIndex:0];
-        [self.efSegmentedControl setTitle:@">30 & ≤35"forSegmentAtIndex:1];
-        [self.efSegmentedControl setTitle:@"≤30"forSegmentAtIndex:2];
+    self.viewTitle = @"CMS ICD Criteria";
+    [self initView];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *buttonCalculate = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResult:)];
-//    let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-
-    self.toolbarItems = [ NSArray arrayWithObjects: spacer, buttonCalculate, spacer, nil ];
-
-
-    [self.navigationController setToolbarHidden:NO];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,16 +68,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)showNotes {
-    [self performSegueWithIdentifier:@"CMSNotesSegue" sender:nil];
+- (void)initView {
+    self.checkedItems = [[NSMutableSet alloc] init];
+    // Do any additional setup after loading the view.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSDictionary *cmsDictionary = [[NSDictionary alloc] initWithDictionary:[dictionary objectForKey:@"CMS"]];
+    NSArray *headerArray = [[NSArray alloc] initWithArray:[cmsDictionary objectForKey:@"SectionHeaders"]] ;
+    self.headers = headerArray;
+
+    NSArray *cmsCriteriaArray = [[NSArray alloc] initWithArray:[cmsDictionary objectForKey:@"Sections"]];
+    NSMutableArray *risks = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [cmsCriteriaArray count]; ++i) {
+        // init each section
+        NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
+        for (int j = 0; j < [[cmsCriteriaArray objectAtIndex:i] count]; ++j) {
+            EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWith:[[[cmsCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:[[[[cmsCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1] integerValue]];
+
+
+            [tmpArray addObject:risk];
+        }
+        [risks addObject:tmpArray];
+    }
+
+    self.list = risks;
+
+    [self.efSegmentedControl setTitle:@">35"forSegmentAtIndex:0];
+    [self.efSegmentedControl setTitle:@">30 & ≤35"forSegmentAtIndex:1];
+    [self.efSegmentedControl setTitle:@"≤30"forSegmentAtIndex:2];
+    [self.efSegmentedControl setSelectedSegmentIndex:0];
+    [self.hfClassSegmentedControl setSelectedSegmentIndex:0];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"CMSNotesSegue"]) {
-        EPSNotesViewController *vc = (EPSNotesViewController *)[segue destinationViewController];
-        vc.key = @"CMSNotes";
+- (void)showNotes {
+    NSString *instructions = @"Select patient characteristics and then select Calculate to show whether the patient is likely to meet CMS guidelines for Medicare reimbursement. Note the CMS National Coverage Determination (NCD) is quite detailed and you should be very familiar with it before making a decision as to whether a particular patient is covered. This module is only intended as a guide to the NCD and is not definitive. The module has been updated to the latest 2018 CMS guidelines.";
+    NSString *key = @"AF = atrial fibrillation.\nCA = cardiac arrest.\nCABG = coronary artery bypass grafting.\nCM = cardiomyopathy.\nCMS = Centers for Medicare and Medicaid Services.\nEF = ejection fraction.\nEPS = electrophysiology study.\nHCM = hypertrophic cardiomyopathy.\nICD = implantable cardioverter defibrillator.\nOMT = optimal medical therapy.\nMI = myocardial infarction.\nNYHA = New York Heart Association.\nPCI = percutaneous coronary intervention.\nSVT = supraventricular tachycardia.\nVT = ventricular tachycardia/tachyarrhythmia.\nVF = ventricular fibrillation.";
+    Reference *reference = [[Reference alloc] init:CMS_REFERENCE];
+    NSMutableArray *references = [[NSMutableArray alloc] init];
+    if (reference != NULL) {
+        [references addObject:reference];
     }
+    [InformationViewPresenter showWithVc:self instructions:instructions key:key references:references name:self.viewTitle];
 }
 
 - (void)calculateCheckedItems {
@@ -135,15 +126,28 @@
     return [self.checkedItems containsObject:[NSNumber numberWithInt:item]];
 }
 
-- (IBAction)calculateResult:(id)sender {
+- (IBAction)cancel:(id)sender {
+    [self clear];
+}
+
+- (IBAction)calculate:(id)sender {
+    [self calculate];
+}
+
+- (void)calculate {
     [self createViewModel];
     NSString *message = viewModel.getMessage;
     [self showResults:message];
 }
 
+- (void)clear {
+    [self initView];
+    [self.criteriaTableView reloadData];
+}
+
 - (void)showResults:(NSString *)message {
     NSString *title = @"CMS ICD Criteria";
-    [EPSSharedMethods showDialogWithTitle:title andMessage:message inView:self];
+    [self showCopyResultAlertWithTitle:title message:message references:[NSArray arrayWithObject:[Reference referenceFromCitation:CMS_REFERENCE]]];
 }
 
 
@@ -211,7 +215,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [headers objectAtIndex:section];
+    return [self.headers objectAtIndex:section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -270,7 +274,5 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
 
 @end

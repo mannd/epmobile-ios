@@ -8,18 +8,19 @@
 
 #import "EPSHasBledRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSHasBledRiskScore
 - (NSString *)getTitle {
     return @"HAS-BLED";
 }
 
-- (NSString *)getReference {
-    return @"Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJ, Lip GY. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest [Internet]. 2010 Nov [cited 2014 Jun 6];138(5):1093-100. Available from: http://journal.publications.chestnet.org/article.aspx?articleid=1045174";
+- (NSString *)getInstructions {
+    return @"Use this score to estimate the 1-year risk for major bleeding (intracranial, hospitalization, hemoglobin decrease > 2 g/L, and/or transfusion) in patients with atrial fibrillation.";
 }
 
-- (NSURL *)getReferenceLink {
-    return [[NSURL alloc] initWithString:@"http://journal.publications.chestnet.org/article.aspx?articleid=1045174"];
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJGM, Lip GYH. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010;138(5):1093-1100. doi:10.1378/chest.10-0134"]];
 }
 
 - (NSMutableArray *)getArray {

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EP_Mobile-Swift.h"
 
 @interface EPSSimpleAlgorithmViewController : UIViewController
 @property (strong, nonatomic) NSString *algorithmName;
+@property (strong, nonatomic) NSArray *references;
+@property (strong, nonatomic) NSString *instructions;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIButton *instructionsButton;
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;

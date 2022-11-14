@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import SafariServices
 
+// This is a Massive View Controller and should be refactored by extracting the risk score model.
 class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ageTextField: UITextField!
@@ -25,23 +25,21 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     var activeField: UITextField?
     let errorTitle = "Error"
     let resultTitle = "Risk of sustained ventricular arrhythmia"
+    let riskScoreTitle = "ARVC Risk"
 
     override
     func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "ARVC Risk"
-        let editButton = UIBarButtonItem(title: "Risk", style: UIBarButtonItem.Style.plain, target: self, action: #selector(calculateRisk))
-        navigationItem.rightBarButtonItem = editButton
+        self.title = riskScoreTitle
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(showNotes), for: .touchUpInside)
+        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+        navigationItem.rightBarButtonItem = infoBarButtonItem
         twiSlider.addTarget(self, action: #selector(updateTWI), for: UIControl.Event.valueChanged)
-        twiSlider.value = 0
-        twiLabel.text = "0"
         rvefSlider.addTarget(self, action: #selector(updateRVEF), for: UIControl.Event.valueChanged)
-        rvefSlider.value = 50
-        rvefLabel.text = "50"
-        ageTextField.delegate = self
+        initFields()
         pvcCountTextField.delegate = self
-        disclaimerLabel.text = "Limitations: The calculator should not be used in patients with prior sustained ventricular arrhythmia or sudden cardiac arrest. It is designed to provide predictions based on the clinical characteristics of ARVC patients at time of their diagnosis.\n\nReference: Cardrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. European Heart Journal. Published online April 20, 2022:ehac180. doi:10.1093/eurheartj/ehac180"
-
+        ageTextField.delegate = self
         registerForKeyboardNotifications()
     }
 
@@ -51,18 +49,33 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
         super.viewDidDisappear(animated)
     }
 
-    @IBAction func showReference(_ sender: Any) {
-        // Updated reference, original article was retracted and resubmitted.
-        let svc = SFSafariViewController(url: NSURL(string: "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehac180/6569858")! as URL)
-        present(svc, animated: true, completion: nil)
-    }
-
     @objc func updateTWI(sender: UISlider) {
         twiLabel.text = "\(Int(sender.value))"
     }
 
     @objc func updateRVEF(sender: UISlider) {
         rvefLabel.text = "\(Int(sender.value))"
+    }
+
+    private func initFields() {
+        twiSlider.value = 0
+        twiLabel.text = "0"
+        rvefSlider.value = 50
+        rvefLabel.text = "50"
+        ageTextField.text = ""
+        pvcCountTextField.text = ""
+        sexSegmentedControl.selectedSegmentIndex = 0
+        syncopeSwitch.isOn = false
+        nsvtSwitch.isOn = false
+
+    }
+
+    @IBAction func cancel(_ sender: Any) {
+        initFields()
+    }
+
+    @IBAction func calculate(_ sender: Any) {
+        calculateRisk()
     }
 
     @objc func calculateRisk() {
@@ -97,11 +110,21 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     }
 
     func showResult(_ result: String) {
-        EPSSharedMethods.showDialog(withTitle: resultTitle, andMessage: result, inView: self)
+        showCopyResultAlert(title: resultTitle, message: result, references: ArvcRiskModel.getReferences())
     }
 
     func showError(_ message: String) {
-        EPSSharedMethods.showDialog(withTitle: errorTitle, andMessage: message, inView: self)
+        let errorAlert = UIAlertController(title: errorTitle, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        errorAlert.addAction(okAction)
+        present(errorAlert, animated: true)
+    }
+
+    @objc
+    func showNotes() {
+        let instructions = ArvcRiskModel.getInstructions()
+        let references = ArvcRiskModel.getReferences()
+        InformationViewPresenter.show(vc: self, instructions: instructions, key: nil, references: references, name: riskScoreTitle)
     }
 
     // Respond to pressing Done button on keyboard.

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Entrainment {
+struct Entrainment: InformationProvider {
     let tcl: Double
     let ppi: Double
     let concealedFusion: Bool
@@ -85,6 +85,19 @@ struct Entrainment {
         guard let egQrs = egQrs, let egMinusQrs = egMinusQrs() else { return false }
         return concealedFusion && ppiMinusTcl() <= 10 && egQrs / tcl <= 0.7 && egMinusQrs <= 10
     }
+
+    static func getReferences() -> [Reference] {
+        return [Reference("Stevenson WG, Friedman PL, Sager PT, et al. Exploring Postinfarction Reentrant Ventricular Tachycardia With Entrainment Mapping. Journal of the American College of Cardiology. 1997;29(6):1180-1189. doi:10.1016/S0735-1097(97)00065-X"), Reference("El-Shalakany A, Hadjis T, Papageorgiou P, Monahan K, Epstein L, Josephson ME. Entrainment/Mapping Criteria for the Prediction of Termination of Ventricular Tachycardia by Single Radiofrequency Lesion in Patients With Coronary Artery Disease. Circulation. 1999;99(17):2283-2289. doi:10.1161/01.CIR.99.17.2283")]
+    }
+
+    static func getInstructions() -> String? {
+        return "This Entrainment Mapping module is most suited for mapping ischemic ventricular tachycardia (VT), but principles of entrainment apply to all reentrant arrhythmias.\n\nEntrainment is performed by pacing during stable VT (or other reentrant tachycardia) for approximately 8-15 beat trains at 20-40 msec shorter than the tachycardia cycle length (TCL).  Make sure all electrograms are 'entrained', i.e. the CL shortens to the pacing CL.\n\nThe post-pacing interval (PPI) is measured from the last pacing stimulus to the next electrogram recorded from the pacing site.  Concealed fusion is present if the tachycardia morphology does not change during entrainment.  If there is concealed fusion then the pacing site is in an area of slow conduction near the critical isthmus of the reentry circuit.\n\nDuring VT if a discrete electrogram (EG) is present prior to the QRS onset then the EG-QRS interval can be measured.  During entrainment with concealed fusion, if there is a delay between the pacing stimulus to onset of the QRS (S-QRS), then the site is within the critical isthmus if the S-QRS interval is similar to the EG-QRS interval.  In addition the relative location within the critical isthmus can be estimated by the ratio of the S-QRS to the TCL.  Sites with concealed fusion but long PPI intervals are probably adjacent bystander tracts.\n\nPacing sites within the critical isthmus are associated with a much higher chance of successful tachycardia termination with ablation than other sites.\n\nEP Mobile uses the criteria of El-Shalakany et al. to identify VT sites with high likelihood of ablation success."
+    }
+
+    static func getKey() -> String? {
+        return nil
+    }
+
 }
 
 enum EntrainmentError: Error {

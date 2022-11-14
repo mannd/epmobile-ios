@@ -7,7 +7,11 @@
 //
 
 #import "EPSLVHTableViewController.h"
-#import "EPSRiskScoreTableViewController.h"
+#import "EPSEstesRiskScore.h"
+
+#import "EP_Mobile-Swift.h"
+
+#define ESTES_ROW 1
 
 @interface EPSLVHTableViewController ()
 
@@ -27,21 +31,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EPSRiskScoreTableViewController *vc = (EPSRiskScoreTableViewController *)[segue destinationViewController];
-    NSString *segueIdentifier = [segue identifier];
-    if ([segueIdentifier isEqualToString:@"EstesSegue"])
-        vc.scoreType = @"Estes";
- }
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == ESTES_ROW) {
+        [RiskScoreViewController showWithVc:self riskScore:[[EPSEstesRiskScore alloc] init]];
+    }
+}
 
 @end

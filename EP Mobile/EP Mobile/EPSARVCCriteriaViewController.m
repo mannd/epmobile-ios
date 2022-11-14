@@ -1,15 +1,20 @@
 //
-//  EPSARVC2010TableViewController.m
+//  EPSARVCCriteriaViewController.m
 //  EP Mobile
 //
 //  Created by David Mann on 8/3/12.
 //  Copyright (c) 2012 EP Studios. All rights reserved.
 //
 
-#import "EPSARVC2010TableViewController.h"
+#import "EPSARVCCriteriaViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
+#import "EP_Mobile-Swift.h"
+
+#define ARVC1994 @"ARVC1994"
+#define ARVC2010 @"ARVC2010"
+#define ARVC1994_TITLE @"ARVC/D 1994"
+#define ARVC2010_TITLE @"ARVC/D 2010"
 
 #define SECTION_0_HEADER @"I. Global/Regional Dysfunction and Structural Alterations"
 #define SECTION_1_HEADER @"II. Tissue Characterizations of Wall"
@@ -21,11 +26,15 @@
 #define ARVC_2010_CELL_HEIGHT 150
 #define ARVC_1994_CELL_HEIGHT 100
 
-@interface EPSARVC2010TableViewController ()
+#define ARVC_1994_REFERENCE @"McKenna WJ, Thiene G, Nava A, et al. Diagnosis of arrhythmogenic right ventricular dysplasia/cardiomyopathy. Task Force of the Working Group Myocardial and Pericardial Disease of the European Society of Cardiology and of the Scientific Council on Cardiomyopathies of the International Society and Federation of Cardiology. Br Heart J. 1994;71(3):215-218.\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC483655/"
+
+#define ARVC_2010_REFERENCE @"Marcus FI, McKenna WJ, Sherrill D, et al. Diagnosis of arrhythmogenic right ventricular cardiomyopathy/dysplasia: Proposed Modification of the Task Force Criteria. European Heart Journal. 2010;31(7):806-814.\ndoi:10.1093/eurheartj/ehq025"
+
+@interface EPSARVCCriteriaViewController ()
 
 @end
 
-@implementation EPSARVC2010TableViewController
+@implementation EPSARVCCriteriaViewController
 {
     int cellHeight;
 }
@@ -33,24 +42,35 @@
 @synthesize headers;
 @synthesize criteria;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initCriteria];
+
+    if ([self.criteria isEqualToString:ARVC1994]) {
+        cellHeight = ARVC_1994_CELL_HEIGHT;
+        self.navigationItem.title = ARVC1994_TITLE;
+    }
+    else {
+        self.navigationItem.title = ARVC2010_TITLE;
+        cellHeight = ARVC_2010_CELL_HEIGHT;
+    }
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
+
+- (void)initCriteria {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
     NSDictionary *arvcDictionary = [[NSDictionary alloc] initWithDictionary:[dictionary objectForKey:@"ARVC"]];
     NSArray *headerArray = [[NSArray alloc] initWithArray:[arvcDictionary objectForKey:@"SectionHeaders"]] ;
     self.headers = headerArray;
-    
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+
     NSArray *arvcCriteriaArray = [[NSArray alloc] initWithArray:[dictionary objectForKey:self.criteria]];
     NSMutableArray *risks = [[NSMutableArray alloc] init];
 
@@ -59,25 +79,28 @@
         NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
         for (int j = 0; j < [[arvcCriteriaArray objectAtIndex:i] count]; ++j) {
             EPSRiskFactor *risk = [[EPSRiskFactor alloc] initWithDetails:[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:0] withValue:[[[[arvcCriteriaArray objectAtIndex:i] objectAtIndex:j] objectAtIndex:1] integerValue]  withDetails:@""];
-            
-         
             [tmpArray addObject:risk];
         }
         [risks addObject:tmpArray];
     }
 
     self.list = risks;
-    
-    if ([self.criteria isEqualToString:@"ARVC1994"]) {
-        cellHeight = ARVC_1994_CELL_HEIGHT;
-        self.navigationItem.title = @"ARVC/D 1994";
-    }
+}
+
+- (NSString *)getTitle {
+    if ([self.criteria isEqualToString:ARVC2010])
+        return ARVC2010_TITLE;
     else
-        cellHeight = ARVC_2010_CELL_HEIGHT;
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Risk" style:UIBarButtonItemStylePlain target:self action:@selector(calculateScore)];
-    self.navigationItem.rightBarButtonItem = editButton;
-    
+        return ARVC1994_TITLE;
+}
+
+- (IBAction)calculate:(id)sender {
+    [self calculateScore];
+}
+
+- (IBAction)clear:(id)sender {
+    [self initCriteria];
+    [self.tableView reloadData];
 }
 
 - (void)calculateScore {
@@ -90,7 +113,7 @@
                 tmp += [[[self.list objectAtIndex:i] objectAtIndex:j] points];
             }
         }
-        if ([self.criteria isEqualToString:@"ARVC2010"]) {
+        if ([self.criteria isEqualToString:ARVC2010]) {
             // only one major and minor risk factor counted for each section
             major += (tmp / 100) >= 1 ? 1 : 0;
             minor += (tmp % 100) >= 1 ? 1 : 0;
@@ -104,18 +127,25 @@
     EPSLog(@"major = %d", major);
     EPSLog(@"minor = %d", minor);
     
-    [EPSSharedMethods showDialogWithTitle:@"Risk Score" andMessage:[self getResultMessage:major :minor] inView:self];
-    
+    [self showCopyResultAlertWithTitle:[self getTitle] message:[self getResultMessage:major :minor] references:[NSArray arrayWithObject:[self getReference]]];
+}
+
+- (Reference *)getReference {
+    if ([self.criteria isEqualToString:ARVC2010]) {
+        return [Reference referenceFromCitation:ARVC_2010_REFERENCE];
+    } else {
+        return [Reference referenceFromCitation:ARVC_1994_REFERENCE];
+    }
 }
 
 - (NSString *)getResultMessage:(int)major :(int)minor {
-    if ([self.criteria isEqualToString:@"ARVC2010"])
+    if ([self.criteria isEqualToString:ARVC2010])
         return [self getArvc2010ResultMessage:major :minor];
     else
         return [self getArvc1994ResultMessage:major :minor];
 }
 
-- (NSString *)getArvc2010ResultMessage:(int) major :(int)minor {
+- (NSString *)getArvc2010ResultMessage:(int)major :(int)minor {
     NSString *message;
     NSString *messageStart = [[NSString alloc] initWithFormat:@"Major = %d\nMinor = %d\n", major, minor];
     if (major >= 2 || (major == 1 && minor >= 2) || minor >= 4)
@@ -138,6 +168,35 @@
         message = [messageStart stringByAppendingString:@"Not Diagnostic of ARVC/D"];
     return message;
 }
+
+- (void)showNotes {
+    if ([self.criteria isEqualToString:ARVC1994]) {
+        [InformationViewPresenter
+         showWithVc:self
+         instructions:NULL
+         key:NULL
+         references:[NSArray arrayWithObject:[[Reference alloc] init:ARVC_1994_REFERENCE]]
+         name:ARVC1994_TITLE];
+    }
+    if ([self.criteria isEqualToString:ARVC2010]) {
+        [InformationViewPresenter
+         showWithVc:self
+         instructions:NULL
+         key:@"BSA = body surface area.\nPLAX = parasternal long axis view.\nPSAX = parasternal short axis view.\nRVOT = RV outflow tract."
+         references:[NSArray arrayWithObject:[[Reference alloc] init:ARVC_2010_REFERENCE]]
+         name:ARVC2010_TITLE];
+    }
+}
+
+//- (NSString *)getCopiedResult {
+//    //    Title: title
+//    //    Risks: N/A
+//    //    Results: results
+//    //    Reference(s):
+//    return @"
+//
+//}
+
 
 #pragma mark - Table view data source
 
@@ -186,23 +245,6 @@
     return cellHeight;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    NSString *result = nil;
-    if ([criteria isEqualToString:@"ARVC2010"] && section == 0) {
-        result = @"BSA = body surface area. PLAX = parasternal long axis view. PSAX = parasternal short axis view. RVOT = RV outflow tract.";
-    }
-    if (section == 5) {
-        if ([criteria isEqualToString:@"ARVC2010"])
-            result = @"Reference: Marcus FI et al. Circulation 2010;121:1533.";
-        else
-            result = @"Reference: McKenna WJ et al. Br Heart J 1994;71:215.";
-            
-    }
-    
-    return result;
-}
-
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -223,7 +265,4 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
-
 @end

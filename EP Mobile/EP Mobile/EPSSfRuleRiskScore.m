@@ -8,11 +8,21 @@
 
 #import "EPSSfRuleRiskScore.h"
 #import "EPSRiskFactor.h"
+#import "EP_Mobile-Swift.h"
 
 @implementation EPSSfRuleRiskScore
 
 - (NSString *)getTitle {
     return @"SF Rule";
+}
+
+- (NSString *)getInstructions {
+    return @"Use this rule to assess the risk of serious events within 30 days of presentation with syncope.";
+}
+
+- (NSArray *)getReferences {
+    return [NSArray arrayWithObject:[Reference referenceFromCitation:@"Quinn J, McDermott D, Stiell I, Kohn M, Wells G. Prospective validation of the San Francisco Syncope Rule to predict patients with serious outcomes. Ann Emerg Med. 2006;47(5):448-454. doi:10.1016/j.annemergmed.2005.11.019"]];
+
 }
 
 - (NSString *)getReference {

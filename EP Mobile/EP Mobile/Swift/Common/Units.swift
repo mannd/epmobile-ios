@@ -45,7 +45,7 @@ enum HeightUnit: Int, CaseIterable, Identifiable, Equatable {
         case .inch:
             return "in"
         }
-    }
+   }
 }
 
 enum ConcentrationUnit: Int, CaseIterable, Identifiable, Equatable {
@@ -70,5 +70,14 @@ enum ConcentrationUnit: Int, CaseIterable, Identifiable, Equatable {
 
     static func mmolLToMgDL(_ mmolL: Double) -> Double {
         return mmolL / conversionFactor
+    }
+}
+
+extension FloatingPoint {
+    func trimZeros() -> String {
+        let formatter: NumberFormatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 1
+        return formatter.string(for: self) ?? ""
     }
 }

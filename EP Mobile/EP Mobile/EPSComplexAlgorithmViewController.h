@@ -18,7 +18,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *button4;
 @property (strong, nonatomic) IBOutlet UIButton *button5;
 @property (strong, nonatomic) IBOutlet UIButton *button6;
-@property (strong, nonatomic) IBOutlet UIButton *instructionsButton;
 
 @property int step;
 

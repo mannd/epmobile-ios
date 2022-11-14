@@ -18,13 +18,16 @@
 - (int)numberOfRowsInSection:(NSInteger)section;
 - (int)calculateScore:(NSMutableArray *)risks;
 - (NSString *)getMessage:(int)score;
+- (NSString *)getInstructions;
+- (NSString *)getKey;
 - (CGFloat)rowHeight:(CGFloat)defaultHeight;
 - (void)formatCell:(UITableViewCell *)cell;
-- (NSString *)getReference;
+- (NSArray *)getReferences;
 - (NSArray *)risksSelected:(NSArray *)risks;
 - (NSString *)getFullRiskReportFromMessage:(NSString *)message andRisks:(NSArray *)risks;
 - (int)detailTextNumberOfLines;
 + (NSString *)formatRisks:(NSArray *)risks;
-- (NSURL *)getReferenceLink;
+
+@property (strong, nonatomic) NSArray *references;
 
 @end

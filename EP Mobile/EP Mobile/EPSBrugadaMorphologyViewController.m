@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 EP Studios. All rights reserved.
 //
 
-#import "EPSBrugadaMorphologyTableViewController.h"
+#import "EPSBrugadaMorphologyViewController.h"
 #import "EPSRiskFactor.h"
 #import "EPSLogging.h"
-#import "EPSSharedMethods.h"
+#import "EP_Mobile-Swift.h"
 
 #define LBBB_TAG 0
 #define RBBB_TAG 1
@@ -17,31 +17,26 @@
 #define IN_V1 1
 #define IN_V6 100
 
-@interface EPSBrugadaMorphologyTableViewController ()
+@interface EPSBrugadaMorphologyViewController ()
 
 @end
 
-@implementation EPSBrugadaMorphologyTableViewController
+@implementation EPSBrugadaMorphologyViewController
 @synthesize list;
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initList];
+}
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)initList {
     NSMutableArray *lbbbRisks = [[NSMutableArray alloc] initWithObjects:
                                  [[EPSRiskFactor alloc] initWith:@"R > 30 msec in V1 or V2" withValue:IN_V1],
                                  [[EPSRiskFactor alloc] initWith:@"Onset to nadir S > 60 msec in V1 or V2" withValue:IN_V1],
@@ -55,25 +50,22 @@
                           [[EPSRiskFactor alloc] initWith:@"R to S ratio < 1 in V6" withValue:IN_V6],
                           [[EPSRiskFactor alloc] initWith:@"Monophasic R in V6" withValue:IN_V6],
                           nil];
-    
-    if (self.view.tag == LBBB_TAG)
+
+    if (self.view.tag == LBBB_TAG) {
         self.list = lbbbRisks;
-    else
+    }
+    else {
         self.list = rbbbRisks;
-    
+    }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    UIBarButtonItem *editButton = self.tabBarController.navigationItem.rightBarButtonItem;
-    [editButton setTarget:self];
-    [editButton setAction:@selector(calculateScore)];
+- (IBAction)calculate:(id)sender {
+    [self calculateScore];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)clear:(id)sender {
+    [self initList];
+    [self.table reloadData];
 }
 
 - (void)calculateScore {
@@ -96,8 +88,7 @@
     message = [message stringByAppendingFormat:@" (Sens=%@, Spec=%@) ", sens, spec];
     
     EPSLog(@"Calculating score...%d", count);
-    [EPSSharedMethods showDialogWithTitle:@"WCT Result" andMessage:message inView:self];
-   
+    [self showSimpleDialogWithTitle:@"WCT Result" message:message];
 }
 
 #pragma mark - Table view data source

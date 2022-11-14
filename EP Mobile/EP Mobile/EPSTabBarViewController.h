@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EP_Mobile-Swift.h"
 
 @interface EPSTabBarViewController : UITabBarController
+
+@property (strong, nonatomic) NSArray *references;
+@property (strong, nonatomic) NSString *name;
 
 @end

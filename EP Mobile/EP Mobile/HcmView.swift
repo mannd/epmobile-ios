@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+fileprivate let calculatorName = "HCM SCD 2014"
+
 struct HcmView: View {
     @State private var age: Double = 0
     @State private var thickness: Double = 0
@@ -19,7 +21,6 @@ struct HcmView: View {
     @State private var result: String = ""
     @State private var detailedResult: String = ""
     @State private var showInfo: Bool = false
-    @State private var showAlert = false
 
     @FocusState private var textFieldIsFocused: Bool
 
@@ -85,17 +86,7 @@ struct HcmView: View {
                         }
                     }
                 }
-                HStack() {
-                    Group() {
-                        Button("Calculate") {
-                            calculate()
-                        }
-                        Button("Clear") {
-                            clear()
-                        }
-                    }
-                    .roundedButton()
-                }
+                CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .onChange(of: age, perform: { _ in clearResult() })
             .onChange(of: thickness, perform: { _ in clearResult() })
@@ -104,13 +95,18 @@ struct HcmView: View {
             .onChange(of: familyHxScd, perform: { _ in clearResult() })
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: hxSyncope, perform: { _ in clearResult() })
-            .navigationBarTitle(Text("HCM SCD 2014"), displayMode: .inline)
-            .navigationBarItems(trailing:
-                                    Button(action: { showInfo.toggle() }) {
-                Image(systemName: "info.circle")
-            }).sheet(isPresented: $showInfo) {
-                Info()
-            }
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKey(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
+                Button(action: { showInfo.toggle() }) {
+                    Image(systemName: "info.circle")
+                }
+            })
+//            .navigationBarItems(trailing:
+//                                    Button(action: { showInfo.toggle() }) {
+//                Image(systemName: "info.circle")
+//            }).sheet(isPresented: $showInfo) {
+//                Info()
+//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -149,41 +145,10 @@ struct HcmView: View {
         let pasteboard = UIPasteboard.general
         pasteboard.string = s
     }
-
-//    [EPSSharedMethods showRiskDialogWithMessage:message riskResult:[self getFullRiskReport:message] reference:FULL_REFERENCE url:[[NSURL alloc] initWithString:REFERENCE_LINK] inView:self];
-}
-
-private struct Info: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section(header: Text("How to Use")) {
-                        Text("Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.")
-                    }
-                    Section(header: Text("Definitions")) {
-                        Text("HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation:") + Text("\nGradient = 4V\u{00B2}").italic().bold() + Text("\nwhere V is the peak aortic outflow velocity.\n\nFamily hx of SCD = history of sudden cardiac death in 1 or more first degree relatives under 40 years old or in a first degree relative with confirmed HCM at any age.\n\nNSVT = nonsustained ventricular tachycardia: 3 consecutive ventricular beats at a rate of 120 bpm or more and <30 sec duration on Holter monitoring (minimum 24 hrs) at or prior to evaluation.\n\nHx syncope = history of unexplained syncope at or prior to evaluation")
-                    }
-                    Section(header: Text("References")) {
-                        Text("Elliott PM et al. 2014 ESC guidelines on diagnosis and management of hypertrophic cardiomyopathy. Eur Heart J 2014;35:2733, http://eurheartj.oxfordjournals.org/content/35/39/2733#sec-16\n\nO'Mahony C et al.  Eur Heart J 2014;35:2010, http://eurheartj.oxfordjournals.org/content/35/30/2010.long")
-                    }
-                }
-                Button("Done") {
-                    dismiss()
-                }
-                .roundedButton()
-            }
-            .navigationBarTitle(Text("HCM SCD 2014"), displayMode: .inline)
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-    }
 }
 
 struct HcmView_Previews: PreviewProvider {
     static var previews: some View {
         HcmView()
-        Info()
     }
 }
