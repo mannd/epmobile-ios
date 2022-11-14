@@ -99,7 +99,6 @@
 		8E6381BF282A016000249E87 /* WeightCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */; };
 		8E6381C1282AE53E00249E87 /* WeightCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */; };
 		8E6381C3282C16F900249E87 /* WeightCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */; };
-		8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E676B6D1CA07F740035244E /* Launch Screen.storyboard */; };
 		8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
@@ -178,6 +177,7 @@
 		8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */ = {isa = PBXBuildFile; fileRef = 8ED8A8EC25168CA600ACE6F8 /* org.css */; };
 		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
+		8EE071A5291ECF4C002EE004 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */; };
 		8EEE9BB5283D5055005AB875 /* HcmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */; };
 		8EEE9BB7283D8565005AB875 /* HcmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB6283D8565005AB875 /* HcmView.swift */; };
 		8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB8283D8819005AB875 /* HcmViewController.swift */; };
@@ -334,7 +334,6 @@
 		8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorViewModel.swift; sourceTree = "<group>"; };
 		8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorView.swift; sourceTree = "<group>"; };
 		8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorViewController.swift; sourceTree = "<group>"; };
-		8E676B6D1CA07F740035244E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
@@ -448,6 +447,7 @@
 		8EDD2D47212F0C2B00C3397C /* EPSTamponadeRiskScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSTamponadeRiskScore.h; sourceTree = "<group>"; };
 		8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSTamponadeRiskScore.m; sourceTree = "<group>"; };
 		8EDF8E5B20F2508F0072C409 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewModel.swift; sourceTree = "<group>"; };
 		8EEE9BB6283D8565005AB875 /* HcmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmView.swift; sourceTree = "<group>"; };
 		8EEE9BB8283D8819005AB875 /* HcmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewController.swift; sourceTree = "<group>"; };
@@ -726,7 +726,7 @@
 				8E71C2BD1F77574500D198BD /* RWavePeakTime.storyboard */,
 				8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */,
 				8E71C2B61F77523900D198BD /* VTMorphology.storyboard */,
-				8E676B6D1CA07F740035244E /* Launch Screen.storyboard */,
+				8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -1065,6 +1065,7 @@
 			files = (
 				8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */,
 				8EC5C33F1AAA8997005BDAFD /* dofetilide.html in Resources */,
+				8EE071A5291ECF4C002EE004 /* Launch Screen.storyboard in Resources */,
 				8EC5C32C1AA0E407005BDAFD /* edoxaban.html in Resources */,
 				8EC19C36159FE0FA00975E2B /* InfoPlist.strings in Resources */,
 				8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */,
@@ -1094,7 +1095,6 @@
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
 				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
-				8E676B6E1CA07F740035244E /* Launch Screen.storyboard in Resources */,
 				8E71C2C41F775F0700D198BD /* Warfarin.storyboard in Resources */,
 				8EC5C33B1AAA8134005BDAFD /* sotalol.html in Resources */,
 			);
@@ -1402,7 +1402,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 53;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1413,7 +1413,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.23.1;
+				MARKETING_VERSION = 3.24.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1432,7 +1432,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 53;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1443,7 +1443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.23.1;
+				MARKETING_VERSION = 3.24.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
