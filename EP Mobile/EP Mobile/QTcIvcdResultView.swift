@@ -21,9 +21,9 @@ struct QTcIvcdResultView: View {
         NavigationView {
             List {
                 ForEach(qtcIvcdResultList.keys, id: \.self) { key in
-                    if let value: String = qtcIvcdResultList[key], let detail = //QTcIvcdViewModel.qtcIvcdResultDetails[key]
-                        QTcIvcdViewModel.getDetails(formula: qtcFormula, qtIvcdFormula: key)
+                    if let value: String = qtcIvcdResultList[key]
                     {
+                        let detail = QTcIvcdViewModel.getDetails(formula: qtcFormula, qtIvcdFormula: key)
                         NavigationLink(destination: QTcIvcdResultDetail(formula: key, value: value, detail: detail, lbbb: $lbbb)) {
                             Text(value)
                         }
