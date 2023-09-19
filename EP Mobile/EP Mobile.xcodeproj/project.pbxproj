@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1027,9 +1027,6 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
-					8EC19C26159FE0FA00975E2B = {
-						DevelopmentTeam = W74NPJXYEG;
-					};
 					8EC19C41159FE0FA00975E2B = {
 						ProvisioningStyle = Automatic;
 					};
@@ -1403,6 +1400,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 53;
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1433,6 +1431,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 53;
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
