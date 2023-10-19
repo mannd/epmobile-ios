@@ -75,8 +75,8 @@ struct FrailtyModel: InformationProvider {
     static func getReferences() -> [Reference] {
         var references: [Reference] = []
         let reference1 = Reference("Steverink N, Slaets, Schuurmans H, Lis  van. Measuring frailty. The Gerontologist. 2001;41:236-237.")
-        let reference2 = Reference("Schuurmans H, Steverink N, Lindenberg S, Frieswijk N, Slaets JPJ. Old or Frail: What Tells Us More? The Journals of Gerontology Series A: Biological Sciences and Medical Sciences. 2004;59(9):M962-M965.\ndoi:10.1093/gerona/59.9.M962")
-        let reference3 = Reference("Drubbel I, Bleijenberg N, Kranenburg G, et al. Identifying frailty: do the Frailty Index and Groningen Frailty Indicator cover different clinical perspectives? a cross-sectional study. BMC Fam Pract. 2013;14:64.\ndoi:10.1186/1471-2296-14-64")
+        let reference2 = Reference("Schuurmans H, Steverink N, Lindenberg S, Frieswijk N, Slaets JPJ. Old or Frail: What Tells Us More? The Journals of Gerontology Series A: Biological Sciences and Medical Sciences. 2004;59(9):M962-M965. doi:10.1093/gerona/59.9.M962")
+        let reference3 = Reference("Drubbel I, Bleijenberg N, Kranenburg G, et al. Identifying frailty: do the Frailty Index and Groningen Frailty Indicator cover different clinical perspectives? a cross-sectional study. BMC Fam Pract. 2013;14:64. doi:10.1186/1471-2296-14-64")
         references.append(reference1)
         references.append(reference2)
         references.append(reference3)

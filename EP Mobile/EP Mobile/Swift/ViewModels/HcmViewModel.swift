@@ -70,6 +70,7 @@ struct HcmViewModel {
         return result
     }
 
+    // TODO: Is this reference in proper EP Studios style??
     func getReference() -> String {
         return "O’Mahony C., Jichi F., Pavlou M., Monserrat L., Anastasakis A., Rapezzi C.  A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J [Internet] 2014 Aug [cited 2015 May 29];35(30):2010–2020. Available from: http://doi.org/10.1093/eurheartj/eht439"
     }
