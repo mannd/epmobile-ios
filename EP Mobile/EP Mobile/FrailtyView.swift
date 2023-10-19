@@ -79,11 +79,13 @@ struct FrailtyView: View {
     }
 
     func calculate() {
+        result = "\(frailtyModel.calculate())"
         textFieldIsFocused = false
     }
 
     func clear() {
-        shopping = false
+        frailtyModel = FrailtyModel()
+        clearResult()
     }
 
     func clearResult() {
@@ -111,8 +113,8 @@ struct YesNoPicker: View {
         Picker(selection: $value, label:
                 Text(label))
         { 
-            Text("No")
-            Text("Yes")
+            Text("No").tag(0)
+            Text("Yes").tag(1)
         }
     }
 }
@@ -125,9 +127,9 @@ struct YesSomtimesNoPicker: View {
         Picker(selection: $value, label:
                 Text(label))
         { 
-            Text("No")
-            Text("Sometimes")
-            Text("Yes")
+            Text("No").tag(0)
+            Text("Sometimes").tag(1)
+            Text("Yes").tag(2)
         }
     }
 }

@@ -103,6 +103,7 @@
 		8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD32AE041C10018A501 /* FrailtyModel.swift */; };
 		8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD52AE062730018A501 /* FrailtyTests.swift */; };
 		8E70DBD82AE0C7D10018A501 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */; };
+		8E70DBDA2AE0DE3E0018A501 /* FrailtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
 		8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */; };
@@ -341,6 +342,7 @@
 		8E70DBD32AE041C10018A501 /* FrailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyModel.swift; sourceTree = "<group>"; };
 		8E70DBD52AE062730018A501 /* FrailtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyTests.swift; sourceTree = "<group>"; };
 		8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
+		8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyViewController.swift; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
 		8E71C2B61F77523900D198BD /* VTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VTMorphology.storyboard; sourceTree = "<group>"; };
@@ -652,6 +654,7 @@
 				8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */,
 				8EF22160290782F6000EF617 /* InformationViewController.swift */,
 				8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */,
+				8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1205,6 +1208,7 @@
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
 				8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */,
+				8E70DBDA2AE0DE3E0018A501 /* FrailtyViewController.swift in Sources */,
 				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
