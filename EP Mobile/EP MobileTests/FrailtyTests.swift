@@ -32,35 +32,35 @@ final class FrailtyTests: XCTestCase {
 
     func testCalculate() {
         var frailty = FrailtyModel()
-        var result = frailty.calculate()
-        XCTAssertEqual(0, result)
+        var score = frailty.score()
+        XCTAssertEqual(0, score)
         frailty.fitness.value = 10
-        result = frailty.calculate()
-        XCTAssertEqual(0, result)
+        score = frailty.score()
+        XCTAssertEqual(0, score)
         // sometimesNoRule
         frailty.poorMemory.value = 0
-        result = frailty.calculate()
-        XCTAssertEqual(0, result)
+        score = frailty.score()
+        XCTAssertEqual(0, score)
         frailty.poorMemory.value = 1  // sometimes == no
-        result = frailty.calculate()
-        XCTAssertEqual(0, result)
+        score = frailty.score()
+        XCTAssertEqual(0, score)
         frailty.poorMemory.value = 2
-        result = frailty.calculate()
-        XCTAssertEqual(1, result)
+        score = frailty.score()
+        XCTAssertEqual(1, score)
         // sometimesYesRule
         frailty.feelNervous.value = 0
-        result = frailty.calculate()
-        XCTAssertEqual(1, result)
+        score = frailty.score()
+        XCTAssertEqual(1, score)
         frailty.feelNervous.value = 1
-        result = frailty.calculate()
-        XCTAssertEqual(2, result)  // sometimes == yes
+        score = frailty.score()
+        XCTAssertEqual(2, score)  // sometimes == yes
         frailty.feelNervous.value = 2
-        result = frailty.calculate()
-        XCTAssertEqual(2, result)
+        score = frailty.score()
+        XCTAssertEqual(2, score)
         // yesNoRule
         frailty.shopping.value = 1
-        result = frailty.calculate()
-        XCTAssertEqual(3, result)
+        score = frailty.score()
+        XCTAssertEqual(3, score)
     }
 
     func testReferenceFormatting() {

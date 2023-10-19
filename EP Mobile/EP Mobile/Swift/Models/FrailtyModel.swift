@@ -94,11 +94,16 @@ struct FrailtyModel: InformationProvider, Equatable {
     }
 
     func calculate() -> String {
-        let results = entries().map { $0.rule($0.value) }
-        let score = results.reduce(0, +)
+        let score = score()
         var message = "Score = \(score)\n"
         message += score >= 4 ? "Score indicates frailty." : "Score doesn't indicate frailty."
         return message
+    }
+
+    func score() -> Int {
+        let results = entries().map { $0.rule($0.value) }
+        return results.reduce(0, +)
+
     }
 
     func getDetails() -> String {
