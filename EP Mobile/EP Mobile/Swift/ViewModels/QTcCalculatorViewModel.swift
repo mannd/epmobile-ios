@@ -48,7 +48,7 @@ struct QTcCalculatorViewModel {
             return (ErrorMessage.invalidEntry, false)
         }
         guard !valuesOutOfRange() else {
-            return (ErrorMessage.outOfRange, false)
+            return (ErrorMessage.intervalOutOfRange, false)
         }
         let calculator = QTc.qtcCalculator(formula: formula)
         var flagResult: Bool = false

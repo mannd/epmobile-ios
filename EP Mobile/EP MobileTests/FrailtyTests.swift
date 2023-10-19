@@ -33,7 +33,7 @@ final class FrailtyTests: XCTestCase {
     func testCalculate() {
         var frailty = FrailtyModel()
         var result = frailty.calculate()
-        XCTAssertEqual(1, result)
+        XCTAssertEqual(0, result)
         frailty.fitness.value = 10
         result = frailty.calculate()
         XCTAssertEqual(0, result)
@@ -64,7 +64,7 @@ final class FrailtyTests: XCTestCase {
     }
 
     func testReferenceFormatting() {
-        var ref = FrailtyModel.getReferences()
+        let ref = FrailtyModel.getReferences()
         XCTAssertEqual("Schuurmans H, Steverink N, Lindenberg S, Frieswijk N, Slaets JPJ. Old or Frail: What Tells Us More? The Journals of Gerontology Series A: Biological Sciences and Medical Sciences. 2004;59(9):M962-M965.\n[doi:10.1093/gerona/59.9.M962](https://doi.org/10.1093/gerona/59.9.M962)", ref[1].getReferenceWithMarkdownLink())
     }
 }

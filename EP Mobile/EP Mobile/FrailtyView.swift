@@ -11,14 +11,11 @@ import SwiftUI
 fileprivate let calculatorName = "Groningen Frailty Indicator"
 
 struct FrailtyView: View {
-    @State private var shopping:Bool = false
     @State private var result: String = ""
     @State private var detailedResult: String = ""
     @State private var showInfo: Bool = false
 
-    @State var frailtyModel = FrailtyModel()
-
-    @FocusState private var textFieldIsFocused: Bool
+    @State var model = FrailtyModel()
 
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -30,34 +27,49 @@ struct FrailtyView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Form() {
-                    Section(header: Text("Mobility")) {
-                        Text("Is the patient able to carry out these tasks single handed without any help? (The use of help resources such as walking stick, walking frame, wheelchair, is considered independent)").bold().italic()
+                Form {
+                    Section(header: Text(FrailtyModel.mobilityHeader)) {
+                        Text(FrailtyModel.mobilityQuestion).italic()
                         List {
-                            YesNoPicker(value: $frailtyModel.shopping.value, label: frailtyModel.shopping.question)
-                            YesNoPicker(value: $frailtyModel.walkingOutside.value, label: frailtyModel.walkingOutside.question)
-                            YesNoPicker(value: $frailtyModel.dressing.value, label: frailtyModel.dressing.question)
-                            YesNoPicker(value: $frailtyModel.goingToToilet.value, label: frailtyModel.goingToToilet.question)
+                            YesNoPicker(value: $model.shopping.value, label: model.shopping.question, firstLabel: "Independent", secondLabel: "Dependent")
+                            YesNoPicker(value: $model.walkingOutside.value, label: model.walkingOutside.question, firstLabel: "Independent", secondLabel: "Dependent")
+                            YesNoPicker(value: $model.dressing.value, label: model.dressing.question, firstLabel: "Independent", secondLabel: "Dependent")
+                            YesNoPicker(value: $model.goingToToilet.value, label: model.goingToToilet.question, firstLabel: "Independent", secondLabel: "Dependent")
                         }
-                        .pickerStyle(.automatic)
                     }
-                    Section(header: Text("Physical Fitness")) { 
-                        Picker(selection: $frailtyModel.fitness.value, label: Text(frailtyModel.fitness.question)) {
+                    Section(header: Text(FrailtyModel.fitnessHeader)) {
+                        Picker(selection: $model.fitness.value, label: Text(model.fitness.question)) {
                             ForEach (0...10, id:\.self) { number in
                                 Text("\(number)")
                             }
                         }
-                        .pickerStyle(.automatic)
                     }
-                    Section(header: Text("Vision")) { }
-                    Section(header: Text("Hearing")) { }
-                    Section(header: Text("Nourishment")) { }
-                    Section(header: Text("Morbidity")) { }
-                    Section(header: Text("Cognition")) { }
-                    Section(header: Text("Psychosocial")) { }
+                    Section(header: Text(FrailtyModel.visionHeader)) {
+                        YesNoPicker(value: $model.poorVision.value, label: model.poorVision.question)
+
+                    }
+                    Section(header: Text(FrailtyModel.hearingHeader)) { 
+                        YesNoPicker(value: $model.poorHearing.value, label: model.poorHearing.question)
+                    }
+                    Section(header: Text(FrailtyModel.nourishmentHeader)) {
+                        YesNoPicker(value: $model.weightLoss.value, label: model.weightLoss.question)
+                    }
+                    Section(header: Text(FrailtyModel.morbidityHeader)) {
+                        YesNoPicker(value: $model.multipleMeds.value, label: model.multipleMeds.question)
+                    }
+                    Section(header: Text(FrailtyModel.cognitionHeader)) {
+                        YesSomtimesNoPicker(value: $model.poorMemory.value, label: model.poorMemory.question)
+                    }
+                    Section(header: Text(FrailtyModel.psychosocialHeader)) {
+                        YesSomtimesNoPicker(value: $model.feelEmpty.value, label: model.feelEmpty.question)
+                        YesSomtimesNoPicker(value: $model.missPeople.value, label: model.missPeople.question)
+                        YesSomtimesNoPicker(value: $model.feelAbandoned.value, label: model.feelAbandoned.question)
+                        YesSomtimesNoPicker(value: $model.feelSad.value, label: model.feelSad.question)
+                        YesSomtimesNoPicker(value: $model.feelNervous.value, label: model.feelNervous.question)
+                    }
                     Section(header: Text("Result")) {
                         HStack {
-                            Text(result)
+                            Text(result).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                             Spacer()
                             Button("Copy") {
                                 copy()
@@ -65,9 +77,10 @@ struct FrailtyView: View {
                         }
                     }
                 }
+                .pickerStyle(.automatic)
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: shopping, perform: { _ in clearResult() })
+            .onChange(of: model, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: FrailtyModel.getInstructions(), key: FrailtyModel.getKey(), references: FrailtyModel.getReferences(), name: calculatorName), isActive: $showInfo) {
                 Button(action: { showInfo.toggle() }) {
@@ -79,12 +92,21 @@ struct FrailtyView: View {
     }
 
     func calculate() {
-        result = "\(frailtyModel.calculate())"
-        textFieldIsFocused = false
+        do {
+            try model.validateEntries()
+            result = "\(model.calculate())"
+            detailedResult = model.getDetails()
+        } catch {
+            if let error = error as? FrailtyError {
+                result = error.description
+            }
+            result = ErrorMessage.unknownError
+
+        }
     }
 
     func clear() {
-        frailtyModel = FrailtyModel()
+        model = FrailtyModel()
         clearResult()
     }
 
@@ -108,13 +130,15 @@ struct FrailtyView: View {
 struct YesNoPicker: View {
     @Binding var value: Int
     var label: String
+    var firstLabel: String = "No"
+    var secondLabel: String = "Yes"
 
     var body: some View {
         Picker(selection: $value, label:
                 Text(label))
         { 
-            Text("No").tag(0)
-            Text("Yes").tag(1)
+            Text(firstLabel).tag(0)
+            Text(secondLabel).tag(1)
         }
     }
 }

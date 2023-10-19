@@ -10,16 +10,28 @@ import Foundation
 
 enum FrailtyError: Error {
     case invalidEntry
+    case outOfRangeError
 
     var description: String {
         switch self {
         case .invalidEntry:
             return ErrorMessage.invalidEntry
+        case .outOfRangeError:
+            return ErrorMessage.outOfRange
         }
     }
 }
 
-struct FrailtyModel: InformationProvider {
+struct FrailtyModel: InformationProvider, Equatable {
+    static func == (lhs: FrailtyModel, rhs: FrailtyModel) -> Bool {
+        for i in 0..<lhs.entries().count {
+            if rhs.entries()[i].value != lhs.entries()[i].value {
+                return false
+            }
+        }
+        return true
+    }
+
     // Tasks
 
     struct FrailtyEntry {
@@ -34,22 +46,38 @@ struct FrailtyModel: InformationProvider {
     static let sometimesNoRule = { (v: Int) -> Int in v == 2 ? 1 : 0}
     static let sometimesYesRule = { (v: Int) -> Int in v == 0 ? 0 : 1}
 
+    static let mobilityQuestion = "Is the patient able to carry out these tasks single handed without any help? (The use of help resources such as walking stick, walking frame, wheelchair, is considered independent)"
+    static let mobilityHeader = "Mobility"
     var shopping = FrailtyEntry(question: "Shopping")
     var walkingOutside = FrailtyEntry(question: "Walking around outside (around the house or to the neighbours)")
     var dressing = FrailtyEntry(question: "Dressing and undressing")
     var goingToToilet = FrailtyEntry(question: "Going to the toilet")
-    // Other questions
-    var fitness = FrailtyEntry(question: "What mark do you give yourself for physical fitness? (Scale 0 to 10)", range: 0...10, rule: fitnessRule)
-    var poorVision = FrailtyEntry(question: "Do you experience problems in daily life due to poor vision?", range: 0...2)
-    var poorHearing = FrailtyEntry(question: "Do you experience problems in daily life due to being hard of hearing?", range: 0...3)
-    var weightLoss = FrailtyEntry(question: "During the last 6 months have you lost a lot of weight unwillingly? (3 kg in 1 month or 6 kg in 2 months)", range: 0...1)
-    var multipleMeds = FrailtyEntry(question: "Do you take 4 or more different types of medicine?", range: 0...1)
-    var poorMemory = FrailtyEntry(question: "Do you have any complaints about your memory?", range: 0...2, rule: sometimesNoRule)
-    var feelEmpty = FrailtyEntry(question: "Do you sometimes experience emptiness around yourself?", range: 0...2, rule: sometimesYesRule)
-    var missPeople = FrailtyEntry(question: "Do you sometimes miss people around yourself?", range: 0...2, rule: sometimesYesRule)
-    var feelAbandoned = FrailtyEntry(question: "Do you sometimes feel abandoned?", range: 0...2, rule: sometimesYesRule)
-    var feelSad = FrailtyEntry(question: "Have you recently felt downhearted or sad?", range: 0...2, rule: sometimesYesRule)
-    var feelNervous = FrailtyEntry(question: "Have you recently felt nervous or anxious?", range:0...2, rule: sometimesYesRule)
+
+    static let fitnessHeader = "Physical Fitness"
+    // Default value of 10 goes along with other default values that assume no frailty.
+    var fitness = FrailtyEntry(question: "What mark does the patient give himself/herself for physical fitness? (Scale 0 to 10)", value: 10, range: 0...10, rule: fitnessRule)
+
+    static let visionHeader = "Vision"
+    var poorVision = FrailtyEntry(question: "Does the patient experience problems in daily life due to poor vision?", range: 0...2)
+
+    static let hearingHeader = "Hearing"
+    var poorHearing = FrailtyEntry(question: "Does the patient experience problems in daily life due to being hard of hearing?", range: 0...3)
+
+    static let nourishmentHeader = "Nourishment"
+    var weightLoss = FrailtyEntry(question: "During the last 6 months has the patient lost a lot of weight unwillingly? (3 kg in 1 month or 6 kg in 2 months)", range: 0...1)
+
+    static let morbidityHeader = "Morbidity"
+    var multipleMeds = FrailtyEntry(question: "Does the patient take 4 or more different types of medicine?", range: 0...1)
+
+    static let cognitionHeader = "Cognition (Perception)"
+    var poorMemory = FrailtyEntry(question: "Does the patient have any complaints about his/her memory or is the patient known to have a dementia syndrome?", range: 0...2, rule: sometimesNoRule)
+
+     static let psychosocialHeader = "Psychosocial"
+    var feelEmpty = FrailtyEntry(question: "Does the patient sometimes experience emptiness around him/her?", range: 0...2, rule: sometimesYesRule)
+    var missPeople = FrailtyEntry(question: "Does the patient sometimes miss people around him/her?", range: 0...2, rule: sometimesYesRule)
+    var feelAbandoned = FrailtyEntry(question: "Does the patient sometimes feel abandoned?", range: 0...2, rule: sometimesYesRule)
+    var feelSad = FrailtyEntry(question: "Has the patient recently felt downhearted or sad?", range: 0...2, rule: sometimesYesRule)
+    var feelNervous = FrailtyEntry(question: "Has the patient recently felt nervous or anxious?", range:0...2, rule: sometimesYesRule)
 
     func entries() -> [FrailtyEntry] {
         return [shopping, walkingOutside, dressing, goingToToilet, fitness, poorVision,
@@ -60,18 +88,51 @@ struct FrailtyModel: InformationProvider {
     func validateEntries() throws {
         for entry in entries() {
             if !entry.range.contains(entry.value) {
-                throw FrailtyError.invalidEntry
+                throw FrailtyError.outOfRangeError
             }
         }
     }
 
-    func calculate() -> Int {
+    func calculate() -> String {
         let results = entries().map { $0.rule($0.value) }
-        return results.reduce(0, +)
+        let score = results.reduce(0, +)
+        var message = "Score = \(score)\n"
+        message += score >= 4 ? "Score indicates frailty." : "Score doesn't indicate frailty."
+        return message
+    }
+
+    func getDetails() -> String {
+        var result = "Risk score: Groningen Frailty Indicator"
+        result += "\n(note the numbers are the points generated"
+        result += "\nby the answers to the questions, not the answers themselves.)"
+        result += "\nRisks:"
+        result += "\nDifficulty shopping: \(shopping.rule(shopping.value))"
+        result += "\nDifficulty walking: \(walkingOutside.rule(walkingOutside.value))"
+        result += "\nDifficulty dressing: \(dressing.rule(dressing.value))"
+        result += "\nDifficulty going to the toilet: \(goingToToilet.rule(goingToToilet.value))"
+        result += "\nPhysical fitness: \(fitness.rule(fitness.value))"
+        result += "\nPoor vision: \(poorVision.rule(poorVision.value))"
+        result += "\nPoor hearing: \(poorHearing.rule(poorHearing.value))"
+        result += "\nWeight loss: \(weightLoss.rule(weightLoss.value))"
+        result += "\nMultiple medications: \(multipleMeds.rule(multipleMeds.value))"
+        result += "\nMemory loss: \(poorMemory.rule(poorMemory.value))"
+        result += "\nExperience emptiness: \(feelEmpty.rule(feelEmpty.value))"
+        result += "\nMiss people: \(missPeople.rule(missPeople.value))"
+        result += "\nFeel abandoned: \(feelAbandoned.rule(feelAbandoned.value))"
+        result += "\nFeel sad: \(feelSad.rule(feelSad.value))"
+        result += "\nFeel nervous: \(feelNervous.rule(feelNervous.value))"
+        result += "\n"
+        result += calculate()
+        result += "\nReferences:\n"
+        for reference in Self.getReferences() {
+            result += reference.getPlainTextReference()
+            result += "\n"
+        }
+        return result
     }
 
     // MARK: InformationProvider
-    
+
     static func getReferences() -> [Reference] {
         var references: [Reference] = []
         let reference1 = Reference("Steverink N, Slaets, Schuurmans H, Lis  van. Measuring frailty. The Gerontologist. 2001;41:236-237.")
@@ -82,14 +143,14 @@ struct FrailtyModel: InformationProvider {
         references.append(reference3)
         return references
     }
-    
+
     static func getInstructions() -> String? {
-        return nil
+        return "The Groningen Frailty Indicator (GFI) is a validated, 15-item questionnaire with a score range from zero to fifteen that assesses the physical, cognitive, social, and psychological domains. A GFI score of four or greater is considered the cut-off point for frailty."
     }
-    
+
     static func getKey() -> String? {
         return nil
     }
-    
-    
+
+
 }
