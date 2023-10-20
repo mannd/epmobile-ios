@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -100,6 +100,10 @@
 		8E6381C1282AE53E00249E87 /* WeightCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */; };
 		8E6381C3282C16F900249E87 /* WeightCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */; };
 		8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */; };
+		8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD32AE041C10018A501 /* FrailtyModel.swift */; };
+		8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD52AE062730018A501 /* FrailtyTests.swift */; };
+		8E70DBD82AE0C7D10018A501 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */; };
+		8E70DBDA2AE0DE3E0018A501 /* FrailtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */; };
 		8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */; };
 		8E71C2B71F77523900D198BD /* VTMorphology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2B61F77523900D198BD /* VTMorphology.storyboard */; };
 		8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2BB1F7755BB00D198BD /* LQTSSubtypes.storyboard */; };
@@ -335,6 +339,10 @@
 		8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorView.swift; sourceTree = "<group>"; };
 		8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorViewController.swift; sourceTree = "<group>"; };
 		8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
+		8E70DBD32AE041C10018A501 /* FrailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyModel.swift; sourceTree = "<group>"; };
+		8E70DBD52AE062730018A501 /* FrailtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyTests.swift; sourceTree = "<group>"; };
+		8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
+		8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyViewController.swift; sourceTree = "<group>"; };
 		8E71C2B11F77202C00D198BD /* EPSBrugadaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaTableViewController.h; sourceTree = "<group>"; };
 		8E71C2B21F77202C00D198BD /* EPSBrugadaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaTableViewController.m; sourceTree = "<group>"; };
 		8E71C2B61F77523900D198BD /* VTMorphology.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VTMorphology.storyboard; sourceTree = "<group>"; };
@@ -588,6 +596,7 @@
 				8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */,
 				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
 				8EB3D37D28EFC79800023F29 /* InformationView.swift */,
+				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -611,17 +620,18 @@
 		8E18B36E2815036F0043FD00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
-				8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */,
-				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
-				8E8FAAE22817297600789746 /* Patient.swift */,
-				8E8FAAE62817806000789746 /* Drug.swift */,
-				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
-				8E6381B8282982C400249E87 /* Weight.swift */,
-				8E808362282DC62100E88A4E /* Warfarin.swift */,
-				8E8C89E4283339FE0057B237 /* Entrainment.swift */,
-				8E0DF879283C522D00367D4A /* HcmModel.swift */,
 				8ED0185F2918462D007E5101 /* AppleScore.swift */,
+				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
+				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
+				8E8FAAE62817806000789746 /* Drug.swift */,
+				8E8C89E4283339FE0057B237 /* Entrainment.swift */,
+				8E70DBD32AE041C10018A501 /* FrailtyModel.swift */,
+				8E0DF879283C522D00367D4A /* HcmModel.swift */,
+				8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */,
+				8E8FAAE22817297600789746 /* Patient.swift */,
+				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
+				8E808362282DC62100E88A4E /* Warfarin.swift */,
+				8E6381B8282982C400249E87 /* Weight.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -644,6 +654,7 @@
 				8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */,
 				8EF22160290782F6000EF617 /* InformationViewController.swift */,
 				8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */,
+				8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -960,6 +971,7 @@
 				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
 				8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */,
 				8E2C4261291EAA0B00E6BEED /* UnitTests.swift */,
+				8E70DBD52AE062730018A501 /* FrailtyTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1021,15 +1033,13 @@
 		8EC19C1E159FE0FA00975E2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = EPS;
 				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
-					8EC19C26159FE0FA00975E2B = {
-						DevelopmentTeam = W74NPJXYEG;
-					};
 					8EC19C41159FE0FA00975E2B = {
 						ProvisioningStyle = Automatic;
 					};
@@ -1167,6 +1177,7 @@
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
 				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
 				8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */,
+				8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */,
 				8EB3D37E28EFC79800023F29 /* InformationView.swift in Sources */,
 				8E59E969281A4071003C485F /* Keys.swift in Sources */,
 				8E321C6D28257AB50017EDB0 /* QTcIvcdViewModel.swift in Sources */,
@@ -1192,10 +1203,12 @@
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
 				8EEE9BB7283D8565005AB875 /* HcmView.swift in Sources */,
 				8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */,
+				8E70DBD82AE0C7D10018A501 /* FrailtyView.swift in Sources */,
 				8EC1D2AD1F78A36F00F46734 /* EPSSharedMethods.m in Sources */,
 				8E00E94617B6EB610007A146 /* EPSHasBledRiskScore.m in Sources */,
 				8E00E94917B6F0050007A146 /* EPSHemorrhagesRiskScore.m in Sources */,
 				8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */,
+				8E70DBDA2AE0DE3E0018A501 /* FrailtyViewController.swift in Sources */,
 				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
@@ -1252,6 +1265,7 @@
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
+				8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
 				8E321C6B2824A0310017EDB0 /* QTcIvcdTests.swift in Sources */,
@@ -1322,6 +1336,7 @@
 				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1376,6 +1391,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1402,7 +1418,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 54;
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1413,7 +1430,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.24.0;
+				MARKETING_VERSION = 3.25.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1432,7 +1449,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 54;
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1443,7 +1461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.24.0;
+				MARKETING_VERSION = 3.25.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1464,7 +1482,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -1499,7 +1517,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";

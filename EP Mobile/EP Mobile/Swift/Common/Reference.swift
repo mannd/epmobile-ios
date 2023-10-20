@@ -72,6 +72,6 @@ final class Reference: NSObject {
 
     @objc
     func getPlainTextReference() -> String {
-        return text + "\n" + link
+        return text + (link.isEmpty ? "" : "\n" + link)
     }
 }
