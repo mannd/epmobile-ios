@@ -16,6 +16,7 @@
 #import "EPSAVAnnulusViewController.h"
 #import "EPSVereckeiAlgorithm.h"
 #import "EPSDavilaAlgorithm.h"
+#import "EPSV2TransitionRatio.h"
 #import "EPSLogging.h"
 #import "EPSTabBarViewController.h"
 #import "EP_Mobile-Swift.h"
@@ -28,6 +29,7 @@
 #define MODIFIED_ARRUDA_WPW @"ModifiedArrudaWPW"
 #define VERECKEI_WCT @"VereckeiWCT"
 #define DAVILA_WPW @"DavilaWPW"
+#define V2TRANSITION_VT @"V2TransitionVT"
 
 @interface EPSSimpleAlgorithmViewController ()
 
@@ -75,6 +77,8 @@
         algorithm = [[EPSVereckeiAlgorithm alloc] init];
     else if ([self.algorithmName isEqualToString:DAVILA_WPW])
         algorithm = [[EPSDavilaAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:V2TRANSITION_VT])
+        algorithm = [[EPSV2TransitionRatio alloc] init];
     self.navigationItem.title = [algorithm name];
 
     // ...

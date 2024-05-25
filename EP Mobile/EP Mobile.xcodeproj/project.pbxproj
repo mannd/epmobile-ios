@@ -80,6 +80,7 @@
 		8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */; };
 		8E4DB6CA291AEDFE00C29E0D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4DB6C9291AEDFE00C29E0D /* Alerts.swift */; };
 		8E503319283D408C0008A614 /* HcmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E503318283D408C0008A614 /* HcmTests.swift */; };
+		8E507C782C02727C0013537F /* EPSV2TransitionRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E507C772C02727C0013537F /* EPSV2TransitionRatio.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
 		8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */; };
@@ -310,6 +311,8 @@
 		8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAccessoryPathwayLocations.h; sourceTree = "<group>"; };
 		8E4DB6C9291AEDFE00C29E0D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		8E503318283D408C0008A614 /* HcmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmTests.swift; sourceTree = "<group>"; };
+		8E507C762C02727C0013537F /* EPSV2TransitionRatio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSV2TransitionRatio.h; sourceTree = "<group>"; };
+		8E507C772C02727C0013537F /* EPSV2TransitionRatio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSV2TransitionRatio.m; sourceTree = "<group>"; };
 		8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskFactor.h; sourceTree = "<group>"; };
 		8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSRiskFactor.m; sourceTree = "<group>"; };
 		8E511E6415BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWarfarinDailyDoseCalculator.h; sourceTree = "<group>"; };
@@ -781,6 +784,8 @@
 				8EBFBBD5162CA6ED00D3B964 /* EPSStepAlgorithmProtocol.h */,
 				8ECDDF9B18E1BD090018A0EF /* EPSVereckeiAlgorithm.h */,
 				8ECDDF9C18E1BD090018A0EF /* EPSVereckeiAlgorithm.m */,
+				8E507C762C02727C0013537F /* EPSV2TransitionRatio.h */,
+				8E507C772C02727C0013537F /* EPSV2TransitionRatio.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -1037,7 +1042,7 @@
 				CLASSPREFIX = EPS;
 				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C41159FE0FA00975E2B = {
@@ -1212,6 +1217,7 @@
 				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
+				8E507C782C02727C0013537F /* EPSV2TransitionRatio.m in Sources */,
 				8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */,
 				8EEE9BB5283D5055005AB875 /* HcmViewModel.swift in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
@@ -1309,6 +1315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -1366,6 +1373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
