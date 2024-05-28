@@ -137,16 +137,22 @@
 
 - (void)setButtons {
     self.backButton.enabled = (step != 1);
-    if (step == SPECIAL_STEP_1) {
+    if (step == SPECIAL_STEP_1) { // used in OutflowVT
         [self.yesButton setTitle:@"RV" forState:UIControlStateNormal];
         [self.noButton setTitle:@"LV" forState:UIControlStateNormal];
+    }
+    else if (step == SPECIAL_STEP_2) { // used in V2TransitionRatio
+        [self.yesButton setTitle:@"< 0.6" forState:UIControlStateNormal];
+        [self.noButton setTitle:@" ≥ 0.6" forState:UIControlStateNormal];
+        [self.morphologyCriteriaButton setTitle:@"V2 Transition Calculator" forState:UIControlStateNormal];
     }
     else {
         [self.yesButton setTitle:@"Yes" forState:UIControlStateNormal];
         [self.noButton setTitle:@"No" forState:UIControlStateNormal];
     }
     // ugly, I know
-    self.morphologyCriteriaButton.hidden = !([self.algorithmName isEqualToString:BRUGADA_WCT] && step == 4);
+    self.morphologyCriteriaButton.hidden = !([self.algorithmName isEqualToString:BRUGADA_WCT] && step == 4)
+        && step != SPECIAL_STEP_2;
 }
 
 

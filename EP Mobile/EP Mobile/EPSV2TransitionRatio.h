@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EPSStepAlgorithmProtocol.h"
-#define SPECIAL_STEP_1 777
+#define SPECIAL_STEP_2 888
 
 NS_ASSUME_NONNULL_BEGIN
 @interface EPSV2TransitionRatio : NSObject <EPSStepAlgorithmProtocol>

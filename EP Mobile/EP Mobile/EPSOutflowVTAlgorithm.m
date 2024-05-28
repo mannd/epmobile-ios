@@ -125,11 +125,9 @@ const int supraValvularStep = 9;
         message = isCaudal ? [message stringByAppendingString:@"\nCaudal (>2 cm from pulmonic valve)"] : [message stringByAppendingString:@"\nCranial (<2 cm from pulmonic valve)"];
     } else if (isLvot) {
         message = [message stringByAppendingString:@"Left Ventricular Outflow Tract"];
-        message = isSupraValvular ? [message stringByAppendingString:@"\nSupravalvular (aortic cusp) Location.\nTransition is in V2 or V3 with origin in the right coronary cusp, and in V1 or V2 in the left coronary cusp.  Left coronary cusp VT is often associated with a W- or M-shaped pattern in V1."] : [message stringByAppendingString:@"\nSubvalvular Location.\nVT from the aorto-mitral                                                                                                                                                                                                                                                                                                                  continuity often has a qR pattern in V1.  VT from the mitral annulus has an R in V1."];
+        message = isSupraValvular ? [message stringByAppendingString:@"\nSupravalvular (aortic cusp) Location.\nTransition is in V2 or V3 with origin in the right coronary cusp, and in V1 or V2 in the left coronary cusp.  Left coronary cusp VT is often associated with a W- or M-shaped pattern in V1."] : [message stringByAppendingString:@"\nSubvalvular Location.\nVT from the aorto-mitral continuity often has a qR pattern in V1.  VT from the mitral annulus has an R in V1."];
     } else
         message = [message stringByAppendingString:@"Location can't be determined."];
-
-    
     return message;
 }
 
