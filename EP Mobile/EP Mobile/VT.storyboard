@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="giy-zl-bNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="giy-zl-bNh">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -133,6 +133,25 @@ Shortest RS complex (RS): Measured from the earliest ventricular activation to t
                                             <segue destination="9iO-eK-0Ty" kind="show" identifier="OutflowVTSegue" id="T9m-qH-TX2"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="jOc-rR-phi" style="IBUITableViewCellStyleDefault" id="xzK-Gk-MtJ">
+                                        <rect key="frame" x="0.0" y="182" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xzK-Gk-MtJ" id="Lxq-1m-C1y">
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="V2 Transition Ratio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOc-rR-phi">
+                                                    <rect key="frame" x="16" y="0.0" width="324.5" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9iO-eK-0Ty" kind="show" identifier="V2TransitionSegue" id="lZ3-CU-W1x"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -150,14 +169,16 @@ Shortest RS complex (RS): Measured from the earliest ventricular activation to t
         <!--SimpleAlgorithm-->
         <scene sceneID="sGF-Ra-xDZ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SimpleAlgorithm" storyboardName="MainStoryboard" referencedIdentifier="SimpleAlgorithm" id="9iO-eK-0Ty" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SimpleAlgorithm" storyboardName="MainStoryboard" referencedIdentifier="SimpleAlgorithm" id="9iO-eK-0Ty" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iyy-7j-zuj"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMr-9O-J3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5823" y="-2560"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BXP-mT-oa5"/>
+        <segue reference="lZ3-CU-W1x"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="epivt" width="357" height="282"/>

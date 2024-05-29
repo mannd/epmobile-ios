@@ -26,4 +26,6 @@
 - (IBAction)yesButtonPushed:(id)sender;
 - (IBAction)noButtonPushed:(id)sender;
 - (IBAction)backButtonPushed:(id)sender;
+- (IBAction)morphologyButtonPushed:(id)sender;
+
 @end
