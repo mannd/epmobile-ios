@@ -124,6 +124,12 @@
         [self showResults];
 }
 
+- (IBAction)morphologyButtonPushed:(id)sender {
+    if ([self.algorithmName isEqualToString:V2TRANSITION_VT]) {
+        [V2CalculatorViewController showWithVc:self];
+    }
+}
+
 - (IBAction)backButtonPushed:(id)sender {
     NSString *question = [algorithm backResult:&step];
     [self setButtons];
@@ -155,13 +161,21 @@
         && step != SPECIAL_STEP_2;
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([self.algorithmName isEqualToString:V2TRANSITION_VT]) {
+        return false;
+    }
+    return true;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"BrugadaMorphologySegue"]) {
-        EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
-        vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
-        vc.name = @"Brugada Algorithm";
+        if ([self.algorithmName isEqualToString:BRUGADA_WCT]) {
+            EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
+            vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
+            vc.name = @"Brugada Algorithm";
+        }
     }
     if ([segueIdentifier isEqualToString:@"MapSegue"]) {
         EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];
