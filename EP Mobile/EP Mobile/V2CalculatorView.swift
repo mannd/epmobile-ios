@@ -22,9 +22,7 @@ struct V2CalculatorView: View {
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        formatter.zeroSymbol = ""
         formatter.maximumFractionDigits = 1
-        formatter.minimum = 0
         return formatter
     }()
 
@@ -35,21 +33,21 @@ struct V2CalculatorView: View {
                     Section(header: Text("VT or PVC")) {
                         HStack {
                             Text("R wave in V2")
-                            TextField("R wave in V2", value: $rVT, formatter: Self.numberFormatter)
+                            TextField("0", value: $rVT, formatter: Self.numberFormatter)
                         }
                         HStack {
                             Text("S wave in V2")
-                            TextField("S wave in V2", value: $sVT, formatter: Self.numberFormatter)
+                            TextField("0", value: $sVT, formatter: Self.numberFormatter)
                         }
                     }
                     Section(header: Text("Sinus rhythm")) {
                         HStack {
                             Text("R wave in V2")
-                            TextField("R wave in V2", value: $rSR, formatter: Self.numberFormatter)
+                            TextField("0", value: $rSR, formatter: Self.numberFormatter)
                         }
                         HStack {
                             Text("S wave in V2")
-                            TextField("S wave in V2", value: $sSR, formatter: Self.numberFormatter)
+                            TextField("0", value: $sSR, formatter: Self.numberFormatter)
                         }
                     }
                     Section(header: Text("Result")) {
@@ -78,7 +76,7 @@ struct V2CalculatorView: View {
 
     func calculate() {
         let params = V2TransitionParameters(rVT: rVT, sVT: sVT, rSR: rSR, sSR: sSR)
-        var ratio = model.calculate(parameters: params)
+        let ratio = model.calculate(parameters: params)
         guard let ratio = ratio else {
             result = "ERROR"
             return
