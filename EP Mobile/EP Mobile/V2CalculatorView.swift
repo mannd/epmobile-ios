@@ -52,7 +52,10 @@ struct V2CalculatorView: View {
                     }
                     Section(header: Text("Result")) {
                         HStack {
-                            Text(result).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                            Text(result)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                            .lineLimit(nil)
+
                         }
                     }
                 }
@@ -85,7 +88,7 @@ struct V2CalculatorView: View {
         var message = ratioLessThan06 ? "RVOT" : "LVOT"
         message = "VT location is \(message)"
         let ratioString = String(format: "%.2f", ratio)
-        result = "V2 transition ration = \(ratioString)\n" + message
+        result = "V2 transition ratio = \(ratioString)\n" + message
     }
 
     func clear() {
