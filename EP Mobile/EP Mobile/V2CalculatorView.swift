@@ -78,7 +78,7 @@ struct V2CalculatorView: View {
         let params = V2TransitionParameters(rVT: rVT, sVT: sVT, rSR: rSR, sSR: sSR)
         let ratio = model.calculate(parameters: params)
         guard let ratio = ratio else {
-            result = "ERROR"
+            result = "INVALID"
             return
         }
         let ratioLessThan06 = ratio < 0.6
