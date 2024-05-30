@@ -16,6 +16,7 @@
 #import "EPSAVAnnulusViewController.h"
 #import "EPSVereckeiAlgorithm.h"
 #import "EPSDavilaAlgorithm.h"
+#import "EPSV2TransitionRatio.h"
 #import "EPSLogging.h"
 #import "EPSTabBarViewController.h"
 #import "EP_Mobile-Swift.h"
@@ -28,6 +29,7 @@
 #define MODIFIED_ARRUDA_WPW @"ModifiedArrudaWPW"
 #define VERECKEI_WCT @"VereckeiWCT"
 #define DAVILA_WPW @"DavilaWPW"
+#define V2TRANSITION_VT @"V2TransitionVT"
 
 @interface EPSSimpleAlgorithmViewController ()
 
@@ -75,6 +77,8 @@
         algorithm = [[EPSVereckeiAlgorithm alloc] init];
     else if ([self.algorithmName isEqualToString:DAVILA_WPW])
         algorithm = [[EPSDavilaAlgorithm alloc] init];
+    else if ([self.algorithmName isEqualToString:V2TRANSITION_VT])
+        algorithm = [[EPSV2TransitionRatio alloc] init];
     self.navigationItem.title = [algorithm name];
 
     // ...
@@ -120,6 +124,12 @@
         [self showResults];
 }
 
+- (IBAction)morphologyButtonPushed:(id)sender {
+    if ([self.algorithmName isEqualToString:V2TRANSITION_VT]) {
+        [V2CalculatorViewController showWithVc:self];
+    }
+}
+
 - (IBAction)backButtonPushed:(id)sender {
     NSString *question = [algorithm backResult:&step];
     [self setButtons];
@@ -133,25 +143,39 @@
 
 - (void)setButtons {
     self.backButton.enabled = (step != 1);
-    if (step == SPECIAL_STEP_1) {
+    if (step == SPECIAL_STEP_1) { // used in OutflowVT
         [self.yesButton setTitle:@"RV" forState:UIControlStateNormal];
         [self.noButton setTitle:@"LV" forState:UIControlStateNormal];
+    }
+    else if (step == SPECIAL_STEP_2) { // used in V2TransitionRatio
+        [self.yesButton setTitle:@"< 0.6" forState:UIControlStateNormal];
+        [self.noButton setTitle:@" ≥ 0.6" forState:UIControlStateNormal];
+        [self.morphologyCriteriaButton setTitle:@"V2 Transition Calculator" forState:UIControlStateNormal];
     }
     else {
         [self.yesButton setTitle:@"Yes" forState:UIControlStateNormal];
         [self.noButton setTitle:@"No" forState:UIControlStateNormal];
     }
     // ugly, I know
-    self.morphologyCriteriaButton.hidden = !([self.algorithmName isEqualToString:BRUGADA_WCT] && step == 4);
+    self.morphologyCriteriaButton.hidden = !([self.algorithmName isEqualToString:BRUGADA_WCT] && step == 4)
+        && step != SPECIAL_STEP_2;
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([self.algorithmName isEqualToString:V2TRANSITION_VT]) {
+        return false;
+    }
+    return true;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     if ([segueIdentifier isEqualToString:@"BrugadaMorphologySegue"]) {
-        EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
-        vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
-        vc.name = @"Brugada Algorithm";
+        if ([self.algorithmName isEqualToString:BRUGADA_WCT]) {
+            EPSTabBarViewController *vc = (EPSTabBarViewController *)[segue destinationViewController];
+            vc.references = [NSArray arrayWithObject:[Reference referenceFromCitation:@"Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation. 1991;83(5):1649-1659. doi:10.1161/01.cir.83.5.1649"]];
+            vc.name = @"Brugada Algorithm";
+        }
     }
     if ([segueIdentifier isEqualToString:@"MapSegue"]) {
         EPSAVAnnulusViewController *vc = (EPSAVAnnulusViewController *)[segue destinationViewController];
