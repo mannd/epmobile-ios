@@ -36,5 +36,5 @@ The ARVC risk calculator is based on a similar calculator
 David Mann
 
 Email: [mannd@epstudiossoftware.com](mailto:mannd@epstudiossoftware.com)  
-Website: [http://www.epstudiossoftware.com](http://www.epstudiossoftware.com)   
+Website: [https://www.epstudiossoftware.com](http://www.epstudiossoftware.com)   
 
