@@ -105,6 +105,7 @@
 		8E6A354E2C0762D600A94CD3 /* V2CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */; };
 		8E6A35502C07696B00A94CD3 /* V2CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */; };
 		8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */; };
+		8E6CD5DC2CC032BB00C41E9C /* HCMSCDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DB2CC032BB00C41E9C /* HCMSCDTableViewController.swift */; };
 		8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD32AE041C10018A501 /* FrailtyModel.swift */; };
 		8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD52AE062730018A501 /* FrailtyTests.swift */; };
 		8E70DBD82AE0C7D10018A501 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */; };
@@ -350,6 +351,7 @@
 		8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2CalculatorView.swift; sourceTree = "<group>"; };
 		8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2CalculatorViewController.swift; sourceTree = "<group>"; };
 		8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
+		8E6CD5DB2CC032BB00C41E9C /* HCMSCDTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCMSCDTableViewController.swift; sourceTree = "<group>"; };
 		8E70DBD32AE041C10018A501 /* FrailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyModel.swift; sourceTree = "<group>"; };
 		8E70DBD52AE062730018A501 /* FrailtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyTests.swift; sourceTree = "<group>"; };
 		8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
@@ -669,6 +671,7 @@
 				8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */,
 				8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */,
 				8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */,
+				8E6CD5DB2CC032BB00C41E9C /* HCMSCDTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1151,6 +1154,7 @@
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
 				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
+				8E6CD5DC2CC032BB00C41E9C /* HCMSCDTableViewController.swift in Sources */,
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
 				8EBCC8122826D90D001ABD9E /* QTcIvcdResultView.swift in Sources */,
