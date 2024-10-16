@@ -1,5 +1,5 @@
 //
-//  HCMSCDTableViewController.swift
+//  HcmScdTableViewController.swift
 //  EP Mobile
 //
 //  Created by David Mann on 10/16/24.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class HCMSCDTableViewController: UITableViewController {
+class HcmScdTableViewController: UITableViewController {
     override func viewDidLoad() {
-    
         super.viewDidLoad()
-        
-        
-        }
+    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
@@ -22,11 +19,12 @@ class HCMSCDTableViewController: UITableViewController {
             RiskScoreViewController.show(vc: self, riskScore: EPSHcmRiskScore())
         case 1:
             HcmViewController.show(vc: self)
-
-            //            [HcmViewController showWithVc:self];
-        default: break
-
+        case 2:
+            HcmScd2020ViewController.show(vc: self)
+        case 3:
+            HcmScd2022ViewController.show(vc: self)
+        default:
+            break
         }
-
     }
 }

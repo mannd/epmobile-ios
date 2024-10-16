@@ -105,7 +105,11 @@
 		8E6A354E2C0762D600A94CD3 /* V2CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */; };
 		8E6A35502C07696B00A94CD3 /* V2CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */; };
 		8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */; };
-		8E6CD5DC2CC032BB00C41E9C /* HCMSCDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DB2CC032BB00C41E9C /* HCMSCDTableViewController.swift */; };
+		8E6CD5DC2CC032BB00C41E9C /* HcmScdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DB2CC032BB00C41E9C /* HcmScdTableViewController.swift */; };
+		8E6CD5DE2CC03B8100C41E9C /* HcmScd2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DD2CC03B8100C41E9C /* HcmScd2020.swift */; };
+		8E6CD5E02CC03B9200C41E9C /* HcmScd2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DF2CC03B9200C41E9C /* HcmScd2022.swift */; };
+		8E6CD5E22CC03BEF00C41E9C /* HcmScd2020ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5E12CC03BEF00C41E9C /* HcmScd2020ViewController.swift */; };
+		8E6CD5E42CC03C2400C41E9C /* HcmScd2022ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5E32CC03C2400C41E9C /* HcmScd2022ViewController.swift */; };
 		8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD32AE041C10018A501 /* FrailtyModel.swift */; };
 		8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD52AE062730018A501 /* FrailtyTests.swift */; };
 		8E70DBD82AE0C7D10018A501 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */; };
@@ -351,7 +355,11 @@
 		8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2CalculatorView.swift; sourceTree = "<group>"; };
 		8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2CalculatorViewController.swift; sourceTree = "<group>"; };
 		8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
-		8E6CD5DB2CC032BB00C41E9C /* HCMSCDTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCMSCDTableViewController.swift; sourceTree = "<group>"; };
+		8E6CD5DB2CC032BB00C41E9C /* HcmScdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScdTableViewController.swift; sourceTree = "<group>"; };
+		8E6CD5DD2CC03B8100C41E9C /* HcmScd2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020.swift; sourceTree = "<group>"; };
+		8E6CD5DF2CC03B9200C41E9C /* HcmScd2022.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022.swift; sourceTree = "<group>"; };
+		8E6CD5E12CC03BEF00C41E9C /* HcmScd2020ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020ViewController.swift; sourceTree = "<group>"; };
+		8E6CD5E32CC03C2400C41E9C /* HcmScd2022ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022ViewController.swift; sourceTree = "<group>"; };
 		8E70DBD32AE041C10018A501 /* FrailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyModel.swift; sourceTree = "<group>"; };
 		8E70DBD52AE062730018A501 /* FrailtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyTests.swift; sourceTree = "<group>"; };
 		8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
@@ -611,6 +619,8 @@
 				8EB3D37D28EFC79800023F29 /* InformationView.swift */,
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
 				8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */,
+				8E6CD5DD2CC03B8100C41E9C /* HcmScd2020.swift */,
+				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -671,7 +681,9 @@
 				8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */,
 				8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */,
 				8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */,
-				8E6CD5DB2CC032BB00C41E9C /* HCMSCDTableViewController.swift */,
+				8E6CD5DB2CC032BB00C41E9C /* HcmScdTableViewController.swift */,
+				8E6CD5E12CC03BEF00C41E9C /* HcmScd2020ViewController.swift */,
+				8E6CD5E32CC03C2400C41E9C /* HcmScd2022ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1154,7 +1166,7 @@
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
 				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
-				8E6CD5DC2CC032BB00C41E9C /* HCMSCDTableViewController.swift in Sources */,
+				8E6CD5DC2CC032BB00C41E9C /* HcmScdTableViewController.swift in Sources */,
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
 				8EBCC8122826D90D001ABD9E /* QTcIvcdResultView.swift in Sources */,
@@ -1167,7 +1179,9 @@
 				8EF22161290782F6000EF617 /* InformationViewController.swift in Sources */,
 				8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */,
 				8E8C89E5283339FE0057B237 /* Entrainment.swift in Sources */,
+				8E6CD5E22CC03BEF00C41E9C /* HcmScd2020ViewController.swift in Sources */,
 				8E808367282DF55400E88A4E /* WarfarinViewModel.swift in Sources */,
+				8E6CD5E42CC03C2400C41E9C /* HcmScd2022ViewController.swift in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSSQTViewController.m in Sources */,
 				8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */,
 				8E5D93D515CCABF500ACBA4F /* EPSARVCCriteriaViewController.m in Sources */,
@@ -1204,6 +1218,7 @@
 				8EB3D37E28EFC79800023F29 /* InformationView.swift in Sources */,
 				8E59E969281A4071003C485F /* Keys.swift in Sources */,
 				8E321C6D28257AB50017EDB0 /* QTcIvcdViewModel.swift in Sources */,
+				8E6CD5E02CC03B9200C41E9C /* HcmScd2022.swift in Sources */,
 				8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */,
 				8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */,
 				8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */,
@@ -1219,6 +1234,7 @@
 				8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */,
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
 				8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */,
+				8E6CD5DE2CC03B8100C41E9C /* HcmScd2020.swift in Sources */,
 				8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */,
 				8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */,
 				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
