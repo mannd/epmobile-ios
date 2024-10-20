@@ -55,6 +55,7 @@
 		8E1B27202827500D003AD237 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8E1B271F2827500D003AD237 /* OrderedCollections */; };
 		8E1F76822CC4198E00C7AB54 /* HcmScd2020Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76812CC4198E00C7AB54 /* HcmScd2020Model.swift */; };
 		8E1F76842CC529E100C7AB54 /* HcmScd2020ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76832CC529E100C7AB54 /* HcmScd2020ViewModel.swift */; };
+		8E1F76862CC5316500C7AB54 /* HcmScd2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76852CC5316500C7AB54 /* HcmScd2020Tests.swift */; };
 		8E2394912824400800B6E8B7 /* QTcIvcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2394902824400800B6E8B7 /* QTcIvcd.swift */; };
 		8E23949428244D1800B6E8B7 /* View+roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23949328244D1800B6E8B7 /* View+roundedButton.swift */; };
 		8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24EDBA203F375300C49B66 /* EPSCMSModel.m */; };
@@ -288,6 +289,7 @@
 		8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSQTProlongationRisk.m; sourceTree = "<group>"; };
 		8E1F76812CC4198E00C7AB54 /* HcmScd2020Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020Model.swift; sourceTree = "<group>"; };
 		8E1F76832CC529E100C7AB54 /* HcmScd2020ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020ViewModel.swift; sourceTree = "<group>"; };
+		8E1F76852CC5316500C7AB54 /* HcmScd2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020Tests.swift; sourceTree = "<group>"; };
 		8E2394902824400800B6E8B7 /* QTcIvcd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcIvcd.swift; sourceTree = "<group>"; };
 		8E23949328244D1800B6E8B7 /* View+roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+roundedButton.swift"; sourceTree = "<group>"; };
 		8E24EDB9203F375300C49B66 /* EPSCMSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCMSModel.h; sourceTree = "<group>"; };
@@ -1010,6 +1012,7 @@
 				8E2C4261291EAA0B00E6BEED /* UnitTests.swift */,
 				8E70DBD52AE062730018A501 /* FrailtyTests.swift */,
 				8E6A354B2C0660F400A94CD3 /* TestV2TransitionCalculator.swift */,
+				8E1F76852CC5316500C7AB54 /* HcmScd2020Tests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1317,6 +1320,7 @@
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
+				8E1F76862CC5316500C7AB54 /* HcmScd2020Tests.swift in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
 				8E321C6B2824A0310017EDB0 /* QTcIvcdTests.swift in Sources */,
 				8E2C4262291EAA0B00E6BEED /* UnitTests.swift in Sources */,

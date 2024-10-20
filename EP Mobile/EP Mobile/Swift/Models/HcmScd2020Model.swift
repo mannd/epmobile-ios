@@ -17,13 +17,13 @@ enum Recommendation {
 }
 
 struct HcmScd2020Model: InformationProvider {
-    var familyHxScd: Bool
-    var massiveLVH: Bool
-    var hxSyncope: Bool
-    var apicalAneurysm: Bool
-    var lowLVEF: Bool
-    var hxNsvt: Bool
-    var extensiveLGE: Bool
+    var familyHxScd: Bool = false
+    var massiveLVH: Bool = false
+    var hxSyncope: Bool = false
+    var apicalAneurysm: Bool = false
+    var lowLVEF: Bool = false
+    var hxNsvt: Bool = false
+    var extensiveLGE: Bool = false
 
     func calculate() -> Recommendation {
         var recommendation: Recommendation
