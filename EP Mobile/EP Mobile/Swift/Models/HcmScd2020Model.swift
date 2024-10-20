@@ -24,6 +24,12 @@ struct HcmScd2020Model: InformationProvider {
     var lowLVEF: Bool = false
     var hxNsvt: Bool = false
     var extensiveLGE: Bool = false
+    static let references: [Reference] = [
+        Reference("Ommen SR, Ho CY, Asif IM, et al. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2024;149(23):e1239-e1311. doi:10.1161/CIR.0000000000001250"),
+        Reference("Writing Committee Members, Ommen SR, Mital S, et al. 2020 AHA/ACC Guideline for the Diagnosis and Treatment of Patients With Hypertrophic Cardiomyopathy. Circulation. 2020;142(25):e558-e631. doi:10.1161/CIR.0000000000000937"),
+        Reference("Lee HJ, Kim HK, Lee SC, et al. Performance of 2020 AHA/ACC HCM Guidelines and Incremental Value of Myocardial Strain for Predicting SCD. JACC Asia. 2023;4(1):10-22. doi:10.1016/j.jacasi.2023.09.002"),
+        Reference("Monda E, Limongelli G. Integrated Sudden Cardiac Death Risk Prediction Model For Patients With Hypertrophic Cardiomyopathy. Circulation. 2023;147(4):281-283. doi:10.1161/CIRCULATIONAHA.122.063019")
+    ]
 
     func calculate() -> Recommendation {
         var recommendation: Recommendation
@@ -38,11 +44,7 @@ struct HcmScd2020Model: InformationProvider {
     }
 
     static func getReferences() -> [Reference] {
-        return [
-            Reference("Writing Committee Members, Ommen SR, Mital S, et al. 2020 AHA/ACC Guideline for the Diagnosis and Treatment of Patients With Hypertrophic Cardiomyopathy. Circulation. 2020;142(25):e558-e631. doi:10.1161/CIR.0000000000000937"),
-            Reference("Lee HJ, Kim HK, Lee SC, et al. Performance of 2020 AHA/ACC HCM Guidelines and Incremental Value of Myocardial Strain for Predicting SCD. JACC Asia. 2023;4(1):10-22. doi:10.1016/j.jacasi.2023.09.002"),
-            Reference("Monda E, Limongelli G. Integrated Sudden Cardiac Death Risk Prediction Model For Patients With Hypertrophic Cardiomyopathy. Circulation. 2023;147(4):281-283. doi:10.1161/CIRCULATIONAHA.122.063019")
-        ]
+        return references
     }
 
     static func getInstructions() -> String? {

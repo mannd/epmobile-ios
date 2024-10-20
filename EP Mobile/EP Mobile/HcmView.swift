@@ -101,12 +101,6 @@ struct HcmView: View {
                     Image(systemName: "info.circle")
                 }
             })
-//            .navigationBarItems(trailing:
-//                                    Button(action: { showInfo.toggle() }) {
-//                Image(systemName: "info.circle")
-//            }).sheet(isPresented: $showInfo) {
-//                Info()
-//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

@@ -58,6 +58,15 @@ final class Reference: NSObject {
         }
     }
 
+    static func getReferenceList(from references: [Reference]) -> String {
+        guard !references.isEmpty else { return "References: None" }
+        var result = references.count == 1 ? "Reference" : "References" + ":\n"
+        for reference in references {
+            result += reference.getPlainTextReference() + "\n"
+        }
+        return result
+    }
+
     func getUri() -> String? {
         return link.convertDoiToUri()
     }

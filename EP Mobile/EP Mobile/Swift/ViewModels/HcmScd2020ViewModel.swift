@@ -34,7 +34,9 @@ struct HcmScd2020ViewModel {
     func getDetails() -> String {
         var result = "Risk score: HCM SCD 2020 (AHA/ACC)"
         result += "\nRisks:"
-        // TODO: fill in rest
+        if noRisks() {
+            result += " No risk factors"
+        }
         if model.familyHxScd {
             result += "\nFamily hx of SCD"
         }
@@ -58,12 +60,16 @@ struct HcmScd2020ViewModel {
         }
         result += "\n"
         result += calculate()
-        result += "\nReferences: "
-        result += HcmScd2020Model.getReferences()[0].getPlainTextReference()
         result += "\n"
-        result += HcmScd2020Model.getReferences()[1].getPlainTextReference()
-        result += "\n"
-        result += HcmScd2020Model.getReferences()[2].getPlainTextReference()
+        result += Reference.getReferenceList(from: HcmScd2020Model.getReferences())
         return result
+    }
+
+    private func noRisks() -> Bool {
+        return !model.familyHxScd && !model.massiveLVH && !model.apicalAneurysm && !model.lowLVEF && !model.hxSyncope && !model.hxNsvt && !model.extensiveLGE
+    }
+
+    internal func testNoRisks() -> Bool {
+        return noRisks()
     }
 }

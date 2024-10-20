@@ -65,10 +65,8 @@ struct HcmViewModel {
         }
         result += "\n"
         result += calculate()
-        result += "\nReferences: "
-        result += HcmModel.getReferences()[0].getPlainTextReference()
         result += "\n"
-        result += HcmModel.getReferences()[1].getPlainTextReference()
+        result += Reference.getReferenceList(from: HcmModel.getReferences())
         return result
     }
 }
