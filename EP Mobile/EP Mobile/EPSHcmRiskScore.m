@@ -26,7 +26,7 @@
 }
 
 - (NSString *)getInstructions {
-    return @"Use this score to determine risk of sudden cardiac death and consideration for ICD implant in patients with hypertrophic cardiomyopathy.";
+    return @"Use this score to determine risk of sudden cardiac death and consideration for ICD implant in patients with hypertrophic cardiomyopathy.  Note that this score has been replaced by more modern scores and is included in the app for historical reasons.";
 }
 
 - (NSArray *)getReferences {

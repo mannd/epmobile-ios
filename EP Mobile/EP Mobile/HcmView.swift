@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-fileprivate let calculatorName = "HCM SCD 2014"
+fileprivate let calculatorName = "HCM Risk-SCD 2014"
 
 struct HcmView: View {
     @State private var age: Double = 0
