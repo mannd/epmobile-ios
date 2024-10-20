@@ -56,8 +56,7 @@ struct HcmModel: InformationProvider {
         guard gradient >= 2 && gradient <= 154 else {
             throw HcmError.gradientOutOfRange
         }
-
-        // Also, this expression is broken up to avoid parsing errors from the compiler.
+        // Note, this expression is broken up to avoid parsing errors from the compiler.
         // When the expression was a single line, build would get stuck.
         let coefficient = 0.998
         var prognosticIndex = (0.15939858 * thickness) - (0.00294271 * thickness * thickness)

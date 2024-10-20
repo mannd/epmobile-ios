@@ -8,12 +8,13 @@
 
 import SwiftUI
 
-fileprivate let calculatorName = "HCM SCD 2020"
+fileprivate let calculatorName = "HCM SCD 2020 (AHA/ACC)"
 
 struct HcmScd2020View: View {
     // Major risks
     @State private var familyHxScd: Bool = false
     @State private var massiveLVH: Bool = false
+    @State private var thickness: Double = 0
     @State private var hxSyncope: Bool = false
     @State private var apicalAneurysm: Bool = false
     @State private var lowLVEF: Bool = false
@@ -43,26 +44,33 @@ struct HcmScd2020View: View {
                     Section(header: Text("Major Risks")) {
                         Toggle(isOn: $familyHxScd) {
                             Text("Family hx SCD")
+                            Text("Sudden death judged definitively or likely attributable to HCM in ≥1 first-degree or close relatives who are ≤50 years of age").font(.caption2)
                         }
                         Toggle(isOn: $massiveLVH) {
                             Text("Massive LVH")
+                            Text("≥ 30 mm in any LV segment").font(.caption2)
                         }
                         Toggle(isOn: $hxSyncope) {
                             Text("Unexplained Syncope")
+                            Text("≥1 Recent episodes of syncope suspected by clinical history to be arrhythmic (ie, unlikely to be of neurocardiogenic [vasovagal] etiology, or related to LVOTO).").font(.caption2)
                         }
                         Toggle(isOn: $apicalAneurysm) {
                             Text("Apical Aneurysm")
+                            Text("Independent of size").font(.caption2)
                         }
                         Toggle(isOn: $lowLVEF) {
                             Text("LVEF ≤ 50%")
+                            Text("By echo or CMR imaging.").font(.caption2)
                         }
                     }
                     Section(header: Text("Minor Risks")) {
                         Toggle(isOn: $hxNsvt) {
-                            Text("Hx NSVT")
+                            Text("Nonsustained VT")
+                            Text("Present on ambulatory monitoring").font(.caption2)
                         }
                         Toggle(isOn: $extensiveLGE) {
                             Text("Extensive LGE on CMR")
+                            Text("≥15% of LV mass").font(.caption2)
                         }
                     }
                     Section(header: Text("Result")) {
@@ -85,26 +93,20 @@ struct HcmScd2020View: View {
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: extensiveLGE, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKey(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmScd2020Model.getInstructions(), key: HcmScd2020Model.getKey(), references: HcmScd2020Model.getReferences(), name: calculatorName), isActive: $showInfo) {
                 Button(action: { showInfo.toggle() }) {
                     Image(systemName: "info.circle")
                 }
             })
-//            .navigationBarItems(trailing:
-//                                    Button(action: { showInfo.toggle() }) {
-//                Image(systemName: "info.circle")
-//            }).sheet(isPresented: $showInfo) {
-//                Info()
-//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {
-//        textFieldIsFocused = false
-//        let viewModel = HcmViewModel(age: Int(age), thickness: Int(thickness), laDiameter: Int(laDiameter), gradient: Int(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
-//        result = viewModel.calculate()
-//        detailedResult = viewModel.getDetails()
+        textFieldIsFocused = false
+        let viewModel = HcmScd2020ViewModel(familyHxScd: familyHxScd, massiveLVH: massiveLVH, hxSyncope: hxSyncope, apicalAneurysm: apicalAneurysm, lowLVEF: lowLVEF, hxNsvt: hxNsvt, extensiveLGE: extensiveLGE)
+        result = viewModel.calculate()
+        detailedResult = viewModel.getDetails()
     }
 
     func clear() {

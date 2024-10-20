@@ -48,7 +48,7 @@ struct HcmViewModel {
     }
 
     func getDetails() -> String {
-        var result = "Risk score: HCM SCD 2014"
+        var result = "Risk score: HCM Risk-SCD 2014"
         result += "\nRisks:"
         result += "\nAge = \(Int(model.age)) yrs"
         result += "\nMax LV wall thickness = \(Int(model.thickness)) mm"
