@@ -1,5 +1,5 @@
 //
-//  HcmScd2022.swift
+//  HcmScd2022View.swift
 //  EP Mobile
 //
 //  Created by David Mann on 10/16/24.
@@ -10,7 +10,7 @@ import SwiftUI
 
 fileprivate let calculatorName = "HCM SCD 2022 (ESC)"
 
-struct HcmScd2022: View {
+struct HcmScd2022View: View {
     @State private var age: Double = 0
     @State private var thickness: Double = 0
     @State private var laDiameter: Double = 0
@@ -18,6 +18,13 @@ struct HcmScd2022: View {
     @State private var familyHxScd: Bool = false
     @State private var hxNsvt: Bool = false
     @State private var hxSyncope: Bool = false
+
+    @State private var apicalAneurysm: Bool = false
+    @State private var lowLVEF: Bool = false
+    @State private var extensiveLGE: Bool = false
+    @State private var abnormalBP: Bool = false
+    @State private var sarcomericMutation: Bool = false
+
     @State private var result: String = ""
     @State private var detailedResult: String = ""
     @State private var showInfo: Bool = false
@@ -30,6 +37,9 @@ struct HcmScd2022: View {
         formatter.maximumFractionDigits = 0
         return formatter
     }()
+
+    // TODO: Note that the "other factors" aren't included in the risk assessment.  AHA online calculator adds "Nota bene: This estimate may not be accurate in the setting of Apical Aneurysm and Extensive LGE)"
+
 
     var body: some View {
         NavigationView {
@@ -76,6 +86,23 @@ struct HcmScd2022: View {
                             Text("Hx Syncope")
                         }
                     }
+                    Section(header: Text("Other factors")) {
+                        Toggle(isOn: $apicalAneurysm) {
+                            Text("Apical aneurysm")
+                        }
+                        Toggle(isOn: $lowLVEF) {
+                            Text("LVEF ≤ 50%")
+                        }
+                        Toggle(isOn: $extensiveLGE) {
+                            Text("Extensive LGE")
+                        }
+                        Toggle(isOn: $abnormalBP) {
+                            Text("Abnormal BP")
+                        }
+                        Toggle(isOn: $sarcomericMutation) {
+                            Text("Sarcomeric mutation")
+                        }
+                    }
                     Section(header: Text("Result")) {
                         HStack {
                             Text(result)
@@ -95,6 +122,11 @@ struct HcmScd2022: View {
             .onChange(of: familyHxScd, perform: { _ in clearResult() })
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: hxSyncope, perform: { _ in clearResult() })
+            .onChange(of: apicalAneurysm, perform: { _ in clearResult() })
+            .onChange(of: lowLVEF, perform: { _ in clearResult() })
+            .onChange(of: extensiveLGE, perform: { _ in clearResult() })
+            .onChange(of: abnormalBP, perform: { _ in clearResult() })
+            .onChange(of: sarcomericMutation, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKey(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
                 Button(action: { showInfo.toggle() }) {
@@ -122,6 +154,11 @@ struct HcmScd2022: View {
         familyHxScd = false
         hxNsvt = false
         hxSyncope = false
+        apicalAneurysm = false
+        lowLVEF = false
+        abnormalBP = false
+        extensiveLGE = false
+        sarcomericMutation = false
     }
 
     func clearResult() {
@@ -143,6 +180,6 @@ struct HcmScd2022: View {
 
 struct HcmScd2022_Previews: PreviewProvider {
     static var previews: some View {
-        HcmScd2022()
+        HcmScd2022View()
     }
 }
