@@ -20,9 +20,9 @@ class HcmScdTableViewController: UITableViewController {
         case 1:
             HcmViewController.show(vc: self)
         case 2:
-            HcmScd2020ViewController.show(vc: self)
-        case 3:
             HcmScd2022ViewController.show(vc: self)
+        case 3:
+            HcmScd2024ViewController.show(vc: self)
         default:
             break
         }

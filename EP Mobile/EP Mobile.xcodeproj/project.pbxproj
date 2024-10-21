@@ -53,9 +53,9 @@
 		8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */; };
 		8E1956B3243B762E000D80C0 /* EPSQTProlongationRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */; };
 		8E1B27202827500D003AD237 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8E1B271F2827500D003AD237 /* OrderedCollections */; };
-		8E1F76822CC4198E00C7AB54 /* HcmScd2020Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76812CC4198E00C7AB54 /* HcmScd2020Model.swift */; };
-		8E1F76842CC529E100C7AB54 /* HcmScd2020ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76832CC529E100C7AB54 /* HcmScd2020ViewModel.swift */; };
-		8E1F76862CC5316500C7AB54 /* HcmScd2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76852CC5316500C7AB54 /* HcmScd2020Tests.swift */; };
+		8E1F76822CC4198E00C7AB54 /* HcmScd2024Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76812CC4198E00C7AB54 /* HcmScd2024Model.swift */; };
+		8E1F76842CC529E100C7AB54 /* HcmScd2024ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76832CC529E100C7AB54 /* HcmScd2024ViewModel.swift */; };
+		8E1F76862CC5316500C7AB54 /* HcmScd2024Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76852CC5316500C7AB54 /* HcmScd2024Tests.swift */; };
 		8E1F76882CC572AB00C7AB54 /* HcmScd2022ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76872CC572AB00C7AB54 /* HcmScd2022ViewModel.swift */; };
 		8E1F768A2CC572C900C7AB54 /* HcmScd2022Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F76892CC572C900C7AB54 /* HcmScd2022Model.swift */; };
 		8E1F768C2CC5730100C7AB54 /* HcmScd2022Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F768B2CC5730100C7AB54 /* HcmScd2022Tests.swift */; };
@@ -112,9 +112,9 @@
 		8E6A35502C07696B00A94CD3 /* V2CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */; };
 		8E6AB735290DCAE3003B5FF0 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */; };
 		8E6CD5DC2CC032BB00C41E9C /* HcmScdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DB2CC032BB00C41E9C /* HcmScdTableViewController.swift */; };
-		8E6CD5DE2CC03B8100C41E9C /* HcmScd2020View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DD2CC03B8100C41E9C /* HcmScd2020View.swift */; };
+		8E6CD5DE2CC03B8100C41E9C /* HcmScd2024View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */; };
 		8E6CD5E02CC03B9200C41E9C /* HcmScd2022View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */; };
-		8E6CD5E22CC03BEF00C41E9C /* HcmScd2020ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5E12CC03BEF00C41E9C /* HcmScd2020ViewController.swift */; };
+		8E6CD5E22CC03BEF00C41E9C /* HcmScd2024ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5E12CC03BEF00C41E9C /* HcmScd2024ViewController.swift */; };
 		8E6CD5E42CC03C2400C41E9C /* HcmScd2022ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CD5E32CC03C2400C41E9C /* HcmScd2022ViewController.swift */; };
 		8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD32AE041C10018A501 /* FrailtyModel.swift */; };
 		8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70DBD52AE062730018A501 /* FrailtyTests.swift */; };
@@ -290,9 +290,9 @@
 		8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRateConversionTests.swift; sourceTree = "<group>"; };
 		8E1956B1243B762E000D80C0 /* EPSQTProlongationRisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSQTProlongationRisk.h; sourceTree = "<group>"; };
 		8E1956B2243B762E000D80C0 /* EPSQTProlongationRisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSQTProlongationRisk.m; sourceTree = "<group>"; };
-		8E1F76812CC4198E00C7AB54 /* HcmScd2020Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020Model.swift; sourceTree = "<group>"; };
-		8E1F76832CC529E100C7AB54 /* HcmScd2020ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020ViewModel.swift; sourceTree = "<group>"; };
-		8E1F76852CC5316500C7AB54 /* HcmScd2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020Tests.swift; sourceTree = "<group>"; };
+		8E1F76812CC4198E00C7AB54 /* HcmScd2024Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2024Model.swift; sourceTree = "<group>"; };
+		8E1F76832CC529E100C7AB54 /* HcmScd2024ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2024ViewModel.swift; sourceTree = "<group>"; };
+		8E1F76852CC5316500C7AB54 /* HcmScd2024Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2024Tests.swift; sourceTree = "<group>"; };
 		8E1F76872CC572AB00C7AB54 /* HcmScd2022ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022ViewModel.swift; sourceTree = "<group>"; };
 		8E1F76892CC572C900C7AB54 /* HcmScd2022Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022Model.swift; sourceTree = "<group>"; };
 		8E1F768B2CC5730100C7AB54 /* HcmScd2022Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022Tests.swift; sourceTree = "<group>"; };
@@ -368,9 +368,9 @@
 		8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2CalculatorViewController.swift; sourceTree = "<group>"; };
 		8E6AB734290DCAE3003B5FF0 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
 		8E6CD5DB2CC032BB00C41E9C /* HcmScdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScdTableViewController.swift; sourceTree = "<group>"; };
-		8E6CD5DD2CC03B8100C41E9C /* HcmScd2020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020View.swift; sourceTree = "<group>"; };
+		8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2024View.swift; sourceTree = "<group>"; };
 		8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022View.swift; sourceTree = "<group>"; };
-		8E6CD5E12CC03BEF00C41E9C /* HcmScd2020ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2020ViewController.swift; sourceTree = "<group>"; };
+		8E6CD5E12CC03BEF00C41E9C /* HcmScd2024ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2024ViewController.swift; sourceTree = "<group>"; };
 		8E6CD5E32CC03C2400C41E9C /* HcmScd2022ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmScd2022ViewController.swift; sourceTree = "<group>"; };
 		8E70DBD32AE041C10018A501 /* FrailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyModel.swift; sourceTree = "<group>"; };
 		8E70DBD52AE062730018A501 /* FrailtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyTests.swift; sourceTree = "<group>"; };
@@ -621,7 +621,7 @@
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
-				8E6CD5DD2CC03B8100C41E9C /* HcmScd2020View.swift */,
+				8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */,
 				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */,
 				8EEE9BB6283D8565005AB875 /* HcmView.swift */,
 				8EB3D37D28EFC79800023F29 /* InformationView.swift */,
@@ -663,7 +663,7 @@
 				8E8C89E4283339FE0057B237 /* Entrainment.swift */,
 				8E70DBD32AE041C10018A501 /* FrailtyModel.swift */,
 				8E0DF879283C522D00367D4A /* HcmModel.swift */,
-				8E1F76812CC4198E00C7AB54 /* HcmScd2020Model.swift */,
+				8E1F76812CC4198E00C7AB54 /* HcmScd2024Model.swift */,
 				8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */,
 				8E8FAAE22817297600789746 /* Patient.swift */,
 				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
@@ -683,7 +683,7 @@
 				8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */,
 				8E63411B28373A1F00178D0C /* EntrainmentCalculatorViewController.swift */,
 				8E70DBD92AE0DE3E0018A501 /* FrailtyViewController.swift */,
-				8E6CD5E12CC03BEF00C41E9C /* HcmScd2020ViewController.swift */,
+				8E6CD5E12CC03BEF00C41E9C /* HcmScd2024ViewController.swift */,
 				8E6CD5E32CC03C2400C41E9C /* HcmScd2022ViewController.swift */,
 				8E6CD5DB2CC032BB00C41E9C /* HcmScdTableViewController.swift */,
 				8EEE9BB8283D8819005AB875 /* HcmViewController.swift */,
@@ -741,7 +741,7 @@
 				8E808366282DF55400E88A4E /* WarfarinViewModel.swift */,
 				8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */,
 				8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */,
-				8E1F76832CC529E100C7AB54 /* HcmScd2020ViewModel.swift */,
+				8E1F76832CC529E100C7AB54 /* HcmScd2024ViewModel.swift */,
 				8E1F76872CC572AB00C7AB54 /* HcmScd2022ViewModel.swift */,
 			);
 			path = ViewModels;
@@ -1020,7 +1020,7 @@
 				8E2C4261291EAA0B00E6BEED /* UnitTests.swift */,
 				8E70DBD52AE062730018A501 /* FrailtyTests.swift */,
 				8E6A354B2C0660F400A94CD3 /* TestV2TransitionCalculator.swift */,
-				8E1F76852CC5316500C7AB54 /* HcmScd2020Tests.swift */,
+				8E1F76852CC5316500C7AB54 /* HcmScd2024Tests.swift */,
 				8E1F768B2CC5730100C7AB54 /* HcmScd2022Tests.swift */,
 			);
 			path = "EP MobileTests";
@@ -1198,7 +1198,7 @@
 				8EF22161290782F6000EF617 /* InformationViewController.swift in Sources */,
 				8E2806F6281CB30400468E6A /* DrugCalculatorController.swift in Sources */,
 				8E8C89E5283339FE0057B237 /* Entrainment.swift in Sources */,
-				8E6CD5E22CC03BEF00C41E9C /* HcmScd2020ViewController.swift in Sources */,
+				8E6CD5E22CC03BEF00C41E9C /* HcmScd2024ViewController.swift in Sources */,
 				8E808367282DF55400E88A4E /* WarfarinViewModel.swift in Sources */,
 				8E6CD5E42CC03C2400C41E9C /* HcmScd2022ViewController.swift in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSSQTViewController.m in Sources */,
@@ -1232,11 +1232,11 @@
 				8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */,
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
 				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
-				8E1F76822CC4198E00C7AB54 /* HcmScd2020Model.swift in Sources */,
+				8E1F76822CC4198E00C7AB54 /* HcmScd2024Model.swift in Sources */,
 				8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */,
 				8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */,
 				8EB3D37E28EFC79800023F29 /* InformationView.swift in Sources */,
-				8E1F76842CC529E100C7AB54 /* HcmScd2020ViewModel.swift in Sources */,
+				8E1F76842CC529E100C7AB54 /* HcmScd2024ViewModel.swift in Sources */,
 				8E59E969281A4071003C485F /* Keys.swift in Sources */,
 				8E321C6D28257AB50017EDB0 /* QTcIvcdViewModel.swift in Sources */,
 				8E6CD5E02CC03B9200C41E9C /* HcmScd2022View.swift in Sources */,
@@ -1255,7 +1255,7 @@
 				8E18B36C2814DAFA0043FD00 /* IntervalRateCalculatorController.swift in Sources */,
 				8E610702170B9B1000A5B9CE /* EPSAtrialTachAlgorithm.m in Sources */,
 				8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */,
-				8E6CD5DE2CC03B8100C41E9C /* HcmScd2020View.swift in Sources */,
+				8E6CD5DE2CC03B8100C41E9C /* HcmScd2024View.swift in Sources */,
 				8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */,
 				8E18B36A2814C2FB0043FD00 /* IntervalRateCalculator.swift in Sources */,
 				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
@@ -1332,7 +1332,7 @@
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
-				8E1F76862CC5316500C7AB54 /* HcmScd2020Tests.swift in Sources */,
+				8E1F76862CC5316500C7AB54 /* HcmScd2024Tests.swift in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
 				8E321C6B2824A0310017EDB0 /* QTcIvcdTests.swift in Sources */,
 				8E2C4262291EAA0B00E6BEED /* UnitTests.swift in Sources */,

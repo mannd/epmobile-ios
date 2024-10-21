@@ -45,7 +45,7 @@ struct HcmScd2022View: View {
         NavigationView {
             VStack {
                 Form() {
-                    Section(header: Text("Parameters")) {
+                    Section(header: Text("HCM Risk-ICD")) {
                         HStack {
                             Text("Age (yrs)")
                             TextField("16-115 yrs", value: $age, formatter: Self.numberFormatter)
@@ -74,8 +74,6 @@ struct HcmScd2022View: View {
                                 .multilineTextAlignment(.trailing)
                                 .focused($textFieldIsFocused)
                         }
-                    }
-                    Section(header: Text("History")) {
                         Toggle(isOn: $familyHxScd) {
                             Text("Family hx SCD")
                         }
@@ -128,7 +126,7 @@ struct HcmScd2022View: View {
             .onChange(of: abnormalBP, perform: { _ in clearResult() })
             .onChange(of: sarcomericMutation, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKey(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmScd2022Model.getInstructions(), key: HcmScd2022Model.getKey(), references: HcmScd2022Model.getReferences(), name: calculatorName), isActive: $showInfo) {
                 Button(action: { showInfo.toggle() }) {
                     Image(systemName: "info.circle")
                 }
