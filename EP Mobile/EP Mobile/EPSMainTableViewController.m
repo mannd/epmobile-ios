@@ -187,12 +187,8 @@
             [RiskScoreViewController showWithVc:self riskScore:[[EPSHemorrhagesRiskScore alloc] init]];
         }
         if (indexPath.row == HCM_SCD_ROW) {
-
-            //[RiskScoreViewController showWithVc:self riskScore:[[EPSHcmRiskScore alloc] init]];
+            // Goes to list of HCM SCD calculators via segue.
         }
-//        if (indexPath.row == HCM_2014_ROW) {
-//            [HcmViewController showWithVc:self];
-//        }
         if (indexPath.row == ICD_MORTALITY_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSIcdMortalityRiskScore alloc] init]];
         }

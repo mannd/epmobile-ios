@@ -79,4 +79,63 @@ struct HcmScd2022Tests {
         #expect(risk14.1 == .class2b)
     }
 
+    @Test(arguments: [
+        HcmScd2022Model(apicalAneurysm: true),
+        HcmScd2022Model(lowLVEF: true),
+        HcmScd2022Model(extensiveLGE: true)
+    ] )
+    func testHcmScd2022Class2b(model: HcmScd2022Model) {
+        let result = model.calculate(scdProbability: 0.03)
+        #expect (result.0 == 0.03)
+        #expect(result.1 == .class2b)
+    }
+
+    @Test(arguments: [
+        HcmScd2022Model(apicalAneurysm: true),
+        HcmScd2022Model(lowLVEF: true),
+        HcmScd2022Model(extensiveLGE: true),
+        HcmScd2022Model(abnormalBP: true),
+        HcmScd2022Model(sarcomericMutation: true)
+    ])
+    func testHcmScd2022Class2a(model: HcmScd2022Model) {
+        let result = model.calculate(scdProbability: 0.05)
+        #expect (result.0 == 0.05)
+        #expect(result.1 == .class2a)
+    }
+
+    @Test(arguments: [
+        HcmScd2022Model(),
+        HcmScd2022Model(apicalAneurysm: true),
+        HcmScd2022Model(lowLVEF: true),
+        HcmScd2022Model(extensiveLGE: true),
+        HcmScd2022Model(abnormalBP: true),
+        HcmScd2022Model(sarcomericMutation: true)
+    ])
+    func testHcmScd2022Class2aWithHighRisk(model: HcmScd2022Model) {
+        let result = model.calculate(scdProbability: 0.08)
+        #expect (result.0 == 0.08)
+        #expect(result.1 == .class2a)
+    }
+
+    @Test(arguments: [
+        HcmScd2022Model(apicalAneurysm: true),
+        HcmScd2022Model(lowLVEF: true),
+        HcmScd2022Model(extensiveLGE: true),
+    ])
+    func testHcmScd2022Class2aWithLowRisk(model: HcmScd2022Model) {
+        let result = model.calculate(scdProbability: 0.02)
+        #expect (result.0 == 0.02)
+        #expect(result.1 == .class2b)
+    }
+
+    @Test(arguments: [
+        HcmScd2022Model(),
+        HcmScd2022Model(abnormalBP: true),
+        HcmScd2022Model(sarcomericMutation: true)
+    ])
+    func testHcmScd2022Class2aWithLowestRisk(model: HcmScd2022Model) {
+        let result = model.calculate(scdProbability: 0.02)
+        #expect (result.0 == 0.02)
+        #expect(result.1 == .class3)
+    }
 }
