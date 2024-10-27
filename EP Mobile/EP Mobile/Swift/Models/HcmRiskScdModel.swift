@@ -1,5 +1,5 @@
 //
-//  HcmModel.swift
+//  HcmRiskScdModel.swift
 //  EP Mobile
 //
 //  Created by David Mann on 5/23/22.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum HcmError: Error {
+enum HcmRiskScdError: Error {
     case invalidEntry
     case ageOutOfRange
     case thicknessOutOfRange
@@ -31,7 +31,7 @@ enum HcmError: Error {
     }
 }
 
-struct HcmModel: InformationProvider {
+struct HcmRiskScdModel: InformationProvider {
     var age: Double
     var thickness: Double
     var laDiameter: Double
@@ -42,19 +42,19 @@ struct HcmModel: InformationProvider {
 
     func calculate() throws -> Double {
         guard age > 0 && thickness > 0 && laDiameter > 0 && gradient > 0 else {
-            throw HcmError.invalidEntry
+            throw HcmRiskScdError.invalidEntry
         }
         guard age <= 115 && age >= 16 else {
-            throw HcmError.ageOutOfRange
+            throw HcmRiskScdError.ageOutOfRange
         }
         guard thickness >= 10 && thickness <= 35 else {
-            throw HcmError.thicknessOutOfRange
+            throw HcmRiskScdError.thicknessOutOfRange
         }
         guard laDiameter >= 28 && laDiameter <= 67 else {
-            throw HcmError.laDiameterOutOfRange
+            throw HcmRiskScdError.laDiameterOutOfRange
         }
         guard gradient >= 2 && gradient <= 154 else {
-            throw HcmError.gradientOutOfRange
+            throw HcmRiskScdError.gradientOutOfRange
         }
         // Note, this expression is broken up to avoid parsing errors from the compiler.
         // When the expression was a single line, build would get stuck.
@@ -75,11 +75,11 @@ struct HcmModel: InformationProvider {
     }
 
     static func getInstructions() -> String? {
-        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias."
+        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.\n\nNote that the ICD implantation recommendations of this risk calculator have been supplanted by more recent guidelines.  See the HCM SCD calculators from 2022 and 2024 included in this app."
     }
 
     static func getKey() -> String? {
-        return "HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation:"
+        return "HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation."
 
     }
 

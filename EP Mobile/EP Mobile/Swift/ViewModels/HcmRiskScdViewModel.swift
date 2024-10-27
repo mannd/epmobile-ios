@@ -1,5 +1,5 @@
 //
-//  HcmViewModel.swift
+//  HcmRiskScdViewModel.swift
 //  EP Mobile
 //
 //  Created by David Mann on 5/24/22.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct HcmViewModel {
-    private let model: HcmModel
+struct HcmRiskScdViewModel {
+    private let model: HcmRiskScdModel
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 1
@@ -17,7 +17,7 @@ struct HcmViewModel {
     }()
 
     init(age: Int, thickness: Int, laDiameter: Int, gradient: Int, familyHxScd: Bool, hxNsvt: Bool, hxSyncope: Bool) {
-        model = HcmModel(age: Double(age), thickness: Double(thickness), laDiameter: Double(laDiameter), gradient: Double(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
+        model = HcmRiskScdModel(age: Double(age), thickness: Double(thickness), laDiameter: Double(laDiameter), gradient: Double(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
     }
 
     func calculate() -> String {
@@ -39,7 +39,7 @@ struct HcmViewModel {
             }
             return ErrorMessage.calculationError
         } catch {
-            if let error = error as? HcmError {
+            if let error = error as? HcmRiskScdError {
                 return error.description
             } else {
                 return ErrorMessage.invalidEntry
@@ -66,7 +66,7 @@ struct HcmViewModel {
         result += "\n"
         result += calculate()
         result += "\n"
-        result += Reference.getReferenceList(from: HcmModel.getReferences())
+        result += Reference.getReferenceList(from: HcmRiskScdModel.getReferences())
         return result
     }
 }

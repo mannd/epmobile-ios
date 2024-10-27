@@ -13,7 +13,7 @@ final class HcmViewController: NSObject {
 
     @objc
     static func show(vc: UIViewController) {
-        let hcmView = HcmView()
+        let hcmView = HcmRiskScdView()
         let hostingVC = UIHostingController(rootView: hcmView)
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }

@@ -1,5 +1,5 @@
 //
-//  HcmScd2020ViewModel.swift
+//  HcmScd2024ViewModel.swift
 //  EP Mobile
 //
 //  Created by David Mann on 10/20/24.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct HcmScd2020ViewModel {
-    private let model: HcmScd2020Model
+struct HcmScd2024ViewModel {
+    private let model: HcmScd2024Model
 
     init(familyHxScd: Bool, massiveLVH: Bool, hxSyncope: Bool, apicalAneurysm: Bool, lowLVEF: Bool, hxNsvt: Bool, extensiveLGE: Bool) {
-        model = HcmScd2020Model(familyHxScd: familyHxScd, massiveLVH: massiveLVH, hxSyncope: hxSyncope, apicalAneurysm: apicalAneurysm, lowLVEF: lowLVEF, hxNsvt: hxNsvt, extensiveLGE: extensiveLGE)
+        model = HcmScd2024Model(familyHxScd: familyHxScd, massiveLVH: massiveLVH, hxSyncope: hxSyncope, apicalAneurysm: apicalAneurysm, lowLVEF: lowLVEF, hxNsvt: hxNsvt, extensiveLGE: extensiveLGE)
     }
 
     func calculate() -> String {
@@ -61,7 +61,7 @@ struct HcmScd2020ViewModel {
         result += "\n"
         result += calculate()
         result += "\n"
-        result += Reference.getReferenceList(from: HcmScd2020Model.getReferences())
+        result += Reference.getReferenceList(from: HcmScd2024Model.getReferences())
         return result
     }
 
