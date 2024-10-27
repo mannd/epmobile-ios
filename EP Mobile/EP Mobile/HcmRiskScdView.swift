@@ -1,5 +1,5 @@
 //
-//  HcmView.swift
+//  HcmRiskScdView.swift
 //  EP Mobile
 //
 //  Created by David Mann on 5/24/22.
@@ -10,7 +10,7 @@ import SwiftUI
 
 fileprivate let calculatorName = "HCM Risk-SCD 2014"
 
-struct HcmView: View {
+struct HcmRiskScdView: View {
     @State private var age: Double = 0
     @State private var thickness: Double = 0
     @State private var laDiameter: Double = 0
@@ -96,7 +96,7 @@ struct HcmView: View {
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: hxSyncope, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmModel.getInstructions(), key: HcmModel.getKey(), references: HcmModel.getReferences(), name: calculatorName), isActive: $showInfo) {
+            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmRiskScdModel.getInstructions(), key: HcmRiskScdModel.getKey(), references: HcmRiskScdModel.getReferences(), name: calculatorName), isActive: $showInfo) {
                 Button(action: { showInfo.toggle() }) {
                     Image(systemName: "info.circle")
                 }
@@ -107,7 +107,7 @@ struct HcmView: View {
 
     func calculate() {
         textFieldIsFocused = false
-        let viewModel = HcmViewModel(age: Int(age), thickness: Int(thickness), laDiameter: Int(laDiameter), gradient: Int(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
+        let viewModel = HcmRiskScdViewModel(age: Int(age), thickness: Int(thickness), laDiameter: Int(laDiameter), gradient: Int(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
         result = viewModel.calculate()
         detailedResult = viewModel.getDetails()
     }
@@ -143,6 +143,6 @@ struct HcmView: View {
 
 struct HcmView_Previews: PreviewProvider {
     static var previews: some View {
-        HcmView()
+        HcmRiskScdView()
     }
 }

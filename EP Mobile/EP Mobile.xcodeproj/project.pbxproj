@@ -43,7 +43,7 @@
 		8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD790163211B800DDC4CC /* EPSWPWTableViewController.m */; };
 		8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */; };
 		8E0DD79716321DB800DDC4CC /* EPSMilsteinAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */; };
-		8E0DF87A283C522D00367D4A /* HcmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DF879283C522D00367D4A /* HcmModel.swift */; };
+		8E0DF87A283C522D00367D4A /* HcmRiskScdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DF879283C522D00367D4A /* HcmRiskScdModel.swift */; };
 		8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */; };
 		8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */; };
 		8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */; };
@@ -85,7 +85,7 @@
 		8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E44006115BC4B22009169DC /* EPSWarfarinDosingTableViewController.m */; };
 		8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */; };
 		8E4DB6CA291AEDFE00C29E0D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4DB6C9291AEDFE00C29E0D /* Alerts.swift */; };
-		8E503319283D408C0008A614 /* HcmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E503318283D408C0008A614 /* HcmTests.swift */; };
+		8E503319283D408C0008A614 /* HcmRiskScdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E503318283D408C0008A614 /* HcmRiskScdTests.swift */; };
 		8E507C782C02727C0013537F /* EPSV2TransitionRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E507C772C02727C0013537F /* EPSV2TransitionRatio.m */; };
 		8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E5E15BC706500CF83B5 /* EPSRiskFactor.m */; };
 		8E511E6615BF94D200CF83B5 /* EPSWarfarinDailyDoseCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E511E6515BF94D100CF83B5 /* EPSWarfarinDailyDoseCalculator.m */; };
@@ -198,8 +198,8 @@
 		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
 		8EE071A5291ECF4C002EE004 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */; };
-		8EEE9BB5283D5055005AB875 /* HcmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */; };
-		8EEE9BB7283D8565005AB875 /* HcmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB6283D8565005AB875 /* HcmView.swift */; };
+		8EEE9BB5283D5055005AB875 /* HcmRiskScdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */; };
+		8EEE9BB7283D8565005AB875 /* HcmRiskScdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */; };
 		8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB8283D8819005AB875 /* HcmViewController.swift */; };
 		8EF22161290782F6000EF617 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF22160290782F6000EF617 /* InformationViewController.swift */; };
 		8EF29289226AA43C00F15B99 /* ArvcRiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */; };
@@ -280,7 +280,7 @@
 		8E0DD79316321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModifiedArrudaAlgorithm.m; sourceTree = "<group>"; };
 		8E0DD79516321DB800DDC4CC /* EPSMilsteinAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMilsteinAlgorithm.h; sourceTree = "<group>"; };
 		8E0DD79616321DB800DDC4CC /* EPSMilsteinAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSMilsteinAlgorithm.m; sourceTree = "<group>"; };
-		8E0DF879283C522D00367D4A /* HcmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmModel.swift; sourceTree = "<group>"; };
+		8E0DF879283C522D00367D4A /* HcmRiskScdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdModel.swift; sourceTree = "<group>"; };
 		8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreView.swift; sourceTree = "<group>"; };
 		8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreViewController.swift; sourceTree = "<group>"; };
 		8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonsView.swift; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 		8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorController.swift; sourceTree = "<group>"; };
 		8E4B27C71634460A00BF1F2C /* EPSAccessoryPathwayLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAccessoryPathwayLocations.h; sourceTree = "<group>"; };
 		8E4DB6C9291AEDFE00C29E0D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		8E503318283D408C0008A614 /* HcmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmTests.swift; sourceTree = "<group>"; };
+		8E503318283D408C0008A614 /* HcmRiskScdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdTests.swift; sourceTree = "<group>"; };
 		8E507C762C02727C0013537F /* EPSV2TransitionRatio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSV2TransitionRatio.h; sourceTree = "<group>"; };
 		8E507C772C02727C0013537F /* EPSV2TransitionRatio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSV2TransitionRatio.m; sourceTree = "<group>"; };
 		8E511E5D15BC706500CF83B5 /* EPSRiskFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSRiskFactor.h; sourceTree = "<group>"; };
@@ -489,8 +489,8 @@
 		8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSTamponadeRiskScore.m; sourceTree = "<group>"; };
 		8EDF8E5B20F2508F0072C409 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewModel.swift; sourceTree = "<group>"; };
-		8EEE9BB6283D8565005AB875 /* HcmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmView.swift; sourceTree = "<group>"; };
+		8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdViewModel.swift; sourceTree = "<group>"; };
+		8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdView.swift; sourceTree = "<group>"; };
 		8EEE9BB8283D8819005AB875 /* HcmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewController.swift; sourceTree = "<group>"; };
 		8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EP MobileTests-Bridging-Header.h"; path = "EP Mobile/EP MobileTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EF22160290782F6000EF617 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -623,7 +623,7 @@
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
 				8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */,
 				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */,
-				8EEE9BB6283D8565005AB875 /* HcmView.swift */,
+				8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */,
 				8EB3D37D28EFC79800023F29 /* InformationView.swift */,
 				8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */,
 				8E05062E2820926D0059DACB /* QTcCalculatorView.swift */,
@@ -662,7 +662,8 @@
 				8E8FAAE62817806000789746 /* Drug.swift */,
 				8E8C89E4283339FE0057B237 /* Entrainment.swift */,
 				8E70DBD32AE041C10018A501 /* FrailtyModel.swift */,
-				8E0DF879283C522D00367D4A /* HcmModel.swift */,
+				8E0DF879283C522D00367D4A /* HcmRiskScdModel.swift */,
+				8E1F76892CC572C900C7AB54 /* HcmScd2022Model.swift */,
 				8E1F76812CC4198E00C7AB54 /* HcmScd2024Model.swift */,
 				8E18B36F281503A60043FD00 /* IntervalRateConversion.swift */,
 				8E8FAAE22817297600789746 /* Patient.swift */,
@@ -670,7 +671,6 @@
 				8E6A35492C056CE000A94CD3 /* V2TransitionCalculator.swift */,
 				8E808362282DC62100E88A4E /* Warfarin.swift */,
 				8E6381B8282982C400249E87 /* Weight.swift */,
-				8E1F76892CC572C900C7AB54 /* HcmScd2022Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -735,14 +735,14 @@
 		8E28243F2821B94200DD9571 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */,
+				8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */,
+				8E1F76872CC572AB00C7AB54 /* HcmScd2022ViewModel.swift */,
+				8E1F76832CC529E100C7AB54 /* HcmScd2024ViewModel.swift */,
 				8E2824402821B96300DD9571 /* QTcCalculatorViewModel.swift */,
 				8E321C6C28257AB50017EDB0 /* QTcIvcdViewModel.swift */,
-				8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */,
 				8E808366282DF55400E88A4E /* WarfarinViewModel.swift */,
-				8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */,
-				8EEE9BB4283D5054005AB875 /* HcmViewModel.swift */,
-				8E1F76832CC529E100C7AB54 /* HcmScd2024ViewModel.swift */,
-				8E1F76872CC572AB00C7AB54 /* HcmScd2022ViewModel.swift */,
+				8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1001,27 +1001,27 @@
 		8EC19C49159FE0FA00975E2B /* EP MobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				8EC19C4F159FE0FA00975E2B /* EP_MobileTests.h */,
-				8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */,
 				8E0C13C92262DBB0000892CC /* ArvcTests.swift */,
 				8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */,
 				8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */,
 				8E8FAAE828178EF200789746 /* DrugTests.swift */,
 				8E8C89E6283340BF0057B237 /* EntrainmentTests.swift */,
-				8E503318283D408C0008A614 /* HcmTests.swift */,
+				8EC19C4F159FE0FA00975E2B /* EP_MobileTests.h */,
+				8EC19C50159FE0FA00975E2B /* EP_MobileTests.m */,
+				8E70DBD52AE062730018A501 /* FrailtyTests.swift */,
+				8E503318283D408C0008A614 /* HcmRiskScdTests.swift */,
+				8E1F768B2CC5730100C7AB54 /* HcmScd2022Tests.swift */,
+				8E1F76852CC5316500C7AB54 /* HcmScd2024Tests.swift */,
 				8E18B373281507DE0043FD00 /* IntervalRateConversionTests.swift */,
 				8E8FAAE428172D0800789746 /* PatientTests.swift */,
 				8E321C6A2824A0310017EDB0 /* QTcIvcdTests.swift */,
 				8EB36C33281F93D8006D8DF2 /* QTcTests.swift */,
+				8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */,
+				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
+				8E6A354B2C0660F400A94CD3 /* TestV2TransitionCalculator.swift */,
+				8E2C4261291EAA0B00E6BEED /* UnitTests.swift */,
 				8E808364282DE88B00E88A4E /* WarfarinTests.swift */,
 				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
-				8EC19C4A159FE0FA00975E2B /* Supporting Files */,
-				8E38A07D28F377AD00F1F723 /* ReferenceTests.swift */,
-				8E2C4261291EAA0B00E6BEED /* UnitTests.swift */,
-				8E70DBD52AE062730018A501 /* FrailtyTests.swift */,
-				8E6A354B2C0660F400A94CD3 /* TestV2TransitionCalculator.swift */,
-				8E1F76852CC5316500C7AB54 /* HcmScd2024Tests.swift */,
-				8E1F768B2CC5730100C7AB54 /* HcmScd2022Tests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1206,7 +1206,7 @@
 				8E5D93D515CCABF500ACBA4F /* EPSARVCCriteriaViewController.m in Sources */,
 				8E808363282DC62100E88A4E /* Warfarin.swift in Sources */,
 				8E0600DE15D1FD6400BB7550 /* EPSAVAnnulusViewController.m in Sources */,
-				8E0DF87A283C522D00367D4A /* HcmModel.swift in Sources */,
+				8E0DF87A283C522D00367D4A /* HcmRiskScdModel.swift in Sources */,
 				8E2824412821B96300DD9571 /* QTcCalculatorViewModel.swift in Sources */,
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
 				8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */,
@@ -1261,7 +1261,7 @@
 				8E00E93A17AEFBF60007A146 /* EPSRiskScore.m in Sources */,
 				8E00E93D17AEFCF50007A146 /* EPSChadsRiskScore.m in Sources */,
 				8E00E94017B30B2E0007A146 /* EPSSyncopeRiskViewController.m in Sources */,
-				8EEE9BB7283D8565005AB875 /* HcmView.swift in Sources */,
+				8EEE9BB7283D8565005AB875 /* HcmRiskScdView.swift in Sources */,
 				8E00E94317B697540007A146 /* EPSChadsVascRiskScore.m in Sources */,
 				8E70DBD82AE0C7D10018A501 /* FrailtyView.swift in Sources */,
 				8E1F768A2CC572C900C7AB54 /* HcmScd2022Model.swift in Sources */,
@@ -1275,7 +1275,7 @@
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
 				8E507C782C02727C0013537F /* EPSV2TransitionRatio.m in Sources */,
 				8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */,
-				8EEE9BB5283D5055005AB875 /* HcmViewModel.swift in Sources */,
+				8EEE9BB5283D5055005AB875 /* HcmRiskScdViewModel.swift in Sources */,
 				8E00E94C17B6F46E0007A146 /* EPSHcmRiskScore.m in Sources */,
 				8E00E94F17B6F88B0007A146 /* EPSEstesRiskScore.m in Sources */,
 				8EBCC8102826CCFF001ABD9E /* QTcIvcdCalculatorController.swift in Sources */,
@@ -1336,7 +1336,7 @@
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
 				8E321C6B2824A0310017EDB0 /* QTcIvcdTests.swift in Sources */,
 				8E2C4262291EAA0B00E6BEED /* UnitTests.swift in Sources */,
-				8E503319283D408C0008A614 /* HcmTests.swift in Sources */,
+				8E503319283D408C0008A614 /* HcmRiskScdTests.swift in Sources */,
 				8E8FAAE928178EF200789746 /* DrugTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

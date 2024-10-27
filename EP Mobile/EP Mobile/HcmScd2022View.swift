@@ -137,7 +137,7 @@ struct HcmScd2022View: View {
 
     func calculate() {
         textFieldIsFocused = false
-        let viewModel = HcmViewModel(age: Int(age), thickness: Int(thickness), laDiameter: Int(laDiameter), gradient: Int(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
+        let viewModel = HcmScd2022ViewModel(age: Int(age), thickness: Int(thickness), laDiameter: Int(laDiameter), gradient: Int(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope, apicalAneurysm: apicalAneurysm, lowLVEF: lowLVEF, extensiveLGE: extensiveLGE, abnormalBP: abnormalBP, sarcomericMutation: sarcomericMutation)
         result = viewModel.calculate()
         detailedResult = viewModel.getDetails()
     }
