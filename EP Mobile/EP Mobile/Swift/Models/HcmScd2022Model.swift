@@ -16,6 +16,9 @@ struct HcmScd2022Model: InformationProvider {
     var sarcomericMutation = false
     var riskSCDModel: HcmRiskScdModel? = nil
 
+    static let extensiveLGEDescription: String = "Defined as ≥15% of LV mass"
+    static let abnormalBPDescription: String = "Defined as a failure to increase systolic pressure by at least 20 mmHg from rest to peak exercise, or a fall of >20 mmHg from peak pressure."
+
     static let references: [Reference] = [
         Reference("O’Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). European Heart Journal. 2014;35(30):2010-2020. doi:10.1093/eurheartj/eht439"),
         Reference("Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262"),
@@ -65,5 +68,5 @@ struct HcmScd2022Model: InformationProvider {
     }
 
     static func getKey() -> String? {
-        return "HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation.\n\nCMR = cardiovascular magnetic resonance.\n\nICD = implantable cardioverter defibrillator.\n\nLGE = late gadolinium enhancement\n\nLVEF = left ventricular ejection fraction.\n\nLVH = left ventricular hypertrophy\n\nVT = ventricular tachycardia." }
+        return "HCM = hypertrophic cardiomyopathy.\n\nCMR = cardiovascular magnetic resonance.\n\nICD = implantable cardioverter defibrillator.\n\nLGE = late gadolinium enhancement\n\nLVEF = left ventricular ejection fraction.\n\nLVH = left ventricular hypertrophy\n\nNSVT = nonsustained ventricular tachycardia." }
 }
