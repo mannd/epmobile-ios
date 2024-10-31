@@ -42,36 +42,15 @@ struct HcmScd2024View: View {
             VStack {
                 Form() {
                     Section(header: Text("Major Risks")) {
-                        Toggle(isOn: $familyHxScd) {
-                            Text("Family hx SCD")
-                            Text("Sudden death judged definitively or likely attributable to HCM in ≥1 first-degree or close relatives who are ≤50 years of age").font(.caption)
-                        }
-                        Toggle(isOn: $massiveLVH) {
-                            Text("Massive LVH")
-                            Text("≥ 30 mm in any LV segment").font(.caption)
-                        }
-                        Toggle(isOn: $hxSyncope) {
-                            Text("Unexplained Syncope")
-                            Text("≥1 Recent episodes of syncope suspected by clinical history to be arrhythmic (ie, unlikely to be of neurocardiogenic [vasovagal] etiology, or related to LVOTO).").font(.caption)
-                        }
-                        Toggle(isOn: $apicalAneurysm) {
-                            Text("Apical Aneurysm")
-                            Text("With transmural scar or LGE").font(.caption)
-                        }
-                        Toggle(isOn: $lowLVEF) {
-                            Text("LVEF ≤ 50%")
-                            Text("By echo or CMR imaging.").font(.caption)
-                        }
+                        ToggleView(parameter: $familyHxScd, label: "Family hx SCD", description: "Sudden death judged definitively or likely attributable to HCM in ≥1 first-degree or close relatives who are ≤50 years of age")
+                        ToggleView(parameter: $massiveLVH, label: "Massive LVH", description: "Massive LVH (≥ 30 mm in any LV segment)")
+                        ToggleView(parameter: $hxSyncope, label: "Unexplained syncope", description: "≥1 Recent episodes of syncope suspected by clinical history to be arrhythmic (ie, unlikely to be of neurocardiogenic [vasovagal] etiology, or related to LVOTO).")
+                        ToggleView(parameter: $apicalAneurysm, label: "Apical aneurysm", description: "With transmural scar or LGE")
+                        ToggleView(parameter: $lowLVEF, label: "LVEF ≤ 50%", description: "By echo or CMR imaging.")
                     }
                     Section(header: Text("Minor Risks")) {
-                        Toggle(isOn: $hxNsvt) {
-                            Text("Nonsustained VT")
-                            Text("Present on ambulatory monitoring").font(.caption)
-                        }
-                        Toggle(isOn: $extensiveLGE) {
-                            Text("Extensive LGE on CMR")
-                            Text("≥15% of LV mass").font(.caption)
-                        }
+                        ToggleView(parameter: $hxNsvt, label: "Nonsustained VT", description: "Present on ambulatory monitoring")
+                        ToggleView(parameter: $extensiveLGE, label: "Extensive LGE on CMR", description: "≥15% of LV mass")
                     }
                     Section(header: Text("Result")) {
                         HStack {

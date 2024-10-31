@@ -40,6 +40,15 @@ struct HcmRiskScdModel: InformationProvider {
     var hxNsvt: Bool
     var hxSyncope: Bool
 
+    static let ageDescription: String = "Age at evaluation."
+    static let thicknessDescription: String = "The greatest thickness in the anterior septum, posterior septum, lateral wall, and posterior wall of the LV, measured at the level of the mitral valve, papillary muscles, and apex using parasternal short-axis plane using 2-D echocardiography at time of evaluation."
+    static let laDiameterDescription: String = "Left atrial diameter determined by M-Mode or 2D echocardiography in the parasternal long axis plane at time of evaluation."
+    static let gradientDescription: String = "The maximum LV outflow gradient determined at rest and with Valsalva provocation (irrespective of concurrent medical treatment) using pulsed and continuous wave Doppler from the apical three- and five-chamber views."
+    static let familyHxScdDescription: String = "History of sudden cardiac death in 1 or more first degree relatives under 40 years of age or SCD in a first degree relative with confirmed HCM at any age (post- or ante-mortem diagnosis)."
+    static let hxNsvtDescription: String = "≥3 consecutive ventricular beats at a rate of ≥120 bpm and ,30 s in duration on Holter monitoring (minimum duration 24 hours) at or prior to evaluation."
+    static let hxSyncopeDescription: String = "History of unexplained syncope at or prior to evaluation."
+
+
     func calculate() throws -> Double {
         guard age > 0 && thickness > 0 && laDiameter > 0 && gradient > 0 else {
             throw HcmRiskScdError.invalidEntry
@@ -79,7 +88,7 @@ struct HcmRiskScdModel: InformationProvider {
     }
 
     static func getKey() -> String? {
-        return "HCM = hypertrophic cardiomyopathy.\n\nAge = age at evaluation.\n\nWall thickness = maximum left ventricular wall thickness. Note all echo measurements via transthoracic echo.\n\nLA (left atrial) diameter measured in parasternal long axis.\n\nGradient = maximum left ventricular outflow tract gradient determined at rest and with Valsalva using pulsed and continuous wave Doppler from the apical 3 and 5 chamber views. Peak outflow gradients determined by the modified Bernoulli equation."
+        return "HCM = hypertrophic cardiomyopathy.\n\nHx = history\n\nICD = implantable cardioverter defibrillator.\n\nLA = left atrium.\n\nLV = left ventricle.\n\nNSVT = nonsustained ventricular tachycardia.\n\nSCD = sudden cardiac death."
 
     }
 

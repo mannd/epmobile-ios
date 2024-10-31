@@ -24,7 +24,7 @@ struct HcmRiskScdView: View {
 
     @FocusState private var textFieldIsFocused: Bool
 
-    private static var numberFormatter: NumberFormatter = {
+    fileprivate static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.zeroSymbol = ""
         formatter.maximumFractionDigits = 0
@@ -36,45 +36,51 @@ struct HcmRiskScdView: View {
             VStack {
                 Form() {
                     Section(header: Text("Parameters")) {
-                        HStack {
-                            Text("Age (yrs)")
-                            TextField("16-115 yrs", value: $age, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("Age (yrs)")
+                                TextField("16-115 yrs", value: $age, formatter: Self.numberFormatter)
+                                    .keyboardType(.numbersAndPunctuation)
+                                    .multilineTextAlignment(.trailing)
+                                    .focused($textFieldIsFocused)
+                            }
+                            Text(HcmRiskScdModel.ageDescription).font(.caption).fontWeight(.ultraLight)
                         }
-                        HStack {
-                            Text("LV wall thickness (mm)")
-                            TextField("10-35 mm", value: $thickness, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("LV wall thickness (mm)")
+                                TextField("10-35 mm", value: $thickness, formatter: Self.numberFormatter)
+                                    .keyboardType(.numbersAndPunctuation)
+                                    .multilineTextAlignment(.trailing)
+                                    .focused($textFieldIsFocused)
+                            }
+                            Text(HcmRiskScdModel.thicknessDescription).font(.caption).fontWeight(.ultraLight)
                         }
-                        HStack {
-                            Text("LA diameter (mm)")
-                            TextField("28-67 mm", value: $laDiameter, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("LA diameter (mm)")
+                                TextField("28-67 mm", value: $laDiameter, formatter: Self.numberFormatter)
+                                    .keyboardType(.numbersAndPunctuation)
+                                    .multilineTextAlignment(.trailing)
+                                    .focused($textFieldIsFocused)
+                            }
+                            Text(HcmRiskScdModel.laDiameterDescription).font(.caption).fontWeight(.ultraLight)
                         }
-                        HStack {
-                            Text("Gradient (mmHg)")
-                            TextField("2-154 mmHg", value: $gradient, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("Gradient (mmHg)")
+                                TextField("2-154 mmHg", value: $gradient, formatter: Self.numberFormatter)
+                                    .keyboardType(.numbersAndPunctuation)
+                                    .multilineTextAlignment(.trailing)
+                                    .focused($textFieldIsFocused)
+                            }
+                            Text(HcmRiskScdModel.gradientDescription).font(.caption).fontWeight(.ultraLight)
                         }
                     }
                     Section(header: Text("History")) {
-                        Toggle(isOn: $familyHxScd) {
-                            Text("Family hx SCD")
-                        }
-                        Toggle(isOn: $hxNsvt) {
-                            Text("Hx NSVT")
-                        }
-                        Toggle(isOn: $hxSyncope) {
-                            Text("Hx Syncope")
-                        }
+                        ToggleView(parameter: $familyHxScd, label: "Family hx SCD", description: HcmRiskScdModel.familyHxScdDescription)
+                        ToggleView(parameter: $hxNsvt, label: "Hx NSVT", description: HcmRiskScdModel.hxNsvtDescription)
+                        ToggleView(parameter: $hxSyncope, label: "Hx syncope", description: HcmRiskScdModel.hxSyncopeDescription)
                     }
                     Section(header: Text("Result")) {
                         HStack {
@@ -141,8 +147,11 @@ struct HcmRiskScdView: View {
     }
 }
 
+
+
 struct HcmView_Previews: PreviewProvider {
     static var previews: some View {
         HcmRiskScdView()
     }
 }
+

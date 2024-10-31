@@ -42,6 +42,8 @@ class HcmRiskScdTests: XCTestCase {
         XCTAssertEqual(try h14.calculate(), 0.0360, accuracy: 0.001)
         let h15 = HcmRiskScdModel(age: 35, thickness: 35, laDiameter: 51, gradient: 50, familyHxScd: false, hxNsvt: false, hxSyncope:  false)
         XCTAssertNoThrow(try h15.calculate())
+        let h16 = HcmRiskScdModel(age: 35, thickness: 35, laDiameter: 51, gradient: 50, familyHxScd: false, hxNsvt: false, hxSyncope:  true)
+        XCTAssertEqual(try h16.calculate(), 0.0709, accuracy: 0.001)
     }
 
     func testHcmRiskScdViewModel() {
