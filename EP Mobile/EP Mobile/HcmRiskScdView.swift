@@ -44,7 +44,7 @@ struct HcmRiskScdView: View {
                                     .multilineTextAlignment(.trailing)
                                     .focused($textFieldIsFocused)
                             }
-                            Text(HcmRiskScdModel.ageDescription).font(.caption).fontWeight(.ultraLight)
+                            DescriptionView(HcmRiskScdModel.ageDescription)
                         }
                         VStack(alignment: .leading) {
                             HStack {
@@ -54,7 +54,7 @@ struct HcmRiskScdView: View {
                                     .multilineTextAlignment(.trailing)
                                     .focused($textFieldIsFocused)
                             }
-                            Text(HcmRiskScdModel.thicknessDescription).font(.caption).fontWeight(.ultraLight)
+                            DescriptionView(HcmRiskScdModel.thicknessDescription)
                         }
                         VStack(alignment: .leading) {
                             HStack {
@@ -64,7 +64,7 @@ struct HcmRiskScdView: View {
                                     .multilineTextAlignment(.trailing)
                                     .focused($textFieldIsFocused)
                             }
-                            Text(HcmRiskScdModel.laDiameterDescription).font(.caption).fontWeight(.ultraLight)
+                            DescriptionView(HcmRiskScdModel.laDiameterDescription)
                         }
                         VStack(alignment: .leading) {
                             HStack {
@@ -74,7 +74,7 @@ struct HcmRiskScdView: View {
                                     .multilineTextAlignment(.trailing)
                                     .focused($textFieldIsFocused)
                             }
-                            Text(HcmRiskScdModel.gradientDescription).font(.caption).fontWeight(.ultraLight)
+                            DescriptionView(HcmRiskScdModel.gradientDescription)
                         }
                     }
                     Section(header: Text("History")) {

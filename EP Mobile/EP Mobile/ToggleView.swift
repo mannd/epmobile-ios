@@ -15,9 +15,22 @@ struct ToggleView: View {
     var description: String
 
     var body: some View {
-        Toggle(isOn: $parameter) {
+        VStack(alignment: .leading) {
+            Toggle(isOn: $parameter) {
                 Text(label)
-                Text(description).font(.caption)
+            }
+            Text(description).font(.subheadline).fontWeight(.light)
         }
+    }
+}
+
+struct DescriptionView: View {
+    var description: String
+    var body: some View {
+        Text(description).font(.subheadline).fontWeight(.light)
+    }
+
+    init(_ description: String) {
+        self.description = description
     }
 }
