@@ -63,14 +63,13 @@
 #define FRAILTY_ROW 6
 #define HAS_BLED_ROW 7
 #define HEMORRHAGES_ROW 8
-#define HCM_2002_ROW 9
-#define HCM_2014_ROW 10
-#define ICD_IMPLANTATION_RISK_ROW 11
-#define ICD_MORTALITY_RISK_ROW 12
-#define ORBIT_RISK_ROW 13
-#define QT_PROLONGATION_RISK_ROW 14
-#define SAME_TTR_ROW 15
-#define SYNCOPE_ROW 16
+#define HCM_SCD_ROW 9
+#define ICD_IMPLANTATION_RISK_ROW 10
+#define ICD_MORTALITY_RISK_ROW 11
+#define ORBIT_RISK_ROW 12
+#define QT_PROLONGATION_RISK_ROW 13
+#define SAME_TTR_ROW 14
+#define SYNCOPE_ROW 15
 
 @interface EPSMainTableViewController ()
 
@@ -187,11 +186,8 @@
         if (indexPath.row == HEMORRHAGES_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSHemorrhagesRiskScore alloc] init]];
         }
-        if (indexPath.row == HCM_2002_ROW) {
-            [RiskScoreViewController showWithVc:self riskScore:[[EPSHcmRiskScore alloc] init]];
-        }
-        if (indexPath.row == HCM_2014_ROW) {
-            [HcmViewController showWithVc:self];
+        if (indexPath.row == HCM_SCD_ROW) {
+            // Goes to list of HCM SCD calculators via segue.
         }
         if (indexPath.row == ICD_MORTALITY_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSIcdMortalityRiskScore alloc] init]];

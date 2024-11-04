@@ -38,7 +38,6 @@ static const int manualMeasureStep = SPECIAL_STEP_2;
             *step = lateTransitionStep;
             break;
         case lateTransitionStep:
-            isRvot = YES;
             isCertainlyRvot = YES;
             *step = SUCCESS_STEP;
             //[self showResult];

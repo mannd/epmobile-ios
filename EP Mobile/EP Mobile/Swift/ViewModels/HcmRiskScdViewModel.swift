@@ -1,5 +1,5 @@
 //
-//  HcmViewModel.swift
+//  HcmRiskScdViewModel.swift
 //  EP Mobile
 //
 //  Created by David Mann on 5/24/22.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct HcmViewModel {
-    private let model: HcmModel
+struct HcmRiskScdViewModel {
+    private let model: HcmRiskScdModel
     private static var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 1
@@ -17,7 +17,7 @@ struct HcmViewModel {
     }()
 
     init(age: Int, thickness: Int, laDiameter: Int, gradient: Int, familyHxScd: Bool, hxNsvt: Bool, hxSyncope: Bool) {
-        model = HcmModel(age: Double(age), thickness: Double(thickness), laDiameter: Double(laDiameter), gradient: Double(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
+        model = HcmRiskScdModel(age: Double(age), thickness: Double(thickness), laDiameter: Double(laDiameter), gradient: Double(gradient), familyHxScd: familyHxScd, hxNsvt: hxNsvt, hxSyncope: hxSyncope)
     }
 
     func calculate() -> String {
@@ -39,7 +39,7 @@ struct HcmViewModel {
             }
             return ErrorMessage.calculationError
         } catch {
-            if let error = error as? HcmError {
+            if let error = error as? HcmRiskScdError {
                 return error.description
             } else {
                 return ErrorMessage.invalidEntry
@@ -48,7 +48,7 @@ struct HcmViewModel {
     }
 
     func getDetails() -> String {
-        var result = "Risk score: HCM SCD 2014"
+        var result = "Risk score: HCM Risk-SCD 2014"
         result += "\nRisks:"
         result += "\nAge = \(Int(model.age)) yrs"
         result += "\nMax LV wall thickness = \(Int(model.thickness)) mm"
@@ -58,17 +58,15 @@ struct HcmViewModel {
             result += "\nFamily hx of SCD"
         }
         if model.hxNsvt {
-            result += "\nHx of NSVT"
+            result += "\nHx of nonsustained VT"
         }
         if model.hxSyncope {
             result += "\nHx of unexplained syncope"
         }
         result += "\n"
         result += calculate()
-        result += "\nReferences: "
-        result += HcmModel.getReferences()[0].getPlainTextReference()
         result += "\n"
-        result += HcmModel.getReferences()[1].getPlainTextReference()
+        result += Reference.getReferenceList(from: HcmRiskScdModel.getReferences())
         return result
     }
 }
