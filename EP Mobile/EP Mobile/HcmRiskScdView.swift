@@ -79,7 +79,7 @@ struct HcmRiskScdView: View {
                     }
                     Section(header: Text("History")) {
                         ToggleView(parameter: $familyHxScd, label: "Family hx SCD", description: HcmRiskScdModel.familyHxScdDescription)
-                        ToggleView(parameter: $hxNsvt, label: "Hx NSVT", description: HcmRiskScdModel.hxNsvtDescription)
+                        ToggleView(parameter: $hxNsvt, label: "Hx nonsustained VT", description: HcmRiskScdModel.hxNsvtDescription)
                         ToggleView(parameter: $hxSyncope, label: "Hx syncope", description: HcmRiskScdModel.hxSyncopeDescription)
                     }
                     Section(header: Text("Result")) {

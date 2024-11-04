@@ -48,9 +48,9 @@ struct HcmScd2024Model: InformationProvider {
     }
 
     static func getInstructions() -> String? {
-        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.\n\nThis calculator is based on the 2024 Guidelines for the Management of HCM by the AHA/ACC.  The guidelines are virtually idential to the 2020 guidelines, with the exception that the original risk factor of LV apical aneurysm, independent of size was changed to LV apical aneurysm with transmural scar or LGE."
+        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.\n\nThis calculator is based on the 2024 Guidelines for the Management of HCM by the AHA/ACC.  The guidelines are virtually identical to the 2020 guidelines, with the exception that the original risk factor of LV apical aneurysm, independent of size, was changed to LV apical aneurysm with transmural scar or LGE."
     }
 
     static func getKey() -> String? {
-        return "CMR = cardiovascular magnetic resonance.\n\nHCM = hypertrophic cardiomyopathy.\n\nICD = implantable cardioverter defibrillator.\n\nLGE = late gadolinium enhancement\n\nLVEF = left ventricular ejection fraction.\n\nLVH = left ventricular hypertrophy\n\nVT = ventricular tachycardia." }
+        return "CMR = cardiovascular magnetic resonance.\n\nHCM = hypertrophic cardiomyopathy.\n\nICD = implantable cardioverter defibrillator.\n\nLGE = late gadolinium enhancement\n\nLVEF = left ventricular ejection fraction.\n\nLVH = left ventricular hypertrophy\n\nVT = ventricular tachycardia.\n\nSCD = sudden cardiac death." }
 }

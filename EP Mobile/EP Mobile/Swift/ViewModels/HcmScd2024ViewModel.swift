@@ -53,7 +53,7 @@ struct HcmScd2024ViewModel {
             result += "\nLow LVEF"
         }
         if model.hxNsvt {
-            result += "\nHx of NSVT"
+            result += "\nHx of nonsustained VT"
         }
         if model.extensiveLGE {
             result += "\nExtensive LGE"

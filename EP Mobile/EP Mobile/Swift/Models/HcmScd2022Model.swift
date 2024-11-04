@@ -54,19 +54,16 @@ struct HcmScd2022Model: InformationProvider {
             }
         }
         return (scdProbability, recommendation)
-
-
     }
-
 
     static func getReferences() -> [Reference] {
         return references
     }
 
     static func getInstructions() -> String? {
-        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.\n\nThis calculator uses the HCM Risk-SCD score to calculate the 5 year risk of sudden death.  It takes into account additional risk factors to make recommendations for ICD implantation."
+        return "Do not use this risk calculator for pediatric patients (<16), elite competitive athletes, HCM associated with metabolic syndromes, or patients with aborted SCD or sustained ventricular arrhythmias.\n\nThis calculator uses the HCM Risk-SCD score to calculate the 5 year risk of sudden cardia death.  It takes into account additional risk factors not included in the original HCM Risk-SCD score to make recommendations for ICD implantation.  Given this, the 5 year risk calculated by the HCM Risk-SCD score may underestimate the actual risk of SCD."
     }
 
     static func getKey() -> String? {
-        return "HCM = hypertrophic cardiomyopathy.\n\nCMR = cardiovascular magnetic resonance.\n\nICD = implantable cardioverter defibrillator.\n\nLGE = late gadolinium enhancement\n\nLVEF = left ventricular ejection fraction.\n\nLVH = left ventricular hypertrophy\n\nNSVT = nonsustained ventricular tachycardia." }
+        return "HCM = hypertrophic cardiomyopathy.\n\nCMR = cardiovascular magnetic resonance.\n\nICD = implantable cardioverter defibrillator.\n\nLGE = late gadolinium enhancement\n\nLVEF = left ventricular ejection fraction.\n\nLVH = left ventricular hypertrophy\n\nVT = ventricular tachycardia.\n\nSCD = sudden cardiac death." }
 }

@@ -58,7 +58,7 @@ struct HcmRiskScdViewModel {
             result += "\nFamily hx of SCD"
         }
         if model.hxNsvt {
-            result += "\nHx of NSVT"
+            result += "\nHx of nonsustained VT"
         }
         if model.hxSyncope {
             result += "\nHx of unexplained syncope"
