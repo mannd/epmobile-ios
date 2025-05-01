@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum BmiError: Error {
+    case invalidParameter
+}
+
 struct BmiModel: InformationProvider {
     static func getReferences() -> [Reference] {
         // TODO:
@@ -27,12 +31,24 @@ struct BmiModel: InformationProvider {
     var height: Measurement<UnitLength>
     var weight: Measurement<UnitMass>
 
-    init(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) {
+    init(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) throws {
+        if height.value == 0 || weight.value == 0 {
+            throw BmiError.invalidParameter
+        }
         self.height = height.converted(to: .meters)
         self.weight = weight.converted(to: .kilograms)
     }
 
     func calculate() -> Double {
         return (weight.value / (height.value * height.value))
+    }
+
+    func calculate() -> String {
+        return Self.rounded(calculate())
+    }
+
+    static func rounded(_ value: Double) -> String {
+        let roundedValue = round(10 * value) / 10
+        return String(format: "%.1f", roundedValue)
     }
 }
