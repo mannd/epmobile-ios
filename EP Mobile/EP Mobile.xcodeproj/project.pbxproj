@@ -202,6 +202,9 @@
 		8EEE9BB5283D5055005AB875 /* HcmRiskScdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */; };
 		8EEE9BB7283D8565005AB875 /* HcmRiskScdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */; };
 		8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB8283D8819005AB875 /* HcmViewController.swift */; };
+		8EEECFFA2DC3A9B500142046 /* BmiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEECFF92DC3A9B500142046 /* BmiModel.swift */; };
+		8EEECFFC2DC3ABF000142046 /* BmiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEECFFB2DC3ABF000142046 /* BmiTests.swift */; };
+		8EEECFFF2DC3B07500142046 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 8EEECFFE2DC3B07500142046 /* Numerics */; };
 		8EF22161290782F6000EF617 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF22160290782F6000EF617 /* InformationViewController.swift */; };
 		8EF29289226AA43C00F15B99 /* ArvcRiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */; };
 		8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */; };
@@ -494,6 +497,8 @@
 		8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdViewModel.swift; sourceTree = "<group>"; };
 		8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdView.swift; sourceTree = "<group>"; };
 		8EEE9BB8283D8819005AB875 /* HcmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewController.swift; sourceTree = "<group>"; };
+		8EEECFF92DC3A9B500142046 /* BmiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiModel.swift; sourceTree = "<group>"; };
+		8EEECFFB2DC3ABF000142046 /* BmiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiTests.swift; sourceTree = "<group>"; };
 		8EEF6BDB23011D0C00A36CD3 /* EP MobileTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EP MobileTests-Bridging-Header.h"; path = "EP Mobile/EP MobileTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EF22160290782F6000EF617 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvcRiskViewController.swift; sourceTree = "<group>"; };
@@ -524,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC19C45159FE0FA00975E2B /* UIKit.framework in Frameworks */,
+				8EEECFFF2DC3B07500142046 /* Numerics in Frameworks */,
 				8EC19C46159FE0FA00975E2B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +680,7 @@
 				8E6A35492C056CE000A94CD3 /* V2TransitionCalculator.swift */,
 				8E808362282DC62100E88A4E /* Warfarin.swift */,
 				8E6381B8282982C400249E87 /* Weight.swift */,
+				8EEECFF92DC3A9B500142046 /* BmiModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1025,6 +1032,7 @@
 				8E2C4261291EAA0B00E6BEED /* UnitTests.swift */,
 				8E808364282DE88B00E88A4E /* WarfarinTests.swift */,
 				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
+				8EEECFFB2DC3ABF000142046 /* BmiTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1090,7 +1098,7 @@
 				CLASSPREFIX = EPS;
 				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1630;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C41159FE0FA00975E2B = {
@@ -1110,6 +1118,7 @@
 			packageReferences = (
 				8E05062B2820879D0059DACB /* XCRemoteSwiftPackageReference "MiniQTc" */,
 				8E1B271E2827500D003AD237 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				8EEECFFD2DC3B07500142046 /* XCRemoteSwiftPackageReference "swift-numerics" */,
 			);
 			productRefGroup = 8EC19C28159FE0FA00975E2B /* Products */;
 			projectDirPath = "";
@@ -1216,6 +1225,7 @@
 				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
 				8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */,
 				8EBCC80E2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift in Sources */,
+				8EEECFFA2DC3A9B500142046 /* BmiModel.swift in Sources */,
 				8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */,
 				8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */,
 				8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */,
@@ -1324,6 +1334,7 @@
 			files = (
 				8ECA415C2815AD6500CFAC18 /* DateMathTests.swift in Sources */,
 				8E38A07E28F377AD00F1F723 /* ReferenceTests.swift in Sources */,
+				8EEECFFC2DC3ABF000142046 /* BmiTests.swift in Sources */,
 				8EC19C51159FE0FA00975E2B /* EP_MobileTests.m in Sources */,
 				8E808365282DE88B00E88A4E /* WarfarinTests.swift in Sources */,
 				8E6A354C2C0660F400A94CD3 /* TestV2TransitionCalculator.swift in Sources */,
@@ -1405,6 +1416,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1462,6 +1474,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = W74NPJXYEG;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1491,7 +1504,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 58;
-				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1522,7 +1534,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 58;
-				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1553,7 +1564,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -1587,7 +1597,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W74NPJXYEG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -1660,6 +1669,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8EEECFFD2DC3B07500142046 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1672,6 +1689,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E1B271E2827500D003AD237 /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = OrderedCollections;
+		};
+		8EEECFFE2DC3B07500142046 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EEECFFD2DC3B07500142046 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
