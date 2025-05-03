@@ -23,21 +23,39 @@ struct BmiModel: InformationProvider {
              overweightClass1,
              overweightClass2,
              overweightClass3
+
+        var description: String {
+            switch self {
+            case .underweightSevere:
+                return "Severely underweight"
+            case .underweightModerate:
+                return "Moderately underweight"
+            case .underweightMild:
+                return "Mildly underweight"
+            case .normal:
+                return "Normal"
+            case .overweightPreobese:
+                return "Pre-obese"
+            case .overweightClass1:
+                return "Class I overweight"
+            case .overweightClass2:
+                return "Class II overweight"
+            case .overweightClass3:
+                return "Class III overweight"
+            }
+        }
     }
 
     static func getReferences() -> [Reference] {
-        // TODO:
-        return []
+        return [Reference("Nuttall FQ. Body Mass Index. Nutr Today. 2015;50(3):117-128.\ndoi:10.1097/NT.0000000000000092")]
     }
 
     static func getInstructions() -> String? {
-        // TODO:
-        return "TODO: Bmi instructions"
+        return "This Body Mass Index calculator is intended for adult men and women, age 20 and older.  Enter the weight and height in the chosen units and tap Calculate to get the result."
     }
 
     static func getKey() -> String? {
-        // TODO:
-        return "TODO: Bmi key"
+        return nil
     }
 
     var height: Measurement<UnitLength>

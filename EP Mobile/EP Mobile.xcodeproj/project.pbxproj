@@ -199,6 +199,8 @@
 		8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */; };
 		8EDF8E5C20F250900072C409 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDF8E5B20F2508F0072C409 /* WebKit.framework */; };
 		8EE071A5291ECF4C002EE004 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */; };
+		8EE09CC02DC69BE400D64BB0 /* BmiCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */; };
+		8EE09CC22DC69C1400D64BB0 /* BmiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE09CC12DC69C1400D64BB0 /* BmiViewController.swift */; };
 		8EEE9BB5283D5055005AB875 /* HcmRiskScdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */; };
 		8EEE9BB7283D8565005AB875 /* HcmRiskScdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */; };
 		8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE9BB8283D8819005AB875 /* HcmViewController.swift */; };
@@ -494,6 +496,8 @@
 		8EDD2D48212F0C2B00C3397C /* EPSTamponadeRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSTamponadeRiskScore.m; sourceTree = "<group>"; };
 		8EDF8E5B20F2508F0072C409 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8EE071A4291ECF4C002EE004 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiCalculatorView.swift; sourceTree = "<group>"; };
+		8EE09CC12DC69C1400D64BB0 /* BmiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiViewController.swift; sourceTree = "<group>"; };
 		8EEE9BB4283D5054005AB875 /* HcmRiskScdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdViewModel.swift; sourceTree = "<group>"; };
 		8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdView.swift; sourceTree = "<group>"; };
 		8EEE9BB8283D8819005AB875 /* HcmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmViewController.swift; sourceTree = "<group>"; };
@@ -642,6 +646,7 @@
 				8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */,
 				8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */,
 				8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */,
+				8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -708,6 +713,7 @@
 				8E6A354F2C07696B00A94CD3 /* V2CalculatorViewController.swift */,
 				8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */,
 				8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */,
+				8EE09CC12DC69C1400D64BB0 /* BmiViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1231,6 +1237,7 @@
 				8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
+				8EE09CC02DC69BE400D64BB0 /* BmiCalculatorView.swift in Sources */,
 				8E6A354A2C056CE000A94CD3 /* V2TransitionCalculator.swift in Sources */,
 				8EBFBBD8162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m in Sources */,
 				8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */,
@@ -1259,6 +1266,7 @@
 				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
 				8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */,
+				8EE09CC22DC69C1400D64BB0 /* BmiViewController.swift in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
 				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
