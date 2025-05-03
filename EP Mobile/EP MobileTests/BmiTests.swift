@@ -31,7 +31,21 @@ struct BmiTests {
         #expect(BmiModel.rounded(21.99) == "22.0")
         #expect(BmiModel.rounded(22.04) == "22.0")
         #expect(BmiModel.rounded(22.49) == "22.5")
+    }
 
+    @Test("Test classification of BMI")
+    func testClassification() async throws {
+        #expect(BmiModel.getClassification(bmi: 15.99) == BmiModel.Classification.underweightSevere)
+        // Want to make sure a BMI of 15.99 is actually considered
+        // to be 16.0 when classified.
+        #expect(BmiModel.getClassification(bmi: BmiModel.roundToTenths(15.99)) == BmiModel.Classification.underweightModerate)
+        #expect(BmiModel.getClassification(bmi: 16.0) == BmiModel.Classification.underweightModerate)
+        #expect(BmiModel.getClassification(bmi: 18.4) == BmiModel.Classification.underweightMild)
+        #expect(BmiModel.getClassification(bmi: 18.5) == BmiModel.Classification.normal)
+        #expect(BmiModel.getClassification(bmi: 25.0) == BmiModel.Classification.overweightPreobese)
+        #expect(BmiModel.getClassification(bmi: 30.0) == BmiModel.Classification.overweightClass1)
+        #expect(BmiModel.getClassification(bmi: 35.0) == BmiModel.Classification.overweightClass2)
+        #expect(BmiModel.getClassification(bmi: 40.0) == BmiModel.Classification.overweightClass3)
     }
 
 }

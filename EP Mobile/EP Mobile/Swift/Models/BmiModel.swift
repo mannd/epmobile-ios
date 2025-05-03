@@ -13,6 +13,18 @@ enum BmiError: Error {
 }
 
 struct BmiModel: InformationProvider {
+
+    enum Classification {
+        case underweightSevere,
+             underweightModerate,
+             underweightMild,
+             normal,
+             overweightPreobese,
+             overweightClass1,
+             overweightClass2,
+             overweightClass3
+    }
+
     static func getReferences() -> [Reference] {
         // TODO:
         return []
@@ -43,12 +55,37 @@ struct BmiModel: InformationProvider {
         return (weight.value / (height.value * height.value))
     }
 
-    func calculate() -> String {
+    func calculateRounded() -> String {
         return Self.rounded(calculate())
     }
 
     static func rounded(_ value: Double) -> String {
-        let roundedValue = round(10 * value) / 10
-        return String(format: "%.1f", roundedValue)
+        return String(format: "%.1f", roundToTenths(value))
+    }
+
+    static func roundToTenths(_ value: Double) -> Double {
+        return round(10 * value) / 10
+    }
+
+    // BMI must already be rounded to nearest tenth.
+    static func getClassification(bmi value: Double) -> Classification {
+        switch value {
+        case ..<16.0:
+            return .underweightSevere
+        case 16.0..<17.0:
+            return .underweightModerate
+        case 17.0..<18.5:
+            return .underweightMild
+        case 18.5..<25.0:
+            return .normal
+        case 25.0..<30.0:
+            return .overweightPreobese
+        case 30..<35.0:
+            return .overweightClass1
+        case 35..<40.0:
+            return .overweightClass2
+        default:
+            return .overweightClass3
+        }
     }
 }
