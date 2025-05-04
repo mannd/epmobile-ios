@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"\n\nEP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright © 2012 - 2024\nEP Studios, Inc.", [self getVersion]];
+    self.aboutTextView.text = [[NSString alloc] initWithFormat:@"\n\nEP Mobile for Apple iOS\nTools for Cardiac Electrophysiology\nVersion %@\n\nEmail\nmannd@epstudiossoftware.com\nWeb\nwww.epstudiossoftware.com\nSource\ngithub.com/mannd/epmobile-ios\n\nCopyright © 2012 - 2025\nEP Studios, Inc.", [self getVersion]];
 }
 
 - (NSString *)getVersion {
