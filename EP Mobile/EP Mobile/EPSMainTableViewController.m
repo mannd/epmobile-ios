@@ -36,15 +36,16 @@
 
 // Calculators section
 #define CALCULATOR_SECTION 0
-#define CRCL_CALCULATOR_ROW 0
-#define DATE_CALCULATOR_ROW 1
-#define DRUG_CALCULATORS_ROW 2
-#define INTERVAL_RATE_ROW 3
-#define GFR_CALCULATOR_ROW 4
-#define QTC_CALCULATOR_ROW 5
-#define QTC_IVCD_CALCULATOR_ROW 6
-#define WARFARIN_CLINIC_ROW 7
-#define WEIGHT_CALCULATOR_ROW 8
+#define BMI_CALCULATOR_ROW 0
+#define CRCL_CALCULATOR_ROW 1
+#define DATE_CALCULATOR_ROW 2
+#define DRUG_CALCULATORS_ROW 3
+#define INTERVAL_RATE_ROW 4
+#define GFR_CALCULATOR_ROW 5
+#define QTC_CALCULATOR_ROW 6
+#define QTC_IVCD_CALCULATOR_ROW 7
+#define WARFARIN_CLINIC_ROW 8
+#define WEIGHT_CALCULATOR_ROW 9
 // Diagnosis section
 #define DIAGNOSIS_SECTION 1
 #define TAMPONADE_ROW 4
@@ -126,6 +127,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == CALCULATOR_SECTION) { // Calculators
+        if (indexPath.row == BMI_CALCULATOR_ROW) {
+            [BmiViewController showWithVc:self];
+        }
         if (indexPath.row == CRCL_CALCULATOR_ROW) {
             [DrugCalculatorController showWithVc:self drugName:DrugNameCrCl];
         }

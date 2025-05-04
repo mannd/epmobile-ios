@@ -45,7 +45,7 @@ struct HcmScd2022View: View {
         NavigationView {
             VStack {
                 Form() {
-                    Section(header: Text("HCM Risk-ICD")) {
+                    Section(header: Text("HCM Risk-SCD")) {
                         VStack(alignment: .leading) {
                             HStack {
                                 Text("Age (yrs)")
