@@ -154,6 +154,10 @@
 		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
 		8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */; };
 		8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */; };
+		8EAA46412DCFBF9100F9C8DF /* DecisionTreeView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */; };
+		8EAA46432DCFCB4A00F9C8DF /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */; };
+		8EAA46452DCFCB9A00F9C8DF /* AnswerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */; };
+		8EAA46472DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */; };
 		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
@@ -429,6 +433,10 @@
 		8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSameTtrRiskScore.m; sourceTree = "<group>"; };
 		8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaStrokeRiskScore.h; sourceTree = "<group>"; };
 		8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaStrokeRiskScore.m; sourceTree = "<group>"; };
+		8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecisionTreeView 2.swift"; sourceTree = "<group>"; };
+		8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOption.swift; sourceTree = "<group>"; };
+		8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrudaAlgorithm.swift; sourceTree = "<group>"; };
 		8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskScore.h; sourceTree = "<group>"; };
 		8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskScore.m; sourceTree = "<group>"; };
 		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
@@ -632,6 +640,7 @@
 		8E18B3682814C2D70043FD00 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */,
 				8E560B462DCE7B510046377B /* DecisionTreeView.swift */,
 				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
@@ -692,6 +701,8 @@
 				8E6381B8282982C400249E87 /* Weight.swift */,
 				8EEECFF92DC3A9B500142046 /* BmiModel.swift */,
 				8E560B442DCE72C70046377B /* DecisionNode.swift */,
+				8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */,
+				8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -773,8 +784,16 @@
 			isa = PBXGroup;
 			children = (
 				8E38A08028F4B3BB00F1F723 /* InformationProvider.swift */,
+				8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8E560B482DCE8EBC0046377B /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Algorithms;
 			sourceTree = "<group>";
 		};
 		8E59E967281A4060003C485F /* Common */ = {
@@ -981,6 +1000,7 @@
 		8EC19C32159FE0FA00975E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E560B482DCE8EBC0046377B /* Algorithms */,
 				8ED8A8EC25168CA600ACE6F8 /* org.css */,
 				8ECAFFD120F2404C00B2696A /* lbbb.html */,
 				8EC1D2A81F78612300F46734 /* brugadadiagnosis.html */,
@@ -1200,6 +1220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */,
+				8EAA46432DCFCB4A00F9C8DF /* Algorithm.swift in Sources */,
 				8EC19C38159FE0FA00975E2B /* main.m in Sources */,
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
 				8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */,
@@ -1242,11 +1263,13 @@
 				8E560B452DCE72C70046377B /* DecisionNode.swift in Sources */,
 				8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */,
 				8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */,
+				8EAA46472DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8EE09CC02DC69BE400D64BB0 /* BmiCalculatorView.swift in Sources */,
 				8E6A354A2C056CE000A94CD3 /* V2TransitionCalculator.swift in Sources */,
 				8EBFBBD8162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m in Sources */,
+				8EAA46452DCFCB9A00F9C8DF /* AnswerOption.swift in Sources */,
 				8EBFBBDB162CA96100D3B964 /* EPSAnnularVTAlgorithm.m in Sources */,
 				8E815D38162EE10F001025ED /* EPSBrugadaWCTAlgorithm.m in Sources */,
 				8E815D3C162EE2F0001025ED /* EPSWCTTableViewController.m in Sources */,
@@ -1338,6 +1361,7 @@
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 				8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */,
+				8EAA46412DCFBF9100F9C8DF /* DecisionTreeView 2.swift in Sources */,
 				8EB3D38028EFCBFE00023F29 /* InformationViewPresenter.swift in Sources */,
 				8E38A08128F4B3BB00F1F723 /* InformationProvider.swift in Sources */,
 				8ED018602918462E007E5101 /* AppleScore.swift in Sources */,

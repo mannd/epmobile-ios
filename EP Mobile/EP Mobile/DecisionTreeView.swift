@@ -40,9 +40,13 @@ struct DecisionTreeView: View {
                         moveToNextNode(isYes: true)
                     }
                     .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                    // TODO: playing with button styling
+                    .font(.title)
+//                    .background(Color.green)
+//                    .foregroundColor(.white)
+                    .buttonStyle(.borderedProminent)
+//                    .buttonBorderShape(.capsule)
+//                    .cornerRadius(8)
 
                     Button("No") {
                         moveToNextNode(isYes: false)
