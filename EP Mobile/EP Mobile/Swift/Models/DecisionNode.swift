@@ -51,26 +51,12 @@ extension DecisionNode {
     }
 }
 
-class MultipleDecisionNode : ObservableObject, Decodable {
-    var question: String
-    var branches: [AnswerOption: MultipleDecisionNode]  // Dictionary to store branches based on answers
+struct MultipleDecisionNode : Codable {
+    var question: String?
+    var branches: [AnswerOption.RawValue: MultipleDecisionNode]?
+    // Note: the JSON decoder cna't handle [AnswerOption: MutlipeDecisionNode], though it should.
+    // See https://developer.apple.com/forums/thread/747665
     var result: String?
-    var note: String?  // optional intermediate result
-
-    init(question: String, branches: [AnswerOption: MultipleDecisionNode] = [:], note: String? = nil) {
-        self.question = question
-        self.branches = branches
-        self.result = nil
-        self.note = note
-    }
-
-    // Convenience initializer for leaf nodes (where result is known)
-    init(result: String, note: String? = nil) {
-        self.question = ""
-        self.branches = [:]
-        self.result = result
-        self.note = note
-    }
 
     var isLeaf: Bool {
         return result != nil
@@ -88,8 +74,20 @@ extension MultipleDecisionNode {
             let data = try Data(contentsOf: url)
             let tree = try JSONDecoder().decode(MultipleDecisionNode.self, from: data)
             return tree
+        } catch let DecodingError.dataCorrupted(context) {
+            print("Data corrupted: \(context.debugDescription)")
+            return nil
+        } catch let DecodingError.keyNotFound(key, context) {
+            print("Key '\(key)' not found: \(context.debugDescription)")
+            return nil
+        } catch let DecodingError.typeMismatch(type, context) {
+            print("Type '\(type)' mismatch: \(context.debugDescription)")
+            return nil
+        } catch let DecodingError.valueNotFound(value, context) {
+            print("Value '\(value)' not found: \(context.debugDescription)")
+            return nil
         } catch {
-            print("Failed to decode decision tree: \(error)")
+            print("Failed to decode decision tree: \(error.localizedDescription)")
             return nil
         }
     }

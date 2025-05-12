@@ -111,6 +111,7 @@ struct ContentView: View {
 
 struct DecisionTreeView_Previews: PreviewProvider {
     static var previews: some View {
+//        let node = DecisionNode.loadDecisionTree(from: "arruda-algorithm")!
         let dog = DecisionNode(result: "You should get a dog.")
         let cat = DecisionNode(result: "You should get a cat.")
         let fish = DecisionNode(result: "You should get a fish.")

@@ -158,6 +158,8 @@
 		8EAA46432DCFCB4A00F9C8DF /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */; };
 		8EAA46452DCFCB9A00F9C8DF /* AnswerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */; };
 		8EAA46472DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */; };
+		8EAA464B2DD11F0B00F9C8DF /* DecisionNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA464A2DD11F0B00F9C8DF /* DecisionNodeTests.swift */; };
+		8EAA464F2DD122B100F9C8DF /* arruda-algorithm.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA464E2DD122B100F9C8DF /* arruda-algorithm.json */; };
 		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
 		8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CE318E1CE3900642C1D /* EPSIcdRiskViewController.m */; };
@@ -437,6 +439,8 @@
 		8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOption.swift; sourceTree = "<group>"; };
 		8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrudaAlgorithm.swift; sourceTree = "<group>"; };
+		8EAA464A2DD11F0B00F9C8DF /* DecisionNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionNodeTests.swift; sourceTree = "<group>"; };
+		8EAA464E2DD122B100F9C8DF /* arruda-algorithm.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "arruda-algorithm.json"; sourceTree = "<group>"; };
 		8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskScore.h; sourceTree = "<group>"; };
 		8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdRiskScore.m; sourceTree = "<group>"; };
 		8EAE5CE218E1CE3900642C1D /* EPSIcdRiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskViewController.h; sourceTree = "<group>"; };
@@ -792,6 +796,7 @@
 		8E560B482DCE8EBC0046377B /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				8EAA464E2DD122B100F9C8DF /* arruda-algorithm.json */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -1065,6 +1070,7 @@
 				8E808364282DE88B00E88A4E /* WarfarinTests.swift */,
 				8E6381BC2829DD9B00249E87 /* WeightTests.swift */,
 				8EEECFFB2DC3ABF000142046 /* BmiTests.swift */,
+				8EAA464A2DD11F0B00F9C8DF /* DecisionNodeTests.swift */,
 			);
 			path = "EP MobileTests";
 			sourceTree = "<group>";
@@ -1183,6 +1189,7 @@
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
 				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
 				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
+				8EAA464F2DD122B100F9C8DF /* arruda-algorithm.json in Resources */,
 				8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
@@ -1387,6 +1394,7 @@
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
 				8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
+				8EAA464B2DD11F0B00F9C8DF /* DecisionNodeTests.swift in Sources */,
 				8E1F76862CC5316500C7AB54 /* HcmScd2024Tests.swift in Sources */,
 				8E0C13CA2262DBB0000892CC /* ArvcTests.swift in Sources */,
 				8E321C6B2824A0310017EDB0 /* QTcIvcdTests.swift in Sources */,

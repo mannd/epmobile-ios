@@ -8,17 +8,33 @@
 
 import Foundation
 
-struct AnswerOption: Hashable, Codable, Comparable {
+//struct AnswerOption: Hashable, Codable, Comparable {
+//    static func < (lhs: AnswerOption, rhs: AnswerOption) -> Bool {
+//        return lhs.id < rhs.id
+//    }
+//
+//    let id: String     // e.g., "yes", "no"
+//    let label: String  // e.g., "Yes", "No"
+//
+//    static let yesNo: [AnswerOption] = [
+//        .init(id: "yes", label: "Yes"),
+//        .init(id: "no", label: "No"),
+//    ]
+//}
+
+enum AnswerOption: String, Codable, CaseIterable, Comparable {
     static func < (lhs: AnswerOption, rhs: AnswerOption) -> Bool {
-        return lhs.id < rhs.id
+        return lhs.rawValue < rhs.rawValue
     }
+    case yes, no, maybe
+    // Add more as needed
 
-    let id: String     // e.g., "yes", "no"
-    let label: String  // e.g., "Yes", "No"
-
-    static let yesNo: [AnswerOption] = [
-        .init(id: "yes", label: "Yes"),
-        .init(id: "no", label: "No"),
-    ]
+    var label: String {
+        switch self {
+        case .yes: return "Yes"
+        case .no: return "No"
+        case .maybe: return "Maybe"
+        }
+    }
 }
 
