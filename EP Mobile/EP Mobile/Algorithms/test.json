@@ -1,16 +1,23 @@
-[
-  {
-    "id": 1,
-    "question": "Do you like pizza?",
-    "trueBranch": 2,
-    "falseBranch": 3
-  },
-  {
-    "id": 2,
-    "result": "You should try pepperoni pizza!"
-  },
-  {
-    "id": 3,
-    "result": "You should try veggie pizza!"
+{
+  "question": "Do you like dogs?",
+  "branches": {
+    "yes": {
+      "result": "Get a dog"
+    },
+    "no": {
+      "question": "Do you like cats?",
+	"note": "Hates dogs",
+      "branches": {
+        "yes": {
+          "result": "Get a cat"
+        },
+        "no": {
+          "result": "No pets for you"
+        },
+	  "maybe": {
+	      "result": "Decide"
+	  }
+      }
+    }
   }
-]
+}

@@ -11,15 +11,20 @@ import Testing
 
 struct DecisionNodeTests {
 
-    @Test func testLoadJson() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
-        let node = MultipleDecisionNode.loadDecisionTree(from: "arruda-algorithm")
+    @Test func testLoadTestJson() async throws {
+        let node = MultipleDecisionNode.loadDecisionTree(from: "test")
         #expect(node != nil)
         #expect(!node!.isLeaf)
-//        // TODO: this is a temporary fragile question, should remove.
-        #expect(node!.question == "Is the delta wave in lead I negative or isoelectric or is the R wave is greater in amplitude than the S wave in lead V1?")
-//        #expect(node!.result == nil)
-//        #expect(node!.note == nil)
+        #expect(node!.question == "Do you like dogs?")
+        #expect(node!.branches!.count == 2)
+        #expect(node!.branches!["yes"]?.result == "Get a dog")
+        #expect(node!.branches!["no"]?.question == "Do you like cats?")
+        #expect(node!.branches!["no"]?.note == "Hates dogs")
+        #expect(node!.branches!["no"]?.branches!.count == 3)
+        #expect(node!.branches!["no"]?.branches!["yes"]?.result == "Get a cat")
+        #expect(node!.branches!["no"]?.branches!["no"]?.result == "No pets for you")
+        #expect(node!.branches!["no"]?.branches!["maybe"]?.result == "Decide")
+
     }
 
 }

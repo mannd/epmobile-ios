@@ -26,7 +26,7 @@ enum AnswerOption: String, Codable, CaseIterable, Comparable {
     static func < (lhs: AnswerOption, rhs: AnswerOption) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
-    case yes, no, maybe
+    case yes, no, maybe, none
     // Add more as needed
 
     var label: String {
@@ -34,6 +34,16 @@ enum AnswerOption: String, Codable, CaseIterable, Comparable {
         case .yes: return "Yes"
         case .no: return "No"
         case .maybe: return "Maybe"
+        case .none: return "None"
+        }
+    }
+
+    // Note: get enum from rawValue
+    static func value(rawValue: String) -> AnswerOption {
+        if let option = AnswerOption(rawValue: rawValue) {
+            return option
+        } else {
+            return .none
         }
     }
 }

@@ -16,8 +16,28 @@ struct RoundedButton: ViewModifier {
             .background(Color.blue)
             .cornerRadius(15)
             .padding()
+
     }
 }
+
+//struct RoundedButton: ViewModifier {
+//    var backgroundColor: Color = .blue
+//    var foregroundColor: Color = .white
+//    var width: CGFloat = 140
+//    var height: CGFloat = 40
+//    var cornerRadius: CGFloat = 15
+//
+//    func body(content: Content) -> some View {
+//        content
+//            .frame(width: width, height: height)
+//            .foregroundColor(foregroundColor)
+//            .background(backgroundColor)
+//            .cornerRadius(cornerRadius)
+//            .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 2)
+//            .padding(.horizontal)
+//    }
+//}
+
 
 extension View {
     func roundedButton() -> some View {

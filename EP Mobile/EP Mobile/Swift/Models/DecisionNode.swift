@@ -54,13 +54,15 @@ extension DecisionNode {
 struct MultipleDecisionNode : Codable {
     var question: String?
     var branches: [AnswerOption.RawValue: MultipleDecisionNode]?
-    // Note: the JSON decoder cna't handle [AnswerOption: MutlipeDecisionNode], though it should.
+    // Note: the JSON decoder can't handle [AnswerOption: MutlipeDecisionNode], though it should.
     // See https://developer.apple.com/forums/thread/747665
     var result: String?
+    var note: String?
 
     var isLeaf: Bool {
         return result != nil
     }
+
 }
 
 extension MultipleDecisionNode {
@@ -69,7 +71,6 @@ extension MultipleDecisionNode {
             print("Missing file: \(filename).json")
             return nil
         }
-
         do {
             let data = try Data(contentsOf: url)
             let tree = try JSONDecoder().decode(MultipleDecisionNode.self, from: data)
