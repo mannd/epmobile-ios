@@ -9,51 +9,57 @@
 import SwiftUI
 
 struct DecisionTreeView2: View {
+    var title: String?
     @State private var nodeStack: [MultipleDecisionNode] = []
     @State private var currentNode: MultipleDecisionNode
     @State private var result: String?
     let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 2)
 
-    init(rootNode: MultipleDecisionNode) {
+    init(rootNode: MultipleDecisionNode, title: String? = nil) {
         _currentNode = State(initialValue: rootNode)
+        self.title = title
     }
 
     var body: some View {
-        VStack {
-            Text(currentNode.question!)
-                .font(.title)
-                .padding()
-
-            if let note = currentNode.note {
-                Text(note)
-                    .font(.title2)
-                    .foregroundColor(.secondary)
-            }
-            if let result = result {
-                Text(result)
-                    .font(.headline)
+       NavigationView {
+            VStack {
+                Text(currentNode.question!)
+                    .font(.title)
                     .padding()
-            } else {
+                
+                if let note = currentNode.note {
+                    Text(note)
+                        .font(.title2)
+                        .foregroundColor(.secondary)
+                }
+                if let result = result {
+                    Text(result)
+                        .font(.headline)
+                        .padding()
+                } else {
                     LazyVGrid(columns: columns, spacing: 16) {
-
+                        
                         ForEach(AnswerOption.allCases, id: \.self) { option in
                             if let _ = currentNode.branches?[option.rawValue] {
                                 Button(option.label) {
                                     moveToNextNode(forAnswer: option.rawValue)
                                 }.roundedButton()
-
+                                
                             }
                         }
-                        if !nodeStack.isEmpty {
-                            Button("Back") {
-                                currentNode = nodeStack.removeLast()
-                            }
-                            .roundedButton()
-                        }
+                    }
+                }
+                if !nodeStack.isEmpty {
+                    Button("Back") {
+                        currentNode = nodeStack.removeLast()
+                    }
+                    .roundedButton()
+                    
                 }
             }
+            .padding()
+            .navigationBarTitle(Text(title ?? "Decision Tree"), displayMode: .inline)
         }
-        .padding()
     }
 
     func moveToNextNode(forAnswer answer: String) {
@@ -70,7 +76,7 @@ struct DecisionTreeView2: View {
 
 struct DecisionTreeViews_Previews: PreviewProvider {
     static var previews: some View {
-        if let node = MultipleDecisionNode.loadDecisionTree(from: "test") {
+        if let node = MultipleDecisionNode.loadDecisionTree(from: "arruda-algorithm") {
             DecisionTreeView2(rootNode: node)
         }
 
