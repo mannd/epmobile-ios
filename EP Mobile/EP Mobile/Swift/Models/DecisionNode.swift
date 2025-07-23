@@ -54,7 +54,7 @@ extension DecisionNode {
 struct MultipleDecisionNode : Codable {
     var question: String?
     var branches: [AnswerOption.RawValue: MultipleDecisionNode]?
-    // Note: the JSON decoder can't handle [AnswerOption: MutlipeDecisionNode], though it should.
+    // Note: the JSON decoder can't handle [AnswerOption: MutipleDecisionNode], though it should.
     // See https://developer.apple.com/forums/thread/747665
     var result: String?
     var note: String?
