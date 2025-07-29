@@ -45,35 +45,79 @@
     if (([self.linkTitle length] > 0)) {
         self.title = self.linkTitle;
     }
-    
-    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width - 90, 21.0f)];
-    self.resultLabel = label;
+
+    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc] initWithTitle:@"CrCl"
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(calculate)];
+
+    // Create the label and size it explicitly
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"";
+    label.font = [UIFont systemFontOfSize:17];
+    [label sizeToFit];
+
     if (@available(iOS 13.0, *)) {
         label.textColor = [UIColor labelColor];
     } else {
         label.textColor = [UIColor darkTextColor];
     }
 
-    UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
-    self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
-    label.text = @"";
+    self.resultLabel = label;
 
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
+
+    // Flexible space pushes items to opposite ends
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil
+                                      action:nil];
+
+    // Toolbar layout: button on the left, label on the right
+    self.toolbarItems = @[buttonCalc, flexibleSpace, labelItem];
+
+
+//    UIBarButtonItem *buttonCalc = [[UIBarButtonItem alloc]initWithTitle:@"CrCl" style:UIBarButtonItemStylePlain target:self action:@selector(calculate)];
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 25, self.view.frame.size.width - 90, 21.0f)];
+//    self.resultLabel = label;
+//    if (@available(iOS 13.0, *)) {
+//        label.textColor = [UIColor labelColor];
+//    } else {
+//        label.textColor = [UIColor darkTextColor];
+//    }
+//
+//    UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:label];
+//    self.toolbarItems = [NSArray arrayWithObjects: buttonCalc, labelItem, nil];
+//    label.text = @"";
+//
+//    
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+//    [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    NSLog(@"viewDidAppear");
     [super viewDidAppear:animated];
+//    [self.navigationController setToolbarHidden:!self.showToolbar];
+//    if (self.showToolbar) {
+//        NSString *crClResult = [self getStoredCreatinineClearance];
+//        self.resultLabel.text = crClResult;
+//    }
+//    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"viewWillAppear");
+    [super viewWillAppear:animated];
     [self.navigationController setToolbarHidden:!self.showToolbar];
     if (self.showToolbar) {
         NSString *crClResult = [self getStoredCreatinineClearance];
         self.resultLabel.text = crClResult;
     }
-    
+
 }
 
 - (void)showInformationView {
