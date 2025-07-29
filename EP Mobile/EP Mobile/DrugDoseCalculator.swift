@@ -223,24 +223,34 @@ struct DrugDoseCalculator: View {
                 drugDose = drug.getDose()
                 showWarning = drug.hasWarning()
             }
-            saveResults(crCl: Int(round(patient.crCl)))
+            saveToUserDefaults(crCl: Int(round(patient.crCl)))
         } catch  {
             if let error = error as? DoseError, error == .pediatricAge {
                 renalFunction = "Minimum age is \(Patient.pediatricAgeCutoff)"
             } else {
                 renalFunction = "INVALID ENTRY"
+                clearUserDefaults()
             }
         }
     }
 
     // Save to UserDefaults to be passed to Drug Reference.
-    func saveResults(crCl: Int) {
+    func saveToUserDefaults(crCl: Int) {
         let defaults = UserDefaults.standard
         defaults.set(age, forKey: Keys.age)
         defaults.set((sex == .male), forKey: Keys.isMale)
         defaults.set(weight, forKey: Keys.weight)
         defaults.set(creatinine, forKey: Keys.creatinine)
         defaults.set(crCl, forKey: Keys.creatinineClearance)
+    }
+
+    func clearUserDefaults() {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: Keys.age)
+        defaults.removeObject(forKey: Keys.isMale)
+        defaults.removeObject(forKey: Keys.weight)
+        defaults.removeObject(forKey: Keys.creatinine)
+        defaults.removeObject(forKey: Keys.creatinineClearance)
     }
 
     func clear() {

@@ -78,11 +78,11 @@ private struct RiskScoreList: View {
                 ForEach(0..<array.count, id: \.self) { x in
                     if let riskFactor = array.object(at: x) as? EPSRiskFactor {
                         if riskFactor.details == "" {
-                            Text("\(riskFactor.name)").font(.headline)
+                            Text(riskFactor.name).font(.headline)
                         } else {
                             VStack(alignment: .leading) {
-                                Text("\(riskFactor.name)").font(.headline)
-                                Text("\(riskFactor.details)").font(.subheadline)
+                                Text(riskFactor.name).font(.headline)
+                                Text(riskFactor.details).font(.subheadline)
                             }
                         }
                     }
@@ -106,11 +106,11 @@ private struct GroupedRiskScoreList: View {
                     ForEach(Int(riskScore.getOffset(sectionNumber))..<Int(riskScore.getOffset(sectionNumber) + riskScore.numberOfRows(inSection: sectionNumber)), id: \.self) { x in
                         if let riskFactor = array.object(at: x) as? EPSRiskFactor {
                             if riskFactor.details == "" {
-                                Text("\(riskFactor.name)").font(.headline)
+                                Text(riskFactor.name).font(.headline)
                             } else {
                                 VStack(alignment: .leading) {
-                                    Text("\(riskFactor.name)").font(.headline)
-                                    Text("\(riskFactor.details)").font(.subheadline)
+                                    Text(riskFactor.name).font(.headline)
+                                    Text(riskFactor.details).font(.subheadline)
                                 }
                             }
                         }
