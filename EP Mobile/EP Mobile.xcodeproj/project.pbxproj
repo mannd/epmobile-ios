@@ -96,7 +96,10 @@
 		8E560B452DCE72C70046377B /* DecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E560B442DCE72C70046377B /* DecisionNode.swift */; };
 		8E560B472DCE7B510046377B /* DecisionTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E560B462DCE7B510046377B /* DecisionTreeView.swift */; };
 		8E59E969281A4071003C485F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59E968281A4071003C485F /* Keys.swift */; };
-		8E5D3B5F2E7F3CBD0018BD39 /* liquidglassepmobile.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B5E2E7F3CBD0018BD39 /* liquidglassepmobile.icon */; };
+		8E5D3B612E80AAF90018BD39 /* liquidglassepmobileicon2.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B602E80AAF90018BD39 /* liquidglassepmobileicon2.icon */; };
+		8E5D3B632E80B0770018BD39 /* liquidglassepmobileicon3.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B622E80B0770018BD39 /* liquidglassepmobileicon3.icon */; };
+		8E5D3B652E84614B0018BD39 /* liquidglassepmobileicon4.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B642E84614B0018BD39 /* liquidglassepmobileicon4.icon */; };
+		8E5D3B672E8463090018BD39 /* liquidglassepmobileicon5.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B662E8463090018BD39 /* liquidglassepmobileicon5.icon */; };
 		8E5D93C615C7572400ACBA4F /* EPSBrugadaECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */; };
 		8E5D93CF15C8AAAA00ACBA4F /* EPSSQTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93CE15C8AAAA00ACBA4F /* EPSSQTViewController.m */; };
 		8E5D93D515CCABF500ACBA4F /* EPSARVCCriteriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93D415CCABF500ACBA4F /* EPSARVCCriteriaViewController.m */; };
@@ -365,7 +368,10 @@
 		8E560B442DCE72C70046377B /* DecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionNode.swift; sourceTree = "<group>"; };
 		8E560B462DCE7B510046377B /* DecisionTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionTreeView.swift; sourceTree = "<group>"; };
 		8E59E968281A4071003C485F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		8E5D3B5E2E7F3CBD0018BD39 /* liquidglassepmobile.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobile.icon; sourceTree = "<group>"; };
+		8E5D3B602E80AAF90018BD39 /* liquidglassepmobileicon2.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobileicon2.icon; sourceTree = "<group>"; };
+		8E5D3B622E80B0770018BD39 /* liquidglassepmobileicon3.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobileicon3.icon; sourceTree = "<group>"; };
+		8E5D3B642E84614B0018BD39 /* liquidglassepmobileicon4.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobileicon4.icon; sourceTree = "<group>"; };
+		8E5D3B662E8463090018BD39 /* liquidglassepmobileicon5.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobileicon5.icon; sourceTree = "<group>"; };
 		8E5D93C415C7572400ACBA4F /* EPSBrugadaECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSBrugadaECGViewController.h; sourceTree = "<group>"; };
 		8E5D93C515C7572400ACBA4F /* EPSBrugadaECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSBrugadaECGViewController.m; sourceTree = "<group>"; };
 		8E5D93CD15C8AAAA00ACBA4F /* EPSSQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSQTViewController.h; sourceTree = "<group>"; };
@@ -1008,7 +1014,6 @@
 				8E815D3D162EE4F7001025ED /* Algorithms */,
 				8EC19C32159FE0FA00975E2B /* Supporting Files */,
 				8E02998817EE07BC00A7FC6F /* Images.xcassets */,
-				8E5D3B5E2E7F3CBD0018BD39 /* liquidglassepmobile.icon */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -1052,6 +1057,10 @@
 				8EC19C37159FE0FA00975E2B /* main.m */,
 				8EC19C39159FE0FA00975E2B /* EP Mobile-Prefix.pch */,
 				8ECAFFCF20F23FD600B2696A /* lbbb.org */,
+				8E5D3B622E80B0770018BD39 /* liquidglassepmobileicon3.icon */,
+				8E5D3B602E80AAF90018BD39 /* liquidglassepmobileicon2.icon */,
+				8E5D3B642E84614B0018BD39 /* liquidglassepmobileicon4.icon */,
+				8E5D3B662E8463090018BD39 /* liquidglassepmobileicon5.icon */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1194,19 +1203,21 @@
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
 				8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */,
+				8E5D3B672E8463090018BD39 /* liquidglassepmobileicon5.icon in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
 				8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */,
 				8E5D93E915CF5B1B00ACBA4F /* Data.plist in Resources */,
 				8E06011B15DB39B100BB7550 /* lbbbicon.png in Resources */,
 				8E06011D15DB39C200BB7550 /* rbbbicon.png in Resources */,
 				8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */,
+				8E5D3B632E80B0770018BD39 /* liquidglassepmobileicon3.icon in Resources */,
 				8EC5C3331AAA72BE005BDAFD /* dabigatran.html in Resources */,
 				8EAA464F2DD122B100F9C8DF /* arruda-algorithm.json in Resources */,
-				8E5D3B5F2E7F3CBD0018BD39 /* liquidglassepmobile.icon in Resources */,
 				8EAD13F92DD3C53B0002B127 /* test.json in Resources */,
 				8E71C2BE1F77574500D198BD /* RWavePeakTime.storyboard in Resources */,
 				8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */,
 				8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */,
+				8E5D3B652E84614B0018BD39 /* liquidglassepmobileicon4.icon in Resources */,
 				8EC5C3371AAA7718005BDAFD /* rivaroxaban.html in Resources */,
 				8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */,
 				8E71C2C21F775A2700D198BD /* LQTS.storyboard in Resources */,
@@ -1217,6 +1228,7 @@
 				8E71C2C81F77634A00D198BD /* WCT.storyboard in Resources */,
 				8E71C2C61F7760A100D198BD /* VT.storyboard in Resources */,
 				8E0A6241165E7B7200230EF7 /* epmobile_icon_1024.png in Resources */,
+				8E5D3B612E80AAF90018BD39 /* liquidglassepmobileicon2.icon in Resources */,
 				8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */,
 				8E0A6244165E7B9000230EF7 /* epmobile_icon_1024-2.png in Resources */,
 				8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */,
@@ -1565,7 +1577,7 @@
 		8EC19C55159FE0FA00975E2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = liquidglassepmobile;
+				ASSETCATALOG_COMPILER_APPICON_NAME = liquidglassepmobileicon4;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1595,7 +1607,7 @@
 		8EC19C56159FE0FA00975E2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = liquidglassepmobile;
+				ASSETCATALOG_COMPILER_APPICON_NAME = liquidglassepmobileicon4;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
