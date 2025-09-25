@@ -8,6 +8,9 @@
 
 #import "EPSWPWTableViewController.h"
 #import "EPSSimpleAlgorithmViewController.h"
+#import "EP_Mobile-Swift.h"
+
+#define TMP_ARRUDA_ROW 4
 
 @interface EPSWPWTableViewController ()
 
@@ -40,6 +43,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/// TODO: Below was for testing and has to be removed/commented out for production.
+//// TODO: Temporary use Modified Arruda row to develop Arruda algorithm as proof of concept.!!!!
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSInteger row = indexPath.row;
+//    if (row == TMP_ARRUDA_ROW) {
+//        [DecisionTreeViewController showWithVc:self];
+//    }
+//}
+//
+//// TODO: Temporariy inhibit segue to UIKit version of Modified Arruda algorithm
+//- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+//
+//    if ([identifier isEqualToString:@"ModifiedArrudaSegue"]) {
+//        return NO;
+//    }
+//    return YES;
+//}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EPSSimpleAlgorithmViewController *vc = (EPSSimpleAlgorithmViewController *)[segue destinationViewController];

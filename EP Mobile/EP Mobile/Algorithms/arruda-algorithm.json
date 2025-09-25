@@ -1,0 +1,24 @@
+{
+    "question": "I +/- or -, or V1 R ≥ S?",
+    "branches": {
+	"yes": {
+	    "question": "aVF +?",
+	    "note": "Left free wall",
+	    "branches": {
+		"yes": {
+		    "result": "Left lateral or left anteriolateral"
+		},
+		"no": {
+		    "result": "Left posterior or left posteriolateral"
+		}
+	    }
+	},
+	"no": {
+	    "question": "II -?",
+	    "branches": {
+		"yes": {"result": "Subepicardial"},
+		"no": {"result": "go on"}
+	    }
+	}
+    }
+}
