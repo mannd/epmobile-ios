@@ -200,6 +200,9 @@
         if (indexPath.row == ORBIT_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSOrbitRiskScore alloc] init]];
         }
+        if (indexPath.row == PAINESD_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[Painesd alloc] init]];
+        }
         if (indexPath.row == QT_PROLONGATION_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSQTProlongationRisk alloc] init]];
         }
