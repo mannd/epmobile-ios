@@ -68,9 +68,10 @@
 #define ICD_IMPLANTATION_RISK_ROW 10
 #define ICD_MORTALITY_RISK_ROW 11
 #define ORBIT_RISK_ROW 12
-#define QT_PROLONGATION_RISK_ROW 13
-#define SAME_TTR_ROW 14
-#define SYNCOPE_ROW 15
+#define PAINESD_ROW 13
+#define QT_PROLONGATION_RISK_ROW 14
+#define SAME_TTR_ROW 15
+#define SYNCOPE_ROW 16
 
 @interface EPSMainTableViewController ()
 
