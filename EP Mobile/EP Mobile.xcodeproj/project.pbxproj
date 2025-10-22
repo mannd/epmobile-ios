@@ -139,6 +139,7 @@
 		8E71C2CC1F7766A200D198BD /* WPW.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CB1F7766A200D198BD /* WPW.storyboard */; };
 		8E71C2CE1F77686500D198BD /* LVH.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C2CD1F77686500D198BD /* LVH.storyboard */; };
 		8E741AB916FE88FD00A701B3 /* EPSLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */; };
+		8E7B14EE2EA87B9C008B67FF /* Painesd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B14ED2EA87B8B008B67FF /* Painesd.swift */; };
 		8E808363282DC62100E88A4E /* Warfarin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E808362282DC62100E88A4E /* Warfarin.swift */; };
 		8E808365282DE88B00E88A4E /* WarfarinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E808364282DE88B00E88A4E /* WarfarinTests.swift */; };
 		8E808367282DF55400E88A4E /* WarfarinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E808366282DF55400E88A4E /* WarfarinViewModel.swift */; };
@@ -151,6 +152,7 @@
 		8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE428172D0800789746 /* PatientTests.swift */; };
 		8E8FAAE72817806000789746 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE62817806000789746 /* Drug.swift */; };
 		8E8FAAE928178EF200789746 /* DrugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FAAE828178EF200789746 /* DrugTests.swift */; };
+		8E962FE12EA86AB500B25476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E962FE02EA86AAE00B25476 /* SceneDelegate.swift */; };
 		8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */; };
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
 		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
@@ -418,6 +420,7 @@
 		8E71C2CD1F77686500D198BD /* LVH.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LVH.storyboard; sourceTree = "<group>"; };
 		8E741AB716FE88FD00A701B3 /* EPSLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSLinkViewController.h; sourceTree = "<group>"; };
 		8E741AB816FE88FD00A701B3 /* EPSLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSLinkViewController.m; sourceTree = "<group>"; };
+		8E7B14ED2EA87B8B008B67FF /* Painesd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painesd.swift; sourceTree = "<group>"; };
 		8E808362282DC62100E88A4E /* Warfarin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warfarin.swift; sourceTree = "<group>"; };
 		8E808364282DE88B00E88A4E /* WarfarinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarfarinTests.swift; sourceTree = "<group>"; };
 		8E808366282DF55400E88A4E /* WarfarinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarfarinViewModel.swift; sourceTree = "<group>"; };
@@ -433,6 +436,7 @@
 		8E8FAAE428172D0800789746 /* PatientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTests.swift; sourceTree = "<group>"; };
 		8E8FAAE62817806000789746 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		8E8FAAE828178EF200789746 /* DrugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugTests.swift; sourceTree = "<group>"; };
+		8E962FE02EA86AAE00B25476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E97559F16188AFD00EAFD10 /* EPSVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSVTViewController.h; sourceTree = "<group>"; };
 		8E9755A016188AFD00EAFD10 /* EPSVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSVTViewController.m; sourceTree = "<group>"; };
 		8E9755A216188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSimpleAlgorithmViewController.h; sourceTree = "<group>"; };
@@ -687,6 +691,7 @@
 		8E18B36D281503510043FD00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8E962FDF2EA86AA100B25476 /* Main */,
 				8E38A07F28F4A69F00F1F723 /* Protocols */,
 				8E23949228244CE400B6E8B7 /* Extensions */,
 				8E28243F2821B94200DD9571 /* ViewModels */,
@@ -702,6 +707,7 @@
 		8E18B36E2815036F0043FD00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8E7B14ED2EA87B8B008B67FF /* Painesd.swift */,
 				8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */,
 				8ED0185F2918462D007E5101 /* AppleScore.swift */,
 				8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */,
@@ -963,6 +969,14 @@
 				8E09D06315DC6A7A00756EA1 /* EPSLongQTECGViewController.m */,
 			);
 			name = "Image Views";
+			sourceTree = "<group>";
+		};
+		8E962FDF2EA86AA100B25476 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E962FE02EA86AAE00B25476 /* SceneDelegate.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		8EC19C1C159FE0FA00975E2B = {
@@ -1311,6 +1325,7 @@
 				8EC343E51630A188008938F6 /* EPSCMSViewController.m in Sources */,
 				8E24EDBB203F375300C49B66 /* EPSCMSModel.m in Sources */,
 				8E0DD78E16320E0E00DDC4CC /* EPSArrudaAlgorithm.m in Sources */,
+				8E7B14EE2EA87B9C008B67FF /* Painesd.swift in Sources */,
 				8E0DD791163211B800DDC4CC /* EPSWPWTableViewController.m in Sources */,
 				8E0DD79416321A4400DDC4CC /* EPSModifiedArrudaAlgorithm.m in Sources */,
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
@@ -1387,6 +1402,7 @@
 				8E6381C3282C16F900249E87 /* WeightCalculatorViewController.swift in Sources */,
 				8E6A354E2C0762D600A94CD3 /* V2CalculatorView.swift in Sources */,
 				8E3A3BF528300CED0071C23F /* WarfarinClinicController.swift in Sources */,
+				8E962FE12EA86AB500B25476 /* SceneDelegate.swift in Sources */,
 				8E2394912824400800B6E8B7 /* QTcIvcd.swift in Sources */,
 				8EAE5CE418E1CE3900642C1D /* EPSIcdRiskViewController.m in Sources */,
 				8E6381BF282A016000249E87 /* WeightCalculatorViewModel.swift in Sources */,
@@ -1581,7 +1597,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 62;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1592,7 +1608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.30.0;
+				MARKETING_VERSION = 3.31.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1611,7 +1627,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 62;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1622,7 +1638,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.30.0;
+				MARKETING_VERSION = 3.31.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

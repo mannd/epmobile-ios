@@ -12,8 +12,23 @@
 
 @synthesize window = _window;
 
+- (UISceneConfiguration *)application:(UIApplication *)application
+configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
+                             options:(UISceneConnectionOptions *)options {
+    NSLog(@"configForConnection called");
+    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration"
+                                          sessionRole:connectingSceneSession.role];
+}
+
+
+- (void)application:(UIApplication *)application
+didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
+    // Handle any cleanup for discarded scenes if needed
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"App didFinishLaunchingWithOptions");
     return YES;
 }
 
