@@ -68,9 +68,10 @@
 #define ICD_IMPLANTATION_RISK_ROW 10
 #define ICD_MORTALITY_RISK_ROW 11
 #define ORBIT_RISK_ROW 12
-#define QT_PROLONGATION_RISK_ROW 13
-#define SAME_TTR_ROW 14
-#define SYNCOPE_ROW 15
+#define PAINESD_ROW 13
+#define QT_PROLONGATION_RISK_ROW 14
+#define SAME_TTR_ROW 15
+#define SYNCOPE_ROW 16
 
 @interface EPSMainTableViewController ()
 
@@ -198,6 +199,9 @@
         }
         if (indexPath.row == ORBIT_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSOrbitRiskScore alloc] init]];
+        }
+        if (indexPath.row == PAINESD_ROW) {
+            [RiskScoreViewController showWithVc:self riskScore:[[Painesd alloc] init]];
         }
         if (indexPath.row == QT_PROLONGATION_RISK_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSQTProlongationRisk alloc] init]];
