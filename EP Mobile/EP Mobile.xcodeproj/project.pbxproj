@@ -69,6 +69,10 @@
 		8E2C4262291EAA0B00E6BEED /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C4261291EAA0B00E6BEED /* UnitTests.swift */; };
 		8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */; };
 		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
+		8E312F3D2EB59AE80010246F /* Hamriti.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E312F3C2EB59AE80010246F /* Hamriti.json */; };
+		8E312F3F2EB59F880010246F /* NewDecisionTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */; };
+		8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */; };
+		8E312F622EB5A7ED0010246F /* EasyWpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F612EB5A7DB0010246F /* EasyWpw.swift */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
@@ -332,6 +336,10 @@
 		8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVHVoltageTableViewController.swift; sourceTree = "<group>"; };
 		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
 		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
+		8E312F3C2EB59AE80010246F /* Hamriti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hamriti.json; sourceTree = "<group>"; };
+		8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionTreeViewController.swift; sourceTree = "<group>"; };
+		8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionNode.swift; sourceTree = "<group>"; };
+		8E312F612EB5A7DB0010246F /* EasyWpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyWpw.swift; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
 		8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDavilaAlgorithm.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
@@ -707,6 +715,8 @@
 		8E18B36E2815036F0043FD00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8E312F612EB5A7DB0010246F /* EasyWpw.swift */,
+				8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */,
 				8E7B14ED2EA87B8B008B67FF /* Painesd.swift */,
 				8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */,
 				8ED0185F2918462D007E5101 /* AppleScore.swift */,
@@ -734,6 +744,7 @@
 		8E18B371281504AF0043FD00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */,
 				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
 				8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */,
@@ -817,6 +828,7 @@
 		8E560B482DCE8EBC0046377B /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				8E312F3C2EB59AE80010246F /* Hamriti.json */,
 				8EAD13F82DD3C53B0002B127 /* test.json */,
 				8EAA464E2DD122B100F9C8DF /* arruda-algorithm.json */,
 			);
@@ -1216,6 +1228,7 @@
 				8E71C2BC1F7755BB00D198BD /* LQTSSubtypes.storyboard in Resources */,
 				8EC19C5B159FE11900975E2B /* epmobile_icon.png in Resources */,
 				8EC19C5D159FE11C00975E2B /* epmobile_icon2.png in Resources */,
+				8E312F3D2EB59AE80010246F /* Hamriti.json in Resources */,
 				8ED8A8ED25168CA600ACE6F8 /* org.css in Resources */,
 				8E5D3B672E8463090018BD39 /* liquidglassepmobileicon5.icon in Resources */,
 				8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */,
@@ -1314,6 +1327,7 @@
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8EE09CC02DC69BE400D64BB0 /* BmiCalculatorView.swift in Sources */,
+				8E312F622EB5A7ED0010246F /* EasyWpw.swift in Sources */,
 				8E6A354A2C056CE000A94CD3 /* V2TransitionCalculator.swift in Sources */,
 				8EBFBBD8162CA7DE00D3B964 /* EPSOutflowVTAlgorithm.m in Sources */,
 				8EAA46452DCFCB9A00F9C8DF /* AnswerOption.swift in Sources */,
@@ -1345,8 +1359,10 @@
 				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
 				8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */,
+				8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */,
 				8EE09CC22DC69C1400D64BB0 /* BmiViewController.swift in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
+				8E312F3F2EB59F880010246F /* NewDecisionTreeViewController.swift in Sources */,
 				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */,

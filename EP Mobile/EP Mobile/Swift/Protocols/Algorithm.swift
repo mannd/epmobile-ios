@@ -14,6 +14,10 @@ protocol Algorithm {
     var name: String { get }
     var options: [AnswerOption] { get }
     var rootNode: MultipleDecisionNode { get }
-
-    
 }
+
+protocol NewAlgorithm: InformationProvider {
+    var name: String { get }
+    var rootNode: NewDecisionNode { get }
+}
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,8 +76,24 @@
                                             <segue destination="pik-u4-CUV" kind="show" identifier="DavilaSegue" id="vC8-JH-AOS"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M26-3b-beC" style="IBUITableViewCellStyleDefault" id="IdX-G4-Nag">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="rFr-47-M42" style="IBUITableViewCellStyleDefault" id="SzO-Pl-WVM">
                                         <rect key="frame" x="0.0" y="182" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SzO-Pl-WVM" id="VdX-2C-Mu9">
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="EASY-WPW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rFr-47-M42">
+                                                    <rect key="frame" x="16" y="0.0" width="324.5" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M26-3b-beC" style="IBUITableViewCellStyleDefault" id="IdX-G4-Nag">
+                                        <rect key="frame" x="0.0" y="226" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IdX-G4-Nag" id="lf8-Ck-UaF">
                                             <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
@@ -96,7 +112,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5Zy-nJ-FWL" style="IBUITableViewCellStyleDefault" id="eMv-Oo-REm">
-                                        <rect key="frame" x="0.0" y="226" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="270" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eMv-Oo-REm" id="qnE-WK-bMw">
                                             <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
@@ -113,6 +129,22 @@
                                         <connections>
                                             <segue destination="pik-u4-CUV" kind="show" identifier="ModifiedArrudaSegue" id="n92-eI-ba6"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EfT-TI-wCc" style="IBUITableViewCellStyleDefault" id="7sU-Xi-LxF">
+                                        <rect key="frame" x="0.0" y="314" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sU-Xi-LxF" id="NQT-bG-xFh">
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="SMART-WPW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EfT-TI-wCc">
+                                                    <rect key="frame" x="16" y="0.0" width="324.5" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -137,95 +169,95 @@
                         <viewControllerLayoutGuide type="bottom" id="bzg-Jz-stD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I41-KR-L7q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="657"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="modgrayavannulus" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-Vz-OiS">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gWp-Vz-OiS" secondAttribute="height" multiplier="320:289" id="laE-o7-7fs"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="asap" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-cy-PwH">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RrO-cy-PwH" secondAttribute="height" multiplier="320:289" id="JZv-Mw-ycV"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="epicardialap" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-e0-JTT">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fVz-e0-JTT" secondAttribute="height" multiplier="320:289" id="LOF-b6-6cH"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lalap" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-g4-jki">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0rb-g4-jki" secondAttribute="height" multiplier="320:289" id="DFO-wB-J0h"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="llap" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-S1-Y7q">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mIa-S1-Y7q" secondAttribute="height" multiplier="320:289" id="zQQ-eD-mdR"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lpap" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-u6-JtR">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AHB-u6-JtR" secondAttribute="height" multiplier="320:289" id="Nfe-0N-SSm"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="lplap" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-Ji-GrW">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SEs-Ji-GrW" secondAttribute="height" multiplier="320:289" id="yEv-6t-Bvu"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="msap" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Uu-U8T">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9I9-Uu-U8T" secondAttribute="height" multiplier="320:289" id="ZNb-vG-7DJ"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="psmaap" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-vt-pYQ">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sff-vt-pYQ" secondAttribute="height" multiplier="320:289" id="fxU-M2-bXx"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pstaap" translatesAutoresizingMaskIntoConstraints="NO" id="gco-M8-5yJ">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gco-M8-5yJ" secondAttribute="height" multiplier="320:289" id="xFf-ib-lTS"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="raap" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-nj-Uaz">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fc8-nj-Uaz" secondAttribute="height" multiplier="320:289" id="b8A-OD-UVk"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ralap" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-bV-EvX">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xHX-bV-EvX" secondAttribute="height" multiplier="320:289" id="IVx-9k-zp6"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rlap" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-OF-jfK">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QBL-OF-jfK" secondAttribute="height" multiplier="320:289" id="x88-o9-4Wi"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rplap" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-ux-lqO">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IWU-ux-lqO" secondAttribute="height" multiplier="320:289" id="5lZ-hf-57q"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="rpap" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-dy-KlA">
-                                <rect key="frame" x="20" y="172" width="335" height="303"/>
+                                <rect key="frame" x="20" y="177" width="335" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
                                 </constraints>
