@@ -9,7 +9,7 @@
 import Foundation
 
 struct EasyWpw: NewAlgorithm {
-    var name: String
+    var name: String = "EASY-WPW"
     
     var rootNode: NewDecisionNode = {
         // Attempt to locate the decision tree resource named "Hamriti" in the main bundle.
@@ -37,8 +37,5 @@ struct EasyWpw: NewAlgorithm {
     static func getKey() -> String? {
         "EASY-WPW key placeholder"
     }
-    
-    var id: String { "easy_wpw" }
-    var title: String { "EASY-WPW" }
 }
 
