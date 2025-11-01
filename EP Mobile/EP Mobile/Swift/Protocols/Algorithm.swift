@@ -16,8 +16,11 @@ protocol Algorithm {
     var rootNode: MultipleDecisionNode { get }
 }
 
-protocol NewAlgorithm: InformationProvider {
+protocol NewAlgorithm {
     var name: String { get }
     var rootNode: NewDecisionNode { get }
+    func getReferences() -> [Reference]
+    func getInstructions() -> String?
+    func getKey() -> String?
 }
 

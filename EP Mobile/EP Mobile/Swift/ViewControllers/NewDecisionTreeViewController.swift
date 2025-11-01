@@ -15,7 +15,7 @@ final class NewDecisionTreeViewController: NSObject {
     static func show(vc: UIViewController, algorithm: String? = nil) {
         guard let algorithm else { return }
         let newAlgorithm = EasyWpw()
-        let hostingVC = UIHostingController(rootView: AlgoritmView(model: newAlgorithm))
+        let hostingVC = UIHostingController(rootView: AlgorithmView(model: newAlgorithm))
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }

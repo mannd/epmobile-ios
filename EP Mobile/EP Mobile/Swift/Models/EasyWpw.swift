@@ -25,16 +25,16 @@ struct EasyWpw: NewAlgorithm {
         fatalError("Unable to find resource 'Hamriti' in main bundle for EASY-WPW")
     }()
 
-    static func getReferences() -> [Reference] {
+    func getReferences() -> [Reference] {
         let reference: Reference = Reference("EASY-WPW reference placeholder")
         return [reference]
     }
     
-    static func getInstructions() -> String? {
+    func getInstructions() -> String? {
         "EASY-WPW instructions placeholder"
     }
     
-    static func getKey() -> String? {
+    func getKey() -> String? {
         "EASY-WPW key placeholder"
     }
 }

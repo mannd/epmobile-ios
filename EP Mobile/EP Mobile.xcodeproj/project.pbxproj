@@ -73,7 +73,7 @@
 		8E312F3F2EB59F880010246F /* NewDecisionTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */; };
 		8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */; };
 		8E312F622EB5A7ED0010246F /* EasyWpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F612EB5A7DB0010246F /* EasyWpw.swift */; };
-		8E312F832EB5ABB30010246F /* AlgoritmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F822EB5ABB30010246F /* AlgoritmView.swift */; };
+		8E312F832EB5ABB30010246F /* AlgorithmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F822EB5ABB30010246F /* AlgorithmView.swift */; };
 		8E3146401A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */; };
 		8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CE9515B4E2C300A49D75 /* EPSMainTableViewController.m */; };
 		8E31CE9815B4E2CF00A49D75 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */; };
@@ -341,7 +341,7 @@
 		8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionTreeViewController.swift; sourceTree = "<group>"; };
 		8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionNode.swift; sourceTree = "<group>"; };
 		8E312F612EB5A7DB0010246F /* EasyWpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyWpw.swift; sourceTree = "<group>"; };
-		8E312F822EB5ABB30010246F /* AlgoritmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoritmView.swift; sourceTree = "<group>"; };
+		8E312F822EB5ABB30010246F /* AlgorithmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmView.swift; sourceTree = "<group>"; };
 		8E31463E1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSDavilaAlgorithm.h; sourceTree = "<group>"; };
 		8E31463F1A87CD7100F8CEB7 /* EPSDavilaAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSDavilaAlgorithm.m; sourceTree = "<group>"; };
 		8E31CE9015B4E29000A49D75 /* EPSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSMainTableViewController.h; sourceTree = "<group>"; };
@@ -672,28 +672,28 @@
 		8E18B3682814C2D70043FD00 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */,
-				8E560B462DCE7B510046377B /* DecisionTreeView.swift */,
+				8E312F822EB5ABB30010246F /* AlgorithmView.swift */,
+				8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */,
 				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
+				8E560B462DCE7B510046377B /* DecisionTreeView.swift */,
+				8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */,
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
-				8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */,
-				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */,
 				8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */,
-				8E02AE522CD40B6F00266F7F /* ToggleView.swift */,
+				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */,
+				8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */,
 				8EB3D37D28EFC79800023F29 /* InformationView.swift */,
 				8E18B3692814C2FB0043FD00 /* IntervalRateCalculator.swift */,
 				8E05062E2820926D0059DACB /* QTcCalculatorView.swift */,
 				8EBCC80D2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift */,
 				8EBCC8112826D90D001ABD9E /* QTcIvcdResultView.swift */,
 				8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */,
+				8E02AE522CD40B6F00266F7F /* ToggleView.swift */,
 				8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */,
 				8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */,
 				8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */,
-				8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */,
-				8E312F822EB5ABB30010246F /* AlgoritmView.swift */,
 			);
 			name = SwiftUI;
 			path = ..;
@@ -1285,7 +1285,7 @@
 				8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */,
 				8EAA46432DCFCB4A00F9C8DF /* Algorithm.swift in Sources */,
 				8EC19C38159FE0FA00975E2B /* main.m in Sources */,
-				8E312F832EB5ABB30010246F /* AlgoritmView.swift in Sources */,
+				8E312F832EB5ABB30010246F /* AlgorithmView.swift in Sources */,
 				8EC19C3C159FE0FA00975E2B /* EPSAppDelegate.m in Sources */,
 				8E4AFD7C2815FC290077FEE3 /* DateCalculatorController.swift in Sources */,
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,

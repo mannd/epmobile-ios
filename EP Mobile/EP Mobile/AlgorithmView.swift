@@ -1,5 +1,5 @@
 //
-//  AlgoritmView.swift
+//  AlgorithmView.swift
 //  EP Mobile
 //
 //  Created by David Mann on 10/31/25.
@@ -10,8 +10,9 @@ import SwiftUI
 
 fileprivate let viewName = "Algorithm View"
 
-struct AlgoritmView: View {
+struct AlgorithmView: View {
     private var title: String?
+    @State private var nodeStack: [NewDecisionNode] = []
     @State private var showInfo: Bool = false
     @State var model: NewAlgorithm
     @State private var currentNode: NewDecisionNode
@@ -52,27 +53,37 @@ struct AlgoritmView: View {
                         }
                     }
                 }
+                if !nodeStack.isEmpty {
+                    Button("Back") {
+                        currentNode = nodeStack.removeLast()
+                    }
+                    .roundedButton()
+                }
             }
             .padding()
             .navigationBarTitle(Text(title ?? "Decision Tree"), displayMode: .inline)
+            .navigationBarItems(
+                trailing:
+                    NavigationLink(
+                        destination: InformationView(
+                            instructions: model.getInstructions(),
+                            key: model.getKey(),
+                            references: model.getReferences(),
+                            name: model.name)
+                    ) {
+                        Image(systemName: "info.circle")
+                    }
+            )
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func moveToNextBranch(branch: NewDecisionNode) {
+        nodeStack.append(currentNode)
         currentNode = branch
-////        if let nextNode = currentNode.branches![answer] {
-////            if let result = nextNode.result {
-////                self.result = result
-////            }
-////            else {
-////                nodeStack.append(currentNode)
-////                currentNode = nextNode
-////            }
-//        }
     }
 }
 
 #Preview {
-    AlgoritmView(model: EasyWpw())
+    AlgorithmView(model: EasyWpw())
 }
