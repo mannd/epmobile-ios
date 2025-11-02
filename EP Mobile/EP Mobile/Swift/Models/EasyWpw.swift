@@ -39,3 +39,13 @@ struct EasyWpw: NewAlgorithm {
     }
 }
 
+@objcMembers
+public class EasyWpwObjC: NSObject {
+    private let impl = EasyWpw()
+
+    public override init() {
+        super.init()
+    }
+
+    public var name: String { impl.name }
+}

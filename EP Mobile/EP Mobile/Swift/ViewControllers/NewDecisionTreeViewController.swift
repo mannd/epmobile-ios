@@ -8,14 +8,26 @@
 
 import SwiftUI
 
+@objc public enum AlgorithmType: Int {
+    case easyWPW
+    case smartWPW
+    // Add other algorithms here as you implement them
+}
+
 @objc
 final class NewDecisionTreeViewController: NSObject {
 
     @objc
-    static func show(vc: UIViewController, algorithm: String? = nil) {
-        guard let algorithm else { return }
-        let newAlgorithm = EasyWpw()
-        let hostingVC = UIHostingController(rootView: AlgorithmView(model: newAlgorithm))
+    static func show(vc: UIViewController, type: AlgorithmType) {
+        let algorithm: any NewAlgorithm
+        switch type {
+        case .easyWPW:
+            algorithm = EasyWpw()
+        case .smartWPW:
+            algorithm = EasyWpw() // TODO: SmartWpw struct
+        }
+
+        let hostingVC = UIHostingController(rootView: AlgorithmView(model: algorithm))
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }

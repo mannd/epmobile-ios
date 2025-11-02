@@ -42,7 +42,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
     if (row == EASY_WPW_ROW) {
-        [NewDecisionTreeViewController showWithVc:self algorithm:@"arruda-algorithm"];
+        [NewDecisionTreeViewController showWithVc:self type:AlgorithmTypeEasyWPW];
     }
     if (row == SMART_WPW_ROW) {
         [DecisionTreeViewController showWithVc:self];
@@ -84,3 +84,4 @@
 }
 
 @end
+
