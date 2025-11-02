@@ -43,21 +43,22 @@ struct AlgorithmView: View {
                         .padding()
                 } else {
                     if let branches = currentNode.branches {
-                        LazyVGrid(columns: columns, spacing: 16) {
+                        CenteringGridLayout(columns: 2, spacing: 16, itemSpacing: 16)
+                        {
                             ForEach(branches, id: \.self) {branch in
                                 Button(branch.label) {
                                     moveToNextBranch(branch: branch)
                                 }
                                 .roundedButton()
                             }
+                            if !nodeStack.isEmpty {
+                                Button("Back") {
+                                    currentNode = nodeStack.removeLast()
+                                }
+                                .roundedButton()
+                            }
                         }
                     }
-                }
-                if !nodeStack.isEmpty {
-                    Button("Back") {
-                        currentNode = nodeStack.removeLast()
-                    }
-                    .roundedButton()
                 }
             }
             .padding()
