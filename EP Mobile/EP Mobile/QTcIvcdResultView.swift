@@ -18,7 +18,7 @@ struct QTcIvcdResultView: View {
     @Binding var lbbb: Bool
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(qtcIvcdResultList.keys, id: \.self) { key in
                     if let value: String = qtcIvcdResultList[key]
@@ -31,18 +31,19 @@ struct QTcIvcdResultView: View {
                 }
             }
             .navigationBarTitle(calculatorName, displayMode: .inline )
-            .navigationBarItems(trailing: NavigationLink(destination: QTcIvcdCalculatorView.getQTcIvcdInformationView(), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
-//            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-//                Image(systemName: "info.circle")
-//            }.sheet(isPresented: $showInfo) {
-//                QTcIvcdCalculatorView.getQTcIvcdInformationView()
-//            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -54,7 +55,7 @@ struct QTcIvcdResultDetail: View {
     @Binding var lbbb: Bool
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section(header: Text(formula.description)) {
                     VStack {
@@ -67,16 +68,18 @@ struct QTcIvcdResultDetail: View {
                 }
             }
             .navigationBarTitle("Details", displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: QTcIvcdCalculatorView.getQTcIvcdInformationView(), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
-//            .navigationBarItems(trailing: Button(action: { showInfo.toggle() }) {
-//                Image(systemName: "info.circle")
-//            }.sheet(isPresented: $showInfo) {
-//                QTcIvcdCalculatorView.getQTcIvcdInformationView()
-//            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+            }
         }
     }
 

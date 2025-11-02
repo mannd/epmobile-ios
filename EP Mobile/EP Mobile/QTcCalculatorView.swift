@@ -59,7 +59,7 @@ struct QTcCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Form {
                     Section(header: Text(intervalRateLabel())) {
@@ -100,17 +100,23 @@ struct QTcCalculatorView: View {
             .onChange(of: intervalRateType, perform: { _ in  clearResult() })
             .onChange(of: formula, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(references: QTcCalculator.getReferences(), name: calculatorName), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
+            }
 
 //                .sheet(isPresented: $showInfo) {
 //                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
 //            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             if defaultQtcFormula == Keys.bazett {
                 formula = .qtcBzt
