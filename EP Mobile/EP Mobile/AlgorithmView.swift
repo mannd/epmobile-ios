@@ -21,7 +21,9 @@ struct AlgorithmView: View {
     @State private var showResult: Bool = false
     @State var model: NewAlgorithm
     @State private var currentNode: NewDecisionNode
-    
+    @State private var location1: String?
+    @State private var location2: String?
+
     @State private var mapConfig: AnnulusMapConfig? = nil
     
     let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 2)
@@ -124,6 +126,7 @@ struct AlgorithmView: View {
 
     func evaluateNode(_ node: NewDecisionNode) {
         algorithmResult = node.result
+        location1 = node.tag ?? ""
         showResult = node.isLeaf
     }
 
@@ -134,10 +137,10 @@ struct AlgorithmView: View {
     }
 
     func showMap() {
-        let message = algorithmResult ?? currentNode.result ?? "Accessory pathway map"
+        let message = algorithmResult ?? "Accessory pathway map"
         // If the model can provide specific locations, thread them in via currentNode.tag or model API.
         // For now, we pass nils which will display the base map with message.
-        let location1: String? = nil
+        let location1: String? = location1
         let location2: String? = nil
         let showPathway = true
         self.mapConfig = AnnulusMapConfig(message: message, location1: location1, location2: location2, showPathway: showPathway)

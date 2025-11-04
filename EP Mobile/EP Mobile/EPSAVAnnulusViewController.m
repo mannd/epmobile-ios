@@ -53,6 +53,11 @@
     if ([self showPathway]) {
         [self setTitle:@"AP Location"];
         [self.mapLocationLabel setText:self.message];
+        // Retrofit map to new WPW algorithms.
+        if ([self.location1 isEqualToString:PS] || [self.location2 isEqualToString:PS]) {
+            self.location1 = PSMA;
+            self.location2 = PSTA;
+        }
         self.asapImageView.hidden = !([self.location1 isEqualToString:AS] || [self.location2 isEqualToString:AS]);
         self.epicardialapImageView.hidden = !([self.location1 isEqualToString:SUBEPI] || [self.location2 isEqualToString:SUBEPI]);
         self.lalapImageView.hidden = !([self.location1 isEqualToString:LAL] || [self.location2 isEqualToString:LAL]);

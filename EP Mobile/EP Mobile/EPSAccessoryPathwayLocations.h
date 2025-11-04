@@ -23,5 +23,6 @@
 #define RL @"RL"
 #define RP @"RP"
 #define RPL @"RPL"
+#define PS @"PS"
 
 #endif
