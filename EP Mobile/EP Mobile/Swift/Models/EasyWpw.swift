@@ -10,7 +10,8 @@ import Foundation
 
 struct EasyWpw: NewAlgorithm {
     var name: String = "EASY-WPW"
-    
+    var resultTitle: String = "Accessory Pathway Location"
+
     var rootNode: NewDecisionNode = {
         // Attempt to locate the decision tree resource named "Hamriti" in the main bundle.
         // Adjust the extension if your resource has one (e.g., "json").
