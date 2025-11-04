@@ -54,6 +54,10 @@
         [self setTitle:@"AP Location"];
         [self.mapLocationLabel setText:self.message];
         // Retrofit map to new WPW algorithms.
+        // Note: The legacy "PS" location was not used in the original annulus map logic and will
+        // only apply to future algorithms (e.g., EASY-WPW). A combination like PS + PL should
+        // never occur; it should instead be represented as a split such as PSMA + PL. To keep
+        // the mapping simple and compatible with the overlay logic, expand PS to PSMA and PSTA.
         if ([self.location1 isEqualToString:PS] || [self.location2 isEqualToString:PS]) {
             self.location1 = PSMA;
             self.location2 = PSTA;
@@ -83,3 +87,4 @@
 }
 
 @end
+
