@@ -70,9 +70,13 @@ struct CenteringGridLayout: Layout {
 
             var x = startX
             for j in 0..<itemsInRow {
+                let size = sizes[j]
+                // Center this subview within its column
+                let centeredX = x + (columnWidth - size.width) / 2.0
+
                 subviews[i + j].place(
-                    at: CGPoint(x: x, y: y),
-                    proposal: .init(width: columnWidth, height: sizes[j].height)
+                    at: CGPoint(x: centeredX, y: y),
+                    proposal: .init(width: size.width, height: size.height)
                 )
                 x += columnWidth + itemSpacing
             }

@@ -48,7 +48,7 @@ struct AlgorithmView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if let question = currentNode.question {
                     Text(question)
