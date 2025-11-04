@@ -6,6 +6,8 @@
 //  Copyright © 2025 EP Studios. All rights reserved.
 //
 
+import Foundation
+import UIKit
 import SwiftUI
 
 fileprivate let viewName = "Algorithm View"
@@ -19,12 +21,28 @@ struct AlgorithmView: View {
     @State private var showResult: Bool = false
     @State var model: NewAlgorithm
     @State private var currentNode: NewDecisionNode
+    
+    @State private var mapConfig: AnnulusMapConfig? = nil
+    
     let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 2)
 
     init(model: NewAlgorithm) {
         _model = .init(initialValue: model)
         currentNode = model.rootNode
         title = model.name
+    }
+
+    struct AnnulusMapConfig: Identifiable {
+        let id = UUID()
+        let message: String
+        let location1: String?
+        let location2: String?
+        let showPathway: Bool
+    }
+
+    @ViewBuilder
+    private func makeAnnulusMapView(config: AnnulusMapConfig) -> some View {
+        AnnulusMapUIKitWrapper(message: config.message, location1: config.location1, location2: config.location2, showPathway: config.showPathway)
     }
 
     var body: some View {
@@ -91,6 +109,9 @@ struct AlgorithmView: View {
                         Image(systemName: "info.circle")
                     }
             )
+            .sheet(item: $mapConfig) { config in
+                makeAnnulusMapView(config: config)
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -113,11 +134,71 @@ struct AlgorithmView: View {
     }
 
     func showMap() {
-        // TODO:
+        let message = algorithmResult ?? currentNode.result ?? "Accessory pathway map"
+        // If the model can provide specific locations, thread them in via currentNode.tag or model API.
+        // For now, we pass nils which will display the base map with message.
+        let location1: String? = nil
+        let location2: String? = nil
+        let showPathway = true
+        self.mapConfig = AnnulusMapConfig(message: message, location1: location1, location2: location2, showPathway: showPathway)
     }
 
+}
+
+// MARK: - Annulus Map UIKit Wrapper
+
+import SwiftUI
+
+private struct AnnulusMapUIKitWrapper: UIViewControllerRepresentable {
+    let message: String
+    let location1: String?
+    let location2: String?
+    let showPathway: Bool
+
+    func makeUIViewController(context: Context) -> UIViewController {
+        // Load from WPW.storyboard where the AV Annulus scene lives
+        let storyboard = UIStoryboard(name: "WPW", bundle: nil)
+
+        // Try known identifiers in order. These must match the Storyboard ID set in Interface Builder.
+        let candidates = [
+            "AnnulusMap",               // provided storyboard ID
+            "EPSAVAnnulusViewController", // class name, fallback
+            "AVAnnulus"                   // legacy fallback
+        ]
+
+        var viewController: UIViewController?
+        for id in candidates {
+            if let vc = storyboard.instantiateViewController(withIdentifier: id) as? EPSAVAnnulusViewController {
+                viewController = vc
+                break
+            } else {
+                // If the identifier exists but is a different class, skip
+                if let vc = try? storyboard.instantiateViewController(withIdentifier: id) {
+                    // Identifier exists but not our class; continue searching
+                    _ = vc
+                }
+            }
+        }
+
+        // Fall back to initial view controller if not found by identifier
+        if viewController == nil, let initial = storyboard.instantiateInitialViewController() as? EPSAVAnnulusViewController {
+            viewController = initial
+        }
+
+        // Final fallback: direct init (only works if VC supports init())
+        let vc = (viewController as? EPSAVAnnulusViewController) ?? EPSAVAnnulusViewController()
+
+        vc.showPathway = showPathway
+        vc.location1 = location1
+        vc.location2 = location2
+        vc.message = message
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }
 }
 
 #Preview {
     AlgorithmView(model: EasyWpw())
 }
+
