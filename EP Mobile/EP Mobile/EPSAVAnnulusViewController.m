@@ -52,7 +52,8 @@
     self.mapLocationLabel.hidden = ![self showPathway];
     if ([self showPathway]) {
         [self setTitle:@"AP Location"];
-        [self.mapLocationLabel setText:self.message];
+        // We no longer bother to show the decidion tree result on the map.
+        //[self.mapLocationLabel setText:self.message];
         // Retrofit map to new WPW algorithms.
         // Note: The legacy "PS" location was not used in the original annulus map logic and will
         // only apply to future algorithms (e.g., EASY-WPW). A combination like PS + PL should

@@ -27,16 +27,16 @@ struct EasyWpw: NewAlgorithm {
     }()
 
     func getReferences() -> [Reference] {
-        let reference: Reference = Reference("EASY-WPW reference placeholder")
+        let reference: Reference = Reference("El Hamriti M, Braun M, Molatta S, et al. EASY-WPW: a novel ECG-algorithm for easy and reliable localization of manifest accessory pathways in children and adults. Europace. 2023;25(2):600-609. doi:10.1093/europace/euac216")
         return [reference]
     }
     
     func getInstructions() -> String? {
-        "EASY-WPW instructions placeholder"
+        "The EASY-WPW algorithm is based on both the analysis of QRS polarity and transition as well as the most positive delta wave or the most positive QRS complex if delta wave is not well differentiated. The delta wave is defined as the first 20–40 ms of the earliest QRS deflection."
     }
     
     func getKey() -> String? {
-        "EASY-WPW key placeholder"
+        return nil
     }
 }
 

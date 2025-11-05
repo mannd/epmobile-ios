@@ -25,7 +25,7 @@ struct AlgorithmView: View {
     @State private var location2: String?
 
     @State private var mapConfig: AnnulusMapConfig? = nil
-    
+
     let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 2)
 
     init(model: NewAlgorithm) {
@@ -49,70 +49,73 @@ struct AlgorithmView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                if let question = currentNode.question {
-                    Text(question)
-                        .font(.title)
-                        .padding()
-                }
-                if let note = currentNode.note {
-                    Text(note)
-                        .font(.title2)
-                        .foregroundColor(.secondary)
-                }
-                if let result = currentNode.result {
-                    Text(result)
-                        .font(.title)
-                        .padding()
-                } else {
-                    if let branches = currentNode.branches {
-                        CenteringGridLayout(columns: 2, spacing: 16, itemSpacing: 16)
-                        {
-                            ForEach(branches, id: \.self) {branch in
-                                Button(branch.label) {
-                                    evaluateNode(branch)
-                                    moveToNextBranch(branch: branch)
+            ScrollView {
+                VStack {
+                    if let question = currentNode.question {
+                        Text(question)
+                            .font(.title)
+                            .padding()
+                    }
+                    if let note = currentNode.note {
+                        Text(note)
+                            .font(.title2)
+                            .foregroundColor(.secondary)
+                    }
+                    if let result = currentNode.result {
+                        Text(result)
+                            .font(.title)
+                            .padding()
+                    } else {
+                        if let branches = currentNode.branches {
+                            CenteringGridLayout(columns: 2, spacing: 16, itemSpacing: 16)
+                            {
+                                ForEach(branches, id: \.self) {branch in
+                                    Button(branch.label) {
+                                        evaluateNode(branch)
+                                        moveToNextBranch(branch: branch)
+                                    }
+                                    .roundedButton()
                                 }
-                                .roundedButton()
-                            }
-                            if !nodeStack.isEmpty {
-                                Button("Back") {
-                                    currentNode = nodeStack.removeLast()
+                                if !nodeStack.isEmpty {
+                                    Button("Back") {
+                                        currentNode = nodeStack.removeLast()
+                                    }
+                                    .roundedButton()
                                 }
-                                .roundedButton()
                             }
                         }
                     }
                 }
-            }
-            .alert(model.resultTitle, isPresented: $showResult, presenting: algorithmResult) { _ in
-                Button("OK", role: .cancel) {
-                    reset()
-                }
-                if hasMap {
-                    Button("Show Map") {
-                        showMap()
+                .alert(model.resultTitle, isPresented: $showResult, presenting: algorithmResult) { _ in
+                    Button("OK", role: .cancel) {
+                        reset()
                     }
-                }
-            } message: { result in
-                Text(result)
-            }
-            .padding()
-            .navigationBarTitle(Text(title ?? "Decision Tree"), displayMode: .inline)
-            .navigationBarItems(
-                trailing:
-                    NavigationLink(
-                        destination: InformationView(
-                            instructions: model.getInstructions(),
-                            key: model.getKey(),
-                            references: model.getReferences(),
-                            name: model.name)
-                    ) {
-                        Image(systemName: "info.circle")
+                    if hasMap {
+                        Button("Show Map") {
+                            showMap()
+                        }
                     }
-            )
-            .sheet(item: $mapConfig) { config in
-                makeAnnulusMapView(config: config)
+                } message: { result in
+                    Text(result)
+                }
+                .padding()
+                .navigationBarTitle(Text(title ?? "Decision Tree"), displayMode: .inline)
+                .navigationBarItems(
+                    trailing:
+                        NavigationLink(
+                            destination: InformationView(
+                                instructions: model.getInstructions(),
+                                key: model.getKey(),
+                                references: model.getReferences(),
+                                name: model.name)
+                        ) {
+                            Image(systemName: "info.circle")
+                        }
+                )
+                .sheet(item: $mapConfig, onDismiss: {
+                    reset() }) { config in
+                    makeAnnulusMapView(config: config)
+                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -127,6 +130,8 @@ struct AlgorithmView: View {
     func evaluateNode(_ node: NewDecisionNode) {
         algorithmResult = node.result
         location1 = node.tag ?? ""
+        // TODO: Need to handle two locations if needed
+        location2 = ""
         showResult = node.isLeaf
     }
 
@@ -137,15 +142,11 @@ struct AlgorithmView: View {
     }
 
     func showMap() {
+        // Actually not using message at present.
         let message = algorithmResult ?? "Accessory pathway map"
-        // If the model can provide specific locations, thread them in via currentNode.tag or model API.
-        // For now, we pass nils which will display the base map with message.
-        let location1: String? = location1
-        let location2: String? = nil
         let showPathway = true
         self.mapConfig = AnnulusMapConfig(message: message, location1: location1, location2: location2, showPathway: showPathway)
     }
-
 }
 
 // MARK: - Annulus Map UIKit Wrapper
@@ -162,34 +163,14 @@ private struct AnnulusMapUIKitWrapper: UIViewControllerRepresentable {
         // Load from WPW.storyboard where the AV Annulus scene lives
         let storyboard = UIStoryboard(name: "WPW", bundle: nil)
 
-        // Try known identifiers in order. These must match the Storyboard ID set in Interface Builder.
-        let candidates = [
-            "AnnulusMap",               // provided storyboard ID
-            "EPSAVAnnulusViewController", // class name, fallback
-            "AVAnnulus"                   // legacy fallback
-        ]
-
-        var viewController: UIViewController?
-        for id in candidates {
-            if let vc = storyboard.instantiateViewController(withIdentifier: id) as? EPSAVAnnulusViewController {
-                viewController = vc
-                break
-            } else {
-                // If the identifier exists but is a different class, skip
-                if let vc = try? storyboard.instantiateViewController(withIdentifier: id) {
-                    // Identifier exists but not our class; continue searching
-                    _ = vc
-                }
-            }
-        }
+        // Instantiate directly using the known Storyboard ID: "AVAnnulus"
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AnnulusMap") as? EPSAVAnnulusViewController
 
         // Fall back to initial view controller if not found by identifier
-        if viewController == nil, let initial = storyboard.instantiateInitialViewController() as? EPSAVAnnulusViewController {
-            viewController = initial
-        }
+        let resolvedVC = viewController ?? (storyboard.instantiateInitialViewController() as? EPSAVAnnulusViewController)
 
         // Final fallback: direct init (only works if VC supports init())
-        let vc = (viewController as? EPSAVAnnulusViewController) ?? EPSAVAnnulusViewController()
+        let vc = resolvedVC ?? EPSAVAnnulusViewController()
 
         vc.showPathway = showPathway
         vc.location1 = location1

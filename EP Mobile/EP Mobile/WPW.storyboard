@@ -262,13 +262,6 @@
                                     <constraint firstAttribute="width" secondItem="rGc-dy-KlA" secondAttribute="height" multiplier="320:289" id="0t1-zT-K54"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-Ed-jco">
-                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -343,7 +336,6 @@
                         <outlet property="lpapImageView" destination="AHB-u6-JtR" id="aIh-gD-b4l"/>
                         <outlet property="lplapImageView" destination="SEs-Ji-GrW" id="mqb-jS-bCZ"/>
                         <outlet property="mapImageView" destination="gWp-Vz-OiS" id="j1K-2r-TuS"/>
-                        <outlet property="mapLocationLabel" destination="kKB-Ed-jco" id="Os3-lo-pdu"/>
                         <outlet property="msapImageView" destination="9I9-Uu-U8T" id="OgN-bA-gyd"/>
                         <outlet property="psmaapImageView" destination="Sff-vt-pYQ" id="sq7-Ab-v9f"/>
                         <outlet property="pstaapImageView" destination="gco-M8-5yJ" id="N5k-Bu-ZZJ"/>
