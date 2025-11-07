@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct NewDecisionNode: Codable, Identifiable, Hashable {
+struct DecisionNode: Codable, Identifiable, Hashable {
     let id: String
     var label: String // "" for root or leaf, or the answer text from parent
     var question: String?
-    var branches: [NewDecisionNode]?
+    var branches: [DecisionNode]?
     var result: String?
     var note: String?
     var tag: String?
@@ -24,7 +24,7 @@ struct NewDecisionNode: Codable, Identifiable, Hashable {
     init(id: String = UUID().uuidString,
          label: String = "",
          question: String? = nil,
-         branches: [NewDecisionNode]? = nil,
+         branches: [DecisionNode]? = nil,
          result: String? = nil,
          note: String? = nil,
          tag: String? = nil) {
@@ -37,18 +37,18 @@ struct NewDecisionNode: Codable, Identifiable, Hashable {
         self.tag = tag
     }
 
-    static func new() -> NewDecisionNode {
-        NewDecisionNode(id: Self.rootNodeId, label: "Root", question: "Add first question here.")
+    static func new() -> DecisionNode {
+        DecisionNode(id: Self.rootNodeId, label: "Root", question: "Add first question here.")
     }
 
     // Hash / equality based ONLY on id (stable & cheap)
-    static func == (lhs: NewDecisionNode, rhs: NewDecisionNode) -> Bool { lhs.id == rhs.id }
+    static func == (lhs: DecisionNode, rhs: DecisionNode) -> Bool { lhs.id == rhs.id }
 
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
 }
 
 // MARK: - JSON Persistence
-extension NewDecisionNode {
+extension DecisionNode {
     /// Saves the node (and its nested tree) to a file at the specified URL
     func save(to url: URL) throws {
         let encoder = JSONEncoder()
@@ -58,9 +58,9 @@ extension NewDecisionNode {
     }
 
     /// Loads a nested tree from a file at the specified URL
-    static func load(from url: URL) throws -> NewDecisionNode {
+    static func load(from url: URL) throws -> DecisionNode {
         let data = try Data(contentsOf: url)
         let decoder = JSONDecoder()
-        return try decoder.decode(NewDecisionNode.self, from: data)
+        return try decoder.decode(DecisionNode.self, from: data)
     }
 }

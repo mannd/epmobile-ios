@@ -71,7 +71,7 @@
 		8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */; };
 		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E312F3D2EB59AE80010246F /* Hamriti.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E312F3C2EB59AE80010246F /* Hamriti.json */; };
-		8E312F3F2EB59F880010246F /* NewDecisionTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */; };
+		8E312F3F2EB59F880010246F /* DecisionTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F3E2EB59F750010246F /* DecisionTreeViewController.swift */; };
 		8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */; };
 		8E312F622EB5A7ED0010246F /* EasyWpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F612EB5A7DB0010246F /* EasyWpw.swift */; };
 		8E312F832EB5ABB30010246F /* AlgorithmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F822EB5ABB30010246F /* AlgorithmView.swift */; };
@@ -100,8 +100,6 @@
 		8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E535E8C2836EAA8001503E5 /* EntrainmentViewModel.swift */; };
 		8E54A56319F6E42300EFF001 /* parahisianpacinginstructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */; };
 		8E54A56519F6E43D00EFF001 /* rvapexvsbasepacing.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */; };
-		8E560B452DCE72C70046377B /* DecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E560B442DCE72C70046377B /* DecisionNode.swift */; };
-		8E560B472DCE7B510046377B /* DecisionTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E560B462DCE7B510046377B /* DecisionTreeView.swift */; };
 		8E59E969281A4071003C485F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59E968281A4071003C485F /* Keys.swift */; };
 		8E5D3B612E80AAF90018BD39 /* liquidglassepmobileicon2.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B602E80AAF90018BD39 /* liquidglassepmobileicon2.icon */; };
 		8E5D3B632E80B0770018BD39 /* liquidglassepmobileicon3.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D3B622E80B0770018BD39 /* liquidglassepmobileicon3.icon */; };
@@ -167,10 +165,8 @@
 		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
 		8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */; };
 		8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */; };
-		8EAA46412DCFBF9100F9C8DF /* DecisionTreeView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */; };
 		8EAA46432DCFCB4A00F9C8DF /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */; };
 		8EAA46452DCFCB9A00F9C8DF /* AnswerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */; };
-		8EAA46472DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */; };
 		8EAA464B2DD11F0B00F9C8DF /* DecisionNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA464A2DD11F0B00F9C8DF /* DecisionNodeTests.swift */; };
 		8EAD13FB2DD3C8900002B127 /* AnswerOptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD13FA2DD3C8900002B127 /* AnswerOptionTests.swift */; };
 		8EAE5CE018E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE5CDF18E1CDB600642C1D /* EPSIcdRiskScore.m */; };
@@ -233,7 +229,6 @@
 		8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F31F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m */; };
 		8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */; };
 		8EFBFBDD1AAE0672004374C3 /* rvh.html in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBFBDB1AAE0672004374C3 /* rvh.html */; };
-		8EFC7DAF2DD5230B00A0B4A2 /* DecisionTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC7DAE2DD5230B00A0B4A2 /* DecisionTreeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,7 +333,7 @@
 		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
 		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E312F3C2EB59AE80010246F /* Hamriti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hamriti.json; sourceTree = "<group>"; };
-		8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionTreeViewController.swift; sourceTree = "<group>"; };
+		8E312F3E2EB59F750010246F /* DecisionTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionTreeViewController.swift; sourceTree = "<group>"; };
 		8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionNode.swift; sourceTree = "<group>"; };
 		8E312F612EB5A7DB0010246F /* EasyWpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyWpw.swift; sourceTree = "<group>"; };
 		8E312F822EB5ABB30010246F /* AlgorithmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmView.swift; sourceTree = "<group>"; };
@@ -378,8 +373,6 @@
 		8E54A56019F6E37F00EFF001 /* rvapexvsbasepacing.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvapexvsbasepacing.org; sourceTree = "<group>"; };
 		8E54A56219F6E42300EFF001 /* parahisianpacinginstructions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = parahisianpacinginstructions.html; sourceTree = "<group>"; };
 		8E54A56419F6E43D00EFF001 /* rvapexvsbasepacing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvapexvsbasepacing.html; sourceTree = "<group>"; };
-		8E560B442DCE72C70046377B /* DecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionNode.swift; sourceTree = "<group>"; };
-		8E560B462DCE7B510046377B /* DecisionTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionTreeView.swift; sourceTree = "<group>"; };
 		8E59E968281A4071003C485F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8E5D3B602E80AAF90018BD39 /* liquidglassepmobileicon2.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobileicon2.icon; sourceTree = "<group>"; };
 		8E5D3B622E80B0770018BD39 /* liquidglassepmobileicon3.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = liquidglassepmobileicon3.icon; sourceTree = "<group>"; };
@@ -461,10 +454,8 @@
 		8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSameTtrRiskScore.m; sourceTree = "<group>"; };
 		8EA0E05D1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaStrokeRiskScore.h; sourceTree = "<group>"; };
 		8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaStrokeRiskScore.m; sourceTree = "<group>"; };
-		8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecisionTreeView 2.swift"; sourceTree = "<group>"; };
 		8EAA46422DCFCB4A00F9C8DF /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOption.swift; sourceTree = "<group>"; };
-		8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrudaAlgorithm.swift; sourceTree = "<group>"; };
 		8EAA464A2DD11F0B00F9C8DF /* DecisionNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionNodeTests.swift; sourceTree = "<group>"; };
 		8EAD13FA2DD3C8900002B127 /* AnswerOptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOptionTests.swift; sourceTree = "<group>"; };
 		8EAE5CDE18E1CDB600642C1D /* EPSIcdRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdRiskScore.h; sourceTree = "<group>"; };
@@ -554,7 +545,6 @@
 		8EF902F61F7B0A4E00D2B6C6 /* EPSErsRiskScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSErsRiskScore.m; sourceTree = "<group>"; };
 		8EFBFBDA1AAE0672004374C3 /* rvh.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rvh.org; sourceTree = "<group>"; };
 		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
-		8EFC7DAE2DD5230B00A0B4A2 /* DecisionTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionTreeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -674,8 +664,6 @@
 				8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */,
 				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
-				8E560B462DCE7B510046377B /* DecisionTreeView.swift */,
-				8EAA46402DCFBF9100F9C8DF /* DecisionTreeView 2.swift */,
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
@@ -722,11 +710,9 @@
 				8E7B14ED2EA87B8B008B67FF /* Painesd.swift */,
 				8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */,
 				8ED0185F2918462D007E5101 /* AppleScore.swift */,
-				8EAA46462DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift */,
 				8E0C13C62262CCEB000892CC /* ArvcRiskModel.swift */,
 				8EEECFF92DC3A9B500142046 /* BmiModel.swift */,
 				8ECA41592815A9A900CFAC18 /* DateMath.swift */,
-				8E560B442DCE72C70046377B /* DecisionNode.swift */,
 				8E8FAAE62817806000789746 /* Drug.swift */,
 				8E8C89E4283339FE0057B237 /* Entrainment.swift */,
 				8E70DBD32AE041C10018A501 /* FrailtyModel.swift */,
@@ -746,7 +732,7 @@
 		8E18B371281504AF0043FD00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8E312F3E2EB59F750010246F /* NewDecisionTreeViewController.swift */,
+				8E312F3E2EB59F750010246F /* DecisionTreeViewController.swift */,
 				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
 				8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */,
@@ -768,7 +754,6 @@
 				8E3A3BF428300CED0071C23F /* WarfarinClinicController.swift */,
 				8E6381C2282C16F900249E87 /* WeightCalculatorViewController.swift */,
 				8EE09CC12DC69C1400D64BB0 /* BmiViewController.swift */,
-				8EFC7DAE2DD5230B00A0B4A2 /* DecisionTreeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1322,10 +1307,8 @@
 				8EBCC80E2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift in Sources */,
 				8EEECFFA2DC3A9B500142046 /* BmiModel.swift in Sources */,
 				8E09D07415E1C8D900756EA1 /* EPSLQTSViewController.m in Sources */,
-				8E560B452DCE72C70046377B /* DecisionNode.swift in Sources */,
 				8E18B370281503A70043FD00 /* IntervalRateConversion.swift in Sources */,
 				8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */,
-				8EAA46472DCFD4CA00F9C8DF /* ArrudaAlgorithm.swift in Sources */,
 				8E9755A116188AFD00EAFD10 /* EPSVTViewController.m in Sources */,
 				8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */,
 				8EE09CC02DC69BE400D64BB0 /* BmiCalculatorView.swift in Sources */,
@@ -1347,7 +1330,6 @@
 				8EF902F41F7AD4AE00D2B6C6 /* EPSBrugadaRiskScore.m in Sources */,
 				8ECA415E2815B0EB00CFAC18 /* DateCalculator.swift in Sources */,
 				8E1F76822CC4198E00C7AB54 /* HcmScd2024Model.swift in Sources */,
-				8EFC7DAF2DD5230B00A0B4A2 /* DecisionTreeViewController.swift in Sources */,
 				8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */,
 				8E70DBD42AE041C10018A501 /* FrailtyModel.swift in Sources */,
 				8EB3D37E28EFC79800023F29 /* InformationView.swift in Sources */,
@@ -1364,7 +1346,7 @@
 				8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */,
 				8EE09CC22DC69C1400D64BB0 /* BmiViewController.swift in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
-				8E312F3F2EB59F880010246F /* NewDecisionTreeViewController.swift in Sources */,
+				8E312F3F2EB59F880010246F /* DecisionTreeViewController.swift in Sources */,
 				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */,
@@ -1392,7 +1374,6 @@
 				8E8FAAE32817297600789746 /* Patient.swift in Sources */,
 				8EB79F65230394C100CBB056 /* LQTTableViewController.swift in Sources */,
 				8E39950B204328520079E391 /* EPSCMSStrings.m in Sources */,
-				8E560B472DCE7B510046377B /* DecisionTreeView.swift in Sources */,
 				8E507C782C02727C0013537F /* EPSV2TransitionRatio.m in Sources */,
 				8EEE9BB9283D8819005AB875 /* HcmViewController.swift in Sources */,
 				8EEE9BB5283D5055005AB875 /* HcmRiskScdViewModel.swift in Sources */,
@@ -1429,7 +1410,6 @@
 				8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */,
 				8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */,
 				8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */,
-				8EAA46412DCFBF9100F9C8DF /* DecisionTreeView 2.swift in Sources */,
 				8EB3D38028EFCBFE00023F29 /* InformationViewPresenter.swift in Sources */,
 				8E38A08128F4B3BB00F1F723 /* InformationProvider.swift in Sources */,
 				8ED018602918462E007E5101 /* AppleScore.swift in Sources */,

@@ -16,11 +16,11 @@ struct AlgorithmView: View {
     private var title: String?
     private var hasMap: Bool = true
     @State private var algorithmResult: String?
-    @State private var nodeStack: [NewDecisionNode] = []
+    @State private var nodeStack: [DecisionNode] = []
     @State private var showInfo: Bool = false
     @State private var showResult: Bool = false
-    @State var model: NewAlgorithm
-    @State private var currentNode: NewDecisionNode
+    @State var model: Algorithm
+    @State private var currentNode: DecisionNode
     @State private var location1: String?
     @State private var location2: String?
 
@@ -28,7 +28,7 @@ struct AlgorithmView: View {
 
     let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 2)
 
-    init(model: NewAlgorithm) {
+    init(model: Algorithm) {
         _model = .init(initialValue: model)
         currentNode = model.rootNode
         title = model.name
@@ -122,13 +122,13 @@ struct AlgorithmView: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
 
-    func moveToNextBranch(branch: NewDecisionNode) {
+    func moveToNextBranch(branch: DecisionNode) {
         if branch.isLeaf { return }
         nodeStack.append(currentNode)
         currentNode = branch
     }
 
-    func evaluateNode(_ node: NewDecisionNode) {
+    func evaluateNode(_ node: DecisionNode) {
         algorithmResult = node.result
         location1 = node.tag ?? ""
         // TODO: Need to handle two locations if needed

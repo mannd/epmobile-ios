@@ -12,13 +12,7 @@ import Foundation
 /// TODO: Convert all old UIKit views to new Algorithms.
 protocol Algorithm {
     var name: String { get }
-    var options: [AnswerOption] { get }
-    var rootNode: MultipleDecisionNode { get }
-}
-
-protocol NewAlgorithm {
-    var name: String { get }
-    var rootNode: NewDecisionNode { get }
+    var rootNode: DecisionNode { get }
     var resultTitle: String { get }
     var hasMap: Bool { get }
     func getReferences() -> [Reference]

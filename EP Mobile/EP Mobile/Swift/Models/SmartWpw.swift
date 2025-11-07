@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct SmartWpw: NewAlgorithm {
+struct SmartWpw: Algorithm {
     var name: String = "SMART-WPW"
     var resultTitle: String = "Accessory Pathway Location"
     var hasMap: Bool = false
 
-    var rootNode: NewDecisionNode = {
+    var rootNode: DecisionNode = {
         // Attempt to locate the decision tree resource named "Hamriti" in the main bundle.
         // Adjust the extension if your resource has one (e.g., "json").
         if let url = Bundle.main.url(forResource: "smartWPW", withExtension: "json") {
             do {
-                return try NewDecisionNode.load(from: url)
+                return try DecisionNode.load(from: url)
             } catch {
                 fatalError("Failed to load decision tree 'smartWPW.json': \(error)")
             }

@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct EasyWpw: NewAlgorithm {
+struct EasyWpw: Algorithm {
     var name: String = "EASY-WPW"
     var resultTitle: String = "Accessory Pathway Location"
     var hasMap: Bool = true
 
-    var rootNode: NewDecisionNode = {
+    var rootNode: DecisionNode = {
         // Attempt to locate the decision tree resource named "Hamriti" in the main bundle.
         // Adjust the extension if your resource has one (e.g., "json").
         if let url = Bundle.main.url(forResource: "Hamriti", withExtension: "json") {
             do {
-                return try NewDecisionNode.load(from: url)
+                return try DecisionNode.load(from: url)
             } catch {
                 fatalError("Failed to load decision tree 'Hamriti.json': \(error)")
             }

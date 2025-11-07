@@ -2,22 +2,32 @@
 //  DecisionTreeViewController.swift
 //  EP Mobile
 //
-//  Created by David Mann on 5/14/25.
+//  Created by David Mann on 10/31/25.
 //  Copyright © 2025 EP Studios. All rights reserved.
 //
 
 import SwiftUI
 
+@objc public enum AlgorithmType: Int {
+    case easyWPW
+    case smartWPW
+    // Add other algorithms here as you implement them
+}
+
 @objc
 final class DecisionTreeViewController: NSObject {
 
     @objc
-    static func show(vc: UIViewController) {
-        // TODO: rootNode and title determined by chosen algorithm
-        if let node = MultipleDecisionNode.loadDecisionTree(from: "arruda-algorithm") {
-            let decisionTreeView = DecisionTreeView2(rootNode: node, title: "Arruda Algorithm")
-            let hostingVC = UIHostingController(rootView: decisionTreeView)
-            vc.navigationController?.pushViewController(hostingVC, animated: true)
+    static func show(vc: UIViewController, type: AlgorithmType) {
+        let algorithm: any Algorithm
+        switch type {
+        case .easyWPW:
+            algorithm = EasyWpw()
+        case .smartWPW:
+            algorithm = SmartWpw() 
         }
+
+        let hostingVC = UIHostingController(rootView: AlgorithmView(model: algorithm))
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }
