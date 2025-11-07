@@ -24,7 +24,7 @@ final class NewDecisionTreeViewController: NSObject {
         case .easyWPW:
             algorithm = EasyWpw()
         case .smartWPW:
-            algorithm = EasyWpw() // TODO: SmartWpw struct
+            algorithm = SmartWpw() 
         }
 
         let hostingVC = UIHostingController(rootView: AlgorithmView(model: algorithm))

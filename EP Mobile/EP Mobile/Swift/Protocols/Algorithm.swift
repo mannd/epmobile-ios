@@ -20,6 +20,7 @@ protocol NewAlgorithm {
     var name: String { get }
     var rootNode: NewDecisionNode { get }
     var resultTitle: String { get }
+    var hasMap: Bool { get }
     func getReferences() -> [Reference]
     func getInstructions() -> String?
     func getKey() -> String?

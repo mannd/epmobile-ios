@@ -32,6 +32,7 @@ struct AlgorithmView: View {
         _model = .init(initialValue: model)
         currentNode = model.rootNode
         title = model.name
+        hasMap = model.hasMap
     }
 
     struct AnnulusMapConfig: Identifiable {

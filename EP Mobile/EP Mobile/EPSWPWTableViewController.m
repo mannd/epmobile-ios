@@ -45,7 +45,7 @@
         [NewDecisionTreeViewController showWithVc:self type:AlgorithmTypeEasyWPW];
     }
     if (row == SMART_WPW_ROW) {
-        [DecisionTreeViewController showWithVc:self];
+        [NewDecisionTreeViewController showWithVc:self type:AlgorithmTypeSmartWPW];
     }
 }
 
