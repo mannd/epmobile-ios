@@ -71,8 +71,8 @@
 		8E2D89F929038B7B0019C98E /* LVHVoltageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D89F829038B7B0019C98E /* LVHVoltageTableViewController.swift */; };
 		8E2DC7191C95F81D00713682 /* EPSOrbitRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */; };
 		8E312F3D2EB59AE80010246F /* Hamriti.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E312F3C2EB59AE80010246F /* Hamriti.json */; };
-		8E312F3F2EB59F880010246F /* DecisionTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F3E2EB59F750010246F /* DecisionTreeViewController.swift */; };
-		8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */; };
+		8E312F3F2EB59F880010246F /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F3E2EB59F750010246F /* AlgorithmViewController.swift */; };
+		8E312F602EB5A6BF0010246F /* DecisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F5F2EB5A6BF0010246F /* DecisionNode.swift */; };
 		8E312F622EB5A7ED0010246F /* EasyWpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F612EB5A7DB0010246F /* EasyWpw.swift */; };
 		8E312F832EB5ABB30010246F /* AlgorithmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F822EB5ABB30010246F /* AlgorithmView.swift */; };
 		8E312F872EB6DF9A0010246F /* CenteringGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E312F862EB6DF9A0010246F /* CenteringGridLayout.swift */; };
@@ -333,8 +333,8 @@
 		8E2DC7171C95F81D00713682 /* EPSOrbitRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSOrbitRiskScore.h; sourceTree = "<group>"; };
 		8E2DC7181C95F81D00713682 /* EPSOrbitRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSOrbitRiskScore.m; sourceTree = "<group>"; };
 		8E312F3C2EB59AE80010246F /* Hamriti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hamriti.json; sourceTree = "<group>"; };
-		8E312F3E2EB59F750010246F /* DecisionTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionTreeViewController.swift; sourceTree = "<group>"; };
-		8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDecisionNode.swift; sourceTree = "<group>"; };
+		8E312F3E2EB59F750010246F /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
+		8E312F5F2EB5A6BF0010246F /* DecisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionNode.swift; sourceTree = "<group>"; };
 		8E312F612EB5A7DB0010246F /* EasyWpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyWpw.swift; sourceTree = "<group>"; };
 		8E312F822EB5ABB30010246F /* AlgorithmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmView.swift; sourceTree = "<group>"; };
 		8E312F862EB6DF9A0010246F /* CenteringGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteringGridLayout.swift; sourceTree = "<group>"; };
@@ -706,7 +706,7 @@
 			children = (
 				8E10DEB92EBE58D1002D48A5 /* SmartWpw.swift */,
 				8E312F612EB5A7DB0010246F /* EasyWpw.swift */,
-				8E312F5F2EB5A6BF0010246F /* NewDecisionNode.swift */,
+				8E312F5F2EB5A6BF0010246F /* DecisionNode.swift */,
 				8E7B14ED2EA87B8B008B67FF /* Painesd.swift */,
 				8EAA46442DCFCB9A00F9C8DF /* AnswerOption.swift */,
 				8ED0185F2918462D007E5101 /* AppleScore.swift */,
@@ -732,7 +732,7 @@
 		8E18B371281504AF0043FD00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8E312F3E2EB59F750010246F /* DecisionTreeViewController.swift */,
+				8E312F3E2EB59F750010246F /* AlgorithmViewController.swift */,
 				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
 				8E2806F5281CB30400468E6A /* DrugCalculatorController.swift */,
@@ -1343,10 +1343,10 @@
 				8EB79F672303986900CBB056 /* LQTTableViewCell.swift in Sources */,
 				8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */,
 				8EB206B2281852DD009CD301 /* DrugDoseCalculator.swift in Sources */,
-				8E312F602EB5A6BF0010246F /* NewDecisionNode.swift in Sources */,
+				8E312F602EB5A6BF0010246F /* DecisionNode.swift in Sources */,
 				8EE09CC22DC69C1400D64BB0 /* BmiViewController.swift in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
-				8E312F3F2EB59F880010246F /* DecisionTreeViewController.swift in Sources */,
+				8E312F3F2EB59F880010246F /* AlgorithmViewController.swift in Sources */,
 				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */,

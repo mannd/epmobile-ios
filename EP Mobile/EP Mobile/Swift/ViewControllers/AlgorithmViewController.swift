@@ -1,5 +1,5 @@
 //
-//  DecisionTreeViewController.swift
+//  AlgorithmViewController.swift
 //  EP Mobile
 //
 //  Created by David Mann on 10/31/25.
@@ -15,7 +15,7 @@ import SwiftUI
 }
 
 @objc
-final class DecisionTreeViewController: NSObject {
+final class AlgorithmViewController: NSObject {
 
     @objc
     static func show(vc: UIViewController, type: AlgorithmType) {

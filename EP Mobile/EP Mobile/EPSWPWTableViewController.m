@@ -42,10 +42,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
     if (row == EASY_WPW_ROW) {
-        [DecisionTreeViewController showWithVc:self type:AlgorithmTypeEasyWPW];
+        [AlgorithmViewController showWithVc:self type:AlgorithmTypeEasyWPW];
     }
     if (row == SMART_WPW_ROW) {
-        [DecisionTreeViewController showWithVc:self type:AlgorithmTypeSmartWPW];
+        [AlgorithmViewController showWithVc:self type:AlgorithmTypeSmartWPW];
     }
 }
 
