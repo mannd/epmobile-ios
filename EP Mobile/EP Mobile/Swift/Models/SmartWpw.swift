@@ -34,7 +34,7 @@ struct SmartWpw: Algorithm {
     }
 
     func getInstructions() -> String? {
-        "The EASY-WPW algorithm is based on both the analysis of QRS polarity and transition as well as the most positive delta wave or the most positive QRS complex if delta wave is not well differentiated. The delta wave is defined as the first 20–40 ms of the earliest QRS deflection."
+        "The SMART-WPW algorithm uses a different accessory pathway nomenclature than most of the other algorithms.  The results are mapped onto the mitral and tricuspid annuli presented in the form of clock faces viewed in the left anterior oblique view.  This is presented in Figure 1 from the reference paper, which unfortunately because of the high cost of reuse cannot be included in this app.\n\nThe paper states it uses the polarity of the delta wave of leads V1, V3, and the inferior leads (II, III, aVF) to determine the accessory pathway location.  However note that the algorithm considers both a fully negative delta wave and a small initial r wave followed by a deep S wave (rS) wave as a negative delta wave.\n\nPlease read the reference before using this or any other algorithm."
     }
 
     func getKey() -> String? {
