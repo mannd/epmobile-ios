@@ -75,7 +75,7 @@ struct DrugDoseCalculator: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 // Using Form here gives a warning message about ambiguous constraints.
                 // This is avoided by using List, but this seems to be an Apple bug
@@ -150,12 +150,18 @@ struct DrugDoseCalculator: View {
             .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
-            .navigationBarItems(
-                trailing: NavigationLink(destination: getInformationView(), isActive: $showInfo) {
-                    Button(action: { showInfo.toggle() }) {
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
                         Image(systemName: "info.circle")
                     }
-                })
+                }
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                getInformationView()
+            }
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -169,7 +175,6 @@ struct DrugDoseCalculator: View {
                 concentrationUnit = .mmolL
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .alert("Warning", isPresented: $showWarning, actions: {}, message: { Text(drugDose) })
     }
 
@@ -287,3 +292,4 @@ struct DrugDoseCalculator_Previews: PreviewProvider {
         DrugDoseCalculator(drugName: .constant(DrugName.gfr))
     }
 }
+

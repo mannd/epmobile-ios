@@ -43,9 +43,8 @@ struct QTcIvcdCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                NavigationLink(destination: QTcIvcdResultView(qtcIvcdResultList: result, qtcFormula: formula, lbbb: $isLbbb), isActive: $showResults) { EmptyView() }
                 Form {
                     Section(header: Text(intervalRateLabel())) {
                         HStack() {
@@ -94,13 +93,22 @@ struct QTcIvcdCalculatorView: View {
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: Self.getQTcIvcdInformationView(), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .navigationDestination(isPresented: $showResults) {
+                QTcIvcdResultView(qtcIvcdResultList: result, qtcFormula: formula, lbbb: $isLbbb)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                Self.getQTcIvcdInformationView()
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             if defaultQtcFormula == Keys.bazett {
                 formula = .qtcBzt

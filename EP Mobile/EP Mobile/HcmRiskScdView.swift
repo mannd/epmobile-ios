@@ -32,7 +32,7 @@ struct HcmRiskScdView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Form() {
                     Section(header: Text("Parameters")) {
@@ -102,13 +102,19 @@ struct HcmRiskScdView: View {
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: hxSyncope, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmRiskScdModel.getInstructions(), key: HcmRiskScdModel.getKey(), references: HcmRiskScdModel.getReferences(), name: calculatorName), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: HcmRiskScdModel.getInstructions(), key: HcmRiskScdModel.getKey(), references: HcmRiskScdModel.getReferences(), name: calculatorName)
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {

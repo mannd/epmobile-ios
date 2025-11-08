@@ -29,7 +29,7 @@ struct EntrainmentCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Form() {
                     Section(header: Text("Tachycardia CL and PPI")) {
@@ -88,13 +88,19 @@ struct EntrainmentCalculatorView: View {
             .onChange(of: sQrs, perform: { _ in clearResult() })
             .onChange(of: egQrs, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: Entrainment.getInstructions(), references: Entrainment.getReferences(), name: calculatorName), isActive: $showingInfo) {
-                Button(action: { showingInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showingInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showingInfo) {
+                InformationView(instructions: Entrainment.getInstructions(), references: Entrainment.getReferences(), name: calculatorName)
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {

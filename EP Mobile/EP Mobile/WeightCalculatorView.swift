@@ -44,7 +44,7 @@ struct WeightCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 // Using Form here gives a warning message about ambiguous constraints.
                 // This is avoided by using List, but this seems to be an Apple bug
@@ -129,11 +129,18 @@ struct WeightCalculatorView: View {
             .onChange(of: massUnit, perform: { _ in  clearResult() })
             .onChange(of: heightUnit, perform:  { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: Weight.getInstructions(),key: Weight.getKey(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights"), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: Weight.getInstructions(),key: Weight.getKey(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights")
+            }
         }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
@@ -147,7 +154,6 @@ struct WeightCalculatorView: View {
                 heightUnit = .cm
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
 

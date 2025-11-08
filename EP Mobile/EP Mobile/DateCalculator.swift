@@ -33,7 +33,7 @@ struct DateCalculator: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 // Using Form here gives a warning message about ambiguous constraints.
                 // This is avoided by using List, but this seems to be an Apple bug
@@ -66,17 +66,19 @@ struct DateCalculator: View {
             .onChange(of: startingDate, perform: { _ in clearResult() })
             .onChange(of: subtractDays, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing:
-                                    NavigationLink(destination: DateInformationView(), isActive: $showingInfo) {
-                Button(action: { showingInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showingInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
-//            .sheet(isPresented: $showingInfo) {
-//                DateInformationView()
-//            }
+            }
+            .navigationDestination(isPresented: $showingInfo) {
+                DateInformationView()
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {

@@ -113,9 +113,8 @@ struct WarfarinClinicView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                NavigationLink(destination: UIWarfarinDosingTableView(dosingTableData: dosingTableData), isActive: $showDosingTable) { EmptyView() }
                 Form() {
                     Section(header: Text("Tablet Size")) {
                         Picker(selection: $tabletSize, label: Text("Tablet size")) {
@@ -163,22 +162,31 @@ struct WarfarinClinicView: View {
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
             .navigationBarTitle(Text("Warfarin Clinic"), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: Warfarin.getInstructions(), references: Warfarin.getReferences(), name: "Warfarin Clinic"), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: Warfarin.getInstructions(), references: Warfarin.getReferences(), name: "Warfarin Clinic")
+            }
+            .navigationDestination(isPresented: $showDosingTable) {
+                UIWarfarinDosingTableView(dosingTableData: dosingTableData)
+            }
+            .onAppear() {
+                inrTarget = defaultInrTargetDictionary[defaultInrTarget] ?? .low
+                tabletSize = defaultTabletSizeDictionary[defaultWarfarinTablet] ?? .fiveMG
+            }
             .alert("Result", isPresented: $showDosingAlert, actions: {
                 Button("Show Dose Table", role: .destructive, action: {
                    calculateDosingTable()
                 })
                 // Cancel button automatically added when we have a destructive button.
             }, message: { Text(result) })
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear() {
-            inrTarget = defaultInrTargetDictionary[defaultInrTarget] ?? .low
-            tabletSize = defaultTabletSizeDictionary[defaultWarfarinTablet] ?? .fiveMG
         }
     }
 

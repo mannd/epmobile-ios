@@ -27,7 +27,7 @@ struct V2CalculatorView: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Form {
                     Section(header: Text("VT or PVC")) {
@@ -68,13 +68,19 @@ struct V2CalculatorView: View {
             .onChange(of: rSR, perform: { _ in clearResult() })
             .onChange(of: sSR, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: V2TransitionCalculator.getInstructions(), key: V2TransitionCalculator.getKey(), references: V2TransitionCalculator.getReferences(), name: calculatorName), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: V2TransitionCalculator.getInstructions(), key: V2TransitionCalculator.getKey(), references: V2TransitionCalculator.getReferences(), name: calculatorName)
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {
