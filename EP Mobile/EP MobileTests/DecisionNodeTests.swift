@@ -9,22 +9,37 @@
 import Testing
 @testable import EP_Mobile
 
+final class DecisionNodeTestsMarker {}
+
 struct DecisionNodeTests {
 
     @Test func testLoadTestJson() async throws {
-        let node = MultipleDecisionNode.loadDecisionTree(from: "test")
-        #expect(node != nil)
-        #expect(!node!.isLeaf)
-        #expect(node!.question == "Do you like dogs?")
-        #expect(node!.branches!.count == 2)
-        #expect(node!.branches!["yes"]?.result == "Get a dog")
-        #expect(node!.branches!["no"]?.question == "Do you like cats?")
-        #expect(node!.branches!["no"]?.note == "Hates dogs")
-        #expect(node!.branches!["no"]?.branches!.count == 3)
-        #expect(node!.branches!["no"]?.branches!["yes"]?.result == "Get a cat")
-        #expect(node!.branches!["no"]?.branches!["no"]?.result == "No pets for you")
-        #expect(node!.branches!["no"]?.branches!["maybe"]?.result == "Decide")
+        let bundle = Bundle(for: DecisionNodeTestsMarker.self)
+        let url = try #require(bundle.url(forResource: "test", withExtension: "json"),
+                               "Unable to find resource 'test.json' in test bundle")
+        let rootNode = try DecisionNode.load(from: url)
 
+        #expect(!rootNode.isLeaf)
+        #expect(rootNode.question == "What is your favorite color?")
+        #expect(rootNode.branches?.count == 3)
+        let branch0 = rootNode.branches?[0]
+        #expect(branch0?.question == "Why do you like red?")
+        #expect(branch0?.isLeaf == false)
+        #expect(branch0?.label == "Red")
+        let branch1 = rootNode.branches?[1]
+        #expect(branch1?.question == "Why do you like blue?")
+        #expect(branch1?.isLeaf == false)
+        #expect(branch1?.result == nil)
+        #expect(branch1?.label == "Blue")
+        let branch2 = rootNode.branches?[2]
+        #expect(branch2?.question == "Why do you like green?")
+        #expect(branch2?.isLeaf == false)
+        #expect(branch2?.result == nil)
+        #expect(branch2?.label == "Green")
+        let branch1a = branch1?.branches?[0]
+        #expect(branch1a?.question == nil)
+        #expect(branch1a?.isLeaf == true)
+        #expect(branch1a?.label == "It's calm")
+        #expect(branch1a?.result == "You appreciate peace and stability.")
     }
-
 }
