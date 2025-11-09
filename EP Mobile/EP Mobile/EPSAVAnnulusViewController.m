@@ -52,7 +52,17 @@
     self.mapLocationLabel.hidden = ![self showPathway];
     if ([self showPathway]) {
         [self setTitle:@"AP Location"];
-        [self.mapLocationLabel setText:self.message];
+        // We no longer bother to show the decidion tree result on the map.
+        //[self.mapLocationLabel setText:self.message];
+        // Retrofit map to new WPW algorithms.
+        // Note: The legacy "PS" location was not used in the original annulus map logic and will
+        // only apply to future algorithms (e.g., EASY-WPW). A combination like PS + PL should
+        // never occur; it should instead be represented as a split such as PSMA + PL. To keep
+        // the mapping simple and compatible with the overlay logic, expand PS to PSMA and PSTA.
+        if ([self.location1 isEqualToString:PS] || [self.location2 isEqualToString:PS]) {
+            self.location1 = PSMA;
+            self.location2 = PSTA;
+        }
         self.asapImageView.hidden = !([self.location1 isEqualToString:AS] || [self.location2 isEqualToString:AS]);
         self.epicardialapImageView.hidden = !([self.location1 isEqualToString:SUBEPI] || [self.location2 isEqualToString:SUBEPI]);
         self.lalapImageView.hidden = !([self.location1 isEqualToString:LAL] || [self.location2 isEqualToString:LAL]);
@@ -78,3 +88,4 @@
 }
 
 @end
+

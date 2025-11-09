@@ -11,7 +11,7 @@ import Foundation
 class Painesd: EPSRiskScore {
     override
     func getTitle() -> String! {
-        return "PAINESCD"
+        return "PAINESD"
     }
 
     override

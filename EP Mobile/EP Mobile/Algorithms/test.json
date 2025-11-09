@@ -1,23 +1,58 @@
 {
-  "question": "Do you like dogs?",
-  "branches": {
-    "yes": {
-      "result": "Get a dog"
+  "branches" : [
+    {
+      "branches" : [
+        {
+          "id" : "red-warm",
+          "label" : "It's warm",
+          "result" : "You like passion and energy."
+        },
+        {
+          "id" : "red-bold",
+          "label" : "It's bold",
+          "result" : "You value confidence and strength."
+        }
+      ],
+      "id" : "red",
+      "label" : "Red",
+      "question" : "Why do you like red?"
     },
-    "no": {
-      "question": "Do you like cats?",
-	"note": "Hates dogs",
-      "branches": {
-        "yes": {
-          "result": "Get a cat"
+    {
+      "branches" : [
+        {
+          "id" : "blue-calm",
+          "label" : "It's calm",
+          "result" : "You appreciate peace and stability."
         },
-        "no": {
-          "result": "No pets for you"
+        {
+          "id" : "blue-cool",
+          "label" : "It's cool",
+          "result" : "You value rationality and clarity."
+        }
+      ],
+      "id" : "blue",
+      "label" : "Blue",
+      "question" : "Why do you like blue?"
+    },
+    {
+      "branches" : [
+        {
+          "id" : "green-nature",
+          "label" : "It's like nature",
+          "result" : "You feel connected to the outdoors."
         },
-	  "maybe": {
-	      "result": "Decide"
-	  }
-      }
+        {
+          "id" : "green-growth",
+          "label" : "It is the color of growth",
+          "result" : "You value progress and renewal."
+        }
+      ],
+      "id" : "green",
+      "label" : "Green",
+      "question" : "Why do you like green?"
     }
-  }
+  ],
+  "id" : "node-root",
+  "label" : "Root",
+  "question" : "What is your favorite color?"
 }

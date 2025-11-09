@@ -1,95 +1,66 @@
 //
 //  DecisionNode.swift
-//  EP Mobile
+//  EP Designer
 //
-//  Created by David Mann on 5/9/25.
-//  Copyright © 2025 EP Studios. All rights reserved.
+//  Created by David Mann on 9/12/25.
 //
 
 import Foundation
 
-class DecisionNode : ObservableObject, Decodable {
+struct DecisionNode: Codable, Identifiable, Hashable {
+    let id: String
+    var label: String // "" for root or leaf, or the answer text from parent
     var question: String?
-    var trueBranch: DecisionNode?
-    var falseBranch: DecisionNode?
-    var result: String?
-    var note: String?  // optional intermediate result
-
-    // internal node
-    init(question: String, trueBranch: DecisionNode, falseBranch: DecisionNode, note: String? = nil) {
-        self.question = question
-        self.trueBranch = trueBranch
-        self.falseBranch = falseBranch
-        self.note = note
-    }
-
-    // leaf node
-    init(result: String) {
-        self.result = result
-    }
-
-    var isLeaf: Bool {
-        return result != nil
-    }
-}
-
-extension DecisionNode {
-    static func loadDecisionTree(from filename: String) -> DecisionNode? {
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-            print("Missing file: \(filename).json")
-            return nil
-        }
-
-        do {
-            let data = try Data(contentsOf: url)
-            let tree = try JSONDecoder().decode(DecisionNode.self, from: data)
-            return tree
-        } catch {
-            print("Failed to decode decision tree: \(error)")
-            return nil
-        }
-    }
-}
-
-struct MultipleDecisionNode : Codable {
-    var question: String?
-    var branches: [AnswerOption.RawValue: MultipleDecisionNode]?
-    // Note: the JSON decoder can't handle [AnswerOption: MutipleDecisionNode], though it should.
-    // See https://developer.apple.com/forums/thread/747665
+    var branches: [DecisionNode]?
     var result: String?
     var note: String?
+    var tag: String?
 
-    var isLeaf: Bool {
-        return result != nil
+    var isLeaf: Bool { result != nil }
+
+    static let rootNodeId: String = "node-root"
+
+    // MARK: - Initializer
+    init(id: String = UUID().uuidString,
+         label: String = "",
+         question: String? = nil,
+         branches: [DecisionNode]? = nil,
+         result: String? = nil,
+         note: String? = nil,
+         tag: String? = nil) {
+        self.id = id
+        self.label = label
+        self.question = question
+        self.branches = branches
+        self.result = result
+        self.note = note
+        self.tag = tag
     }
 
+    static func new() -> DecisionNode {
+        DecisionNode(id: Self.rootNodeId, label: "Root", question: "Add first question here.")
+    }
+
+    // Hash / equality based ONLY on id (stable & cheap)
+    static func == (lhs: DecisionNode, rhs: DecisionNode) -> Bool { lhs.id == rhs.id }
+
+    func hash(into hasher: inout Hasher) { hasher.combine(id) }
 }
 
-extension MultipleDecisionNode {
-    static func loadDecisionTree(from filename: String) -> MultipleDecisionNode? {
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-            print("Missing file: \(filename).json")
-            return nil
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            let tree = try JSONDecoder().decode(MultipleDecisionNode.self, from: data)
-            return tree
-        } catch let DecodingError.dataCorrupted(context) {
-            print("Data corrupted: \(context.debugDescription)")
-            return nil
-        } catch let DecodingError.keyNotFound(key, context) {
-            print("Key '\(key)' not found: \(context.debugDescription)")
-            return nil
-        } catch let DecodingError.typeMismatch(type, context) {
-            print("Type '\(type)' mismatch: \(context.debugDescription)")
-            return nil
-        } catch let DecodingError.valueNotFound(value, context) {
-            print("Value '\(value)' not found: \(context.debugDescription)")
-            return nil
-        } catch {
-            print("Failed to decode decision tree: \(error.localizedDescription)")
-            return nil
-        }
+// MARK: - JSON Persistence
+extension DecisionNode {
+    /// Saves the node (and its nested tree) to a file at the specified URL
+    func save(to url: URL) throws {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        let data = try encoder.encode(self)
+        try data.write(to: url)
+    }
+
+    /// Loads a nested tree from a file at the specified URL
+    static func load(from url: URL) throws -> DecisionNode {
+        let data = try Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        return try decoder.decode(DecisionNode.self, from: data)
     }
 }

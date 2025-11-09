@@ -38,7 +38,7 @@ struct HcmScd2024View: View {
     }()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Form() {
                     Section(header: Text("Major Risks")) {
@@ -72,13 +72,19 @@ struct HcmScd2024View: View {
             .onChange(of: hxNsvt, perform: { _ in clearResult() })
             .onChange(of: extensiveLGE, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: HcmScd2024Model.getInstructions(), key: HcmScd2024Model.getKey(), references: HcmScd2024Model.getReferences(), name: calculatorName), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: HcmScd2024Model.getInstructions(), key: HcmScd2024Model.getKey(), references: HcmScd2024Model.getReferences(), name: calculatorName)
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {

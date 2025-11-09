@@ -19,7 +19,7 @@ struct RiskScoreView: View {
     var riskScore: EPSRiskScore = EPSHcmRiskScore()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 riskScore.numberOfSections() == 1 ?
                 AnyView(RiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
@@ -29,11 +29,18 @@ struct RiskScoreView: View {
             }
             .listStyle(.grouped)
             .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName()), isActive: $showInfo) {
-                Button(action: { showInfo.toggle() }) {
-                    Image(systemName: "info.circle")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
                 }
-            })
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName())
+            }
             .alert("Result", isPresented: $showResult, actions: {
                 Button("OK", role: .cancel, action: {})
                 Button("Copy result") {
@@ -45,7 +52,6 @@ struct RiskScoreView: View {
             }, message: { Text(result ?? "Error") })
             .alert("Result Copied", isPresented: $resultCopied, actions: {}, message: { Text("Result copied to clipboard.")})
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func calculate() {
