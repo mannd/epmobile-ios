@@ -46,6 +46,7 @@
 		8E0DF87A283C522D00367D4A /* HcmRiskScdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0DF879283C522D00367D4A /* HcmRiskScdModel.swift */; };
 		8E10DEBA2EBE58DE002D48A5 /* SmartWpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10DEB92EBE58D1002D48A5 /* SmartWpw.swift */; };
 		8E10DEBC2EBE60AB002D48A5 /* smartWPW.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E10DEBB2EBE60AB002D48A5 /* smartWPW.json */; };
+		8E10DEE12EBFC34E002D48A5 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E10DEE02EBFC34E002D48A5 /* test.json */; };
 		8E16E3B928E74FD400E14BE8 /* RiskScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */; };
 		8E16E3BB28E763D500E14BE8 /* RiskScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */; };
 		8E16E3BD28EA75DD00E14BE8 /* CalculateButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */; };
@@ -305,6 +306,7 @@
 		8E0DF879283C522D00367D4A /* HcmRiskScdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmRiskScdModel.swift; sourceTree = "<group>"; };
 		8E10DEB92EBE58D1002D48A5 /* SmartWpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartWpw.swift; sourceTree = "<group>"; };
 		8E10DEBB2EBE60AB002D48A5 /* smartWPW.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = smartWPW.json; sourceTree = "<group>"; };
+		8E10DEE02EBFC34E002D48A5 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		8E16E3B828E74FD400E14BE8 /* RiskScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreView.swift; sourceTree = "<group>"; };
 		8E16E3BA28E763D500E14BE8 /* RiskScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskScoreViewController.swift; sourceTree = "<group>"; };
 		8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonsView.swift; sourceTree = "<group>"; };
@@ -815,6 +817,7 @@
 		8E560B482DCE8EBC0046377B /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				8E10DEE02EBFC34E002D48A5 /* test.json */,
 				8E10DEBB2EBE60AB002D48A5 /* smartWPW.json */,
 				8E312F3C2EB59AE80010246F /* Hamriti.json */,
 			);
@@ -1254,6 +1257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC19C4E159FE0FA00975E2B /* InfoPlist.strings in Resources */,
+				8E10DEE12EBFC34E002D48A5 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1595,7 +1599,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1606,7 +1610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.31.0;
+				MARKETING_VERSION = 3.32.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1625,7 +1629,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1636,7 +1640,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.31.0;
+				MARKETING_VERSION = 3.32.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
