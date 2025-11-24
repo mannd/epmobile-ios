@@ -35,7 +35,7 @@ struct HcmAfView: View {
                                 get: { viewModel.laDiameterInput },
                                 set: { viewModel.onLaDiameterChanged($0) }
                             ))
-                            .keyboardType(.numberPad)
+                            .keyboardType(.numbersAndPunctuation)
                             .textFieldStyle(.roundedBorder)
                         }
 
@@ -46,7 +46,7 @@ struct HcmAfView: View {
                                 get: { viewModel.ageAtEvalInput },
                                 set: { viewModel.onAgeAtEvalChanged($0) }
                             ))
-                            .keyboardType(.numberPad)
+                            .keyboardType(.numbersAndPunctuation)
                             .textFieldStyle(.roundedBorder)
                         }
 
@@ -57,7 +57,7 @@ struct HcmAfView: View {
                                 get: { viewModel.ageAtDxInput },
                                 set: { viewModel.onAgeAtDxChanged($0) }
                             ))
-                            .keyboardType(.numberPad)
+                            .keyboardType(.numbersAndPunctuation)
                             .textFieldStyle(.roundedBorder)
                         }
 
