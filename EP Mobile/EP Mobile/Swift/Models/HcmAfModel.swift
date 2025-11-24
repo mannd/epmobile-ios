@@ -55,7 +55,7 @@ struct HcmAfRiskData: Equatable {
     let riskAt5YearsPercent: Double
 }
 
-struct HcmAfModel {
+struct HcmAfModel: InformationProvider {
     let laDiameter: Int?
     let ageAtEval: Int?
     let ageAtDx: Int?
@@ -143,5 +143,18 @@ struct HcmAfModel {
     private static func getPointsHfSx(_ hasSx: Bool) -> Int {
         hasSx ? 3 : 0
     }
+
+    static func getReferences() -> [Reference] {
+        return [Reference("Carrick RT, Maron MS, Adler A, et al. Development and Validation of a Clinical Predictive Model for Identifying Hypertrophic Cardiomyopathy Patients at Risk for Atrial Fibrillation: The HCM-AF Score. Circ: Arrhythmia and Electrophysiology. 2021;14(6):e009796. doi:10.1161/CIRCEP.120.009796")]
+    }
+
+    static func getInstructions() -> String? {
+        return "This score predicts the risk of developing atrial fibrillation in patients with hypertrophic cardiomyopathy.  The result gives the risk in terms of low, intermediate, and high yearly risk as well as predicted risk of atrial fibrillation after 2 and 5 years.\n\nHeart failure symptoms are considered to be present if the patient is in NYHA functional class II, III, or IV."
+    }
+
+    static func getKey() -> String? {
+        return nil
+    }
+
 }
 

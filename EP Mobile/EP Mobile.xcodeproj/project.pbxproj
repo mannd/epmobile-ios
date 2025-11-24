@@ -28,6 +28,7 @@
 		8E04D8AC2ED3F0A900C73942 /* HcmAfViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8AA2ED3F07600C73942 /* HcmAfViewModel.swift */; };
 		8E04D8AF2ED3F1CA00C73942 /* HcmAfViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8AD2ED3F17F00C73942 /* HcmAfViewModelTests.swift */; };
 		8E04D8B22ED3F29B00C73942 /* HcmAfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8B02ED3F26700C73942 /* HcmAfView.swift */; };
+		8E04D8B42ED3F9AE00C73942 /* HcmAfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8B32ED3F99D00C73942 /* HcmAfViewController.swift */; };
 		8E05062D2820879D0059DACB /* MiniQTc in Frameworks */ = {isa = PBXBuildFile; productRef = 8E05062C2820879D0059DACB /* MiniQTc */; };
 		8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05062E2820926D0059DACB /* QTcCalculatorView.swift */; };
 		8E050631282099660059DACB /* QTcCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E050630282099660059DACB /* QTcCalculatorController.swift */; };
@@ -283,6 +284,7 @@
 		8E04D8AA2ED3F07600C73942 /* HcmAfViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfViewModel.swift; sourceTree = "<group>"; };
 		8E04D8AD2ED3F17F00C73942 /* HcmAfViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfViewModelTests.swift; sourceTree = "<group>"; };
 		8E04D8B02ED3F26700C73942 /* HcmAfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfView.swift; sourceTree = "<group>"; };
+		8E04D8B32ED3F99D00C73942 /* HcmAfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfViewController.swift; sourceTree = "<group>"; };
 		8E05062E2820926D0059DACB /* QTcCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorView.swift; sourceTree = "<group>"; };
 		8E050630282099660059DACB /* QTcCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorController.swift; sourceTree = "<group>"; };
 		8E0506322820B6CD0059DACB /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
@@ -746,6 +748,7 @@
 		8E18B371281504AF0043FD00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E04D8B32ED3F99D00C73942 /* HcmAfViewController.swift */,
 				8E312F3E2EB59F750010246F /* AlgorithmViewController.swift */,
 				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
@@ -1293,6 +1296,7 @@
 				8E63411C28373A1F00178D0C /* EntrainmentCalculatorViewController.swift in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
+				8E04D8B42ED3F9AE00C73942 /* HcmAfViewController.swift in Sources */,
 				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
 				8E312F872EB6DF9A0010246F /* CenteringGridLayout.swift in Sources */,
 				8E6CD5DC2CC032BB00C41E9C /* HcmScdTableViewController.swift in Sources */,

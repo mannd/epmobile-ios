@@ -64,7 +64,7 @@
 #define FRAILTY_ROW 6
 #define HAS_BLED_ROW 7
 #define HEMORRHAGES_ROW 8
-#define HCM_AR_ROW 9
+#define HCM_AF_ROW 9
 #define HCM_SCD_ROW 10
 #define ICD_IMPLANTATION_RISK_ROW 11
 #define ICD_MORTALITY_RISK_ROW 12
@@ -185,6 +185,9 @@
         }
         if (indexPath.row == FRAILTY_ROW) {
             [FrailtyViewController showWithVc:self];
+        }
+        if (indexPath.row == HCM_AF_ROW) {
+            [HcmAfViewController showWithVc:self];
         }
         if (indexPath.row == HAS_BLED_ROW) {
             [RiskScoreViewController showWithVc:self riskScore:[[EPSHasBledRiskScore alloc] init]];

@@ -3,10 +3,13 @@ import SwiftUI
 import AppKit
 #endif
 
+fileprivate let calculatorName = "HCM AF Risk"
+
 @MainActor
 struct HcmAfView: View {
     @StateObject private var ownedViewModel: HcmAfViewModel
     @ObservedObject private var viewModel: HcmAfViewModel
+    @State private var showInfo: Bool = false
 
     init() {
         let vm = HcmAfViewModel()
@@ -20,78 +23,91 @@ struct HcmAfView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center, spacing: 12) {
-                // Input Fields
-                Group {
-                    TextField("LA Diameter (mm)", text: Binding(
-                        get: { viewModel.laDiameterInput },
-                        set: { viewModel.onLaDiameterChanged($0) }
-                    ))
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(.roundedBorder)
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    // Input Fields
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(alignment: .firstTextBaseline, spacing: 12) {
+                            Text("LA Diameter (mm)")
+                                .frame(width: 180, alignment: .leading)
+                            TextField("mm", text: Binding(
+                                get: { viewModel.laDiameterInput },
+                                set: { viewModel.onLaDiameterChanged($0) }
+                            ))
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(.roundedBorder)
+                        }
 
-                    TextField("Age at Evaluation", text: Binding(
-                        get: { viewModel.ageAtEvalInput },
-                        set: { viewModel.onAgeAtEvalChanged($0) }
-                    ))
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(.roundedBorder)
+                        HStack(alignment: .firstTextBaseline, spacing: 12) {
+                            Text("Age at Evaluation")
+                                .frame(width: 180, alignment: .leading)
+                            TextField("years", text: Binding(
+                                get: { viewModel.ageAtEvalInput },
+                                set: { viewModel.onAgeAtEvalChanged($0) }
+                            ))
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(.roundedBorder)
+                        }
 
-                    TextField("Age at Diagnosis", text: Binding(
-                        get: { viewModel.ageAtDxInput },
-                        set: { viewModel.onAgeAtDxChanged($0) }
-                    ))
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(.roundedBorder)
-                }
+                        HStack(alignment: .firstTextBaseline, spacing: 12) {
+                            Text("Age at Diagnosis")
+                                .frame(width: 180, alignment: .leading)
+                            TextField("years", text: Binding(
+                                get: { viewModel.ageAtDxInput },
+                                set: { viewModel.onAgeAtDxChanged($0) }
+                            ))
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(.roundedBorder)
+                        }
 
-                // Checkbox / Toggle
-                Toggle(isOn: Binding(
-                    get: { viewModel.hfSxChecked },
-                    set: { viewModel.onHfSxChanged($0) }
-                )) {
-                    Text("History of Heart Failure Symptoms")
-                }
-                .padding(.vertical, 8)
-
-                // Action Buttons
-                HStack(spacing: 8) {
-                    Button("Calculate") {
-                        viewModel.calculate()
+                        Toggle(isOn: Binding(
+                            get: { viewModel.hfSxChecked },
+                            set: { viewModel.onHfSxChanged($0) }
+                        )) {
+                            Text("History of Heart Failure Symptoms")
+                        }
+                        .padding(.top, 4)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .frame(maxWidth: .infinity)
 
-                    Button("Clear") {
-                        viewModel.clear()
+                    // Result Display with Copy
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("Result")
+                                .font(.headline)
+                            Spacer()
+                            Button("Copy") {
+                                copyToPasteboard(viewModel.resultState)
+                            }
+                            .buttonStyle(.bordered)
+                        }
+
+                        Text(viewModel.resultState)
+                            .font(.body)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(8)
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(8)
                     }
-                    .buttonStyle(.bordered)
-                    .frame(maxWidth: .infinity)
-
-                    Button("Copy") {
-                        copyToPasteboard(viewModel.resultState)
-                    }
-                    .buttonStyle(.bordered)
-                    .frame(maxWidth: .infinity)
                 }
-
-                // Result Display
-                VStack(alignment: .leading) {
-                    Text(viewModel.resultState)
-                        .font(.body)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(8)
-                }
-                .frame(maxWidth: .infinity)
-                .background(Color(.secondarySystemBackground))
-                .cornerRadius(8)
-                .padding(.top, 8)
+                .padding(16)
             }
-            .padding(16)
+            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
+                }
+            }
+            .navigationDestination(isPresented: $showInfo) {
+                InformationView(instructions: HcmAfModel.getInstructions(), key: HcmAfModel.getKey(), references: HcmAfModel.getReferences(), name: calculatorName)
+            }
+            CalculateButtonsView(calculate: viewModel.calculate, clear: viewModel.clear)
         }
-        .navigationTitle("HCM-AF")
     }
 
     private func copyToPasteboard(_ text: String) {
@@ -106,7 +122,5 @@ struct HcmAfView: View {
 }
 
 #Preview {
-    NavigationView {
-        HcmAfView()
-    }
+    HcmAfView()
 }
