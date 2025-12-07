@@ -673,14 +673,15 @@
 		8E18B3682814C2D70043FD00 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E312F862EB6DF9A0010246F /* CenteringGridLayout.swift */,
 				8E312F822EB5ABB30010246F /* AlgorithmView.swift */,
 				8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */,
 				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
+				8E312F862EB6DF9A0010246F /* CenteringGridLayout.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
+				8E04D8B02ED3F26700C73942 /* HcmAfView.swift */,
 				8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */,
 				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */,
 				8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */,
@@ -693,7 +694,6 @@
 				8E02AE522CD40B6F00266F7F /* ToggleView.swift */,
 				8E6A354D2C0762D600A94CD3 /* V2CalculatorView.swift */,
 				8E3A3BF228300A440071C23F /* WarfarinClinicView.swift */,
-				8E04D8B02ED3F26700C73942 /* HcmAfView.swift */,
 				8E6381C0282AE53E00249E87 /* WeightCalculatorView.swift */,
 			);
 			name = SwiftUI;
@@ -1623,7 +1623,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 67;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1634,7 +1634,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.32.0;
+				MARKETING_VERSION = 3.33.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1653,7 +1653,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 67;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1664,7 +1664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.32.0;
+				MARKETING_VERSION = 3.33.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
