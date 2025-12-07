@@ -23,6 +23,12 @@
 		8E00E96E17BC55ED0007A146 /* EPSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */; };
 		8E02998917EE07BC00A7FC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E02998817EE07BC00A7FC6F /* Images.xcassets */; };
 		8E02AE532CD40B6F00266F7F /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E02AE522CD40B6F00266F7F /* ToggleView.swift */; };
+		8E04D8A62ED3EBEB00C73942 /* HcmAfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8A52ED3EBEB00C73942 /* HcmAfModel.swift */; };
+		8E04D8A92ED3ECF300C73942 /* HcmAfModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8A72ED3ECB600C73942 /* HcmAfModelTests.swift */; };
+		8E04D8AC2ED3F0A900C73942 /* HcmAfViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8AA2ED3F07600C73942 /* HcmAfViewModel.swift */; };
+		8E04D8AF2ED3F1CA00C73942 /* HcmAfViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8AD2ED3F17F00C73942 /* HcmAfViewModelTests.swift */; };
+		8E04D8B22ED3F29B00C73942 /* HcmAfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8B02ED3F26700C73942 /* HcmAfView.swift */; };
+		8E04D8B42ED3F9AE00C73942 /* HcmAfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04D8B32ED3F99D00C73942 /* HcmAfViewController.swift */; };
 		8E05062D2820879D0059DACB /* MiniQTc in Frameworks */ = {isa = PBXBuildFile; productRef = 8E05062C2820879D0059DACB /* MiniQTc */; };
 		8E05062F2820926D0059DACB /* QTcCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05062E2820926D0059DACB /* QTcCalculatorView.swift */; };
 		8E050631282099660059DACB /* QTcCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E050630282099660059DACB /* QTcCalculatorController.swift */; };
@@ -273,6 +279,12 @@
 		8E00E96D17BC55ED0007A146 /* EPSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarViewController.m; sourceTree = "<group>"; };
 		8E02998817EE07BC00A7FC6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E02AE522CD40B6F00266F7F /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		8E04D8A52ED3EBEB00C73942 /* HcmAfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfModel.swift; sourceTree = "<group>"; };
+		8E04D8A72ED3ECB600C73942 /* HcmAfModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfModelTests.swift; sourceTree = "<group>"; };
+		8E04D8AA2ED3F07600C73942 /* HcmAfViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfViewModel.swift; sourceTree = "<group>"; };
+		8E04D8AD2ED3F17F00C73942 /* HcmAfViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfViewModelTests.swift; sourceTree = "<group>"; };
+		8E04D8B02ED3F26700C73942 /* HcmAfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfView.swift; sourceTree = "<group>"; };
+		8E04D8B32ED3F99D00C73942 /* HcmAfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HcmAfViewController.swift; sourceTree = "<group>"; };
 		8E05062E2820926D0059DACB /* QTcCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorView.swift; sourceTree = "<group>"; };
 		8E050630282099660059DACB /* QTcCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTcCalculatorController.swift; sourceTree = "<group>"; };
 		8E0506322820B6CD0059DACB /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
@@ -661,14 +673,15 @@
 		8E18B3682814C2D70043FD00 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E312F862EB6DF9A0010246F /* CenteringGridLayout.swift */,
 				8E312F822EB5ABB30010246F /* AlgorithmView.swift */,
 				8EE09CBF2DC69BE400D64BB0 /* BmiCalculatorView.swift */,
 				8E16E3BC28EA75DD00E14BE8 /* CalculateButtonsView.swift */,
+				8E312F862EB6DF9A0010246F /* CenteringGridLayout.swift */,
 				8ECA415D2815B0EB00CFAC18 /* DateCalculator.swift */,
 				8EB206B1281852DD009CD301 /* DrugDoseCalculator.swift */,
 				8E634119283739EB00178D0C /* EntrainmentCalculatorView.swift */,
 				8E70DBD72AE0C7D10018A501 /* FrailtyView.swift */,
+				8E04D8B02ED3F26700C73942 /* HcmAfView.swift */,
 				8EEE9BB6283D8565005AB875 /* HcmRiskScdView.swift */,
 				8E6CD5DF2CC03B9200C41E9C /* HcmScd2022View.swift */,
 				8E6CD5DD2CC03B8100C41E9C /* HcmScd2024View.swift */,
@@ -690,15 +703,15 @@
 		8E18B36D281503510043FD00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				8E962FDF2EA86AA100B25476 /* Main */,
-				8E38A07F28F4A69F00F1F723 /* Protocols */,
-				8E23949228244CE400B6E8B7 /* Extensions */,
-				8E28243F2821B94200DD9571 /* ViewModels */,
 				8E59E967281A4060003C485F /* Common */,
-				8E18B372281504F90043FD00 /* Views */,
-				8E18B371281504AF0043FD00 /* ViewControllers */,
+				8E23949228244CE400B6E8B7 /* Extensions */,
+				8E962FDF2EA86AA100B25476 /* Main */,
 				8E18B36E2815036F0043FD00 /* Models */,
+				8E38A07F28F4A69F00F1F723 /* Protocols */,
 				8E18B3682814C2D70043FD00 /* SwiftUI */,
+				8E18B371281504AF0043FD00 /* ViewControllers */,
+				8E28243F2821B94200DD9571 /* ViewModels */,
+				8E18B372281504F90043FD00 /* Views */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -725,6 +738,7 @@
 				8E8FAAE22817297600789746 /* Patient.swift */,
 				8E2394902824400800B6E8B7 /* QTcIvcd.swift */,
 				8E6A35492C056CE000A94CD3 /* V2TransitionCalculator.swift */,
+				8E04D8A52ED3EBEB00C73942 /* HcmAfModel.swift */,
 				8E808362282DC62100E88A4E /* Warfarin.swift */,
 				8E6381B8282982C400249E87 /* Weight.swift */,
 			);
@@ -734,6 +748,7 @@
 		8E18B371281504AF0043FD00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E04D8B32ED3F99D00C73942 /* HcmAfViewController.swift */,
 				8E312F3E2EB59F750010246F /* AlgorithmViewController.swift */,
 				8EF29288226AA43C00F15B99 /* ArvcRiskViewController.swift */,
 				8E4AFD7B2815FC290077FEE3 /* DateCalculatorController.swift */,
@@ -800,6 +815,7 @@
 				8E2824402821B96300DD9571 /* QTcCalculatorViewModel.swift */,
 				8E321C6C28257AB50017EDB0 /* QTcIvcdViewModel.swift */,
 				8E808366282DF55400E88A4E /* WarfarinViewModel.swift */,
+				8E04D8AA2ED3F07600C73942 /* HcmAfViewModel.swift */,
 				8E6381BE282A016000249E87 /* WeightCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
@@ -1015,20 +1031,20 @@
 		8EC19C31159FE0FA00975E2B /* EP Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				8E18B36D281503510043FD00 /* Swift */,
-				8E24EDB8203F36DE00C49B66 /* Models */,
-				8E71C2BA1F77546C00D198BD /* Storyboards */,
-				8E00E96817BC48710007A146 /* Headers */,
-				8E00E96317BC42E40007A146 /* Main */,
-				8E00E96717BC48530007A146 /* Notes */,
-				8E741AB616FE88B500A701B3 /* Links */,
-				8E00E93617A569EB0007A146 /* RiskScores */,
-				8E815D41162F1AEE001025ED /* Image Views */,
-				8E815D40162F1A5B001025ED /* Calculators */,
-				8E815D3F162EE5CA001025ED /* View Controllers */,
 				8E815D3D162EE4F7001025ED /* Algorithms */,
-				8EC19C32159FE0FA00975E2B /* Supporting Files */,
+				8E815D40162F1A5B001025ED /* Calculators */,
+				8E00E96817BC48710007A146 /* Headers */,
+				8E815D41162F1AEE001025ED /* Image Views */,
 				8E02998817EE07BC00A7FC6F /* Images.xcassets */,
+				8E741AB616FE88B500A701B3 /* Links */,
+				8E00E96317BC42E40007A146 /* Main */,
+				8E24EDB8203F36DE00C49B66 /* Models */,
+				8E00E96717BC48530007A146 /* Notes */,
+				8E00E93617A569EB0007A146 /* RiskScores */,
+				8E71C2BA1F77546C00D198BD /* Storyboards */,
+				8EC19C32159FE0FA00975E2B /* Supporting Files */,
+				8E18B36D281503510043FD00 /* Swift */,
+				8E815D3F162EE5CA001025ED /* View Controllers */,
 			);
 			path = "EP Mobile";
 			sourceTree = "<group>";
@@ -1083,6 +1099,8 @@
 		8EC19C49159FE0FA00975E2B /* EP MobileTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E04D8AD2ED3F17F00C73942 /* HcmAfViewModelTests.swift */,
+				8E04D8A72ED3ECB600C73942 /* HcmAfModelTests.swift */,
 				8E0C13C92262DBB0000892CC /* ArvcTests.swift */,
 				8E38A07928F1F4BC00F1F723 /* ConvertLinkTests.swift */,
 				8ECA415B2815AD6500CFAC18 /* DateMathTests.swift */,
@@ -1278,6 +1296,7 @@
 				8E63411C28373A1F00178D0C /* EntrainmentCalculatorViewController.swift in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
+				8E04D8B42ED3F9AE00C73942 /* HcmAfViewController.swift in Sources */,
 				8EDD2D49212F0C2B00C3397C /* EPSTamponadeRiskScore.m in Sources */,
 				8E312F872EB6DF9A0010246F /* CenteringGridLayout.swift in Sources */,
 				8E6CD5DC2CC032BB00C41E9C /* HcmScdTableViewController.swift in Sources */,
@@ -1296,6 +1315,7 @@
 				8E8C89E5283339FE0057B237 /* Entrainment.swift in Sources */,
 				8E6CD5E22CC03BEF00C41E9C /* HcmScd2024ViewController.swift in Sources */,
 				8E808367282DF55400E88A4E /* WarfarinViewModel.swift in Sources */,
+				8E04D8B22ED3F29B00C73942 /* HcmAfView.swift in Sources */,
 				8E6CD5E42CC03C2400C41E9C /* HcmScd2022ViewController.swift in Sources */,
 				8E5D93CF15C8AAAA00ACBA4F /* EPSSQTViewController.m in Sources */,
 				8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */,
@@ -1307,6 +1327,7 @@
 				8E0600E315D32BBF00BB7550 /* EPSLVHTableViewController.m in Sources */,
 				8E535E8D2836EAA8001503E5 /* EntrainmentViewModel.swift in Sources */,
 				8E09D06415DC6A7A00756EA1 /* EPSLongQTECGViewController.m in Sources */,
+				8E04D8AC2ED3F0A900C73942 /* HcmAfViewModel.swift in Sources */,
 				8E09D06E15DDDEFA00756EA1 /* EPSLQTSDetailsTableViewController.m in Sources */,
 				8EBCC80E2826CCD8001ABD9E /* QTcIvcdCalculatorView.swift in Sources */,
 				8EEECFFA2DC3A9B500142046 /* BmiModel.swift in Sources */,
@@ -1351,6 +1372,7 @@
 				8EE09CC22DC69C1400D64BB0 /* BmiViewController.swift in Sources */,
 				8E37A5AA170126FA004E66B2 /* EPSComplexAlgorithmViewController.m in Sources */,
 				8E312F3F2EB59F880010246F /* AlgorithmViewController.swift in Sources */,
+				8E04D8A62ED3EBEB00C73942 /* HcmAfModel.swift in Sources */,
 				8E71C2B31F77202C00D198BD /* EPSBrugadaTableViewController.m in Sources */,
 				8EC5C3251A9D0B0A005BDAFD /* EPSDrugReferenceTableViewController.m in Sources */,
 				8E3A3BF328300A440071C23F /* WarfarinClinicView.swift in Sources */,
@@ -1435,9 +1457,11 @@
 				8EAD13FB2DD3C8900002B127 /* AnswerOptionTests.swift in Sources */,
 				8E1F768C2CC5730100C7AB54 /* HcmScd2022Tests.swift in Sources */,
 				8E6381BD2829DD9B00249E87 /* WeightTests.swift in Sources */,
+				8E04D8A92ED3ECF300C73942 /* HcmAfModelTests.swift in Sources */,
 				8E18B374281507DE0043FD00 /* IntervalRateConversionTests.swift in Sources */,
 				8EB36C34281F93D8006D8DF2 /* QTcTests.swift in Sources */,
 				8EAE5CE118E1CDB600642C1D /* EPSIcdRiskScore.m in Sources */,
+				8E04D8AF2ED3F1CA00C73942 /* HcmAfViewModelTests.swift in Sources */,
 				8E70DBD62AE062730018A501 /* FrailtyTests.swift in Sources */,
 				8E8FAAE528172D0800789746 /* PatientTests.swift in Sources */,
 				8EAA464B2DD11F0B00F9C8DF /* DecisionNodeTests.swift in Sources */,
@@ -1599,7 +1623,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 67;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1610,7 +1634,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.32.0;
+				MARKETING_VERSION = 3.33.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1629,7 +1653,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 67;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
@@ -1640,7 +1664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.32.0;
+				MARKETING_VERSION = 3.33.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.epstudios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
