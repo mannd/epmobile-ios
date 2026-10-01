@@ -88,7 +88,7 @@ final class Patient {
     }
 
     static func getGfrInstructions() -> String {
-        return "Use this calculator to estimate glomerular filtration rate normalized for estimated body surface area.  If you want to estimate creatinine clearance for determining drug dosing, use the Creatinine Clearance Calculator. \n\nThis calculator uses the CKD-EPI equation."
+        return "Use this calculator to estimate glomerular filtration rate normalized for estimated body surface area.  If you want to estimate creatinine clearance for determining drug dosing, use the Creatinine Clearance Calculator. \n\nThis calculator uses the CKD-EPI equation (2009 version)."
     }
 
     init(
