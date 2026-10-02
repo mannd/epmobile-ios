@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct RiskScoreView: View {
-    @State private var showInfo = false
     @State private var showResult = false
     @State private var resultCopied = false
     @State var selectKeeper = Set<Int>()
@@ -19,39 +18,24 @@ struct RiskScoreView: View {
     var riskScore: EPSRiskScore = EPSHcmRiskScore()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                riskScore.numberOfSections() == 1 ?
-                AnyView(RiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
-                :
-                AnyView(GroupedRiskScoreList(selectKeeper: $selectKeeper, riskScore: riskScore, array: riskScore.getArray(), numSections: Int(riskScore.numberOfSections())))
-                CalculateButtonsView(calculate: calculate, clear: clear)
-            }
-            .listStyle(.grouped)
-            .navigationBarTitle(Text(riskScore.getName()), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName())
-            }
-            .alert("Result", isPresented: $showResult, actions: {
-                Button("OK", role: .cancel, action: {})
-                Button("Copy result") {
-                    let pasteboard = UIPasteboard.general
-                    pasteboard.string = detailedResult
-                    resultCopied = true
-                }
-
-            }, message: { Text(result ?? "Error") })
-            .alert("Result Copied", isPresented: $resultCopied, actions: {}, message: { Text("Result copied to clipboard.")})
+        VStack {
+            riskScore.numberOfSections() == 1 ?
+            AnyView(RiskScoreList(selectKeeper: $selectKeeper, array: riskScore.getArray()))
+            :
+            AnyView(GroupedRiskScoreList(selectKeeper: $selectKeeper, riskScore: riskScore, array: riskScore.getArray(), numSections: Int(riskScore.numberOfSections())))
+            CalculateButtonsView(calculate: calculate, clear: clear)
         }
+        .listStyle(.grouped)
+        .alert("Result", isPresented: $showResult, actions: {
+            Button("OK", role: .cancel, action: {})
+            Button("Copy result") {
+                let pasteboard = UIPasteboard.general
+                pasteboard.string = detailedResult
+                resultCopied = true
+            }
+
+        }, message: { Text(result ?? "Error") })
+        .alert("Result Copied", isPresented: $resultCopied, actions: {}, message: { Text("Result copied to clipboard.")})
     }
 
     func calculate() {
