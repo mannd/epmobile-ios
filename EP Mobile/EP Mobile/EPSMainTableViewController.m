@@ -32,7 +32,7 @@
 
 // NB: These defines are all hard-coded, and any changes, additions, or deletions
 // to the main table view controller entries will require changing these values.
-// Also remember row 2 is invisible (the banned drug calculators).
+// Also remember row 3 is invisible (the banned drug calculators).
 
 // Calculators section
 #define CALCULATOR_SECTION 0

@@ -15,6 +15,11 @@ final class BmiViewController: NSObject {
     static func show(vc: UIViewController) {
         let bmiCalculatorView = BmiCalculatorView()
         let hostingVC = UIHostingController(rootView: bmiCalculatorView)
+
+        // TODO: need to get the custom fields for the button creator
+        //let key = BmiModel.getKey()
+
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }
+

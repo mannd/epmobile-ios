@@ -29,9 +29,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    [btn addTarget:self action:@selector(showInformationView) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *infoImage = [UIImage systemImageNamed:@"info.circle"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:infoImage
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(showInformationView)];
+    infoButton.tintColor = [UIColor labelColor];
+    infoButton.accessibilityLabel = @"Information";
+    self.navigationItem.rightBarButtonItem = infoButton;
 }
 
 - (void)didReceiveMemoryWarning

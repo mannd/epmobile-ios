@@ -20,6 +20,7 @@ final class InformationViewPresenter: NSObject {
     ) {
         let informationView = InformationView(instructions: instructions, key: key, references: references, name: name)
         let hostingVC = UIHostingController(rootView: informationView)
+        hostingVC.title = name + " Information"
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
     
@@ -38,6 +39,7 @@ final class InformationViewPresenter: NSObject {
 
     static func show(vc: UIViewController, informationView: InformationView) {
         let hostingVC = UIHostingController(rootView: informationView)
+        hostingVC.title = informationView.name + " Information"
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }

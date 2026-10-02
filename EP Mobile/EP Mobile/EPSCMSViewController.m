@@ -57,9 +57,14 @@
     [super viewDidLoad];
     self.viewTitle = @"CMS ICD Criteria";
     [self initView];
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *infoImage = [UIImage systemImageNamed:@"info.circle"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:infoImage
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(showNotes)];
+    infoButton.tintColor = [UIColor labelColor];
+    infoButton.accessibilityLabel = @"Information";
+    self.navigationItem.rightBarButtonItem = infoButton;
 }
 
 - (void)didReceiveMemoryWarning

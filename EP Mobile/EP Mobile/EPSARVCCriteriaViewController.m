@@ -56,9 +56,14 @@
         cellHeight = ARVC_2010_CELL_HEIGHT;
     }
 
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    [btn addTarget:self action:@selector(showNotes) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    UIImage *infoImage = [UIImage systemImageNamed:@"info.circle"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:infoImage
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(showNotes)];
+    infoButton.tintColor = [UIColor labelColor];
+    infoButton.accessibilityLabel = @"Information";
+    self.navigationItem.rightBarButtonItem = infoButton;
 }
 
 - (void)initCriteria {
