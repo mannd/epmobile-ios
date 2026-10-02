@@ -17,26 +17,50 @@ final class RiskScoreViewController: NSObject {
         let hostingVC = UIHostingController(rootView: riskScoreView)
         hostingVC.title = riskScore.getName()
 
+        makeInformationView(vc: hostingVC, instructions: riskScore.getInstructions(), key: riskScore.getKey(), references: riskScore.getReferences() as! [Reference], name: riskScore.getName())
+
+//        let informationAction = UIAction(
+//            title: "",
+//            image: UIImage(systemName: "info.circle")
+//        ) { [weak hostingVC] _ in
+//            guard let hostingVC else { return }
+//
+//            InformationViewPresenter.show(
+//                vc: hostingVC,
+//                instructions: riskScore.getInstructions(),
+//                key: riskScore.getKey(),
+//                references: riskScore.getReferences() as! [Reference],
+//                name: riskScore.getName()
+//            )
+//        }
+//        let informationButton = UIBarButtonItem(
+//            primaryAction: informationAction
+//        )
+//        informationButton.accessibilityLabel = "Information"
+//        hostingVC.navigationItem.rightBarButtonItem = informationButton
+
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
+    }
+
+    static func makeInformationView(vc: UIViewController, instructions: String?, key: String?, references: [Reference], name: String) {
         let informationAction = UIAction(
             title: "",
             image: UIImage(systemName: "info.circle")
-        ) { [weak hostingVC] _ in
-            guard let hostingVC else { return }
+        ) { [weak vc] _ in
+            guard let vc else { return }
 
             InformationViewPresenter.show(
-                vc: hostingVC,
-                instructions: riskScore.getInstructions(),
-                key: riskScore.getKey(),
-                references: riskScore.getReferences() as! [Reference],
-                name: riskScore.getName()
+                vc: vc,
+                instructions: instructions,
+                key: key,
+                references: references,
+                name: name
             )
         }
         let informationButton = UIBarButtonItem(
             primaryAction: informationAction
         )
         informationButton.accessibilityLabel = "Information"
-        hostingVC.navigationItem.rightBarButtonItem = informationButton
-
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationItem.rightBarButtonItem = informationButton
     }
 }
