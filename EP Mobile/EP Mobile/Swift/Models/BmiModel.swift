@@ -13,6 +13,9 @@ enum BmiError: Error {
 }
 
 struct BmiModel: InformationProvider {
+    
+    // TODO: add name to InformationProvider protoco
+    static let name: String = "BMI Calculator"
 
     enum Classification {
         case underweightSevere,

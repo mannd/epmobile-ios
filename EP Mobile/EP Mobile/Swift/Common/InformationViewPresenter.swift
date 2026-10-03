@@ -48,7 +48,7 @@ final class InformationViewPresenter: NSObject {
 
         let informationAction = UIAction(
             title: "",
-            image: UIImage(systemName: "info.circle")
+            image: UIImage(systemName: "info.circle")		
         ) { [weak vc] _ in
             guard let vc else { return }
 

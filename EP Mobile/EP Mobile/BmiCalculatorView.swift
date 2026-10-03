@@ -42,7 +42,6 @@ struct BmiCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationStack {
             VStack {
                 // Using Form here gives a warning message about ambiguous constraints.
                 // This is avoided by using List, but this seems to be an Apple bug
@@ -98,20 +97,19 @@ struct BmiCalculatorView: View {
             .onChange(of: Observe(weight, height)) {
                 clearResult()
             }
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(instructions: BmiModel.getInstructions(), key: BmiModel.getKey(), references: BmiModel.getReferences(), name: calculatorName)
-            }
-        }
+//            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+//            .toolbar {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Button {
+//                        showInfo = true
+//                    } label: {
+//                        Image(systemName: "info.circle")
+//                    }
+//                }
+//            }
+//            .navigationDestination(isPresented: $showInfo) {
+//                InformationView(instructions: BmiModel.getInstructions(), key: BmiModel.getKey(), references: BmiModel.getReferences(), name: calculatorName)
+//            }
     }
 
 

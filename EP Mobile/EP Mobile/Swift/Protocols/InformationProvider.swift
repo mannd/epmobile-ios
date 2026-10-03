@@ -9,6 +9,7 @@
 import Foundation
 
 protocol InformationProvider {
+
     static func getReferences() -> [Reference]
     static func getInstructions() -> String?
     static func getKey() -> String?
