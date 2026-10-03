@@ -77,16 +77,15 @@ struct EntrainmentCalculatorView: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: tcl, perform: { _ in clearResult() })
-            .onChange(of: ppi, perform: { _ in clearResult() })
-            .onChange(of: concealedFusion, perform: { _ in
+            .onChange(of: Observe(tcl, ppi, sQrs, egQrs)) {
+                clearResult()
+            }
+            .onChange(of: concealedFusion) {
                 textFieldIsFocused = false
                 clearResult()
                 sQrs = 0
                 egQrs = 0
-            })
-            .onChange(of: sQrs, perform: { _ in clearResult() })
-            .onChange(of: egQrs, perform: { _ in clearResult() })
+            }
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

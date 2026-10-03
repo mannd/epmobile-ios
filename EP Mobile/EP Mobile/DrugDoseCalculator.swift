@@ -143,12 +143,18 @@ struct DrugDoseCalculator: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: sex, perform: { _ in  clearResult() })
-            .onChange(of: age, perform: { _ in  clearResult() })
-            .onChange(of: race, perform: { _ in clearResult() })
-            .onChange(of: weight, perform: { _ in  clearResult() })
-            .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
-            .onChange(of: massUnit, perform: { _ in  clearResult() })
+//            .onChange(of: sex) {
+//                clearResult()
+//            }
+            .onChange(of: Observe(sex, age, race, weight, concentrationUnit, massUnit)) {
+                clearResult()
+            }
+//            .onChange(of: sex, perform: { _ in  clearResult() })
+//            .onChange(of: age, perform: { _ in  clearResult() })
+//            .onChange(of: race, perform: { _ in clearResult() })
+//            .onChange(of: weight, perform: { _ in  clearResult() })
+//            .onChange(of: concentrationUnit, perform: { _ in  clearResult() })
+//            .onChange(of: massUnit, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(drugName.description), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

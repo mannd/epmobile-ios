@@ -51,7 +51,7 @@ struct IntervalRateCalculator: View {
                             }
                         }
                         .pickerStyle(.segmented)
-                        .onChange(of: conversionType) { _ in
+                        .onChange(of: conversionType) {
                             clearResult()
                         }
                     }
@@ -61,7 +61,7 @@ struct IntervalRateCalculator: View {
                                 .focused($textFieldIsFocused)
 
                         }
-                        .onChange(of: value) { _ in
+                        .onChange(of: value) { 
                             clearResult()
                         }
                     }

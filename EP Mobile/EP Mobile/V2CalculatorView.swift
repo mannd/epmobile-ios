@@ -63,10 +63,13 @@ struct V2CalculatorView: View {
                 .multilineTextAlignment(.trailing)
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: rVT, perform: { _ in clearResult() })
-            .onChange(of: sVT, perform: { _ in clearResult() })
-            .onChange(of: rSR, perform: { _ in clearResult() })
-            .onChange(of: sSR, perform: { _ in clearResult() })
+            .onChange(of: Observe(rVT, sVT, rSR, sSR)) {
+                clearResult()
+            }
+//            .onChange(of: rVT, perform: { _ in clearResult() })
+//            .onChange(of: sVT, perform: { _ in clearResult() })
+//            .onChange(of: rSR, perform: { _ in clearResult() })
+//            .onChange(of: sSR, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

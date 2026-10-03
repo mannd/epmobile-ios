@@ -80,7 +80,9 @@ struct FrailtyView: View {
                 .pickerStyle(.automatic)
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: model, perform: { _ in clearResult() })
+            .onChange(of: model) {
+                clearResult()
+            }
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

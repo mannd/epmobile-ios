@@ -62,9 +62,18 @@ struct DateCalculator: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: numberOfDays, perform: { _ in clearResult() })
-            .onChange(of: startingDate, perform: { _ in clearResult() })
-            .onChange(of: subtractDays, perform: { _ in clearResult() })
+            .onChange(of: Observe(numberOfDays, startingDate, subtractDays)) {
+                clearResult()
+            }
+//            .onChange(of: (numberOfDays) {
+//                clearResult()
+//            }
+//            .onChange(of: startingDate) {
+//                clearResult()
+//            }
+//            .onChange(of: subtractDays) {
+//                clearResult()
+//            }
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

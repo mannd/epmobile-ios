@@ -23,7 +23,7 @@ final class InformationViewPresenter: NSObject {
         hostingVC.title = name + " Information"
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
-    
+
     @objc
     static func show(vc: UIViewController,
                      instructions: String?,
@@ -42,4 +42,29 @@ final class InformationViewPresenter: NSObject {
         hostingVC.title = informationView.name + " Information"
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
+
+    /// Add the info button to a hosting view controller.
+    static func addInfoButton(to vc: UIViewController, instructions: String?, key: String?, references: [Reference], name: String ) {
+
+        let informationAction = UIAction(
+            title: "",
+            image: UIImage(systemName: "info.circle")
+        ) { [weak vc] _ in
+            guard let vc else { return }
+
+            InformationViewPresenter.show(
+                vc: vc,
+                instructions: instructions,
+                key: key,
+                references: references,
+                name: name
+            )
+        }
+        let informationButton = UIBarButtonItem(
+            primaryAction: informationAction
+        )
+        informationButton.accessibilityLabel = "Information"
+        vc.navigationItem.rightBarButtonItem = informationButton
+    }
 }
+

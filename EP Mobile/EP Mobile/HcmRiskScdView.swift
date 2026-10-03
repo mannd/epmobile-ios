@@ -94,13 +94,16 @@ struct HcmRiskScdView: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: age, perform: { _ in clearResult() })
-            .onChange(of: thickness, perform: { _ in clearResult() })
-            .onChange(of: laDiameter, perform: { _ in clearResult() })
-            .onChange(of: gradient, perform: { _ in clearResult() })
-            .onChange(of: familyHxScd, perform: { _ in clearResult() })
-            .onChange(of: hxNsvt, perform: { _ in clearResult() })
-            .onChange(of: hxSyncope, perform: { _ in clearResult() })
+            .onChange(of: Observe(age, thickness, laDiameter, gradient, familyHxScd, hxNsvt, hxSyncope)) {
+                clearResult()
+            }
+//            .onChange(of: age, perform: { _ in clearResult() })
+//            .onChange(of: thickness, perform: { _ in clearResult() })
+//            .onChange(of: laDiameter, perform: { _ in clearResult() })
+//            .onChange(of: gradient, perform: { _ in clearResult() })
+//            .onChange(of: familyHxScd, perform: { _ in clearResult() })
+//            .onChange(of: hxNsvt, perform: { _ in clearResult() })
+//            .onChange(of: hxSyncope, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

@@ -109,19 +109,22 @@ struct HcmScd2022View: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: age, perform: { _ in clearResult() })
-            .onChange(of: thickness, perform: { _ in clearResult() })
-            .onChange(of: laDiameter, perform: { _ in clearResult() })
-            .onChange(of: gradient, perform: { _ in clearResult() })
-            .onChange(of: familyHxScd, perform: { _ in clearResult() })
-            .onChange(of: hxNsvt, perform: { _ in clearResult() })
-            .onChange(of: hxSyncope, perform: { _ in clearResult() })
-            .onChange(of: apicalAneurysm, perform: { _ in clearResult() })
-            .onChange(of: lowLVEF, perform: { _ in clearResult() })
-            .onChange(of: extensiveLGE, perform: { _ in clearResult() })
-            .onChange(of: abnormalBP, perform: { _ in clearResult() })
-            .onChange(of: sarcomericMutation, perform: { _ in clearResult() })
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
+            .onChange(of: Observe(age, thickness, laDiameter, gradient, familyHxScd, hxNsvt, hxSyncope, apicalAneurysm, lowLVEF, extensiveLGE, abnormalBP, sarcomericMutation)) {
+                clearResult()
+            }
+//            .onChange(of: age, perform: { _ in clearResult() })
+//            .onChange(of: thickness, perform: { _ in clearResult() })
+//            .onChange(of: laDiameter, perform: { _ in clearResult() })
+//            .onChange(of: gradient, perform: { _ in clearResult() })
+//            .onChange(of: familyHxScd, perform: { _ in clearResult() })
+//            .onChange(of: hxNsvt, perform: { _ in clearResult() })
+//            .onChange(of: hxSyncope, perform: { _ in clearResult() })
+//            .onChange(of: apicalAneurysm, perform: { _ in clearResult() })
+//            .onChange(of: lowLVEF, perform: { _ in clearResult() })
+//            .onChange(of: extensiveLGE, perform: { _ in clearResult() })
+//            .onChange(of: abnormalBP, perform: { _ in clearResult() })
+//            .onChange(of: sarcomericMutation, perform: { _ in clearResult() })
+//            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

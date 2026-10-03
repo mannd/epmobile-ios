@@ -64,13 +64,16 @@ struct HcmScd2024View: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: familyHxScd, perform: { _ in clearResult() })
-            .onChange(of: massiveLVH, perform: { _ in clearResult() })
-            .onChange(of: hxSyncope, perform: { _ in clearResult() })
-            .onChange(of: apicalAneurysm, perform: { _ in clearResult() })
-            .onChange(of: lowLVEF, perform: { _ in clearResult() })
-            .onChange(of: hxNsvt, perform: { _ in clearResult() })
-            .onChange(of: extensiveLGE, perform: { _ in clearResult() })
+            .onChange(of: Observe(familyHxScd, massiveLVH, hxSyncope, apicalAneurysm, lowLVEF, hxNsvt, extensiveLGE)) {
+                clearResult()
+            }
+//            .onChange(of: familyHxScd, perform: { _ in clearResult() })
+//            .onChange(of: massiveLVH, perform: { _ in clearResult() })
+//            .onChange(of: hxSyncope, perform: { _ in clearResult() })
+//            .onChange(of: apicalAneurysm, perform: { _ in clearResult() })
+//            .onChange(of: lowLVEF, perform: { _ in clearResult() })
+//            .onChange(of: hxNsvt, perform: { _ in clearResult() })
+//            .onChange(of: extensiveLGE, perform: { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

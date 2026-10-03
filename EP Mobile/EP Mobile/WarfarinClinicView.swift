@@ -123,7 +123,7 @@ struct WarfarinClinicView: View {
                             }
                         }
                         .pickerStyle(.menu)
-                        .onChange(of: tabletSize) { _ in
+                        .onChange(of: tabletSize) {
                             clearResult()
                         }
                     }
@@ -131,7 +131,7 @@ struct WarfarinClinicView: View {
                         TextField("Weekly Dose (mg)", value: $weeklyDose, formatter: Self.numberFormatter)
                             .focused($textFieldIsFocused)
                             .keyboardType(.numbersAndPunctuation)
-                            .onChange(of: weeklyDose) { _ in
+                            .onChange(of: weeklyDose) {
                                 clearResult()
                             }
                     }
@@ -139,7 +139,7 @@ struct WarfarinClinicView: View {
                         TextField("Current INR", value: $inr, formatter: Self.numberFormatter)
                             .focused($textFieldIsFocused)
                             .keyboardType(.numbersAndPunctuation)
-                            .onChange(of: inr) { _ in
+                            .onChange(of: inr) {
                                 clearResult()
                             }
                     }
@@ -150,7 +150,7 @@ struct WarfarinClinicView: View {
                             }
                         }
                         .pickerStyle(.segmented)
-                        .onChange(of: inrTarget) { _ in
+                        .onChange(of: inrTarget) {
                             clearResult()
                         }
                     }

@@ -95,10 +95,13 @@ struct QTcCalculatorView: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: intervalRate, perform: { _ in  clearResult() })
-            .onChange(of: qt, perform: { _ in  clearResult() })
-            .onChange(of: intervalRateType, perform: { _ in  clearResult() })
-            .onChange(of: formula, perform: { _ in  clearResult() })
+            .onChange(of: Observe(intervalRate, qt, intervalRateType, formula)) {
+                clearResult()
+            }
+//            .onChange(of: intervalRate, perform: { _ in  clearResult() })
+//            .onChange(of: qt, perform: { _ in  clearResult() })
+//            .onChange(of: intervalRateType, perform: { _ in  clearResult() })
+//            .onChange(of: formula, perform: { _ in  clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

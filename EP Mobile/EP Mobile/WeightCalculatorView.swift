@@ -123,11 +123,14 @@ struct WeightCalculatorView: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: sex, perform: { _ in  clearResult() })
-            .onChange(of: weight, perform: { _ in  clearResult() })
-            .onChange(of: height, perform: { _ in  clearResult() })
-            .onChange(of: massUnit, perform: { _ in  clearResult() })
-            .onChange(of: heightUnit, perform:  { _ in clearResult() })
+            .onChange(of: Observe(sex, weight, height, massUnit, heightUnit)) {
+                clearResult()
+            }
+//            .onChange(of: sex, perform: { _ in  clearResult() })
+//            .onChange(of: weight, perform: { _ in  clearResult() })
+//            .onChange(of: height, perform: { _ in  clearResult() })
+//            .onChange(of: massUnit, perform: { _ in  clearResult() })
+//            .onChange(of: heightUnit, perform:  { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

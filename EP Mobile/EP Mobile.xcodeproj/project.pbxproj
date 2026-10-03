@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -561,6 +561,10 @@
 		8EFBFBDB1AAE0672004374C3 /* rvh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rvh.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8E20275E3071507B008EA77B /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		8EC19C24159FE0FA00975E2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -703,6 +707,7 @@
 		8E18B36D281503510043FD00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8E20275E3071507B008EA77B /* Helpers */,
 				8E59E967281A4060003C485F /* Common */,
 				8E23949228244CE400B6E8B7 /* Extensions */,
 				8E962FDF2EA86AA100B25476 /* Main */,
@@ -1153,6 +1158,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				8E20275E3071507B008EA77B /* Helpers */,
+			);
 			name = "EP Mobile";
 			packageProductDependencies = (
 				8E05062C2820879D0059DACB /* MiniQTc */,
@@ -1190,7 +1198,7 @@
 				CLASSPREFIX = EPS;
 				LastSwiftUpdateCheck = 0720;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2710;
 				ORGANIZATIONNAME = "EP Studios";
 				TargetAttributes = {
 					8EC19C41159FE0FA00975E2B = {
@@ -1629,7 +1637,7 @@
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "EP Mobile";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1659,7 +1667,7 @@
 				INFOPLIST_FILE = "EP Mobile/EP Mobile-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "EP Mobile";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1688,7 +1696,7 @@
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1721,7 +1729,7 @@
 				GCC_PREFIX_HEADER = "EP Mobile/EP Mobile-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EP MobileTests/EP MobileTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

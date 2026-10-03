@@ -95,8 +95,9 @@ struct BmiCalculatorView: View {
                 }
                 CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: weight, perform: { _ in  clearResult() })
-            .onChange(of: height, perform: { _ in  clearResult() })
+            .onChange(of: Observe(weight, height)) {
+                clearResult()
+            }
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
