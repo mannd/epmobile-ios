@@ -164,7 +164,7 @@
                             <outlet property="delegate" destination="g7a-XK-NAh" id="FuD-Ce-3pa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT1" id="vTW-3w-0sQ"/>
+                    <tabBarItem key="tabBarItem" title="LQT1" image="1.square" catalog="system" id="vTW-3w-0sQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Fl-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -327,7 +327,7 @@
                             <outlet property="delegate" destination="8yg-ey-fv3" id="o30-O4-Zhx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT2" id="G4A-6U-PrN"/>
+                    <tabBarItem key="tabBarItem" title="LQT2" image="2.square" catalog="system" id="G4A-6U-PrN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9v-xe-xh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,7 +372,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-Un-Dim">
-                                            <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="16" y="15" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -384,7 +384,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeS-7C-wig">
-                                            <rect key="frame" x="16" y="44.5" width="343" height="20.5"/>
+                                            <rect key="frame" x="16" y="48.5" width="343" height="12.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
@@ -394,8 +394,8 @@
                                         <constraint firstItem="aeS-7C-wig" firstAttribute="trailing" secondItem="QUj-Ra-LGT" secondAttribute="trailingMargin" id="CHQ-wv-7jw"/>
                                         <constraint firstItem="B8L-fb-AJJ" firstAttribute="trailing" secondItem="QUj-Ra-LGT" secondAttribute="trailingMargin" id="NNF-7k-Jx9"/>
                                         <constraint firstItem="B8L-fb-AJJ" firstAttribute="top" secondItem="QUj-Ra-LGT" secondAttribute="topMargin" id="d91-O2-9dC"/>
-                                        <constraint firstItem="1iy-Un-Dim" firstAttribute="height" secondItem="B8L-fb-AJJ" secondAttribute="height" id="fYH-7A-eqH"/>
                                         <constraint firstItem="1iy-Un-Dim" firstAttribute="top" secondItem="QUj-Ra-LGT" secondAttribute="topMargin" id="dU3-jB-hJN"/>
+                                        <constraint firstItem="1iy-Un-Dim" firstAttribute="height" secondItem="B8L-fb-AJJ" secondAttribute="height" id="fYH-7A-eqH"/>
                                         <constraint firstItem="aeS-7C-wig" firstAttribute="top" secondItem="1iy-Un-Dim" secondAttribute="bottom" constant="12.5" id="ibi-Yt-kIu"/>
                                         <constraint firstItem="aeS-7C-wig" firstAttribute="leading" secondItem="QUj-Ra-LGT" secondAttribute="leadingMargin" id="lSa-oO-hKd"/>
                                         <constraint firstItem="1iy-Un-Dim" firstAttribute="leading" secondItem="QUj-Ra-LGT" secondAttribute="leadingMargin" id="rrf-92-LND"/>
@@ -414,7 +414,7 @@
                             <outlet property="delegate" destination="KE9-EM-qZq" id="OcA-Ev-A77"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="All" id="nyf-vO-IQp"/>
+                    <tabBarItem key="tabBarItem" title="All" image="a.square" catalog="system" id="nyf-vO-IQp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bD-q2-iaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -577,7 +577,7 @@
                             <outlet property="delegate" destination="dbO-Dt-ozE" id="z2P-FG-9rp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT4" id="dkJ-ZZ-QZX"/>
+                    <tabBarItem key="tabBarItem" title="LQT4" image="4.square" catalog="system" id="dkJ-ZZ-QZX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umm-np-Lbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -740,7 +740,7 @@
                             <outlet property="delegate" destination="Oqu-Qb-RBM" id="Tt9-cv-u8h"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="LQT3" id="8bV-qI-Q8a"/>
+                    <tabBarItem key="tabBarItem" title="LQT3" image="3.square" catalog="system" id="8bV-qI-Q8a"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pko-hl-CQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -748,6 +748,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1.square" catalog="system" width="128" height="119"/>
+        <image name="2.square" catalog="system" width="128" height="119"/>
+        <image name="3.square" catalog="system" width="128" height="119"/>
+        <image name="4.square" catalog="system" width="128" height="119"/>
+        <image name="a.square" catalog="system" width="128" height="119"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
