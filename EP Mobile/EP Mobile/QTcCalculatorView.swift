@@ -39,7 +39,6 @@ struct QTcCalculatorView: View {
     @State private var result: String = ""
     @State private var maximumQTc: Double = 440.0
     @State private var flagResult = false
-    @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultQtcFormula) var defaultQtcFormula: String = Keys.bazett
@@ -59,66 +58,43 @@ struct QTcCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                Form {
-                    Section(header: Text(intervalRateLabel())) {
-                        HStack() {
-                            TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .focused($textFieldIsFocused)
-                            Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
-                                Text("Interval").tag(IntervalRateType.interval)
-                                Text("Heart rate").tag(IntervalRateType.rate)
-                            }
-                            .pickerStyle(.segmented)
-                        }
-                    }
-                    Section(header: Text("QT interval (msec)")) {
-                        TextField("QT interval (msec)", value: $qt, formatter: Self.numberFormatter)
+        VStack {
+            Form {
+                Section(header: Text(intervalRateLabel())) {
+                    HStack() {
+                        TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
                             .keyboardType(.numbersAndPunctuation)
                             .focused($textFieldIsFocused)
-                    }
-                    Section(header: Text("QTc Formula")) {
-                        Picker(selection: $formula, label: Text(formulaName())) {
-                            Text("Hodges").tag(Formula.qtcHdg)
-                            Text("Framingham").tag(Formula.qtcFrm)
-                            Text("Fridericia").tag(Formula.qtcFrd)
-                            Text("Bazett").tag(Formula.qtcBzt)
+                        Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
+                            Text("Interval").tag(IntervalRateType.interval)
+                            Text("Heart rate").tag(IntervalRateType.rate)
                         }
-                        .pickerStyle(.menu)
-                    }
-                    Section(header: Text("Result")) {
-                        Text(result)
-                            .foregroundColor(flagResult ? .red : .primary)
+                        .pickerStyle(.segmented)
                     }
                 }
-                CalculateButtonsView(calculate: calculate, clear: clear)
-            }
-            .onChange(of: Observe(intervalRate, qt, intervalRateType, formula)) {
-                clearResult()
-            }
-//            .onChange(of: intervalRate, perform: { _ in  clearResult() })
-//            .onChange(of: qt, perform: { _ in  clearResult() })
-//            .onChange(of: intervalRateType, perform: { _ in  clearResult() })
-//            .onChange(of: formula, perform: { _ in  clearResult() })
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
+                Section(header: Text("QT interval (msec)")) {
+                    TextField("QT interval (msec)", value: $qt, formatter: Self.numberFormatter)
+                        .keyboardType(.numbersAndPunctuation)
+                        .focused($textFieldIsFocused)
+                }
+                Section(header: Text("QTc Formula")) {
+                    Picker(selection: $formula, label: Text(formulaName())) {
+                        Text("Hodges").tag(Formula.qtcHdg)
+                        Text("Framingham").tag(Formula.qtcFrm)
+                        Text("Fridericia").tag(Formula.qtcFrd)
+                        Text("Bazett").tag(Formula.qtcBzt)
                     }
+                    .pickerStyle(.menu)
+                }
+                Section(header: Text("Result")) {
+                    Text(result)
+                        .foregroundColor(flagResult ? .red : .primary)
                 }
             }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
-            }
-
-//                .sheet(isPresented: $showInfo) {
-//                InformationView(references: QTcCalculator.getReferences(), name: calculatorName)
-//            }
+            CalculateButtonsView(calculate: calculate, clear: clear)
+        }
+        .onChange(of: Observe(intervalRate, qt, intervalRateType, formula)) {
+            clearResult()
         }
         .onAppear() {
             if defaultQtcFormula == Keys.bazett {
@@ -145,7 +121,7 @@ struct QTcCalculatorView: View {
         textFieldIsFocused = false
         let qtMeasurement = QtMeasurement(qt: Double(qt), intervalRate: Double(intervalRate), units: .msec, intervalRateType: intervalRateType )
         let calculatorViewModel = QTcCalculatorViewModel(qtMeasurement: qtMeasurement, formula: formula, maximumQTc: maximumQTc)
-       (result, flagResult) = calculatorViewModel.calculate()
+        (result, flagResult) = calculatorViewModel.calculate()
     }
 
     func clear() {
