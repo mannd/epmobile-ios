@@ -371,7 +371,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-Un-Dim">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-Un-Dim">
                                             <rect key="frame" x="16" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -383,7 +383,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeS-7C-wig">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeS-7C-wig">
                                             <rect key="frame" x="16" y="44.5" width="343" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -394,6 +394,7 @@
                                         <constraint firstItem="aeS-7C-wig" firstAttribute="trailing" secondItem="QUj-Ra-LGT" secondAttribute="trailingMargin" id="CHQ-wv-7jw"/>
                                         <constraint firstItem="B8L-fb-AJJ" firstAttribute="trailing" secondItem="QUj-Ra-LGT" secondAttribute="trailingMargin" id="NNF-7k-Jx9"/>
                                         <constraint firstItem="B8L-fb-AJJ" firstAttribute="top" secondItem="QUj-Ra-LGT" secondAttribute="topMargin" id="d91-O2-9dC"/>
+                                        <constraint firstItem="1iy-Un-Dim" firstAttribute="height" secondItem="B8L-fb-AJJ" secondAttribute="height" id="fYH-7A-eqH"/>
                                         <constraint firstItem="1iy-Un-Dim" firstAttribute="top" secondItem="QUj-Ra-LGT" secondAttribute="topMargin" id="dU3-jB-hJN"/>
                                         <constraint firstItem="aeS-7C-wig" firstAttribute="top" secondItem="1iy-Un-Dim" secondAttribute="bottom" constant="12.5" id="ibi-Yt-kIu"/>
                                         <constraint firstItem="aeS-7C-wig" firstAttribute="leading" secondItem="QUj-Ra-LGT" secondAttribute="leadingMargin" id="lSa-oO-hKd"/>
