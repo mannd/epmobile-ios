@@ -15,7 +15,6 @@ struct DateCalculator: View {
     @State private var numberOfDays = Self.defaultNumberOfDays
     @State private var subtractDays = Self.defaultSubtractDays
     @State private var result = ""
-    @State private var showingInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     private static let defaultNumberOfDays = 0
@@ -33,7 +32,6 @@ struct DateCalculator: View {
     }()
 
     var body: some View {
-        NavigationStack {
             VStack {
                 // Using Form here gives a warning message about ambiguous constraints.
                 // This is avoided by using List, but this seems to be an Apple bug
@@ -65,29 +63,6 @@ struct DateCalculator: View {
             .onChange(of: Observe(numberOfDays, startingDate, subtractDays)) {
                 clearResult()
             }
-//            .onChange(of: (numberOfDays) {
-//                clearResult()
-//            }
-//            .onChange(of: startingDate) {
-//                clearResult()
-//            }
-//            .onChange(of: subtractDays) {
-//                clearResult()
-//            }
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showingInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showingInfo) {
-                DateInformationView()
-            }
-        }
     }
 
     func calculate() {
