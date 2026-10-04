@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vtm-vW-Qf5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vtm-vW-Qf5">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,23 +12,19 @@
         <scene sceneID="Zn0-Sn-fLc">
             <objects>
                 <viewController id="Zqc-F8-Iqw" customClass="EPSBrugadaMorphologyViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fHf-CJ-XdG"/>
-                        <viewControllerLayoutGuide type="bottom" id="UHz-uI-gzD"/>
-                    </layoutGuides>
                     <view key="view" tag="1" contentMode="scaleToFill" id="Ou9-8v-FOl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-6Q-uBb">
-                                <rect key="frame" x="0.0" y="8" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="511"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrugadaMorphologyCell" id="T3p-rZ-2Te">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3p-rZ-2Te" id="kGy-Y6-frl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -39,7 +35,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1hg-cq-eqm">
-                                <rect key="frame" x="16" y="565" width="343" height="45"/>
+                                <rect key="frame" x="16" y="539" width="343" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud7-lk-GiL">
                                         <rect key="frame" x="0.0" y="0.0" width="156.5" height="45"/>
@@ -63,14 +59,15 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="XXd-tV-dUH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1hg-cq-eqm" firstAttribute="top" secondItem="KUl-6Q-uBb" secondAttribute="bottom" constant="8" symbolic="YES" id="CIU-Ej-qta"/>
-                            <constraint firstItem="UHz-uI-gzD" firstAttribute="top" secondItem="1hg-cq-eqm" secondAttribute="bottom" constant="8" symbolic="YES" id="HRQ-AN-D4u"/>
-                            <constraint firstAttribute="trailing" secondItem="KUl-6Q-uBb" secondAttribute="trailing" id="Leu-90-m7i"/>
+                            <constraint firstItem="XXd-tV-dUH" firstAttribute="bottom" secondItem="1hg-cq-eqm" secondAttribute="bottom" constant="8" symbolic="YES" id="HRQ-AN-D4u"/>
+                            <constraint firstItem="XXd-tV-dUH" firstAttribute="trailing" secondItem="KUl-6Q-uBb" secondAttribute="trailing" id="Leu-90-m7i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1hg-cq-eqm" secondAttribute="trailing" id="iFw-5J-2ZC"/>
-                            <constraint firstItem="KUl-6Q-uBb" firstAttribute="top" secondItem="fHf-CJ-XdG" secondAttribute="bottom" constant="8" symbolic="YES" id="klV-TT-LN3"/>
-                            <constraint firstItem="KUl-6Q-uBb" firstAttribute="leading" secondItem="Ou9-8v-FOl" secondAttribute="leading" id="lk0-i7-X7P"/>
+                            <constraint firstItem="KUl-6Q-uBb" firstAttribute="top" secondItem="XXd-tV-dUH" secondAttribute="top" constant="8" symbolic="YES" id="klV-TT-LN3"/>
+                            <constraint firstItem="KUl-6Q-uBb" firstAttribute="leading" secondItem="XXd-tV-dUH" secondAttribute="leading" id="lk0-i7-X7P"/>
                             <constraint firstItem="1hg-cq-eqm" firstAttribute="leading" secondItem="Ou9-8v-FOl" secondAttribute="leadingMargin" id="wa1-2a-alH"/>
                         </constraints>
                     </view>
@@ -109,23 +106,19 @@
         <scene sceneID="EDn-4E-Mze">
             <objects>
                 <viewController id="E0R-BL-cOl" customClass="EPSBrugadaMorphologyViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sIH-66-4mM"/>
-                        <viewControllerLayoutGuide type="bottom" id="E8r-EB-fSM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8ie-D7-lM2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9ks-8m-of0">
-                                <rect key="frame" x="0.0" y="8" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="511"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrugadaMorphologyCell" id="Kiu-aP-Bxy">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kiu-aP-Bxy" id="v1B-vo-bWf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -136,7 +129,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="drb-4O-f2i">
-                                <rect key="frame" x="16" y="565" width="343" height="45"/>
+                                <rect key="frame" x="16" y="539" width="343" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-wD-UZi">
                                         <rect key="frame" x="0.0" y="0.0" width="156.5" height="45"/>
@@ -160,15 +153,16 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y5o-fR-nqN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9ks-8m-of0" firstAttribute="leading" secondItem="8ie-D7-lM2" secondAttribute="leading" id="YNv-Ih-mQK"/>
+                            <constraint firstItem="9ks-8m-of0" firstAttribute="leading" secondItem="Y5o-fR-nqN" secondAttribute="leading" id="YNv-Ih-mQK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="drb-4O-f2i" secondAttribute="trailing" id="b5E-Nk-TJb"/>
                             <constraint firstItem="drb-4O-f2i" firstAttribute="top" secondItem="9ks-8m-of0" secondAttribute="bottom" constant="8" symbolic="YES" id="j6a-EC-KhR"/>
-                            <constraint firstAttribute="trailing" secondItem="9ks-8m-of0" secondAttribute="trailing" id="x2C-DD-4tG"/>
-                            <constraint firstItem="9ks-8m-of0" firstAttribute="top" secondItem="sIH-66-4mM" secondAttribute="bottom" constant="8" symbolic="YES" id="xJc-if-9EU"/>
+                            <constraint firstItem="Y5o-fR-nqN" firstAttribute="trailing" secondItem="9ks-8m-of0" secondAttribute="trailing" id="x2C-DD-4tG"/>
+                            <constraint firstItem="9ks-8m-of0" firstAttribute="top" secondItem="Y5o-fR-nqN" secondAttribute="top" constant="8" symbolic="YES" id="xJc-if-9EU"/>
                             <constraint firstItem="drb-4O-f2i" firstAttribute="leading" secondItem="8ie-D7-lM2" secondAttribute="leadingMargin" id="zGZ-Jk-CAf"/>
-                            <constraint firstItem="E8r-EB-fSM" firstAttribute="top" secondItem="drb-4O-f2i" secondAttribute="bottom" constant="8" symbolic="YES" id="zZj-ub-1bQ"/>
+                            <constraint firstItem="Y5o-fR-nqN" firstAttribute="bottom" secondItem="drb-4O-f2i" secondAttribute="bottom" constant="8" symbolic="YES" id="zZj-ub-1bQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="X1o-2D-GgI"/>

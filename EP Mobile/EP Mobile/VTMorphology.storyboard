@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ntH-d0-hOl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ntH-d0-hOl">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,26 +12,23 @@
         <scene sceneID="wD2-q2-jc9">
             <objects>
                 <viewController id="eSD-vw-Urv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YOO-nN-huq"/>
-                        <viewControllerLayoutGuide type="bottom" id="aCU-aB-bhQ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AGZ-Tn-qml">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rbbbmorphology" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-cs-lDR">
-                                <rect key="frame" x="20" y="144" width="335" height="379"/>
+                                <rect key="frame" x="0.0" y="121.5" width="375" height="424"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QFC-cs-lDR" secondAttribute="height" multiplier="160:181" id="x8K-Ly-hcX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7Qz-0K-Ixn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="QFC-cs-lDR" secondAttribute="centerX" id="NGp-QI-Ow2"/>
-                            <constraint firstItem="QFC-cs-lDR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AGZ-Tn-qml" secondAttribute="leading" constant="20" symbolic="YES" id="XTq-dQ-kwC"/>
-                            <constraint firstItem="QFC-cs-lDR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YOO-nN-huq" secondAttribute="bottom" constant="8" symbolic="YES" id="c6V-PI-5Rt"/>
+                            <constraint firstItem="7Qz-0K-Ixn" firstAttribute="centerX" secondItem="QFC-cs-lDR" secondAttribute="centerX" id="NGp-QI-Ow2"/>
+                            <constraint firstItem="QFC-cs-lDR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Qz-0K-Ixn" secondAttribute="leading" constant="20" symbolic="YES" id="XTq-dQ-kwC"/>
+                            <constraint firstItem="QFC-cs-lDR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Qz-0K-Ixn" secondAttribute="top" constant="8" symbolic="YES" id="c6V-PI-5Rt"/>
                             <constraint firstAttribute="centerY" secondItem="QFC-cs-lDR" secondAttribute="centerY" id="vxE-mi-hb1"/>
                         </constraints>
                     </view>
@@ -44,27 +42,24 @@
         <scene sceneID="OFo-xx-IkS">
             <objects>
                 <viewController id="DJv-41-R7G" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DTl-Ud-HWT"/>
-                        <viewControllerLayoutGuide type="bottom" id="iFd-wc-3l4"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMw-Wp-VKo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lbbbmorphology" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-DH-ke2">
-                                <rect key="frame" x="20" y="150" width="335" height="367"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="411"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0bo-DH-ke2" secondAttribute="height" multiplier="320:351" id="KMH-cx-yCO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8T1-ib-01K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0bo-DH-ke2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qMw-Wp-VKo" secondAttribute="leading" constant="20" symbolic="YES" id="Dd0-we-csF"/>
+                            <constraint firstItem="0bo-DH-ke2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8T1-ib-01K" secondAttribute="leading" constant="20" symbolic="YES" id="Dd0-we-csF"/>
                             <constraint firstAttribute="centerY" secondItem="0bo-DH-ke2" secondAttribute="centerY" id="mFs-Kp-1YC"/>
-                            <constraint firstItem="0bo-DH-ke2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DTl-Ud-HWT" secondAttribute="bottom" constant="8" symbolic="YES" id="u0q-ej-oar"/>
-                            <constraint firstAttribute="centerX" secondItem="0bo-DH-ke2" secondAttribute="centerX" id="weg-FT-JJt"/>
+                            <constraint firstItem="0bo-DH-ke2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8T1-ib-01K" secondAttribute="top" constant="8" symbolic="YES" id="u0q-ej-oar"/>
+                            <constraint firstItem="8T1-ib-01K" firstAttribute="centerX" secondItem="0bo-DH-ke2" secondAttribute="centerX" id="weg-FT-JJt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="LBBB in V1" image="lbbbicon.png" id="OMv-HP-Hb1"/>
@@ -99,5 +94,8 @@
         <image name="lbbbmorphology" width="800" height="651"/>
         <image name="rbbbicon.png" width="25" height="24"/>
         <image name="rbbbmorphology" width="800" height="600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v7F-Ni-Oso">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v7F-Ni-Oso">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,16 +12,12 @@
         <scene sceneID="VqS-fD-HSj">
             <objects>
                 <viewController id="v7F-Ni-Oso" customClass="InformationViewController" customModule="EP_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="53H-Px-fsL"/>
-                        <viewControllerLayoutGuide type="bottom" id="KB4-Rc-uzv"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-YG-z72">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-OS-WIE">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="732"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rwpt" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-vh-A5V">
                                         <rect key="frame" x="40" y="8" width="334" height="243.5"/>
@@ -51,11 +47,12 @@ Measure the onset of the QRS in ECG lead II to the first change in polarity (nad
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6xM-rI-b9V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VCC-OS-WIE" firstAttribute="top" secondItem="53H-Px-fsL" secondAttribute="bottom" id="eiy-rk-yzf"/>
+                            <constraint firstItem="VCC-OS-WIE" firstAttribute="top" secondItem="6xM-rI-b9V" secondAttribute="top" id="eiy-rk-yzf"/>
                             <constraint firstItem="VCC-OS-WIE" firstAttribute="leading" secondItem="1e9-YG-z72" secondAttribute="leadingMargin" constant="-20" id="fM8-4O-Q21"/>
-                            <constraint firstItem="KB4-Rc-uzv" firstAttribute="top" secondItem="VCC-OS-WIE" secondAttribute="bottom" id="oJ3-Zh-Lw4"/>
+                            <constraint firstItem="6xM-rI-b9V" firstAttribute="bottom" secondItem="VCC-OS-WIE" secondAttribute="bottom" id="oJ3-Zh-Lw4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VCC-OS-WIE" secondAttribute="trailing" constant="-20" id="uV2-ai-Lqb"/>
                         </constraints>
                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
