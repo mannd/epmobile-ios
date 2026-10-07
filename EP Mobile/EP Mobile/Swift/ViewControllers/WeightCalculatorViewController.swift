@@ -10,12 +10,18 @@ import SwiftUI
 
 @objc
 final class WeightCalculatorCalculatorController: NSObject {
+    static let name = "Weight Calculator"
 
     @objc
     static func show(vc: UIViewController) {
         let weightCalculatorView = WeightCalculatorView()
         let hostingVC = UIHostingController(rootView: weightCalculatorView)
-        hostingVC.modalPresentationStyle = .fullScreen
-        vc.navigationController?.present(hostingVC, animated: true)
+        hostingVC.title = name
+
+        let informationView = InformationView(instructions: Weight.getInstructions(),key: Weight.getKey(), references: Weight.getReferences(), name: name, keyTitle: "Copy and Paste Weights")
+
+        InformationViewPresenter.addInfoButton(to: hostingVC, infoView:  informationView)
+
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }

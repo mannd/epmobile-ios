@@ -16,7 +16,6 @@ struct WeightCalculatorView: View {
     @State private var height: Double = 0.0
     @State private var massUnit: MassUnit = .kg
     @State private var heightUnit: HeightUnit = .cm
-    @State private var showInfo = false
     @State private var actualBodyWeightResult: String = ""
     @State private var idealBodyWeightResult: String = ""
     @State private var adjustedBodyWeightResult: String = ""
@@ -26,8 +25,6 @@ struct WeightCalculatorView: View {
 
     @AppStorage(Keys.defaultMassUnit) var defaultMassUnit: String = Keys.kg
     @AppStorage(Keys.defaultHeightUnit) var defaultHeightUnit: String = Keys.centimeters
-
-    @Environment(\.dismiss) private var dismiss
 
     var weightLabel: String { "Weight (\(massUnit.description))" }
     var heightLabel: String { "Height (\(heightUnit.description))"}
@@ -127,42 +124,6 @@ struct WeightCalculatorView: View {
             }
             .onChange(of: Observe(sex, weight, height, massUnit, heightUnit)) {
                 clearResult()
-            }
-//            .onChange(of: sex, perform: { _ in  clearResult() })
-//            .onChange(of: weight, perform: { _ in  clearResult() })
-//            .onChange(of: height, perform: { _ in  clearResult() })
-//            .onChange(of: massUnit, perform: { _ in  clearResult() })
-//            .onChange(of: heightUnit, perform:  { _ in clearResult() })
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                    }
-                    .accessibilityLabel("Close")
-                }
-
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Label("Information", systemImage: "info.circle")
-                    }
-                }
-            }
-//            .toolbar {
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    Button {
-//                        showInfo = true
-//                    } label: {
-//                        Image(systemName: "info.circle")
-//                    }
-//                }
-//            }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(instructions: Weight.getInstructions(),key: Weight.getKey(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights")
             }
         }
         .onAppear() {

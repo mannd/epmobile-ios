@@ -66,5 +66,23 @@ final class InformationViewPresenter: NSObject {
         informationButton.accessibilityLabel = "Information"
         vc.navigationItem.rightBarButtonItem = informationButton
     }
+
+
+    static func addInfoButton(to vc: UIViewController, infoView: InformationView ) {
+
+        let informationAction = UIAction(
+            title: "",
+            image: UIImage(systemName: "info.circle")
+        ) { [weak vc] _ in
+            guard let vc else { return }
+
+            InformationViewPresenter.show(vc: vc, informationView: infoView)
+        }
+        let informationButton = UIBarButtonItem(
+            primaryAction: informationAction
+        )
+        informationButton.accessibilityLabel = "Information"
+        vc.navigationItem.rightBarButtonItem = informationButton
+    }
 }
 
