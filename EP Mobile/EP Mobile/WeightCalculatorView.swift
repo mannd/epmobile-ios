@@ -27,6 +27,8 @@ struct WeightCalculatorView: View {
     @AppStorage(Keys.defaultMassUnit) var defaultMassUnit: String = Keys.kg
     @AppStorage(Keys.defaultHeightUnit) var defaultHeightUnit: String = Keys.centimeters
 
+    @Environment(\.dismiss) private var dismiss
+
     var weightLabel: String { "Weight (\(massUnit.description))" }
     var heightLabel: String { "Height (\(heightUnit.description))"}
 
@@ -133,14 +135,32 @@ struct WeightCalculatorView: View {
 //            .onChange(of: heightUnit, perform:  { _ in clearResult() })
             .navigationBarTitle(Text(calculatorName), displayMode: .inline)
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                    }
+                    .accessibilityLabel("Close")
+                }
+
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showInfo = true
                     } label: {
-                        Image(systemName: "info.circle")
+                        Label("Information", systemImage: "info.circle")
                     }
                 }
             }
+//            .toolbar {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Button {
+//                        showInfo = true
+//                    } label: {
+//                        Image(systemName: "info.circle")
+//                    }
+//                }
+//            }
             .navigationDestination(isPresented: $showInfo) {
                 InformationView(instructions: Weight.getInstructions(),key: Weight.getKey(), references: Weight.getReferences(), name: calculatorName, keyTitle: "Copy and Paste Weights")
             }

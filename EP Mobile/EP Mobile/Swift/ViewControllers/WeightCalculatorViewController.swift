@@ -15,6 +15,7 @@ final class WeightCalculatorCalculatorController: NSObject {
     static func show(vc: UIViewController) {
         let weightCalculatorView = WeightCalculatorView()
         let hostingVC = UIHostingController(rootView: weightCalculatorView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        hostingVC.modalPresentationStyle = .fullScreen
+        vc.navigationController?.present(hostingVC, animated: true)
     }
 }
