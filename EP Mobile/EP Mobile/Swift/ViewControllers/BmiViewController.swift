@@ -17,7 +17,9 @@ final class BmiViewController: NSObject {
         let hostingVC = UIHostingController(rootView: bmiCalculatorView)
         hostingVC.title = BmiModel.name
 
-        InformationViewPresenter.addInfoButton(to: hostingVC, instructions: BmiModel.getInstructions(), key: BmiModel.getKey(), references: BmiModel.getReferences(), name: BmiModel.name)
+        let informationView = InformationView(instructions: BmiModel.getInstructions(), key: BmiModel.getKey(), references: BmiModel.getReferences(), name: BmiModel.name)
+
+        InformationViewPresenter.addInfoButton(to: hostingVC, infoView: informationView)
 
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
