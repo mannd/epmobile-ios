@@ -21,6 +21,7 @@ final class BmiViewController: NSObject {
 
         InformationViewPresenter.addInfoButton(to: hostingVC, infoView: informationView)
 
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }
+

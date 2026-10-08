@@ -97,19 +97,6 @@ struct BmiCalculatorView: View {
             .onChange(of: Observe(weight, height)) {
                 clearResult()
             }
-//            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-//            .toolbar {
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    Button {
-//                        showInfo = true
-//                    } label: {
-//                        Image(systemName: "info.circle")
-//                    }
-//                }
-//            }
-//            .navigationDestination(isPresented: $showInfo) {
-//                InformationView(instructions: BmiModel.getInstructions(), key: BmiModel.getKey(), references: BmiModel.getReferences(), name: calculatorName)
-//            }
     }
 
 
