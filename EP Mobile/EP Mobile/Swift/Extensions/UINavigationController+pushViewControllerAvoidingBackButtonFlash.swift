@@ -14,6 +14,7 @@ extension UINavigationController {
     /// This flashing appears to be an iOS 27 bug.
     /// See Apple Feedback ID FB25108694 filed 8 Oct 2026.
     /// Remove the wrapper when/if an iOS update solves this problem.
+    @objc(pushViewControllerAvoidingBackButtonFlash:animated:)
     func pushViewControllerAvoidingBackButtonFlash(
         _ viewController: UIViewController,
         animated: Bool = true
