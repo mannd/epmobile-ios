@@ -23,7 +23,6 @@ struct DrugDoseCalculator: View {
     @State private var drugDose = ""
     @State private var renalFunction = ""
     @State private var showWarning = false
-    @State private var showInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultMassUnit) var defaultMassUnit: String = Keys.kg
@@ -75,7 +74,6 @@ struct DrugDoseCalculator: View {
     }()
 
     var body: some View {
-        NavigationStack {
             VStack {
                 // Using Form here gives a warning message about ambiguous constraints.
                 // This is avoided by using List, but this seems to be an Apple bug
@@ -146,20 +144,6 @@ struct DrugDoseCalculator: View {
             .onChange(of: Observe(sex, age, race, weight, concentrationUnit, massUnit)) {
                 clearResult()
             }
-            .navigationBarTitle(Text(drugName.description), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                getInformationView()
-            }
-        }
         .onAppear() {
             if defaultMassUnit == Keys.kg {
                 massUnit = .kg

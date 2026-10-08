@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+fileprivate let crClCalculatorName = "Creatinine Clearance"
+fileprivate let gfrCalculatorName = "GFR"
+fileprivate let drugCalculatorName = "Drug Calculators"
+
 @objc
 final class DrugCalculatorController: NSObject {
 
@@ -17,37 +21,33 @@ final class DrugCalculatorController: NSObject {
         let hostingVC = UIHostingController(rootView: drugDoseCalculator)
         hostingVC.title = drugName.description
 
-        InformationViewPresenter.addInfoButton(to: hostingVC, instructions: BmiModel.getInstructions(), key: BmiModel.getKey(), references: BmiModel.getReferences(), name: BmiModel.name)
+        let informationView = Self.getInformationView(drugName: drugName)
 
-
-
-
+        InformationViewPresenter.addInfoButton(to: hostingVC, infoView: informationView)
 
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 
+    private static func crClInformationView() -> InformationView {
+        return InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
+    }
 
-//
-//    private func crClInformationView() -> InformationView {
-//        return InformationView(references: Patient.getCrClReferences(), name: crClCalculatorName, optionalSectionTitle: "Notes", optionalSectionText: Patient.crClNotes)
-//    }
-//
-//    private func gfrInformationView() -> InformationView {
-//        return InformationView(instructions: Patient.getGfrInstructions(), references: Patient.getGfrReferences(), name: gfrCalculatorName)
-//    }
-//
-//    private func drugDoseInformationView() -> InformationView {
-//        return InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
-//    }
-//
-//    private func getInformationView() -> InformationView {
-//        switch drugName {
-//        case .crCl:
-//            return crClInformationView()
-//        case .gfr:
-//            return gfrInformationView()
-//        default:
-//            return drugDoseInformationView()
-//        }
-//    }
+    private static func gfrInformationView() -> InformationView {
+        return InformationView(instructions: Patient.getGfrInstructions(), references: Patient.getGfrReferences(), name: gfrCalculatorName)
+    }
+
+    private static func drugDoseInformationView() -> InformationView {
+        return InformationView(references: Drug.getReferences(), name: drugCalculatorName, optionalSectionTitle: Drug.getCustomSectionTitle(), optionalSectionText: Drug.getCustomSectionText())
+    }
+
+    private static func getInformationView(drugName: DrugName) -> InformationView {
+        switch drugName {
+        case .crCl:
+            return Self.crClInformationView()
+        case .gfr:
+            return Self.gfrInformationView()
+        default:
+            return Self.drugDoseInformationView()
+        }
+    }
 }
