@@ -11,15 +11,18 @@ import MiniQTc
 
 @objc
 final class QTcCalculatorController: NSObject {
+   static let name = "QTc Calculator"
 
     @objc
     static func show(vc: UIViewController) {
         let qtcCalculator = QTcCalculatorView()
         let hostingVC = UIHostingController(rootView: qtcCalculator)
-        hostingVC.title = "QTc Calculator"
+        hostingVC.title = name
 
-        InformationViewPresenter.addInfoButton(to: hostingVC, instructions: nil , key: nil, references: QTcCalculator.getReferences(), name: "QTc Calculator")
+        let informationView = InformationView(instructions: QTcCalculator.getInstructions(), key: QTcCalculator.getKey(), references: QTcCalculator.getReferences(), name: name)
 
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        InformationViewPresenter.addInfoButton(to: hostingVC, infoView: informationView)
+
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }

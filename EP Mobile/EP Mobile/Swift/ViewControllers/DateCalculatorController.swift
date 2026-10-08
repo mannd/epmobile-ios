@@ -20,7 +20,7 @@ final class DateCalculatorController: NSObject {
 
         addInfoButton(to: hostingVC)
 
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 
     static func addInfoButton(to vc: UIViewController) {

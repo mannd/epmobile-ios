@@ -15,6 +15,6 @@ final class HcmScd2024ViewController: NSObject {
     static func show(vc: UIViewController) {
         let hcmScd2020View = HcmScd2024View()
         let hostingVC = UIHostingController(rootView: hcmScd2020View)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }

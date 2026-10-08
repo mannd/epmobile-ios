@@ -15,6 +15,6 @@ final class FrailtyViewController: NSObject {
     static func show(vc: UIViewController) {
         let frailtyView = FrailtyView()
         let hostingVC = UIHostingController(rootView: frailtyView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }

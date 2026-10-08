@@ -15,6 +15,14 @@ final class QTcIvcdCalculatorController: NSObject {
     static func show(vc: UIViewController) {
         let qtcIvcdCalculatorView = QTcIvcdCalculatorView()
         let hostingVC = UIHostingController(rootView: qtcIvcdCalculatorView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+
+//        let informationView = InformationView(instructions: QTcIvcd.getInstructions(), references: QTcIvcd.getReferences(), name: calculatorName)
+
+//        InformationViewPresenter.addInfoButton(to: <#T##UIViewController#>, infoView: <#T##InformationView#>)
+
+
+
+
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }

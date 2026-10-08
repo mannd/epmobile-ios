@@ -15,6 +15,6 @@ final class EntrainmentCalculatorViewController: NSObject {
     static func show(vc: UIViewController) {
         let entrainmentCalculatorView = EntrainmentCalculatorView()
         let hostingVC = UIHostingController(rootView: entrainmentCalculatorView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }

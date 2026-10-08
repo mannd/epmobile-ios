@@ -63,6 +63,7 @@
                                                                   action:@selector(showNotes)];
     infoButton.tintColor = [UIColor labelColor];
     infoButton.accessibilityLabel = @"Information";
+
     self.navigationItem.rightBarButtonItem = infoButton;
 }
 

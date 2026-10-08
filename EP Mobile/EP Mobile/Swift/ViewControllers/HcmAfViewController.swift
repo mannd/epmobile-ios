@@ -15,6 +15,6 @@ final class HcmAfViewController: NSObject {
     static func show(vc: UIViewController) {
         let view = HcmAfView()
         let hostingVC = UIHostingController(rootView: view)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }

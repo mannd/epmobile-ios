@@ -15,6 +15,6 @@ final class HcmViewController: NSObject {
     static func show(vc: UIViewController) {
         let hcmView = HcmRiskScdView()
         let hostingVC = UIHostingController(rootView: hcmView)
-        vc.navigationController?.pushViewController(hostingVC, animated: true)
+        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
     }
 }
