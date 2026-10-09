@@ -24,6 +24,6 @@ final class RiskScoreViewController: NSObject {
             references: riskScore.getReferences() as! [Reference],
             name: riskScore.getName())
 
-        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }

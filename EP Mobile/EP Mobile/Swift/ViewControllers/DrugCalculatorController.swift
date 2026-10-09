@@ -25,7 +25,7 @@ final class DrugCalculatorController: NSObject {
 
         InformationViewPresenter.addInfoButton(to: hostingVC, infoView: informationView)
 
-        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 
     private static func crClInformationView() -> InformationView {

@@ -15,6 +15,6 @@ final class WarfarinClinicController: NSObject {
     static func show(vc: UIViewController) {
         let warfarinClinicView = WarfarinClinicView()
         let hostingVC = UIHostingController(rootView: warfarinClinicView)
-        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }

@@ -1043,7 +1043,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="l2n-Hh-e6a" kind="show" identifier="ARVC1994Segue" customClass="BackButtonWorkaroundSegue" customModule="EP_Mobile" customModuleProvider="target" id="PPu-tP-FLY"/>
+                                            <segue destination="l2n-Hh-e6a" kind="show" identifier="ARVC1994Segue" id="PPu-tP-FLY"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wc8-Vy-qN6" style="IBUITableViewCellStyleDefault" id="MV0-Ux-rmG">
@@ -1062,7 +1062,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="l2n-Hh-e6a" kind="show" identifier="ARVC2010Segue" customClass="BackButtonWorkaroundSegue" customModule="EP_Mobile" customModuleProvider="target" id="k3E-zN-ktT"/>
+                                            <segue destination="l2n-Hh-e6a" kind="show" identifier="ARVC2010Segue" id="k3E-zN-ktT"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BEJ-fq-uRR" style="IBUITableViewCellStyleDefault" id="O2q-zg-iLI">
@@ -1438,7 +1438,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gEu-YL-vJC" kind="show" customClass="BackButtonWorkaroundSegue" customModule="EP_Mobile" customModuleProvider="target" id="wEh-TA-93x"/>
+                                            <segue destination="gEu-YL-vJC" kind="show" id="wEh-TA-93x"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oXw-87-CX4" style="IBUITableViewCellStyleDefault" id="0pF-iL-QgJ">

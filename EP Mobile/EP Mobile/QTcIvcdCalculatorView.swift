@@ -9,21 +9,19 @@
 import SwiftUI
 import MiniQTc
 
-fileprivate let calculatorName = "QTc IVCD Calculator"
-
 struct QTcIvcdCalculatorView: View {
+    let onShowResults: (QTcIvcdResultList, Formula, Bool) -> Void
+
     @State private var intervalRate: Int = 0
     @State private var qt: Int = 0
     @State private var qrs: Int = 0
     @State private var formula: Formula = .qtcBzt
     @State private var intervalRateType: IntervalRateType = .interval
-    @State private var result = QTcIvcdResultList()
     @State private var isLbbb: Bool = false
     @State private var sex: EP_Mobile.Sex = .male
     @State private var errorMessage = ""
     @State private var showErrorMessage = false
-    @State private var showResults = false
-    @State private var showInfo = false
+    @State private var hasLoadedDefaults = false
     @FocusState private var textFieldIsFocused: Bool
 
     @AppStorage(Keys.defaultQtcFormula) var defaultQtcFormula: String = Keys.bazett
@@ -43,73 +41,58 @@ struct QTcIvcdCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                Form {
-                    Section(header: Text(intervalRateLabel())) {
-                        HStack() {
-                            TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .focused($textFieldIsFocused)
-                            Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
-                                Text("Interval").tag(IntervalRateType.interval)
-                                Text("Heart rate").tag(IntervalRateType.rate)
-                            }
-                            .pickerStyle(.segmented)
-                        }
-                    }
-                    Section(header: Text("QT interval (msec)")) {
-                        TextField("QT interval (msec)", value: $qt, formatter: Self.numberFormatter)
+        VStack {
+            Form {
+                Section(header: Text(intervalRateLabel())) {
+                    HStack() {
+                        TextField(intervalRateLabel(), value: $intervalRate, formatter: Self.numberFormatter)
                             .keyboardType(.numbersAndPunctuation)
                             .focused($textFieldIsFocused)
-                    }
-                    Section(header: Text("QRS (msec)")) {
-                        TextField("QRS interval (msec)", value: $qrs, formatter: Self.numberFormatter)
-                            .keyboardType(.numbersAndPunctuation)
-                            .focused($textFieldIsFocused)
-                    }
-                    Section(header: Text("LBBB")) {
-                        Toggle(isOn: $isLbbb) {
-                            Text("LBBB?")
+                        Picker(selection: $intervalRateType, label: Text("Interval/Rate")) {
+                            Text("Interval").tag(IntervalRateType.interval)
+                            Text("Heart rate").tag(IntervalRateType.rate)
                         }
+                        .pickerStyle(.segmented)
+                    }
+                }
+                Section(header: Text("QT interval (msec)")) {
+                    TextField("QT interval (msec)", value: $qt, formatter: Self.numberFormatter)
+                        .keyboardType(.numbersAndPunctuation)
+                        .focused($textFieldIsFocused)
+                }
+                Section(header: Text("QRS (msec)")) {
+                    TextField("QRS interval (msec)", value: $qrs, formatter: Self.numberFormatter)
+                        .keyboardType(.numbersAndPunctuation)
+                        .focused($textFieldIsFocused)
+                }
+                Section(header: Text("LBBB")) {
+                    Toggle(isOn: $isLbbb) {
+                        Text("LBBB?")
+                    }
 
-                    }
-                    Section(header: Text("Sex")) {
-                        Picker(selection: $sex, label: Text("")) {
-                            Text("Male").tag(EP_Mobile.Sex.male)
-                            Text("Female").tag(EP_Mobile.Sex.female)
-                        }.pickerStyle(.segmented)
-                    }
-                    Section(header: Text("QTc Formula")) {
-                        Picker(selection: $formula, label: Text(formulaName())) {
-                            Text("Hodges").tag(Formula.qtcHdg)
-                            Text("Framingham").tag(Formula.qtcFrm)
-                            Text("Fridericia").tag(Formula.qtcFrd)
-                            Text("Bazett").tag(Formula.qtcBzt)
-                        }
-                        .pickerStyle(.menu)
-                    }
                 }
-                CalculateButtonsView(calculate: calculate, clear: clear)
-            }
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .navigationDestination(isPresented: $showResults) {
-                QTcIvcdResultView(qtcIvcdResultList: result, qtcFormula: formula, lbbb: $isLbbb)
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
+                Section(header: Text("Sex")) {
+                    Picker(selection: $sex, label: Text("")) {
+                        Text("Male").tag(EP_Mobile.Sex.male)
+                        Text("Female").tag(EP_Mobile.Sex.female)
+                    }.pickerStyle(.segmented)
+                }
+                Section(header: Text("QTc Formula")) {
+                    Picker(selection: $formula, label: Text(formulaName())) {
+                        Text("Hodges").tag(Formula.qtcHdg)
+                        Text("Framingham").tag(Formula.qtcFrm)
+                        Text("Fridericia").tag(Formula.qtcFrd)
+                        Text("Bazett").tag(Formula.qtcBzt)
                     }
+                    .pickerStyle(.menu)
                 }
             }
-            .navigationDestination(isPresented: $showInfo) {
-                Self.getQTcIvcdInformationView()
-            }
+            CalculateButtonsView(calculate: calculate, clear: clear)
         }
         .onAppear() {
+            // Returning from a pushed screen must preserve the current selections.
+            guard !hasLoadedDefaults else { return }
+            hasLoadedDefaults = true
             if defaultQtcFormula == Keys.bazett {
                 formula = .qtcBzt
             } else if defaultQtcFormula == Keys.fridericia {
@@ -133,8 +116,8 @@ struct QTcIvcdCalculatorView: View {
         showErrorMessage = false
         let qtIvcdViewModel = QTcIvcdViewModel(qt: Double(qt), qrs: Double(qrs), intervalRate: Double(intervalRate), intervalRateType: intervalRateType, sex: sex, formula: formula, isLBBB: isLbbb)
         do {
-            result = try qtIvcdViewModel.calculate()
-            showResults = true
+            let result = try qtIvcdViewModel.calculate()
+            onShowResults(result, formula, isLbbb)
         } catch {
             if let error = error as? QTcIvcdError {
                 switch error {
@@ -173,14 +156,10 @@ struct QTcIvcdCalculatorView: View {
         let calculator = QTc.qtcCalculator(formula: formula)
         return calculator.longName
     }
-
-    static func getQTcIvcdInformationView() -> InformationView {
-        return InformationView(instructions: QTcIvcd.getInstructions(), references: QTcIvcd.getReferences(), name: calculatorName)
-    }
 }
 
 struct QTcIvcdCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        QTcIvcdCalculatorView()
+        QTcIvcdCalculatorView(onShowResults: { _, _, _ in })
     }
 }

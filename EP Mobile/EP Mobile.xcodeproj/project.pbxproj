@@ -170,8 +170,6 @@
 		8E9755A416188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9755A316188C2C00EAFD10 /* EPSSimpleAlgorithmViewController.m */; };
 		8E9755B3161F71B900EAFD10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E9755B2161F71B900EAFD10 /* Settings.bundle */; };
 		8E97E4DF1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */; };
-		8E9C43143077F8B200394A6C /* UINavigationController+pushViewControllerAvoidingBackButtonFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C43133077F87D00394A6C /* UINavigationController+pushViewControllerAvoidingBackButtonFlash.swift */; };
-		8E9C43163078052100394A6C /* BackButtonWorkaroundSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C43153078050F00394A6C /* BackButtonWorkaroundSegue.swift */; };
 		8EA0E0591C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */; };
 		8EA0E05C1C124E2000BB7E7C /* EPSSameTtrRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05B1C124E2000BB7E7C /* EPSSameTtrRiskScore.m */; };
 		8EA0E05F1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E05E1C18BE4C00BB7E7C /* EPSAtriaStrokeRiskScore.m */; };
@@ -465,8 +463,6 @@
 		8E9755B2161F71B900EAFD10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8E97E4DD1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSIcdMortalityRiskScore.h; sourceTree = "<group>"; };
 		8E97E4DE1D8B619100F0A8EF /* EPSIcdMortalityRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSIcdMortalityRiskScore.m; sourceTree = "<group>"; };
-		8E9C43133077F87D00394A6C /* UINavigationController+pushViewControllerAvoidingBackButtonFlash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+pushViewControllerAvoidingBackButtonFlash.swift"; sourceTree = "<group>"; };
-		8E9C43153078050F00394A6C /* BackButtonWorkaroundSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonWorkaroundSegue.swift; sourceTree = "<group>"; };
 		8EA0E0571C124E0100BB7E7C /* EPSAtriaBleedRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSAtriaBleedRiskScore.h; sourceTree = "<group>"; };
 		8EA0E0581C124E0100BB7E7C /* EPSAtriaBleedRiskScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSAtriaBleedRiskScore.m; sourceTree = "<group>"; };
 		8EA0E05A1C124E2000BB7E7C /* EPSSameTtrRiskScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSameTtrRiskScore.h; sourceTree = "<group>"; };
@@ -795,7 +791,6 @@
 		8E23949228244CE400B6E8B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8E9C43133077F87D00394A6C /* UINavigationController+pushViewControllerAvoidingBackButtonFlash.swift */,
 				8E38A07728F1DE7400F1F723 /* String+convertDoiToLink.swift */,
 				8E23949328244D1800B6E8B7 /* View+roundedButton.swift */,
 			);
@@ -866,7 +861,6 @@
 		8E71C2BA1F77546C00D198BD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				8E9C43153078050F00394A6C /* BackButtonWorkaroundSegue.swift */,
 				8E31CE9715B4E2CF00A49D75 /* MainStoryboard.storyboard */,
 				8E71C2CD1F77686500D198BD /* LVH.storyboard */,
 				8E71C2CB1F7766A200D198BD /* WPW.storyboard */,
@@ -1309,7 +1303,6 @@
 				8EC19C7215B2BD8E00975E2B /* EPSDrugDoseTableViewController.m in Sources */,
 				8E63411C28373A1F00178D0C /* EntrainmentCalculatorViewController.swift in Sources */,
 				8E31CE9615B4E2C300A49D75 /* EPSMainTableViewController.m in Sources */,
-				8E9C43143077F8B200394A6C /* UINavigationController+pushViewControllerAvoidingBackButtonFlash.swift in Sources */,
 				8EF902F71F7B0A4E00D2B6C6 /* EPSErsRiskScore.m in Sources */,
 				8E2027623071D83D008EA77B /* DateInfoView.swift in Sources */,
 				8E04D8B42ED3F9AE00C73942 /* HcmAfViewController.swift in Sources */,
@@ -1317,7 +1310,6 @@
 				8E312F872EB6DF9A0010246F /* CenteringGridLayout.swift in Sources */,
 				8E6CD5DC2CC032BB00C41E9C /* HcmScdTableViewController.swift in Sources */,
 				8E44006215BC4B22009169DC /* EPSWarfarinDosingTableViewController.m in Sources */,
-				8E9C43163078052100394A6C /* BackButtonWorkaroundSegue.swift in Sources */,
 				8E511E5F15BC706500CF83B5 /* EPSRiskFactor.m in Sources */,
 				8EBCC8122826D90D001ABD9E /* QTcIvcdResultView.swift in Sources */,
 				8E1F76882CC572AB00C7AB54 /* HcmScd2022ViewModel.swift in Sources */,

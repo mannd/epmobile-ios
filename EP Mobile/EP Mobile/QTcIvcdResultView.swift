@@ -9,76 +9,51 @@
 import SwiftUI
 import MiniQTc
 
-fileprivate let calculatorName = "QTc with IVCD Results"
-
 struct QTcIvcdResultView: View {
-    @State private var showInfo = false
-    var qtcIvcdResultList: QTcIvcdResultList
+    let qtcIvcdResultList: QTcIvcdResultList
     var qtcFormula: Formula = .qtcBzt
-    @Binding var lbbb: Bool
+    let onShowDetails: (QTcIvcdFormula, String, String) -> Void
 
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(qtcIvcdResultList.keys, id: \.self) { key in
-                    if let value: String = qtcIvcdResultList[key]
-                    {
-                        let detail = QTcIvcdViewModel.getDetails(formula: qtcFormula, qtIvcdFormula: key)
-                        NavigationLink(destination: QTcIvcdResultDetail(formula: key, value: value, detail: detail, lbbb: $lbbb)) {
-                            Text(value)
-                        }
+        List {
+            ForEach(qtcIvcdResultList.elements, id: \.key) { element in
+                Button {
+                    let detail = QTcIvcdViewModel.getDetails(formula: qtcFormula, qtIvcdFormula: element.key)
+                    onShowDetails(element.key, element.value, detail)
+                } label: {
+                    HStack {
+                        Text(element.value)
+                            .foregroundStyle(.primary)
+                        Spacer()
+                        Image(systemName: "chevron.forward")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(.tertiary)
+                            .accessibilityHidden(true)
                     }
+                    .contentShape(Rectangle())
                 }
-            }
-            .navigationBarTitle(calculatorName, displayMode: .inline )
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+                .buttonStyle(.plain)
             }
         }
     }
 }
 
 struct QTcIvcdResultDetail: View {
-    @State private var showInfo = false
     var formula: QTcIvcdFormula = .qt
-    var value: String
-    var detail: String
-    @Binding var lbbb: Bool
+    let value: String
+    let detail: String
+    let lbbb: Bool
 
     var body: some View {
-        NavigationStack {
-            Form {
-                Section(header: Text(formula.description)) {
-                    VStack {
-                        Text(formula.description).bold().frame(maxWidth: .infinity, alignment: .center)
-                        Spacer()
-                        Text(value).frame(maxWidth: .infinity, alignment: .center)
-                        Spacer()
-                        Text(getDetail()).multilineTextAlignment(.leading)
-                    }.padding()
-                }
-            }
-            .navigationBarTitle("Details", displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                QTcIvcdCalculatorView.getQTcIvcdInformationView()
+        Form {
+            Section(header: Text(formula.description)) {
+                VStack {
+                    Text(formula.description).bold().frame(maxWidth: .infinity, alignment: .center)
+                    Spacer()
+                    Text(value).frame(maxWidth: .infinity, alignment: .center)
+                    Spacer()
+                    Text(getDetail()).multilineTextAlignment(.leading)
+                }.padding()
             }
         }
     }
@@ -93,11 +68,10 @@ struct QTcIvcdResultDetail: View {
     }
 }
 
-
 struct QTcIvcdResult_Previews: PreviewProvider {
     static let qtcIvcdResultList: QTcIvcdResultList = [.qt: "QT = 440 msec", .qtc: "QTc = 540 msec"]
     static var previews: some View {
-        QTcIvcdResultView(qtcIvcdResultList: qtcIvcdResultList, lbbb: .constant(false))
-        QTcIvcdResultDetail(formula: .qt, value: "QT = 402 msec", detail: "\n\nUse: The QT varies with heart rate, QRS and sex, and so is usually not a good measure of repolarization independent of these other factors.\n\nFormula: This is the uncorrected QT interval.\n\nNormal values: Not defined.", lbbb: .constant(false))
+        QTcIvcdResultView(qtcIvcdResultList: qtcIvcdResultList, onShowDetails: { _, _, _ in })
+        QTcIvcdResultDetail(formula: .qt, value: "QT = 402 msec", detail: "\n\nUse: The QT varies with heart rate, QRS and sex, and so is usually not a good measure of repolarization independent of these other factors.\n\nFormula: This is the uncorrected QT interval.\n\nNormal values: Not defined.", lbbb: false)
     }
 }

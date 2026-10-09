@@ -104,7 +104,9 @@
     infoButton.tintColor = [UIColor labelColor];
     infoButton.accessibilityLabel = @"Information";
     self.navigationItem.rightBarButtonItem = infoButton;
-    
+    self.navigationItem.backBarButtonItem = nil;
+    self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeMinimal;
+
     allowDrugCalculators = ALLOW_DRUG_CALCULATORS;
     
     [self.drugCalculatorCell setHidden:!allowDrugCalculators];

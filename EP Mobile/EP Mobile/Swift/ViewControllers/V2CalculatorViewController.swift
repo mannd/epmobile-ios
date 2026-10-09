@@ -15,6 +15,6 @@ final class V2CalculatorViewController: NSObject {
     static func show(vc: UIViewController) {
         let v2CalculatorView = V2CalculatorView()
         let hostingVC = UIHostingController(rootView: v2CalculatorView)
-        vc.navigationController?.pushViewControllerAvoidingBackButtonFlash(hostingVC, animated: true)
+        vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }
