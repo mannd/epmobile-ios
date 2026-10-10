@@ -28,6 +28,16 @@ final class AlgorithmViewController: NSObject {
         }
 
         let hostingVC = UIHostingController(rootView: AlgorithmView(model: algorithm))
+        hostingVC.title = algorithm.name
+
+        let informationView = InformationView(
+                                instructions: algorithm.getInstructions(),
+                                key: algorithm.getKey(),
+                                references: algorithm.getReferences(),
+                                name: algorithm.name)
+
+        InformationViewPresenter.addInfoButton(to: hostingVC, infoView: informationView)
+
         vc.navigationController?.pushViewController(hostingVC, animated: true)
     }
 }
