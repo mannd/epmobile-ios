@@ -17,7 +17,6 @@ struct AlgorithmView: View {
     private var hasMap: Bool = true
     @State private var algorithmResult: String?
     @State private var nodeStack: [DecisionNode] = []
-    @State private var showInfo: Bool = false
     @State private var showResult: Bool = false
     @State var model: Algorithm
     @State private var currentNode: DecisionNode
@@ -49,77 +48,79 @@ struct AlgorithmView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack {
-                    if let question = currentNode.question {
-                        Text(question)
-                            .font(.title)
-                            .padding()
-                    }
-                    if let note = currentNode.note {
-                        Text(note)
-                            .font(.title2)
-                            .foregroundColor(.secondary)
-                    }
-                    if let result = currentNode.result {
-                        Text(result)
-                            .font(.title)
-                            .padding()
-                    } else {
-                        if let branches = currentNode.branches {
-                            CenteringGridLayout(columns: 2, spacing: 16, itemSpacing: 16)
-                            {
-                                ForEach(branches, id: \.self) {branch in
-                                    Button(branch.label) {
-                                        evaluateNode(branch)
-                                        moveToNextBranch(branch: branch)
-                                    }
-                                    .roundedButton()
+        ScrollView {
+            VStack {
+                if let question = currentNode.question {
+                    Text(question)
+                        .font(.title)
+                        .padding()
+                }
+                if let note = currentNode.note {
+                    Text(note)
+                        .font(.title2)
+                        .foregroundColor(.secondary)
+                }
+                if let result = currentNode.result {
+                    Text(result)
+                        .font(.title)
+                        .padding()
+                } else {
+                    if let branches = currentNode.branches {
+                        CenteringGridLayout(columns: 2, spacing: 16, itemSpacing: 16)
+                        {
+                            ForEach(branches, id: \.self) {branch in
+                                Button(branch.label) {
+                                    evaluateNode(branch)
+                                    moveToNextBranch(branch: branch)
                                 }
-                                if !nodeStack.isEmpty {
-                                    Button("Back") {
-                                        currentNode = nodeStack.removeLast()
-                                    }
-                                    .roundedButton()
+                                .roundedButton()
+                            }
+                            if !nodeStack.isEmpty {
+                                Button("Back") {
+                                    currentNode = nodeStack.removeLast()
                                 }
+                                .roundedButton()
                             }
                         }
                     }
                 }
-                .alert(model.resultTitle, isPresented: $showResult, presenting: algorithmResult) { _ in
-                    Button("OK", role: .cancel) {
-                        reset()
-                    }
-                    if hasMap {
-                        Button("Show Map") {
-                            showMap()
-                        }
-                    }
-                } message: { result in
-                    Text(result)
+            }
+            .alert(model.resultTitle, isPresented: $showResult, presenting: algorithmResult) { _ in
+                Button("OK", role: .cancel) {
+                    reset()
                 }
-                .padding()
-                .navigationBarTitle(Text(title ?? "Decision Tree"), displayMode: .inline)
-                .navigationBarItems(
-                    trailing:
-                        NavigationLink(
-                            destination: InformationView(
-                                instructions: model.getInstructions(),
-                                key: model.getKey(),
-                                references: model.getReferences(),
-                                name: model.name)
-                        ) {
-                            Image(systemName: "info.circle")
-                        }
-                )
-                .sheet(item: $mapConfig, onDismiss: {
-                    reset() }) { config in
+                if hasMap {
+                    Button("Show Map") {
+                        showMap()
+                    }
+                }
+            } message: { result in
+                Text(result)
+            }
+            .padding()
+            .sheet(item: $mapConfig, onDismiss: {
+                reset()
+            }) { config in
+                NavigationStack {
                     makeAnnulusMapView(config: config)
+                        .toolbar {
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button {
+                                    mapConfig = nil
+                                } label: {
+                                    Image(systemName: "xmark")
+                                }
+                                .accessibilityLabel("Close")
+                            }
+                        }
                 }
             }
+
+//            .sheet(item: $mapConfig, onDismiss: {
+//                reset() }) { config in
+//                    makeAnnulusMapView(config: config)
+//                }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func moveToNextBranch(branch: DecisionNode) {
@@ -151,8 +152,6 @@ struct AlgorithmView: View {
 }
 
 // MARK: - Annulus Map UIKit Wrapper
-
-import SwiftUI
 
 private struct AnnulusMapUIKitWrapper: UIViewControllerRepresentable {
     let message: String

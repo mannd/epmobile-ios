@@ -31,10 +31,12 @@ class ArvcRiskViewController: UIViewController, UITextFieldDelegate {
     func viewDidLoad() {
         super.viewDidLoad()
         self.title = riskScoreTitle
-        let infoButton = UIButton(type: .infoLight)
-        infoButton.addTarget(self, action: #selector(showNotes), for: .touchUpInside)
-        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
-        navigationItem.rightBarButtonItem = infoBarButtonItem
+
+        let infoImage = UIImage(systemName: "info.circle")
+        let infoButton = UIBarButtonItem(image: infoImage, style: .plain, target: self, action: #selector(showNotes))
+        infoButton.tintColor = .label
+        infoButton.accessibilityLabel = "Information"
+        self.navigationItem.rightBarButtonItem = infoButton
         twiSlider.addTarget(self, action: #selector(updateTWI), for: UIControl.Event.valueChanged)
         rvefSlider.addTarget(self, action: #selector(updateRVEF), for: UIControl.Event.valueChanged)
         initFields()

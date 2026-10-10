@@ -20,7 +20,6 @@ struct HcmRiskScdView: View {
     @State private var hxSyncope: Bool = false
     @State private var result: String = ""
     @State private var detailedResult: String = ""
-    @State private var showInfo: Bool = false
 
     @FocusState private var textFieldIsFocused: Bool
 
@@ -32,91 +31,69 @@ struct HcmRiskScdView: View {
     }()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                Form() {
-                    Section(header: Text("Parameters")) {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Age (yrs)")
-                                TextField("16-115 yrs", value: $age, formatter: Self.numberFormatter)
-                                    .keyboardType(.numbersAndPunctuation)
-                                    .multilineTextAlignment(.trailing)
-                                    .focused($textFieldIsFocused)
-                            }
-                            DescriptionView(HcmRiskScdModel.ageDescription)
-                        }
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("LV wall thickness (mm)")
-                                TextField("10-35 mm", value: $thickness, formatter: Self.numberFormatter)
-                                    .keyboardType(.numbersAndPunctuation)
-                                    .multilineTextAlignment(.trailing)
-                                    .focused($textFieldIsFocused)
-                            }
-                            DescriptionView(HcmRiskScdModel.thicknessDescription)
-                        }
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("LA diameter (mm)")
-                                TextField("28-67 mm", value: $laDiameter, formatter: Self.numberFormatter)
-                                    .keyboardType(.numbersAndPunctuation)
-                                    .multilineTextAlignment(.trailing)
-                                    .focused($textFieldIsFocused)
-                            }
-                            DescriptionView(HcmRiskScdModel.laDiameterDescription)
-                        }
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Gradient (mmHg)")
-                                TextField("2-154 mmHg", value: $gradient, formatter: Self.numberFormatter)
-                                    .keyboardType(.numbersAndPunctuation)
-                                    .multilineTextAlignment(.trailing)
-                                    .focused($textFieldIsFocused)
-                            }
-                            DescriptionView(HcmRiskScdModel.gradientDescription)
-                        }
-                    }
-                    Section(header: Text("History")) {
-                        ToggleView(parameter: $familyHxScd, label: "Family hx SCD", description: HcmRiskScdModel.familyHxScdDescription)
-                        ToggleView(parameter: $hxNsvt, label: "Hx nonsustained VT", description: HcmRiskScdModel.hxNsvtDescription)
-                        ToggleView(parameter: $hxSyncope, label: "Hx syncope", description: HcmRiskScdModel.hxSyncopeDescription)
-                    }
-                    Section(header: Text("Result")) {
+        VStack {
+            Form() {
+                Section(header: Text("Parameters")) {
+                    VStack(alignment: .leading) {
                         HStack {
-                            Text(result)
-                            Spacer()
-                            Button("Copy") {
-                                copy()
-                            }
+                            Text("Age (yrs)")
+                            TextField("16-115 yrs", value: $age, formatter: Self.numberFormatter)
+                                .keyboardType(.numbersAndPunctuation)
+                                .multilineTextAlignment(.trailing)
+                                .focused($textFieldIsFocused)
+                        }
+                        DescriptionView(HcmRiskScdModel.ageDescription)
+                    }
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("LV wall thickness (mm)")
+                            TextField("10-35 mm", value: $thickness, formatter: Self.numberFormatter)
+                                .keyboardType(.numbersAndPunctuation)
+                                .multilineTextAlignment(.trailing)
+                                .focused($textFieldIsFocused)
+                        }
+                        DescriptionView(HcmRiskScdModel.thicknessDescription)
+                    }
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("LA diameter (mm)")
+                            TextField("28-67 mm", value: $laDiameter, formatter: Self.numberFormatter)
+                                .keyboardType(.numbersAndPunctuation)
+                                .multilineTextAlignment(.trailing)
+                                .focused($textFieldIsFocused)
+                        }
+                        DescriptionView(HcmRiskScdModel.laDiameterDescription)
+                    }
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Gradient (mmHg)")
+                            TextField("2-154 mmHg", value: $gradient, formatter: Self.numberFormatter)
+                                .keyboardType(.numbersAndPunctuation)
+                                .multilineTextAlignment(.trailing)
+                                .focused($textFieldIsFocused)
+                        }
+                        DescriptionView(HcmRiskScdModel.gradientDescription)
+                    }
+                }
+                Section(header: Text("History")) {
+                    ToggleView(parameter: $familyHxScd, label: "Family hx SCD", description: HcmRiskScdModel.familyHxScdDescription)
+                    ToggleView(parameter: $hxNsvt, label: "Hx nonsustained VT", description: HcmRiskScdModel.hxNsvtDescription)
+                    ToggleView(parameter: $hxSyncope, label: "Hx syncope", description: HcmRiskScdModel.hxSyncopeDescription)
+                }
+                Section(header: Text("Result")) {
+                    HStack {
+                        Text(result)
+                        Spacer()
+                        Button("Copy") {
+                            copy()
                         }
                     }
                 }
-                CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .onChange(of: Observe(age, thickness, laDiameter, gradient, familyHxScd, hxNsvt, hxSyncope)) {
-                clearResult()
-            }
-//            .onChange(of: age, perform: { _ in clearResult() })
-//            .onChange(of: thickness, perform: { _ in clearResult() })
-//            .onChange(of: laDiameter, perform: { _ in clearResult() })
-//            .onChange(of: gradient, perform: { _ in clearResult() })
-//            .onChange(of: familyHxScd, perform: { _ in clearResult() })
-//            .onChange(of: hxNsvt, perform: { _ in clearResult() })
-//            .onChange(of: hxSyncope, perform: { _ in clearResult() })
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(instructions: HcmRiskScdModel.getInstructions(), key: HcmRiskScdModel.getKey(), references: HcmRiskScdModel.getReferences(), name: calculatorName)
-            }
+            CalculateButtonsView(calculate: calculate, clear: clear)
+        }
+        .onChange(of: Observe(age, thickness, laDiameter, gradient, familyHxScd, hxNsvt, hxSyncope)) {
+            clearResult()
         }
     }
 

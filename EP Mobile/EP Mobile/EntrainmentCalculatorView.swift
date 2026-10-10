@@ -17,7 +17,6 @@ struct EntrainmentCalculatorView: View {
     @State private var sQrs: Double = 0
     @State private var egQrs: Double = 0
     @State private var result = ""
-    @State private var showingInfo = false
     @FocusState private var textFieldIsFocused: Bool
 
     private static var numberFormatter: NumberFormatter = {
@@ -29,76 +28,61 @@ struct EntrainmentCalculatorView: View {
     }()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                Form() {
-                    Section(header: Text("Tachycardia CL and PPI")) {
-                        HStack {
-                            Text("Tachycardia CL")
-                            TextField("TCL (msec)", value: $tcl, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
-                        }
-                        HStack {
-                            Text("Post-pacing interval")
-                            TextField("PPI (msec)", value: $ppi, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
-                        }
+        VStack {
+            Form() {
+                Section(header: Text("Tachycardia CL and PPI")) {
+                    HStack {
+                        Text("Tachycardia CL")
+                        TextField("TCL (msec)", value: $tcl, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
+                            .multilineTextAlignment(.trailing)
+                            .focused($textFieldIsFocused)
                     }
-                    Section(header: Text("Concealed fusion")) {
-                        Toggle(isOn: $concealedFusion) {
-                            Text("Concealed fusion")
-                        }
-                        HStack {
-                            Text("Stim-QRS")
-                                .foregroundColor(concealedFusion ? .primary : Color.secondary)
-                            TextField("S-QRS (msec)", value: $sQrs, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
-                        }
-                        .disabled(!concealedFusion)
-                        HStack {
-                            Text("EG-QRS")
-                                .foregroundColor(concealedFusion ? .primary : Color.secondary)
-                            TextField("EG-QRS (msec)", value: $egQrs, formatter: Self.numberFormatter)
-                                .keyboardType(.numbersAndPunctuation)
-                                .multilineTextAlignment(.trailing)
-                                .focused($textFieldIsFocused)
-                        }
-                        .disabled(!concealedFusion)
-                    }
-                    Section(header: Text("Result")) {
-                        Text(result)
+                    HStack {
+                        Text("Post-pacing interval")
+                        TextField("PPI (msec)", value: $ppi, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
+                            .multilineTextAlignment(.trailing)
+                            .focused($textFieldIsFocused)
                     }
                 }
-                CalculateButtonsView(calculate: calculate, clear: clear)
-            }
-            .onChange(of: Observe(tcl, ppi, sQrs, egQrs)) {
-                clearResult()
-            }
-            .onChange(of: concealedFusion) {
-                textFieldIsFocused = false
-                clearResult()
-                sQrs = 0
-                egQrs = 0
-            }
-            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showingInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
+                Section(header: Text("Concealed fusion")) {
+                    Toggle(isOn: $concealedFusion) {
+                        Text("Concealed fusion")
                     }
+                    HStack {
+                        Text("Stim-QRS")
+                            .foregroundColor(concealedFusion ? .primary : Color.secondary)
+                        TextField("S-QRS (msec)", value: $sQrs, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
+                            .multilineTextAlignment(.trailing)
+                            .focused($textFieldIsFocused)
+                    }
+                    .disabled(!concealedFusion)
+                    HStack {
+                        Text("EG-QRS")
+                            .foregroundColor(concealedFusion ? .primary : Color.secondary)
+                        TextField("EG-QRS (msec)", value: $egQrs, formatter: Self.numberFormatter)
+                            .keyboardType(.numbersAndPunctuation)
+                            .multilineTextAlignment(.trailing)
+                            .focused($textFieldIsFocused)
+                    }
+                    .disabled(!concealedFusion)
+                }
+                Section(header: Text("Result")) {
+                    Text(result)
                 }
             }
-            .navigationDestination(isPresented: $showingInfo) {
-                InformationView(instructions: Entrainment.getInstructions(), references: Entrainment.getReferences(), name: calculatorName)
-            }
+            CalculateButtonsView(calculate: calculate, clear: clear)
+        }
+        .onChange(of: Observe(tcl, ppi, sQrs, egQrs)) {
+            clearResult()
+        }
+        .onChange(of: concealedFusion) {
+            textFieldIsFocused = false
+            clearResult()
+            sQrs = 0
+            egQrs = 0
         }
     }
 

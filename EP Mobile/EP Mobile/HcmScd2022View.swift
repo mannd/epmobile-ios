@@ -27,7 +27,6 @@ struct HcmScd2022View: View {
 
     @State private var result: String = ""
     @State private var detailedResult: String = ""
-    @State private var showInfo: Bool = false
 
     @FocusState private var textFieldIsFocused: Bool
 
@@ -42,7 +41,6 @@ struct HcmScd2022View: View {
 
 
     var body: some View {
-        NavigationStack {
             VStack {
                 Form() {
                     Section(header: Text("HCM Risk-SCD")) {
@@ -112,32 +110,6 @@ struct HcmScd2022View: View {
             .onChange(of: Observe(age, thickness, laDiameter, gradient, familyHxScd, hxNsvt, hxSyncope, apicalAneurysm, lowLVEF, extensiveLGE, abnormalBP, sarcomericMutation)) {
                 clearResult()
             }
-//            .onChange(of: age, perform: { _ in clearResult() })
-//            .onChange(of: thickness, perform: { _ in clearResult() })
-//            .onChange(of: laDiameter, perform: { _ in clearResult() })
-//            .onChange(of: gradient, perform: { _ in clearResult() })
-//            .onChange(of: familyHxScd, perform: { _ in clearResult() })
-//            .onChange(of: hxNsvt, perform: { _ in clearResult() })
-//            .onChange(of: hxSyncope, perform: { _ in clearResult() })
-//            .onChange(of: apicalAneurysm, perform: { _ in clearResult() })
-//            .onChange(of: lowLVEF, perform: { _ in clearResult() })
-//            .onChange(of: extensiveLGE, perform: { _ in clearResult() })
-//            .onChange(of: abnormalBP, perform: { _ in clearResult() })
-//            .onChange(of: sarcomericMutation, perform: { _ in clearResult() })
-//            .navigationBarTitle(Text(calculatorName), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(instructions: HcmScd2022Model.getInstructions(), key: HcmScd2022Model.getKey(), references: HcmScd2022Model.getReferences(), name: calculatorName)
-            }
-        }
     }
 
     func calculate() {
