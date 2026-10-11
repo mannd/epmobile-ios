@@ -74,7 +74,6 @@ struct WarfarinClinicView: View {
     @State private var inr: Double = 0
     @State private var inrTarget: InrTarget = .low
     @State private var result: String = ""
-    @State private var showInfo = false
     @State private var showDosingAlert = false
     @State private var showDosingTable = false
     @State private var viewModel: WarfarinViewModel? = nil
@@ -113,81 +112,78 @@ struct WarfarinClinicView: View {
     }()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                Form() {
-                    Section(header: Text("Tablet Size")) {
-                        Picker(selection: $tabletSize, label: Text("Tablet size")) {
-                            ForEach(TabletSize.allCases) {
-                                tabletSize in Text(tabletSize.description)
-                            }
+        VStack {
+            Form() {
+                Section(header: Text("Tablet Size")) {
+                    Picker(selection: $tabletSize, label: Text("Tablet size")) {
+                        ForEach(TabletSize.allCases) {
+                            tabletSize in Text(tabletSize.description)
                         }
-                        .pickerStyle(.menu)
-                        .onChange(of: tabletSize) {
+                    }
+                    .pickerStyle(.menu)
+                    .onChange(of: tabletSize) {
+                        clearResult()
+                    }
+                }
+                Section(header: Text("Total Weekly Dose (mg)")) {
+                    TextField("Weekly Dose (mg)", value: $weeklyDose, formatter: Self.numberFormatter)
+                        .focused($textFieldIsFocused)
+                        .keyboardType(.numbersAndPunctuation)
+                        .onChange(of: weeklyDose) {
                             clearResult()
                         }
-                    }
-                    Section(header: Text("Total Weekly Dose (mg)")) {
-                        TextField("Weekly Dose (mg)", value: $weeklyDose, formatter: Self.numberFormatter)
-                            .focused($textFieldIsFocused)
-                            .keyboardType(.numbersAndPunctuation)
-                            .onChange(of: weeklyDose) {
-                                clearResult()
-                            }
-                    }
-                    Section(header: Text("Current INR")) {
-                        TextField("Current INR", value: $inr, formatter: Self.numberFormatter)
-                            .focused($textFieldIsFocused)
-                            .keyboardType(.numbersAndPunctuation)
-                            .onChange(of: inr) {
-                                clearResult()
-                            }
-                    }
-                    Section(header: Text("INR Target")) {
-                        Picker(selection: $inrTarget, label: Text("INR Target")) {
-                            ForEach(InrTarget.allCases) {
-                                inrTarget in Text(inrTarget.description)
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                        .onChange(of: inrTarget) {
+                }
+                Section(header: Text("Current INR")) {
+                    TextField("Current INR", value: $inr, formatter: Self.numberFormatter)
+                        .focused($textFieldIsFocused)
+                        .keyboardType(.numbersAndPunctuation)
+                        .onChange(of: inr) {
                             clearResult()
                         }
+                }
+                Section(header: Text("INR Target")) {
+                    Picker(selection: $inrTarget, label: Text("INR Target")) {
+                        ForEach(InrTarget.allCases) {
+                            inrTarget in Text(inrTarget.description)
+                        }
                     }
-                    Section(header: Text("Result")) {
-                        Text(result)
+                    .pickerStyle(.segmented)
+                    .onChange(of: inrTarget) {
+                        clearResult()
                     }
+                }
+                Section(header: Text("Result")) {
+                    Text(result)
+                }
 
-                }
-                CalculateButtonsView(calculate: calculate, clear: clear)
             }
-            .navigationBarTitle(Text("Warfarin Clinic"), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showInfo = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $showInfo) {
-                InformationView(instructions: Warfarin.getInstructions(), references: Warfarin.getReferences(), name: "Warfarin Clinic")
-            }
-            .navigationDestination(isPresented: $showDosingTable) {
-                UIWarfarinDosingTableView(dosingTableData: dosingTableData)
-            }
-            .onAppear() {
-                inrTarget = defaultInrTargetDictionary[defaultInrTarget] ?? .low
-                tabletSize = defaultTabletSizeDictionary[defaultWarfarinTablet] ?? .fiveMG
-            }
-            .alert("Result", isPresented: $showDosingAlert, actions: {
-                Button("Show Dose Table", role: .destructive, action: {
-                   calculateDosingTable()
-                })
-                // Cancel button automatically added when we have a destructive button.
-            }, message: { Text(result) })
+            CalculateButtonsView(calculate: calculate, clear: clear)
         }
+        .sheet(isPresented: $showDosingTable) {
+            NavigationStack {
+                UIWarfarinDosingTableView(dosingTableData: dosingTableData)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button {
+                                showDosingTable = false
+                            } label: {
+                                Image(systemName: "xmark")
+                            }
+                            .accessibilityLabel("Close")
+                        }
+                    }
+            }
+        }
+        .onAppear() {
+            inrTarget = defaultInrTargetDictionary[defaultInrTarget] ?? .low
+            tabletSize = defaultTabletSizeDictionary[defaultWarfarinTablet] ?? .fiveMG
+        }
+        .alert("Result", isPresented: $showDosingAlert, actions: {
+            Button("Show Dose Table", role: .destructive, action: {
+                calculateDosingTable()
+            })
+            // Cancel button automatically added when we have a destructive button.
+        }, message: { Text(result) })
     }
 
     func calculate() {
