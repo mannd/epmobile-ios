@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="v0S-ot-sjf">
+                            <tableViewSection headerTitle="LQTS 1" id="v0S-ot-sjf">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="m7V-pH-fkv" detailTextLabel="8Jg-0H-Dcj" style="IBUITableViewCellStyleValue1" id="h6q-dZ-5jM">
                                         <rect key="frame" x="0.0" y="50" width="375" height="44"/>
@@ -179,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="SUr-cr-zj0">
+                            <tableViewSection headerTitle="LQTS 2" id="SUr-cr-zj0">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kzZ-qB-AQZ" detailTextLabel="uJG-L3-S6Q" style="IBUITableViewCellStyleValue1" id="fOk-b5-uUc">
                                         <rect key="frame" x="0.0" y="50" width="375" height="44"/>
@@ -429,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="F7A-EO-NtF">
+                            <tableViewSection headerTitle="LQTS 4" id="F7A-EO-NtF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vFp-cC-Xo7" detailTextLabel="3Vl-1C-koD" style="IBUITableViewCellStyleValue1" id="ZiC-Vb-OW2">
                                         <rect key="frame" x="0.0" y="50" width="375" height="44"/>
@@ -592,7 +592,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="EIs-fN-vq4">
+                            <tableViewSection headerTitle="LQTS 3" id="EIs-fN-vq4">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="pRq-mD-aaO" detailTextLabel="6kT-DI-7Sw" style="IBUITableViewCellStyleValue1" id="Mp9-Nf-DQa">
                                         <rect key="frame" x="0.0" y="50" width="375" height="44"/>
@@ -754,13 +754,13 @@
         <image name="4.square" catalog="system" width="128" height="119"/>
         <image name="a.square" catalog="system" width="128" height="119"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.53333333329999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
